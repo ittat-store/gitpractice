@@ -1,0 +1,50 @@
+void modifyLL(struct node* root) 
+{ 
+    // Find the mid node 
+    struct node *slow_ptr = root, *fast_ptr = root; 
+    while (fast_ptr && fast_ptr->next) { 
+        fast_ptr = fast_ptr->next->next; 
+        slow_ptr = slow_ptr->next; 
+    } 
+   
+    // Reverse the second half of the list 
+    struct node* root2 = reverseLL(slow_ptr->next); 
+   
+    // partition the list 
+    slow_ptr->next = NULL; 
+   
+    struct node *current1 = root, *current2 = root2; 
+   
+    // insert the elements in between 
+    while (current1 && current2) { 
+   
+        // next node to be traversed in the first list 
+        struct node* dnext1 = current1->next; 
+   
+        // next node to be traversed in the first list 
+        struct node* dnext2 = current2->next; 
+        current1->next = current2; 
+        current2->next = dnext1; 
+        current1 = dnext1; 
+        current2 = dnext2; 
+    } 
+} 
+   
+
+Given a linked list, the task is to rearrange the linked list in the following manner:
+
+    Reverse the second half of given linked list.
+        Rearrange the linked list such that:
+        First element of the linked list is the first element of first half.
+        Second element of the linked list is the first element of second half.
+
+    Similarly, arrange all elements in the alternate manner i.e. take 3rd element of the linked list from first half and 4th element of the linked list from second half. 
+
+Examples:
+
+Input: 1->2->3->4->5
+Output: 1->5->2->4->3
+
+Input: 1->2->3->4->5->6
+Output: 1->6->2->5->3->4
+

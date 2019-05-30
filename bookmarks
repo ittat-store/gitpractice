@@ -1,0 +1,65 @@
+http://tldp.org/LDP/lkmpg/2.6/html/index.html.....................imp for drivr introduction
+
+https://sysplay.in/index.php?pagefile=lfy_articles....................sysplay
+
+https://embetronicx.com/tutorials/linux/device-drivers/character-device-driver-major-number-and-minor-number/......................embetronics
+
+http://www.tortosaforum.com/raspberrypi/dht11driver.htm.............DHT11 driver code
+
+https://components101.com/dht11-temperature-sensor...............imp link for sensors data sheet
+
+https://git.congatec.com/android/qmx6_kernel/blob/eec23c400e5c39ae338b9112031a302230220294/drivers/hwmon/mxc_mma8451.c........mma8451 sensor acceleometer code
+
+
+https://elixir.bootlin.com/linux/v4.5/source/drivers/iio/accel/mma8452.c..............all driver codes by Toncy 
+
+https://medium.com/@jagan.dream/cross-compile-flash-kernel-for-raspberry-pi-3-29699275abc6.........rasbpi crosscompile
+
+
+https://www.programiz.com/python-programming/function...............phython imp link by Tarani
+
+
+https://linux-kernel-labs.github.io/master/labs/device_model.html.....................device driver imp intoduction and hardware detection probing
+
+
+https://www.digikey.in/products/en/sensors-transducers/humidity-moisture-sensors/529?k=dht11................like mouser.in
+
+http://wiki.seeedstudio.com/Sensor_accelerometer/..................like mouser.in
+
+http://ardupilot.org/dev/docs/code-overview-sensor-drivers.html............about sensor drivers
+
+https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/i.mx-applications-processors/i.mx-6-processors/i.mx-6quad-processors-high-performance-3d-graphics-hd-video-arm-cortex-a9-core:i.MX6Q?&tab=Documentation_Tab.......................imx board pdfs
+
+https://sysplay.in/index.php?pagefile=linux_drivers.......................sysplay ppts
+
+https://riot-os.org/api/group__drivers__sensors.html....................sensor device drivers
+
+https://www.balena.io/blog/sensors-and-data-logging-with-embedded-linux-the-ultimate-guide-part-1/#hardware.....................most imp for sensor building
+
+
+
+https://www.balena.io/blog/sensors-and-data-logging-with-embedded-linux-the-ultimate-guide-part-1/
+
+
+http://www.haifux.org/lectures/86-sil/kernel-modules-drivers/kernel-modules-drivers.html........................driver steps
+
+https://www.kernel.org/doc/html/v4.12/driver-api/iio/index.html.................about iio imp
+
+
+https://wiki.analog.com/software/linux/docs/iio/iio..................imp for iio 
+
+https://wiki.st.com/stm32mpu/wiki/IIO_overview.............iio
+
+
+https://github.com/pfps/yoga-laptop/blob/master/docs/Drivers......................sensor insmod commands
+
+
+https://support.bluetechnix.at/wiki/Linux_Software_User_Manual_(i.MX6)#Acceleration_sensor_.283-axis.29_MMA8453......................imp for imx6 board sensors
+
+sanfoundry.....................for c lanugaes questions
+
+https://github.com/digi-embedded/linux/blob/v3.14/dey-2.0/maint/drivers/gpio/gpio-mxc.c....................gpio driver for imx6 board
+
+
+
+

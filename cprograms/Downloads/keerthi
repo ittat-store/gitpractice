@@ -1,0 +1,43 @@
+#include<string.h>
+#include<math.h>
+int main()
+{
+        int str[1024],n,l1,str2[1024],buf[1024],buf1[1024],p,k;
+        char ch;
+        printf("enter the string\n");
+        gets(str);
+        printf("enter the n value\n");
+        scanf("%d",&n);
+        printf("enter the search char value\n");
+        scanf(" %c",&ch);
+        printf("n is %d\n",n);
+        printf("string is %s\n",str);
+        printf("search char is %c\n",c);
+        l1=strlen(str);
+        printf("strlen is %d\n",l1);
+        strcpy(buf,str);
+        strcpy(str2,str);
+        printf("actual buf is %s\n",buf);
+/*      if(l1<n)
+        {
+                p=abs(l1-n);
+                printf("p is %d\n",p);
+                buf[p]='\0';
+                printf("buf is %s\n",buf[p]);
+                strcat(str2,buf);
+                printf("str2 is %s\n",str2);
+                k=strchr(str2,c);
+                printf("char in string is %d times\n",k);
+        }
+else
+{
+strcpy(buf1,str);
+buf1[n]='\0';
+printf("buf1 is%s\n",buf1);
+k=strchr(buf1,c);
+printf("char in string is %d times\n",k);
+}*/
+        return 0;
+}
+
+

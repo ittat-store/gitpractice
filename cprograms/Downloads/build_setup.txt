@@ -1,0 +1,69 @@
+
+1. Ubuntu 14.04
+2. Build Intialization setup
+
+   sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+
+ More Details: https://source.android.com/setup/build/initializing
+
+3. Java-open-JDK7 installation
+   sudo apt-get install software-properties-commonpython-software-properties
+   sudo add-apt-repository ppa:openjdk-r/ppa
+   sudo apt-get update   
+   sudo apt-get install openjdk-7-jdk
+   Check Java in this path cd /usr/lib/jvm/java-7-openjdk-amd64/bin
+4. Git Installation
+   sudo add-apt-repository ppa:git-core/ppa
+   sudo apt-get update
+   sudo apt-get install git
+5. Require perl-5.22.1
+6. sudo apt-get install libxml-parser-perl(some times required perl packages)
+7. For change default shell should run -- sudo dpkg-reconfigure dash
+8. SSL Certification
+   sudo apt-get purge ca-certificates curl openssh-server
+9. Other Software
+   sudo apt-get install meld
+   sudo apt-get install curl
+   sudo aptget install xpad
+   sudo apt-get install unrar
+10. Python version should be 2.7.12
+
+11. qualtools setup
+   1. qualtools.git
+   2. cd qualtools
+   3. ./qualtools.sh
+    1. Source code syncing:
+       git clone git@192.168.6.11:vtech/vt3n.git -b v3n-vtech.qc.1.2-dev
+    2. Run build
+        a. Need to setup qualtools on first build configuration(no need to run second time onwords)
+           git clone git@192.168.4.123:CKT/qualtools.git
+           cd qualtools
+           chmod +x qualtools.sh
+           ./qualtools.sh
+         b. cd vt3n/LINUX/android
+         c. source build/envsetup.sh
+         d. lunch (Choose a combo by  input its number)
+             1. LF2403_MSM8909_512-user
+             2. LF2403_MSM8909_512-userdebug
+             3. LF2403S_MSM8909_512-user
+             4. LF2403S_MSM8909_512-userdebug
+             5. LF2403N_MSM8909_512-user
+             6. LF2403N_MSM8909_512-userdebug
+             7. LF2403N_L3_MSM8909_512-user
+             8. LF2403N_L3_MSM8909_512-userdebug
+             9. F120B_MSM8909_512-user
+             10. F120B_MSM8909_512-userdebug
+          choose a combo:5         
+          e. make -j8 (8  is the number of your cpu thread <=>Intel4 core8 threads) 
+       3. signed build generation:
+           (pack all build result into a zip file  that can be flash after extract)
+          a. cd vt3n
+          b. ./pack_all_sign.sh (flash onto secboot enabled device)
+       4. Unsigned build:
+
+          a. cd vt3n
+          b. ./pack_all_unsign.sh  (flash to  non secboot device) 
+      Note: Final Binary generated
+      @root_path/pub(vt3n/pub/LYF-LF2403N-000-F1-3E-090518_user_signed.zip)
+
+

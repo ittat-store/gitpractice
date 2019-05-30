@@ -1,0 +1,2 @@
+/proc/bus/input/devices 
+
