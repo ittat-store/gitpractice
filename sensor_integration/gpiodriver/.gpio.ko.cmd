@@ -1,0 +1,1 @@
+cmd_/home/takkaakb/akbar/driver/gpiodriver/gpio.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/takkaakb/akbar/driver/gpiodriver/gpio.ko /home/takkaakb/akbar/driver/gpiodriver/gpio.o /home/takkaakb/akbar/driver/gpiodriver/gpio.mod.o ;  true

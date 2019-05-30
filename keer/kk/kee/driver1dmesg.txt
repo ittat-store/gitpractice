@@ -1,0 +1,37 @@
+nsert...Done!!!
+[15765.607906] DEVICE FILE OPENED....
+[15770.200476] DATA WRITE...
+[15770.970081] DATA READ...
+[15770.970093] BUG: unable to handle kernel NULL pointer dereference at           (null)
+[15770.970117] IP: [<ffffffffa01f50db>] etx_read+0x2b/0x40 [driver2]
+[15770.970135] PGD 19ac67067 PUD 19ac66067 PMD 0 
+[15770.970149] Oops: 0002 [#2] SMP 
+[15770.970160] Modules linked in: driver1(OF) driver2(OF) rfcomm bnep bluetooth snd_hda_codec_via snd_hda_codec_hdmi snd_hda_intel snd_hda_codec snd_hwdep snd_pcm x86_pkg_temp_thermal intel_powerclamp coretemp snd_page_alloc snd_seq_midi snd_seq_midi_event snd_rawmidi snd_seq snd_seq_device snd_timer snd kvm_intel kvm crct10dif_pclmul crc32_pclmul i915 ghash_clmulni_intel cryptd drm_kms_helper serio_raw lpc_ich drm soundcore mei_me mei i2c_algo_bit parport_pc ppdev video mac_hid lp parport wmi psmouse r8169 mii [last unloaded: driver1]
+[15770.970312] CPU: 1 PID: 13534 Comm: test_app Tainted: GF     D W  O 3.13.0-32-generic #57-Ubuntu
+[15770.970333] Hardware name: Acer Veriton Series/H81H3-M4, BIOS 4.6.5 05/04/2015
+[15770.970350] task: ffff8801dce55fc0 ti: ffff88019afce000 task.ti: ffff88019afce000
+[15770.970368] RIP: 0010:[<ffffffffa01f50db>]  [<ffffffffa01f50db>] etx_read+0x2b/0x40 [driver2]
+[15770.970389] RSP: 0018:ffff88019afcff00  EFLAGS: 00010292
+[15770.970402] RAX: 000000000000000c RBX: ffff8801b50b7300 RCX: 0000000000000000
+[15770.971186] RDX: ffff88021fb0ffe0 RSI: ffff88021fb0e3c8 RDI: 0000000000000246
+[15770.971963] RBP: ffff88019afcff00 R08: 0000000000000082 R09: 00000000000003bc
+[15770.972739] R10: 0000000000000000 R11: ffff88019afcfc2e R12: 00000000006010a0
+[15770.973515] R13: ffff88019afcff50 R14: 0000000000000000 R15: 0000000000000000
+[15770.974277] FS:  00007f9b201b0740(0000) GS:ffff88021fb00000(0000) knlGS:0000000000000000
+[15770.975019] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[15770.975735] CR2: 0000000000000000 CR3: 00000001cb402000 CR4: 00000000000407e0
+[15770.976436] Stack:
+[15770.977120]  ffff88019afcff38 ffffffff811bc9e5 ffff8801b50b7300 00000000006010a0
+[15770.977816]  0000000000000400 0000000000000000 0000000000000000 ffff88019afcff78
+[15770.978512]  ffffffff811bd4f9 00007fff42e872c0 0000000000000000 0000000000000000
+[15770.979201] Call Trace:
+[15770.979880]  [<ffffffff811bc9e5>] vfs_read+0x95/0x160
+[15770.980562]  [<ffffffff811bd4f9>] SyS_read+0x49/0xa0
+[15770.981251]  [<ffffffff8172c87f>] tracesys+0xe1/0xe6
+[15770.981931] Code: 0f 1f 44 00 00 55 48 89 f7 48 8b 35 80 22 00 00 ba 00 04 00 00 48 89 e5 e8 73 80 17 e1 48 c7 c7 69 60 1f a0 31 c0 e8 94 08 52 e1 <c7> 04 25 00 00 00 00 05 00 00 00 b8 00 04 00 00 5d c3 0f 1f 00 
+[15770.983422] RIP  [<ffffffffa01f50db>] etx_read+0x2b/0x40 [driver2]
+[15770.984146]  RSP <ffff88019afcff00>
+[15770.984864] CR2: 0000000000000000
+[15770.985590] ---[ end trace 12c62d1ae02dcdd3 ]---
+[15770.986120] DEVICE FILE CLOSED....
+
