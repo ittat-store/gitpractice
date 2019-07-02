@@ -1,0 +1,150 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+a	2.c	/^int a=10;$/;"	v
+add	circularlinkedlist.c	/^struct student *add(struct student *head)$/;"	f
+add	mergelinkedlist.c	/^struct student *add(struct student *head)$/;"	f
+add	mergetwolists.c	/^struct student *add(struct student *head)$/;"	f
+add	midlinedlist1.c	/^struct student *add(struct student *head)$/;"	f
+add	recrsivelinkedlist.c	/^struct student *add(struct student *head)$/;"	f
+add	reverselinkedlist.c	/^struct student *add(struct student *head)$/;"	f
+arg	novemerassesment.c	/^char arg[10],arg1[10],buf[10];$/;"	v
+arg1	novemerassesment.c	/^char arg[10],arg1[10],buf[10];$/;"	v
+break_list1	midlinkedlist.c	/^void break_list1(st *head,st *mid)$/;"	f
+break_list2	midlinkedlist.c	/^st* break_list2(st *mid)$/;"	f
+buf	mutex.c	/^char buf[10];$/;"	v
+buf	novemerassesment.c	/^char arg[10],arg1[10],buf[10];$/;"	v
+buf	recurssionlinked.c	/^char buf[10];$/;"	v
+buf	removeword.c	/^char buf[20],buf1[20];$/;"	v
+buf	semaphore.c	/^char buf[10];$/;"	v
+buf1	removeword.c	/^char buf[20],buf1[20];$/;"	v
+ch	compilation program january xm.c	/^	char ch;$/;"	m	struct:st	file:
+count	compilation program january xm.c	/^	int count;$/;"	m	struct:st	file:
+count	mergelinkedlist.c	/^int count=0,n1,n2;$/;"	v
+counter	1.c	/^int counter = 0,i=0; $/;"	v
+counting	compilation program january xm.c	/^void counting(struct st *head)$/;"	f
+create	compilation program january xm.c	/^struct st *create(struct st *head,char ch)$/;"	f
+create	mergelinkedlist.c	/^void create()$/;"	f
+createnode	midlinkedlist.c	/^st* createnode()$/;"	f
+d	mergelinkedlist.c	/^struct student *head=NULL,*head1=NULL,*d;$/;"	v	typeref:struct:
+data	circularlinkedlist.c	/^	int data;$/;"	m	struct:student	file:
+data	mergelinkedlist.c	/^	int data;$/;"	m	struct:student	file:
+data	mergetwolists.c	/^	int data;$/;"	m	struct:student	file:
+data	midlinedlist1.c	/^	int data;$/;"	m	struct:student	file:
+data	midlinkedlist.c	/^	int data;$/;"	m	struct:student	file:
+data	recrsivelinkedlist.c	/^	int data;$/;"	m	struct:student	file:
+data	reverselinkedlist.c	/^	int data;$/;"	m	struct:student	file:
+display	circularlinkedlist.c	/^void display(struct student *head)$/;"	f
+display	compilation program january xm.c	/^void display(struct st *head)$/;"	f
+display	mergelinkedlist.c	/^void display(struct student *head)$/;"	f
+display	mergetwolists.c	/^void display(struct student *head)$/;"	f
+display	midlinedlist1.c	/^void display(struct student *head)$/;"	f
+display	midlinkedlist.c	/^void display(st *head)$/;"	f
+display	recrsivelinkedlist.c	/^void display(struct student *head)$/;"	f
+display	reverselinkedlist.c	/^void display(struct student *head)$/;"	f
+doublelist	circularlinkedlist.c	/^struct student *doublelist(struct student *head)$/;"	f
+fail	mergelinkedlist.c	/^int  pass=0,fail=0;$/;"	v
+fileopen	mutex.c	/^void *fileopen()$/;"	f
+find	semaphore.c	/^void *find()$/;"	f
+find_middle	midlinkedlist.c	/^st* find_middle(st *head)$/;"	f
+findmerge	mergelinkedlist.c	/^struct student *findmerge(struct student *head,struct student *head1)$/;"	f
+findsub	substringreverse.c	/^char *findsub(char *str,char *str1)$/;"	f
+fp	novemerassesment.c	/^FILE *fp;$/;"	v
+fp	recurssionlinked.c	/^FILE *fp,*fp1;$/;"	v
+fp	removeword.c	/^FILE *fp1,*fp;$/;"	v
+fp1	recurssionlinked.c	/^FILE *fp,*fp1;$/;"	v
+fp1	removeword.c	/^FILE *fp1,*fp;$/;"	v
+getword	removeword.c	/^void getword()$/;"	f
+goback	circularlinkedlist.c	/^void goback(struct student *head)$/;"	f
+gofront	circularlinkedlist.c	/^void gofront(struct student *head)$/;"	f
+handle_sigint	3.c	/^void handle_sigint(int sig) $/;"	f
+handler1	1.c	/^void handler1(int sig) $/;"	f
+handler2	1.c	/^void handler2(int sig) $/;"	f
+head	mergelinkedlist.c	/^struct student *head=NULL,*head1=NULL,*d;$/;"	v	typeref:struct:student
+head1	mergelinkedlist.c	/^struct student *head=NULL,*head1=NULL,*d;$/;"	v	typeref:struct:
+i	1.c	/^int counter = 0,i=0; $/;"	v
+incre	compilation program january xm.c	/^void incre(struct st *head,char ch,int c)$/;"	f
+islower	novemerassesment.c	/^char islower(char ch)$/;"	f
+lock	mutex.c	/^pthread_mutex_t lock;$/;"	v
+main	1.c	/^int main() $/;"	f
+main	2.c	/^main()$/;"	f
+main	3.c	/^int main() $/;"	f
+main	circularlinkedlist.c	/^int main()$/;"	f
+main	compilation program january xm.c	/^int main(int argc,char **argv)$/;"	f
+main	mergelinkedlist.c	/^int main()$/;"	f
+main	mergetwolists.c	/^int main()$/;"	f
+main	midlinedlist1.c	/^int main()$/;"	f
+main	midlinkedlist.c	/^int main()$/;"	f
+main	mutex.c	/^int main()$/;"	f
+main	novemerassesment.c	/^main(int argc, char **argv)$/;"	f
+main	prog3.c	/^main(int argc,char **argv)$/;"	f
+main	recrsivelinkedlist.c	/^int main()$/;"	f
+main	recurssionlinked.c	/^int main()$/;"	f
+main	removeduplicate.c	/^int main()$/;"	f
+main	removeword.c	/^int main()$/;"	f
+main	reverse.c	/^main()$/;"	f
+main	reverselinkedlist.c	/^int main()$/;"	f
+main	rotate.c	/^int main()$/;"	f
+main	secondprog.c	/^main()$/;"	f
+main	secondprog1.c	/^main()$/;"	f
+main	semaphore.c	/^int main()$/;"	f
+main	sizeof.c	/^main()$/;"	f
+main	strrev.c	/^main()$/;"	f
+main	strstr.c	/^int main()$/;"	f
+main	substringarray.c	/^int main()$/;"	f
+main	substringreverse.c	/^int main()$/;"	f
+merge	mergelinkedlist.c	/^struct student *merge(struct student *head,struct student *head1,int m,int n)$/;"	f
+merge	midlinkedlist.c	/^st* merge(st *head,st *head1,st *mid)$/;"	f
+mergeascending	mergetwolists.c	/^struct student * mergeascending(struct student *head,struct student *head1)$/;"	f
+mergedescending	mergetwolists.c	/^struct student * mergedescending(struct student *head,struct student *head1)$/;"	f
+mut	semaphore.c	/^sem_t mut;$/;"	v
+my_handler	novemerassesment.c	/^void my_handler()$/;"	f
+mysizeof	sizeof.c	2;"	d	file:
+mystrcasecmp	novemerassesment.c	/^int mystrcasecmp(char buf[],char str[])$/;"	f
+mystrcmp	removeword.c	/^int mystrcmp(char temp[],char str[])$/;"	f
+mystrstr	strstr.c	/^char *mystrstr(char str[],char str1[])$/;"	f
+mystrstr	substringarray.c	/^char *mystrstr(char str[],char str1[])$/;"	f
+n	midlinkedlist.c	/^int n;$/;"	v
+n1	mergelinkedlist.c	/^int count=0,n1,n2;$/;"	v
+n2	mergelinkedlist.c	/^int count=0,n1,n2;$/;"	v
+next	circularlinkedlist.c	/^	struct student *next;$/;"	m	struct:student	typeref:struct:student::student	file:
+next	compilation program january xm.c	/^	struct st *next;$/;"	m	struct:st	typeref:struct:st::st	file:
+next	mergelinkedlist.c	/^	struct student *next;$/;"	m	struct:student	typeref:struct:student::student	file:
+next	mergetwolists.c	/^	struct student *next;$/;"	m	struct:student	typeref:struct:student::student	file:
+next	midlinedlist1.c	/^	struct student *next;$/;"	m	struct:student	typeref:struct:student::student	file:
+next	midlinkedlist.c	/^	struct student *next;$/;"	m	struct:student	typeref:struct:student::student	file:
+next	recrsivelinkedlist.c	/^	struct student *next;$/;"	m	struct:student	typeref:struct:student::student	file:
+next	reverselinkedlist.c	/^	struct student *next;$/;"	m	struct:student	typeref:struct:student::student	file:
+openfile	novemerassesment.c	/^void *openfile()$/;"	f
+pass	mergelinkedlist.c	/^int  pass=0,fail=0;$/;"	v
+pid	1.c	/^pid_t pid; $/;"	v
+prev	circularlinkedlist.c	/^	struct student *prev;$/;"	m	struct:student	typeref:struct:student::student	file:
+prev	recrsivelinkedlist.c	/^	struct student *prev;$/;"	m	struct:student	typeref:struct:student::student	file:
+recursivelist	recrsivelinkedlist.c	/^struct student *recursivelist(struct student *head)$/;"	f
+recurssion	recurssionlinked.c	/^void recurssion()$/;"	f
+replace	substringarray.c	/^void replace(char str[],char str1[],char *p)$/;"	f
+reverse	midlinedlist1.c	/^struct student *reverse(struct student *head)$/;"	f
+reverse	midlinkedlist.c	/^st* reverse(st *head)$/;"	f
+reverse	reverselinkedlist.c	/^struct student *reverse(struct student *head)$/;"	f
+reverse	secondprog1.c	/^char *reverse(const char* str)$/;"	f
+set	novemerassesment.c	/^sigset_t set;$/;"	v
+st	compilation program january xm.c	/^struct st$/;"	s	file:
+st	midlinkedlist.c	/^}st;$/;"	t	typeref:struct:student	file:
+stringoper	novemerassesment.c	/^void *stringoper(void)$/;"	f
+student	circularlinkedlist.c	/^struct student$/;"	s	file:
+student	mergelinkedlist.c	/^struct student$/;"	s	file:
+student	mergetwolists.c	/^struct student$/;"	s	file:
+student	midlinedlist1.c	/^struct student$/;"	s	file:
+student	midlinkedlist.c	/^typedef struct student$/;"	s	file:
+student	recrsivelinkedlist.c	/^struct student$/;"	s	file:
+student	reverselinkedlist.c	/^struct student$/;"	s	file:
+t1	mutex.c	/^pthread_t t1,t2;$/;"	v
+t1	semaphore.c	/^pthread_t t1,t2;$/;"	v
+t2	mutex.c	/^pthread_t t1,t2;$/;"	v
+t2	semaphore.c	/^pthread_t t1,t2;$/;"	v
+tid	novemerassesment.c	/^pthread_t tid[2];$/;"	v
+wordcountfile	removeword.c	/^int wordcountfile()$/;"	f
+write	removeword.c	/^void write(char buf[])$/;"	f

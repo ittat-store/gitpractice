@@ -15,7 +15,7 @@ int main()
 	while(1)
 	{
 		printf("1.add 2.display 3.reverse");
-		printf("enter u r choice");
+		printf("enter u r choice...........");
 		scanf("%d",&ch);
 		switch(ch)
 		{

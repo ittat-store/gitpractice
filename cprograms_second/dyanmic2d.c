@@ -16,6 +16,7 @@ int main()
 			scanf("%d",&a[i][j]);
 		}
 	}
+        printf("hi\n");
 
 /*	for(i=0;i<rows;i++)
 	{
@@ -24,12 +25,15 @@ int main()
 		printf("\n");
 	}*/
 
+printf("bye\n");
+
 	for(i=0;i<rows&&j<3;j++)
 	{
-		printf("%3d",a[i][j]);
+		printf("a[%d][%d]",a[i][j]);
 		if(j==3-1)
 		{
-			j=-1;
+			//j=-1;
+                         j=0;
 			i++;
 			printf("\n");
 		}
@@ -37,6 +41,5 @@ int main()
 			continue;
 	}
 
-
-
+printf("keerthi\n");
 }

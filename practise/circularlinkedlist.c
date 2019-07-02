@@ -27,7 +27,8 @@ int main()
 			case 2:display(head);
 			       break;
 			case 3:head=doublelist(head);
-			       break;
+			       display(head);
+                               break;
 			case 4:goback(head);
 			       break;
 			case 5:gofront(head);
