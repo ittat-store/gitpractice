@@ -1,0 +1,16 @@
+
+       TEST  CASES                                                  OUTPUT
+
+1. If list is empty                                                   Pass
+
+2.if list has less than 4 elements                                    pass(i.e.,pair not found is printed)
+
+3.if no match is found                                                pass(i.e.,pair not found is printed)
+
+4.if more pairs present                                               pass(printing n pairs)
+
+5.if duplicates present in the list                                   pass (enter only distinct values)
+
+6.elements 5,4,7,1,2,9,8                                              pass(printing pairs)
+
+7.elements 54,30,7,90,1,9,10                                          pass(no pairs found)

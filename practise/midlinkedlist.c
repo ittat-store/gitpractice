@@ -115,15 +115,15 @@ int main()
 	{
 		node=createnode();
 		if(head==NULL)
-		{
-			head=node;
-			p=node;
-		}
-		else
-		{
-			p->next=node;
-			p=p->next;
-		}
+		  {
+		  head=node;
+		  p=node;
+		  }
+		  else
+		  {
+		  p->next=node;
+		  p=p->next;
+		  }
 	}
 	printf("\n");
 	if(n%2!=0)

@@ -126,7 +126,7 @@ int main()
 	int a,ret=1;
 	while(1)
 	{
-		printf("for stack1 1.push ... 2.pop...3.display....\n for stack two 4.push....5.pop....6.display\n");
+		printf("for stack1 1.push ... 2.pop...3.display....\n for stack two 4.push....5.pop....6.display ....7.merge\n");
 		printf("enter choice\n");
 		scanf("%d",&a);
 		switch(a)
