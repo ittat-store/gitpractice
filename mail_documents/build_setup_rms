@@ -1,0 +1,112 @@
+RMS BUILD SETUP
+===============
+
+1. Ubuntu 14.04
+2. Build Intialization setup
+
+step 1:Install below packages by using below command.
+
+sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+
+Step 2:Java-open-JDK7 installation by using below commands.
+
+sudo apt-get install software-properties-commonpython-software-properties
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update   
+sudo apt-get install openjdk-7-jdk
+Check Java in this path cd /usr/lib/jvm/java-7-openjdk-amd64/bin
+
+Step 3: Git Installation
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+
+Step 4:Require perl-5.22.1 packages use below command to install.
+sudo apt-get install libxml-parser-perl(some times required perl packages)
+
+Step 5: For change default shell should run -- sudo dpkg-reconfigure dash
+Step 6:SSL Certification
+   sudo apt-get install purge ca-certificates curl open ssh-server
+
+Step 7: Other Software
+   sudo apt-get install meld
+   sudo apt-get install curl
+   sudo apt-get install xpad
+   sudo apt-get install unrar
+
+Step 8:Python version should be 2.7.12 
+
+Step 9:Download python 2.7.12 from open source and extract it follow below commands.
+
+cd /usr/src
+sudo wget https://www.python.org/ftp/python/2.7.12/Python-2.7.12.tgz
+sudo tar xzf Python-2.7.12.tgz
+cd Python-2.7.12
+sudo ./configure --enable-optimizations
+sudo make altinstall
+
+
+Step 10:For qualtools setup follow below steps.
+-->Source code syncing:
+
+1. git clone http://192.168.2.223:1900/vtech/vt3n.git
+
+-->Clone the qualtools from git lab by using below command.
+
+2.git clone http://192.168.2.223:1900/vtech/qualtools.git
+
+-->After cloning qualtools follow below commands
+ 
+3.cd qualtools
+
+-->Change the permission by using below command.
+
+4.chmod +x qualtools.sh
+
+-->Run the qualtools script in qualtools directory.
+
+5../qualtools.sh
+
+-->move to the directory below by using cd command
+
+6.cd vt3n/LINUX/android
+
+-->Run the envsetup script by using below command.
+
+7.source build/envsetup.sh
+8.lunch (Choose a combo by  input its number)
+             1. LF2403_MSM8909_512-user
+             2. LF2403_MSM8909_512-userdebug
+             3. LF2403S_MSM8909_512-user
+             4. LF2403S_MSM8909_512-userdebug
+             5. LF2403N_MSM8909_512-user
+             6. LF2403N_MSM8909_512-userdebug
+             7. LF2403N_L3_MSM8909_512-user
+             8. LF2403N_L3_MSM8909_512-userdebug
+             9. F120B_MSM8909_512-user
+             10. F120B_MSM8909_512-userdebug
+          choose a combo:5 or 6
+-->Run make command to build source code.    
+          9. make -j8 (8  is the number of your cpu thread <=>Intel4 core8 threads) 
+
+After build is success then follow below steps.
+
+Re-run command as shown below.
+
+  10. source build/envsetup.sh
+  11.lunch (Choose a combo by  input its number)
+
+signed build generation:
+           (pack all build result into a zip file  that can be flash after extract)
+
+          a.  cd vt3n
+          b. ./pack_all_sign.sh (flash onto secboot enabled device)
+
+Unsigned build generation:
+
+          a. cd vt3n
+          b. ./pack_all_unsign.sh  (flash to  non secboot device) 
+      Note: Final Binary generated
+      @root_path/pub(vt3n/pub/LYF-LF2403N-000-01-40-121018-i_userdebug_f3.zip,LYF-LF2403N-000-01-40-121018-i_userdebug_f3_symbols_for_qcap.zip)
+
+
