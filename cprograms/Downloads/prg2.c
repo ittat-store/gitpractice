@@ -18,7 +18,7 @@ int main()
 			if(ptr1[i]==ptr1[j])
 			{
 				memmove(ptr1+j,ptr1+j+1,strlen(ptr1));
-				i--;
+			//	i--;
 			}
 		}
 	}
