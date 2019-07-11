@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Lds	LDS_array.c	/^int Lds(int arr[],int n)$/;"	f
+MAX	tcpclientcrct.c	6;"	d	file:
+MAX	tcpservercrct.c	7;"	d	file:
+Merge	mergesortcrct.c	/^struct node * Merge(struct node * head1, struct node * head2)$/;"	f
+PORT	tcpclientcrct.c	7;"	d	file:
+PORT	tcpservercrct.c	8;"	d	file:
+SA	tcpclientcrct.c	8;"	d	file:
+SA	tcpservercrct.c	9;"	d	file:
+array	binarytree.c	/^char array[ ] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', '\\0', '\\0', 'H' };$/;"	v
+ascending	mergesortcrct.c	/^struct node * ascending(struct node * head1, struct node * head2)$/;"	f
+constructTree	binarytree.c	/^struct node * constructTree( int index ) {$/;"	f
+createnode	mergesortcrct.c	/^struct node * createnode(struct node *head1)$/;"	f
+data	binarytree.c	/^    char data;$/;"	m	struct:node	file:
+data	mergesortcrct.c	/^	int data;$/;"	m	struct:node	file:
+descending	mergesortcrct.c	/^struct node * descending(struct node * head1, struct node * head2)$/;"	f
+display	mergesortcrct.c	/^void display( struct node * head1)$/;"	f
+func	tcpclientcrct.c	/^void func(int sockfd) $/;"	f
+func	tcpservercrct.c	/^void func(int sockfd) $/;"	f
+inorder	binarytree.c	/^void inorder( struct node *root ) {$/;"	f
+left	binarytree.c	/^    struct node * left;$/;"	m	struct:node	typeref:struct:node::node	file:
+leftcount	binarytree.c	/^int leftcount[ ] = {  1,   3,   5,   -1,   9,  -1,  -1,   -1,   -1,  -1 };$/;"	v
+main	LDS_array.c	/^int main()$/;"	f
+main	arrayreverse.c	/^int main()$/;"	f
+main	binarytree.c	/^void main() {$/;"	f
+main	endian.c	/^int main()$/;"	f
+main	mergesortcrct.c	/^int main()$/;"	f
+main	restbit.c	/^int main()$/;"	f
+main	reverseinteger.c	/^int main()$/;"	f
+main	tcpclientcrct.c	/^int main() $/;"	f
+main	tcpservercrct.c	/^int main() $/;"	f
+next	mergesortcrct.c	/^	struct node * next;$/;"	m	struct:node	typeref:struct:node::node	file:
+node	binarytree.c	/^struct node {$/;"	s	file:
+node	mergesortcrct.c	/^struct node{$/;"	s	file:
+reverse	mergesortcrct.c	/^struct node* reverse(struct node *head)$/;"	f
+right	binarytree.c	/^    struct node * right;$/;"	m	struct:node	typeref:struct:node::node	file:
+rightcount	binarytree.c	/^int rightcount[ ] = {  2,   4,   6,   -1,  -1,  -1,  -1,   -1,   -1,  -1 };$/;"	v
