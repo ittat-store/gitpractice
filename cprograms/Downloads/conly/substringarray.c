@@ -9,7 +9,7 @@ int main()
 	gets(str);
 	scanf("%s",str1);
 	p=mystrstr(str,str1);
-//	printf("%s",p);
+	//	printf("%s",p);
 	replace(str,str1,p);
 }
 char *mystrstr(char str[],char str1[])
@@ -27,10 +27,10 @@ char *mystrstr(char str[],char str1[])
 
 				i++;
 				j++;
-                              if(str1[j]=='\0')
-                               {
-                                        return p;
-                                }
+				if(str1[j]=='\0')
+				{
+					return p;
+				}
 
 
 			}
@@ -41,22 +41,22 @@ char *mystrstr(char str[],char str1[])
 	return 0;
 }
 void replace(char str[],char str1[],char *p)
-  {
-  int i=0,j=strlen(str1)-1,a;
-  a=strlen(str1);
-  while(str[i]!='\0')
-  {
-  if(&str[i]==p)
-  {
-  while(j>=0)
 {
-str[i]=str1[j];
-i++;
-j--;
-}
-}
-else
-i++;
-}
-printf("%s",str);
+	int i=0,j=strlen(str1)-1,a;
+	a=strlen(str1);
+	while(str[i]!='\0')
+	{
+		if(&str[i]==p)
+		{
+			while(j>=0)
+			{
+				str[i]=str1[j];
+				i++;
+				j--;
+			}
+		}
+		else
+			i++;
+	}
+	printf("%s",str);
 }

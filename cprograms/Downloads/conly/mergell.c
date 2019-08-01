@@ -117,7 +117,7 @@ int main()
  	int i=1;
 	if(i)
 	{
-                printf("1.intersect at 1st node\n");
+               /* printf("1.intersect at 1st node\n");
 		testcases(5,3,1,3);
                 printf("2.list1 is empty\n");
 		testcases(0,3,1,3);
@@ -126,7 +126,7 @@ int main()
 		printf("list2 is empty\n");
 		testcases(3,0,1,0);
 		printf("intersect at last node\n");
-		testcases(3,2,3,2);
+		testcases(3,2,3,2);*/
 		printf("intersect at middle\n");
 		testcases(4,2,2,1);
 		printf("both lists are empty\n");

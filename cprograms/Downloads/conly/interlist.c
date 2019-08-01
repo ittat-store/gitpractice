@@ -124,11 +124,11 @@ void test(int lenth1,int lenth2,int pos1)
 	lenth=lenth2;
 	head2=create(head2);
 	pos=pos1;
-        printf(".................\n");
-        traversal(head1);
-        printf("..............\n");
-        traversal(head2);
-        printf(".............\n");
+	printf(".................\n");
+	traversal(head1);
+	printf("..............\n");
+	traversal(head2);
+	printf(".............\n");
 	createintersection(head1,head2);
 	printf("list1 afterintersection elements\n");
 	traversal(head1);
