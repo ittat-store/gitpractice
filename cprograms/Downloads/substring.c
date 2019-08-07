@@ -50,13 +50,14 @@ return buf;
 		while(ptr=substring(ptr,sub))
                 {
                         q=ptr;
-                        ptr++;
-                }
+                       // ptr++;
+                
                 printf("%s\n",q);
                 rev=reverse(sub);
                 printf("%s\n",rev);
                 strncpy(q,rev,strlen(rev));
                 printf("%s\n",str);
+                }
 		return 0;
 	}
 
