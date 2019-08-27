@@ -1,0 +1,15 @@
+#Makefile - make file for our first driver
+
+CONFIG_MODULE_SIG=n
+
+ifneq (${KERNELRELEASE},)
+        obj-m := my_dev.o
+else
+        KERNEL_SOURCE := /lib/modules/$(shell uname -r)/build
+        PWD := $(shell pwd)
+deafult:
+	${MAKE} -C ${KERNEL_SOURCE} SUBDIRS=${PWD} modules
+
+clean:  
+	${MAKE} -C ${KERNEL_SOURCE} SUBDIRS=${PWD} clean
+endif
