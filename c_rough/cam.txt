@@ -1,0 +1,2703 @@
+[16688.370304] usb 3-6: Device not responding to set address.
+[16688.574262] usb 3-6: device not accepting address 30, error -71
+[16688.686209] usb 3-6: new high-speed USB device number 31 using xhci_hcd
+[16688.686290] usb 3-6: Device not responding to set address.
+[16688.890347] usb 3-6: Device not responding to set address.
+[16689.094212] usb 3-6: device not accepting address 31, error -71
+[16689.206236] usb 3-6: new high-speed USB device number 32 using xhci_hcd
+[16689.206343] usb 3-6: Device not responding to set address.
+[16689.410295] usb 3-6: Device not responding to set address.
+[16689.614142] usb 3-6: device not accepting address 32, error -71
+[16689.614222] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16689.738229] usb 3-6: new high-speed USB device number 33 using xhci_hcd
+[16689.738343] usb 3-6: Device not responding to set address.
+[16689.942283] usb 3-6: Device not responding to set address.
+[16690.146108] usb 3-6: device not accepting address 33, error -71
+[16690.258222] usb 3-6: new high-speed USB device number 34 using xhci_hcd
+[16690.258335] usb 3-6: Device not responding to set address.
+[16690.462149] usb 3-6: Device not responding to set address.
+[16690.666123] usb 3-6: device not accepting address 34, error -71
+[16690.778066] usb 3-6: new high-speed USB device number 35 using xhci_hcd
+[16690.778134] usb 3-6: Device not responding to set address.
+[16690.982210] usb 3-6: Device not responding to set address.
+[16691.186036] usb 3-6: device not accepting address 35, error -71
+[16691.298117] usb 3-6: new high-speed USB device number 36 using xhci_hcd
+[16691.298253] usb 3-6: Device not responding to set address.
+[16691.502113] usb 3-6: Device not responding to set address.
+[16691.706036] usb 3-6: device not accepting address 36, error -71
+[16691.706136] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16692.986006] usb 3-6: new high-speed USB device number 37 using xhci_hcd
+[16692.986126] usb 3-6: Device not responding to set address.
+[16693.190031] usb 3-6: Device not responding to set address.
+[16693.393920] usb 3-6: device not accepting address 37, error -71
+[16693.505886] usb 3-6: new high-speed USB device number 38 using xhci_hcd
+[16693.505964] usb 3-6: Device not responding to set address.
+[16693.709988] usb 3-6: Device not responding to set address.
+[16693.913859] usb 3-6: device not accepting address 38, error -71
+[16694.025845] usb 3-6: new high-speed USB device number 39 using xhci_hcd
+[16694.025921] usb 3-6: Device not responding to set address.
+[16694.229961] usb 3-6: Device not responding to set address.
+[16694.433805] usb 3-6: device not accepting address 39, error -71
+[16694.545892] usb 3-6: new high-speed USB device number 40 using xhci_hcd
+[16694.546007] usb 3-6: Device not responding to set address.
+[16694.749966] usb 3-6: Device not responding to set address.
+[16694.953763] usb 3-6: device not accepting address 40, error -71
+[16694.953782] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16696.261774] usb 3-6: new high-speed USB device number 41 using xhci_hcd
+[16696.261895] usb 3-6: Device not responding to set address.
+[16696.465718] usb 3-6: Device not responding to set address.
+[16696.669675] usb 3-6: device not accepting address 41, error -71
+[16696.781642] usb 3-6: new high-speed USB device number 42 using xhci_hcd
+[16696.781707] usb 3-6: Device not responding to set address.
+[16696.985811] usb 3-6: Device not responding to set address.
+[16697.189673] usb 3-6: device not accepting address 42, error -71
+[16697.301708] usb 3-6: new high-speed USB device number 43 using xhci_hcd
+[16697.301810] usb 3-6: Device not responding to set address.
+[16697.505714] usb 3-6: Device not responding to set address.
+[16697.709607] usb 3-6: device not accepting address 43, error -71
+[16697.821659] usb 3-6: new high-speed USB device number 44 using xhci_hcd
+[16697.821800] usb 3-6: Device not responding to set address.
+[16698.025670] usb 3-6: Device not responding to set address.
+[16698.229539] usb 3-6: device not accepting address 44, error -71
+[16698.229565] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16699.525504] usb 3-6: new high-speed USB device number 45 using xhci_hcd
+[16699.525615] usb 3-6: Device not responding to set address.
+[16699.729508] usb 3-6: Device not responding to set address.
+[16699.933438] usb 3-6: device not accepting address 45, error -71
+[16700.045429] usb 3-6: new high-speed USB device number 46 using xhci_hcd
+[16700.045504] usb 3-6: Device not responding to set address.
+[16700.249513] usb 3-6: Device not responding to set address.
+[16700.453415] usb 3-6: device not accepting address 46, error -71
+[16700.565472] usb 3-6: new high-speed USB device number 47 using xhci_hcd
+[16700.565591] usb 3-6: Device not responding to set address.
+[16700.769512] usb 3-6: Device not responding to set address.
+[16700.973344] usb 3-6: device not accepting address 47, error -71
+[16701.085414] usb 3-6: new high-speed USB device number 48 using xhci_hcd
+[16701.085515] usb 3-6: Device not responding to set address.
+[16701.289389] usb 3-6: Device not responding to set address.
+[16701.493371] usb 3-6: device not accepting address 48, error -71
+[16701.493468] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16702.757225] usb 3-6: new high-speed USB device number 49 using xhci_hcd
+[16702.757303] usb 3-6: Device not responding to set address.
+[16702.961334] usb 3-6: Device not responding to set address.
+[16703.165230] usb 3-6: device not accepting address 49, error -71
+[16703.277276] usb 3-6: new high-speed USB device number 50 using xhci_hcd
+[16703.277396] usb 3-6: Device not responding to set address.
+[16703.481335] usb 3-6: Device not responding to set address.
+[16703.685174] usb 3-6: device not accepting address 50, error -71
+[16703.797251] usb 3-6: new high-speed USB device number 51 using xhci_hcd
+[16703.797370] usb 3-6: Device not responding to set address.
+[16704.001287] usb 3-6: Device not responding to set address.
+[16704.205171] usb 3-6: device not accepting address 51, error -71
+[16704.317171] usb 3-6: new high-speed USB device number 52 using xhci_hcd
+[16704.317273] usb 3-6: Device not responding to set address.
+[16704.521179] usb 3-6: Device not responding to set address.
+[16704.725140] usb 3-6: device not accepting address 52, error -71
+[16704.725238] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16704.849070] usb 3-6: new high-speed USB device number 53 using xhci_hcd
+[16704.849152] usb 3-6: Device not responding to set address.
+[16705.053206] usb 3-6: Device not responding to set address.
+[16705.257085] usb 3-6: device not accepting address 53, error -71
+[16705.369143] usb 3-6: new high-speed USB device number 54 using xhci_hcd
+[16705.369243] usb 3-6: Device not responding to set address.
+[16705.573203] usb 3-6: Device not responding to set address.
+[16705.776999] usb 3-6: device not accepting address 54, error -71
+[16705.889111] usb 3-6: new high-speed USB device number 55 using xhci_hcd
+[16705.889239] usb 3-6: Device not responding to set address.
+[16706.093079] usb 3-6: Device not responding to set address.
+[16706.297035] usb 3-6: device not accepting address 55, error -71
+[16706.409022] usb 3-6: new high-speed USB device number 56 using xhci_hcd
+[16706.409133] usb 3-6: Device not responding to set address.
+[16706.613082] usb 3-6: Device not responding to set address.
+[16706.816958] usb 3-6: device not accepting address 56, error -71
+[16706.817020] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16708.080951] usb 3-6: new high-speed USB device number 57 using xhci_hcd
+[16708.081074] usb 3-6: Device not responding to set address.
+[16708.285025] usb 3-6: Device not responding to set address.
+[16708.488804] usb 3-6: device not accepting address 57, error -71
+[16708.600920] usb 3-6: new high-speed USB device number 58 using xhci_hcd
+[16708.601032] usb 3-6: Device not responding to set address.
+[16708.804973] usb 3-6: Device not responding to set address.
+[16709.008811] usb 3-6: device not accepting address 58, error -71
+[16709.120835] usb 3-6: new high-speed USB device number 59 using xhci_hcd
+[16709.120939] usb 3-6: Device not responding to set address.
+[16709.324845] usb 3-6: Device not responding to set address.
+[16709.528790] usb 3-6: device not accepting address 59, error -71
+[16709.640754] usb 3-6: new high-speed USB device number 60 using xhci_hcd
+[16709.640833] usb 3-6: Device not responding to set address.
+[16709.844871] usb 3-6: Device not responding to set address.
+[16710.048737] usb 3-6: device not accepting address 60, error -71
+[16710.048800] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16710.172802] usb 3-6: new high-speed USB device number 61 using xhci_hcd
+[16710.172916] usb 3-6: Device not responding to set address.
+[16710.376877] usb 3-6: Device not responding to set address.
+[16710.580661] usb 3-6: device not accepting address 61, error -71
+[16710.692780] usb 3-6: new high-speed USB device number 62 using xhci_hcd
+[16710.692898] usb 3-6: Device not responding to set address.
+[16710.896717] usb 3-6: Device not responding to set address.
+[16711.100647] usb 3-6: device not accepting address 62, error -71
+[16711.212726] usb 3-6: new high-speed USB device number 63 using xhci_hcd
+[16711.212839] usb 3-6: Device not responding to set address.
+[16711.416713] usb 3-6: Device not responding to set address.
+[16711.620666] usb 3-6: device not accepting address 63, error -71
+[16711.732601] usb 3-6: new high-speed USB device number 64 using xhci_hcd
+[16711.732676] usb 3-6: Device not responding to set address.
+[16711.936700] usb 3-6: Device not responding to set address.
+[16712.140589] usb 3-6: device not accepting address 64, error -71
+[16712.140651] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16713.420543] usb 3-6: new high-speed USB device number 65 using xhci_hcd
+[16713.420626] usb 3-6: Device not responding to set address.
+[16713.624612] usb 3-6: Device not responding to set address.
+[16713.828446] usb 3-6: device not accepting address 65, error -71
+[16713.940521] usb 3-6: new high-speed USB device number 66 using xhci_hcd
+[16713.940623] usb 3-6: Device not responding to set address.
+[16714.144509] usb 3-6: Device not responding to set address.
+[16714.348476] usb 3-6: device not accepting address 66, error -71
+[16714.460416] usb 3-6: new high-speed USB device number 67 using xhci_hcd
+[16714.460493] usb 3-6: Device not responding to set address.
+[16714.664562] usb 3-6: Device not responding to set address.
+[16714.868414] usb 3-6: device not accepting address 67, error -71
+[16714.980414] usb 3-6: new high-speed USB device number 68 using xhci_hcd
+[16714.980547] usb 3-6: Device not responding to set address.
+[16715.184522] usb 3-6: Device not responding to set address.
+[16715.388335] usb 3-6: device not accepting address 68, error -71
+[16715.388427] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16715.512432] usb 3-6: new high-speed USB device number 69 using xhci_hcd
+[16715.512580] usb 3-6: Device not responding to set address.
+[16715.716485] usb 3-6: Device not responding to set address.
+[16715.920309] usb 3-6: device not accepting address 69, error -71
+[16716.032427] usb 3-6: new high-speed USB device number 70 using xhci_hcd
+[16716.032560] usb 3-6: Device not responding to set address.
+[16716.236352] usb 3-6: Device not responding to set address.
+[16716.440298] usb 3-6: device not accepting address 70, error -71
+[16716.552276] usb 3-6: new high-speed USB device number 71 using xhci_hcd
+[16716.552358] usb 3-6: Device not responding to set address.
+[16716.756410] usb 3-6: Device not responding to set address.
+[16716.960253] usb 3-6: device not accepting address 71, error -71
+[16717.072321] usb 3-6: new high-speed USB device number 72 using xhci_hcd
+[16717.072440] usb 3-6: Device not responding to set address.
+[16717.276337] usb 3-6: Device not responding to set address.
+[16717.480177] usb 3-6: device not accepting address 72, error -71
+[16717.480200] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16718.744223] usb 3-6: new high-speed USB device number 73 using xhci_hcd
+[16718.744351] usb 3-6: Device not responding to set address.
+[16718.948158] usb 3-6: Device not responding to set address.
+[16719.152101] usb 3-6: device not accepting address 73, error -71
+[16719.264075] usb 3-6: new high-speed USB device number 74 using xhci_hcd
+[16719.264151] usb 3-6: Device not responding to set address.
+[16719.468222] usb 3-6: Device not responding to set address.
+[16719.672078] usb 3-6: device not accepting address 74, error -71
+[16719.784131] usb 3-6: new high-speed USB device number 75 using xhci_hcd
+[16719.784250] usb 3-6: Device not responding to set address.
+[16719.988187] usb 3-6: Device not responding to set address.
+[16720.192029] usb 3-6: device not accepting address 75, error -71
+[16720.304099] usb 3-6: new high-speed USB device number 76 using xhci_hcd
+[16720.304217] usb 3-6: Device not responding to set address.
+[16720.508111] usb 3-6: Device not responding to set address.
+[16720.711978] usb 3-6: device not accepting address 76, error -71
+[16720.712047] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16721.951890] usb 3-6: new high-speed USB device number 77 using xhci_hcd
+[16721.951965] usb 3-6: Device not responding to set address.
+[16722.156038] usb 3-6: Device not responding to set address.
+[16722.359874] usb 3-6: device not accepting address 77, error -71
+[16722.471948] usb 3-6: new high-speed USB device number 78 using xhci_hcd
+[16722.472066] usb 3-6: Device not responding to set address.
+[16722.676024] usb 3-6: Device not responding to set address.
+[16722.879828] usb 3-6: device not accepting address 78, error -71
+[16722.991915] usb 3-6: new high-speed USB device number 79 using xhci_hcd
+[16722.992047] usb 3-6: Device not responding to set address.
+[16723.195879] usb 3-6: Device not responding to set address.
+[16723.399844] usb 3-6: device not accepting address 79, error -71
+[16723.511832] usb 3-6: new high-speed USB device number 80 using xhci_hcd
+[16723.511937] usb 3-6: Device not responding to set address.
+[16723.715861] usb 3-6: Device not responding to set address.
+[16723.919771] usb 3-6: device not accepting address 80, error -71
+[16723.919833] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16724.043754] usb 3-6: new high-speed USB device number 81 using xhci_hcd
+[16724.043831] usb 3-6: Device not responding to set address.
+[16724.247891] usb 3-6: Device not responding to set address.
+[16724.451730] usb 3-6: device not accepting address 81, error -71
+[16724.563803] usb 3-6: new high-speed USB device number 82 using xhci_hcd
+[16724.563928] usb 3-6: Device not responding to set address.
+[16724.767841] usb 3-6: Device not responding to set address.
+[16724.971680] usb 3-6: device not accepting address 82, error -71
+[16725.083742] usb 3-6: new high-speed USB device number 83 using xhci_hcd
+[16725.083844] usb 3-6: Device not responding to set address.
+[16725.287800] usb 3-6: Device not responding to set address.
+[16725.491696] usb 3-6: device not accepting address 83, error -71
+[16725.603648] usb 3-6: new high-speed USB device number 84 using xhci_hcd
+[16725.603740] usb 3-6: Device not responding to set address.
+[16725.807747] usb 3-6: Device not responding to set address.
+[16726.011665] usb 3-6: device not accepting address 84, error -71
+[16726.011765] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16727.291613] usb 3-6: new high-speed USB device number 85 using xhci_hcd
+[16727.291763] usb 3-6: Device not responding to set address.
+[16727.495611] usb 3-6: Device not responding to set address.
+[16727.699532] usb 3-6: device not accepting address 85, error -71
+[16727.811546] usb 3-6: new high-speed USB device number 86 using xhci_hcd
+[16727.811681] usb 3-6: Device not responding to set address.
+[16728.015627] usb 3-6: Device not responding to set address.
+[16728.219457] usb 3-6: device not accepting address 86, error -71
+[16728.331535] usb 3-6: new high-speed USB device number 87 using xhci_hcd
+[16728.331656] usb 3-6: Device not responding to set address.
+[16728.535496] usb 3-6: Device not responding to set address.
+[16728.739472] usb 3-6: device not accepting address 87, error -71
+[16728.851410] usb 3-6: new high-speed USB device number 88 using xhci_hcd
+[16728.851486] usb 3-6: Device not responding to set address.
+[16729.055506] usb 3-6: Device not responding to set address.
+[16729.259434] usb 3-6: device not accepting address 88, error -71
+[16729.259534] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16729.383451] usb 3-6: new high-speed USB device number 89 using xhci_hcd
+[16729.383598] usb 3-6: Device not responding to set address.
+[16729.587464] usb 3-6: Device not responding to set address.
+[16729.791318] usb 3-6: device not accepting address 89, error -71
+[16729.903432] usb 3-6: new high-speed USB device number 90 using xhci_hcd
+[16729.903578] usb 3-6: Device not responding to set address.
+[16730.107388] usb 3-6: Device not responding to set address.
+[16730.311325] usb 3-6: device not accepting address 90, error -71
+[16730.423352] usb 3-6: new high-speed USB device number 91 using xhci_hcd
+[16730.423458] usb 3-6: Device not responding to set address.
+[16730.627356] usb 3-6: Device not responding to set address.
+[16730.831314] usb 3-6: device not accepting address 91, error -71
+[16730.943277] usb 3-6: new high-speed USB device number 92 using xhci_hcd
+[16730.943353] usb 3-6: Device not responding to set address.
+[16731.147411] usb 3-6: Device not responding to set address.
+[16731.351265] usb 3-6: device not accepting address 92, error -71
+[16731.351372] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16732.631267] usb 3-6: new high-speed USB device number 93 using xhci_hcd
+[16732.631379] usb 3-6: Device not responding to set address.
+[16732.835244] usb 3-6: Device not responding to set address.
+[16733.039110] usb 3-6: device not accepting address 93, error -71
+[16733.151170] usb 3-6: new high-speed USB device number 94 using xhci_hcd
+[16733.151283] usb 3-6: Device not responding to set address.
+[16733.355155] usb 3-6: Device not responding to set address.
+[16733.559122] usb 3-6: device not accepting address 94, error -71
+[16733.671075] usb 3-6: new high-speed USB device number 95 using xhci_hcd
+[16733.671154] usb 3-6: Device not responding to set address.
+[16733.875223] usb 3-6: Device not responding to set address.
+[16734.079074] usb 3-6: device not accepting address 95, error -71
+[16734.191122] usb 3-6: new high-speed USB device number 96 using xhci_hcd
+[16734.191235] usb 3-6: Device not responding to set address.
+[16734.395184] usb 3-6: Device not responding to set address.
+[16734.599044] usb 3-6: device not accepting address 96, error -71
+[16734.599136] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16734.723092] usb 3-6: new high-speed USB device number 97 using xhci_hcd
+[16734.723211] usb 3-6: Device not responding to set address.
+[16734.927168] usb 3-6: Device not responding to set address.
+[16735.130957] usb 3-6: device not accepting address 97, error -71
+[16735.243087] usb 3-6: new high-speed USB device number 98 using xhci_hcd
+[16735.243220] usb 3-6: Device not responding to set address.
+[16735.447010] usb 3-6: Device not responding to set address.
+[16735.650983] usb 3-6: device not accepting address 98, error -71
+[16735.762928] usb 3-6: new high-speed USB device number 99 using xhci_hcd
+[16735.763002] usb 3-6: Device not responding to set address.
+[16735.967023] usb 3-6: Device not responding to set address.
+[16736.170957] usb 3-6: device not accepting address 99, error -71
+[16736.282984] usb 3-6: new high-speed USB device number 100 using xhci_hcd
+[16736.283120] usb 3-6: Device not responding to set address.
+[16736.487042] usb 3-6: Device not responding to set address.
+[16736.690842] usb 3-6: device not accepting address 100, error -71
+[16736.690871] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16737.954826] usb 3-6: new high-speed USB device number 101 using xhci_hcd
+[16737.954932] usb 3-6: Device not responding to set address.
+[16738.158827] usb 3-6: Device not responding to set address.
+[16738.362803] usb 3-6: device not accepting address 101, error -71
+[16738.474739] usb 3-6: new high-speed USB device number 102 using xhci_hcd
+[16738.474803] usb 3-6: Device not responding to set address.
+[16738.678889] usb 3-6: Device not responding to set address.
+[16738.882723] usb 3-6: device not accepting address 102, error -71
+[16738.994796] usb 3-6: new high-speed USB device number 103 using xhci_hcd
+[16738.994927] usb 3-6: Device not responding to set address.
+[16739.198851] usb 3-6: Device not responding to set address.
+[16739.402730] usb 3-6: device not accepting address 103, error -71
+[16739.514761] usb 3-6: new high-speed USB device number 104 using xhci_hcd
+[16739.514906] usb 3-6: Device not responding to set address.
+[16739.718806] usb 3-6: Device not responding to set address.
+[16739.922640] usb 3-6: device not accepting address 104, error -71
+[16739.922666] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16741.134553] usb 3-6: new high-speed USB device number 105 using xhci_hcd
+[16741.134629] usb 3-6: Device not responding to set address.
+[16741.338698] usb 3-6: Device not responding to set address.
+[16741.542542] usb 3-6: device not accepting address 105, error -71
+[16741.654621] usb 3-6: new high-speed USB device number 106 using xhci_hcd
+[16741.654766] usb 3-6: Device not responding to set address.
+[16741.858647] usb 3-6: Device not responding to set address.
+[16742.062480] usb 3-6: device not accepting address 106, error -71
+[16742.174541] usb 3-6: new high-speed USB device number 107 using xhci_hcd
+[16742.174621] usb 3-6: Device not responding to set address.
+[16742.378518] usb 3-6: Device not responding to set address.
+[16742.582506] usb 3-6: device not accepting address 107, error -71
+[16742.694436] usb 3-6: new high-speed USB device number 108 using xhci_hcd
+[16742.694512] usb 3-6: Device not responding to set address.
+[16742.898543] usb 3-6: Device not responding to set address.
+[16743.102431] usb 3-6: device not accepting address 108, error -71
+[16743.102493] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16743.226418] usb 3-6: new high-speed USB device number 109 using xhci_hcd
+[16743.226497] usb 3-6: Device not responding to set address.
+[16743.430576] usb 3-6: Device not responding to set address.
+[16743.634434] usb 3-6: device not accepting address 109, error -71
+[16743.746466] usb 3-6: new high-speed USB device number 110 using xhci_hcd
+[16743.746581] usb 3-6: Device not responding to set address.
+[16743.950517] usb 3-6: Device not responding to set address.
+[16744.154328] usb 3-6: device not accepting address 110, error -71
+[16744.266413] usb 3-6: new high-speed USB device number 111 using xhci_hcd
+[16744.266539] usb 3-6: Device not responding to set address.
+[16744.470385] usb 3-6: Device not responding to set address.
+[16744.674364] usb 3-6: device not accepting address 111, error -71
+[16744.786337] usb 3-6: new high-speed USB device number 112 using xhci_hcd
+[16744.786441] usb 3-6: Device not responding to set address.
+[16744.990447] usb 3-6: Device not responding to set address.
+[16745.194327] usb 3-6: device not accepting address 112, error -71
+[16745.194427] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16746.490275] usb 3-6: new high-speed USB device number 113 using xhci_hcd
+[16746.490393] usb 3-6: Device not responding to set address.
+[16746.694345] usb 3-6: Device not responding to set address.
+[16746.898195] usb 3-6: device not accepting address 113, error -71
+[16747.010231] usb 3-6: new high-speed USB device number 114 using xhci_hcd
+[16747.010343] usb 3-6: Device not responding to set address.
+[16747.214309] usb 3-6: Device not responding to set address.
+[16747.418115] usb 3-6: device not accepting address 114, error -71
+[16747.530157] usb 3-6: new high-speed USB device number 115 using xhci_hcd
+[16747.530258] usb 3-6: Device not responding to set address.
+[16747.734167] usb 3-6: Device not responding to set address.
+[16747.938095] usb 3-6: device not accepting address 115, error -71
+[16748.050069] usb 3-6: new high-speed USB device number 116 using xhci_hcd
+[16748.050145] usb 3-6: Device not responding to set address.
+[16748.254218] usb 3-6: Device not responding to set address.
+[16748.458098] usb 3-6: device not accepting address 116, error -71
+[16748.458198] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16748.582080] usb 3-6: new high-speed USB device number 117 using xhci_hcd
+[16748.582204] usb 3-6: Device not responding to set address.
+[16748.786201] usb 3-6: Device not responding to set address.
+[16748.990035] usb 3-6: device not accepting address 117, error -71
+[16749.102094] usb 3-6: new high-speed USB device number 118 using xhci_hcd
+[16749.102210] usb 3-6: Device not responding to set address.
+[16749.306125] usb 3-6: Device not responding to set address.
+[16749.510019] usb 3-6: device not accepting address 118, error -71
+[16749.621973] usb 3-6: new high-speed USB device number 119 using xhci_hcd
+[16749.622040] usb 3-6: Device not responding to set address.
+[16749.826015] usb 3-6: Device not responding to set address.
+[16750.029991] usb 3-6: device not accepting address 119, error -71
+[16750.141940] usb 3-6: new high-speed USB device number 120 using xhci_hcd
+[16750.142018] usb 3-6: Device not responding to set address.
+[16750.346094] usb 3-6: Device not responding to set address.
+[16750.549932] usb 3-6: device not accepting address 120, error -71
+[16750.550026] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16751.773906] usb 3-6: new high-speed USB device number 121 using xhci_hcd
+[16751.774022] usb 3-6: Device not responding to set address.
+[16751.977852] usb 3-6: Device not responding to set address.
+[16752.181800] usb 3-6: device not accepting address 121, error -71
+[16752.293775] usb 3-6: new high-speed USB device number 122 using xhci_hcd
+[16752.293852] usb 3-6: Device not responding to set address.
+[16752.497932] usb 3-6: Device not responding to set address.
+[16752.701799] usb 3-6: device not accepting address 122, error -71
+[16752.813767] usb 3-6: new high-speed USB device number 123 using xhci_hcd
+[16752.813843] usb 3-6: Device not responding to set address.
+[16753.017838] usb 3-6: Device not responding to set address.
+[16753.221739] usb 3-6: device not accepting address 123, error -71
+[16753.333797] usb 3-6: new high-speed USB device number 124 using xhci_hcd
+[16753.333915] usb 3-6: Device not responding to set address.
+[16753.537831] usb 3-6: Device not responding to set address.
+[16753.741675] usb 3-6: device not accepting address 124, error -71
+[16753.741705] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16753.865746] usb 3-6: new high-speed USB device number 125 using xhci_hcd
+[16753.865875] usb 3-6: Device not responding to set address.
+[16754.069724] usb 3-6: Device not responding to set address.
+[16754.273664] usb 3-6: device not accepting address 125, error -71
+[16754.385636] usb 3-6: new high-speed USB device number 126 using xhci_hcd
+[16754.385710] usb 3-6: Device not responding to set address.
+[16754.589736] usb 3-6: Device not responding to set address.
+[16754.793657] usb 3-6: device not accepting address 126, error -71
+[16754.905646] usb 3-6: new high-speed USB device number 127 using xhci_hcd
+[16754.905753] usb 3-6: Device not responding to set address.
+[16755.109740] usb 3-6: Device not responding to set address.
+[16755.313583] usb 3-6: device not accepting address 127, error -71
+[16755.425650] usb 3-6: new high-speed USB device number 2 using xhci_hcd
+[16755.425785] usb 3-6: Device not responding to set address.
+[16755.629650] usb 3-6: Device not responding to set address.
+[16755.833521] usb 3-6: device not accepting address 2, error -71
+[16755.833547] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16757.129491] usb 3-6: new high-speed USB device number 3 using xhci_hcd
+[16757.129604] usb 3-6: Device not responding to set address.
+[16757.333483] usb 3-6: Device not responding to set address.
+[16757.537425] usb 3-6: device not accepting address 3, error -71
+[16757.649407] usb 3-6: new high-speed USB device number 4 using xhci_hcd
+[16757.649482] usb 3-6: Device not responding to set address.
+[16757.853551] usb 3-6: Device not responding to set address.
+[16758.057390] usb 3-6: device not accepting address 4, error -71
+[16758.169458] usb 3-6: new high-speed USB device number 5 using xhci_hcd
+[16758.169579] usb 3-6: Device not responding to set address.
+[16758.373513] usb 3-6: Device not responding to set address.
+[16758.577331] usb 3-6: device not accepting address 5, error -71
+[16758.689425] usb 3-6: new high-speed USB device number 6 using xhci_hcd
+[16758.689563] usb 3-6: Device not responding to set address.
+[16758.893397] usb 3-6: Device not responding to set address.
+[16759.097356] usb 3-6: device not accepting address 6, error -71
+[16759.097440] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16759.221366] usb 3-6: new high-speed USB device number 7 using xhci_hcd
+[16759.221478] usb 3-6: Device not responding to set address.
+[16759.425336] usb 3-6: Device not responding to set address.
+[16759.629281] usb 3-6: device not accepting address 7, error -71
+[16759.741267] usb 3-6: new high-speed USB device number 8 using xhci_hcd
+[16759.741341] usb 3-6: Device not responding to set address.
+[16759.945365] usb 3-6: Device not responding to set address.
+[16760.149256] usb 3-6: device not accepting address 8, error -71
+[16760.261314] usb 3-6: new high-speed USB device number 9 using xhci_hcd
+[16760.261431] usb 3-6: Device not responding to set address.
+[16760.465328] usb 3-6: Device not responding to set address.
+[16760.669193] usb 3-6: device not accepting address 9, error -71
+[16760.781254] usb 3-6: new high-speed USB device number 10 using xhci_hcd
+[16760.781356] usb 3-6: Device not responding to set address.
+[16760.985359] usb 3-6: Device not responding to set address.
+[16761.189210] usb 3-6: device not accepting address 10, error -71
+[16761.189296] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16762.453072] usb 3-6: new high-speed USB device number 11 using xhci_hcd
+[16762.453147] usb 3-6: Device not responding to set address.
+[16762.657212] usb 3-6: Device not responding to set address.
+[16762.861055] usb 3-6: device not accepting address 11, error -71
+[16762.973124] usb 3-6: new high-speed USB device number 12 using xhci_hcd
+[16762.973272] usb 3-6: Device not responding to set address.
+[16763.177131] usb 3-6: Device not responding to set address.
+[16763.381000] usb 3-6: device not accepting address 12, error -71
+[16763.493091] usb 3-6: new high-speed USB device number 13 using xhci_hcd
+[16763.493210] usb 3-6: Device not responding to set address.
+[16763.697121] usb 3-6: Device not responding to set address.
+[16763.901002] usb 3-6: device not accepting address 13, error -71
+[16764.013027] usb 3-6: new high-speed USB device number 14 using xhci_hcd
+[16764.013138] usb 3-6: Device not responding to set address.
+[16764.217013] usb 3-6: Device not responding to set address.
+[16764.420955] usb 3-6: device not accepting address 14, error -71
+[16764.421029] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16764.544921] usb 3-6: new high-speed USB device number 15 using xhci_hcd
+[16764.545005] usb 3-6: Device not responding to set address.
+[16764.749037] usb 3-6: Device not responding to set address.
+[16764.952910] usb 3-6: device not accepting address 15, error -71
+[16765.064982] usb 3-6: new high-speed USB device number 16 using xhci_hcd
+[16765.065116] usb 3-6: Device not responding to set address.
+[16765.269034] usb 3-6: Device not responding to set address.
+[16765.472843] usb 3-6: device not accepting address 16, error -71
+[16765.584920] usb 3-6: new high-speed USB device number 17 using xhci_hcd
+[16765.585021] usb 3-6: Device not responding to set address.
+[16765.788933] usb 3-6: Device not responding to set address.
+[16765.992874] usb 3-6: device not accepting address 17, error -71
+[16766.104819] usb 3-6: new high-speed USB device number 18 using xhci_hcd
+[16766.104894] usb 3-6: Device not responding to set address.
+[16766.308905] usb 3-6: Device not responding to set address.
+[16766.512841] usb 3-6: device not accepting address 18, error -71
+[16766.512927] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16767.776790] usb 3-6: new high-speed USB device number 19 using xhci_hcd
+[16767.776905] usb 3-6: Device not responding to set address.
+[16767.980805] usb 3-6: Device not responding to set address.
+[16768.184671] usb 3-6: device not accepting address 19, error -71
+[16768.296757] usb 3-6: new high-speed USB device number 20 using xhci_hcd
+[16768.296905] usb 3-6: Device not responding to set address.
+[16768.500749] usb 3-6: Device not responding to set address.
+[16768.704651] usb 3-6: device not accepting address 20, error -71
+[16768.816676] usb 3-6: new high-speed USB device number 21 using xhci_hcd
+[16768.816781] usb 3-6: Device not responding to set address.
+[16769.020675] usb 3-6: Device not responding to set address.
+[16769.224652] usb 3-6: device not accepting address 21, error -71
+[16769.336587] usb 3-6: new high-speed USB device number 22 using xhci_hcd
+[16769.336663] usb 3-6: Device not responding to set address.
+[16769.540683] usb 3-6: Device not responding to set address.
+[16769.744614] usb 3-6: device not accepting address 22, error -71
+[16769.744714] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16769.868647] usb 3-6: new high-speed USB device number 23 using xhci_hcd
+[16769.868760] usb 3-6: Device not responding to set address.
+[16770.072685] usb 3-6: Device not responding to set address.
+[16770.276510] usb 3-6: device not accepting address 23, error -71
+[16770.388608] usb 3-6: new high-speed USB device number 24 using xhci_hcd
+[16770.388724] usb 3-6: Device not responding to set address.
+[16770.592675] usb 3-6: Device not responding to set address.
+[16770.796540] usb 3-6: device not accepting address 24, error -71
+[16770.908552] usb 3-6: new high-speed USB device number 25 using xhci_hcd
+[16770.908654] usb 3-6: Device not responding to set address.
+[16771.112559] usb 3-6: Device not responding to set address.
+[16771.316464] usb 3-6: device not accepting address 25, error -71
+[16771.428453] usb 3-6: new high-speed USB device number 26 using xhci_hcd
+[16771.428532] usb 3-6: Device not responding to set address.
+[16771.632521] usb 3-6: Device not responding to set address.
+[16771.836402] usb 3-6: device not accepting address 26, error -71
+[16771.836437] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16773.100422] usb 3-6: new high-speed USB device number 27 using xhci_hcd
+[16773.100553] usb 3-6: Device not responding to set address.
+[16773.304454] usb 3-6: Device not responding to set address.
+[16773.508316] usb 3-6: device not accepting address 27, error -71
+[16773.620342] usb 3-6: new high-speed USB device number 28 using xhci_hcd
+[16773.620454] usb 3-6: Device not responding to set address.
+[16773.824316] usb 3-6: Device not responding to set address.
+[16774.028318] usb 3-6: device not accepting address 28, error -71
+[16774.140269] usb 3-6: new high-speed USB device number 29 using xhci_hcd
+[16774.140334] usb 3-6: Device not responding to set address.
+[16774.344401] usb 3-6: Device not responding to set address.
+[16774.548255] usb 3-6: device not accepting address 29, error -71
+[16774.660318] usb 3-6: new high-speed USB device number 30 using xhci_hcd
+[16774.660437] usb 3-6: Device not responding to set address.
+[16774.864380] usb 3-6: Device not responding to set address.
+[16775.068175] usb 3-6: device not accepting address 30, error -71
+[16775.068196] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16775.192249] usb 3-6: new high-speed USB device number 31 using xhci_hcd
+[16775.192376] usb 3-6: Device not responding to set address.
+[16775.396280] usb 3-6: Device not responding to set address.
+[16775.600187] usb 3-6: device not accepting address 31, error -71
+[16775.712232] usb 3-6: new high-speed USB device number 32 using xhci_hcd
+[16775.712341] usb 3-6: Device not responding to set address.
+[16775.916192] usb 3-6: Device not responding to set address.
+[16776.120131] usb 3-6: device not accepting address 32, error -71
+[16776.232107] usb 3-6: new high-speed USB device number 33 using xhci_hcd
+[16776.232185] usb 3-6: Device not responding to set address.
+[16776.436253] usb 3-6: Device not responding to set address.
+[16776.640134] usb 3-6: device not accepting address 33, error -71
+[16776.752164] usb 3-6: new high-speed USB device number 34 using xhci_hcd
+[16776.752299] usb 3-6: Device not responding to set address.
+[16776.956220] usb 3-6: Device not responding to set address.
+[16777.160035] usb 3-6: device not accepting address 34, error -71
+[16777.160057] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16778.399996] usb 3-6: new high-speed USB device number 35 using xhci_hcd
+[16778.400093] usb 3-6: Device not responding to set address.
+[16778.604090] usb 3-6: Device not responding to set address.
+[16778.807961] usb 3-6: device not accepting address 35, error -71
+[16778.919926] usb 3-6: new high-speed USB device number 36 using xhci_hcd
+[16778.920003] usb 3-6: Device not responding to set address.
+[16779.124049] usb 3-6: Device not responding to set address.
+[16779.327942] usb 3-6: device not accepting address 36, error -71
+[16779.439981] usb 3-6: new high-speed USB device number 37 using xhci_hcd
+[16779.440109] usb 3-6: Device not responding to set address.
+[16779.643983] usb 3-6: Device not responding to set address.
+[16779.847850] usb 3-6: device not accepting address 37, error -71
+[16779.959917] usb 3-6: new high-speed USB device number 38 using xhci_hcd
+[16779.960017] usb 3-6: Device not responding to set address.
+[16780.163907] usb 3-6: Device not responding to set address.
+[16780.367833] usb 3-6: device not accepting address 38, error -71
+[16780.367880] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16780.491919] usb 3-6: new high-speed USB device number 39 using xhci_hcd
+[16780.492075] usb 3-6: Device not responding to set address.
+[16780.695940] usb 3-6: Device not responding to set address.
+[16780.899800] usb 3-6: device not accepting address 39, error -71
+[16781.011804] usb 3-6: new high-speed USB device number 40 using xhci_hcd
+[16781.011878] usb 3-6: Device not responding to set address.
+[16781.215921] usb 3-6: Device not responding to set address.
+[16781.419774] usb 3-6: device not accepting address 40, error -71
+[16781.531832] usb 3-6: new high-speed USB device number 41 using xhci_hcd
+[16781.531951] usb 3-6: Device not responding to set address.
+[16781.735840] usb 3-6: Device not responding to set address.
+[16781.939699] usb 3-6: device not accepting address 41, error -71
+[16782.051772] usb 3-6: new high-speed USB device number 42 using xhci_hcd
+[16782.051886] usb 3-6: Device not responding to set address.
+[16782.255749] usb 3-6: Device not responding to set address.
+[16782.459698] usb 3-6: device not accepting address 42, error -71
+[16782.459755] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16783.739576] usb 3-6: new high-speed USB device number 43 using xhci_hcd
+[16783.739642] usb 3-6: Device not responding to set address.
+[16783.943732] usb 3-6: Device not responding to set address.
+[16784.147572] usb 3-6: device not accepting address 43, error -71
+[16784.259644] usb 3-6: new high-speed USB device number 44 using xhci_hcd
+[16784.259761] usb 3-6: Device not responding to set address.
+[16784.463676] usb 3-6: Device not responding to set address.
+[16784.667516] usb 3-6: device not accepting address 44, error -71
+[16784.779623] usb 3-6: new high-speed USB device number 45 using xhci_hcd
+[16784.779744] usb 3-6: Device not responding to set address.
+[16784.983561] usb 3-6: Device not responding to set address.
+[16785.187519] usb 3-6: device not accepting address 45, error -71
+[16785.299530] usb 3-6: new high-speed USB device number 46 using xhci_hcd
+[16785.299626] usb 3-6: Device not responding to set address.
+[16785.503578] usb 3-6: Device not responding to set address.
+[16785.707504] usb 3-6: device not accepting address 46, error -71
+[16785.707593] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16785.831461] usb 3-6: new high-speed USB device number 47 using xhci_hcd
+[16785.831539] usb 3-6: Device not responding to set address.
+[16786.035547] usb 3-6: Device not responding to set address.
+[16786.239466] usb 3-6: device not accepting address 47, error -71
+[16786.351487] usb 3-6: new high-speed USB device number 48 using xhci_hcd
+[16786.351672] usb 3-6: Device not responding to set address.
+[16786.555500] usb 3-6: Device not responding to set address.
+[16786.759361] usb 3-6: device not accepting address 48, error -71
+[16786.871437] usb 3-6: new high-speed USB device number 49 using xhci_hcd
+[16786.871539] usb 3-6: Device not responding to set address.
+[16787.075440] usb 3-6: Device not responding to set address.
+[16787.279393] usb 3-6: device not accepting address 49, error -71
+[16787.391426] usb 3-6: new high-speed USB device number 50 using xhci_hcd
+[16787.391559] usb 3-6: Device not responding to set address.
+[16787.595461] usb 3-6: Device not responding to set address.
+[16787.799328] usb 3-6: device not accepting address 50, error -71
+[16787.799427] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16789.063308] usb 3-6: new high-speed USB device number 51 using xhci_hcd
+[16789.063423] usb 3-6: Device not responding to set address.
+[16789.267313] usb 3-6: Device not responding to set address.
+[16789.471164] usb 3-6: device not accepting address 51, error -71
+[16789.583247] usb 3-6: new high-speed USB device number 52 using xhci_hcd
+[16789.583349] usb 3-6: Device not responding to set address.
+[16789.787288] usb 3-6: Device not responding to set address.
+[16789.991206] usb 3-6: device not accepting address 52, error -71
+[16790.103203] usb 3-6: new high-speed USB device number 53 using xhci_hcd
+[16790.103315] usb 3-6: Device not responding to set address.
+[16790.307274] usb 3-6: Device not responding to set address.
+[16790.511129] usb 3-6: device not accepting address 53, error -71
+[16790.623105] usb 3-6: new high-speed USB device number 54 using xhci_hcd
+[16790.623182] usb 3-6: Device not responding to set address.
+[16790.827157] usb 3-6: Device not responding to set address.
+[16791.031118] usb 3-6: device not accepting address 54, error -71
+[16791.031219] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16791.155164] usb 3-6: new high-speed USB device number 55 using xhci_hcd
+[16791.155299] usb 3-6: Device not responding to set address.
+[16791.359159] usb 3-6: Device not responding to set address.
+[16791.563041] usb 3-6: device not accepting address 55, error -71
+[16791.675083] usb 3-6: new high-speed USB device number 56 using xhci_hcd
+[16791.675199] usb 3-6: Device not responding to set address.
+[16791.879074] usb 3-6: Device not responding to set address.
+[16792.083060] usb 3-6: device not accepting address 56, error -71
+[16792.195041] usb 3-6: new high-speed USB device number 57 using xhci_hcd
+[16792.195144] usb 3-6: Device not responding to set address.
+[16792.399089] usb 3-6: Device not responding to set address.
+[16792.602991] usb 3-6: device not accepting address 57, error -71
+[16792.714974] usb 3-6: new high-speed USB device number 58 using xhci_hcd
+[16792.715050] usb 3-6: Device not responding to set address.
+[16792.919067] usb 3-6: Device not responding to set address.
+[16793.122962] usb 3-6: device not accepting address 58, error -71
+[16793.123055] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16794.386934] usb 3-6: new high-speed USB device number 59 using xhci_hcd
+[16794.387060] usb 3-6: Device not responding to set address.
+[16794.590998] usb 3-6: Device not responding to set address.
+[16794.794869] usb 3-6: device not accepting address 59, error -71
+[16794.906852] usb 3-6: new high-speed USB device number 60 using xhci_hcd
+[16794.906955] usb 3-6: Device not responding to set address.
+[16795.110885] usb 3-6: Device not responding to set address.
+[16795.314806] usb 3-6: device not accepting address 60, error -71
+[16795.426774] usb 3-6: new high-speed USB device number 61 using xhci_hcd
+[16795.426849] usb 3-6: Device not responding to set address.
+[16795.630919] usb 3-6: Device not responding to set address.
+[16795.834733] usb 3-6: device not accepting address 61, error -71
+[16795.946798] usb 3-6: new high-speed USB device number 62 using xhci_hcd
+[16795.946917] usb 3-6: Device not responding to set address.
+[16796.150902] usb 3-6: Device not responding to set address.
+[16796.354693] usb 3-6: device not accepting address 62, error -71
+[16796.354720] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16796.478702] usb 3-6: new high-speed USB device number 63 using xhci_hcd
+[16796.478834] usb 3-6: Device not responding to set address.
+[16796.682806] usb 3-6: Device not responding to set address.
+[16796.886681] usb 3-6: device not accepting address 63, error -71
+[16796.998707] usb 3-6: new high-speed USB device number 64 using xhci_hcd
+[16796.998809] usb 3-6: Device not responding to set address.
+[16797.202763] usb 3-6: Device not responding to set address.
+[16797.406689] usb 3-6: device not accepting address 64, error -71
+[16797.518630] usb 3-6: new high-speed USB device number 65 using xhci_hcd
+[16797.518706] usb 3-6: Device not responding to set address.
+[16797.722772] usb 3-6: Device not responding to set address.
+[16797.926626] usb 3-6: device not accepting address 65, error -71
+[16798.038683] usb 3-6: new high-speed USB device number 66 using xhci_hcd
+[16798.038800] usb 3-6: Device not responding to set address.
+[16798.242745] usb 3-6: Device not responding to set address.
+[16798.446557] usb 3-6: device not accepting address 66, error -71
+[16798.446584] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16799.726594] usb 3-6: new high-speed USB device number 67 using xhci_hcd
+[16799.726708] usb 3-6: Device not responding to set address.
+[16799.930514] usb 3-6: Device not responding to set address.
+[16800.134458] usb 3-6: device not accepting address 67, error -71
+[16800.246433] usb 3-6: new high-speed USB device number 68 using xhci_hcd
+[16800.246510] usb 3-6: Device not responding to set address.
+[16800.450600] usb 3-6: Device not responding to set address.
+[16800.654465] usb 3-6: device not accepting address 68, error -71
+[16800.766495] usb 3-6: new high-speed USB device number 69 using xhci_hcd
+[16800.766624] usb 3-6: Device not responding to set address.
+[16800.970502] usb 3-6: Device not responding to set address.
+[16801.174369] usb 3-6: device not accepting address 69, error -71
+[16801.286459] usb 3-6: new high-speed USB device number 70 using xhci_hcd
+[16801.286588] usb 3-6: Device not responding to set address.
+[16801.490468] usb 3-6: Device not responding to set address.
+[16801.694387] usb 3-6: device not accepting address 70, error -71
+[16801.694503] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16801.818409] usb 3-6: new high-speed USB device number 71 using xhci_hcd
+[16801.818522] usb 3-6: Device not responding to set address.
+[16802.022374] usb 3-6: Device not responding to set address.
+[16802.226324] usb 3-6: device not accepting address 71, error -71
+[16802.338291] usb 3-6: new high-speed USB device number 72 using xhci_hcd
+[16802.338367] usb 3-6: Device not responding to set address.
+[16802.542458] usb 3-6: Device not responding to set address.
+[16802.746289] usb 3-6: device not accepting address 72, error -71
+[16802.858354] usb 3-6: new high-speed USB device number 73 using xhci_hcd
+[16802.858472] usb 3-6: Device not responding to set address.
+[16803.062404] usb 3-6: Device not responding to set address.
+[16803.266209] usb 3-6: device not accepting address 73, error -71
+[16803.378267] usb 3-6: new high-speed USB device number 74 using xhci_hcd
+[16803.378370] usb 3-6: Device not responding to set address.
+[16803.582293] usb 3-6: Device not responding to set address.
+[16803.786202] usb 3-6: device not accepting address 74, error -71
+[16803.786264] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16803.910205] usb 3-6: new high-speed USB device number 75 using xhci_hcd
+[16803.910299] usb 3-6: Device not responding to set address.
+[16804.114242] usb 3-6: Device not responding to set address.
+[16804.318208] usb 3-6: device not accepting address 75, error -71
+[16804.430142] usb 3-6: new high-speed USB device number 76 using xhci_hcd
+[16804.430221] usb 3-6: Device not responding to set address.
+[16804.634249] usb 3-6: Device not responding to set address.
+[16804.838157] usb 3-6: device not accepting address 76, error -71
+[16804.950203] usb 3-6: new high-speed USB device number 77 using xhci_hcd
+[16804.950332] usb 3-6: Device not responding to set address.
+[16805.154215] usb 3-6: Device not responding to set address.
+[16805.358063] usb 3-6: device not accepting address 77, error -71
+[16805.470167] usb 3-6: new high-speed USB device number 78 using xhci_hcd
+[16805.470283] usb 3-6: Device not responding to set address.
+[16805.674150] usb 3-6: Device not responding to set address.
+[16805.878056] usb 3-6: device not accepting address 78, error -71
+[16805.878118] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16806.002084] usb 3-6: new high-speed USB device number 79 using xhci_hcd
+[16806.002194] usb 3-6: Device not responding to set address.
+[16806.206145] usb 3-6: Device not responding to set address.
+[16806.410062] usb 3-6: device not accepting address 79, error -71
+[16806.522002] usb 3-6: new high-speed USB device number 80 using xhci_hcd
+[16806.522078] usb 3-6: Device not responding to set address.
+[16806.726143] usb 3-6: Device not responding to set address.
+[16806.929983] usb 3-6: device not accepting address 80, error -71
+[16807.041997] usb 3-6: new high-speed USB device number 81 using xhci_hcd
+[16807.042111] usb 3-6: Device not responding to set address.
+[16807.246108] usb 3-6: Device not responding to set address.
+[16807.449921] usb 3-6: device not accepting address 81, error -71
+[16807.561994] usb 3-6: new high-speed USB device number 82 using xhci_hcd
+[16807.562104] usb 3-6: Device not responding to set address.
+[16807.765985] usb 3-6: Device not responding to set address.
+[16807.969940] usb 3-6: device not accepting address 82, error -71
+[16807.970022] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16809.233811] usb 3-6: new high-speed USB device number 83 using xhci_hcd
+[16809.233889] usb 3-6: Device not responding to set address.
+[16809.437941] usb 3-6: Device not responding to set address.
+[16809.641846] usb 3-6: device not accepting address 83, error -71
+[16809.753857] usb 3-6: new high-speed USB device number 84 using xhci_hcd
+[16809.753968] usb 3-6: Device not responding to set address.
+[16809.957929] usb 3-6: Device not responding to set address.
+[16810.161740] usb 3-6: device not accepting address 84, error -71
+[16810.273828] usb 3-6: new high-speed USB device number 85 using xhci_hcd
+[16810.273941] usb 3-6: Device not responding to set address.
+[16810.477786] usb 3-6: Device not responding to set address.
+[16810.681774] usb 3-6: device not accepting address 85, error -71
+[16810.793817] usb 3-6: new high-speed USB device number 86 using xhci_hcd
+[16810.793970] usb 3-6: Device not responding to set address.
+[16810.997824] usb 3-6: Device not responding to set address.
+[16811.201700] usb 3-6: device not accepting address 86, error -71
+[16811.201785] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16812.497674] usb 3-6: new high-speed USB device number 87 using xhci_hcd
+[16812.497758] usb 3-6: Device not responding to set address.
+[16812.701677] usb 3-6: Device not responding to set address.
+[16812.905580] usb 3-6: device not accepting address 87, error -71
+[16813.017646] usb 3-6: new high-speed USB device number 88 using xhci_hcd
+[16813.017774] usb 3-6: Device not responding to set address.
+[16813.221672] usb 3-6: Device not responding to set address.
+[16813.425509] usb 3-6: device not accepting address 88, error -71
+[16813.537579] usb 3-6: new high-speed USB device number 89 using xhci_hcd
+[16813.537696] usb 3-6: Device not responding to set address.
+[16813.741562] usb 3-6: Device not responding to set address.
+[16813.945494] usb 3-6: device not accepting address 89, error -71
+[16814.057469] usb 3-6: new high-speed USB device number 90 using xhci_hcd
+[16814.057548] usb 3-6: Device not responding to set address.
+[16814.261628] usb 3-6: Device not responding to set address.
+[16814.465472] usb 3-6: device not accepting address 90, error -71
+[16814.465577] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16814.589531] usb 3-6: new high-speed USB device number 91 using xhci_hcd
+[16814.589667] usb 3-6: Device not responding to set address.
+[16814.793476] usb 3-6: Device not responding to set address.
+[16814.997450] usb 3-6: device not accepting address 91, error -71
+[16815.109497] usb 3-6: new high-speed USB device number 92 using xhci_hcd
+[16815.109629] usb 3-6: Device not responding to set address.
+[16815.313486] usb 3-6: Device not responding to set address.
+[16815.517372] usb 3-6: device not accepting address 92, error -71
+[16815.629452] usb 3-6: new high-speed USB device number 93 using xhci_hcd
+[16815.629582] usb 3-6: Device not responding to set address.
+[16815.833405] usb 3-6: Device not responding to set address.
+[16816.037350] usb 3-6: device not accepting address 93, error -71
+[16816.149334] usb 3-6: new high-speed USB device number 94 using xhci_hcd
+[16816.149409] usb 3-6: Device not responding to set address.
+[16816.353473] usb 3-6: Device not responding to set address.
+[16816.557315] usb 3-6: device not accepting address 94, error -71
+[16816.557377] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16817.797268] usb 3-6: new high-speed USB device number 95 using xhci_hcd
+[16817.797390] usb 3-6: Device not responding to set address.
+[16818.001362] usb 3-6: Device not responding to set address.
+[16818.205202] usb 3-6: device not accepting address 95, error -71
+[16818.317250] usb 3-6: new high-speed USB device number 96 using xhci_hcd
+[16818.317363] usb 3-6: Device not responding to set address.
+[16818.521223] usb 3-6: Device not responding to set address.
+[16818.725183] usb 3-6: device not accepting address 96, error -71
+[16818.837141] usb 3-6: new high-speed USB device number 97 using xhci_hcd
+[16818.837219] usb 3-6: Device not responding to set address.
+[16819.041290] usb 3-6: Device not responding to set address.
+[16819.245159] usb 3-6: device not accepting address 97, error -71
+[16819.357195] usb 3-6: new high-speed USB device number 98 using xhci_hcd
+[16819.357312] usb 3-6: Device not responding to set address.
+[16819.561213] usb 3-6: Device not responding to set address.
+[16819.765068] usb 3-6: device not accepting address 98, error -71
+[16819.765092] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16821.029037] usb 3-6: new high-speed USB device number 99 using xhci_hcd
+[16821.029138] usb 3-6: Device not responding to set address.
+[16821.233038] usb 3-6: Device not responding to set address.
+[16821.437014] usb 3-6: device not accepting address 99, error -71
+[16821.548946] usb 3-6: new high-speed USB device number 100 using xhci_hcd
+[16821.549029] usb 3-6: Device not responding to set address.
+[16821.753048] usb 3-6: Device not responding to set address.
+[16821.956949] usb 3-6: device not accepting address 100, error -71
+[16822.069010] usb 3-6: new high-speed USB device number 101 using xhci_hcd
+[16822.069128] usb 3-6: Device not responding to set address.
+[16822.273060] usb 3-6: Device not responding to set address.
+[16822.476888] usb 3-6: device not accepting address 101, error -71
+[16822.588995] usb 3-6: new high-speed USB device number 102 using xhci_hcd
+[16822.589143] usb 3-6: Device not responding to set address.
+[16822.792971] usb 3-6: Device not responding to set address.
+[16822.996885] usb 3-6: device not accepting address 102, error -71
+[16822.996937] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16824.276764] usb 3-6: new high-speed USB device number 103 using xhci_hcd
+[16824.276845] usb 3-6: Device not responding to set address.
+[16824.480907] usb 3-6: Device not responding to set address.
+[16824.684787] usb 3-6: device not accepting address 103, error -71
+[16824.796788] usb 3-6: new high-speed USB device number 104 using xhci_hcd
+[16824.796898] usb 3-6: Device not responding to set address.
+[16825.000824] usb 3-6: Device not responding to set address.
+[16825.204700] usb 3-6: device not accepting address 104, error -71
+[16825.316783] usb 3-6: new high-speed USB device number 105 using xhci_hcd
+[16825.316904] usb 3-6: Device not responding to set address.
+[16825.520785] usb 3-6: Device not responding to set address.
+[16825.724654] usb 3-6: device not accepting address 105, error -71
+[16825.836703] usb 3-6: new high-speed USB device number 106 using xhci_hcd
+[16825.836805] usb 3-6: Device not responding to set address.
+[16826.040697] usb 3-6: Device not responding to set address.
+[16826.244680] usb 3-6: device not accepting address 106, error -71
+[16826.244766] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16826.368631] usb 3-6: new high-speed USB device number 107 using xhci_hcd
+[16826.368699] usb 3-6: Device not responding to set address.
+[16826.572711] usb 3-6: Device not responding to set address.
+[16826.776601] usb 3-6: device not accepting address 107, error -71
+[16826.888676] usb 3-6: new high-speed USB device number 108 using xhci_hcd
+[16826.888792] usb 3-6: Device not responding to set address.
+[16827.092743] usb 3-6: Device not responding to set address.
+[16827.296581] usb 3-6: device not accepting address 108, error -71
+[16827.408638] usb 3-6: new high-speed USB device number 109 using xhci_hcd
+[16827.408757] usb 3-6: Device not responding to set address.
+[16827.612673] usb 3-6: Device not responding to set address.
+[16827.816506] usb 3-6: device not accepting address 109, error -71
+[16827.928557] usb 3-6: new high-speed USB device number 110 using xhci_hcd
+[16827.928666] usb 3-6: Device not responding to set address.
+[16828.132551] usb 3-6: Device not responding to set address.
+[16828.336502] usb 3-6: device not accepting address 110, error -71
+[16828.336576] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16829.632385] usb 3-6: new high-speed USB device number 111 using xhci_hcd
+[16829.632467] usb 3-6: Device not responding to set address.
+[16829.836533] usb 3-6: Device not responding to set address.
+[16830.040375] usb 3-6: device not accepting address 111, error -71
+[16830.152447] usb 3-6: new high-speed USB device number 112 using xhci_hcd
+[16830.152593] usb 3-6: Device not responding to set address.
+[16830.356446] usb 3-6: Device not responding to set address.
+[16830.560324] usb 3-6: device not accepting address 112, error -71
+[16830.672413] usb 3-6: new high-speed USB device number 113 using xhci_hcd
+[16830.672529] usb 3-6: Device not responding to set address.
+[16830.876342] usb 3-6: Device not responding to set address.
+[16831.080340] usb 3-6: device not accepting address 113, error -71
+[16831.192307] usb 3-6: new high-speed USB device number 114 using xhci_hcd
+[16831.192384] usb 3-6: Device not responding to set address.
+[16831.396374] usb 3-6: Device not responding to set address.
+[16831.600304] usb 3-6: device not accepting address 114, error -71
+[16831.600416] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16831.724245] usb 3-6: new high-speed USB device number 115 using xhci_hcd
+[16831.724309] usb 3-6: Device not responding to set address.
+[16831.928343] usb 3-6: Device not responding to set address.
+[16832.132242] usb 3-6: device not accepting address 115, error -71
+[16832.244298] usb 3-6: new high-speed USB device number 116 using xhci_hcd
+[16832.244434] usb 3-6: Device not responding to set address.
+[16832.448351] usb 3-6: Device not responding to set address.
+[16832.652171] usb 3-6: device not accepting address 116, error -71
+[16832.764267] usb 3-6: new high-speed USB device number 117 using xhci_hcd
+[16832.764395] usb 3-6: Device not responding to set address.
+[16832.968218] usb 3-6: Device not responding to set address.
+[16833.172166] usb 3-6: device not accepting address 117, error -71
+[16833.284139] usb 3-6: new high-speed USB device number 118 using xhci_hcd
+[16833.284210] usb 3-6: Device not responding to set address.
+[16833.488278] usb 3-6: Device not responding to set address.
+[16833.692139] usb 3-6: device not accepting address 118, error -71
+[16833.692227] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16833.816104] usb 3-6: new high-speed USB device number 119 using xhci_hcd
+[16833.816185] usb 3-6: Device not responding to set address.
+[16834.020264] usb 3-6: Device not responding to set address.
+[16834.224100] usb 3-6: device not accepting address 119, error -71
+[16834.336156] usb 3-6: new high-speed USB device number 120 using xhci_hcd
+[16834.336270] usb 3-6: Device not responding to set address.
+[16834.540172] usb 3-6: Device not responding to set address.
+[16834.744018] usb 3-6: device not accepting address 120, error -71
+[16834.856125] usb 3-6: new high-speed USB device number 121 using xhci_hcd
+[16834.856246] usb 3-6: Device not responding to set address.
+[16835.060085] usb 3-6: Device not responding to set address.
+[16835.264050] usb 3-6: device not accepting address 121, error -71
+[16835.375993] usb 3-6: new high-speed USB device number 122 using xhci_hcd
+[16835.376068] usb 3-6: Device not responding to set address.
+[16835.580075] usb 3-6: Device not responding to set address.
+[16835.784014] usb 3-6: device not accepting address 122, error -71
+[16835.784113] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16837.063918] usb 3-6: new high-speed USB device number 123 using xhci_hcd
+[16837.064017] usb 3-6: Device not responding to set address.
+[16837.268035] usb 3-6: Device not responding to set address.
+[16837.471817] usb 3-6: device not accepting address 123, error -71
+[16837.583931] usb 3-6: new high-speed USB device number 124 using xhci_hcd
+[16837.584043] usb 3-6: Device not responding to set address.
+[16837.787994] usb 3-6: Device not responding to set address.
+[16837.991860] usb 3-6: device not accepting address 124, error -71
+[16838.103915] usb 3-6: new high-speed USB device number 125 using xhci_hcd
+[16838.104035] usb 3-6: Device not responding to set address.
+[16838.307870] usb 3-6: Device not responding to set address.
+[16838.511784] usb 3-6: device not accepting address 125, error -71
+[16838.623766] usb 3-6: new high-speed USB device number 126 using xhci_hcd
+[16838.623845] usb 3-6: Device not responding to set address.
+[16838.827912] usb 3-6: Device not responding to set address.
+[16839.031768] usb 3-6: device not accepting address 126, error -71
+[16839.031868] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16839.155816] usb 3-6: new high-speed USB device number 127 using xhci_hcd
+[16839.155952] usb 3-6: Device not responding to set address.
+[16839.359845] usb 3-6: Device not responding to set address.
+[16839.563694] usb 3-6: device not accepting address 127, error -71
+[16839.675789] usb 3-6: new high-speed USB device number 2 using xhci_hcd
+[16839.675919] usb 3-6: Device not responding to set address.
+[16839.879721] usb 3-6: Device not responding to set address.
+[16840.083673] usb 3-6: device not accepting address 2, error -71
+[16840.195722] usb 3-6: new high-speed USB device number 3 using xhci_hcd
+[16840.195844] usb 3-6: Device not responding to set address.
+[16840.399719] usb 3-6: Device not responding to set address.
+[16840.603639] usb 3-6: device not accepting address 3, error -71
+[16840.715621] usb 3-6: new high-speed USB device number 4 using xhci_hcd
+[16840.715694] usb 3-6: Device not responding to set address.
+[16840.919723] usb 3-6: Device not responding to set address.
+[16841.123603] usb 3-6: device not accepting address 4, error -71
+[16841.123647] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16842.347596] usb 3-6: new high-speed USB device number 5 using xhci_hcd
+[16842.347713] usb 3-6: Device not responding to set address.
+[16842.551556] usb 3-6: Device not responding to set address.
+[16842.755527] usb 3-6: device not accepting address 5, error -71
+[16842.867470] usb 3-6: new high-speed USB device number 6 using xhci_hcd
+[16842.867549] usb 3-6: Device not responding to set address.
+[16843.071574] usb 3-6: Device not responding to set address.
+[16843.275465] usb 3-6: device not accepting address 6, error -71
+[16843.387524] usb 3-6: new high-speed USB device number 7 using xhci_hcd
+[16843.387654] usb 3-6: Device not responding to set address.
+[16843.591527] usb 3-6: Device not responding to set address.
+[16843.795418] usb 3-6: device not accepting address 7, error -71
+[16843.907486] usb 3-6: new high-speed USB device number 8 using xhci_hcd
+[16843.907633] usb 3-6: Device not responding to set address.
+[16844.111515] usb 3-6: Device not responding to set address.
+[16844.315365] usb 3-6: device not accepting address 8, error -71
+[16844.315388] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16844.439415] usb 3-6: new high-speed USB device number 9 using xhci_hcd
+[16844.439552] usb 3-6: Device not responding to set address.
+[16844.643403] usb 3-6: Device not responding to set address.
+[16844.847343] usb 3-6: device not accepting address 9, error -71
+[16844.959332] usb 3-6: new high-speed USB device number 10 using xhci_hcd
+[16844.959409] usb 3-6: Device not responding to set address.
+[16845.163485] usb 3-6: Device not responding to set address.
+[16845.367319] usb 3-6: device not accepting address 10, error -71
+[16845.479368] usb 3-6: new high-speed USB device number 11 using xhci_hcd
+[16845.479487] usb 3-6: Device not responding to set address.
+[16845.683385] usb 3-6: Device not responding to set address.
+[16845.887233] usb 3-6: device not accepting address 11, error -71
+[16845.999343] usb 3-6: new high-speed USB device number 12 using xhci_hcd
+[16845.999458] usb 3-6: Device not responding to set address.
+[16846.203369] usb 3-6: Device not responding to set address.
+[16846.407233] usb 3-6: device not accepting address 12, error -71
+[16846.407254] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16846.531289] usb 3-6: new high-speed USB device number 13 using xhci_hcd
+[16846.531422] usb 3-6: Device not responding to set address.
+[16846.735269] usb 3-6: Device not responding to set address.
+[16846.939201] usb 3-6: device not accepting address 13, error -71
+[16847.051176] usb 3-6: new high-speed USB device number 14 using xhci_hcd
+[16847.051253] usb 3-6: Device not responding to set address.
+[16847.255342] usb 3-6: Device not responding to set address.
+[16847.459199] usb 3-6: device not accepting address 14, error -71
+[16847.571233] usb 3-6: new high-speed USB device number 15 using xhci_hcd
+[16847.571362] usb 3-6: Device not responding to set address.
+[16847.775233] usb 3-6: Device not responding to set address.
+[16847.979103] usb 3-6: device not accepting address 15, error -71
+[16848.091130] usb 3-6: new high-speed USB device number 16 using xhci_hcd
+[16848.091267] usb 3-6: Device not responding to set address.
+[16848.295206] usb 3-6: Device not responding to set address.
+[16848.499107] usb 3-6: device not accepting address 16, error -71
+[16848.499156] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16848.623146] usb 3-6: new high-speed USB device number 17 using xhci_hcd
+[16848.623273] usb 3-6: Device not responding to set address.
+[16848.827112] usb 3-6: Device not responding to set address.
+[16849.031065] usb 3-6: device not accepting address 17, error -71
+[16849.143030] usb 3-6: new high-speed USB device number 18 using xhci_hcd
+[16849.143106] usb 3-6: Device not responding to set address.
+[16849.347192] usb 3-6: Device not responding to set address.
+[16849.551059] usb 3-6: device not accepting address 18, error -71
+[16849.663088] usb 3-6: new high-speed USB device number 19 using xhci_hcd
+[16849.663206] usb 3-6: Device not responding to set address.
+[16849.867139] usb 3-6: Device not responding to set address.
+[16850.070943] usb 3-6: device not accepting address 19, error -71
+[16850.183024] usb 3-6: new high-speed USB device number 20 using xhci_hcd
+[16850.183125] usb 3-6: Device not responding to set address.
+[16850.387070] usb 3-6: Device not responding to set address.
+[16850.590981] usb 3-6: device not accepting address 20, error -71
+[16850.591103] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16851.902887] usb 3-6: new high-speed USB device number 21 using xhci_hcd
+[16851.902988] usb 3-6: Device not responding to set address.
+[16852.106925] usb 3-6: Device not responding to set address.
+[16852.310853] usb 3-6: device not accepting address 21, error -71
+[16852.422798] usb 3-6: new high-speed USB device number 22 using xhci_hcd
+[16852.422873] usb 3-6: Device not responding to set address.
+[16852.626972] usb 3-6: Device not responding to set address.
+[16852.830830] usb 3-6: device not accepting address 22, error -71
+[16852.942859] usb 3-6: new high-speed USB device number 23 using xhci_hcd
+[16852.942978] usb 3-6: Device not responding to set address.
+[16853.146892] usb 3-6: Device not responding to set address.
+[16853.350721] usb 3-6: device not accepting address 23, error -71
+[16853.462796] usb 3-6: new high-speed USB device number 24 using xhci_hcd
+[16853.462906] usb 3-6: Device not responding to set address.
+[16853.666770] usb 3-6: Device not responding to set address.
+[16853.870757] usb 3-6: device not accepting address 24, error -71
+[16853.870845] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16855.094674] usb 3-6: new high-speed USB device number 25 using xhci_hcd
+[16855.094784] usb 3-6: Device not responding to set address.
+[16855.298758] usb 3-6: Device not responding to set address.
+[16855.502613] usb 3-6: device not accepting address 25, error -71
+[16855.614662] usb 3-6: new high-speed USB device number 26 using xhci_hcd
+[16855.614784] usb 3-6: Device not responding to set address.
+[16855.818675] usb 3-6: Device not responding to set address.
+[16856.022541] usb 3-6: device not accepting address 26, error -71
+[16856.134587] usb 3-6: new high-speed USB device number 27 using xhci_hcd
+[16856.134692] usb 3-6: Device not responding to set address.
+[16856.338600] usb 3-6: Device not responding to set address.
+[16856.542538] usb 3-6: device not accepting address 27, error -71
+[16856.654505] usb 3-6: new high-speed USB device number 28 using xhci_hcd
+[16856.654580] usb 3-6: Device not responding to set address.
+[16856.858634] usb 3-6: Device not responding to set address.
+[16857.062490] usb 3-6: device not accepting address 28, error -71
+[16857.062551] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16857.186562] usb 3-6: new high-speed USB device number 29 using xhci_hcd
+[16857.186698] usb 3-6: Device not responding to set address.
+[16857.390605] usb 3-6: Device not responding to set address.
+[16857.594470] usb 3-6: device not accepting address 29, error -71
+[16857.706524] usb 3-6: new high-speed USB device number 30 using xhci_hcd
+[16857.706638] usb 3-6: Device not responding to set address.
+[16857.910526] usb 3-6: Device not responding to set address.
+[16858.114406] usb 3-6: device not accepting address 30, error -71
+[16858.226440] usb 3-6: new high-speed USB device number 31 using xhci_hcd
+[16858.226541] usb 3-6: Device not responding to set address.
+[16858.430436] usb 3-6: Device not responding to set address.
+[16858.634371] usb 3-6: device not accepting address 31, error -71
+[16858.746360] usb 3-6: new high-speed USB device number 32 using xhci_hcd
+[16858.746435] usb 3-6: Device not responding to set address.
+[16858.950508] usb 3-6: Device not responding to set address.
+[16859.154346] usb 3-6: device not accepting address 32, error -71
+[16859.154373] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16860.434335] usb 3-6: new high-speed USB device number 33 using xhci_hcd
+[16860.434463] usb 3-6: Device not responding to set address.
+[16860.638371] usb 3-6: Device not responding to set address.
+[16860.842203] usb 3-6: device not accepting address 33, error -71
+[16860.954303] usb 3-6: new high-speed USB device number 34 using xhci_hcd
+[16860.954439] usb 3-6: Device not responding to set address.
+[16861.158270] usb 3-6: Device not responding to set address.
+[16861.362201] usb 3-6: device not accepting address 34, error -71
+[16861.474175] usb 3-6: new high-speed USB device number 35 using xhci_hcd
+[16861.474252] usb 3-6: Device not responding to set address.
+[16861.678287] usb 3-6: Device not responding to set address.
+[16861.882159] usb 3-6: device not accepting address 35, error -71
+[16861.994187] usb 3-6: new high-speed USB device number 36 using xhci_hcd
+[16861.994295] usb 3-6: Device not responding to set address.
+[16862.198217] usb 3-6: Device not responding to set address.
+[16862.402103] usb 3-6: device not accepting address 36, error -71
+[16862.402128] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16863.626122] usb 3-6: new high-speed USB device number 37 using xhci_hcd
+[16863.626243] usb 3-6: Device not responding to set address.
+[16863.830059] usb 3-6: Device not responding to set address.
+[16864.034006] usb 3-6: device not accepting address 37, error -71
+[16864.145991] usb 3-6: new high-speed USB device number 38 using xhci_hcd
+[16864.146065] usb 3-6: Device not responding to set address.
+[16864.350127] usb 3-6: Device not responding to set address.
+[16864.553984] usb 3-6: device not accepting address 38, error -71
+[16864.666025] usb 3-6: new high-speed USB device number 39 using xhci_hcd
+[16864.666149] usb 3-6: Device not responding to set address.
+[16864.870045] usb 3-6: Device not responding to set address.
+[16865.073899] usb 3-6: device not accepting address 39, error -71
+[16865.186006] usb 3-6: new high-speed USB device number 40 using xhci_hcd
+[16865.186138] usb 3-6: Device not responding to set address.
+[16865.390042] usb 3-6: Device not responding to set address.
+[16865.593922] usb 3-6: device not accepting address 40, error -71
+[16865.593968] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16866.873800] usb 3-6: new high-speed USB device number 41 using xhci_hcd
+[16866.873863] usb 3-6: Device not responding to set address.
+[16867.077957] usb 3-6: Device not responding to set address.
+[16867.281819] usb 3-6: device not accepting address 41, error -71
+[16867.393819] usb 3-6: new high-speed USB device number 42 using xhci_hcd
+[16867.393926] usb 3-6: Device not responding to set address.
+[16867.597904] usb 3-6: Device not responding to set address.
+[16867.801757] usb 3-6: device not accepting address 42, error -71
+[16867.913816] usb 3-6: new high-speed USB device number 43 using xhci_hcd
+[16867.913937] usb 3-6: Device not responding to set address.
+[16868.117819] usb 3-6: Device not responding to set address.
+[16868.321681] usb 3-6: device not accepting address 43, error -71
+[16868.433775] usb 3-6: new high-speed USB device number 44 using xhci_hcd
+[16868.433919] usb 3-6: Device not responding to set address.
+[16868.637743] usb 3-6: Device not responding to set address.
+[16868.841714] usb 3-6: device not accepting address 44, error -71
+[16868.841800] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16870.081661] usb 3-6: new high-speed USB device number 45 using xhci_hcd
+[16870.081793] usb 3-6: Device not responding to set address.
+[16870.285680] usb 3-6: Device not responding to set address.
+[16870.489557] usb 3-6: device not accepting address 45, error -71
+[16870.601629] usb 3-6: new high-speed USB device number 46 using xhci_hcd
+[16870.601748] usb 3-6: Device not responding to set address.
+[16870.805641] usb 3-6: Device not responding to set address.
+[16871.009510] usb 3-6: device not accepting address 46, error -71
+[16871.121545] usb 3-6: new high-speed USB device number 47 using xhci_hcd
+[16871.121648] usb 3-6: Device not responding to set address.
+[16871.325545] usb 3-6: Device not responding to set address.
+[16871.529525] usb 3-6: device not accepting address 47, error -71
+[16871.641463] usb 3-6: new high-speed USB device number 48 using xhci_hcd
+[16871.641540] usb 3-6: Device not responding to set address.
+[16871.845569] usb 3-6: Device not responding to set address.
+[16872.049487] usb 3-6: device not accepting address 48, error -71
+[16872.049573] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16872.173516] usb 3-6: new high-speed USB device number 49 using xhci_hcd
+[16872.173633] usb 3-6: Device not responding to set address.
+[16872.377553] usb 3-6: Device not responding to set address.
+[16872.581386] usb 3-6: device not accepting address 49, error -71
+[16872.693483] usb 3-6: new high-speed USB device number 50 using xhci_hcd
+[16872.693600] usb 3-6: Device not responding to set address.
+[16872.897474] usb 3-6: Device not responding to set address.
+[16873.101404] usb 3-6: device not accepting address 50, error -71
+[16873.213449] usb 3-6: new high-speed USB device number 51 using xhci_hcd
+[16873.213577] usb 3-6: Device not responding to set address.
+[16873.417402] usb 3-6: Device not responding to set address.
+[16873.621341] usb 3-6: device not accepting address 51, error -71
+[16873.733330] usb 3-6: new high-speed USB device number 52 using xhci_hcd
+[16873.733408] usb 3-6: Device not responding to set address.
+[16873.937412] usb 3-6: Device not responding to set address.
+[16874.141302] usb 3-6: device not accepting address 52, error -71
+[16874.141347] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16875.365314] usb 3-6: new high-speed USB device number 53 using xhci_hcd
+[16875.365434] usb 3-6: Device not responding to set address.
+[16875.569253] usb 3-6: Device not responding to set address.
+[16875.773197] usb 3-6: device not accepting address 53, error -71
+[16875.885188] usb 3-6: new high-speed USB device number 54 using xhci_hcd
+[16875.885267] usb 3-6: Device not responding to set address.
+[16876.089266] usb 3-6: Device not responding to set address.
+[16876.293191] usb 3-6: device not accepting address 54, error -71
+[16876.405150] usb 3-6: new high-speed USB device number 55 using xhci_hcd
+[16876.405226] usb 3-6: Device not responding to set address.
+[16876.609256] usb 3-6: Device not responding to set address.
+[16876.813126] usb 3-6: device not accepting address 55, error -71
+[16876.925189] usb 3-6: new high-speed USB device number 56 using xhci_hcd
+[16876.925336] usb 3-6: Device not responding to set address.
+[16877.129239] usb 3-6: Device not responding to set address.
+[16877.333066] usb 3-6: device not accepting address 56, error -71
+[16877.333093] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16878.613056] usb 3-6: new high-speed USB device number 57 using xhci_hcd
+[16878.613169] usb 3-6: Device not responding to set address.
+[16878.817026] usb 3-6: Device not responding to set address.
+[16879.020963] usb 3-6: device not accepting address 57, error -71
+[16879.132953] usb 3-6: new high-speed USB device number 58 using xhci_hcd
+[16879.133033] usb 3-6: Device not responding to set address.
+[16879.337118] usb 3-6: Device not responding to set address.
+[16879.540926] usb 3-6: device not accepting address 58, error -71
+[16879.653006] usb 3-6: new high-speed USB device number 59 using xhci_hcd
+[16879.653127] usb 3-6: Device not responding to set address.
+[16879.857049] usb 3-6: Device not responding to set address.
+[16880.060873] usb 3-6: device not accepting address 59, error -71
+[16880.172934] usb 3-6: new high-speed USB device number 60 using xhci_hcd
+[16880.173052] usb 3-6: Device not responding to set address.
+[16880.376923] usb 3-6: Device not responding to set address.
+[16880.580870] usb 3-6: device not accepting address 60, error -71
+[16880.580967] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16881.860749] usb 3-6: new high-speed USB device number 61 using xhci_hcd
+[16881.860812] usb 3-6: Device not responding to set address.
+[16882.064874] usb 3-6: Device not responding to set address.
+[16882.268745] usb 3-6: device not accepting address 61, error -71
+[16882.380803] usb 3-6: new high-speed USB device number 62 using xhci_hcd
+[16882.380924] usb 3-6: Device not responding to set address.
+[16882.584800] usb 3-6: Device not responding to set address.
+[16882.788700] usb 3-6: device not accepting address 62, error -71
+[16882.900773] usb 3-6: new high-speed USB device number 63 using xhci_hcd
+[16882.900904] usb 3-6: Device not responding to set address.
+[16883.104774] usb 3-6: Device not responding to set address.
+[16883.308648] usb 3-6: device not accepting address 63, error -71
+[16883.420740] usb 3-6: new high-speed USB device number 64 using xhci_hcd
+[16883.420856] usb 3-6: Device not responding to set address.
+[16883.624694] usb 3-6: Device not responding to set address.
+[16883.828629] usb 3-6: device not accepting address 64, error -71
+[16883.828691] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16885.092584] usb 3-6: new high-speed USB device number 65 using xhci_hcd
+[16885.092702] usb 3-6: Device not responding to set address.
+[16885.296651] usb 3-6: Device not responding to set address.
+[16885.500529] usb 3-6: device not accepting address 65, error -71
+[16885.612583] usb 3-6: new high-speed USB device number 66 using xhci_hcd
+[16885.612728] usb 3-6: Device not responding to set address.
+[16885.816580] usb 3-6: Device not responding to set address.
+[16886.020452] usb 3-6: device not accepting address 66, error -71
+[16886.132531] usb 3-6: new high-speed USB device number 67 using xhci_hcd
+[16886.132661] usb 3-6: Device not responding to set address.
+[16886.336502] usb 3-6: Device not responding to set address.
+[16886.540480] usb 3-6: device not accepting address 67, error -71
+[16886.652419] usb 3-6: new high-speed USB device number 68 using xhci_hcd
+[16886.652497] usb 3-6: Device not responding to set address.
+[16886.856544] usb 3-6: Device not responding to set address.
+[16887.060442] usb 3-6: device not accepting address 68, error -71
+[16887.060526] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16887.300505] usb 3-6: new high-speed USB device number 69 using xhci_hcd
+[16887.300670] usb 3-6: Device not responding to set address.
+[16887.504444] usb 3-6: Device not responding to set address.
+[16887.708355] usb 3-6: device not accepting address 69, error -71
+[16887.820339] usb 3-6: new high-speed USB device number 70 using xhci_hcd
+[16887.820405] usb 3-6: Device not responding to set address.
+[16888.024504] usb 3-6: Device not responding to set address.
+[16888.228351] usb 3-6: device not accepting address 70, error -71
+[16888.340392] usb 3-6: new high-speed USB device number 71 using xhci_hcd
+[16888.340520] usb 3-6: Device not responding to set address.
+[16888.544440] usb 3-6: Device not responding to set address.
+[16888.748272] usb 3-6: device not accepting address 71, error -71
+[16888.860299] usb 3-6: new high-speed USB device number 72 using xhci_hcd
+[16888.860402] usb 3-6: Device not responding to set address.
+[16889.064291] usb 3-6: Device not responding to set address.
+[16889.268289] usb 3-6: device not accepting address 72, error -71
+[16889.268390] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16890.496207] usb 3-6: new high-speed USB device number 73 using xhci_hcd
+[16890.496238] usb 3-6: Device not responding to set address.
+[16890.700237] usb 3-6: Device not responding to set address.
+[16890.904144] usb 3-6: device not accepting address 73, error -71
+[16891.200103] usb 3-6: new high-speed USB device number 75 using xhci_hcd
+[16891.200181] usb 3-6: Device not responding to set address.
+[16891.404169] usb 3-6: Device not responding to set address.
+[16891.608125] usb 3-6: device not accepting address 75, error -71
+[16891.720060] usb 3-6: new high-speed USB device number 76 using xhci_hcd
+[16891.720137] usb 3-6: Device not responding to set address.
+[16891.924190] usb 3-6: Device not responding to set address.
+[16892.128036] usb 3-6: device not accepting address 76, error -71
+[16892.240120] usb 3-6: new high-speed USB device number 77 using xhci_hcd
+[16892.240240] usb 3-6: Device not responding to set address.
+[16892.444134] usb 3-6: Device not responding to set address.
+[16892.647982] usb 3-6: device not accepting address 77, error -71
+[16892.760088] usb 3-6: new high-speed USB device number 78 using xhci_hcd
+[16892.760208] usb 3-6: Device not responding to set address.
+[16892.964014] usb 3-6: Device not responding to set address.
+[16893.168017] usb 3-6: device not accepting address 78, error -71
+[16893.168119] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16893.292081] usb 3-6: new high-speed USB device number 79 using xhci_hcd
+[16893.292216] usb 3-6: Device not responding to set address.
+[16893.496072] usb 3-6: Device not responding to set address.
+[16893.699980] usb 3-6: device not accepting address 79, error -71
+[16893.811919] usb 3-6: new high-speed USB device number 80 using xhci_hcd
+[16893.811996] usb 3-6: Device not responding to set address.
+[16894.016064] usb 3-6: Device not responding to set address.
+[16894.219915] usb 3-6: device not accepting address 80, error -71
+[16894.331973] usb 3-6: new high-speed USB device number 81 using xhci_hcd
+[16894.332091] usb 3-6: Device not responding to set address.
+[16894.535987] usb 3-6: Device not responding to set address.
+[16894.739831] usb 3-6: device not accepting address 81, error -71
+[16894.851947] usb 3-6: new high-speed USB device number 82 using xhci_hcd
+[16894.852074] usb 3-6: Device not responding to set address.
+[16895.055900] usb 3-6: Device not responding to set address.
+[16895.259870] usb 3-6: device not accepting address 82, error -71
+[16895.259969] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16896.523731] usb 3-6: new high-speed USB device number 83 using xhci_hcd
+[16896.523806] usb 3-6: Device not responding to set address.
+[16896.727872] usb 3-6: Device not responding to set address.
+[16896.931726] usb 3-6: device not accepting address 83, error -71
+[16897.043782] usb 3-6: new high-speed USB device number 84 using xhci_hcd
+[16897.043900] usb 3-6: Device not responding to set address.
+[16897.247854] usb 3-6: Device not responding to set address.
+[16897.451649] usb 3-6: device not accepting address 84, error -71
+[16897.563785] usb 3-6: new high-speed USB device number 85 using xhci_hcd
+[16897.563902] usb 3-6: Device not responding to set address.
+[16897.767716] usb 3-6: Device not responding to set address.
+[16897.971683] usb 3-6: device not accepting address 85, error -71
+[16898.083672] usb 3-6: new high-speed USB device number 86 using xhci_hcd
+[16898.083774] usb 3-6: Device not responding to set address.
+[16898.287769] usb 3-6: Device not responding to set address.
+[16898.491647] usb 3-6: device not accepting address 86, error -71
+[16898.491733] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16898.615574] usb 3-6: new high-speed USB device number 87 using xhci_hcd
+[16898.615652] usb 3-6: Device not responding to set address.
+[16898.819641] usb 3-6: Device not responding to set address.
+[16899.023591] usb 3-6: device not accepting address 87, error -71
+[16899.135638] usb 3-6: new high-speed USB device number 88 using xhci_hcd
+[16899.135757] usb 3-6: Device not responding to set address.
+[16899.339654] usb 3-6: Device not responding to set address.
+[16899.543509] usb 3-6: device not accepting address 88, error -71
+[16899.655599] usb 3-6: new high-speed USB device number 89 using xhci_hcd
+[16899.655732] usb 3-6: Device not responding to set address.
+[16899.859552] usb 3-6: Device not responding to set address.
+[16900.063505] usb 3-6: device not accepting address 89, error -71
+[16900.175492] usb 3-6: new high-speed USB device number 90 using xhci_hcd
+[16900.175574] usb 3-6: Device not responding to set address.
+[16900.379636] usb 3-6: Device not responding to set address.
+[16900.583448] usb 3-6: device not accepting address 90, error -71
+[16900.583510] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16901.807455] usb 3-6: new high-speed USB device number 91 using xhci_hcd
+[16901.807571] usb 3-6: Device not responding to set address.
+[16902.011467] usb 3-6: Device not responding to set address.
+[16902.215323] usb 3-6: device not accepting address 91, error -71
+[16902.327371] usb 3-6: new high-speed USB device number 92 using xhci_hcd
+[16902.327468] usb 3-6: Device not responding to set address.
+[16902.531381] usb 3-6: Device not responding to set address.
+[16902.735349] usb 3-6: device not accepting address 92, error -71
+[16902.847282] usb 3-6: new high-speed USB device number 93 using xhci_hcd
+[16902.847356] usb 3-6: Device not responding to set address.
+[16903.051433] usb 3-6: Device not responding to set address.
+[16903.255269] usb 3-6: device not accepting address 93, error -71
+[16903.367342] usb 3-6: new high-speed USB device number 94 using xhci_hcd
+[16903.367462] usb 3-6: Device not responding to set address.
+[16903.571349] usb 3-6: Device not responding to set address.
+[16903.775230] usb 3-6: device not accepting address 94, error -71
+[16903.775284] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16903.899310] usb 3-6: new high-speed USB device number 95 using xhci_hcd
+[16903.899455] usb 3-6: Device not responding to set address.
+[16904.103235] usb 3-6: Device not responding to set address.
+[16904.307184] usb 3-6: device not accepting address 95, error -71
+[16904.419279] usb 3-6: new high-speed USB device number 96 using xhci_hcd
+[16904.419397] usb 3-6: Device not responding to set address.
+[16904.623225] usb 3-6: Device not responding to set address.
+[16904.827209] usb 3-6: device not accepting address 96, error -71
+[16904.939139] usb 3-6: new high-speed USB device number 97 using xhci_hcd
+[16904.939216] usb 3-6: Device not responding to set address.
+[16905.143238] usb 3-6: Device not responding to set address.
+[16905.347141] usb 3-6: device not accepting address 97, error -71
+[16905.459200] usb 3-6: new high-speed USB device number 98 using xhci_hcd
+[16905.459328] usb 3-6: Device not responding to set address.
+[16905.663268] usb 3-6: Device not responding to set address.
+[16905.867089] usb 3-6: device not accepting address 98, error -71
+[16905.867132] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16907.131085] usb 3-6: new high-speed USB device number 99 using xhci_hcd
+[16907.131223] usb 3-6: Device not responding to set address.
+[16907.335050] usb 3-6: Device not responding to set address.
+[16907.538975] usb 3-6: device not accepting address 99, error -71
+[16907.650956] usb 3-6: new high-speed USB device number 100 using xhci_hcd
+[16907.651032] usb 3-6: Device not responding to set address.
+[16907.855097] usb 3-6: Device not responding to set address.
+[16908.058952] usb 3-6: device not accepting address 100, error -71
+[16908.171010] usb 3-6: new high-speed USB device number 101 using xhci_hcd
+[16908.171130] usb 3-6: Device not responding to set address.
+[16908.375061] usb 3-6: Device not responding to set address.
+[16908.578864] usb 3-6: device not accepting address 101, error -71
+[16908.690977] usb 3-6: new high-speed USB device number 102 using xhci_hcd
+[16908.691105] usb 3-6: Device not responding to set address.
+[16908.894965] usb 3-6: Device not responding to set address.
+[16909.098894] usb 3-6: device not accepting address 102, error -71
+[16909.098953] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16910.378755] usb 3-6: new high-speed USB device number 103 using xhci_hcd
+[16910.378832] usb 3-6: Device not responding to set address.
+[16910.582916] usb 3-6: Device not responding to set address.
+[16910.786791] usb 3-6: device not accepting address 103, error -71
+[16910.898773] usb 3-6: new high-speed USB device number 104 using xhci_hcd
+[16910.898887] usb 3-6: Device not responding to set address.
+[16911.102832] usb 3-6: Device not responding to set address.
+[16911.306726] usb 3-6: device not accepting address 104, error -71
+[16911.418786] usb 3-6: new high-speed USB device number 105 using xhci_hcd
+[16911.418914] usb 3-6: Device not responding to set address.
+[16911.622775] usb 3-6: Device not responding to set address.
+[16911.826646] usb 3-6: device not accepting address 105, error -71
+[16911.938737] usb 3-6: new high-speed USB device number 106 using xhci_hcd
+[16911.938863] usb 3-6: Device not responding to set address.
+[16912.142700] usb 3-6: Device not responding to set address.
+[16912.346638] usb 3-6: device not accepting address 106, error -71
+[16912.346683] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16913.586650] usb 3-6: new high-speed USB device number 107 using xhci_hcd
+[16913.586748] usb 3-6: Device not responding to set address.
+[16913.790705] usb 3-6: Device not responding to set address.
+[16913.994537] usb 3-6: device not accepting address 107, error -71
+[16914.106597] usb 3-6: new high-speed USB device number 108 using xhci_hcd
+[16914.106722] usb 3-6: Device not responding to set address.
+[16914.310593] usb 3-6: Device not responding to set address.
+[16914.514459] usb 3-6: device not accepting address 108, error -71
+[16914.626564] usb 3-6: new high-speed USB device number 109 using xhci_hcd
+[16914.626690] usb 3-6: Device not responding to set address.
+[16914.830509] usb 3-6: Device not responding to set address.
+[16915.034492] usb 3-6: device not accepting address 109, error -71
+[16915.146433] usb 3-6: new high-speed USB device number 110 using xhci_hcd
+[16915.146510] usb 3-6: Device not responding to set address.
+[16915.350577] usb 3-6: Device not responding to set address.
+[16915.554427] usb 3-6: device not accepting address 110, error -71
+[16915.554501] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16915.678474] usb 3-6: new high-speed USB device number 111 using xhci_hcd
+[16915.678599] usb 3-6: Device not responding to set address.
+[16915.882500] usb 3-6: Device not responding to set address.
+[16916.086396] usb 3-6: device not accepting address 111, error -71
+[16916.198448] usb 3-6: new high-speed USB device number 112 using xhci_hcd
+[16916.198563] usb 3-6: Device not responding to set address.
+[16916.402487] usb 3-6: Device not responding to set address.
+[16916.606321] usb 3-6: device not accepting address 112, error -71
+[16916.718420] usb 3-6: new high-speed USB device number 113 using xhci_hcd
+[16916.718535] usb 3-6: Device not responding to set address.
+[16916.922373] usb 3-6: Device not responding to set address.
+[16917.126308] usb 3-6: device not accepting address 113, error -71
+[16917.238287] usb 3-6: new high-speed USB device number 114 using xhci_hcd
+[16917.238365] usb 3-6: Device not responding to set address.
+[16917.442436] usb 3-6: Device not responding to set address.
+[16917.646284] usb 3-6: device not accepting address 114, error -71
+[16917.646358] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16918.926264] usb 3-6: new high-speed USB device number 115 using xhci_hcd
+[16918.926386] usb 3-6: Device not responding to set address.
+[16919.130285] usb 3-6: Device not responding to set address.
+[16919.334138] usb 3-6: device not accepting address 115, error -71
+[16919.446227] usb 3-6: new high-speed USB device number 116 using xhci_hcd
+[16919.446366] usb 3-6: Device not responding to set address.
+[16919.650182] usb 3-6: Device not responding to set address.
+[16919.854155] usb 3-6: device not accepting address 116, error -71
+[16919.966095] usb 3-6: new high-speed USB device number 117 using xhci_hcd
+[16919.966172] usb 3-6: Device not responding to set address.
+[16920.170244] usb 3-6: Device not responding to set address.
+[16920.374097] usb 3-6: device not accepting address 117, error -71
+[16920.486144] usb 3-6: new high-speed USB device number 118 using xhci_hcd
+[16920.486268] usb 3-6: Device not responding to set address.
+[16920.690203] usb 3-6: Device not responding to set address.
+[16920.894046] usb 3-6: device not accepting address 118, error -71
+[16920.894108] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16921.018099] usb 3-6: new high-speed USB device number 119 using xhci_hcd
+[16921.018238] usb 3-6: Device not responding to set address.
+[16921.222139] usb 3-6: Device not responding to set address.
+[16921.425977] usb 3-6: device not accepting address 119, error -71
+[16921.538060] usb 3-6: new high-speed USB device number 120 using xhci_hcd
+[16921.538210] usb 3-6: Device not responding to set address.
+[16921.742023] usb 3-6: Device not responding to set address.
+[16921.945972] usb 3-6: device not accepting address 120, error -71
+[16922.057936] usb 3-6: new high-speed USB device number 121 using xhci_hcd
+[16922.058011] usb 3-6: Device not responding to set address.
+[16922.262041] usb 3-6: Device not responding to set address.
+[16922.465935] usb 3-6: device not accepting address 121, error -71
+[16922.578005] usb 3-6: new high-speed USB device number 122 using xhci_hcd
+[16922.578142] usb 3-6: Device not responding to set address.
+[16922.782056] usb 3-6: Device not responding to set address.
+[16922.985914] usb 3-6: device not accepting address 122, error -71
+[16922.986023] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16924.225875] usb 3-6: new high-speed USB device number 123 using xhci_hcd
+[16924.225991] usb 3-6: Device not responding to set address.
+[16924.429859] usb 3-6: Device not responding to set address.
+[16924.633813] usb 3-6: device not accepting address 123, error -71
+[16924.745764] usb 3-6: new high-speed USB device number 124 using xhci_hcd
+[16924.745840] usb 3-6: Device not responding to set address.
+[16924.949848] usb 3-6: Device not responding to set address.
+[16925.153749] usb 3-6: device not accepting address 124, error -71
+[16925.265819] usb 3-6: new high-speed USB device number 125 using xhci_hcd
+[16925.265937] usb 3-6: Device not responding to set address.
+[16925.469810] usb 3-6: Device not responding to set address.
+[16925.673698] usb 3-6: device not accepting address 125, error -71
+[16925.785783] usb 3-6: new high-speed USB device number 126 using xhci_hcd
+[16925.785919] usb 3-6: Device not responding to set address.
+[16925.989772] usb 3-6: Device not responding to set address.
+[16926.193685] usb 3-6: device not accepting address 126, error -71
+[16926.193746] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16926.317735] usb 3-6: new high-speed USB device number 127 using xhci_hcd
+[16926.317848] usb 3-6: Device not responding to set address.
+[16926.521704] usb 3-6: Device not responding to set address.
+[16926.725677] usb 3-6: device not accepting address 127, error -71
+[16926.837617] usb 3-6: new high-speed USB device number 2 using xhci_hcd
+[16926.837695] usb 3-6: Device not responding to set address.
+[16927.041779] usb 3-6: Device not responding to set address.
+[16927.245615] usb 3-6: device not accepting address 2, error -71
+[16927.357672] usb 3-6: new high-speed USB device number 3 using xhci_hcd
+[16927.357801] usb 3-6: Device not responding to set address.
+[16927.561678] usb 3-6: Device not responding to set address.
+[16927.765560] usb 3-6: device not accepting address 3, error -71
+[16927.877608] usb 3-6: new high-speed USB device number 4 using xhci_hcd
+[16927.877738] usb 3-6: Device not responding to set address.
+[16928.081681] usb 3-6: Device not responding to set address.
+[16928.285567] usb 3-6: device not accepting address 4, error -71
+[16928.285667] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16928.409576] usb 3-6: new high-speed USB device number 5 using xhci_hcd
+[16928.409710] usb 3-6: Device not responding to set address.
+[16928.613569] usb 3-6: Device not responding to set address.
+[16928.817488] usb 3-6: device not accepting address 5, error -71
+[16928.929466] usb 3-6: new high-speed USB device number 6 using xhci_hcd
+[16928.929539] usb 3-6: Device not responding to set address.
+[16929.133578] usb 3-6: Device not responding to set address.
+[16929.337470] usb 3-6: device not accepting address 6, error -71
+[16929.449496] usb 3-6: new high-speed USB device number 7 using xhci_hcd
+[16929.449625] usb 3-6: Device not responding to set address.
+[16929.653539] usb 3-6: Device not responding to set address.
+[16929.857391] usb 3-6: device not accepting address 7, error -71
+[16929.969488] usb 3-6: new high-speed USB device number 8 using xhci_hcd
+[16929.969608] usb 3-6: Device not responding to set address.
+[16930.173436] usb 3-6: Device not responding to set address.
+[16930.377424] usb 3-6: device not accepting address 8, error -71
+[16930.377520] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16930.501459] usb 3-6: new high-speed USB device number 9 using xhci_hcd
+[16930.501592] usb 3-6: Device not responding to set address.
+[16930.705420] usb 3-6: Device not responding to set address.
+[16930.909348] usb 3-6: device not accepting address 9, error -71
+[16931.021330] usb 3-6: new high-speed USB device number 10 using xhci_hcd
+[16931.021405] usb 3-6: Device not responding to set address.
+[16931.225472] usb 3-6: Device not responding to set address.
+[16931.429312] usb 3-6: device not accepting address 10, error -71
+[16931.541381] usb 3-6: new high-speed USB device number 11 using xhci_hcd
+[16931.541499] usb 3-6: Device not responding to set address.
+[16931.745435] usb 3-6: Device not responding to set address.
+[16931.949251] usb 3-6: device not accepting address 11, error -71
+[16932.061322] usb 3-6: new high-speed USB device number 12 using xhci_hcd
+[16932.061426] usb 3-6: Device not responding to set address.
+[16932.265301] usb 3-6: Device not responding to set address.
+[16932.469248] usb 3-6: device not accepting address 12, error -71
+[16932.469322] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16932.593265] usb 3-6: new high-speed USB device number 13 using xhci_hcd
+[16932.593451] usb 3-6: Device not responding to set address.
+[16932.797326] usb 3-6: Device not responding to set address.
+[16933.001241] usb 3-6: device not accepting address 13, error -71
+[16933.113177] usb 3-6: new high-speed USB device number 14 using xhci_hcd
+[16933.113257] usb 3-6: Device not responding to set address.
+[16933.317274] usb 3-6: Device not responding to set address.
+[16933.521180] usb 3-6: device not accepting address 14, error -71
+[16933.633242] usb 3-6: new high-speed USB device number 15 using xhci_hcd
+[16933.633361] usb 3-6: Device not responding to set address.
+[16933.837243] usb 3-6: Device not responding to set address.
+[16934.041104] usb 3-6: device not accepting address 15, error -71
+[16934.153203] usb 3-6: new high-speed USB device number 16 using xhci_hcd
+[16934.153320] usb 3-6: Device not responding to set address.
+[16934.357166] usb 3-6: Device not responding to set address.
+[16934.561133] usb 3-6: device not accepting address 16, error -71
+[16934.561218] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16935.824991] usb 3-6: new high-speed USB device number 17 using xhci_hcd
+[16935.825066] usb 3-6: Device not responding to set address.
+[16936.029140] usb 3-6: Device not responding to set address.
+[16936.233015] usb 3-6: device not accepting address 17, error -71
+[16936.345046] usb 3-6: new high-speed USB device number 18 using xhci_hcd
+[16936.345164] usb 3-6: Device not responding to set address.
+[16936.549125] usb 3-6: Device not responding to set address.
+[16936.752924] usb 3-6: device not accepting address 18, error -71
+[16936.864966] usb 3-6: new high-speed USB device number 19 using xhci_hcd
+[16936.865067] usb 3-6: Device not responding to set address.
+[16937.068943] usb 3-6: Device not responding to set address.
+[16937.272943] usb 3-6: device not accepting address 19, error -71
+[16937.384988] usb 3-6: new high-speed USB device number 20 using xhci_hcd
+[16937.385101] usb 3-6: Device not responding to set address.
+[16937.588982] usb 3-6: Device not responding to set address.
+[16937.792908] usb 3-6: device not accepting address 20, error -71
+[16937.792993] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16937.916838] usb 3-6: new high-speed USB device number 21 using xhci_hcd
+[16937.916913] usb 3-6: Device not responding to set address.
+[16938.120993] usb 3-6: Device not responding to set address.
+[16938.324830] usb 3-6: device not accepting address 21, error -71
+[16938.436903] usb 3-6: new high-speed USB device number 22 using xhci_hcd
+[16938.437026] usb 3-6: Device not responding to set address.
+[16938.640984] usb 3-6: Device not responding to set address.
+[16938.844779] usb 3-6: device not accepting address 22, error -71
+[16938.956870] usb 3-6: new high-speed USB device number 23 using xhci_hcd
+[16938.956987] usb 3-6: Device not responding to set address.
+[16939.160831] usb 3-6: Device not responding to set address.
+[16939.364758] usb 3-6: device not accepting address 23, error -71
+[16939.476764] usb 3-6: new high-speed USB device number 24 using xhci_hcd
+[16939.476826] usb 3-6: Device not responding to set address.
+[16939.680904] usb 3-6: Device not responding to set address.
+[16939.884760] usb 3-6: device not accepting address 24, error -71
+[16939.884849] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16940.008705] usb 3-6: new high-speed USB device number 25 using xhci_hcd
+[16940.008782] usb 3-6: Device not responding to set address.
+[16940.212793] usb 3-6: Device not responding to set address.
+[16940.416726] usb 3-6: device not accepting address 25, error -71
+[16940.528757] usb 3-6: new high-speed USB device number 26 using xhci_hcd
+[16940.528840] usb 3-6: Device not responding to set address.
+[16940.732866] usb 3-6: Device not responding to set address.
+[16940.936618] usb 3-6: device not accepting address 26, error -71
+[16941.048694] usb 3-6: new high-speed USB device number 27 using xhci_hcd
+[16941.048794] usb 3-6: Device not responding to set address.
+[16941.252680] usb 3-6: Device not responding to set address.
+[16941.456611] usb 3-6: device not accepting address 27, error -71
+[16941.568603] usb 3-6: new high-speed USB device number 28 using xhci_hcd
+[16941.568686] usb 3-6: Device not responding to set address.
+[16941.772734] usb 3-6: Device not responding to set address.
+[16941.976586] usb 3-6: device not accepting address 28, error -71
+[16941.976690] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16943.256523] usb 3-6: new high-speed USB device number 29 using xhci_hcd
+[16943.256634] usb 3-6: Device not responding to set address.
+[16943.460611] usb 3-6: Device not responding to set address.
+[16943.664429] usb 3-6: device not accepting address 29, error -71
+[16943.776505] usb 3-6: new high-speed USB device number 30 using xhci_hcd
+[16943.776611] usb 3-6: Device not responding to set address.
+[16943.980544] usb 3-6: Device not responding to set address.
+[16944.184463] usb 3-6: device not accepting address 30, error -71
+[16944.296451] usb 3-6: new high-speed USB device number 31 using xhci_hcd
+[16944.296551] usb 3-6: Device not responding to set address.
+[16944.500479] usb 3-6: Device not responding to set address.
+[16944.704426] usb 3-6: device not accepting address 31, error -71
+[16944.816362] usb 3-6: new high-speed USB device number 32 using xhci_hcd
+[16944.816428] usb 3-6: Device not responding to set address.
+[16945.020467] usb 3-6: Device not responding to set address.
+[16945.224389] usb 3-6: device not accepting address 32, error -71
+[16945.224475] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16945.348421] usb 3-6: new high-speed USB device number 33 using xhci_hcd
+[16945.348537] usb 3-6: Device not responding to set address.
+[16945.552444] usb 3-6: Device not responding to set address.
+[16945.756290] usb 3-6: device not accepting address 33, error -71
+[16945.868358] usb 3-6: new high-speed USB device number 34 using xhci_hcd
+[16945.868520] usb 3-6: Device not responding to set address.
+[16946.072371] usb 3-6: Device not responding to set address.
+[16946.276274] usb 3-6: device not accepting address 34, error -71
+[16946.388281] usb 3-6: new high-speed USB device number 35 using xhci_hcd
+[16946.388357] usb 3-6: Device not responding to set address.
+[16946.592376] usb 3-6: Device not responding to set address.
+[16946.796282] usb 3-6: device not accepting address 35, error -71
+[16946.908220] usb 3-6: new high-speed USB device number 36 using xhci_hcd
+[16946.908296] usb 3-6: Device not responding to set address.
+[16947.112365] usb 3-6: Device not responding to set address.
+[16947.316217] usb 3-6: device not accepting address 36, error -71
+[16947.316322] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16948.596196] usb 3-6: new high-speed USB device number 37 using xhci_hcd
+[16948.596318] usb 3-6: Device not responding to set address.
+[16948.800128] usb 3-6: Device not responding to set address.
+[16949.004069] usb 3-6: device not accepting address 37, error -71
+[16949.116111] usb 3-6: new high-speed USB device number 38 using xhci_hcd
+[16949.116222] usb 3-6: Device not responding to set address.
+[16949.320114] usb 3-6: Device not responding to set address.
+[16949.524051] usb 3-6: device not accepting address 38, error -71
+[16949.636030] usb 3-6: new high-speed USB device number 39 using xhci_hcd
+[16949.636108] usb 3-6: Device not responding to set address.
+[16949.840129] usb 3-6: Device not responding to set address.
+[16950.044014] usb 3-6: device not accepting address 39, error -71
+[16950.156081] usb 3-6: new high-speed USB device number 40 using xhci_hcd
+[16950.156206] usb 3-6: Device not responding to set address.
+[16950.360084] usb 3-6: Device not responding to set address.
+[16950.563941] usb 3-6: device not accepting address 40, error -71
+[16950.563978] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16950.688071] usb 3-6: new high-speed USB device number 41 using xhci_hcd
+[16950.688188] usb 3-6: Device not responding to set address.
+[16950.892090] usb 3-6: Device not responding to set address.
+[16951.095949] usb 3-6: device not accepting address 41, error -71
+[16951.208024] usb 3-6: new high-speed USB device number 42 using xhci_hcd
+[16951.208137] usb 3-6: Device not responding to set address.
+[16951.411961] usb 3-6: Device not responding to set address.
+[16951.615945] usb 3-6: device not accepting address 42, error -71
+[16951.727897] usb 3-6: new high-speed USB device number 43 using xhci_hcd
+[16951.727974] usb 3-6: Device not responding to set address.
+[16951.932023] usb 3-6: Device not responding to set address.
+[16952.135880] usb 3-6: device not accepting address 43, error -71
+[16952.247938] usb 3-6: new high-speed USB device number 44 using xhci_hcd
+[16952.248067] usb 3-6: Device not responding to set address.
+[16952.451987] usb 3-6: Device not responding to set address.
+[16952.655808] usb 3-6: device not accepting address 44, error -71
+[16952.655829] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16953.935827] usb 3-6: new high-speed USB device number 45 using xhci_hcd
+[16953.935975] usb 3-6: Device not responding to set address.
+[16954.139777] usb 3-6: Device not responding to set address.
+[16954.343735] usb 3-6: device not accepting address 45, error -71
+[16954.455689] usb 3-6: new high-speed USB device number 46 using xhci_hcd
+[16954.455754] usb 3-6: Device not responding to set address.
+[16954.659816] usb 3-6: Device not responding to set address.
+[16954.863679] usb 3-6: device not accepting address 46, error -71
+[16954.975749] usb 3-6: new high-speed USB device number 47 using xhci_hcd
+[16954.975878] usb 3-6: Device not responding to set address.
+[16955.179802] usb 3-6: Device not responding to set address.
+[16955.383644] usb 3-6: device not accepting address 47, error -71
+[16955.495713] usb 3-6: new high-speed USB device number 48 using xhci_hcd
+[16955.495833] usb 3-6: Device not responding to set address.
+[16955.699753] usb 3-6: Device not responding to set address.
+[16955.903591] usb 3-6: device not accepting address 48, error -71
+[16955.903618] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16957.183501] usb 3-6: new high-speed USB device number 49 using xhci_hcd
+[16957.183575] usb 3-6: Device not responding to set address.
+[16957.387602] usb 3-6: Device not responding to set address.
+[16957.591489] usb 3-6: device not accepting address 49, error -71
+[16957.703479] usb 3-6: new high-speed USB device number 50 using xhci_hcd
+[16957.703544] usb 3-6: Device not responding to set address.
+[16957.907564] usb 3-6: Device not responding to set address.
+[16958.111473] usb 3-6: device not accepting address 50, error -71
+[16958.223525] usb 3-6: new high-speed USB device number 51 using xhci_hcd
+[16958.223644] usb 3-6: Device not responding to set address.
+[16958.427578] usb 3-6: Device not responding to set address.
+[16958.631394] usb 3-6: device not accepting address 51, error -71
+[16958.743491] usb 3-6: new high-speed USB device number 52 using xhci_hcd
+[16958.743627] usb 3-6: Device not responding to set address.
+[16958.947442] usb 3-6: Device not responding to set address.
+[16959.151387] usb 3-6: device not accepting address 52, error -71
+[16959.151444] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16960.415273] usb 3-6: new high-speed USB device number 53 using xhci_hcd
+[16960.415350] usb 3-6: Device not responding to set address.
+[16960.619375] usb 3-6: Device not responding to set address.
+[16960.823257] usb 3-6: device not accepting address 53, error -71
+[16960.935334] usb 3-6: new high-speed USB device number 54 using xhci_hcd
+[16960.935478] usb 3-6: Device not responding to set address.
+[16961.139378] usb 3-6: Device not responding to set address.
+[16961.343214] usb 3-6: device not accepting address 54, error -71
+[16961.455255] usb 3-6: new high-speed USB device number 55 using xhci_hcd
+[16961.455357] usb 3-6: Device not responding to set address.
+[16961.659244] usb 3-6: Device not responding to set address.
+[16961.863231] usb 3-6: device not accepting address 55, error -71
+[16961.975169] usb 3-6: new high-speed USB device number 56 using xhci_hcd
+[16961.975235] usb 3-6: Device not responding to set address.
+[16962.179313] usb 3-6: Device not responding to set address.
+[16962.383196] usb 3-6: device not accepting address 56, error -71
+[16962.383296] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16963.623133] usb 3-6: new high-speed USB device number 57 using xhci_hcd
+[16963.623258] usb 3-6: Device not responding to set address.
+[16963.827204] usb 3-6: Device not responding to set address.
+[16964.031023] usb 3-6: device not accepting address 57, error -71
+[16964.143065] usb 3-6: new high-speed USB device number 58 using xhci_hcd
+[16964.143182] usb 3-6: Device not responding to set address.
+[16964.347066] usb 3-6: Device not responding to set address.
+[16964.551045] usb 3-6: device not accepting address 58, error -71
+[16964.662994] usb 3-6: new high-speed USB device number 59 using xhci_hcd
+[16964.663072] usb 3-6: Device not responding to set address.
+[16964.867111] usb 3-6: Device not responding to set address.
+[16965.070948] usb 3-6: device not accepting address 59, error -71
+[16965.183034] usb 3-6: new high-speed USB device number 60 using xhci_hcd
+[16965.183134] usb 3-6: Device not responding to set address.
+[16965.387060] usb 3-6: Device not responding to set address.
+[16965.590942] usb 3-6: device not accepting address 60, error -71
+[16965.591056] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16966.854917] usb 3-6: new high-speed USB device number 61 using xhci_hcd
+[16966.855051] usb 3-6: Device not responding to set address.
+[16967.058860] usb 3-6: Device not responding to set address.
+[16967.262825] usb 3-6: device not accepting address 61, error -71
+[16967.374862] usb 3-6: new high-speed USB device number 62 using xhci_hcd
+[16967.374980] usb 3-6: Device not responding to set address.
+[16967.578957] usb 3-6: Device not responding to set address.
+[16967.782790] usb 3-6: device not accepting address 62, error -71
+[16967.894803] usb 3-6: new high-speed USB device number 63 using xhci_hcd
+[16967.894917] usb 3-6: Device not responding to set address.
+[16968.098852] usb 3-6: Device not responding to set address.
+[16968.302742] usb 3-6: device not accepting address 63, error -71
+[16968.414816] usb 3-6: new high-speed USB device number 64 using xhci_hcd
+[16968.414943] usb 3-6: Device not responding to set address.
+[16968.618848] usb 3-6: Device not responding to set address.
+[16968.822681] usb 3-6: device not accepting address 64, error -71
+[16968.822706] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16970.074654] usb 3-6: new high-speed USB device number 65 using xhci_hcd
+[16970.074749] usb 3-6: Device not responding to set address.
+[16970.278772] usb 3-6: Device not responding to set address.
+[16970.482630] usb 3-6: device not accepting address 65, error -71
+[16970.594587] usb 3-6: new high-speed USB device number 66 using xhci_hcd
+[16970.595494] usb 3-6: Device not responding to set address.
+[16970.798731] usb 3-6: Device not responding to set address.
+[16971.002542] usb 3-6: device not accepting address 66, error -71
+[16971.114626] usb 3-6: new high-speed USB device number 67 using xhci_hcd
+[16971.114746] usb 3-6: Device not responding to set address.
+[16971.318574] usb 3-6: Device not responding to set address.
+[16971.522488] usb 3-6: device not accepting address 67, error -71
+[16971.634484] usb 3-6: new high-speed USB device number 68 using xhci_hcd
+[16971.634559] usb 3-6: Device not responding to set address.
+[16971.838539] usb 3-6: Device not responding to set address.
+[16972.042481] usb 3-6: device not accepting address 68, error -71
+[16972.042526] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16972.166458] usb 3-6: new high-speed USB device number 69 using xhci_hcd
+[16972.166536] usb 3-6: Device not responding to set address.
+[16972.370622] usb 3-6: Device not responding to set address.
+[16972.574446] usb 3-6: device not accepting address 69, error -71
+[16972.686483] usb 3-6: new high-speed USB device number 70 using xhci_hcd
+[16972.686588] usb 3-6: Device not responding to set address.
+[16972.890568] usb 3-6: Device not responding to set address.
+[16973.094431] usb 3-6: device not accepting address 70, error -71
+[16973.206476] usb 3-6: new high-speed USB device number 71 using xhci_hcd
+[16973.206595] usb 3-6: Device not responding to set address.
+[16973.410512] usb 3-6: Device not responding to set address.
+[16973.614353] usb 3-6: device not accepting address 71, error -71
+[16973.726433] usb 3-6: new high-speed USB device number 72 using xhci_hcd
+[16973.726579] usb 3-6: Device not responding to set address.
+[16973.930407] usb 3-6: Device not responding to set address.
+[16974.134336] usb 3-6: device not accepting address 72, error -71
+[16974.134381] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16975.430242] usb 3-6: new high-speed USB device number 73 using xhci_hcd
+[16975.430318] usb 3-6: Device not responding to set address.
+[16975.634322] usb 3-6: Device not responding to set address.
+[16975.838259] usb 3-6: device not accepting address 73, error -71
+[16975.950285] usb 3-6: new high-speed USB device number 74 using xhci_hcd
+[16975.950433] usb 3-6: Device not responding to set address.
+[16976.154281] usb 3-6: Device not responding to set address.
+[16976.358241] usb 3-6: device not accepting address 74, error -71
+[16976.470255] usb 3-6: new high-speed USB device number 75 using xhci_hcd
+[16976.470380] usb 3-6: Device not responding to set address.
+[16976.674252] usb 3-6: Device not responding to set address.
+[16976.878173] usb 3-6: device not accepting address 75, error -71
+[16976.990238] usb 3-6: new high-speed USB device number 76 using xhci_hcd
+[16976.990356] usb 3-6: Device not responding to set address.
+[16977.194266] usb 3-6: Device not responding to set address.
+[16977.398149] usb 3-6: device not accepting address 76, error -71
+[16977.398249] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16978.638111] usb 3-6: new high-speed USB device number 77 using xhci_hcd
+[16978.638249] usb 3-6: Device not responding to set address.
+[16978.842100] usb 3-6: Device not responding to set address.
+[16979.045970] usb 3-6: device not accepting address 77, error -71
+[16979.158039] usb 3-6: new high-speed USB device number 78 using xhci_hcd
+[16979.158140] usb 3-6: Device not responding to set address.
+[16979.361993] usb 3-6: Device not responding to set address.
+[16979.566000] usb 3-6: device not accepting address 78, error -71
+[16979.678023] usb 3-6: new high-speed USB device number 79 using xhci_hcd
+[16979.678116] usb 3-6: Device not responding to set address.
+[16979.882038] usb 3-6: Device not responding to set address.
+[16980.085956] usb 3-6: device not accepting address 79, error -71
+[16980.197936] usb 3-6: new high-speed USB device number 80 using xhci_hcd
+[16980.198012] usb 3-6: Device not responding to set address.
+[16980.401983] usb 3-6: Device not responding to set address.
+[16980.605897] usb 3-6: device not accepting address 80, error -71
+[16980.606005] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16980.729917] usb 3-6: new high-speed USB device number 81 using xhci_hcd
+[16980.730100] usb 3-6: Device not responding to set address.
+[16980.933988] usb 3-6: Device not responding to set address.
+[16981.137823] usb 3-6: device not accepting address 81, error -71
+[16981.249904] usb 3-6: new high-speed USB device number 82 using xhci_hcd
+[16981.250030] usb 3-6: Device not responding to set address.
+[16981.453875] usb 3-6: Device not responding to set address.
+[16981.657849] usb 3-6: device not accepting address 82, error -71
+[16981.769815] usb 3-6: new high-speed USB device number 83 using xhci_hcd
+[16981.769922] usb 3-6: Device not responding to set address.
+[16981.973938] usb 3-6: Device not responding to set address.
+[16982.177776] usb 3-6: device not accepting address 83, error -71
+[16982.289820] usb 3-6: new high-speed USB device number 84 using xhci_hcd
+[16982.289929] usb 3-6: Device not responding to set address.
+[16982.493897] usb 3-6: Device not responding to set address.
+[16982.697751] usb 3-6: device not accepting address 84, error -71
+[16982.697819] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16983.977730] usb 3-6: new high-speed USB device number 85 using xhci_hcd
+[16983.977851] usb 3-6: Device not responding to set address.
+[16984.181720] usb 3-6: Device not responding to set address.
+[16984.385595] usb 3-6: device not accepting address 85, error -71
+[16984.497698] usb 3-6: new high-speed USB device number 86 using xhci_hcd
+[16984.497836] usb 3-6: Device not responding to set address.
+[16984.701651] usb 3-6: Device not responding to set address.
+[16984.905586] usb 3-6: device not accepting address 86, error -71
+[16985.017547] usb 3-6: new high-speed USB device number 87 using xhci_hcd
+[16985.017612] usb 3-6: Device not responding to set address.
+[16985.221652] usb 3-6: Device not responding to set address.
+[16985.425549] usb 3-6: device not accepting address 87, error -71
+[16985.537619] usb 3-6: new high-speed USB device number 88 using xhci_hcd
+[16985.537764] usb 3-6: Device not responding to set address.
+[16985.741607] usb 3-6: Device not responding to set address.
+[16985.945489] usb 3-6: device not accepting address 88, error -71
+[16985.945518] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16986.069618] usb 3-6: new high-speed USB device number 89 using xhci_hcd
+[16986.069732] usb 3-6: Device not responding to set address.
+[16986.273542] usb 3-6: Device not responding to set address.
+[16986.477483] usb 3-6: device not accepting address 89, error -71
+[16986.589507] usb 3-6: new high-speed USB device number 90 using xhci_hcd
+[16986.589610] usb 3-6: Device not responding to set address.
+[16986.793588] usb 3-6: Device not responding to set address.
+[16986.997440] usb 3-6: device not accepting address 90, error -71
+[16987.109417] usb 3-6: new high-speed USB device number 91 using xhci_hcd
+[16987.109495] usb 3-6: Device not responding to set address.
+[16987.313515] usb 3-6: Device not responding to set address.
+[16987.517442] usb 3-6: device not accepting address 91, error -71
+[16987.629398] usb 3-6: new high-speed USB device number 92 using xhci_hcd
+[16987.629477] usb 3-6: Device not responding to set address.
+[16987.833477] usb 3-6: Device not responding to set address.
+[16988.037353] usb 3-6: device not accepting address 92, error -71
+[16988.037377] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16989.301284] usb 3-6: new high-speed USB device number 93 using xhci_hcd
+[16989.301358] usb 3-6: Device not responding to set address.
+[16989.505322] usb 3-6: Device not responding to set address.
+[16989.709249] usb 3-6: device not accepting address 93, error -71
+[16989.821225] usb 3-6: new high-speed USB device number 94 using xhci_hcd
+[16989.821300] usb 3-6: Device not responding to set address.
+[16990.025373] usb 3-6: Device not responding to set address.
+[16990.229260] usb 3-6: device not accepting address 94, error -71
+[16990.341268] usb 3-6: new high-speed USB device number 95 using xhci_hcd
+[16990.341385] usb 3-6: Device not responding to set address.
+[16990.545300] usb 3-6: Device not responding to set address.
+[16990.749148] usb 3-6: device not accepting address 95, error -71
+[16990.861206] usb 3-6: new high-speed USB device number 96 using xhci_hcd
+[16990.861308] usb 3-6: Device not responding to set address.
+[16991.065191] usb 3-6: Device not responding to set address.
+[16991.269153] usb 3-6: device not accepting address 96, error -71
+[16991.269233] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16991.393157] usb 3-6: new high-speed USB device number 97 using xhci_hcd
+[16991.393268] usb 3-6: Device not responding to set address.
+[16991.597199] usb 3-6: Device not responding to set address.
+[16991.801146] usb 3-6: device not accepting address 97, error -71
+[16991.913083] usb 3-6: new high-speed USB device number 98 using xhci_hcd
+[16991.913158] usb 3-6: Device not responding to set address.
+[16992.117180] usb 3-6: Device not responding to set address.
+[16992.321082] usb 3-6: device not accepting address 98, error -71
+[16992.433136] usb 3-6: new high-speed USB device number 99 using xhci_hcd
+[16992.433256] usb 3-6: Device not responding to set address.
+[16992.637194] usb 3-6: Device not responding to set address.
+[16992.841011] usb 3-6: device not accepting address 99, error -71
+[16992.953079] usb 3-6: new high-speed USB device number 100 using xhci_hcd
+[16992.953180] usb 3-6: Device not responding to set address.
+[16993.157090] usb 3-6: Device not responding to set address.
+[16993.361029] usb 3-6: device not accepting address 100, error -71
+[16993.361130] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16994.604905] usb 3-6: new high-speed USB device number 101 using xhci_hcd
+[16994.604982] usb 3-6: Device not responding to set address.
+[16994.809035] usb 3-6: Device not responding to set address.
+[16995.012902] usb 3-6: device not accepting address 101, error -71
+[16995.124951] usb 3-6: new high-speed USB device number 102 using xhci_hcd
+[16995.125071] usb 3-6: Device not responding to set address.
+[16995.329012] usb 3-6: Device not responding to set address.
+[16995.532827] usb 3-6: device not accepting address 102, error -71
+[16995.644903] usb 3-6: new high-speed USB device number 103 using xhci_hcd
+[16995.645020] usb 3-6: Device not responding to set address.
+[16995.848875] usb 3-6: Device not responding to set address.
+[16996.052850] usb 3-6: device not accepting address 103, error -71
+[16996.164790] usb 3-6: new high-speed USB device number 104 using xhci_hcd
+[16996.164868] usb 3-6: Device not responding to set address.
+[16996.368955] usb 3-6: Device not responding to set address.
+[16996.572774] usb 3-6: device not accepting address 104, error -71
+[16996.572820] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16996.696778] usb 3-6: new high-speed USB device number 105 using xhci_hcd
+[16996.696852] usb 3-6: Device not responding to set address.
+[16996.900895] usb 3-6: Device not responding to set address.
+[16997.104756] usb 3-6: device not accepting address 105, error -71
+[16997.216803] usb 3-6: new high-speed USB device number 106 using xhci_hcd
+[16997.216934] usb 3-6: Device not responding to set address.
+[16997.420885] usb 3-6: Device not responding to set address.
+[16997.624684] usb 3-6: device not accepting address 106, error -71
+[16997.736770] usb 3-6: new high-speed USB device number 107 using xhci_hcd
+[16997.736888] usb 3-6: Device not responding to set address.
+[16997.940728] usb 3-6: Device not responding to set address.
+[16998.144664] usb 3-6: device not accepting address 107, error -71
+[16998.256632] usb 3-6: new high-speed USB device number 108 using xhci_hcd
+[16998.256702] usb 3-6: Device not responding to set address.
+[16998.460787] usb 3-6: Device not responding to set address.
+[16998.664666] usb 3-6: device not accepting address 108, error -71
+[16998.664767] hub 3-0:1.0: unable to enumerate USB device on port 6
+[16999.928618] usb 3-6: new high-speed USB device number 109 using xhci_hcd
+[16999.928744] usb 3-6: Device not responding to set address.
+[17000.132619] usb 3-6: Device not responding to set address.
+[17000.336479] usb 3-6: device not accepting address 109, error -71
+[17000.448586] usb 3-6: new high-speed USB device number 110 using xhci_hcd
+[17000.448704] usb 3-6: Device not responding to set address.
+[17000.652541] usb 3-6: Device not responding to set address.
+[17000.856515] usb 3-6: device not accepting address 110, error -71
+[17000.968453] usb 3-6: new high-speed USB device number 111 using xhci_hcd
+[17000.968531] usb 3-6: Device not responding to set address.
+[17001.172596] usb 3-6: Device not responding to set address.
+[17001.376448] usb 3-6: device not accepting address 111, error -71
+[17001.488462] usb 3-6: new high-speed USB device number 112 using xhci_hcd
+[17001.488568] usb 3-6: Device not responding to set address.
+[17001.692559] usb 3-6: Device not responding to set address.
+[17001.896402] usb 3-6: device not accepting address 112, error -71
+[17001.896464] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17002.020453] usb 3-6: new high-speed USB device number 113 using xhci_hcd
+[17002.020585] usb 3-6: Device not responding to set address.
+[17002.224523] usb 3-6: Device not responding to set address.
+[17002.428350] usb 3-6: device not accepting address 113, error -71
+[17002.540410] usb 3-6: new high-speed USB device number 114 using xhci_hcd
+[17002.540511] usb 3-6: Device not responding to set address.
+[17002.744384] usb 3-6: Device not responding to set address.
+[17002.948330] usb 3-6: device not accepting address 114, error -71
+[17003.060320] usb 3-6: new high-speed USB device number 115 using xhci_hcd
+[17003.060457] usb 3-6: Device not responding to set address.
+[17003.264448] usb 3-6: Device not responding to set address.
+[17003.468306] usb 3-6: device not accepting address 115, error -71
+[17003.580364] usb 3-6: new high-speed USB device number 116 using xhci_hcd
+[17003.580464] usb 3-6: Device not responding to set address.
+[17003.784392] usb 3-6: Device not responding to set address.
+[17003.988226] usb 3-6: device not accepting address 116, error -71
+[17003.988253] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17005.228250] usb 3-6: new high-speed USB device number 117 using xhci_hcd
+[17005.228374] usb 3-6: Device not responding to set address.
+[17005.432192] usb 3-6: Device not responding to set address.
+[17005.636141] usb 3-6: device not accepting address 117, error -71
+[17005.748129] usb 3-6: new high-speed USB device number 118 using xhci_hcd
+[17005.748203] usb 3-6: Device not responding to set address.
+[17005.952284] usb 3-6: Device not responding to set address.
+[17006.156144] usb 3-6: device not accepting address 118, error -71
+[17006.268146] usb 3-6: new high-speed USB device number 119 using xhci_hcd
+[17006.268265] usb 3-6: Device not responding to set address.
+[17006.472231] usb 3-6: Device not responding to set address.
+[17006.676120] usb 3-6: device not accepting address 119, error -71
+[17006.788139] usb 3-6: new high-speed USB device number 120 using xhci_hcd
+[17006.788259] usb 3-6: Device not responding to set address.
+[17006.992167] usb 3-6: Device not responding to set address.
+[17007.196031] usb 3-6: device not accepting address 120, error -71
+[17007.196051] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17008.492043] usb 3-6: new high-speed USB device number 121 using xhci_hcd
+[17008.492161] usb 3-6: Device not responding to set address.
+[17008.696019] usb 3-6: Device not responding to set address.
+[17008.899921] usb 3-6: device not accepting address 121, error -71
+[17009.011889] usb 3-6: new high-speed USB device number 122 using xhci_hcd
+[17009.011966] usb 3-6: Device not responding to set address.
+[17009.216054] usb 3-6: Device not responding to set address.
+[17009.419917] usb 3-6: device not accepting address 122, error -71
+[17009.531951] usb 3-6: new high-speed USB device number 123 using xhci_hcd
+[17009.532069] usb 3-6: Device not responding to set address.
+[17009.735977] usb 3-6: Device not responding to set address.
+[17009.939811] usb 3-6: device not accepting address 123, error -71
+[17010.051897] usb 3-6: new high-speed USB device number 124 using xhci_hcd
+[17010.051999] usb 3-6: Device not responding to set address.
+[17010.255853] usb 3-6: Device not responding to set address.
+[17010.459830] usb 3-6: device not accepting address 124, error -71
+[17010.459929] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17011.723715] usb 3-6: new high-speed USB device number 125 using xhci_hcd
+[17011.723794] usb 3-6: Device not responding to set address.
+[17011.927847] usb 3-6: Device not responding to set address.
+[17012.131707] usb 3-6: device not accepting address 125, error -71
+[17012.243758] usb 3-6: new high-speed USB device number 126 using xhci_hcd
+[17012.243906] usb 3-6: Device not responding to set address.
+[17012.447759] usb 3-6: Device not responding to set address.
+[17012.651637] usb 3-6: device not accepting address 126, error -71
+[17012.763757] usb 3-6: new high-speed USB device number 127 using xhci_hcd
+[17012.763882] usb 3-6: Device not responding to set address.
+[17012.967684] usb 3-6: Device not responding to set address.
+[17013.171655] usb 3-6: device not accepting address 127, error -71
+[17013.283625] usb 3-6: new high-speed USB device number 2 using xhci_hcd
+[17013.283701] usb 3-6: Device not responding to set address.
+[17013.487637] usb 3-6: Device not responding to set address.
+[17013.691618] usb 3-6: device not accepting address 2, error -71
+[17013.691705] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17013.815572] usb 3-6: new high-speed USB device number 3 using xhci_hcd
+[17013.815653] usb 3-6: Device not responding to set address.
+[17014.019642] usb 3-6: Device not responding to set address.
+[17014.223544] usb 3-6: device not accepting address 3, error -71
+[17014.335611] usb 3-6: new high-speed USB device number 4 using xhci_hcd
+[17014.335746] usb 3-6: Device not responding to set address.
+[17014.539612] usb 3-6: Device not responding to set address.
+[17014.743483] usb 3-6: device not accepting address 4, error -71
+[17014.855535] usb 3-6: new high-speed USB device number 5 using xhci_hcd
+[17014.855637] usb 3-6: Device not responding to set address.
+[17015.059519] usb 3-6: Device not responding to set address.
+[17015.263509] usb 3-6: device not accepting address 5, error -71
+[17015.375508] usb 3-6: new high-speed USB device number 6 using xhci_hcd
+[17015.375609] usb 3-6: Device not responding to set address.
+[17015.579547] usb 3-6: Device not responding to set address.
+[17015.783456] usb 3-6: device not accepting address 6, error -71
+[17015.783544] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17017.023364] usb 3-6: new high-speed USB device number 7 using xhci_hcd
+[17017.023461] usb 3-6: Device not responding to set address.
+[17017.227377] usb 3-6: Device not responding to set address.
+[17017.431290] usb 3-6: device not accepting address 7, error -71
+[17017.543376] usb 3-6: new high-speed USB device number 8 using xhci_hcd
+[17017.543512] usb 3-6: Device not responding to set address.
+[17017.747327] usb 3-6: Device not responding to set address.
+[17017.951305] usb 3-6: device not accepting address 8, error -71
+[17018.063249] usb 3-6: new high-speed USB device number 9 using xhci_hcd
+[17018.063314] usb 3-6: Device not responding to set address.
+[17018.267383] usb 3-6: Device not responding to set address.
+[17018.471246] usb 3-6: device not accepting address 9, error -71
+[17018.583286] usb 3-6: new high-speed USB device number 10 using xhci_hcd
+[17018.583399] usb 3-6: Device not responding to set address.
+[17018.787325] usb 3-6: Device not responding to set address.
+[17018.991193] usb 3-6: device not accepting address 10, error -71
+[17018.991259] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17020.231203] usb 3-6: new high-speed USB device number 11 using xhci_hcd
+[17020.231319] usb 3-6: Device not responding to set address.
+[17020.435152] usb 3-6: Device not responding to set address.
+[17020.639104] usb 3-6: device not accepting address 11, error -71
+[17020.751075] usb 3-6: new high-speed USB device number 12 using xhci_hcd
+[17020.751151] usb 3-6: Device not responding to set address.
+[17020.955155] usb 3-6: Device not responding to set address.
+[17021.159100] usb 3-6: device not accepting address 12, error -71
+[17021.271130] usb 3-6: new high-speed USB device number 13 using xhci_hcd
+[17021.271248] usb 3-6: Device not responding to set address.
+[17021.475181] usb 3-6: Device not responding to set address.
+[17021.679012] usb 3-6: device not accepting address 13, error -71
+[17021.791095] usb 3-6: new high-speed USB device number 14 using xhci_hcd
+[17021.791210] usb 3-6: Device not responding to set address.
+[17021.995028] usb 3-6: Device not responding to set address.
+[17022.198970] usb 3-6: device not accepting address 14, error -71
+[17022.198993] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17022.323042] usb 3-6: new high-speed USB device number 15 using xhci_hcd
+[17022.323172] usb 3-6: Device not responding to set address.
+[17022.527016] usb 3-6: Device not responding to set address.
+[17022.730953] usb 3-6: device not accepting address 15, error -71
+[17022.842923] usb 3-6: new high-speed USB device number 16 using xhci_hcd
+[17022.843003] usb 3-6: Device not responding to set address.
+[17023.047013] usb 3-6: Device not responding to set address.
+[17023.250954] usb 3-6: device not accepting address 16, error -71
+[17023.362989] usb 3-6: new high-speed USB device number 17 using xhci_hcd
+[17023.363117] usb 3-6: Device not responding to set address.
+[17023.566979] usb 3-6: Device not responding to set address.
+[17023.770859] usb 3-6: device not accepting address 17, error -71
+[17023.882951] usb 3-6: new high-speed USB device number 18 using xhci_hcd
+[17023.883089] usb 3-6: Device not responding to set address.
+[17024.086984] usb 3-6: Device not responding to set address.
+[17024.290846] usb 3-6: device not accepting address 18, error -71
+[17024.290900] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17024.414872] usb 3-6: new high-speed USB device number 19 using xhci_hcd
+[17024.415007] usb 3-6: Device not responding to set address.
+[17024.618870] usb 3-6: Device not responding to set address.
+[17024.822808] usb 3-6: device not accepting address 19, error -71
+[17024.934784] usb 3-6: new high-speed USB device number 20 using xhci_hcd
+[17024.934858] usb 3-6: Device not responding to set address.
+[17025.138929] usb 3-6: Device not responding to set address.
+[17025.342783] usb 3-6: device not accepting address 20, error -71
+[17025.454842] usb 3-6: new high-speed USB device number 21 using xhci_hcd
+[17025.454967] usb 3-6: Device not responding to set address.
+[17025.658851] usb 3-6: Device not responding to set address.
+[17025.862716] usb 3-6: device not accepting address 21, error -71
+[17025.974794] usb 3-6: new high-speed USB device number 22 using xhci_hcd
+[17025.974914] usb 3-6: Device not responding to set address.
+[17026.178814] usb 3-6: Device not responding to set address.
+[17026.382707] usb 3-6: device not accepting address 22, error -71
+[17026.382759] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17026.506723] usb 3-6: new high-speed USB device number 23 using xhci_hcd
+[17026.506859] usb 3-6: Device not responding to set address.
+[17026.710726] usb 3-6: Device not responding to set address.
+[17026.914669] usb 3-6: device not accepting address 23, error -71
+[17027.026643] usb 3-6: new high-speed USB device number 24 using xhci_hcd
+[17027.026720] usb 3-6: Device not responding to set address.
+[17027.230781] usb 3-6: Device not responding to set address.
+[17027.434634] usb 3-6: device not accepting address 24, error -71
+[17027.546691] usb 3-6: new high-speed USB device number 25 using xhci_hcd
+[17027.546810] usb 3-6: Device not responding to set address.
+[17027.750694] usb 3-6: Device not responding to set address.
+[17027.954576] usb 3-6: device not accepting address 25, error -71
+[17028.066659] usb 3-6: new high-speed USB device number 26 using xhci_hcd
+[17028.066787] usb 3-6: Device not responding to set address.
+[17028.270639] usb 3-6: Device not responding to set address.
+[17028.474588] usb 3-6: device not accepting address 26, error -71
+[17028.474688] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17028.598621] usb 3-6: new high-speed USB device number 27 using xhci_hcd
+[17028.598738] usb 3-6: Device not responding to set address.
+[17028.802572] usb 3-6: Device not responding to set address.
+[17029.006515] usb 3-6: device not accepting address 27, error -71
+[17029.118498] usb 3-6: new high-speed USB device number 28 using xhci_hcd
+[17029.118578] usb 3-6: Device not responding to set address.
+[17029.322637] usb 3-6: Device not responding to set address.
+[17029.526490] usb 3-6: device not accepting address 28, error -71
+[17029.638553] usb 3-6: new high-speed USB device number 29 using xhci_hcd
+[17029.638680] usb 3-6: Device not responding to set address.
+[17029.842580] usb 3-6: Device not responding to set address.
+[17030.046417] usb 3-6: device not accepting address 29, error -71
+[17030.158513] usb 3-6: new high-speed USB device number 30 using xhci_hcd
+[17030.158650] usb 3-6: Device not responding to set address.
+[17030.362486] usb 3-6: Device not responding to set address.
+[17030.566446] usb 3-6: device not accepting address 30, error -71
+[17030.566545] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17030.690418] usb 3-6: new high-speed USB device number 31 using xhci_hcd
+[17030.690539] usb 3-6: Device not responding to set address.
+[17030.894455] usb 3-6: Device not responding to set address.
+[17031.098368] usb 3-6: device not accepting address 31, error -71
+[17031.210345] usb 3-6: new high-speed USB device number 32 using xhci_hcd
+[17031.210424] usb 3-6: Device not responding to set address.
+[17031.414474] usb 3-6: Device not responding to set address.
+[17031.618347] usb 3-6: device not accepting address 32, error -71
+[17031.730405] usb 3-6: new high-speed USB device number 33 using xhci_hcd
+[17031.730534] usb 3-6: Device not responding to set address.
+[17031.934436] usb 3-6: Device not responding to set address.
+[17032.138265] usb 3-6: device not accepting address 33, error -71
+[17032.250339] usb 3-6: new high-speed USB device number 34 using xhci_hcd
+[17032.250449] usb 3-6: Device not responding to set address.
+[17032.454467] usb 3-6: Device not responding to set address.
+[17032.658299] usb 3-6: device not accepting address 34, error -71
+[17032.658387] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17033.938158] usb 3-6: new high-speed USB device number 35 using xhci_hcd
+[17033.938233] usb 3-6: Device not responding to set address.
+[17034.142300] usb 3-6: Device not responding to set address.
+[17034.346140] usb 3-6: device not accepting address 35, error -71
+[17034.458209] usb 3-6: new high-speed USB device number 36 using xhci_hcd
+[17034.458328] usb 3-6: Device not responding to set address.
+[17034.662286] usb 3-6: Device not responding to set address.
+[17034.866077] usb 3-6: device not accepting address 36, error -71
+[17034.978177] usb 3-6: new high-speed USB device number 37 using xhci_hcd
+[17034.978299] usb 3-6: Device not responding to set address.
+[17035.182131] usb 3-6: Device not responding to set address.
+[17035.386071] usb 3-6: device not accepting address 37, error -71
+[17035.498078] usb 3-6: new high-speed USB device number 38 using xhci_hcd
+[17035.498177] usb 3-6: Device not responding to set address.
+[17035.702112] usb 3-6: Device not responding to set address.
+[17035.906072] usb 3-6: device not accepting address 38, error -71
+[17035.906172] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17036.030006] usb 3-6: new high-speed USB device number 39 using xhci_hcd
+[17036.030081] usb 3-6: Device not responding to set address.
+[17036.234124] usb 3-6: Device not responding to set address.
+[17036.437995] usb 3-6: device not accepting address 39, error -71
+[17036.550064] usb 3-6: new high-speed USB device number 40 using xhci_hcd
+[17036.550195] usb 3-6: Device not responding to set address.
+[17036.754104] usb 3-6: Device not responding to set address.
+[17036.957923] usb 3-6: device not accepting address 40, error -71
+[17037.069990] usb 3-6: new high-speed USB device number 41 using xhci_hcd
+[17037.070127] usb 3-6: Device not responding to set address.
+[17037.274015] usb 3-6: Device not responding to set address.
+[17037.477961] usb 3-6: device not accepting address 41, error -71
+[17037.590023] usb 3-6: new high-speed USB device number 42 using xhci_hcd
+[17037.590136] usb 3-6: Device not responding to set address.
+[17037.793978] usb 3-6: Device not responding to set address.
+[17037.997887] usb 3-6: device not accepting address 42, error -71
+[17037.997949] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17039.241877] usb 3-6: new high-speed USB device number 43 using xhci_hcd
+[17039.242013] usb 3-6: Device not responding to set address.
+[17039.445917] usb 3-6: Device not responding to set address.
+[17039.649755] usb 3-6: device not accepting address 43, error -71
+[17039.761817] usb 3-6: new high-speed USB device number 44 using xhci_hcd
+[17039.761927] usb 3-6: Device not responding to set address.
+[17039.965790] usb 3-6: Device not responding to set address.
+[17040.169736] usb 3-6: device not accepting address 44, error -71
+[17040.281835] usb 3-6: new high-speed USB device number 45 using xhci_hcd
+[17040.281948] usb 3-6: Device not responding to set address.
+[17040.485847] usb 3-6: Device not responding to set address.
+[17040.689740] usb 3-6: device not accepting address 45, error -71
+[17040.801681] usb 3-6: new high-speed USB device number 46 using xhci_hcd
+[17040.801756] usb 3-6: Device not responding to set address.
+[17041.005823] usb 3-6: Device not responding to set address.
+[17041.209675] usb 3-6: device not accepting address 46, error -71
+[17041.209781] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17041.333731] usb 3-6: new high-speed USB device number 47 using xhci_hcd
+[17041.333846] usb 3-6: Device not responding to set address.
+[17041.537692] usb 3-6: Device not responding to set address.
+[17041.741601] usb 3-6: device not accepting address 47, error -71
+[17041.853693] usb 3-6: new high-speed USB device number 48 using xhci_hcd
+[17041.853816] usb 3-6: Device not responding to set address.
+[17042.057658] usb 3-6: Device not responding to set address.
+[17042.261608] usb 3-6: device not accepting address 48, error -71
+[17042.373555] usb 3-6: new high-speed USB device number 49 using xhci_hcd
+[17042.373648] usb 3-6: Device not responding to set address.
+[17042.577681] usb 3-6: Device not responding to set address.
+[17042.781553] usb 3-6: device not accepting address 49, error -71
+[17042.893560] usb 3-6: new high-speed USB device number 50 using xhci_hcd
+[17042.893634] usb 3-6: Device not responding to set address.
+[17043.097597] usb 3-6: Device not responding to set address.
+[17043.301513] usb 3-6: device not accepting address 50, error -71
+[17043.301644] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17044.565506] usb 3-6: new high-speed USB device number 51 using xhci_hcd
+[17044.565632] usb 3-6: Device not responding to set address.
+[17044.769513] usb 3-6: Device not responding to set address.
+[17044.973438] usb 3-6: device not accepting address 51, error -71
+[17045.085378] usb 3-6: new high-speed USB device number 52 using xhci_hcd
+[17045.085443] usb 3-6: Device not responding to set address.
+[17045.289450] usb 3-6: Device not responding to set address.
+[17045.493363] usb 3-6: device not accepting address 52, error -71
+[17045.605340] usb 3-6: new high-speed USB device number 53 using xhci_hcd
+[17045.605417] usb 3-6: Device not responding to set address.
+[17045.809397] usb 3-6: Device not responding to set address.
+[17046.013327] usb 3-6: device not accepting address 53, error -71
+[17046.125396] usb 3-6: new high-speed USB device number 54 using xhci_hcd
+[17046.125514] usb 3-6: Device not responding to set address.
+[17046.329413] usb 3-6: Device not responding to set address.
+[17046.533261] usb 3-6: device not accepting address 54, error -71
+[17046.533282] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17047.813275] usb 3-6: new high-speed USB device number 55 using xhci_hcd
+[17047.813421] usb 3-6: Device not responding to set address.
+[17048.017235] usb 3-6: Device not responding to set address.
+[17048.221173] usb 3-6: device not accepting address 55, error -71
+[17048.333151] usb 3-6: new high-speed USB device number 56 using xhci_hcd
+[17048.333228] usb 3-6: Device not responding to set address.
+[17048.537294] usb 3-6: Device not responding to set address.
+[17048.741148] usb 3-6: device not accepting address 56, error -71
+[17048.853216] usb 3-6: new high-speed USB device number 57 using xhci_hcd
+[17048.853337] usb 3-6: Device not responding to set address.
+[17049.057238] usb 3-6: Device not responding to set address.
+[17049.261088] usb 3-6: device not accepting address 57, error -71
+[17049.373146] usb 3-6: new high-speed USB device number 58 using xhci_hcd
+[17049.373264] usb 3-6: Device not responding to set address.
+[17049.577127] usb 3-6: Device not responding to set address.
+[17049.781090] usb 3-6: device not accepting address 58, error -71
+[17049.781147] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17051.073060] usb 3-6: new high-speed USB device number 59 using xhci_hcd
+[17051.073156] usb 3-6: Device not responding to set address.
+[17051.277126] usb 3-6: Device not responding to set address.
+[17051.480987] usb 3-6: device not accepting address 59, error -71
+[17051.592950] usb 3-6: new high-speed USB device number 60 using xhci_hcd
+[17051.593012] usb 3-6: Device not responding to set address.
+[17051.797091] usb 3-6: Device not responding to set address.
+[17052.000972] usb 3-6: device not accepting address 60, error -71
+[17052.112958] usb 3-6: new high-speed USB device number 61 using xhci_hcd
+[17052.113079] usb 3-6: Device not responding to set address.
+[17052.316943] usb 3-6: Device not responding to set address.
+[17052.520845] usb 3-6: device not accepting address 61, error -71
+[17052.632953] usb 3-6: new high-speed USB device number 62 using xhci_hcd
+[17052.633075] usb 3-6: Device not responding to set address.
+[17052.836902] usb 3-6: Device not responding to set address.
+[17053.040879] usb 3-6: device not accepting address 62, error -71
+[17053.040979] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17053.164821] usb 3-6: new high-speed USB device number 63 using xhci_hcd
+[17053.164886] usb 3-6: Device not responding to set address.
+[17053.368956] usb 3-6: Device not responding to set address.
+[17053.572857] usb 3-6: device not accepting address 63, error -71
+[17053.684815] usb 3-6: new high-speed USB device number 64 using xhci_hcd
+[17053.684912] usb 3-6: Device not responding to set address.
+[17053.888927] usb 3-6: Device not responding to set address.
+[17054.092779] usb 3-6: device not accepting address 64, error -71
+[17054.204835] usb 3-6: new high-speed USB device number 65 using xhci_hcd
+[17054.204953] usb 3-6: Device not responding to set address.
+[17054.408887] usb 3-6: Device not responding to set address.
+[17054.612690] usb 3-6: device not accepting address 65, error -71
+[17054.724758] usb 3-6: new high-speed USB device number 66 using xhci_hcd
+[17054.724870] usb 3-6: Device not responding to set address.
+[17054.928730] usb 3-6: Device not responding to set address.
+[17055.132726] usb 3-6: device not accepting address 66, error -71
+[17055.132830] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17056.412585] usb 3-6: new high-speed USB device number 67 using xhci_hcd
+[17056.412661] usb 3-6: Device not responding to set address.
+[17056.616715] usb 3-6: Device not responding to set address.
+[17056.820598] usb 3-6: device not accepting address 67, error -71
+[17056.932645] usb 3-6: new high-speed USB device number 68 using xhci_hcd
+[17056.932790] usb 3-6: Device not responding to set address.
+[17057.136640] usb 3-6: Device not responding to set address.
+[17057.340510] usb 3-6: device not accepting address 68, error -71
+[17057.452618] usb 3-6: new high-speed USB device number 69 using xhci_hcd
+[17057.452744] usb 3-6: Device not responding to set address.
+[17057.656585] usb 3-6: Device not responding to set address.
+[17057.860543] usb 3-6: device not accepting address 69, error -71
+[17057.972602] usb 3-6: new high-speed USB device number 70 using xhci_hcd
+[17057.972717] usb 3-6: Device not responding to set address.
+[17058.176542] usb 3-6: Device not responding to set address.
+[17058.380453] usb 3-6: device not accepting address 70, error -71
+[17058.380516] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17059.604434] usb 3-6: new high-speed USB device number 71 using xhci_hcd
+[17059.604546] usb 3-6: Device not responding to set address.
+[17059.808423] usb 3-6: Device not responding to set address.
+[17060.012326] usb 3-6: device not accepting address 71, error -71
+[17060.124428] usb 3-6: new high-speed USB device number 72 using xhci_hcd
+[17060.124557] usb 3-6: Device not responding to set address.
+[17060.328358] usb 3-6: Device not responding to set address.
+[17060.532284] usb 3-6: device not accepting address 72, error -71
+[17060.644299] usb 3-6: new high-speed USB device number 73 using xhci_hcd
+[17060.644378] usb 3-6: Device not responding to set address.
+[17060.848428] usb 3-6: Device not responding to set address.
+[17061.052325] usb 3-6: device not accepting address 73, error -71
+[17061.164358] usb 3-6: new high-speed USB device number 74 using xhci_hcd
+[17061.164469] usb 3-6: Device not responding to set address.
+[17061.368416] usb 3-6: Device not responding to set address.
+[17061.572272] usb 3-6: device not accepting address 74, error -71
+[17061.572323] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17061.696307] usb 3-6: new high-speed USB device number 75 using xhci_hcd
+[17061.696430] usb 3-6: Device not responding to set address.
+[17061.900330] usb 3-6: Device not responding to set address.
+[17062.104176] usb 3-6: device not accepting address 75, error -71
+[17062.216237] usb 3-6: new high-speed USB device number 76 using xhci_hcd
+[17062.216350] usb 3-6: Device not responding to set address.
+[17062.420231] usb 3-6: Device not responding to set address.
+[17062.624219] usb 3-6: device not accepting address 76, error -71
+[17062.736143] usb 3-6: new high-speed USB device number 77 using xhci_hcd
+[17062.736219] usb 3-6: Device not responding to set address.
+[17062.940273] usb 3-6: Device not responding to set address.
+[17063.144145] usb 3-6: device not accepting address 77, error -71
+[17063.256141] usb 3-6: new high-speed USB device number 78 using xhci_hcd
+[17063.256218] usb 3-6: Device not responding to set address.
+[17063.460179] usb 3-6: Device not responding to set address.
+[17063.664085] usb 3-6: device not accepting address 78, error -71
+[17063.664187] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17063.788163] usb 3-6: new high-speed USB device number 79 using xhci_hcd
+[17063.788286] usb 3-6: Device not responding to set address.
+[17063.992120] usb 3-6: Device not responding to set address.
+[17064.196047] usb 3-6: device not accepting address 79, error -71
+[17064.308125] usb 3-6: new high-speed USB device number 80 using xhci_hcd
+[17064.308262] usb 3-6: Device not responding to set address.
+[17064.512089] usb 3-6: Device not responding to set address.
+[17064.716064] usb 3-6: device not accepting address 80, error -71
+[17064.828007] usb 3-6: new high-speed USB device number 81 using xhci_hcd
+[17064.828084] usb 3-6: Device not responding to set address.
+[17065.032098] usb 3-6: Device not responding to set address.
+[17065.235988] usb 3-6: device not accepting address 81, error -71
+[17065.348075] usb 3-6: new high-speed USB device number 82 using xhci_hcd
+[17065.348203] usb 3-6: Device not responding to set address.
+[17065.552062] usb 3-6: Device not responding to set address.
+[17065.755942] usb 3-6: device not accepting address 82, error -71
+[17065.755971] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17066.995932] usb 3-6: new high-speed USB device number 83 using xhci_hcd
+[17066.996048] usb 3-6: Device not responding to set address.
+[17067.199902] usb 3-6: Device not responding to set address.
+[17067.403846] usb 3-6: device not accepting address 83, error -71
+[17067.515817] usb 3-6: new high-speed USB device number 84 using xhci_hcd
+[17067.515894] usb 3-6: Device not responding to set address.
+[17067.719920] usb 3-6: Device not responding to set address.
+[17067.923782] usb 3-6: device not accepting address 84, error -71
+[17068.035873] usb 3-6: new high-speed USB device number 85 using xhci_hcd
+[17068.035997] usb 3-6: Device not responding to set address.
+[17068.239856] usb 3-6: Device not responding to set address.
+[17068.443749] usb 3-6: device not accepting address 85, error -71
+[17068.555840] usb 3-6: new high-speed USB device number 86 using xhci_hcd
+[17068.555960] usb 3-6: Device not responding to set address.
+[17068.759809] usb 3-6: Device not responding to set address.
+[17068.963771] usb 3-6: device not accepting address 86, error -71
+[17068.963872] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17069.087757] usb 3-6: new high-speed USB device number 87 using xhci_hcd
+[17069.087869] usb 3-6: Device not responding to set address.
+[17069.291770] usb 3-6: Device not responding to set address.
+[17069.495730] usb 3-6: device not accepting address 87, error -71
+[17069.607674] usb 3-6: new high-speed USB device number 88 using xhci_hcd
+[17069.607751] usb 3-6: Device not responding to set address.
+[17069.811785] usb 3-6: Device not responding to set address.
+[17070.015677] usb 3-6: device not accepting address 88, error -71
+[17070.127723] usb 3-6: new high-speed USB device number 89 using xhci_hcd
+[17070.127842] usb 3-6: Device not responding to set address.
+[17070.331725] usb 3-6: Device not responding to set address.
+[17070.535589] usb 3-6: device not accepting address 89, error -71
+[17070.647642] usb 3-6: new high-speed USB device number 90 using xhci_hcd
+[17070.647753] usb 3-6: Device not responding to set address.
+[17070.851639] usb 3-6: Device not responding to set address.
+[17071.055593] usb 3-6: device not accepting address 90, error -71
+[17071.055651] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17072.319492] usb 3-6: new high-speed USB device number 91 using xhci_hcd
+[17072.319569] usb 3-6: Device not responding to set address.
+[17072.523627] usb 3-6: Device not responding to set address.
+[17072.727466] usb 3-6: device not accepting address 91, error -71
+[17072.839544] usb 3-6: new high-speed USB device number 92 using xhci_hcd
+[17072.839691] usb 3-6: Device not responding to set address.
+[17073.043530] usb 3-6: Device not responding to set address.
+[17073.247412] usb 3-6: device not accepting address 92, error -71
+[17073.359453] usb 3-6: new high-speed USB device number 93 using xhci_hcd
+[17073.359555] usb 3-6: Device not responding to set address.
+[17073.563463] usb 3-6: Device not responding to set address.
+[17073.767433] usb 3-6: device not accepting address 93, error -71
+[17073.879423] usb 3-6: new high-speed USB device number 94 using xhci_hcd
+[17073.879534] usb 3-6: Device not responding to set address.
+[17074.083500] usb 3-6: Device not responding to set address.
+[17074.287366] usb 3-6: device not accepting address 94, error -71
+[17074.287424] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17074.411327] usb 3-6: new high-speed USB device number 95 using xhci_hcd
+[17074.411390] usb 3-6: Device not responding to set address.
+[17074.615481] usb 3-6: Device not responding to set address.
+[17074.819360] usb 3-6: device not accepting address 95, error -71
+[17074.931389] usb 3-6: new high-speed USB device number 96 using xhci_hcd
+[17074.931525] usb 3-6: Device not responding to set address.
+[17075.135390] usb 3-6: Device not responding to set address.
+[17075.339255] usb 3-6: device not accepting address 96, error -71
+[17075.451330] usb 3-6: new high-speed USB device number 97 using xhci_hcd
+[17075.451433] usb 3-6: Device not responding to set address.
+[17075.655288] usb 3-6: Device not responding to set address.
+[17075.859289] usb 3-6: device not accepting address 97, error -71
+[17075.971346] usb 3-6: new high-speed USB device number 98 using xhci_hcd
+[17075.971463] usb 3-6: Device not responding to set address.
+[17076.175352] usb 3-6: Device not responding to set address.
+[17076.379252] usb 3-6: device not accepting address 98, error -71
+[17076.379352] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17077.619204] usb 3-6: new high-speed USB device number 99 using xhci_hcd
+[17077.619316] usb 3-6: Device not responding to set address.
+[17077.823264] usb 3-6: Device not responding to set address.
+[17078.027081] usb 3-6: device not accepting address 99, error -71
+[17078.139092] usb 3-6: new high-speed USB device number 100 using xhci_hcd
+[17078.139173] usb 3-6: Device not responding to set address.
+[17078.343133] usb 3-6: Device not responding to set address.
+[17078.547062] usb 3-6: device not accepting address 100, error -71
+[17078.659077] usb 3-6: new high-speed USB device number 101 using xhci_hcd
+[17078.659179] usb 3-6: Device not responding to set address.
+[17078.863179] usb 3-6: Device not responding to set address.
+[17079.067047] usb 3-6: device not accepting address 101, error -71
+[17079.179061] usb 3-6: new high-speed USB device number 102 using xhci_hcd
+[17079.179175] usb 3-6: Device not responding to set address.
+[17079.383169] usb 3-6: Device not responding to set address.
+[17079.587002] usb 3-6: device not accepting address 102, error -71
+[17079.587116] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17079.711056] usb 3-6: new high-speed USB device number 103 using xhci_hcd
+[17079.711173] usb 3-6: Device not responding to set address.
+[17079.915072] usb 3-6: Device not responding to set address.
+[17080.118936] usb 3-6: device not accepting address 103, error -71
+[17080.231023] usb 3-6: new high-speed USB device number 104 using xhci_hcd
+[17080.231153] usb 3-6: Device not responding to set address.
+[17080.434971] usb 3-6: Device not responding to set address.
+[17080.638916] usb 3-6: device not accepting address 104, error -71
+[17080.750893] usb 3-6: new high-speed USB device number 105 using xhci_hcd
+[17080.751016] usb 3-6: Device not responding to set address.
+[17080.954998] usb 3-6: Device not responding to set address.
+[17081.158880] usb 3-6: device not accepting address 105, error -71
+[17081.270949] usb 3-6: new high-speed USB device number 106 using xhci_hcd
+[17081.271067] usb 3-6: Device not responding to set address.
+[17081.474991] usb 3-6: Device not responding to set address.
+[17081.678866] usb 3-6: device not accepting address 106, error -71
+[17081.678968] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17082.942835] usb 3-6: new high-speed USB device number 107 using xhci_hcd
+[17082.942981] usb 3-6: Device not responding to set address.
+[17083.146786] usb 3-6: Device not responding to set address.
+[17083.350767] usb 3-6: device not accepting address 107, error -71
+[17083.462773] usb 3-6: new high-speed USB device number 108 using xhci_hcd
+[17083.462874] usb 3-6: Device not responding to set address.
+[17083.666870] usb 3-6: Device not responding to set address.
+[17083.870713] usb 3-6: device not accepting address 108, error -71
+[17083.982734] usb 3-6: new high-speed USB device number 109 using xhci_hcd
+[17083.982840] usb 3-6: Device not responding to set address.
+[17084.186812] usb 3-6: Device not responding to set address.
+[17084.390674] usb 3-6: device not accepting address 109, error -71
+[17084.502713] usb 3-6: new high-speed USB device number 110 using xhci_hcd
+[17084.502845] usb 3-6: Device not responding to set address.
+[17084.706757] usb 3-6: Device not responding to set address.
+[17084.910587] usb 3-6: device not accepting address 110, error -71
+[17084.910609] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17085.034679] usb 3-6: new high-speed USB device number 111 using xhci_hcd
+[17085.034813] usb 3-6: Device not responding to set address.
+[17085.238639] usb 3-6: Device not responding to set address.
+[17085.442635] usb 3-6: device not accepting address 111, error -71
+[17085.554564] usb 3-6: new high-speed USB device number 112 using xhci_hcd
+[17085.554629] usb 3-6: Device not responding to set address.
+[17085.758724] usb 3-6: Device not responding to set address.
+[17085.962584] usb 3-6: device not accepting address 112, error -71
+[17086.074583] usb 3-6: new high-speed USB device number 113 using xhci_hcd
+[17086.074690] usb 3-6: Device not responding to set address.
+[17086.278670] usb 3-6: Device not responding to set address.
+[17086.482524] usb 3-6: device not accepting address 113, error -71
+[17086.594577] usb 3-6: new high-speed USB device number 114 using xhci_hcd
+[17086.594707] usb 3-6: Device not responding to set address.
+[17086.798560] usb 3-6: Device not responding to set address.
+[17087.002454] usb 3-6: device not accepting address 114, error -71
+[17087.002481] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17088.282420] usb 3-6: new high-speed USB device number 115 using xhci_hcd
+[17088.282521] usb 3-6: Device not responding to set address.
+[17088.486469] usb 3-6: Device not responding to set address.
+[17088.690404] usb 3-6: device not accepting address 115, error -71
+[17088.802335] usb 3-6: new high-speed USB device number 116 using xhci_hcd
+[17088.802413] usb 3-6: Device not responding to set address.
+[17089.006477] usb 3-6: Device not responding to set address.
+[17089.210358] usb 3-6: device not accepting address 116, error -71
+[17089.322389] usb 3-6: new high-speed USB device number 117 using xhci_hcd
+[17089.322519] usb 3-6: Device not responding to set address.
+[17089.526414] usb 3-6: Device not responding to set address.
+[17089.730254] usb 3-6: device not accepting address 117, error -71
+[17089.842323] usb 3-6: new high-speed USB device number 118 using xhci_hcd
+[17089.842433] usb 3-6: Device not responding to set address.
+[17090.046301] usb 3-6: Device not responding to set address.
+[17090.250288] usb 3-6: device not accepting address 118, error -71
+[17090.250387] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17090.374327] usb 3-6: new high-speed USB device number 119 using xhci_hcd
+[17090.374441] usb 3-6: Device not responding to set address.
+[17090.578350] usb 3-6: Device not responding to set address.
+[17090.782207] usb 3-6: device not accepting address 119, error -71
+[17090.894200] usb 3-6: new high-speed USB device number 120 using xhci_hcd
+[17090.894275] usb 3-6: Device not responding to set address.
+[17091.098287] usb 3-6: Device not responding to set address.
+[17091.302171] usb 3-6: device not accepting address 120, error -71
+[17091.414244] usb 3-6: new high-speed USB device number 121 using xhci_hcd
+[17091.414364] usb 3-6: Device not responding to set address.
+[17091.618294] usb 3-6: Device not responding to set address.
+[17091.822118] usb 3-6: device not accepting address 121, error -71
+[17091.934182] usb 3-6: new high-speed USB device number 122 using xhci_hcd
+[17091.934291] usb 3-6: Device not responding to set address.
+[17092.138160] usb 3-6: Device not responding to set address.
+[17092.342099] usb 3-6: device not accepting address 122, error -71
+[17092.342145] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17093.605996] usb 3-6: new high-speed USB device number 123 using xhci_hcd
+[17093.606073] usb 3-6: Device not responding to set address.
+[17093.810095] usb 3-6: Device not responding to set address.
+[17094.013985] usb 3-6: device not accepting address 123, error -71
+[17094.126054] usb 3-6: new high-speed USB device number 124 using xhci_hcd
+[17094.126189] usb 3-6: Device not responding to set address.
+[17094.330053] usb 3-6: Device not responding to set address.
+[17094.533925] usb 3-6: device not accepting address 124, error -71
+[17094.646020] usb 3-6: new high-speed USB device number 125 using xhci_hcd
+[17094.646151] usb 3-6: Device not responding to set address.
+[17094.849954] usb 3-6: Device not responding to set address.
+[17095.053924] usb 3-6: device not accepting address 125, error -71
+[17095.165922] usb 3-6: new high-speed USB device number 126 using xhci_hcd
+[17095.165996] usb 3-6: Device not responding to set address.
+[17095.370033] usb 3-6: Device not responding to set address.
+[17095.573887] usb 3-6: device not accepting address 126, error -71
+[17095.573991] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17096.853868] usb 3-6: new high-speed USB device number 127 using xhci_hcd
+[17096.853989] usb 3-6: Device not responding to set address.
+[17097.057883] usb 3-6: Device not responding to set address.
+[17097.261753] usb 3-6: device not accepting address 127, error -71
+[17097.373820] usb 3-6: new high-speed USB device number 2 using xhci_hcd
+[17097.373932] usb 3-6: Device not responding to set address.
+[17097.577821] usb 3-6: Device not responding to set address.
+[17097.781736] usb 3-6: device not accepting address 2, error -71
+[17097.893708] usb 3-6: new high-speed USB device number 3 using xhci_hcd
+[17097.893783] usb 3-6: Device not responding to set address.
+[17098.097754] usb 3-6: Device not responding to set address.
+[17098.301717] usb 3-6: device not accepting address 3, error -71
+[17098.413658] usb 3-6: new high-speed USB device number 4 using xhci_hcd
+[17098.413735] usb 3-6: Device not responding to set address.
+[17098.617757] usb 3-6: Device not responding to set address.
+[17098.821648] usb 3-6: device not accepting address 4, error -71
+[17098.821712] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17098.945707] usb 3-6: new high-speed USB device number 5 using xhci_hcd
+[17098.945811] usb 3-6: Device not responding to set address.
+[17099.149720] usb 3-6: Device not responding to set address.
+[17099.353575] usb 3-6: device not accepting address 5, error -71
+[17099.465685] usb 3-6: new high-speed USB device number 6 using xhci_hcd
+[17099.465795] usb 3-6: Device not responding to set address.
+[17099.669780] usb 3-6: Device not responding to set address.
+[17099.873615] usb 3-6: device not accepting address 6, error -71
+[17099.985604] usb 3-6: new high-speed USB device number 7 using xhci_hcd
+[17099.985705] usb 3-6: Device not responding to set address.
+[17100.189626] usb 3-6: Device not responding to set address.
+[17100.393581] usb 3-6: device not accepting address 7, error -71
+[17100.505513] usb 3-6: new high-speed USB device number 8 using xhci_hcd
+[17100.505589] usb 3-6: Device not responding to set address.
+[17100.709662] usb 3-6: Device not responding to set address.
+[17100.913515] usb 3-6: device not accepting address 8, error -71
+[17100.913620] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17102.177470] usb 3-6: new high-speed USB device number 9 using xhci_hcd
+[17102.177617] usb 3-6: Device not responding to set address.
+[17102.381548] usb 3-6: Device not responding to set address.
+[17102.585417] usb 3-6: device not accepting address 9, error -71
+[17102.697414] usb 3-6: new high-speed USB device number 10 using xhci_hcd
+[17102.697515] usb 3-6: Device not responding to set address.
+[17102.901414] usb 3-6: Device not responding to set address.
+[17103.105366] usb 3-6: device not accepting address 10, error -71
+[17103.217340] usb 3-6: new high-speed USB device number 11 using xhci_hcd
+[17103.217417] usb 3-6: Device not responding to set address.
+[17103.421474] usb 3-6: Device not responding to set address.
+[17103.625354] usb 3-6: device not accepting address 11, error -71
+[17103.737381] usb 3-6: new high-speed USB device number 12 using xhci_hcd
+[17103.737529] usb 3-6: Device not responding to set address.
+[17103.941384] usb 3-6: Device not responding to set address.
+[17104.145252] usb 3-6: device not accepting address 12, error -71
+[17104.145274] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17104.269351] usb 3-6: new high-speed USB device number 13 using xhci_hcd
+[17104.269489] usb 3-6: Device not responding to set address.
+[17104.473353] usb 3-6: Device not responding to set address.
+[17104.677258] usb 3-6: device not accepting address 13, error -71
+[17104.789344] usb 3-6: new high-speed USB device number 14 using xhci_hcd
+[17104.789476] usb 3-6: Device not responding to set address.
+[17104.993278] usb 3-6: Device not responding to set address.
+[17105.197246] usb 3-6: device not accepting address 14, error -71
+[17105.309184] usb 3-6: new high-speed USB device number 15 using xhci_hcd
+[17105.309258] usb 3-6: Device not responding to set address.
+[17105.513327] usb 3-6: Device not responding to set address.
+[17105.717206] usb 3-6: device not accepting address 15, error -71
+[17105.829245] usb 3-6: new high-speed USB device number 16 using xhci_hcd
+[17105.829382] usb 3-6: Device not responding to set address.
+[17106.033241] usb 3-6: Device not responding to set address.
+[17106.237102] usb 3-6: device not accepting address 16, error -71
+[17106.237122] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17107.501142] usb 3-6: new high-speed USB device number 17 using xhci_hcd
+[17107.501290] usb 3-6: Device not responding to set address.
+[17107.705077] usb 3-6: Device not responding to set address.
+[17107.909024] usb 3-6: device not accepting address 17, error -71
+[17108.020982] usb 3-6: new high-speed USB device number 18 using xhci_hcd
+[17108.021059] usb 3-6: Device not responding to set address.
+[17108.225148] usb 3-6: Device not responding to set address.
+[17108.428975] usb 3-6: device not accepting address 18, error -71
+[17108.541050] usb 3-6: new high-speed USB device number 19 using xhci_hcd
+[17108.541168] usb 3-6: Device not responding to set address.
+[17108.745072] usb 3-6: Device not responding to set address.
+[17108.948920] usb 3-6: device not accepting address 19, error -71
+[17109.061018] usb 3-6: new high-speed USB device number 20 using xhci_hcd
+[17109.061138] usb 3-6: Device not responding to set address.
+[17109.264987] usb 3-6: Device not responding to set address.
+[17109.468944] usb 3-6: device not accepting address 20, error -71
+[17109.469043] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17110.692810] usb 3-6: new high-speed USB device number 21 using xhci_hcd
+[17110.692822] usb 3-6: Device not responding to set address.
+[17110.896897] usb 3-6: Device not responding to set address.
+[17111.100796] usb 3-6: device not accepting address 21, error -71
+[17111.396874] usb 3-6: new high-speed USB device number 23 using xhci_hcd
+[17111.396983] usb 3-6: Device not responding to set address.
+[17111.600816] usb 3-6: Device not responding to set address.
+[17111.804788] usb 3-6: device not accepting address 23, error -71
+[17111.916724] usb 3-6: new high-speed USB device number 24 using xhci_hcd
+[17111.916801] usb 3-6: Device not responding to set address.
+[17112.120889] usb 3-6: Device not responding to set address.
+[17112.324729] usb 3-6: device not accepting address 24, error -71
+[17112.436775] usb 3-6: new high-speed USB device number 25 using xhci_hcd
+[17112.436885] usb 3-6: Device not responding to set address.
+[17112.640853] usb 3-6: Device not responding to set address.
+[17112.844653] usb 3-6: device not accepting address 25, error -71
+[17112.956747] usb 3-6: new high-speed USB device number 26 using xhci_hcd
+[17112.956868] usb 3-6: Device not responding to set address.
+[17113.160720] usb 3-6: Device not responding to set address.
+[17113.364675] usb 3-6: device not accepting address 26, error -71
+[17113.364775] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17113.488619] usb 3-6: new high-speed USB device number 27 using xhci_hcd
+[17113.488705] usb 3-6: Device not responding to set address.
+[17113.692672] usb 3-6: Device not responding to set address.
+[17113.896598] usb 3-6: device not accepting address 27, error -71
+[17114.008573] usb 3-6: new high-speed USB device number 28 using xhci_hcd
+[17114.008650] usb 3-6: Device not responding to set address.
+[17114.212720] usb 3-6: Device not responding to set address.
+[17114.416574] usb 3-6: device not accepting address 28, error -71
+[17114.528635] usb 3-6: new high-speed USB device number 29 using xhci_hcd
+[17114.528770] usb 3-6: Device not responding to set address.
+[17114.732629] usb 3-6: Device not responding to set address.
+[17114.936506] usb 3-6: device not accepting address 29, error -71
+[17115.048550] usb 3-6: new high-speed USB device number 30 using xhci_hcd
+[17115.048655] usb 3-6: Device not responding to set address.
+[17115.252548] usb 3-6: Device not responding to set address.
+[17115.456530] usb 3-6: device not accepting address 30, error -71
+[17115.456628] hub 3-0:1.0: unable to enumerate USB device on port 6
+[17115.580520] usb 3-6: new high-speed USB device number 31 using xhci_hcd
+[17115.580639] usb 3-6: Device not responding to set address.
+[17115.784524] usb 3-6: Device not responding to set address.
+[17115.988495] usb 3-6: device not accepting address 31, error -71
+[17116.100439] usb 3-6: new high-speed USB device number 32 using xhci_hcd
+[17116.100518] usb 3-6: Device not responding to set address.
+[17116.304525] usb 3-6: Device not responding to set address.
+[17116.508417] usb 3-6: device not accepting address 32, error -71
+[18758.299963] systemd-hostnamed[6423]: Warning: nss-myhostname is not installed. Changing the local hostname might make it unresolveable. Please install nss-myhostname!
+[22710.725943] perf samples too long (2501 > 2500), lowering kernel.perf_event_max_sample_rate to 50000
+[23200.696636] usb 3-6: new high-speed USB device number 34 using xhci_hcd
+[23200.713716] usb 3-6: New USB device found, idVendor=05c6, idProduct=9091
+[23200.713725] usb 3-6: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[23200.713730] usb 3-6: Product: Android
+[23200.713734] usb 3-6: Manufacturer: Android
+[23200.713738] usb 3-6: SerialNumber: 656ed65f
+[23246.596677] usb 3-6: USB disconnect, device number 34
+[23247.289360] usb 3-6: new high-speed USB device number 35 using xhci_hcd
+[23247.306628] usb 3-6: New USB device found, idVendor=05c6, idProduct=9039
+[23247.306636] usb 3-6: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[23247.306641] usb 3-6: Product: Android
+[23247.306644] usb 3-6: Manufacturer: Android
+[23247.306648] usb 3-6: SerialNumber: 656ed65f
+[23247.584215] systemd-hostnamed[7863]: Warning: nss-myhostname is not installed. Changing the local hostname might make it unresolveable. Please install nss-myhostname!
+[24536.647665] usb 3-6: USB disconnect, device number 35
+[24582.315664] systemd-hostnamed[8433]: Warning: nss-myhostname is not installed. Changing the local hostname might make it unresolveable. Please install nss-myhostname!
+[26467.868902] usb 3-6: new high-speed USB device number 36 using xhci_hcd
+[26467.886139] usb 3-6: New USB device found, idVendor=05c6, idProduct=9091
+[26467.886141] usb 3-6: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[26467.886143] usb 3-6: Product: Android
+[26467.886144] usb 3-6: Manufacturer: Android
+[26467.886144] usb 3-6: SerialNumber: 656ed65f

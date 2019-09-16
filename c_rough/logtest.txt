@@ -1,0 +1,762 @@
+--------- beginning of system
+01-06 06:14:58.829   238   238 I vold    : Vold 3.0 (the awakening) firing up
+01-06 06:14:58.829   238   238 V vold    : Detected support for: ext4 vfat
+01-06 06:15:01.479   445   445 I irsc_util: Starting irsc tool
+01-06 06:15:01.529   445   445 I irsc_util: Num of entries:284
+01-06 06:15:01.599   445   445 I irsc_util: Ending irsc tool
+01-06 06:15:14.279   238   248 V vold    : Waiting for FUSE to spin up...
+01-06 06:15:14.339   238   248 V vold    : Waiting for FUSE to spin up...
+01-06 06:15:14.399   238   248 D vold    : Linking /storage/emulated/0 to /mnt/user/0/primary
+01-06 06:15:17.549   485   485 I Gecko   : ============ KaiOS device information ============
+01-06 06:15:17.549   485   485 I Gecko   : Build UID         = 
+01-06 06:15:17.549   485   485 I Gecko   : Build Description = msm8909_512-userdebug 6.0.1 MMB29M LYF_F30C-000-09-20-270319_i release-keys
+01-06 06:15:17.549   485   485 I Gecko   : Bootloader        = unknown
+01-06 06:15:17.549   485   485 I Gecko   : ==================================================
+01-06 06:15:56.509  2406  4514 E NetlinkEvent: Unknown ifindex 23 in RTM_DELADDR
+01-06 06:25:29.899  2406  4514 E NetlinkEvent: Unknown ifindex 25 in RTM_DELADDR
+01-06 06:39:36.799  2406  4514 E NetlinkEvent: Unknown ifindex 27 in RTM_DELADDR
+01-06 06:39:36.799  2406  4514 E NetlinkEvent: Unknown ifindex 27 in RTM_DELADDR
+01-06 06:40:46.689  2406  4514 E NetlinkEvent: Unknown ifindex 28 in RTM_DELADDR
+01-06 06:40:46.689  2406  4514 E NetlinkEvent: Unknown ifindex 28 in RTM_DELADDR
+01-06 06:40:54.759  2406  4514 E NetlinkEvent: Unknown ifindex 29 in RTM_DELADDR
+01-06 06:48:27.519  2406  4514 E NetlinkEvent: Unknown ifindex 30 in RTM_DELADDR
+01-06 06:48:27.519  2406  4514 E NetlinkEvent: Unknown ifindex 30 in RTM_DELADDR
+--------- beginning of main
+01-06 06:55:16.269   485   485 I Gecko   : 437116276	AlarmsService	DEBUG	remove(-1, undefined)
+01-06 06:55:16.269   485   485 I Gecko   : 437116279	AlarmsService	DEBUG	_removeAlarmFromDb()
+01-06 06:55:16.269   485   485 I Gecko   : 437116279	AlarmsService	DEBUG	Callback after removing alarm from database.
+01-06 06:55:16.269   485   485 I Gecko   : 437116280	AlarmsService	DEBUG	Current alarm: {"date":"1970-01-06T02:05:16.273Z","ignoreTimezone":true,"timezoneOffset":-330,"id":-3}
+01-06 06:55:16.269   485   485 I Gecko   : 437116281	AlarmsService	DEBUG	Alarm queue: [{"date":"1970-01-06T18:10:52.747Z","ignoreTimezone":true,"data":{"fotaAlarmType":"check"},"pageURL":"app://system.gaiamobile.org/index.html","manifestURL":"app://system.gaiamobile.org/manifest.webapp","timezoneOffset":-330,"id":6,"alarmFiredCb":null},{"date":"1970-01-06T19:30:00.694Z","ignoreTimezone":true,"data":{"func":"reportingAlarm"},"pageURL":"app://jioservice.jio.com/index.html","manifestURL":"app://jioservice.jio.com/manifest.webapp","timezoneOffset":-330,"id":1,"alarmFiredCb":null},{"date":"1970-01-07T00:55:24.603Z","ignoreTimezone":true,"timezoneOffset":-330,"id":-2}]
+01-06 06:55:18.039  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:19.489   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:19.489   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:19.489   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:19.489   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:19.489   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:19.489   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:19.489   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:19.499   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 06:55:19.499   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 06:55:19.499   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:19.499   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:19.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:21.039  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:24.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:24.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:24.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:24.499   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:24.499   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:24.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:24.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:24.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:24.499   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 06:55:24.499   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 06:55:24.499   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:24.499   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:24.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:26.219   680   680 D VM_BMS  : wake_lock acquired
+01-06 06:55:26.219   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 06:55:26.219   680   680 D VM_BMS  : Start process_bms_data
+01-06 06:55:26.219   680   680 D VM_BMS  : For batt_temp=295 fcc_mah=2030
+01-06 06:55:26.219   680   680 D VM_BMS  : For ocv=3782572 batt_temp=295 soc=45
+01-06 06:55:26.219   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 06:55:26.219   680   680 D VM_BMS  : INIT: ocv=3782572 last_ocv=3782572 batt_temp=295 soc=45
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 slope=2800
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 rbatt_sf=97
+01-06 06:55:26.219   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 06:55:26.219   680   680 D VM_BMS  : For ocv=3782668 batt_temp=295 soc=45
+01-06 06:55:26.219   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.833526 rbatt=0.181000 slope=0.280000 ibatt=-0.281246 ocv=3.782669 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=51
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 slope=2800
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 rbatt_sf=97
+01-06 06:55:26.219   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 06:55:26.219   680   680 D VM_BMS  : For ocv=3782769 batt_temp=295 soc=45
+01-06 06:55:26.219   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.836160 rbatt=0.181000 slope=0.280000 ibatt=-0.295255 ocv=3.782769 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=51
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 slope=2800
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 rbatt_sf=97
+01-06 06:55:26.219   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 06:55:26.219   680   680 D VM_BMS  : For ocv=3782868 batt_temp=295 soc=45
+01-06 06:55:26.219   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.834985 rbatt=0.181000 slope=0.280000 ibatt=-0.288213 ocv=3.782868 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=51
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 slope=2800
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 rbatt_sf=97
+01-06 06:55:26.219   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 06:55:26.219   680   680 D VM_BMS  : For ocv=3782970 batt_temp=295 soc=45
+01-06 06:55:26.219   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.837030 rbatt=0.181000 slope=0.280000 ibatt=-0.298954 ocv=3.782970 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=51
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 slope=2800
+01-06 06:55:26.219   680   680 D VM_BMS  : For soc=45 batt_temp=295 rbatt_sf=97
+01-06 06:55:26.219   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 06:55:26.219   680   680 D VM_BMS  : For ocv=3783071 batt_temp=295 soc=45
+01-06 06:55:26.219   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.836454 rbatt=0.181000 slope=0.280000 ibatt=-0.295212 ocv=3.783071 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=51
+01-06 06:55:26.219   680   680 I VM_BMS  : power_supply_update: ocv_uv=3783071 ibatt=-295211 soc=45 seq_num=51
+01-06 06:55:26.219   680   680 D VM_BMS  : End process_bms_data
+01-06 06:55:26.219   680   680 D VM_BMS  : wake_lock released
+01-06 06:55:27.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:29.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:29.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:29.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:29.499   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:29.499   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:29.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:29.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:29.499   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 06:55:29.499   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 06:55:29.499   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:29.499   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:29.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:30.039  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:33.039  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:34.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:34.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:34.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:34.499   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:34.499   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:34.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:34.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:34.499   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 06:55:34.499   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 06:55:34.499   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:34.499   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:34.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:36.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:39.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:39.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:39.499   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:39.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:39.499   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:39.499   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:39.499   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:39.499   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:39.509   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 06:55:39.509   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 06:55:39.509   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:39.509   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:39.509   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:42.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:44.509   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:44.509   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:44.509   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:44.509   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:44.509   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:44.509   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:44.509   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:44.509   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:55:44.509   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:55:44.509   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:44.509   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:44.509   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:45.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:48.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:49.509   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:49.509   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:49.509   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:49.509   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:49.509   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:49.509   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:49.509   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:49.509   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:55:49.509   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:55:49.509   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:49.509   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:49.509   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:51.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:54.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:54.509   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:54.509   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:54.509   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:54.509   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:54.509   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:54.509   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:54.509   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:54.509   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:55:54.509   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:55:54.509   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:54.509   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:54.509   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:55:57.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:55:59.519   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:55:59.519   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:55:59.519   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:55:59.519   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:55:59.519   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:59.519   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:55:59.519   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:55:59.519   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:55:59.519   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:55:59.519   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:55:59.519   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:55:59.519   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:00.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:03.049  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:04.519   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:04.519   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:04.519   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:04.519   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:04.519   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:04.519   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:04.519   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:04.519   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:04.519   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:04.519   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:04.519   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:04.519   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:06.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:09.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:09.519   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:09.519   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:09.519   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:09.519   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:09.519   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:09.519   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:09.519   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:09.519   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:09.519   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:09.519   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:09.519   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:09.519   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:12.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:14.359   680   680 D VM_BMS  : wake_lock acquired
+01-06 06:56:14.359   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 06:56:14.359   680   680 D VM_BMS  : Start process_bms_data
+01-06 06:56:14.369   680   680 D VM_BMS  : For batt_temp=294 fcc_mah=2030
+01-06 06:56:14.369   680   680 D VM_BMS  : For ocv=3783071 batt_temp=294 soc=45
+01-06 06:56:14.369   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 06:56:14.369   680   680 D VM_BMS  : INIT: ocv=3783071 last_ocv=3783071 batt_temp=294 soc=45
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:56:14.369   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:56:14.369   680   680 D VM_BMS  : For ocv=3783171 batt_temp=294 soc=45
+01-06 06:56:14.369   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.836203 rbatt=0.181000 slope=0.280000 ibatt=-0.293269 ocv=3.783172 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=52
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:56:14.369   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:56:14.369   680   680 D VM_BMS  : For ocv=3783276 batt_temp=294 soc=45
+01-06 06:56:14.369   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.838840 rbatt=0.181000 slope=0.280000 ibatt=-0.307273 ocv=3.783276 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=52
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:56:14.369   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:56:14.369   680   680 D VM_BMS  : For ocv=3783384 batt_temp=294 soc=45
+01-06 06:56:14.369   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.840312 rbatt=0.181000 slope=0.280000 ibatt=-0.314817 ocv=3.783384 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=52
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:56:14.369   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:56:14.369   680   680 D VM_BMS  : For ocv=3783490 batt_temp=294 soc=45
+01-06 06:56:14.369   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.839419 rbatt=0.181000 slope=0.280000 ibatt=-0.309291 ocv=3.783490 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=52
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:56:14.369   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:56:14.369   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:56:14.369   680   680 D VM_BMS  : For ocv=3783599 batt_temp=294 soc=45
+01-06 06:56:14.369   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.841182 rbatt=0.181000 slope=0.280000 ibatt=-0.318439 ocv=3.783599 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=52
+01-06 06:56:14.369   680   680 I VM_BMS  : power_supply_update: ocv_uv=3783599 ibatt=-318438 soc=45 seq_num=52
+01-06 06:56:14.369   680   680 D VM_BMS  : End process_bms_data
+01-06 06:56:14.369   680   680 D VM_BMS  : wake_lock released
+01-06 06:56:14.529   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:14.529   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:14.529   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:14.529   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:14.529   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:14.529   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:14.529   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:14.529   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:14.529   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:14.529   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:14.529   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:14.529   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:15.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:18.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:19.529   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:19.529   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:19.529   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:19.529   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:19.529   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:19.529   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:19.529   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:19.529   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:19.529   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:19.529   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:19.529   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:19.529   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:21.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:24.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:24.529   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:24.529   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:24.529   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:24.529   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:24.529   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:24.529   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:24.529   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:24.529   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:24.529   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:24.529   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:24.529   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:24.529   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:27.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:29.539   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:29.539   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:29.539   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:29.539   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:29.539   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:29.539   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:29.539   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:29.539   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:29.539   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:29.539   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:29.539   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:29.539   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:30.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:33.059  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:34.539   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:34.539   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:34.539   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:34.539   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:34.539   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:34.539   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:34.539   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:34.539   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:34.539   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:34.539   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:34.539   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:34.539   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:36.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:39.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:39.539   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:39.539   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:39.539   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:39.539   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:39.539   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:39.539   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:39.539   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:39.539   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:39.539   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:39.539   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:39.539   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:39.539   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:42.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:44.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:44.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:44.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:44.549   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:44.549   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:44.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:44.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:44.549   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:44.549   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:44.549   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:44.549   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:44.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:45.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:48.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:49.539   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:49.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:49.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:49.549   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:49.549   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:49.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:49.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:49.549   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:49.549   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:49.549   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:49.549   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:49.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:51.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:54.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:54.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:54.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:54.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:54.549   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:54.549   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:54.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:54.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:54.549   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:54.549   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:54.549   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:54.549   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:54.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:56:57.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:56:59.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:56:59.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:56:59.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:56:59.549   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:56:59.549   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:59.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:56:59.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:56:59.549   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:56:59.549   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:56:59.549   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:56:59.549   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:56:59.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:00.069  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:02.509   680   680 D VM_BMS  : wake_lock acquired
+01-06 06:57:02.509   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 06:57:02.509   680   680 D VM_BMS  : Start process_bms_data
+01-06 06:57:02.509   680   680 D VM_BMS  : For batt_temp=294 fcc_mah=2030
+01-06 06:57:02.509   680   680 D VM_BMS  : For ocv=3783599 batt_temp=294 soc=45
+01-06 06:57:02.509   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 06:57:02.509   680   680 D VM_BMS  : INIT: ocv=3783599 last_ocv=3783599 batt_temp=294 soc=45
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:57:02.509   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:57:02.509   680   680 D VM_BMS  : For ocv=3783709 batt_temp=294 soc=45
+01-06 06:57:02.509   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.842064 rbatt=0.181000 slope=0.280000 ibatt=-0.322705 ocv=3.783710 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=53
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:57:02.509   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:57:02.509   680   680 D VM_BMS  : For ocv=3783820 batt_temp=294 soc=45
+01-06 06:57:02.509   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.842350 rbatt=0.181000 slope=0.280000 ibatt=-0.323676 ocv=3.783820 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=53
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:57:02.509   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:57:02.509   680   680 D VM_BMS  : For ocv=3783930 batt_temp=294 soc=45
+01-06 06:57:02.509   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.842350 rbatt=0.181000 slope=0.280000 ibatt=-0.323064 ocv=3.783931 soc=45 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=53
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 slope=2800
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=45 batt_temp=294 rbatt_sf=97
+01-06 06:57:02.509   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:57:02.509   680   680 D VM_BMS  : For ocv=3784040 batt_temp=294 soc=46
+01-06 06:57:02.509   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.842056 rbatt=0.181000 slope=0.280000 ibatt=-0.320834 ocv=3.784040 soc=46 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=53
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=46 batt_temp=294 slope=2800
+01-06 06:57:02.509   680   680 D VM_BMS  : For soc=46 batt_temp=294 rbatt_sf=97
+01-06 06:57:02.509   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=294
+01-06 06:57:02.509   680   680 D VM_BMS  : For ocv=3784147 batt_temp=294 soc=46
+01-06 06:57:02.509   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.840869 rbatt=0.181000 slope=0.280000 ibatt=-0.313675 ocv=3.784148 soc=46 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=53
+01-06 06:57:02.509   680   680 I VM_BMS  : power_supply_update: ocv_uv=3784147 ibatt=-313674 soc=46 seq_num=53
+01-06 06:57:02.509   680   680 D VM_BMS  : End process_bms_data
+01-06 06:57:02.509   680   680 D VM_BMS  : wake_lock released
+01-06 06:57:02.549  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 06:57:02.549   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 06:57:02.549  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 06:57:03.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:04.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:04.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:04.549   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:04.549   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:04.549   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:04.549   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:04.549   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:04.559   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:04.559   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:04.559   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:04.559   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:04.559   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:06.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:09.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:09.559   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:09.559   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:09.559   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:09.559   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:09.559   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:09.559   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:09.559   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:09.559   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:09.559   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:09.559   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:09.559   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:09.559   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:12.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:14.559   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:14.559   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:14.559   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:14.559   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:14.559   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:14.559   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:14.559   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:14.559   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:14.559   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:14.559   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:14.559   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:14.559   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:15.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:18.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:19.559   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:19.559   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:19.559   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:19.559   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:19.559   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:19.559   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:19.559   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:19.559   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:19.559   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:19.559   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:19.559   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:19.559   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:21.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:24.079  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:24.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:24.569   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:24.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:24.569   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:24.569   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:24.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:24.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:24.569   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:24.569   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:24.569   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:24.569   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:24.569   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:27.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:29.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:29.569   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:29.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:29.569   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:29.569   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:29.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:29.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:29.569   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:29.569   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:29.569   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:29.569   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:29.569   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:30.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:33.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:34.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:34.569   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:34.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:34.569   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:34.569   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:34.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:34.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:34.569   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:34.569   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:34.569   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:34.569   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:34.569   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:36.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:39.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:39.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:39.569   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:39.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:39.569   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:39.569   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:39.569   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:39.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:39.579   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:39.579   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:39.579   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:39.579   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:39.579   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:41.309   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-06 06:57:41.329  4661  4661 I PerformanceTiming: Performance Entry: launcher.gaiamobile.org|mark|appLaunch@app://settings.gaiamobile.org|2503871.305000|0.000000|437261342
+01-06 06:57:41.339  4661  4661 I Gecko   : [BrowserElement] Pause painting on app://launcher.gaiamobile.org/manifest.webapp
+01-06 06:57:41.339  4661  4661 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLDivElement], class: app focusable
+01-06 06:57:41.349   485   485 I Gecko   : XXX FIXME : Dispatch a webapps-launch: undefined
+01-06 06:57:41.409  7860  7860 I Gecko   : ######################## extensions.js loaded
+01-06 06:57:41.429  7860  7860 W Settings: [JavaScript Warning: "Use of nsIFile in content process is deprecated." {file: "jar:file:///system/b2g/omni.ja!/components/DirectoryProvider.js" line: 9}]
+01-06 06:57:41.449   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-06 06:57:41.459  4661  4661 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLDivElement], class: app focusable
+01-06 06:57:42.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:42.209  4661  4661 I FocusManager: << focus() called >>
+01-06 06:57:42.209  4661  4661 I FocusManager:    trying to set focus on, tag: DIV, id: , class: app focusable
+01-06 06:57:42.209  4661  4661 I FocusManager: Warning: element is already focused.
+01-06 06:57:42.229  4661  4661 I FocusManager: << focus() called >>
+01-06 06:57:42.229  4661  4661 I FocusManager:    trying to set focus on, tag: DIV, id: , class: app focusable
+01-06 06:57:42.229  4661  4661 I FocusManager: Warning: element is already focused.
+01-06 06:57:42.309   485   485 D NS_ICC_SERVICE: GetCardState 
+01-06 06:57:42.309   485   485 D NS_ICC_SERVICE: GetIccInfo 
+01-06 06:57:42.329  7860  7860 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|contentInteractive|893.010000|0.000000|437262333
+01-06 06:57:42.399  7860  7860 I Settings: Content JS LOG: NavigationMap init 
+01-06 06:57:42.399  7860  7860 I Settings:     at _init (app://settings.gaiamobile.org/js/navigation_map.js:22:7)
+01-06 06:57:42.399  7860  7860 I Settings: Content JS LOG: --------observerInit------ 
+01-06 06:57:42.399  7860  7860 I Settings:     at _init (app://settings.gaiamobile.org/js/navigation_map.js:132:7)
+01-06 06:57:42.479  7860  7876 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:57:42.479  7860  7876 E linker  : warning: unable to get realpath for the library "/system/lib/hw/gralloc.msm8909.so". Will use given name.
+01-06 06:57:42.479  7860  7876 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:57:42.479  7860  7876 E linker  : warning: unable to get realpath for the library "libmemalloc.so". Will use given name.
+01-06 06:57:42.479  7860  7876 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:57:42.479  7860  7876 E linker  : warning: unable to get realpath for the library "libqdMetaData.so". Will use given name.
+01-06 06:57:42.489  7860  7876 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:57:42.489  7860  7876 E linker  : warning: unable to get realpath for the library "libqdutils.so". Will use given name.
+01-06 06:57:42.489  7860  7876 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:57:42.489  7860  7876 E linker  : warning: unable to get realpath for the library "libGLESv1_CM.so". Will use given name.
+01-06 06:57:42.489  7860  7876 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:57:42.489  7860  7876 E linker  : warning: unable to get realpath for the library "libqservice.so". Will use given name.
+01-06 06:57:42.589  7860  7860 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|navigationLoaded|1157.885000|0.000000|437262597
+01-06 06:57:42.589  7860  7860 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|navigationInteractive|1158.265000|0.000000|437262598
+01-06 06:57:42.669   485   485 I FocusManager: << focus() called >>
+01-06 06:57:42.669   485   485 I FocusManager:    trying to set focus on, tag: IFRAME, id: browser18, class: browser
+01-06 06:57:42.679   485   485 I FocusManager:    current focused element, tag: IFRAME, id: browser0, class: browser hidden
+01-06 06:57:42.679   485   485 I FocusManager: <- blur on, tag: IFRAME, id: browser0, class: browser hidden
+01-06 06:57:42.679  4661  4661 I FocusManager: <- blur on, tag: DIV, id: , class: app focusable
+01-06 06:57:42.679   485   485 I FocusManager: -> focus is now on, tag: IFRAME, id: browser18, class: browser
+01-06 06:57:42.709   485   485 I GeckoConsole: Content JS LOG: [SimLockManager][2517.022] handling appopened 
+01-06 06:57:42.709   485   485 I GeckoConsole:     at BaseModule.prototype.debug (app://system.gaiamobile.org/js/base_module.js:25:422)
+01-06 06:57:42.739  7860  7860 I FocusManager: * WindowRaised *
+01-06 06:57:42.739  7860  7860 I FocusManager: -> focus is now on, NULL, tag: , id: , class: 
+01-06 06:57:43.069   485   485 I Gecko   : XXX FIXME : Dispatch a mozChromeEvent: default-volume-channel-changed
+01-06 06:57:43.259  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:43.259  7860  7860 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:57:43.279  7860  7860 I FocusManager:    current focused element, NULL, tag: , id: , class: 
+01-06 06:57:43.279  7860  7860 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 06:57:43.279  7860  7860 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:57:43.289  7860  7860 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:57:43.289  7860  7860 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:57:43.309  7860  7860 I Gecko   : -*- Nfc DOM: In MozNFCImpl Constructor
+01-06 06:57:43.309  7860  7860 I Gecko   : -*- Nfc DOM: MozNFCImpl init called
+01-06 06:57:43.359  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:43.359  7860  7860 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:57:43.389  7860  7860 I FocusManager: Warning: element is already focused.
+01-06 06:57:43.389  7860  7860 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:57:43.389  7860  7860 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:57:43.399  7860  7860 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|visuallyLoaded|1963.435000|0.000000|437263403
+01-06 06:57:43.399  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:43.399  7860  7860 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:57:43.439  7860  7860 I FocusManager: Warning: element is already focused.
+01-06 06:57:43.599  7860  7860 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|fullyLoaded|2171.130000|0.000000|437263611
+01-06 06:57:43.659   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:43.739  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:43.739  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:43.739  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:43.739  7860  7860 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:57:43.769  7860  7860 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:57:43.769  7860  7860 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:57:43.769  7860  7860 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:57:43.769  7860  7860 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:57:43.769  7860  7860 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:57:43.779  7860  7860 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:57:43.809   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:43.819  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:43.819  7860  7860 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 06:57:43.839   485   485 I Gecko   : XXX FIXME : Dispatch a mozFxAccountsChromeEvent: undefined
+01-06 06:57:43.839  7860  7860 I FocusManager: Warning: element is not focusable.
+01-06 06:57:43.879  7860  7860 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:57:43.919   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:43.929  7860  7860 E Settings: [JavaScript Error: "TypeError: document.querySelector(...) is null" {file: "app://settings.gaiamobile.org/js/navigation_map.js" line: 347}]
+01-06 06:57:43.929  7860  7860 E Settings: _refreshCurrentPage@app://settings.gaiamobile.org/js/navigation_map.js:347:33
+01-06 06:57:43.929  7860  7860 E Settings: ctor_root_panel/_updateFotaSettings/request.onsuccess/<@app://settings.gaiamobile.org/js/panels/root/panel.js:930:13
+01-06 06:57:43.929  7860  7860 E Settings: perFileCallback@app://settings.gaiamobile.org/shared/js/lazy_loader.js:9:82
+01-06 06:57:43.929  7860  7860 I GeckoDump: fota_settings:setting  code has ran into init function
+01-06 06:57:43.949  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:43.949  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:43.949  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:43.949  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:43.959  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:43.959  7860  7860 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:57:43.979  7860  7860 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:57:43.979  7860  7860 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:57:43.979  7860  7860 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:57:43.989  7860  7860 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:57:43.989  7860  7860 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:57:43.989  7860  7860 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:57:43.999   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:44.029  7860  7860 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:57:44.079   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:44.139  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:44.139  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:44.139  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:44.139  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:44.149  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:44.149  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:44.149  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:44.149  7860  7860 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:57:44.169  7860  7860 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:57:44.169  7860  7860 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:57:44.169  7860  7860 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:57:44.169   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:44.179  7860  7860 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:57:44.179  7860  7860 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:57:44.189  7860  7860 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:57:44.209  7860  7860 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:57:44.279   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:44.299  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:44.299  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:44.299  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:44.299  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:44.299  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:44.299  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:44.299  7860  7860 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:57:44.299  7860  7860 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:57:44.299  7860  7860 I FocusManager: << focus() called >>
+01-06 06:57:44.299  7860  7860 I FocusManager:    trying to set focus on, tag: LI, id: fota-settings, class: focus
+01-06 06:57:44.329  7860  7860 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:57:44.329  7860  7860 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:57:44.329  7860  7860 I FocusManager: -> focus is now on, tag: LI, id: fota-settings, class: focus
+01-06 06:57:44.329  7860  7860 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:57:44.329  7860  7860 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:57:44.339  7860  7860 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:57:44.339  4661  4661 I Gecko   : [BrowserElement] Resume painting on app://launcher.gaiamobile.org/manifest.webapp
+01-06 06:57:44.359   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:44.379  7860  7860 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 06:57:44.569   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:44.579   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:44.579   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:44.579   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:44.579   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:44.579   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:44.579   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:44.579   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:44.579   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:44.579   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:44.579   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:44.579   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:45.079   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:45.089  7860  7860 I Settings: Content JS LOG: Softkeys engine: close group menu 
+01-06 06:57:45.089  7860  7860 I Settings:     at closeMenu (app://settings.gaiamobile.org/shared/js/softkey_panel.js:31:22)
+01-06 06:57:45.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:45.089  7860  7860 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 06:57:45.239   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser18, class: browser
+01-06 06:57:45.239  7860  7860 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 06:57:45.269   485   485 E GeckoConsole: Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-06 06:57:45.269   485   485 E GeckoConsole:     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:14:1)
+01-06 06:57:45.269   485   485 E GeckoConsole:     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:9:1)
+01-06 06:57:45.799  7860  7860 I Settings: Content JS LOG: Softkeys engine: close group menu 
+01-06 06:57:45.799  7860  7860 I Settings:     at closeMenu (app://settings.gaiamobile.org/shared/js/softkey_panel.js:31:22)
+01-06 06:57:45.809   485   485 I Gecko   : XXX FIXME : Dispatch a mozChromeEvent: default-volume-channel-changed
+01-06 06:57:45.809  7860  7860 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 06:57:45.809  7860  7860 I GeckoDump: fota_settings:uninit
+01-06 06:57:45.809  7860  7860 I GeckoDump: fota_settings:setting start to send command to system
+01-06 06:57:45.809  7860  7860 I GeckoDump: fota_settings:send to system category:common action:exit
+01-06 06:57:45.849   485   485 I FocusManager: << focus() called >>
+01-06 06:57:45.849   485   485 I FocusManager:    trying to set focus on, tag: IFRAME, id: browser0, class: browser
+01-06 06:57:45.859   485   485 I FocusManager:    current focused element, NULL, tag: , id: , class: 
+01-06 06:57:45.859   485   485 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 06:57:45.859   485   485 I FocusManager: -> focus is now on, tag: IFRAME, id: browser0, class: browser
+01-06 06:57:45.859  4661  4661 I FocusManager: * WindowRaised *
+01-06 06:57:45.859  4661  4661 I FocusManager: -> focus is now on, tag: DIV, id: , class: app focusable
+01-06 06:57:45.959  7860  7860 I Gecko   : -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=45097156611, cleanup.
+01-06 06:57:47.439  7976  7997 I (Preallocated app): PAC file installed from data: URI
+01-06 06:57:48.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:49.579   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:57:49.579   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:57:49.579   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:57:49.579   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:57:49.579   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:49.579   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:57:49.579   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:57:49.579   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:57:49.579   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:57:49.579   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:57:49.579   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:57:49.579   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:57:50.649   680   680 D VM_BMS  : wake_lock acquired
+01-06 06:57:50.649   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 06:57:50.649   680   680 D VM_BMS  : Start process_bms_data
+01-06 06:57:50.649   680   680 D VM_BMS  : For batt_temp=293 fcc_mah=2030
+01-06 06:57:50.649   680   680 D VM_BMS  : For ocv=3784147 batt_temp=293 soc=46
+01-06 06:57:50.649   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 06:57:50.649   680   680 D VM_BMS  : INIT: ocv=3784147 last_ocv=3784147 batt_temp=293 soc=46
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 slope=2800
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 rbatt_sf=97
+01-06 06:57:50.649   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=293
+01-06 06:57:50.649   680   680 D VM_BMS  : For ocv=3784257 batt_temp=293 soc=46
+01-06 06:57:50.649   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.842236 rbatt=0.181000 slope=0.280000 ibatt=-0.320630 ocv=3.784257 soc=46 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=54
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 slope=2800
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 rbatt_sf=97
+01-06 06:57:50.649   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=293
+01-06 06:57:50.649   680   680 D VM_BMS  : For ocv=3784366 batt_temp=293 soc=46
+01-06 06:57:50.649   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.842236 rbatt=0.181000 slope=0.280000 ibatt=-0.320023 ocv=3.784367 soc=46 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=54
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 slope=2800
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 rbatt_sf=97
+01-06 06:57:50.649   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=293
+01-06 06:57:50.649   680   680 D VM_BMS  : For ocv=3784476 batt_temp=293 soc=46
+01-06 06:57:50.649   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.842537 rbatt=0.181000 slope=0.280000 ibatt=-0.321082 ocv=3.784476 soc=46 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=54
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 slope=2800
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 rbatt_sf=97
+01-06 06:57:50.649   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=293
+01-06 06:57:50.649   680   680 D VM_BMS  : For ocv=3784586 batt_temp=293 soc=46
+01-06 06:57:50.649   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.842518 rbatt=0.181000 slope=0.280000 ibatt=-0.320370 ocv=3.784586 soc=46 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=54
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 slope=2800
+01-06 06:57:50.649   680   680 D VM_BMS  : For soc=46 batt_temp=293 rbatt_sf=97
+01-06 06:57:50.649   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=293
+01-06 06:57:50.649   680   680 D VM_BMS  : For ocv=3784663 batt_temp=293 soc=46
+01-06 06:57:50.649   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.825496 rbatt=0.181000 slope=0.280000 ibatt=-0.225808 ocv=3.784663 soc=46 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=54
+01-06 06:57:50.649   680   680 I VM_BMS  : power_supply_update: ocv_uv=3784663 ibatt=-225808 soc=46 seq_num=54
+01-06 06:57:50.649   680   680 D VM_BMS  : End process_bms_data
+01-06 06:57:50.649   680   680 D VM_BMS  : wake_lock released
+01-06 06:57:51.089  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:57:54.089  2525  2525 E sdcard  : missing packages.list; retrying

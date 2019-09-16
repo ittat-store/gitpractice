@@ -1,0 +1,1109 @@
+--------- beginning of system
+01-06 06:14:58.829   238   238 I vold    : Vold 3.0 (the awakening) firing up
+01-06 06:14:58.829   238   238 V vold    : Detected support for: ext4 vfat
+01-06 06:15:01.479   445   445 I irsc_util: Starting irsc tool
+01-06 06:15:01.529   445   445 I irsc_util: Num of entries:284
+01-06 06:15:01.599   445   445 I irsc_util: Ending irsc tool
+01-06 06:15:14.279   238   248 V vold    : Waiting for FUSE to spin up...
+01-06 06:15:14.339   238   248 V vold    : Waiting for FUSE to spin up...
+01-06 06:15:14.399   238   248 D vold    : Linking /storage/emulated/0 to /mnt/user/0/primary
+01-06 06:15:17.549   485   485 I Gecko   : ============ KaiOS device information ============
+01-06 06:15:17.549   485   485 I Gecko   : Build UID         = 
+01-06 06:15:17.549   485   485 I Gecko   : Build Description = msm8909_512-userdebug 6.0.1 MMB29M LYF_F30C-000-09-20-270319_i release-keys
+01-06 06:15:17.549   485   485 I Gecko   : Bootloader        = unknown
+01-06 06:15:17.549   485   485 I Gecko   : ==================================================
+01-06 06:15:56.509  2406  4514 E NetlinkEvent: Unknown ifindex 23 in RTM_DELADDR
+01-06 06:25:29.899  2406  4514 E NetlinkEvent: Unknown ifindex 25 in RTM_DELADDR
+01-06 06:39:36.799  2406  4514 E NetlinkEvent: Unknown ifindex 27 in RTM_DELADDR
+01-06 06:39:36.799  2406  4514 E NetlinkEvent: Unknown ifindex 27 in RTM_DELADDR
+01-06 06:40:46.689  2406  4514 E NetlinkEvent: Unknown ifindex 28 in RTM_DELADDR
+01-06 06:40:46.689  2406  4514 E NetlinkEvent: Unknown ifindex 28 in RTM_DELADDR
+01-06 06:40:54.759  2406  4514 E NetlinkEvent: Unknown ifindex 29 in RTM_DELADDR
+01-06 06:48:27.519  2406  4514 E NetlinkEvent: Unknown ifindex 30 in RTM_DELADDR
+01-06 06:48:27.519  2406  4514 E NetlinkEvent: Unknown ifindex 30 in RTM_DELADDR
+01-06 06:59:17.909  2406  4514 E NetlinkEvent: Unknown ifindex 31 in RTM_DELADDR
+01-06 06:59:17.909  2406  4514 E NetlinkEvent: Unknown ifindex 31 in RTM_DELADDR
+01-06 07:05:35.439  2406  4514 E NetlinkEvent: Unknown ifindex 32 in RTM_DELADDR
+01-06 07:12:29.989  2406  4514 E NetlinkEvent: Unknown ifindex 34 in RTM_DELADDR
+01-06 07:13:02.769  2406  4514 E NetlinkEvent: Unknown ifindex 35 in RTM_DELADDR
+01-06 07:13:10.129  2406  4514 E NetlinkEvent: Unknown ifindex 36 in RTM_DELADDR
+01-06 07:13:10.129  2406  4514 E NetlinkEvent: Unknown ifindex 36 in RTM_DELADDR
+--------- beginning of main
+01-06 07:16:55.149   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:16:55.149   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:16:55.149   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:16:55.149   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:16:55.149   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:16:55.149   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:16:55.509   485  8889 I MozMtp  : sessionEnded: 
+01-06 07:16:55.509   485  8889 I MozMtp  : Run: MozMtpServer finished
+01-06 07:16:55.519   485  1150 I AutoMounter: Stopping MtpServer
+01-06 07:16:55.519   485  1150 I MozMtp  : ~MozMtpStorage: Storage destructed for Volume sdcard mStorageID 0x00010001
+01-06 07:16:55.519   485  1150 I MozMtp  : StorageUnavailable: Removing mStorageID 0x00010001 from MtpServer
+01-06 07:16:55.519   485   485 I DongleAutoMounter: Dongle USB Status : usb: 0, rndis: 0, retry: false
+01-06 07:16:55.519   485   485 I DongleAutoMounter: Dongle disable debouncing start
+01-06 07:16:55.519   485   485 I DongleAutoMounter: Dongle unpluged ?
+01-06 07:16:55.519   485  1150 I MozMtp  : StorageUnavailable: Removing mStorageID 0x00010001 from MozMtpDatabse
+01-06 07:16:55.519   485  1150 I AutoMounter: SetUsbFunction(default) sys.usb.config from 'mtp,adb' to 'diag,serial_smd,rmnet_qti_bam,adb'
+01-06 07:16:55.529   485  1150 I AutoMounter: AutoMounter state changed from MTP_STARTED to IDLE
+01-06 07:16:55.529   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:0 tryToShare:0 state:IDLE
+01-06 07:16:55.529   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:16:55.549  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:16:55.569   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:16:55.569   485   485 D QLOC-OSAgent: POWERSTATE: 0
+01-06 07:16:55.569   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:16:55.569   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: false
+01-06 07:16:55.569   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:16:55.569   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:3 
+01-06 07:16:55.569   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:16:55.569  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:16:55.569   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:16:56.519   485   485 I DongleAutoMounter: Dongle disable tether
+01-06 07:16:56.529   485   485 I DongleAutoMounter: SetDongleTetherDB aEnable : 0
+01-06 07:16:56.529   485   485 I DongleAutoMounter: unplugged confirmed. reset retry Flag
+01-06 07:16:56.549   485   485 I Gecko   : [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-06 07:16:57.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:00.149   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:00.149   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:00.149   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 07:17:00.149   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 07:17:00.149   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 40000, Lo(1) 37000, Interval(1) 5000
+01-06 07:17:00.149   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:00.149   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:00.149   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:00.149   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:00.149   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:00.149   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:00.149   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:00.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:03.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:05.149   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:05.149   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:05.149   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 07:17:05.149   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 07:17:05.149   475   658 D ThermalEngine: sensor_thresh_notify: Update recieved BATTERY-CHARGE-MONITOR 37000
+01-06 07:17:05.149   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(0) -1
+01-06 07:17:05.149   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:05.149   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 10000ms
+01-06 07:17:05.149   475   709 D ThermalEngine: sensor_monitor: Thresh EVT
+01-06 07:17:05.149   475   709 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 07:17:05.149   475   709 D ThermalEngine: TM Id BATTERY-CHARGE-MONITOR Sensor xo_therm Reading 37000
+01-06 07:17:05.149   475   709 D ThermalEngine: handle_thresh_sig: TM Id BATTERY-CHARGE-MONITOR Sensor xo_therm Temp 37000
+01-06 07:17:05.149   475   709 I ThermalEngine: TM Id 'BATTERY-CHARGE-MONITOR' Sensor 'xo_therm' - alarm cleared 1 at 37.0 degC
+01-06 07:17:05.149   475   709 D ThermalEngine: sensor_update_thresholds: TM Id BATTERY-CHARGE-MONITOR Sensor xo_therm threshold_type -1, level 0
+01-06 07:17:05.149   475   709 D ThermalEngine: sensors_manager_set_thresh_lvl: xo_therm Hi(1) 39000, Lo(0) 37000, Interval(1) 5000
+01-06 07:17:05.149   475   709 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:05.149   475   709 D ThermalEngine: Clearing all alarms
+01-06 07:17:05.149   475   709 D ThermalEngine: device_clnt_cancel_request: DEV battery
+01-06 07:17:05.149   475   709 D ThermalEngine: ACTION: BATTERY - Setting battery charging mitigation to 0
+01-06 07:17:05.149   475   709 I ThermalEngine: Mitigation:Battery:0
+01-06 07:17:05.149   475   709 D ThermalEngine: sensor_monitor: Wait for EV
+01-06 07:17:05.159   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:05.159   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:05.159   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:05.159   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:05.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:05.179  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:17:05.179  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:17:05.189   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:17:06.179   680   680 D VM_BMS  : wake_lock acquired
+01-06 07:17:06.179   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 07:17:06.179   680   680 D VM_BMS  : Start process_bms_data
+01-06 07:17:06.189   680   680 D VM_BMS  : For batt_temp=303 fcc_mah=2030
+01-06 07:17:06.189   680   680 D VM_BMS  : For ocv=3792980 batt_temp=303 soc=49
+01-06 07:17:06.189   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 07:17:06.189   680   680 D VM_BMS  : INIT: ocv=3792980 last_ocv=3792980 batt_temp=303 soc=49
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 slope=2800
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 rbatt_sf=96
+01-06 07:17:06.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=130, sf=96 batt_temp=303
+01-06 07:17:06.189   680   680 D VM_BMS  : For ocv=3793049 batt_temp=303 soc=49
+01-06 07:17:06.189   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.829654 rbatt=0.180000 slope=0.280000 ibatt=-0.203550 ocv=3.793050 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=78
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 slope=2800
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 rbatt_sf=96
+01-06 07:17:06.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=130, sf=96 batt_temp=303
+01-06 07:17:06.189   680   680 D VM_BMS  : For ocv=3793139 batt_temp=303 soc=49
+01-06 07:17:06.189   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.840536 rbatt=0.180000 slope=0.280000 ibatt=-0.263565 ocv=3.793140 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=78
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 slope=2800
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 rbatt_sf=96
+01-06 07:17:06.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=130, sf=96 batt_temp=303
+01-06 07:17:06.189   680   680 D VM_BMS  : For ocv=3793234 batt_temp=303 soc=49
+01-06 07:17:06.189   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.843181 rbatt=0.180000 slope=0.280000 ibatt=-0.277746 ocv=3.793234 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=78
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 slope=2800
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 rbatt_sf=96
+01-06 07:17:06.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=130, sf=96 batt_temp=303
+01-06 07:17:06.189   680   680 D VM_BMS  : For ocv=3793318 batt_temp=303 soc=49
+01-06 07:17:06.189   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.837580 rbatt=0.180000 slope=0.280000 ibatt=-0.246131 ocv=3.793319 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=78
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 slope=2800
+01-06 07:17:06.189   680   680 D VM_BMS  : For soc=49 batt_temp=303 rbatt_sf=96
+01-06 07:17:06.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=130, sf=96 batt_temp=303
+01-06 07:17:06.189   680   680 D VM_BMS  : For ocv=3793292 batt_temp=303 soc=49
+01-06 07:17:06.189   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.779993 rbatt=0.180000 slope=0.280000 ibatt=0.073957 ocv=3.793293 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=78
+01-06 07:17:06.189   680   680 I VM_BMS  : power_supply_update: ocv_uv=3793292 ibatt=73957 soc=49 seq_num=78
+01-06 07:17:06.189   680   680 D VM_BMS  : End process_bms_data
+01-06 07:17:06.189   680   680 D VM_BMS  : wake_lock released
+01-06 07:17:06.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:09.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:10.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:10.159   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:10.159   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:10.159   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:10.159   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:10.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:12.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:15.149   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:15.149   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 36000 .
+01-06 07:17:15.149   475   658 I ThermalEngine: Sensor:xo_therm:36000 mC
+01-06 07:17:15.149   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:15.149   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:15.149   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:15.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:15.159   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:15.159   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:15.159   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:15.159   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:15.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:15.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:18.409  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:20.159   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:20.159   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 36000 .
+01-06 07:17:20.159   475   658 I ThermalEngine: Sensor:xo_therm:36000 mC
+01-06 07:17:20.159   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:20.159   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:20.159   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:20.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:20.159   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:20.159   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:20.159   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:20.159   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:20.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:21.399  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:24.409  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:25.159   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:25.159   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:17:25.159   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:17:25.159   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:25.159   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:25.159   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:25.159   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:25.169   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:25.169   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:25.169   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:25.169   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:25.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:27.409  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:30.159   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:30.159   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:17:30.159   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:17:30.159   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:30.159   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:30.159   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:30.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:30.169   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:30.169   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:30.169   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:30.169   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:30.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:30.409  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:33.409  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:35.169   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:35.169   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:17:35.169   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:17:35.169   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:35.169   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:35.169   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:35.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:35.169   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:35.169   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:35.169   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:35.169   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:35.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:36.409  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:39.409  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:40.169   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:40.169   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:17:40.169   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:17:40.169   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:40.169   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:40.169   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:40.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:40.169   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:40.169   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:40.169   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:40.169   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:40.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:42.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:45.169   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:45.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:45.169   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:17:45.169   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:17:45.169   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:45.169   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:45.169   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:45.169   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:45.169   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:45.169   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:45.169   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:45.169   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:45.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:48.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:50.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:50.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:50.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:17:50.179   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:17:50.179   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:50.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:50.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:50.179   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 31000 .
+01-06 07:17:50.179   475   660 I ThermalEngine: Sensor:case_therm:31000 mC
+01-06 07:17:50.179   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:50.179   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:50.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:51.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:54.329   680   680 D VM_BMS  : wake_lock acquired
+01-06 07:17:54.329   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 07:17:54.329   680   680 D VM_BMS  : Start process_bms_data
+01-06 07:17:54.329   680   680 D VM_BMS  : For batt_temp=299 fcc_mah=2030
+01-06 07:17:54.329   680   680 D VM_BMS  : For ocv=3793292 batt_temp=299 soc=49
+01-06 07:17:54.329   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 07:17:54.329   680   680 D VM_BMS  : INIT: ocv=3793292 last_ocv=3793292 batt_temp=299 soc=49
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 slope=2800
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 rbatt_sf=97
+01-06 07:17:54.329   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=299
+01-06 07:17:54.329   680   680 D VM_BMS  : For ocv=3793261 batt_temp=299 soc=49
+01-06 07:17:54.329   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.777168 rbatt=0.181000 slope=0.280000 ibatt=0.088999 ocv=3.793262 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=79
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 slope=2800
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 rbatt_sf=97
+01-06 07:17:54.329   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=299
+01-06 07:17:54.329   680   680 D VM_BMS  : For ocv=3793229 batt_temp=299 soc=49
+01-06 07:17:54.329   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.776566 rbatt=0.181000 slope=0.280000 ibatt=0.092150 ocv=3.793229 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=79
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 slope=2800
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 rbatt_sf=97
+01-06 07:17:54.329   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=299
+01-06 07:17:54.329   680   680 D VM_BMS  : For ocv=3793197 batt_temp=299 soc=49
+01-06 07:17:54.329   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.776275 rbatt=0.181000 slope=0.280000 ibatt=0.093581 ocv=3.793197 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=79
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 slope=2800
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 rbatt_sf=97
+01-06 07:17:54.329   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=299
+01-06 07:17:54.329   680   680 D VM_BMS  : For ocv=3793163 batt_temp=299 soc=49
+01-06 07:17:54.329   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.775385 rbatt=0.181000 slope=0.280000 ibatt=0.098316 ocv=3.793163 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=79
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 slope=2800
+01-06 07:17:54.329   680   680 D VM_BMS  : For soc=49 batt_temp=299 rbatt_sf=97
+01-06 07:17:54.329   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=299
+01-06 07:17:54.329   680   680 D VM_BMS  : For ocv=3793127 batt_temp=299 soc=49
+01-06 07:17:54.329   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.774209 rbatt=0.181000 slope=0.280000 ibatt=0.104619 ocv=3.793127 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=79
+01-06 07:17:54.329   680   680 I VM_BMS  : power_supply_update: ocv_uv=3793127 ibatt=104619 soc=49 seq_num=79
+01-06 07:17:54.329   680   680 D VM_BMS  : End process_bms_data
+01-06 07:17:54.329   680   680 D VM_BMS  : wake_lock released
+01-06 07:17:54.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:17:55.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:17:55.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:17:55.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:17:55.179   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:17:55.179   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:55.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:17:55.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:17:55.179   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:17:55.179   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:17:55.179   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:17:55.179   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:17:55.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:17:57.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:00.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:00.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:00.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:00.179   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:00.179   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:00.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:00.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:00.179   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:00.179   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:00.179   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:00.179   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:00.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:00.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:03.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:05.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:05.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:05.179   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:05.179   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:05.179   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:05.179   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:05.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:05.179   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:05.179   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:05.179   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:05.179   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:05.179   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:06.419  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:09.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:10.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:10.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:10.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:10.189   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:10.189   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:10.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:10.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:10.189   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:10.189   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:10.189   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:10.189   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:10.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:12.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:15.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:15.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:15.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:15.189   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:15.189   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:15.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:15.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:15.189   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:15.189   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:15.189   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:15.189   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:15.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:15.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:18.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:20.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:20.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:20.189   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:20.189   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:20.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:20.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:20.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:20.189   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:20.189   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:20.189   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:20.189   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:20.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:21.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:24.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:25.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:25.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:25.189   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:25.189   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:25.189   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:25.189   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:25.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:25.189   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:25.189   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:25.189   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:25.189   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:25.189   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:27.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:30.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:30.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:30.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:30.199   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:30.199   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:30.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:30.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:30.199   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:30.199   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:30.199   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:30.199   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:30.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:30.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:33.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:35.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:35.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:35.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 34000 .
+01-06 07:18:35.199   475   658 I ThermalEngine: Sensor:xo_therm:34000 mC
+01-06 07:18:35.199   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:35.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:35.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:35.199   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:35.199   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:35.199   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:35.199   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:35.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:35.599  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.609  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.609   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:35.729  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.739  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.739   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:35.859  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.869  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.879   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:35.879   485   485 D QLOC-OSAgent: POWERSTATE: 1
+01-06 07:18:35.879   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:18:35.879   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: true
+01-06 07:18:35.879   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:35.879   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:2 
+01-06 07:18:35.879   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:18:35.879   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:35.979  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.989  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:35.989   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:36.029   485  1150 I AutoMounter: SetUsbFunction(mtp) sys.usb.config from 'diag,serial_smd,rmnet_qti_bam,adb' to 'mtp,adb'
+01-06 07:18:36.029   485  1150 I AutoMounter: AutoMounter state changed from IDLE to MTP_CONFIGURING
+01-06 07:18:36.029   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:1 tryToShare:0 state:MTP_CONFIGURING
+01-06 07:18:36.029   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:18:36.029   485   485 I DongleAutoMounter: Dongle USB Status : usb: 1, rndis: 0, retry: true
+01-06 07:18:36.029   485   485 I DongleAutoMounter: Dongle enable tether
+01-06 07:18:36.039   485   485 I DongleAutoMounter: SetDongleTetherDB aEnable : 1
+01-06 07:18:36.069   485   485 I Gecko   : [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-06 07:18:36.159  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:36.169   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:36.169   485   485 D QLOC-OSAgent: POWERSTATE: 0
+01-06 07:18:36.169   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:18:36.169   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: false
+01-06 07:18:36.169   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:36.169   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:3 
+01-06 07:18:36.169   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:18:36.169  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:36.169   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:36.179  2406  4521 D CommandListener: Setting iface cfg
+01-06 07:18:36.179  2406  4521 D CommandListener: Trying to bring up rndis0
+01-06 07:18:36.189  2406  4521 D TetherController: tetherInterface(rndis0)
+01-06 07:18:36.249  2406  4521 D TetherController: Starting tethering services
+01-06 07:18:36.249  2406  4521 D TetherController: Sending update msg to dnsmasq [update_ifaces:rndis0]
+01-06 07:18:36.249  2406  4521 D TetherController: Tethering services running
+01-06 07:18:36.269   485   485 I GeckoDump: fota_system:Network now is connected:true
+01-06 07:18:36.269   485   485 I GeckoDump: fota_system:WIFI connected:false Cell connected:true
+01-06 07:18:36.269   485   485 I Gecko   : -*- SalesTrackerService: network:offline-status-changed - online: Resume  service when network status change to online
+01-06 07:18:36.269   485  1150 I AutoMounter: AutoMounter state changed from MTP_CONFIGURING to RNDIS_CONFIGURED
+01-06 07:18:36.269   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:0 tryToShare:0 state:RNDIS_CONFIGURED
+01-06 07:18:36.269   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:18:36.279   485   485 I DongleAutoMounter: Dongle USB Status : usb: 0, rndis: 1, retry: true
+01-06 07:18:36.279   485   485 I DongleAutoMounter: Dongle disable debouncing start
+01-06 07:18:36.279   485   485 I DongleAutoMounter: Dongle unpluged ?
+01-06 07:18:36.289  9110  9110 I dnsmasq : started, version 2.51 cachesize 150
+01-06 07:18:36.289  9110  9110 I dnsmasq : compile time options: no-IPv6 GNU-getopt no-DBus no-I18N DHCP no-scripts no-TFTP
+01-06 07:18:36.289  9110  9110 W dnsmasq : warning: no upstream servers configured
+01-06 07:18:36.289  9110  9110 I dnsmasq : DHCP, IP range 192.168.30.10 -- 192.168.30.30, lease time 1h
+01-06 07:18:36.289  9110  9110 I dnsmasq : DHCP, IP range 192.168.1.10 -- 192.168.1.30, lease time 1h
+01-06 07:18:36.289  9110  9110 E dnsmasq : bad address at /etc/hosts line 2
+01-06 07:18:36.289  9110  9110 I dnsmasq : read /etc/hosts - 1 addresses
+01-06 07:18:36.289  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:36.299   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:36.299   485   485 D QLOC-OSAgent: POWERSTATE: 1
+01-06 07:18:36.299   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:18:36.299   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: true
+01-06 07:18:36.299   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:36.299   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:2 
+01-06 07:18:36.299   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:18:36.299  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:36.299   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:36.409  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:36.419  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:36.419   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:36.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:36.459   485   485 I DongleAutoMounter: Dongle USB Status : usb: 1, rndis: 1, retry: true
+01-06 07:18:36.459   485   485 I DongleAutoMounter: Dongle enable tether
+01-06 07:18:36.459   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:1 tryToShare:0 state:RNDIS_CONFIGURED
+01-06 07:18:36.459   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:18:36.459   485   485 I DongleAutoMounter: SetDongleTetherDB aEnable : 1
+01-06 07:18:36.489   485   485 I Gecko   : [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-06 07:18:36.529   485   485 I DongleAutoMounter: Usb debouncing, no need to disable tether
+01-06 07:18:36.529   485   485 I DongleAutoMounter: USB debouncing, no need to setup retry flag
+01-06 07:18:36.739   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser22, class: browser
+01-06 07:18:36.759  8850  8850 I Settings: Content JS LOG: Softkeys engine: close group menu 
+01-06 07:18:36.759  8850  8850 I Settings:     at closeMenu (app://settings.gaiamobile.org/shared/js/softkey_panel.js:31:22)
+01-06 07:18:36.759  8850  8850 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLLIElement], class: focus
+01-06 07:18:36.849   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser22, class: browser
+01-06 07:18:36.859  8850  8850 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLLIElement], class: focus
+01-06 07:18:36.889   485   485 E GeckoConsole: Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-06 07:18:36.889   485   485 E GeckoConsole:     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:14:1)
+01-06 07:18:36.889   485   485 E GeckoConsole:     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:9:1)
+01-06 07:18:37.489  8850  8850 I Settings: Content JS LOG: Softkeys engine: close group menu 
+01-06 07:18:37.489  8850  8850 I Settings:     at closeMenu (app://settings.gaiamobile.org/shared/js/softkey_panel.js:31:22)
+01-06 07:18:37.489  8850  8850 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 07:18:37.489  8850  8850 I GeckoDump: fota_settings:uninit
+01-06 07:18:37.489  8850  8850 I GeckoDump: fota_settings:setting start to send command to system
+01-06 07:18:37.489  8850  8850 I GeckoDump: fota_settings:send to system category:common action:exit
+01-06 07:18:37.499   485   485 I FocusManager: << focus() called >>
+01-06 07:18:37.499   485   485 I FocusManager:    trying to set focus on, tag: IFRAME, id: browser0, class: browser
+01-06 07:18:37.509   485   485 I FocusManager:    current focused element, NULL, tag: , id: , class: 
+01-06 07:18:37.509   485   485 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 07:18:37.509   485   485 I FocusManager: -> focus is now on, tag: IFRAME, id: browser0, class: browser
+01-06 07:18:37.509  4661  4661 I FocusManager: * WindowRaised *
+01-06 07:18:37.509  4661  4661 I FocusManager: -> focus is now on, tag: DIV, id: , class: app focusable
+01-06 07:18:37.559   485   485 I Gecko   : XXX FIXME : Dispatch a mozChromeEvent: default-volume-channel-changed
+01-06 07:18:37.579  8850  8850 I Gecko   : -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=53687091203, cleanup.
+01-06 07:18:37.609  8850  8850 I Gecko   : -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=53687091203, cleanup.
+01-06 07:18:38.999  9110  9110 I dnsmasq : DHCPDISCOVER(rndis0) 02:56:02:54:33:64 
+01-06 07:18:38.999  9110  9110 I dnsmasq : DHCPOFFER(rndis0) 192.168.30.10 02:56:02:54:33:64 
+01-06 07:18:38.999  9110  9110 I dnsmasq : DHCPREQUEST(rndis0) 192.168.30.10 02:56:02:54:33:64 
+01-06 07:18:38.999  9110  9110 I dnsmasq : DHCPACK(rndis0) 192.168.30.10 02:56:02:54:33:64 VTA063L
+01-06 07:18:39.279   485  9124 I DongleCrypto:  3. Generate my random string(16byte)
+01-06 07:18:39.279   485  9124 E DongleCrypto: error in read socket options 35
+01-06 07:18:39.279   485  9124 I DongleCrypto: main init fail...return connect_fail
+01-06 07:18:39.299  2406  4514 E NetlinkEvent: Unknown ifindex 37 in RTM_DELADDR
+01-06 07:18:39.299  2406  4514 E NetlinkEvent: Unknown ifindex 37 in RTM_DELADDR
+01-06 07:18:39.309   485   485 I Gecko   : [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-06 07:18:39.379  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.399   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:39.399   485   485 D QLOC-OSAgent: POWERSTATE: 0
+01-06 07:18:39.399   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:18:39.399   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: false
+01-06 07:18:39.399  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.399   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:39.399   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:3 
+01-06 07:18:39.399   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:18:39.399   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:39.399  2406  4521 D TetherController: untetherInterface(rndis0)
+01-06 07:18:39.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:39.469  2406  4521 D TetherController: Stopping tethering services
+01-06 07:18:39.479  9110  9110 I dnsmasq : exiting on receipt of SIGTERM
+01-06 07:18:39.479  2406  4521 D TetherController: Tethering services stopped
+01-06 07:18:39.489   485   485 I GeckoDump: fota_system:Network now is connected:false
+01-06 07:18:39.489   485   485 I Gecko   : -*- SalesTrackerService: network:offline-status-changed - offline: Stop service when network status change to offline
+01-06 07:18:39.499   485  1150 I AutoMounter: AutoMounter state changed from RNDIS_CONFIGURED to IDLE
+01-06 07:18:39.499   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:0 tryToShare:0 state:IDLE
+01-06 07:18:39.499   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:18:39.499   485   485 I DongleAutoMounter: Dongle USB Status : usb: 0, rndis: 0, retry: false
+01-06 07:18:39.509   485   485 I DongleAutoMounter: Dongle disable debouncing start
+01-06 07:18:39.509   485   485 I DongleAutoMounter: Dongle unpluged ?
+01-06 07:18:39.529  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.539  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.539   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:39.539   485   485 D QLOC-OSAgent: POWERSTATE: 1
+01-06 07:18:39.539   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:18:39.539   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: true
+01-06 07:18:39.539   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:39.539   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:2 
+01-06 07:18:39.539   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:18:39.539   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:39.649  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.649  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.649   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:39.689   485  1150 I AutoMounter: SetUsbFunction(mtp) sys.usb.config from 'diag,serial_smd,rmnet_qti_bam,adb' to 'mtp,adb'
+01-06 07:18:39.699   485  1150 I AutoMounter: AutoMounter state changed from IDLE to MTP_CONFIGURING
+01-06 07:18:39.699   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:1 tryToShare:0 state:MTP_CONFIGURING
+01-06 07:18:39.699   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:18:39.699   485   485 I DongleAutoMounter: Dongle USB Status : usb: 1, rndis: 0, retry: false
+01-06 07:18:39.699   485   485 I DongleAutoMounter: Dongle disable debouncing start
+01-06 07:18:39.709   485   485 I DongleAutoMounter: Usb debouncing, no need to disable tether
+01-06 07:18:39.759  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.769  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.769   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:39.769   485   485 D QLOC-OSAgent: POWERSTATE: 0
+01-06 07:18:39.769   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:18:39.769   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: false
+01-06 07:18:39.769   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:39.769   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:3 
+01-06 07:18:39.769   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:18:39.769   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:39.769   485   485 I DongleAutoMounter: Usb debouncing, no need to disable tether
+01-06 07:18:39.769   485   485 I DongleAutoMounter: USB debouncing, no need to setup retry flag
+01-06 07:18:39.859   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:0 tryToShare:0 state:MTP_CONFIGURING
+01-06 07:18:39.859   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:18:39.869   485   485 I DongleAutoMounter: Dongle USB Status : usb: 0, rndis: 0, retry: false
+01-06 07:18:39.869   485   485 I DongleAutoMounter: Dongle disable debouncing start
+01-06 07:18:39.869   485   485 I DongleAutoMounter: Dongle unpluged ?
+01-06 07:18:39.889  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.899  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:39.899   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:39.899   485   485 D QLOC-OSAgent: POWERSTATE: 1
+01-06 07:18:39.899   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:18:39.899   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: true
+01-06 07:18:39.899   485  2991 E LocSvc_api_v02: I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:39.899   485  3030 E LocSvc_libulp: I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:2 
+01-06 07:18:39.899   485  3030 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+01-06 07:18:39.899   485  3021 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-06 07:18:40.009  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:40.009  5455  5455 D bt_btif : BTHF: device_status_notification
+01-06 07:18:40.009   485   485 I GeckoConsole: QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-06 07:18:40.049   485  1150 I AutoMounter: Starting MtpServer
+01-06 07:18:40.049   485  1150 I MozMtp  : Init: Opened '/dev/mtp_usb' fd 142
+01-06 07:18:40.049   485  1150 I MozMtp  : MozMtpStorage: Storage constructed for Volume sdcard mStorageID 0x00010001
+01-06 07:18:40.049   485  1150 I MozMtp  : Notify: Volume sdcard mStorageID 0x00010001 state changed to Mounted SharingEnabled: 0
+01-06 07:18:40.049   485  1150 I MozMtp  : StorageAvailable: Adding Volume sdcard mStorageID 0x00010001 mountPoint /data/usbmsc_mnt to MozMtpDatabase
+01-06 07:18:40.049   485  1150 I MozMtp  : AddStorage: added 2 items from tree '/data/usbmsc_mnt'
+01-06 07:18:40.049   485  1150 I MozMtp  : StorageAvailable: Adding Volume sdcard mStorageID 0x00010001 mountPoint /data/usbmsc_mnt to MtpServer
+01-06 07:18:40.049   485  1150 I MozMtp  : Notify: Volume sdcard mStorageID 0x00010001 state changed to Mounted SharingEnabled: 0
+01-06 07:18:40.049   485   485 I DongleAutoMounter: Dongle USB Status : usb: 1, rndis: 0, retry: false
+01-06 07:18:40.049   485   485 I DongleAutoMounter: Dongle disable debouncing start
+01-06 07:18:40.049   485   485 I DongleAutoMounter: Usb debouncing, no need to disable tether
+01-06 07:18:40.049   485  1150 I AutoMounter: AutoMounter state changed from MTP_CONFIGURING to MTP_STARTED
+01-06 07:18:40.049   485  1150 I AutoMounter: UpdateState: ums:A0C0E0 mtp:A1C1E1 mode:3 usb:1 tryToShare:0 state:MTP_STARTED
+01-06 07:18:40.049   485  1150 I AutoMounter: UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-06 07:18:40.049   485  9160 I MozMtp  : Run: MozMtpServer started
+01-06 07:18:40.049   485  9160 I MozMtp  : sessionStarted: 
+01-06 07:18:40.049   485  9160 I MozMtp  : getSupportedPlaybackFormats: returning Supported Playback Formats
+01-06 07:18:40.049   485  9160 I MozMtp  : getSupportedCaptureFormats: returning MTP_FORMAT_ASSOCIATION, MTP_FORMAT_PNG
+01-06 07:18:40.049   485  9160 I MozMtp  : getSupportedDeviceProperties: 
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.049   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.059   485  9160 I MozMtp  : getObjectPropertyDesc: Property: MTP_PROPERTY_OBJECT_SIZE 0x0000dc04
+01-06 07:18:40.119   485   485 I DongleAutoMounter: Usb debouncing, no need to disable tether
+01-06 07:18:40.119   485   485 I DongleAutoMounter: USB debouncing, no need to setup retry flag
+01-06 07:18:40.139  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.139  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.139  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.159  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.179  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.179  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.189  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.189  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:40.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:40.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:40.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 35000 .
+01-06 07:18:40.199   475   658 I ThermalEngine: Sensor:xo_therm:35000 mC
+01-06 07:18:40.199   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:40.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:40.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:40.199   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:40.199   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:40.199   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:40.199   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:40.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:40.229  5455  5465 W bt_hci  : filter_incoming_event command complete event with no matching command. opcode: 0x0.
+01-06 07:18:42.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:42.479   680   680 D VM_BMS  : wake_lock acquired
+01-06 07:18:42.479   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 07:18:42.479   680   680 D VM_BMS  : Start process_bms_data
+01-06 07:18:42.479   680   680 D VM_BMS  : For batt_temp=295 fcc_mah=2030
+01-06 07:18:42.479   680   680 D VM_BMS  : For ocv=3793127 batt_temp=295 soc=49
+01-06 07:18:42.479   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 07:18:42.479   680   680 D VM_BMS  : INIT: ocv=3793127 last_ocv=3793127 batt_temp=295 soc=49
+01-06 07:18:42.479   680   680 D VM_BMS  : For soc=49 batt_temp=295 slope=2800
+01-06 07:18:42.479   680   680 D VM_BMS  : For soc=49 batt_temp=295 rbatt_sf=97
+01-06 07:18:42.479   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 07:18:42.479   680   680 D VM_BMS  : For ocv=3793087 batt_temp=295 soc=49
+01-06 07:18:42.479   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.772272 rbatt=0.181000 slope=0.280000 ibatt=0.115112 ocv=3.793087 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=80
+01-06 07:18:42.479   680   680 D VM_BMS  : For soc=49 batt_temp=295 slope=2800
+01-06 07:18:42.479   680   680 D VM_BMS  : For soc=49 batt_temp=295 rbatt_sf=97
+01-06 07:18:42.479   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 07:18:42.479   680   680 D VM_BMS  : For ocv=3793047 batt_temp=295 soc=49
+01-06 07:18:42.479   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.771975 rbatt=0.181000 slope=0.280000 ibatt=0.116530 ocv=3.793047 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=80
+01-06 07:18:42.479   680   680 D VM_BMS  : For soc=49 batt_temp=295 slope=2800
+01-06 07:18:42.479   680   680 D VM_BMS  : For soc=49 batt_temp=295 rbatt_sf=97
+01-06 07:18:42.479   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 07:18:42.479   680   680 D VM_BMS  : For ocv=3793005 batt_temp=295 soc=49
+01-06 07:18:42.489   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.771082 rbatt=0.181000 slope=0.280000 ibatt=0.121239 ocv=3.793005 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=80
+01-06 07:18:42.489   680   680 D VM_BMS  : For soc=49 batt_temp=295 slope=2800
+01-06 07:18:42.489   680   680 D VM_BMS  : For soc=49 batt_temp=295 rbatt_sf=97
+01-06 07:18:42.489   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 07:18:42.489   680   680 D VM_BMS  : For ocv=3792961 batt_temp=295 soc=49
+01-06 07:18:42.489   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.770200 rbatt=0.181000 slope=0.280000 ibatt=0.125875 ocv=3.792962 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=80
+01-06 07:18:42.489   680   680 D VM_BMS  : For soc=49 batt_temp=295 slope=2800
+01-06 07:18:42.489   680   680 D VM_BMS  : For soc=49 batt_temp=295 rbatt_sf=97
+01-06 07:18:42.489   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=295
+01-06 07:18:42.489   680   680 D VM_BMS  : For ocv=3792967 batt_temp=295 soc=49
+01-06 07:18:42.489   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.796643 rbatt=0.181000 slope=0.280000 ibatt=-0.020324 ocv=3.792968 soc=49 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=80
+01-06 07:18:42.489   680   680 I VM_BMS  : power_supply_update: ocv_uv=3792967 ibatt=-20324 soc=49 seq_num=80
+01-06 07:18:42.489   680   680 D VM_BMS  : End process_bms_data
+01-06 07:18:42.489   680   680 D VM_BMS  : wake_lock released
+01-06 07:18:45.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:45.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 36000 .
+01-06 07:18:45.199   475   658 I ThermalEngine: Sensor:xo_therm:36000 mC
+01-06 07:18:45.199   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:45.199   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:45.199   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:45.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:45.199   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:45.199   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:45.199   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:45.199   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:45.199   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:45.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:48.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:50.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:50.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:50.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 07:18:50.209   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 07:18:50.209   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:50.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:50.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:50.209   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:50.209   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:50.209   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:50.209   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:50.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:51.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:54.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:18:55.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:18:55.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:18:55.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 07:18:55.209   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 07:18:55.209   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:55.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:18:55.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:18:55.209   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:18:55.209   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:18:55.209   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:18:55.209   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:18:55.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:18:57.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:00.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:19:00.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:19:00.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 07:19:00.209   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 07:19:00.209   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:00.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:19:00.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:19:00.209   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:19:00.209   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:19:00.209   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:00.209   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:19:00.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:19:00.429  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:03.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:05.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:19:05.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:19:05.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 07:19:05.209   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 07:19:05.209   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:05.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:19:05.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:19:05.209   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:19:05.209   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:19:05.209   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:05.209   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:19:05.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:19:06.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:09.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:09.649   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-06 07:19:09.669  4661  4661 I PerformanceTiming: Performance Entry: launcher.gaiamobile.org|mark|appLaunch@app://settings.gaiamobile.org|3792204.335000|0.000000|438549675
+01-06 07:19:09.679  4661  4661 I Gecko   : [BrowserElement] Pause painting on app://launcher.gaiamobile.org/manifest.webapp
+01-06 07:19:09.679   485   485 I Gecko   : XXX FIXME : Dispatch a webapps-launch: undefined
+01-06 07:19:09.679  4661  4661 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLDivElement], class: app focusable
+01-06 07:19:09.739  9009  9009 I Gecko   : ######################## extensions.js loaded
+01-06 07:19:09.769  9009  9009 W Settings: [JavaScript Warning: "Use of nsIFile in content process is deprecated." {file: "jar:file:///system/b2g/omni.ja!/components/DirectoryProvider.js" line: 9}]
+01-06 07:19:09.939   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-06 07:19:09.939  4661  4661 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLDivElement], class: app focusable
+01-06 07:19:10.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:19:10.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 07:19:10.209   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 07:19:10.209   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:10.209   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:19:10.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:19:10.209   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:19:10.209   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:19:10.219   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:19:10.219   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:10.219   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:19:10.219   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:19:10.499  4661  4661 I FocusManager: << focus() called >>
+01-06 07:19:10.499  4661  4661 I FocusManager:    trying to set focus on, tag: DIV, id: , class: app focusable
+01-06 07:19:10.499  4661  4661 I FocusManager: Warning: element is already focused.
+01-06 07:19:10.539  4661  4661 I FocusManager: << focus() called >>
+01-06 07:19:10.539  4661  4661 I FocusManager:    trying to set focus on, tag: DIV, id: , class: app focusable
+01-06 07:19:10.539  4661  4661 I FocusManager: Warning: element is already focused.
+01-06 07:19:10.679   485   485 D NS_ICC_SERVICE: GetCardState 
+01-06 07:19:10.679   485   485 D NS_ICC_SERVICE: GetIccInfo 
+01-06 07:19:10.689  9009  9009 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|contentInteractive|926.730000|0.000000|438550700
+01-06 07:19:10.769  9009  9009 I Settings: Content JS LOG: NavigationMap init 
+01-06 07:19:10.769  9009  9009 I Settings:     at _init (app://settings.gaiamobile.org/js/navigation_map.js:22:7)
+01-06 07:19:10.779  9009  9009 I Settings: Content JS LOG: --------observerInit------ 
+01-06 07:19:10.779  9009  9009 I Settings:     at _init (app://settings.gaiamobile.org/js/navigation_map.js:132:7)
+01-06 07:19:10.859  9009  9026 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 07:19:10.859  9009  9026 E linker  : warning: unable to get realpath for the library "/system/lib/hw/gralloc.msm8909.so". Will use given name.
+01-06 07:19:10.859  9009  9026 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 07:19:10.859  9009  9026 E linker  : warning: unable to get realpath for the library "libmemalloc.so". Will use given name.
+01-06 07:19:10.859  9009  9026 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 07:19:10.859  9009  9026 E linker  : warning: unable to get realpath for the library "libqdMetaData.so". Will use given name.
+01-06 07:19:10.859  9009  9026 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 07:19:10.859  9009  9026 E linker  : warning: unable to get realpath for the library "libqdutils.so". Will use given name.
+01-06 07:19:10.869  9009  9026 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 07:19:10.869  9009  9026 E linker  : warning: unable to get realpath for the library "libGLESv1_CM.so". Will use given name.
+01-06 07:19:10.869  9009  9026 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 07:19:10.869  9009  9026 E linker  : warning: unable to get realpath for the library "libqservice.so". Will use given name.
+01-06 07:19:10.969  9009  9009 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|navigationLoaded|1203.825000|0.000000|438550977
+01-06 07:19:10.969  9009  9009 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|navigationInteractive|1204.255000|0.000000|438550977
+01-06 07:19:11.039   485   485 I FocusManager: << focus() called >>
+01-06 07:19:11.039   485   485 I FocusManager:    trying to set focus on, tag: IFRAME, id: browser23, class: browser
+01-06 07:19:11.049   485   485 I FocusManager:    current focused element, tag: IFRAME, id: browser0, class: browser hidden
+01-06 07:19:11.049   485   485 I FocusManager: <- blur on, tag: IFRAME, id: browser0, class: browser hidden
+01-06 07:19:11.059   485   485 I FocusManager: -> focus is now on, tag: IFRAME, id: browser23, class: browser
+01-06 07:19:11.059  4661  4661 I FocusManager: <- blur on, tag: DIV, id: , class: app focusable
+01-06 07:19:11.079   485   485 I GeckoConsole: Content JS LOG: [SimLockManager][3805.391] handling appopened 
+01-06 07:19:11.079   485   485 I GeckoConsole:     at BaseModule.prototype.debug (app://system.gaiamobile.org/js/base_module.js:25:422)
+01-06 07:19:11.119  9009  9009 I FocusManager: * WindowRaised *
+01-06 07:19:11.119  9009  9009 I FocusManager: -> focus is now on, NULL, tag: , id: , class: 
+01-06 07:19:11.469   485   485 I Gecko   : XXX FIXME : Dispatch a mozChromeEvent: default-volume-channel-changed
+01-06 07:19:11.579   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:11.639  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLBodyElement], class: skin-organic uninit theme-settings
+01-06 07:19:11.679  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:11.679  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:11.699  9009  9009 I FocusManager:    current focused element, NULL, tag: , id: , class: 
+01-06 07:19:11.699  9009  9009 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 07:19:11.699  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:11.709  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:11.709  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:11.739  9009  9009 I Gecko   : -*- Nfc DOM: In MozNFCImpl Constructor
+01-06 07:19:11.749  9009  9009 I Gecko   : -*- Nfc DOM: MozNFCImpl init called
+01-06 07:19:11.769   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:11.799  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:11.799  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:11.829  9009  9009 I FocusManager: Warning: element is already focused.
+01-06 07:19:11.829  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:11.829  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:11.839  9009  9009 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|visuallyLoaded|2073.390000|0.000000|438551847
+01-06 07:19:11.849  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:11.849  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:11.889  9009  9009 I FocusManager: Warning: element is already focused.
+01-06 07:19:11.969  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 07:19:12.179  9009  9009 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|fullyLoaded|2412.205000|0.000000|438552185
+01-06 07:19:12.199  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:12.199  9009  9009 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 07:19:12.219  9009  9009 I FocusManager: Warning: element is not focusable.
+01-06 07:19:12.289   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:12.319   485   485 I Gecko   : XXX FIXME : Dispatch a mozFxAccountsChromeEvent: undefined
+01-06 07:19:12.329  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:12.329  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:12.329  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:12.329  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:12.359  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:12.359  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:12.359  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:12.369  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:12.369  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:12.369  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 07:19:12.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:12.449  9009  9009 E Settings: [JavaScript Error: "TypeError: document.querySelector(...) is null" {file: "app://settings.gaiamobile.org/js/navigation_map.js" line: 347}]
+01-06 07:19:12.449  9009  9009 E Settings: _refreshCurrentPage@app://settings.gaiamobile.org/js/navigation_map.js:347:33
+01-06 07:19:12.449  9009  9009 E Settings: ctor_root_panel/_updateFotaSettings/request.onsuccess/<@app://settings.gaiamobile.org/js/panels/root/panel.js:930:13
+01-06 07:19:12.449  9009  9009 E Settings: perFileCallback@app://settings.gaiamobile.org/shared/js/lazy_loader.js:9:82
+01-06 07:19:12.459  9009  9009 I GeckoDump: fota_settings:setting  code has ran into init function
+01-06 07:19:12.479   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:12.479  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 07:19:12.679  4661  4661 I Gecko   : [BrowserElement] Resume painting on app://launcher.gaiamobile.org/manifest.webapp
+01-06 07:19:12.859   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:12.899  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:12.899  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:12.899  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:12.899  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:12.899  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:12.899  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:12.929  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:12.929  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:12.929  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:12.939  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:12.939  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:12.939  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 07:19:13.019   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:13.029  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 07:19:13.379   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:13.409  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:13.409  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:13.419  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:13.419  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:13.419  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:13.419  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:13.419  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:13.419  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:13.439  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:13.439  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:13.439  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:13.449  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:13.449  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:13.459  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 07:19:13.549   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:13.549  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 07:19:13.959   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:13.979  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:13.979  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:13.989  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:13.989  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:13.989  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:13.989  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:13.989  9009  9009 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 07:19:13.989  9009  9009 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 07:19:13.989  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:13.989  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: fota-settings, class: focus
+01-06 07:19:14.019  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:14.019  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:14.019  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: fota-settings, class: focus
+01-06 07:19:14.029  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:14.029  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:14.029  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 07:19:14.109   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:14.109  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 07:19:15.199   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:15.209   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:19:15.219   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 07:19:15.219   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 07:19:15.219   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:15.219   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:19:15.219   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:19:15.219   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:19:15.219   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:19:15.219   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:19:15.219   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:15.219   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:19:15.219   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:19:15.229  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:15.229  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:15.229  9009  9009 I FocusManager:    current focused element, tag: LI, id: fota-settings, class: 
+01-06 07:19:15.229  9009  9009 I FocusManager: <- blur on, tag: LI, id: fota-settings, class: 
+01-06 07:19:15.229  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:15.239  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: fota-settings
+01-06 07:19:15.359   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:15.379  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 07:19:15.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:15.529   485   485 D QLOC-OSAgent: WIFIHARDWARESTATE_DATA_ITEM_ID: 0
+01-06 07:19:15.529   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 07:19:15.529   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_WIFI_HARDWARE_ON: false
+01-06 07:19:15.529   485   485 E GeckoConsole: [JavaScript Error: "NS_ERROR_NOT_IMPLEMENTED: Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIQMozSettingsCallback.notifyMozSettingChangeBool]" {file: "file:///system/b2g/distribution/bundles/location/QMozSettingsShim.js" line: 6}]
+01-06 07:19:15.529   485   485 I Gecko   : [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-06 07:19:16.059  9197  9222 I (Preallocated app): PAC file installed from data: URI
+01-06 07:19:16.349   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:16.349  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:16.349  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:16.349  9009  9009 I FocusManager: Warning: element is already focused.
+01-06 07:19:16.379  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 07:19:16.569   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:16.739  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 07:19:16.749  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:16.749  9009  9009 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 07:19:16.749  9009  9009 I FocusManager: Warning: element is not focusable.
+01-06 07:19:17.209  9009  9009 I Settings: Content JS LOG: ***open new page operation, previous panel --> #root 
+01-06 07:19:17.209  9009  9009 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:440:9)
+01-06 07:19:17.209  9009  9009 I Settings: Content JS LOG: ***previous panel focus navi id --> 30 
+01-06 07:19:17.209  9009  9009 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:452:9)
+01-06 07:19:17.209  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:17.209  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: none-select focus
+01-06 07:19:17.279  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:17.279  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:17.279  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: none-select focus
+01-06 07:19:17.289  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:17.289  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:17.439   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:17.449  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:17.449  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: none-select focus
+01-06 07:19:17.459  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: none-select
+01-06 07:19:17.459  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: none-select
+01-06 07:19:17.459  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: none-select focus
+01-06 07:19:17.469  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], class: none-select
+01-06 07:19:17.639   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:17.649  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: none-select focus
+01-06 07:19:18.399   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:18.399  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:18.409  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:18.409  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: none-select
+01-06 07:19:18.409  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: none-select
+01-06 07:19:18.409  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:18.419  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], class: none-select
+01-06 07:19:18.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:18.589   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:18.589  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 07:19:18.669  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:18.669  9009  9009 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 07:19:18.689  9009  9009 I FocusManager: Warning: element is not focusable.
+01-06 07:19:19.389   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:19.389  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:19.389  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:19.389  9009  9009 I FocusManager: Warning: element is already focused.
+01-06 07:19:19.409  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 07:19:19.499   485   485 D NS_TELEPHONY_SERVICE: EnumerateCalls:
+01-06 07:19:19.589   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:19.619  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 07:19:20.059  9009  9009 I Settings: Content JS LOG: ***open new page operation, previous panel --> #about 
+01-06 07:19:20.059  9009  9009 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:440:9)
+01-06 07:19:20.059  9009  9009 I Settings: Content JS LOG: ***previous panel focus navi id --> 37 
+01-06 07:19:20.059  9009  9009 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:452:9)
+01-06 07:19:20.059  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:20.069  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:20.099  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:20.099  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:20.099  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:20.109  9009  9009 I Settings: Content JS LOG: NavigationMap update 
+01-06 07:19:20.109  9009  9009 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 07:19:20.219   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:19:20.219   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 07:19:20.219   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 07:19:20.219   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:20.219   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:19:20.219   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:19:20.219   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:19:20.219   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:19:20.219   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:19:20.219   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:20.219   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:19:20.219   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:19:20.749   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:20.769  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:20.769  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:20.769  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:20.779  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:20.779  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:20.789  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement]
+01-06 07:19:20.909   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:20.919  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 07:19:21.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:22.559   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:22.559  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:22.559  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:22.559  9009  9009 I FocusManager: Warning: element is already focused.
+01-06 07:19:22.569  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 07:19:22.739   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:22.749  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 07:19:24.159   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:24.169  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:24.179  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:24.179  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:24.179  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:24.179  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:24.189  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement]
+01-06 07:19:24.339   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:24.339  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 07:19:24.439  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 07:19:24.629   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:24.639  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:24.639  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: list-imeis focus
+01-06 07:19:24.639  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:24.639  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:24.639  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: list-imeis focus
+01-06 07:19:24.649  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement]
+01-06 07:19:24.739   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:24.739  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: list-imeis focus
+01-06 07:19:25.049   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:25.059  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:25.059  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:25.059  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: list-imeis
+01-06 07:19:25.069  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: list-imeis
+01-06 07:19:25.069  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:25.079  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], class: list-imeis
+01-06 07:19:25.169   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:25.169  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 07:19:25.219   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 07:19:25.219   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 07:19:25.219   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 07:19:25.219   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 07:19:25.219   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:25.219   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 07:19:25.219   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 07:19:25.219   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 07:19:25.219   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 07:19:25.219   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 07:19:25.219   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 07:19:25.219   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 07:19:26.399   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:26.409  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:26.419  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: list-iccids focus
+01-06 07:19:26.419  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 07:19:26.419  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 07:19:26.419  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: list-iccids focus
+01-06 07:19:26.429  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement]
+01-06 07:19:26.579   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:26.589  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: list-iccids focus
+01-06 07:19:27.049   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:27.059  9009  9009 I FocusManager: << focus() called >>
+01-06 07:19:27.069  9009  9009 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 07:19:27.069  9009  9009 I FocusManager:    current focused element, tag: LI, id: , class: list-iccids
+01-06 07:19:27.069  9009  9009 I FocusManager: <- blur on, tag: LI, id: , class: list-iccids
+01-06 07:19:27.069  9009  9009 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 07:19:27.079  9009  9009 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], class: list-iccids
+01-06 07:19:27.129   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser23, class: browser
+01-06 07:19:27.139  9009  9009 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 07:19:27.439  2525  2525 E sdcard  : missing packages.list; retrying

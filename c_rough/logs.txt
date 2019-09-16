@@ -1,0 +1,1186 @@
+--------- beginning of system
+01-06 06:14:58.829   238   238 I vold    : Vold 3.0 (the awakening) firing up
+01-06 06:14:58.829   238   238 V vold    : Detected support for: ext4 vfat
+01-06 06:15:01.479   445   445 I irsc_util: Starting irsc tool
+01-06 06:15:01.529   445   445 I irsc_util: Num of entries:284
+01-06 06:15:01.599   445   445 I irsc_util: Ending irsc tool
+01-06 06:15:14.279   238   248 V vold    : Waiting for FUSE to spin up...
+01-06 06:15:14.339   238   248 V vold    : Waiting for FUSE to spin up...
+01-06 06:15:14.399   238   248 D vold    : Linking /storage/emulated/0 to /mnt/user/0/primary
+01-06 06:15:17.549   485   485 I Gecko   : ============ KaiOS device information ============
+01-06 06:15:17.549   485   485 I Gecko   : Build UID         = 
+01-06 06:15:17.549   485   485 I Gecko   : Build Description = msm8909_512-userdebug 6.0.1 MMB29M LYF_F30C-000-09-20-270319_i release-keys
+01-06 06:15:17.549   485   485 I Gecko   : Bootloader        = unknown
+01-06 06:15:17.549   485   485 I Gecko   : ==================================================
+01-06 06:15:56.509  2406  4514 E NetlinkEvent: Unknown ifindex 23 in RTM_DELADDR
+01-06 06:25:29.899  2406  4514 E NetlinkEvent: Unknown ifindex 25 in RTM_DELADDR
+01-06 06:39:36.799  2406  4514 E NetlinkEvent: Unknown ifindex 27 in RTM_DELADDR
+01-06 06:39:36.799  2406  4514 E NetlinkEvent: Unknown ifindex 27 in RTM_DELADDR
+01-06 06:40:46.689  2406  4514 E NetlinkEvent: Unknown ifindex 28 in RTM_DELADDR
+01-06 06:40:46.689  2406  4514 E NetlinkEvent: Unknown ifindex 28 in RTM_DELADDR
+01-06 06:40:54.759  2406  4514 E NetlinkEvent: Unknown ifindex 29 in RTM_DELADDR
+01-06 06:48:27.519  2406  4514 E NetlinkEvent: Unknown ifindex 30 in RTM_DELADDR
+01-06 06:48:27.519  2406  4514 E NetlinkEvent: Unknown ifindex 30 in RTM_DELADDR
+--------- beginning of main
+01-06 06:48:43.059  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.059  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.059  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.059  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.059  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.059  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.069  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:43.069  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:43.089  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:43.089  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:43.089  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:43.099  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:43.099  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:43.109  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:43.179   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:43.189  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:43.479   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:43.519  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.519  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.519  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.519  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.519  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.519  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.529  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.529  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.529  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.529  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.529  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.529  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.529  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.529  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.529  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.529  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.539  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:43.539  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:43.539  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:43.539  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:43.559  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:43.559  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:43.559  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:43.569  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:43.569  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:43.569  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:43.639   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:43.639  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:44.289   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:48:44.289   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:48:44.289   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:48:44.289   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:48:44.289   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:44.289   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:48:44.289   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:48:44.289   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:48:44.289   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:48:44.289   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:44.289   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:48:44.289   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:48:44.379   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.419  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:44.419  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:44.429  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:44.429  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:44.459  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:44.459  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:44.459  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:44.469  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:44.469  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:44.469  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:44.559   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:44.559  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:44.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:48:45.039   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:45.069  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.069  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:45.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:45.089  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:45.089  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:45.129  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:45.129  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:45.129  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:45.139  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:45.139  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:45.139  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:45.249   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:45.249  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:46.009   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:46.029  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.029  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.039  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.039  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:46.039  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:46.079  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:46.079  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:46.079  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:46.089  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:46.089  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:46.089  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:46.219   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:46.219  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:46.819   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:46.849  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.849  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.849  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.849  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.849  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.849  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.849  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.849  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.849  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.849  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.859  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.859  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.859  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.859  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.859  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.859  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.859  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:46.859  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:46.859  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:46.859  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:46.879  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:46.879  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:46.889  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:46.889  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:46.889  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:46.899  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:46.959   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:46.969  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:47.529   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.559  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.559  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.569  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:47.569  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:47.589  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:47.589  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:47.589  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:47.599  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:47.599  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:47.599  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:47.699   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:47.699  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:47.859   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:47.889  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.889  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.889  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.889  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.889  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.889  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.889  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.889  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.889  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.889  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.899  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.899  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.899  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.899  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.899  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.899  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.899  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:47.899  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:47.899  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:47.899  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:47.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:48:47.939  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:47.939  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:47.939  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:47.949  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:47.949  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:47.949  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:47.949   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:47.979  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:48.049   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:48.069  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.069  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.069  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.069  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.079  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.079  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:48.079  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:48.119  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:48.119  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:48.129  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:48.129  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:48.129  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:48.139  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:48.229   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:48.229  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:48.349   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:48.379  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.379  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.379  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.379  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.379  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.379  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.389  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.389  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.389  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.389  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.389  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.389  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.389  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.389  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.389  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.389  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.389  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.389  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.389  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:48.389  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:48.429  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:48.429  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:48.429  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:48.439  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:48.439  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:48.439  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:48.519   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:48.519  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:48.879   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.909  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.909  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.919  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:48.919  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:48.919  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:48.919  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:48.939  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:48.939  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:48.939  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:48.949  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:48.949  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:48.959  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:49.059   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:49.059  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:49.289   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:48:49.289   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:48:49.289   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:48:49.289   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:48:49.289   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:49.289   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:48:49.289   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:48:49.299   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:48:49.299   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:48:49.299   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:49.299   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:48:49.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:48:49.409   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:49.439  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.439  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.439  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.439  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.439  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.439  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.439  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.439  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.439  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.439  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.449  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.449  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.449  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.449  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.449  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.449  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.449  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.449  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.449  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:49.449  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:49.479  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:49.479  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:49.479  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:49.489  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:49.489  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:49.489  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:49.589   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:49.599  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:49.679   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:49.709  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.709  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.719  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.719  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.719  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.719  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.719  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.719  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.719  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.719  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.719  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.719  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.719  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.719  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.729  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.729  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.729  7155  7155 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:48:49.729  7155  7155 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:48:49.729  7155  7155 I FocusManager: << focus() called >>
+01-06 06:48:49.729  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:48:49.759  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:48:49.759  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:48:49.759  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:48:49.769  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:48:49.769  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:48:49.779  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:48:49.829   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:48:49.839  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:48:50.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:48:53.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:48:54.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:48:54.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:48:54.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:48:54.299   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:48:54.299   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:54.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:48:54.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:48:54.299   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:48:54.299   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:48:54.299   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:54.299   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:48:54.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:48:56.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:48:59.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:48:59.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:48:59.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:48:59.299   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:48:59.299   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:59.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:48:59.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:48:59.299   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:48:59.299   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:48:59.299   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:48:59.299   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:48:59.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:48:59.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:01.049   680   680 D VM_BMS  : wake_lock acquired
+01-06 06:49:01.049   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 06:49:01.049   680   680 D VM_BMS  : Start process_bms_data
+01-06 06:49:01.049   680   680 D VM_BMS  : For batt_temp=290 fcc_mah=2030
+01-06 06:49:01.049   680   680 D VM_BMS  : For ocv=3780310 batt_temp=290 soc=44
+01-06 06:49:01.049   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 06:49:01.049   680   680 D VM_BMS  : INIT: ocv=3780310 last_ocv=3780310 batt_temp=290 soc=44
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 slope=1600
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 rbatt_sf=97
+01-06 06:49:01.049   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=290
+01-06 06:49:01.049   680   680 D VM_BMS  : For ocv=3780302 batt_temp=290 soc=44
+01-06 06:49:01.049   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.773772 rbatt=0.181000 slope=0.160000 ibatt=0.036102 ocv=3.780303 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=43
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 slope=1600
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 rbatt_sf=97
+01-06 06:49:01.049   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=290
+01-06 06:49:01.049   680   680 D VM_BMS  : For ocv=3780336 batt_temp=290 soc=44
+01-06 06:49:01.049   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.812547 rbatt=0.181000 slope=0.160000 ibatt=-0.178052 ocv=3.780337 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=43
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 slope=1600
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 rbatt_sf=97
+01-06 06:49:01.049   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=290
+01-06 06:49:01.049   680   680 D VM_BMS  : For ocv=3780375 batt_temp=290 soc=44
+01-06 06:49:01.049   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.816944 rbatt=0.181000 slope=0.160000 ibatt=-0.202145 ocv=3.780375 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=43
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 slope=1600
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 rbatt_sf=97
+01-06 06:49:01.049   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=290
+01-06 06:49:01.049   680   680 D VM_BMS  : For ocv=3780415 batt_temp=290 soc=44
+01-06 06:49:01.049   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.817520 rbatt=0.181000 slope=0.160000 ibatt=-0.205109 ocv=3.780415 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=43
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 slope=1600
+01-06 06:49:01.049   680   680 D VM_BMS  : For soc=44 batt_temp=290 rbatt_sf=97
+01-06 06:49:01.049   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=290
+01-06 06:49:01.049   680   680 D VM_BMS  : For ocv=3780464 batt_temp=290 soc=44
+01-06 06:49:01.049   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.825757 rbatt=0.181000 slope=0.160000 ibatt=-0.250372 ocv=3.780464 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=43
+01-06 06:49:01.049   680   680 I VM_BMS  : power_supply_update: ocv_uv=3780464 ibatt=-250372 soc=44 seq_num=43
+01-06 06:49:01.049   680   680 D VM_BMS  : End process_bms_data
+01-06 06:49:01.049   680   680 D VM_BMS  : wake_lock released
+01-06 06:49:01.529   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:01.529  7155  7155 I FocusManager: << focus() called >>
+01-06 06:49:01.529  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:49:01.529  7155  7155 I FocusManager: Warning: element is already focused.
+01-06 06:49:01.529  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:49:01.709   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:01.809  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:49:01.809  7155  7155 I FocusManager: << focus() called >>
+01-06 06:49:01.809  7155  7155 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 06:49:01.809  7155  7155 I FocusManager: Warning: element is not focusable.
+01-06 06:49:02.229  7155  7155 I Settings: Content JS LOG: ***open new page operation, previous panel --> #root 
+01-06 06:49:02.229  7155  7155 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:440:9)
+01-06 06:49:02.229  7155  7155 I Settings: Content JS LOG: ***previous panel focus navi id --> 173 
+01-06 06:49:02.229  7155  7155 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:452:9)
+01-06 06:49:02.239  7155  7155 I FocusManager: << focus() called >>
+01-06 06:49:02.239  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: none-select focus
+01-06 06:49:02.309  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:49:02.309  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:49:02.309  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: none-select focus
+01-06 06:49:02.319  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:49:02.319  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:49:02.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:03.469   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowLeft, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:03.479  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: ArrowLeft, target: [object HTMLLIElement], class: none-select focus
+01-06 06:49:03.679   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowLeft, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:03.679  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: ArrowLeft, target: [object HTMLLIElement], class: none-select focus
+01-06 06:49:04.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:04.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:04.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:04.299   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:04.299   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:04.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:04.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:04.299   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:04.299   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:04.299   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:04.299   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:04.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:04.919   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:04.929  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLLIElement], class: none-select focus
+01-06 06:49:05.119   485   485 E GeckoConsole: Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-06 06:49:05.119   485   485 E GeckoConsole:     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:14:1)
+01-06 06:49:05.119   485   485 E GeckoConsole:     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:9:1)
+01-06 06:49:05.129   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:05.139  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLLIElement], class: none-select focus
+01-06 06:49:05.139   485   485 E GeckoConsole: Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-06 06:49:05.139   485   485 E GeckoConsole:     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:14:1)
+01-06 06:49:05.139   485   485 E GeckoConsole:     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:9:1)
+01-06 06:49:05.469  7155  7155 I Settings: Content JS LOG: ***back to previous page*** 
+01-06 06:49:05.469  7155  7155 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:431:13)
+01-06 06:49:05.469  7155  7155 I FocusManager: << focus() called >>
+01-06 06:49:05.469  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:49:05.489  7155  7155 I FocusManager:    current focused element, tag: LI, id: , class: none-select
+01-06 06:49:05.489  7155  7155 I FocusManager: <- blur on, tag: LI, id: , class: none-select
+01-06 06:49:05.489  7155  7155 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:49:05.509  7155  7155 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:49:05.509  7155  7155 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:49:05.539  7155  7155 I FocusManager: << focus() called >>
+01-06 06:49:05.539  7155  7155 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:49:05.539  7155  7155 I FocusManager: Warning: element is already focused.
+01-06 06:49:05.609   485   485 I Gecko   : XXX FIXME : Dispatch a mozFxAccountsChromeEvent: undefined
+01-06 06:49:05.799  7155  7155 I FocusManager: << focus() called >>
+01-06 06:49:05.799  7155  7155 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 06:49:05.819  7155  7155 I FocusManager: Warning: element is not focusable.
+01-06 06:49:05.929  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:08.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:08.969   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:08.989  7155  7155 I Settings: Content JS LOG: Softkeys engine: close group menu 
+01-06 06:49:08.989  7155  7155 I Settings:     at closeMenu (app://settings.gaiamobile.org/shared/js/softkey_panel.js:31:22)
+01-06 06:49:08.989  7155  7155 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLLIElement], class: focus
+01-06 06:49:09.169   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser14, class: browser
+01-06 06:49:09.179  7155  7155 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLLIElement], class: focus
+01-06 06:49:09.209   485   485 E GeckoConsole: Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-06 06:49:09.209   485   485 E GeckoConsole:     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:14:1)
+01-06 06:49:09.209   485   485 E GeckoConsole:     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:9:1)
+01-06 06:49:09.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:09.299   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:09.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:09.299   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:09.299   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:09.299   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:09.299   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:09.299   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:09.299   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:09.299   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:09.309   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:09.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:09.759  7155  7155 I Settings: Content JS LOG: Softkeys engine: close group menu 
+01-06 06:49:09.759  7155  7155 I Settings:     at closeMenu (app://settings.gaiamobile.org/shared/js/softkey_panel.js:31:22)
+01-06 06:49:09.759  7155  7155 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 06:49:09.759   485   485 I Gecko   : XXX FIXME : Dispatch a mozChromeEvent: default-volume-channel-changed
+01-06 06:49:09.769  7155  7155 I GeckoDump: fota_settings:uninit
+01-06 06:49:09.769  7155  7155 I GeckoDump: fota_settings:setting start to send command to system
+01-06 06:49:09.769  7155  7155 I GeckoDump: fota_settings:send to system category:common action:exit
+01-06 06:49:09.809   485   485 I FocusManager: << focus() called >>
+01-06 06:49:09.809   485   485 I FocusManager:    trying to set focus on, tag: IFRAME, id: browser0, class: browser
+01-06 06:49:09.819   485   485 I FocusManager:    current focused element, NULL, tag: , id: , class: 
+01-06 06:49:09.819   485   485 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 06:49:09.819   485   485 I FocusManager: -> focus is now on, tag: IFRAME, id: browser0, class: browser
+01-06 06:49:09.829  7155  7155 I Gecko   : -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=36507222019, cleanup.
+01-06 06:49:09.829  4661  4661 I FocusManager: * WindowRaised *
+01-06 06:49:09.829  4661  4661 I FocusManager: -> focus is now on, tag: DIV, id: , class: app focusable
+01-06 06:49:09.849  7155  7155 I Gecko   : -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=36507222019, cleanup.
+01-06 06:49:11.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:14.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:14.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:14.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:14.309   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:14.309   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:14.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:14.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:14.309   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:14.309   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:14.309   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:14.309   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:14.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:14.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:17.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:19.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:19.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:19.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:19.309   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:19.309   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:19.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:19.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:19.309   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:19.309   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:19.309   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:19.309   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:19.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:20.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:23.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:24.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:24.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:24.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:24.309   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:24.309   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:24.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:24.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:24.309   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:24.309   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:24.309   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:24.309   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:24.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:26.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:29.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:29.309   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:29.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:29.309   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:29.309   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:29.309   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:29.309   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:29.319   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:29.319   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:29.319   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:29.319   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:29.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:29.939  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:32.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:34.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:34.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:34.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:34.319   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:34.319   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:34.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:34.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:34.319   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:34.319   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:34.319   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:34.319   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:34.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:35.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:38.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:39.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:39.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:39.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:39.319   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:39.319   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:39.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:39.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:39.319   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:39.319   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:39.319   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:39.319   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:39.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:41.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:44.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:44.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:44.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:44.319   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:44.319   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:44.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:44.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:44.319   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:44.319   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:44.319   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:44.319   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:44.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:44.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:47.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:49.189   680   680 D VM_BMS  : wake_lock acquired
+01-06 06:49:49.189   680   680 D VM_BMS  : New BMS data - Size=56
+01-06 06:49:49.189   680   680 D VM_BMS  : Start process_bms_data
+01-06 06:49:49.189   680   680 D VM_BMS  : For batt_temp=289 fcc_mah=2030
+01-06 06:49:49.189   680   680 D VM_BMS  : For ocv=3780464 batt_temp=289 soc=44
+01-06 06:49:49.189   680   680 D VM_BMS  : fifo_count=5 acc_count=0
+01-06 06:49:49.189   680   680 D VM_BMS  : INIT: ocv=3780464 last_ocv=3780464 batt_temp=289 soc=44
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 slope=1600
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 rbatt_sf=97
+01-06 06:49:49.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=289
+01-06 06:49:49.189   680   680 D VM_BMS  : For ocv=3780507 batt_temp=289 soc=44
+01-06 06:49:49.189   680   680 D VM_BMS  : FIFO=0 fifo_avg=3.821024 rbatt=0.181000 slope=0.160000 ibatt=-0.223967 ocv=3.780508 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=44
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 slope=1600
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 rbatt_sf=97
+01-06 06:49:49.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=289
+01-06 06:49:49.189   680   680 D VM_BMS  : For ocv=3780557 batt_temp=289 soc=44
+01-06 06:49:49.189   680   680 D VM_BMS  : FIFO=1 fifo_avg=3.827207 rbatt=0.181000 slope=0.160000 ibatt=-0.257871 ocv=3.780558 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=44
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 slope=1600
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 rbatt_sf=97
+01-06 06:49:49.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=289
+01-06 06:49:49.189   680   680 D VM_BMS  : For ocv=3780609 batt_temp=289 soc=44
+01-06 06:49:49.189   680   680 D VM_BMS  : FIFO=2 fifo_avg=3.829252 rbatt=0.181000 slope=0.160000 ibatt=-0.268888 ocv=3.780610 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=44
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 slope=1600
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 rbatt_sf=97
+01-06 06:49:49.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=289
+01-06 06:49:49.189   680   680 D VM_BMS  : For ocv=3780662 batt_temp=289 soc=44
+01-06 06:49:49.189   680   680 D VM_BMS  : FIFO=3 fifo_avg=3.829840 rbatt=0.181000 slope=0.160000 ibatt=-0.271847 ocv=3.780662 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=44
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 slope=1600
+01-06 06:49:49.189   680   680 D VM_BMS  : For soc=44 batt_temp=289 rbatt_sf=97
+01-06 06:49:49.189   680   680 D VM_BMS  : rbatt_mohm_default=136, rbatt_mohm=131, sf=97 batt_temp=289
+01-06 06:49:49.189   680   680 D VM_BMS  : For ocv=3780713 batt_temp=289 soc=44
+01-06 06:49:49.189   680   680 D VM_BMS  : FIFO=4 fifo_avg=3.827772 rbatt=0.181000 slope=0.160000 ibatt=-0.260134 ocv=3.780713 soc=44 fcc_ah=2.030000 sample_count=128 sample_interval=70 seq_num=44
+01-06 06:49:49.189   680   680 I VM_BMS  : power_supply_update: ocv_uv=3780713 ibatt=-260134 soc=44 seq_num=44
+01-06 06:49:49.189   680   680 D VM_BMS  : End process_bms_data
+01-06 06:49:49.189   680   680 D VM_BMS  : wake_lock released
+01-06 06:49:49.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:49.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:49.319   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:49.319   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:49.319   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:49.319   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:49.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:49.319   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:49.319   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:49.319   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:49.319   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:49.319   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:50.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:53.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:54.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:54.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:54.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:54.329   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:54.329   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:54.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:54.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:54.329   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:54.329   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:54.329   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:54.329   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:54.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:56.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:49:59.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:49:59.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:49:59.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:49:59.329   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:49:59.329   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:59.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:49:59.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:49:59.329   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:49:59.329   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:49:59.329   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:49:59.329   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:49:59.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:49:59.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:02.019   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-06 06:50:02.049  4661  4661 I PerformanceTiming: Performance Entry: launcher.gaiamobile.org|mark|appLaunch@app://settings.gaiamobile.org|2044584.865000|0.000000|436802056
+01-06 06:50:02.059  4661  4661 I Gecko   : [BrowserElement] Pause painting on app://launcher.gaiamobile.org/manifest.webapp
+01-06 06:50:02.059  4661  4661 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLDivElement], class: app focusable
+01-06 06:50:02.069   485   485 I Gecko   : XXX FIXME : Dispatch a webapps-launch: undefined
+01-06 06:50:02.139  7315  7315 I Gecko   : ######################## extensions.js loaded
+01-06 06:50:02.169  7315  7315 W Settings: [JavaScript Warning: "Use of nsIFile in content process is deprecated." {file: "jar:file:///system/b2g/omni.ja!/components/DirectoryProvider.js" line: 9}]
+01-06 06:50:02.239   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-06 06:50:02.269  4661  4661 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLDivElement], class: app focusable
+01-06 06:50:02.939  4661  4661 I FocusManager: << focus() called >>
+01-06 06:50:02.939  4661  4661 I FocusManager:    trying to set focus on, tag: DIV, id: , class: app focusable
+01-06 06:50:02.939  4661  4661 I FocusManager: Warning: element is already focused.
+01-06 06:50:02.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:02.959  4661  4661 I FocusManager: << focus() called >>
+01-06 06:50:02.959  4661  4661 I FocusManager:    trying to set focus on, tag: DIV, id: , class: app focusable
+01-06 06:50:02.959  4661  4661 I FocusManager: Warning: element is already focused.
+01-06 06:50:03.069   485   485 D NS_ICC_SERVICE: GetCardState 
+01-06 06:50:03.069   485   485 D NS_ICC_SERVICE: GetIccInfo 
+01-06 06:50:03.079  7315  7315 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|contentInteractive|915.460000|0.000000|436803091
+01-06 06:50:03.159  7315  7315 I Settings: Content JS LOG: NavigationMap init 
+01-06 06:50:03.159  7315  7315 I Settings:     at _init (app://settings.gaiamobile.org/js/navigation_map.js:22:7)
+01-06 06:50:03.159  7315  7315 I Settings: Content JS LOG: --------observerInit------ 
+01-06 06:50:03.159  7315  7315 I Settings:     at _init (app://settings.gaiamobile.org/js/navigation_map.js:132:7)
+01-06 06:50:03.239  7315  7331 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:50:03.239  7315  7331 E linker  : warning: unable to get realpath for the library "/system/lib/hw/gralloc.msm8909.so". Will use given name.
+01-06 06:50:03.239  7315  7331 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:50:03.249  7315  7331 E linker  : warning: unable to get realpath for the library "libmemalloc.so". Will use given name.
+01-06 06:50:03.249  7315  7331 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:50:03.249  7315  7331 E linker  : warning: unable to get realpath for the library "libqdMetaData.so". Will use given name.
+01-06 06:50:03.249  7315  7331 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:50:03.249  7315  7331 E linker  : warning: unable to get realpath for the library "libqdutils.so". Will use given name.
+01-06 06:50:03.249  7315  7331 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:50:03.249  7315  7331 E linker  : warning: unable to get realpath for the library "libGLESv1_CM.so". Will use given name.
+01-06 06:50:03.249  7315  7331 E linker  : readlink('/proc/self/fd/41') failed: Invalid argument [fd=41]
+01-06 06:50:03.249  7315  7331 E linker  : warning: unable to get realpath for the library "libqservice.so". Will use given name.
+01-06 06:50:03.349  7315  7315 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|navigationLoaded|1184.100000|0.000000|436803360
+01-06 06:50:03.349  7315  7315 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|navigationInteractive|1184.515000|0.000000|436803361
+01-06 06:50:03.429   485   485 I FocusManager: << focus() called >>
+01-06 06:50:03.429   485   485 I FocusManager:    trying to set focus on, tag: IFRAME, id: browser15, class: browser
+01-06 06:50:03.439   485   485 I FocusManager:    current focused element, tag: IFRAME, id: browser0, class: browser hidden
+01-06 06:50:03.439   485   485 I FocusManager: <- blur on, tag: IFRAME, id: browser0, class: browser hidden
+01-06 06:50:03.449   485   485 I FocusManager: -> focus is now on, tag: IFRAME, id: browser15, class: browser
+01-06 06:50:03.459  4661  4661 I FocusManager: <- blur on, tag: DIV, id: , class: app focusable
+01-06 06:50:03.479   485   485 I GeckoConsole: Content JS LOG: [SimLockManager][2057.794] handling appopened 
+01-06 06:50:03.479   485   485 I GeckoConsole:     at BaseModule.prototype.debug (app://system.gaiamobile.org/js/base_module.js:25:422)
+01-06 06:50:03.489  7315  7315 I FocusManager: * WindowRaised *
+01-06 06:50:03.489  7315  7315 I FocusManager: -> focus is now on, NULL, tag: , id: , class: 
+01-06 06:50:03.829   485   485 I Gecko   : XXX FIXME : Dispatch a mozChromeEvent: default-volume-channel-changed
+01-06 06:50:04.029  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:04.029  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:04.059  7315  7315 I FocusManager:    current focused element, NULL, tag: , id: , class: 
+01-06 06:50:04.059  7315  7315 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 06:50:04.059  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:04.069  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:04.069  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:04.099  7315  7315 I Gecko   : -*- Nfc DOM: In MozNFCImpl Constructor
+01-06 06:50:04.099  7315  7315 I Gecko   : -*- Nfc DOM: MozNFCImpl init called
+01-06 06:50:04.169  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:04.169  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:04.199  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:04.199  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:04.199  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:04.199  7315  7315 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|visuallyLoaded|2035.500000|0.000000|436804212
+01-06 06:50:04.209  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:04.209  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:04.249  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:04.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:50:04.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 37000 .
+01-06 06:50:04.329   475   658 I ThermalEngine: Sensor:xo_therm:37000 mC
+01-06 06:50:04.329   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:04.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:50:04.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:50:04.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:50:04.329   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:50:04.329   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:50:04.329   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:04.329   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:50:04.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:50:04.399   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:04.509  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:04.509  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:04.509  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:04.509  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:04.529  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:04.529  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:04.529  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:04.539  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:04.539  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:04.549  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:50:04.549  7315  7315 I PerformanceTiming: Performance Entry: settings.gaiamobile.org|mark|fullyLoaded|2384.950000|0.000000|436804561
+01-06 06:50:04.579  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:04.579  7315  7315 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 06:50:04.589  7315  7315 I FocusManager: Warning: element is not focusable.
+01-06 06:50:04.639   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:04.669  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:50:04.699   485   485 I Gecko   : XXX FIXME : Dispatch a mozFxAccountsChromeEvent: undefined
+01-06 06:50:04.749  7315  7315 E Settings: [JavaScript Error: "TypeError: document.querySelector(...) is null" {file: "app://settings.gaiamobile.org/js/navigation_map.js" line: 347}]
+01-06 06:50:04.749  7315  7315 E Settings: _refreshCurrentPage@app://settings.gaiamobile.org/js/navigation_map.js:347:33
+01-06 06:50:04.749  7315  7315 E Settings: ctor_root_panel/_updateFotaSettings/request.onsuccess/<@app://settings.gaiamobile.org/js/panels/root/panel.js:930:13
+01-06 06:50:04.749  7315  7315 E Settings: perFileCallback@app://settings.gaiamobile.org/shared/js/lazy_loader.js:9:82
+01-06 06:50:04.749  7315  7315 I GeckoDump: fota_settings:setting  code has ran into init function
+01-06 06:50:04.809   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:04.829  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:04.829  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:04.829  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:04.829  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:04.829  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:04.839  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:04.859  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:04.859  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:04.859  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:04.859  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:04.859  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:04.869  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:50:05.009   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:05.009  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:50:05.059  4661  4661 I Gecko   : [BrowserElement] Resume painting on app://launcher.gaiamobile.org/manifest.webapp
+01-06 06:50:05.219   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:05.289  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:05.289  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:05.289  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:05.289  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:05.299  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:05.299  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:05.299  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:05.299  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:05.319  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:05.319  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:05.319  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:05.329  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:05.329  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:05.339  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:50:05.379   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:05.389  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:50:05.759   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:05.789  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:05.789  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:05.789  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:05.789  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:05.789  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:05.789  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:05.789  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:05.789  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:05.799  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:05.799  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:05.819  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:05.819  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:05.829  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:05.829  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:05.829  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:05.839  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement]
+01-06 06:50:05.909   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:05.909  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 06:50:05.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:06.719   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:06.749  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:06.749  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:06.749  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:06.749  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:06.759  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:06.759  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:06.759  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:06.759  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:06.759  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:06.759  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:06.759  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:06.759  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:06.809  7315  7315 I FocusManager:    current focused element, tag: LI, id: fota-settings, class: 
+01-06 06:50:06.809  7315  7315 I FocusManager: <- blur on, tag: LI, id: fota-settings, class: 
+01-06 06:50:06.809  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:06.819  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:06.819  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:06.819  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowRight, target: [object HTMLLIElement], id: fota-settings
+01-06 06:50:06.899   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:06.899  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowRight, target: [object HTMLLIElement], class: focus
+01-06 06:50:07.819   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowLeft, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:07.849  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:07.849  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:07.849  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:07.849  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:07.849  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:07.849  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:07.859  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:07.859  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:07.859  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:07.859  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:07.859  7315  7315 I Settings: Content JS LOG: before-------info [object Object] 
+01-06 06:50:07.859  7315  7315 I Settings:     at _rootReset (app://settings.gaiamobile.org/js/navigation_map.js:248:9)
+01-06 06:50:07.859  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:07.859  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:07.889  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:07.889  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:07.899  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:07.899  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:07.899  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:07.909   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowLeft, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:07.909  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowLeft, target: [object HTMLLIElement]
+01-06 06:50:07.949  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowLeft, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 06:50:08.179  7571  7595 I (Preallocated app): PAC file installed from data: URI
+01-06 06:50:08.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:09.289   485   485 D QLOC-OSAgent: WIFIHARDWARESTATE_DATA_ITEM_ID: 0
+01-06 06:50:09.289   485   485 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-06 06:50:09.289   485   485 E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: IS_WIFI_HARDWARE_ON: false
+01-06 06:50:09.289   485   485 E GeckoConsole: [JavaScript Error: "NS_ERROR_NOT_IMPLEMENTED: Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIQMozSettingsCallback.notifyMozSettingChangeBool]" {file: "file:///system/b2g/distribution/bundles/location/QMozSettingsShim.js" line: 6}]
+01-06 06:50:09.289   485   485 I Gecko   : [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-06 06:50:09.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:50:09.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:50:09.329   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:50:09.329   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:09.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:50:09.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:50:09.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:50:09.329   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:50:09.329   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:50:09.329   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:09.329   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:50:09.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:50:09.979   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:09.979  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:09.979  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:09.979  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:09.999  7315  7315 I GeckoDump: fota_settings:network is not Available
+01-06 06:50:09.999  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 06:50:10.019  7315  7315 E Settings: [JavaScript Error: "NotSupportedError: Operation is not supported" {file: "app://settings.gaiamobile.org/shared/elements/gaia_confirm/script.js" line: 125}]
+01-06 06:50:10.019  7315  7315 E Settings: window.GaiaConfirm<@app://settings.gaiamobile.org/shared/elements/gaia_confirm/script.js:125:10
+01-06 06:50:10.019  7315  7315 E Settings: @app://settings.gaiamobile.org/shared/elements/gaia_confirm/script.js:10:23
+01-06 06:50:10.029  7315  7315 I FocusManager: << blur() called or ClearFocus called >>
+01-06 06:50:10.029  7315  7315 I FocusManager: <- blur on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:10.039  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:10.039  7315  7315 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 06:50:10.059  7315  7315 I FocusManager: Warning: element is not focusable.
+01-06 06:50:10.059  7315  7315 W Settings: [JavaScript Warning: "Error in parsing value for 'border-radius'.  Declaration dropped." {file: "app://settings.gaiamobile.org/shared/elements/gaia_confirm/style.css" line: 36 column: 17 source: "  border-radius: none;"}]
+01-06 06:50:10.189   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:10.199  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLBodyElement], class: skin-organic uninit theme-settings
+01-06 06:50:11.929   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:11.929  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:11.929  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:11.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:11.959  7315  7315 I FocusManager:    current focused element, NULL, tag: , id: , class: 
+01-06 06:50:11.959  7315  7315 I FocusManager: <- blur on, NULL, tag: , id: , class: 
+01-06 06:50:11.959  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: fota-settings, class: focus
+01-06 06:50:11.969  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLBodyElement], class: skin-organic uninit theme-settings
+01-06 06:50:12.129   485   485 E GeckoConsole: Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-06 06:50:12.129   485   485 E GeckoConsole:     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:14:1)
+01-06 06:50:12.129   485   485 E GeckoConsole:     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:9:1)
+01-06 06:50:12.139   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:12.149  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLLIElement], id: fota-settings, class: focus
+01-06 06:50:12.149   485   485 E GeckoConsole: Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-06 06:50:12.149   485   485 E GeckoConsole:     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:14:1)
+01-06 06:50:12.149   485   485 E GeckoConsole:     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:9:1)
+01-06 06:50:13.039   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:13.049  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:13.049  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:13.049  7315  7315 I FocusManager:    current focused element, tag: LI, id: fota-settings, class: 
+01-06 06:50:13.059  7315  7315 I FocusManager: <- blur on, tag: LI, id: fota-settings, class: 
+01-06 06:50:13.059  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:13.069  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: fota-settings
+01-06 06:50:13.219   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:13.219  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 06:50:13.419   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:13.429  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:13.429  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:13.429  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:13.429  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:13.439  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:13.439  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement]
+01-06 06:50:13.509   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:13.519  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 06:50:13.969   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:13.989  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:13.989  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:13.989  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:13.999  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:13.999  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:14.009  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement]
+01-06 06:50:14.149   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:14.159  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 06:50:14.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:50:14.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:50:14.329   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:50:14.329   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:14.329   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:50:14.329   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:50:14.329   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:50:14.339   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:50:14.339   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:50:14.339   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:14.339   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:50:14.339   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:50:14.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:15.739   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:15.759  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:15.759  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:15.759  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:15.759  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:15.759  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:15.769  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLLIElement]
+01-06 06:50:15.919   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:15.919  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLLIElement], class: focus
+01-06 06:50:16.229   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:16.239  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:16.239  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:16.249  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:16.249  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:16.249  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:16.259  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLLIElement]
+01-06 06:50:16.439   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:16.449  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLLIElement], class: focus
+01-06 06:50:17.129   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:17.129  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:17.129  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:17.129  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:17.159  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:17.339   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:17.519  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:17.529  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:17.529  7315  7315 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 06:50:17.529  7315  7315 I FocusManager: Warning: element is not focusable.
+01-06 06:50:17.949  7315  7315 I Settings: Content JS LOG: ***open new page operation, previous panel --> #root 
+01-06 06:50:17.949  7315  7315 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:440:9)
+01-06 06:50:17.949  7315  7315 I Settings: Content JS LOG: ***previous panel focus navi id --> 44 
+01-06 06:50:17.949  7315  7315 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:452:9)
+01-06 06:50:17.949  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:17.949  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: none-select focus
+01-06 06:50:17.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:18.019  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:18.019  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:18.019  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: none-select focus
+01-06 06:50:18.029  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:18.029  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:18.739   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:18.749  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:18.749  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: none-select focus
+01-06 06:50:18.749  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: none-select
+01-06 06:50:18.749  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: none-select
+01-06 06:50:18.759  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: none-select focus
+01-06 06:50:18.759  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], class: none-select
+01-06 06:50:18.969   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:18.969  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: none-select focus
+01-06 06:50:19.179   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:19.189  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:19.189  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:19.189  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: none-select
+01-06 06:50:19.199  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: none-select
+01-06 06:50:19.199  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:19.209  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], class: none-select
+01-06 06:50:19.339   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:50:19.339   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:50:19.339   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:50:19.339   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:50:19.339   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:19.339   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:50:19.339   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:50:19.339   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:50:19.339   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:50:19.339   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:19.339   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:50:19.339   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:50:19.399   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:19.399  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 06:50:19.459  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:19.459  7315  7315 I FocusManager:    trying to set focus on, tag: FORM, id: softkeyPanel, class: skbar none-paddings visible focused
+01-06 06:50:19.479  7315  7315 I FocusManager: Warning: element is not focusable.
+01-06 06:50:19.859   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:19.859  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:19.859  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:19.859  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:19.909  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:20.019   485   485 D NS_TELEPHONY_SERVICE: EnumerateCalls:
+01-06 06:50:20.069   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:20.149  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:20.559  7315  7315 I Settings: Content JS LOG: ***open new page operation, previous panel --> #about 
+01-06 06:50:20.559  7315  7315 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:440:9)
+01-06 06:50:20.569  7315  7315 I Settings: Content JS LOG: ***previous panel focus navi id --> 51 
+01-06 06:50:20.569  7315  7315 I Settings:     at _findNaviId (app://settings.gaiamobile.org/js/navigation_map.js:452:9)
+01-06 06:50:20.569  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:20.569  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:20.589  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:20.589  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:20.599  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:20.609  7315  7315 I Settings: Content JS LOG: NavigationMap update 
+01-06 06:50:20.609  7315  7315 I Settings:     at _update (app://settings.gaiamobile.org/js/navigation_map.js:401:7)
+01-06 06:50:20.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:21.359   485   485 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:21.359  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:21.359  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:21.369  7315  7315 I FocusManager:    current focused element, tag: LI, id: , class: 
+01-06 06:50:21.369  7315  7315 I FocusManager: <- blur on, tag: LI, id: , class: 
+01-06 06:50:21.369  7315  7315 I FocusManager: -> focus is now on, tag: LI, id: , class: focus
+01-06 06:50:21.379  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement]
+01-06 06:50:21.559   485   485 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:21.569  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], class: focus
+01-06 06:50:23.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:23.959   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:23.969  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:23.969  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:23.969  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:23.969  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:24.139   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:24.139  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:24.339   475   658 D ThermalEngine: sensor_wait: xo_therm Wait done.
+01-06 06:50:24.339   475   658 D ThermalEngine: sensor_monitor: xo_therm Reading 38000 .
+01-06 06:50:24.339   475   658 I ThermalEngine: Sensor:xo_therm:38000 mC
+01-06 06:50:24.339   475   658 D ThermalEngine: update_active_thresh: xo_therm Active(1), Hi(1) 39000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:24.339   475   658 D ThermalEngine: sensor_monitor: xo_therm Sensor wait.
+01-06 06:50:24.339   475   658 D ThermalEngine: sensor_wait: xo_therm Wait start. 5000ms
+01-06 06:50:24.339   475   660 D ThermalEngine: sensor_wait: case_therm Wait done.
+01-06 06:50:24.339   475   660 D ThermalEngine: sensor_monitor: case_therm Reading 30000 .
+01-06 06:50:24.339   475   660 I ThermalEngine: Sensor:case_therm:30000 mC
+01-06 06:50:24.339   475   660 D ThermalEngine: update_active_thresh: case_therm Active(1), Hi(1) 42000, Lo(0) -2147483648, Interval(1) 5000
+01-06 06:50:24.339   475   660 D ThermalEngine: sensor_monitor: case_therm Sensor wait.
+01-06 06:50:24.339   475   660 D ThermalEngine: sensor_wait: case_therm Wait start. 5000ms
+01-06 06:50:25.329   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:25.339  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:25.339  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:25.339  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:25.339  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:25.569   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:25.579  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:26.239   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:26.239  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:26.239  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:26.239  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:26.249  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:26.469   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:26.479  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:26.949  2525  2525 E sdcard  : missing packages.list; retrying
+01-06 06:50:28.239   485   485 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:28.239  7315  7315 I FocusManager: << focus() called >>
+01-06 06:50:28.239  7315  7315 I FocusManager:    trying to set focus on, tag: LI, id: , class: focus
+01-06 06:50:28.239  7315  7315 I FocusManager: Warning: element is already focused.
+01-06 06:50:28.249  7315  7315 I Gecko   : [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], class: focus
+01-06 06:50:28.429   485   485 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://settings.gaiamobile.org/index.html, id: browser15, class: browser
+01-06 06:50:28.439  7315  7315 I Gecko   : [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], class: focus

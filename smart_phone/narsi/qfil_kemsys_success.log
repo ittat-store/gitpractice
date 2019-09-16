@@ -1,0 +1,1717 @@
+Meta Build Content XML Path: D:\Kemsys\Production_binaries\Production_binaries\contents.xml
+Find meta_cli.exe in the Meta build
+Search File: prog_emmc_firehose_8909_ddr.mbn
+search form search path:D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned
+Search File: rawprogram_unsparse.xml
+search form search path:D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\
+Search File: patch0.xml
+search form search path:D:\Kemsys\Production_binaries\Production_binaries\common\build\
+RAWPROGRAM file path: D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\rawprogram_unsparse.xml
+PATCH file path:D:\Kemsys\Production_binaries\Production_binaries\common\build\patch0.xml
+Start Download
+COM Port number:17
+Switch To EDL
+Program Path:D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\prog_emmc_firehose_8909_ddr.mbn
+***** Working Folder:C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9
+Binary build date: May  9 2017 @ 03:56:22
+QSAHARASERVER CALLED LIKE THIS: 'C:\Program Files (x86)\QUALCOMM\QPST\bin\QSaharaServer.ex'Current working dir: C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9
+Sahara mappings:
+2: amss.mbn
+6: apps.mbn
+8: dsp1.mbn
+10: dbl.mbn
+11: osbl.mbn
+12: dsp2.mbn
+16: efs1.mbn
+17: efs2.mbn
+20: efs3.mbn
+21: sbl1.mbn
+22: sbl2.mbn
+23: rpm.mbn
+25: tz.mbn
+28: dsp3.mbn
+29: acdb.mbn
+30: wdt.mbn
+31: mba.mbn
+13: D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\prog_emmc_firehose_8909_ddr.mbn
+11:25:26: Requested ID 13, file: "D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\prog_emmc_firehose_8909_ddr.mbn"
+11:25:26: 272816 bytes transferred in 0.156000 seconds (1.6678MBps)
+11:25:26: File transferred successfully
+NOTE: Target requested image 13 which is DeviceProgrammer. Forcing QUIT. This is by design, ** All is well ** SUCCESS!!
+11:25:26: Sahara protocol completed
+Sending Programmer Finished
+Switch To FireHose
+Wait for 3 seconds...
+Max Payload Size to Target:49152 Bytes
+Device Type:eMMC
+Platform:8x26
+Disable Ack Raw Data Every N Packets
+Skip Write:False
+Always Validate:False
+Use Verbose:False
+***** Working Folder:C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9
+Base Version: 17.04.27.14.27
+Binary build date: May  9 2017 @ 03:56:18
+Incremental Build version: 17.05. 9.03.56.18
+11:25:30: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+C:\Program Files (x86)\QUALCOMM\QPST\bin\fh_loader.exe --port=\\.\COM9 --search_path=D:\Kemsys\Production_binaries\Production_binaries --contentsxml=D:\Kemsys\Production_binaries\Production_binaries\contents.xml --flavor=asic --notfiles=cdt.bin --noprompt --showpercentagecomplete --zlpawarehost=1 --memoryname=emmc 
+************************************************
+11:25:30: INFO: Current working dir (cwd): C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\
+11:25:30: INFO: Showing network mappings to allow debugging
+11:25:30: INFO: Attempting to access 'D:\Kemsys\Production_binaries\Production_binaries\contents.xml'
+11:25:30: INFO: 
+EMMC
+11:25:30: INFO: 
+UFS
+11:25:30: INFO: 
+SPINOR
+11:25:30: INFO: 
+BOTH
+11:25:30: INFO: ( 1)                               (null)  NON-HLOS.bin
+11:25:30: INFO: ( 2)                               (null)  gpt_both0.bin
+11:25:30: INFO: ( 3)                               (null)  rawprogram_unsparse.xml
+11:25:30: INFO: ( 4)                               (null)  patch0.xml
+11:25:30: INFO: ( 5)                               (null)  sec.dat
+11:25:30: INFO: ( 6)                               (null)  boot.img
+11:25:30: INFO: ( 7)                               (null)  recovery.img
+11:25:30: INFO: ( 8)                               (null)  system.img
+11:25:30: INFO: ( 9)                               (null)  cache.img
+11:25:30: INFO: (10)                               (null)  persist.img
+11:25:30: INFO: (11)                               (null)  userdata.img
+11:25:30: INFO: (12)                               (null)  emmc_appsboot.mbn
+11:25:30: INFO: (13)                               (null)  lk
+11:25:30: INFO: (14)                               (null)  vmlinux
+11:25:30: INFO: (15)                               (null)  vmlinux
+11:25:30: INFO: (16)                               (null)  mba.mbn
+11:25:30: INFO: (17)                               (null)  qdsp6sw.mbn
+11:25:30: INFO: (18)                               (null)  load_coredump.cmm
+11:25:30: INFO: (19)                               (null)  recover_f3.cmm
+11:25:30: INFO: (20)                               (null)  ULogDump.cmm
+11:25:30: INFO: (21)                               (null)  NPADump.cmm
+11:25:30: INFO: (22)                               (null)  analy_qurt_error.cmm
+11:25:30: INFO: (23)                               (null)  mba.mbn
+11:25:30: INFO: (24)                               (null)  qdsp6sw.mbn
+11:25:30: INFO: (25)                               (null)  prog_emmc_firehose_8909_ddr.mbn
+11:25:30: INFO: (26)                               (null)  sbl1.mbn
+11:25:30: INFO: (27)                               (null)  jsdcc.elf
+11:25:30: INFO: (28)                               (null)  mjsdload.cmm
+11:25:30: INFO: (29)                               (null)  hwio.cmm
+11:25:30: INFO: (30)                               (null)  SBL1_emmc.elf
+11:25:30: INFO: (31)                               (null)  prog_emmc_firehose_8909_ddr.mbn
+11:25:30: INFO: (32)                               (null)  tz.mbn
+11:25:30: INFO: (33)                               (null)  tzbsp_no_xpu.mbn
+11:25:30: INFO: (34)                               (null)  sampleapp.mbn
+11:25:30: INFO: (35)                               (null)  widevine.mbn
+11:25:30: INFO: (36)                               (null)  cmnlib.mbn
+11:25:30: INFO: (37)                               (null)  keymaster.mbn
+11:25:30: INFO: (38)                               (null)  tz.mbn
+11:25:30: INFO: (39)                               (null)  tzbsp_no_xpu.mbn
+11:25:30: INFO: (40)                               (null)  tz.elf
+11:25:30: INFO: (41)                               (null)  rpm.mbn
+11:25:30: INFO: (42)                               (null)  rpm_ulogdump.cmm
+11:25:30: INFO: (43)                               (null)  rpm_log_bfam.py
+11:25:30: INFO: (44)                               (null)  std_extensions.cmm
+11:25:30: INFO: (45)                               (null)  std_toolsconfig.cmm
+11:25:30: INFO: (46)                               (null)  std_scripts.men
+11:25:30: INFO: (47)                               (null)  rpm_npadump.cmm
+11:25:30: INFO: (48)                               (null)  rpm.mbn
+11:25:30: INFO: (49)                               (null)  RPM_AAAAANAAR.elf
+11:25:30: INFO: (50)                               (null)  wcnss.mbn
+11:25:30: INFO: (51)                               (null)  wcnss.mbn
+11:25:30: INFO: 
+11:25:30: INFO: Trying to store 'rawprogram_unsparse.xml' in string table
+11:25:30: INFO: Looking for file 'rawprogram_unsparse.xml'
+11:25:30: INFO: 
+11:25:30: INFO: Trying to store 'patch0.xml' in string table
+11:25:30: INFO: Looking for file 'patch0.xml'
+11:25:30: INFO: User wants to talk to port '\\.\COM9'
+11:25:30: INFO: Took       0.00000000 seconds to open port
+11:25:30: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+11:25:30: INFO: If  you don't want this, use --dontsorttags
+11:25:30: INFO: Looking for file 'NON-HLOS.bin'
+11:25:30: INFO: Looking for file 'sbl1.mbn'
+	                         (_)            
+	__      ____ _ _ __ _ __  _ _ __   __ _ 
+	\ \ /\ / / _` | '__| '_ \| | '_ \ / _` |
+	 \ V  V / (_| | |  | | | | | | | | (_| |
+	  \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |
+	                                   __/ |
+	                                  |___/ 
+11:25:30: WARNING: You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+11:25:30: INFO: Looking for file 'sbl1.mbn'
+	                         (_)            
+	__      ____ _ _ __ _ __  _ _ __   __ _ 
+	\ \ /\ / / _` | '__| '_ \| | '_ \ / _` |
+	 \ V  V / (_| | |  | | | | | | | | (_| |
+	  \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |
+	                                   __/ |
+	                                  |___/ 
+11:25:30: WARNING: You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+11:25:30: INFO: Looking for file 'emmc_appsboot.mbn'
+11:25:30: INFO: Looking for file 'emmc_appsboot.mbn'
+11:25:30: INFO: Looking for file 'rpm.mbn'
+11:25:30: INFO: Looking for file 'rpm.mbn'
+11:25:30: INFO: Looking for file 'tz.mbn'
+11:25:30: INFO: Looking for file 'tz.mbn'
+11:25:30: INFO: Looking for file 'sec.dat'
+11:25:30: INFO: Looking for file 'system_1.img'
+11:25:30: INFO: Looking for file 'system_2.img'
+11:25:30: INFO: Looking for file 'system_3.img'
+11:25:30: INFO: Looking for file 'system_4.img'
+11:25:30: INFO: Looking for file 'system_5.img'
+11:25:30: INFO: Looking for file 'system_6.img'
+11:25:30: INFO: Looking for file 'system_7.img'
+11:25:30: INFO: Looking for file 'system_8.img'
+11:25:30: INFO: Looking for file 'system_9.img'
+11:25:30: INFO: Looking for file 'system_10.img'
+11:25:30: INFO: Looking for file 'system_11.img'
+11:25:30: INFO: Looking for file 'system_12.img'
+11:25:31: INFO: Looking for file 'system_13.img'
+11:25:31: INFO: Looking for file 'system_14.img'
+11:25:31: INFO: Looking for file 'system_15.img'
+11:25:31: INFO: Looking for file 'system_16.img'
+11:25:31: INFO: Looking for file 'system_17.img'
+11:25:31: INFO: Looking for file 'system_18.img'
+11:25:31: INFO: Looking for file 'persist_1.img'
+11:25:31: INFO: Looking for file 'cache_1.img'
+11:25:31: INFO: Looking for file 'cache_2.img'
+11:25:31: INFO: Looking for file 'cache_3.img'
+11:25:31: INFO: Looking for file 'boot.img'
+11:25:31: INFO: Looking for file 'recovery.img'
+11:25:31: INFO: Looking for file 'userdata_1.img'
+11:25:31: INFO: Looking for file 'userdata_2.img'
+11:25:31: INFO: Looking for file 'userdata_3.img'
+11:25:31: INFO: Looking for file 'userdata_4.img'
+11:25:31: INFO: Looking for file 'userdata_5.img'
+11:25:31: INFO: Looking for file 'userdata_6.img'
+11:25:31: INFO: Looking for file 'userdata_7.img'
+11:25:31: INFO: Looking for file 'userdata_8.img'
+11:25:31: INFO: Looking for file 'userdata_9.img'
+11:25:31: INFO: Looking for file 'userdata_10.img'
+11:25:31: INFO: Looking for file 'userdata_11.img'
+11:25:31: INFO: Looking for file 'userdata_12.img'
+11:25:31: INFO: Looking for file 'userdata_13.img'
+11:25:31: INFO: Looking for file 'userdata_14.img'
+11:25:31: INFO: Looking for file 'userdata_15.img'
+11:25:31: INFO: Looking for file 'userdata_16.img'
+11:25:31: INFO: Looking for file 'userdata_17.img'
+11:25:31: INFO: Looking for file 'userdata_18.img'
+11:25:31: INFO: Looking for file 'userdata_19.img'
+11:25:31: INFO: Looking for file 'userdata_20.img'
+11:25:31: INFO: Looking for file 'userdata_21.img'
+11:25:31: INFO: Looking for file 'userdata_22.img'
+11:25:31: INFO: Looking for file 'userdata_23.img'
+11:25:31: INFO: Looking for file 'userdata_24.img'
+11:25:31: INFO: Looking for file 'userdata_25.img'
+11:25:31: INFO: Looking for file 'userdata_26.img'
+11:25:31: INFO: Looking for file 'userdata_27.img'
+11:25:31: INFO: Looking for file 'userdata_28.img'
+11:25:31: INFO: Looking for file 'userdata_29.img'
+11:25:31: INFO: Looking for file 'userdata_30.img'
+11:25:31: INFO: Looking for file 'userdata_31.img'
+11:25:31: INFO: Looking for file 'userdata_32.img'
+11:25:31: INFO: Looking for file 'userdata_33.img'
+11:25:31: INFO: Looking for file 'userdata_34.img'
+11:25:31: INFO: Looking for file 'userdata_35.img'
+11:25:31: INFO: Looking for file 'userdata_36.img'
+11:25:31: INFO: Looking for file 'userdata_37.img'
+11:25:31: INFO: Looking for file 'userdata_38.img'
+11:25:31: INFO: Looking for file 'userdata_39.img'
+11:25:31: INFO: Looking for file 'userdata_40.img'
+11:25:31: INFO: Looking for file 'userdata_41.img'
+11:25:31: INFO: Looking for file 'userdata_42.img'
+11:25:31: INFO: Looking for file 'userdata_43.img'
+11:25:31: INFO: Looking for file 'userdata_44.img'
+11:25:31: INFO: Looking for file 'userdata_45.img'
+11:25:31: INFO: Looking for file 'userdata_46.img'
+11:25:31: INFO: Looking for file 'userdata_47.img'
+11:25:31: INFO: Looking for file 'gpt_main0.bin'
+11:25:31: INFO: Looking for file 'gpt_backup0.bin'
+11:25:31: INFO: 
+Total to be tansferd with <program> or <read> is 818.59 MB
+11:25:31: INFO: Sending <configure>
+11:25:31: INFO: TARGET SAID: 'logbuf@0x08057C98 fh@0x08054B00'
+11:25:31: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+11:25:31: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+11:25:31: INFO: In handleProgram('NON-HLOS.bin')
+11:25:31: INFO: Looking for file 'NON-HLOS.bin'
+11:25:31: INFO: =======================================================
+11:25:31: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\NON-HLOS.bin'}
+11:25:31: INFO: {<program> (55.41 MB) 113475 sectors needed at location 131072 on LUN 0}
+11:25:31: INFO: =======================================================
+11:25:31: INFO: TARGET SAID: 'logbuf@0x08057C98 fh@0x08054B00'
+11:25:31: INFO: TARGET SAID: 'start 131072, num 113475'
+11:25:33: INFO: Overall to target  2.028 seconds (16.27 MBps)
+11:25:33: INFO: {percent files transferred   4.03%}
+11:25:34: INFO: Overall to target  3.151 seconds (17.58 MBps)
+11:25:34: INFO: {percent files transferred   6.77%}
+11:25:34: INFO: TARGET SAID: 'Finished sector address 244547'
+11:25:34: INFO: 
+11:25:34: INFO: =======================================================
+11:25:34: INFO: ==================== {SUCCESS} ========================
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {percent files transferred   6.77%}
+11:25:34: INFO: In handleProgram('sbl1.mbn')
+11:25:34: INFO: Looking for file 'sbl1.mbn'
+	                         (_)            
+	__      ____ _ _ __ _ __  _ _ __   __ _ 
+	\ \ /\ / / _` | '__| '_ \| | '_ \ / _` |
+	 \ V  V / (_| | |  | | | | | | | | (_| |
+	  \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |
+	                                   __/ |
+	                                  |___/ 
+11:25:34: WARNING: You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'}
+11:25:34: INFO: {<program> (237.43 KB) 475 sectors needed at location 262144 on LUN 0}
+11:25:34: INFO: =======================================================
+11:25:34: INFO: TARGET SAID: 'start 262144, num 475'
+11:25:34: INFO: FILE ACCESS SLOW!!  237.50 KB in  0.015 seconds (  15.46 MBps) --- Overall to target  0.047 seconds (4.93 MBps)
+11:25:34: INFO: {percent files transferred   6.80%}
+11:25:34: INFO: TARGET SAID: 'Finished sector address 262619'
+11:25:34: INFO: 
+11:25:34: INFO: =======================================================
+11:25:34: INFO: ==================== {SUCCESS} ========================
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {percent files transferred   6.80%}
+11:25:34: INFO: In handleProgram('sbl1.mbn')
+11:25:34: INFO: Looking for file 'sbl1.mbn'
+	                         (_)            
+	__      ____ _ _ __ _ __  _ _ __   __ _ 
+	\ \ /\ / / _` | '__| '_ \| | '_ \ / _` |
+	 \ V  V / (_| | |  | | | | | | | | (_| |
+	  \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |
+	                                   __/ |
+	                                  |___/ 
+11:25:34: WARNING: You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'}
+11:25:34: INFO: {<program> (237.43 KB) 475 sectors needed at location 263168 on LUN 0}
+11:25:34: INFO: =======================================================
+11:25:34: INFO: TARGET SAID: 'start 263168, num 475'
+11:25:34: INFO: FILE ACCESS SLOW!!  237.50 KB in  0.015 seconds (  15.46 MBps) --- Overall to target  0.016 seconds (14.50 MBps)
+11:25:34: INFO: {percent files transferred   6.83%}
+11:25:34: INFO: TARGET SAID: 'Finished sector address 263643'
+11:25:34: INFO: 
+11:25:34: INFO: =======================================================
+11:25:34: INFO: ==================== {SUCCESS} ========================
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {percent files transferred   6.83%}
+11:25:34: INFO: In handleProgram('emmc_appsboot.mbn')
+11:25:34: INFO: Looking for file 'emmc_appsboot.mbn'
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\LINUX\android\out\target\product\msm8909\emmc_appsboot.mbn'}
+11:25:34: INFO: {<program> (504.82 KB) 1010 sectors needed at location 264192 on LUN 0}
+11:25:34: INFO: =======================================================
+11:25:34: INFO: TARGET SAID: 'start 264192, num 1010'
+11:25:34: INFO: FILE ACCESS SLOW!!  505.00 KB in  0.015 seconds (  32.88 MBps) --- Overall to target  0.047 seconds (10.49 MBps)
+11:25:34: INFO: {percent files transferred   6.89%}
+11:25:34: INFO: TARGET SAID: 'Finished sector address 265202'
+11:25:34: INFO: 
+11:25:34: INFO: =======================================================
+11:25:34: INFO: ==================== {SUCCESS} ========================
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {percent files transferred   6.89%}
+11:25:34: INFO: In handleProgram('emmc_appsboot.mbn')
+11:25:34: INFO: Looking for file 'emmc_appsboot.mbn'
+11:25:34: INFO: =======================================================
+11:25:34: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\LINUX\android\out\target\product\msm8909\emmc_appsboot.mbn'}
+11:25:34: INFO: {<program> (504.82 KB) 1010 sectors needed at location 266240 on LUN 0}
+11:25:34: INFO: =======================================================
+11:25:34: INFO: TARGET SAID: 'start 266240, num 1010'
+11:25:34: INFO: FILE ACCESS SLOW!!  505.00 KB in  0.015 seconds (  32.88 MBps) --- Overall to target  0.016 seconds (30.82 MBps)
+11:25:34: INFO: {percent files transferred   6.95%}
+11:25:35: INFO: TARGET SAID: 'Finished sector address 267250'
+11:25:35: INFO: 
+11:25:35: INFO: =======================================================
+11:25:35: INFO: ==================== {SUCCESS} ========================
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {percent files transferred   6.95%}
+11:25:35: INFO: In handleProgram('rpm.mbn')
+11:25:35: INFO: Looking for file 'rpm.mbn'
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\rpm_proc\build\ms\bin\8909\pm8909\rpm.mbn'}
+11:25:35: INFO: {<program> (158.24 KB) 317 sectors needed at location 268288 on LUN 0}
+11:25:35: INFO: =======================================================
+11:25:35: INFO: TARGET SAID: 'start 268288, num 317'
+11:25:35: INFO: FILE ACCESS SLOW!!  158.50 KB in  0.015 seconds (  10.32 MBps) --- Overall to target  0.015 seconds (10.32 MBps)
+11:25:35: INFO: {percent files transferred   6.96%}
+11:25:35: INFO: TARGET SAID: 'Finished sector address 268605'
+11:25:35: INFO: 
+11:25:35: INFO: =======================================================
+11:25:35: INFO: ==================== {SUCCESS} ========================
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {percent files transferred   6.96%}
+11:25:35: INFO: In handleProgram('rpm.mbn')
+11:25:35: INFO: Looking for file 'rpm.mbn'
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\rpm_proc\build\ms\bin\8909\pm8909\rpm.mbn'}
+11:25:35: INFO: {<program> (158.24 KB) 317 sectors needed at location 269312 on LUN 0}
+11:25:35: INFO: =======================================================
+11:25:35: INFO: TARGET SAID: 'start 269312, num 317'
+11:25:35: INFO: FILE ACCESS SLOW!!  158.50 KB in  0.015 seconds (  10.32 MBps) --- Overall to target  0.010 seconds (15.48 MBps)
+11:25:35: INFO: {percent files transferred   6.98%}
+11:25:35: INFO: TARGET SAID: 'Finished sector address 269629'
+11:25:35: INFO: 
+11:25:35: INFO: =======================================================
+11:25:35: INFO: ==================== {SUCCESS} ========================
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {percent files transferred   6.98%}
+11:25:35: INFO: In handleProgram('tz.mbn')
+11:25:35: INFO: Looking for file 'tz.mbn'
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\trustzone_images\build\ms\bin\MAZAANAA\tz.mbn'}
+11:25:35: INFO: {<program> (540.48 KB) 1081 sectors needed at location 270336 on LUN 0}
+11:25:35: INFO: =======================================================
+11:25:35: INFO: TARGET SAID: 'start 270336, num 1081'
+11:25:35: INFO: FILE ACCESS SLOW!!  540.50 KB in  0.015 seconds (  35.19 MBps) --- Overall to target  0.031 seconds (17.03 MBps)
+11:25:35: INFO: {percent files transferred   7.05%}
+11:25:35: INFO: TARGET SAID: 'Finished sector address 271417'
+11:25:35: INFO: 
+11:25:35: INFO: =======================================================
+11:25:35: INFO: ==================== {SUCCESS} ========================
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {percent files transferred   7.05%}
+11:25:35: INFO: In handleProgram('tz.mbn')
+11:25:35: INFO: Looking for file 'tz.mbn'
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\trustzone_images\build\ms\bin\MAZAANAA\tz.mbn'}
+11:25:35: INFO: {<program> (540.48 KB) 1081 sectors needed at location 271872 on LUN 0}
+11:25:35: INFO: =======================================================
+11:25:35: INFO: TARGET SAID: 'start 271872, num 1081'
+11:25:35: INFO: FILE ACCESS SLOW!!  540.50 KB in  0.015 seconds (  35.19 MBps) --- Overall to target  0.016 seconds (32.99 MBps)
+11:25:35: INFO: {percent files transferred   7.11%}
+11:25:35: INFO: TARGET SAID: 'Finished sector address 272953'
+11:25:35: INFO: 
+11:25:35: INFO: =======================================================
+11:25:35: INFO: ==================== {SUCCESS} ========================
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {percent files transferred   7.11%}
+11:25:35: INFO: In handleProgram('sec.dat')
+11:25:35: INFO: Looking for file 'sec.dat'
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\tools\sectools\resources\build\sec.dat'}
+11:25:35: INFO: {<program> (80.00 B) 1 sectors needed at location 396352 on LUN 0}
+11:25:35: INFO: =======================================================
+11:25:35: INFO: TARGET SAID: 'start 396352, num 1'
+11:25:35: INFO: FILE ACCESS SLOW!!   512.00 B in  0.015 seconds (  33.33 KBps) --- Overall to target  0.010 seconds (50.00 KBps)
+11:25:35: INFO: {percent files transferred   7.11%}
+11:25:35: INFO: TARGET SAID: 'Finished sector address 396353'
+11:25:35: INFO: 
+11:25:35: INFO: =======================================================
+11:25:35: INFO: ==================== {SUCCESS} ========================
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {percent files transferred   7.11%}
+11:25:35: INFO: In handleProgram('system_1.img')
+11:25:35: INFO: Looking for file 'system_1.img'
+11:25:35: INFO: =======================================================
+11:25:35: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_1.img'}
+11:25:35: INFO: {<program> (128.01 MB) 262160 sectors needed at location 461920 on LUN 0}
+11:25:35: INFO: =======================================================
+11:25:35: INFO: TARGET SAID: 'start 461920, num 262160'
+11:25:37: INFO: Overall to target  2.028 seconds (20.71 MBps)
+11:25:37: INFO: {percent files transferred  12.24%}
+11:25:39: INFO: Overall to target  4.072 seconds (20.63 MBps)
+11:25:39: INFO: {percent files transferred  17.37%}
+11:25:41: INFO: Overall to target  6.115 seconds (20.77 MBps)
+11:25:41: INFO: {percent files transferred  22.63%}
+11:25:41: INFO: Overall to target  6.256 seconds (20.46 MBps)
+11:25:41: INFO: {percent files transferred  22.75%}
+11:25:41: INFO: TARGET SAID: 'Finished sector address 724080'
+11:25:41: INFO: 
+11:25:41: INFO: =======================================================
+11:25:41: INFO: ==================== {SUCCESS} ========================
+11:25:41: INFO: =======================================================
+11:25:41: INFO: {percent files transferred  22.75%}
+11:25:41: INFO: In handleProgram('system_2.img')
+11:25:41: INFO: Looking for file 'system_2.img'
+11:25:41: INFO: =======================================================
+11:25:41: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_2.img'}
+11:25:41: INFO: {<program> (8.00 KB) 16 sectors needed at location 724712 on LUN 0}
+11:25:41: INFO: =======================================================
+11:25:41: INFO: TARGET SAID: 'start 724712, num 16'
+11:25:41: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:25:41: INFO: {percent files transferred  22.75%}
+11:25:41: INFO: TARGET SAID: 'Finished sector address 724728'
+11:25:41: INFO: 
+11:25:41: INFO: =======================================================
+11:25:41: INFO: ==================== {SUCCESS} ========================
+11:25:41: INFO: =======================================================
+11:25:41: INFO: {percent files transferred  22.75%}
+11:25:41: INFO: In handleProgram('system_3.img')
+11:25:41: INFO: Looking for file 'system_3.img'
+11:25:41: INFO: =======================================================
+11:25:41: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_3.img'}
+11:25:41: INFO: {<program> (125.74 MB) 257520 sectors needed at location 728664 on LUN 0}
+11:25:41: INFO: =======================================================
+11:25:41: INFO: TARGET SAID: 'start 728664, num 257520'
+11:25:43: INFO: Overall to target  2.028 seconds (20.71 MBps)
+11:25:43: INFO: {percent files transferred  27.88%}
+11:25:46: INFO: Overall to target  4.072 seconds (20.87 MBps)
+11:25:46: INFO: {percent files transferred  33.13%}
+11:25:48: INFO: Overall to target  6.100 seconds (20.49 MBps)
+11:25:48: INFO: {percent files transferred  38.02%}
+11:25:48: INFO: Overall to target  6.178 seconds (20.35 MBps)
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: TARGET SAID: 'Finished sector address 986184'
+11:25:48: INFO: 
+11:25:48: INFO: =======================================================
+11:25:48: INFO: ==================== {SUCCESS} ========================
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: In handleProgram('system_4.img')
+11:25:48: INFO: Looking for file 'system_4.img'
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_4.img'}
+11:25:48: INFO: {<program> (8.00 KB) 16 sectors needed at location 986208 on LUN 0}
+11:25:48: INFO: =======================================================
+11:25:48: INFO: TARGET SAID: 'start 986208, num 16'
+11:25:48: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.015 seconds (533.33 KBps)
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: TARGET SAID: 'Finished sector address 986224'
+11:25:48: INFO: 
+11:25:48: INFO: =======================================================
+11:25:48: INFO: ==================== {SUCCESS} ========================
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: In handleProgram('system_5.img')
+11:25:48: INFO: Looking for file 'system_5.img'
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_5.img'}
+11:25:48: INFO: {<program> (8.00 KB) 16 sectors needed at location 1248352 on LUN 0}
+11:25:48: INFO: =======================================================
+11:25:48: INFO: TARGET SAID: 'start 1248352, num 16'
+11:25:48: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: TARGET SAID: 'Finished sector address 1248368'
+11:25:48: INFO: 
+11:25:48: INFO: =======================================================
+11:25:48: INFO: ==================== {SUCCESS} ========================
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: In handleProgram('system_6.img')
+11:25:48: INFO: Looking for file 'system_6.img'
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_6.img'}
+11:25:48: INFO: {<program> (8.00 KB) 16 sectors needed at location 1249000 on LUN 0}
+11:25:48: INFO: =======================================================
+11:25:48: INFO: TARGET SAID: 'start 1249000, num 16'
+11:25:48: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: TARGET SAID: 'Finished sector address 1249016'
+11:25:48: INFO: 
+11:25:48: INFO: =======================================================
+11:25:48: INFO: ==================== {SUCCESS} ========================
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {percent files transferred  38.11%}
+11:25:48: INFO: In handleProgram('system_7.img')
+11:25:48: INFO: Looking for file 'system_7.img'
+11:25:48: INFO: =======================================================
+11:25:48: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_7.img'}
+11:25:48: INFO: {<program> (125.74 MB) 257520 sectors needed at location 1252952 on LUN 0}
+11:25:48: INFO: =======================================================
+11:25:48: INFO: TARGET SAID: 'start 1252952, num 257520'
+11:25:50: INFO: Overall to target  2.028 seconds (20.71 MBps)
+11:25:50: INFO: {percent files transferred  43.25%}
+11:25:52: INFO: Overall to target  4.040 seconds (20.54 MBps)
+11:25:52: INFO: {percent files transferred  48.25%}
+11:25:54: INFO: Overall to target  6.084 seconds (20.67 MBps)
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: Overall to target  6.115 seconds (20.56 MBps)
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: TARGET SAID: 'Finished sector address 1510472'
+11:25:54: INFO: 
+11:25:54: INFO: =======================================================
+11:25:54: INFO: ==================== {SUCCESS} ========================
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: In handleProgram('system_8.img')
+11:25:54: INFO: Looking for file 'system_8.img'
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_8.img'}
+11:25:54: INFO: {<program> (8.00 KB) 16 sectors needed at location 1510496 on LUN 0}
+11:25:54: INFO: =======================================================
+11:25:54: INFO: TARGET SAID: 'start 1510496, num 16'
+11:25:54: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: TARGET SAID: 'Finished sector address 1510512'
+11:25:54: INFO: 
+11:25:54: INFO: =======================================================
+11:25:54: INFO: ==================== {SUCCESS} ========================
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: In handleProgram('system_9.img')
+11:25:54: INFO: Looking for file 'system_9.img'
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_9.img'}
+11:25:54: INFO: {<program> (8.00 KB) 16 sectors needed at location 1772640 on LUN 0}
+11:25:54: INFO: =======================================================
+11:25:54: INFO: TARGET SAID: 'start 1772640, num 16'
+11:25:54: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: TARGET SAID: 'Finished sector address 1772656'
+11:25:54: INFO: 
+11:25:54: INFO: =======================================================
+11:25:54: INFO: ==================== {SUCCESS} ========================
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: In handleProgram('system_10.img')
+11:25:54: INFO: Looking for file 'system_10.img'
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_10.img'}
+11:25:54: INFO: {<program> (8.00 KB) 16 sectors needed at location 1773288 on LUN 0}
+11:25:54: INFO: =======================================================
+11:25:54: INFO: TARGET SAID: 'start 1773288, num 16'
+11:25:54: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: TARGET SAID: 'Finished sector address 1773304'
+11:25:54: INFO: 
+11:25:54: INFO: =======================================================
+11:25:54: INFO: ==================== {SUCCESS} ========================
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {percent files transferred  53.48%}
+11:25:54: INFO: In handleProgram('system_11.img')
+11:25:54: INFO: Looking for file 'system_11.img'
+11:25:54: INFO: =======================================================
+11:25:54: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_11.img'}
+11:25:54: INFO: {<program> (125.76 MB) 257560 sectors needed at location 1777240 on LUN 0}
+11:25:54: INFO: =======================================================
+11:25:54: INFO: TARGET SAID: 'start 1777240, num 257560'
+11:25:56: INFO: Overall to target  2.044 seconds (20.55 MBps)
+11:25:56: INFO: {percent files transferred  58.61%}
+11:25:58: INFO: Overall to target  4.056 seconds (20.71 MBps)
+11:25:58: INFO: {percent files transferred  63.74%}
+11:26:00: INFO: Overall to target  6.100 seconds (20.62 MBps)
+11:26:00: INFO: {percent files transferred  68.84%}
+11:26:00: INFO: Overall to target  6.131 seconds (20.51 MBps)
+11:26:00: INFO: {percent files transferred  68.84%}
+11:26:00: INFO: TARGET SAID: 'Finished sector address 2034800'
+11:26:00: INFO: 
+11:26:00: INFO: =======================================================
+11:26:00: INFO: ==================== {SUCCESS} ========================
+11:26:00: INFO: =======================================================
+11:26:00: INFO: {percent files transferred  68.84%}
+11:26:00: INFO: In handleProgram('system_12.img')
+11:26:00: INFO: Looking for file 'system_12.img'
+11:26:00: INFO: =======================================================
+11:26:00: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_12.img'}
+11:26:00: INFO: {<program> (8.00 KB) 16 sectors needed at location 2296928 on LUN 0}
+11:26:00: INFO: =======================================================
+11:26:00: INFO: TARGET SAID: 'start 2296928, num 16'
+11:26:00: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:00: INFO: {percent files transferred  68.84%}
+11:26:01: INFO: TARGET SAID: 'Finished sector address 2296944'
+11:26:01: INFO: 
+11:26:01: INFO: =======================================================
+11:26:01: INFO: ==================== {SUCCESS} ========================
+11:26:01: INFO: =======================================================
+11:26:01: INFO: {percent files transferred  68.84%}
+11:26:01: INFO: In handleProgram('system_13.img')
+11:26:01: INFO: Looking for file 'system_13.img'
+11:26:01: INFO: =======================================================
+11:26:01: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_13.img'}
+11:26:01: INFO: {<program> (8.00 KB) 16 sectors needed at location 2297576 on LUN 0}
+11:26:01: INFO: =======================================================
+11:26:01: INFO: TARGET SAID: 'start 2297576, num 16'
+11:26:01: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:01: INFO: {percent files transferred  68.84%}
+11:26:01: INFO: TARGET SAID: 'Finished sector address 2297592'
+11:26:01: INFO: 
+11:26:01: INFO: =======================================================
+11:26:01: INFO: ==================== {SUCCESS} ========================
+11:26:01: INFO: =======================================================
+11:26:01: INFO: {percent files transferred  68.84%}
+11:26:01: INFO: In handleProgram('system_14.img')
+11:26:01: INFO: Looking for file 'system_14.img'
+11:26:01: INFO: =======================================================
+11:26:01: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_14.img'}
+11:26:01: INFO: {<program> (56.81 MB) 116344 sectors needed at location 2301528 on LUN 0}
+11:26:01: INFO: =======================================================
+11:26:01: INFO: TARGET SAID: 'start 2301528, num 116344'
+11:26:03: INFO: Overall to target  2.044 seconds (21.04 MBps)
+11:26:03: INFO: {percent files transferred  74.10%}
+11:26:03: INFO: Overall to target  2.777 seconds (20.46 MBps)
+11:26:03: INFO: {percent files transferred  75.78%}
+11:26:03: INFO: TARGET SAID: 'Finished sector address 2417872'
+11:26:03: INFO: 
+11:26:03: INFO: =======================================================
+11:26:03: INFO: ==================== {SUCCESS} ========================
+11:26:03: INFO: =======================================================
+11:26:03: INFO: {percent files transferred  75.78%}
+11:26:03: INFO: In handleProgram('system_15.img')
+11:26:03: INFO: Looking for file 'system_15.img'
+11:26:03: INFO: =======================================================
+11:26:03: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_15.img'}
+11:26:03: INFO: {<program> (8.00 KB) 16 sectors needed at location 2559072 on LUN 0}
+11:26:03: INFO: =======================================================
+11:26:03: INFO: TARGET SAID: 'start 2559072, num 16'
+11:26:03: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:03: INFO: {percent files transferred  75.78%}
+11:26:03: INFO: TARGET SAID: 'Finished sector address 2559088'
+11:26:03: INFO: 
+11:26:03: INFO: =======================================================
+11:26:03: INFO: ==================== {SUCCESS} ========================
+11:26:03: INFO: =======================================================
+11:26:03: INFO: {percent files transferred  75.78%}
+11:26:03: INFO: In handleProgram('system_16.img')
+11:26:03: INFO: Looking for file 'system_16.img'
+11:26:03: INFO: =======================================================
+11:26:03: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_16.img'}
+11:26:03: INFO: {<program> (8.00 KB) 16 sectors needed at location 2821216 on LUN 0}
+11:26:03: INFO: =======================================================
+11:26:04: INFO: TARGET SAID: 'start 2821216, num 16'
+11:26:04: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:04: INFO: {percent files transferred  75.79%}
+11:26:04: INFO: TARGET SAID: 'Finished sector address 2821232'
+11:26:04: INFO: 
+11:26:04: INFO: =======================================================
+11:26:04: INFO: ==================== {SUCCESS} ========================
+11:26:04: INFO: =======================================================
+11:26:04: INFO: {percent files transferred  75.79%}
+11:26:04: INFO: In handleProgram('system_17.img')
+11:26:04: INFO: Looking for file 'system_17.img'
+11:26:04: INFO: =======================================================
+11:26:04: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_17.img'}
+11:26:04: INFO: {<program> (8.00 KB) 16 sectors needed at location 2821864 on LUN 0}
+11:26:04: INFO: =======================================================
+11:26:04: INFO: TARGET SAID: 'start 2821864, num 16'
+11:26:04: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.016 seconds (500.00 KBps)
+11:26:04: INFO: {percent files transferred  75.79%}
+11:26:04: INFO: TARGET SAID: 'Finished sector address 2821880'
+11:26:04: INFO: 
+11:26:04: INFO: =======================================================
+11:26:04: INFO: ==================== {SUCCESS} ========================
+11:26:04: INFO: =======================================================
+11:26:04: INFO: {percent files transferred  75.79%}
+11:26:04: INFO: In handleProgram('system_18.img')
+11:26:04: INFO: Looking for file 'system_18.img'
+11:26:04: INFO: =======================================================
+11:26:04: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_18.img'}
+11:26:04: INFO: {<program> (74.55 MB) 152688 sectors needed at location 2825816 on LUN 0}
+11:26:04: INFO: =======================================================
+11:26:04: INFO: TARGET SAID: 'start 2825816, num 152688'
+11:26:06: INFO: Overall to target  2.028 seconds (20.71 MBps)
+11:26:06: INFO: {percent files transferred  80.92%}
+11:26:07: INFO: Overall to target  3.651 seconds (20.42 MBps)
+11:26:07: INFO: {percent files transferred  84.89%}
+11:26:07: INFO: TARGET SAID: 'Finished sector address 2978504'
+11:26:07: INFO: 
+11:26:07: INFO: =======================================================
+11:26:07: INFO: ==================== {SUCCESS} ========================
+11:26:07: INFO: =======================================================
+11:26:07: INFO: {percent files transferred  84.89%}
+11:26:07: INFO: In handleProgram('persist_1.img')
+11:26:07: INFO: Looking for file 'persist_1.img'
+11:26:07: INFO: =======================================================
+11:26:07: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\persist_1.img'}
+11:26:07: INFO: {<program> (4.67 MB) 9560 sectors needed at location 2978504 on LUN 0}
+11:26:07: INFO: =======================================================
+11:26:07: INFO: TARGET SAID: 'start 2978504, num 9560'
+11:26:08: INFO: Overall to target  0.281 seconds (16.61 MBps)
+11:26:08: INFO: {percent files transferred  85.46%}
+11:26:08: INFO: TARGET SAID: 'Finished sector address 2988064'
+11:26:08: INFO: 
+11:26:08: INFO: =======================================================
+11:26:08: INFO: ==================== {SUCCESS} ========================
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {percent files transferred  85.46%}
+11:26:08: INFO: In handleProgram('cache_1.img')
+11:26:08: INFO: Looking for file 'cache_1.img'
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\cache_1.img'}
+11:26:08: INFO: {<program> (6.09 MB) 12480 sectors needed at location 3044040 on LUN 0}
+11:26:08: INFO: =======================================================
+11:26:08: INFO: TARGET SAID: 'start 3044040, num 12480'
+11:26:08: INFO: Overall to target  0.327 seconds (18.64 MBps)
+11:26:08: INFO: {percent files transferred  86.21%}
+11:26:08: INFO: TARGET SAID: 'Finished sector address 3056520'
+11:26:08: INFO: 
+11:26:08: INFO: =======================================================
+11:26:08: INFO: ==================== {SUCCESS} ========================
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {percent files transferred  86.21%}
+11:26:08: INFO: In handleProgram('cache_2.img')
+11:26:08: INFO: Looking for file 'cache_2.img'
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\cache_2.img'}
+11:26:08: INFO: {<program> (8.00 KB) 16 sectors needed at location 3306184 on LUN 0}
+11:26:08: INFO: =======================================================
+11:26:08: INFO: TARGET SAID: 'start 3306184, num 16'
+11:26:08: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:08: INFO: {percent files transferred  86.21%}
+11:26:08: INFO: TARGET SAID: 'Finished sector address 3306200'
+11:26:08: INFO: 
+11:26:08: INFO: =======================================================
+11:26:08: INFO: ==================== {SUCCESS} ========================
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {percent files transferred  86.21%}
+11:26:08: INFO: In handleProgram('cache_3.img')
+11:26:08: INFO: Looking for file 'cache_3.img'
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\cache_3.img'}
+11:26:08: INFO: {<program> (8.00 KB) 16 sectors needed at location 3306320 on LUN 0}
+11:26:08: INFO: =======================================================
+11:26:08: INFO: TARGET SAID: 'start 3306320, num 16'
+11:26:08: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:08: INFO: {percent files transferred  86.21%}
+11:26:08: INFO: TARGET SAID: 'Finished sector address 3306336'
+11:26:08: INFO: 
+11:26:08: INFO: =======================================================
+11:26:08: INFO: ==================== {SUCCESS} ========================
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {percent files transferred  86.21%}
+11:26:08: INFO: In handleProgram('boot.img')
+11:26:08: INFO: Looking for file 'boot.img'
+11:26:08: INFO: =======================================================
+11:26:08: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\LINUX\android\out\target\product\msm8909\boot.img'}
+11:26:08: INFO: {<program> (8.64 MB) 17687 sectors needed at location 396384 on LUN 0}
+11:26:08: INFO: =======================================================
+11:26:08: INFO: TARGET SAID: 'start 396384, num 17687'
+11:26:09: INFO: Overall to target  0.500 seconds (17.27 MBps)
+11:26:09: INFO: {percent files transferred  87.27%}
+11:26:09: INFO: TARGET SAID: 'Finished sector address 414071'
+11:26:09: INFO: 
+11:26:09: INFO: =======================================================
+11:26:09: INFO: ==================== {SUCCESS} ========================
+11:26:09: INFO: =======================================================
+11:26:09: INFO: {percent files transferred  87.27%}
+11:26:09: INFO: In handleProgram('recovery.img')
+11:26:09: INFO: Looking for file 'recovery.img'
+11:26:09: INFO: =======================================================
+11:26:09: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\LINUX\android\out\target\product\msm8909\recovery.img'}
+11:26:09: INFO: {<program> (10.84 MB) 22207 sectors needed at location 3568328 on LUN 0}
+11:26:09: INFO: =======================================================
+11:26:09: INFO: TARGET SAID: 'start 3568328, num 22207'
+11:26:09: INFO: Overall to target  0.531 seconds (20.42 MBps)
+11:26:09: INFO: {percent files transferred  88.59%}
+11:26:10: INFO: TARGET SAID: 'Finished sector address 3590535'
+11:26:10: INFO: 
+11:26:10: INFO: =======================================================
+11:26:10: INFO: ==================== {SUCCESS} ========================
+11:26:10: INFO: =======================================================
+11:26:10: INFO: {percent files transferred  88.59%}
+11:26:10: INFO: In handleProgram('userdata_1.img')
+11:26:10: INFO: Looking for file 'userdata_1.img'
+11:26:10: INFO: =======================================================
+11:26:10: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_1.img'}
+11:26:10: INFO: {<program> (93.00 MB) 190472 sectors needed at location 4196352 on LUN 0}
+11:26:10: INFO: =======================================================
+11:26:10: INFO: TARGET SAID: 'start 4196352, num 190472'
+11:26:12: INFO: Overall to target  2.044 seconds (20.55 MBps)
+11:26:12: INFO: {percent files transferred  93.72%}
+11:26:14: INFO: Overall to target  4.087 seconds (20.80 MBps)
+11:26:14: INFO: {percent files transferred  98.97%}
+11:26:14: INFO: Overall to target  4.540 seconds (20.49 MBps)
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: TARGET SAID: 'Finished sector address 4386824'
+11:26:14: INFO: 
+11:26:14: INFO: =======================================================
+11:26:14: INFO: ==================== {SUCCESS} ========================
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: In handleProgram('userdata_2.img')
+11:26:14: INFO: Looking for file 'userdata_2.img'
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_2.img'}
+11:26:14: INFO: {<program> (8.00 KB) 16 sectors needed at location 4458496 on LUN 0}
+11:26:14: INFO: =======================================================
+11:26:14: INFO: TARGET SAID: 'start 4458496, num 16'
+11:26:14: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: TARGET SAID: 'Finished sector address 4458512'
+11:26:14: INFO: 
+11:26:14: INFO: =======================================================
+11:26:14: INFO: ==================== {SUCCESS} ========================
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: In handleProgram('userdata_3.img')
+11:26:14: INFO: Looking for file 'userdata_3.img'
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_3.img'}
+11:26:14: INFO: {<program> (8.00 KB) 16 sectors needed at location 4461064 on LUN 0}
+11:26:14: INFO: =======================================================
+11:26:14: INFO: TARGET SAID: 'start 4461064, num 16'
+11:26:14: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: TARGET SAID: 'Finished sector address 4461080'
+11:26:14: INFO: 
+11:26:14: INFO: =======================================================
+11:26:14: INFO: ==================== {SUCCESS} ========================
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: In handleProgram('userdata_4.img')
+11:26:14: INFO: Looking for file 'userdata_4.img'
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_4.img'}
+11:26:14: INFO: {<program> (8.00 KB) 16 sectors needed at location 4720640 on LUN 0}
+11:26:14: INFO: =======================================================
+11:26:14: INFO: TARGET SAID: 'start 4720640, num 16'
+11:26:14: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: TARGET SAID: 'Finished sector address 4720656'
+11:26:14: INFO: 
+11:26:14: INFO: =======================================================
+11:26:14: INFO: ==================== {SUCCESS} ========================
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {percent files transferred  99.95%}
+11:26:14: INFO: In handleProgram('userdata_5.img')
+11:26:14: INFO: Looking for file 'userdata_5.img'
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_5.img'}
+11:26:14: INFO: {<program> (8.00 KB) 16 sectors needed at location 4982784 on LUN 0}
+11:26:14: INFO: =======================================================
+11:26:14: INFO: TARGET SAID: 'start 4982784, num 16'
+11:26:14: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:14: INFO: {percent files transferred  99.96%}
+11:26:14: INFO: TARGET SAID: 'Finished sector address 4982800'
+11:26:14: INFO: 
+11:26:14: INFO: =======================================================
+11:26:14: INFO: ==================== {SUCCESS} ========================
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {percent files transferred  99.96%}
+11:26:14: INFO: In handleProgram('userdata_6.img')
+11:26:14: INFO: Looking for file 'userdata_6.img'
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_6.img'}
+11:26:14: INFO: {<program> (8.00 KB) 16 sectors needed at location 4985352 on LUN 0}
+11:26:14: INFO: =======================================================
+11:26:14: INFO: TARGET SAID: 'start 4985352, num 16'
+11:26:14: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:14: INFO: {percent files transferred  99.96%}
+11:26:14: INFO: TARGET SAID: 'Finished sector address 4985368'
+11:26:14: INFO: 
+11:26:14: INFO: =======================================================
+11:26:14: INFO: ==================== {SUCCESS} ========================
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {percent files transferred  99.96%}
+11:26:14: INFO: In handleProgram('userdata_7.img')
+11:26:14: INFO: Looking for file 'userdata_7.img'
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_7.img'}
+11:26:14: INFO: {<program> (8.00 KB) 16 sectors needed at location 5244928 on LUN 0}
+11:26:14: INFO: =======================================================
+11:26:14: INFO: TARGET SAID: 'start 5244928, num 16'
+11:26:14: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:14: INFO: {percent files transferred  99.96%}
+11:26:14: INFO: TARGET SAID: 'Finished sector address 5244944'
+11:26:14: INFO: 
+11:26:14: INFO: =======================================================
+11:26:14: INFO: ==================== {SUCCESS} ========================
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {percent files transferred  99.96%}
+11:26:14: INFO: In handleProgram('userdata_8.img')
+11:26:14: INFO: Looking for file 'userdata_8.img'
+11:26:14: INFO: =======================================================
+11:26:14: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_8.img'}
+11:26:14: INFO: {<program> (8.00 KB) 16 sectors needed at location 5507072 on LUN 0}
+11:26:14: INFO: =======================================================
+11:26:14: INFO: TARGET SAID: 'start 5507072, num 16'
+11:26:14: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.015 seconds (533.33 KBps)
+11:26:14: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 5507088'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: In handleProgram('userdata_9.img')
+11:26:15: INFO: Looking for file 'userdata_9.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_9.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 5509640 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 5509640, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 5509656'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: In handleProgram('userdata_10.img')
+11:26:15: INFO: Looking for file 'userdata_10.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_10.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 5769216 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 5769216, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 5769232'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: In handleProgram('userdata_11.img')
+11:26:15: INFO: Looking for file 'userdata_11.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_11.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 6031360 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 6031360, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 6031376'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: In handleProgram('userdata_12.img')
+11:26:15: INFO: Looking for file 'userdata_12.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_12.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 6033928 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 6033928, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 6033944'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: In handleProgram('userdata_13.img')
+11:26:15: INFO: Looking for file 'userdata_13.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_13.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 6293504 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 6293504, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 6293520'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: In handleProgram('userdata_14.img')
+11:26:15: INFO: Looking for file 'userdata_14.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_14.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 6555648 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 6555648, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 6555664'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.96%}
+11:26:15: INFO: In handleProgram('userdata_15.img')
+11:26:15: INFO: Looking for file 'userdata_15.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_15.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 6558216 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 6558216, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 6558232'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_16.img')
+11:26:15: INFO: Looking for file 'userdata_16.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_16.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 6817792 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 6817792, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 6817808'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_17.img')
+11:26:15: INFO: Looking for file 'userdata_17.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_17.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 7079936 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 7079936, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 7079952'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_18.img')
+11:26:15: INFO: Looking for file 'userdata_18.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_18.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 7342080 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 7342080, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 7342096'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_19.img')
+11:26:15: INFO: Looking for file 'userdata_19.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_19.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 7604224 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 7604224, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 7604240'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_20.img')
+11:26:15: INFO: Looking for file 'userdata_20.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_20.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 7866368 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 7866368, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 7866384'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_21.img')
+11:26:15: INFO: Looking for file 'userdata_21.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_21.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 8128512 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 8128512, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 8128528'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_22.img')
+11:26:15: INFO: Looking for file 'userdata_22.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_22.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 8390656 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 8390656, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 8390672'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_23.img')
+11:26:15: INFO: Looking for file 'userdata_23.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_23.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 8652800 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 8652800, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 8652816'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_24.img')
+11:26:15: INFO: Looking for file 'userdata_24.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_24.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 8914944 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 8914944, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 8914960'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.97%}
+11:26:15: INFO: In handleProgram('userdata_25.img')
+11:26:15: INFO: Looking for file 'userdata_25.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_25.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 9177088 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 9177088, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 9177104'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: In handleProgram('userdata_26.img')
+11:26:15: INFO: Looking for file 'userdata_26.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_26.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 9439232 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 9439232, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 9439248'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: In handleProgram('userdata_27.img')
+11:26:15: INFO: Looking for file 'userdata_27.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_27.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 9701376 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 9701376, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 9701392'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: In handleProgram('userdata_28.img')
+11:26:15: INFO: Looking for file 'userdata_28.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_28.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 9963520 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 9963520, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 9963536'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: In handleProgram('userdata_29.img')
+11:26:15: INFO: Looking for file 'userdata_29.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_29.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 10225664 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:15: INFO: TARGET SAID: 'start 10225664, num 16'
+11:26:15: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: TARGET SAID: 'Finished sector address 10225680'
+11:26:15: INFO: 
+11:26:15: INFO: =======================================================
+11:26:15: INFO: ==================== {SUCCESS} ========================
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {percent files transferred  99.98%}
+11:26:15: INFO: In handleProgram('userdata_30.img')
+11:26:15: INFO: Looking for file 'userdata_30.img'
+11:26:15: INFO: =======================================================
+11:26:15: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_30.img'}
+11:26:15: INFO: {<program> (8.00 KB) 16 sectors needed at location 10487808 on LUN 0}
+11:26:15: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 10487808, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 10487824'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: In handleProgram('userdata_31.img')
+11:26:16: INFO: Looking for file 'userdata_31.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_31.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 10749952 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 10749952, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 10749968'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: In handleProgram('userdata_32.img')
+11:26:16: INFO: Looking for file 'userdata_32.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_32.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 10752520 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 10752520, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 10752536'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: In handleProgram('userdata_33.img')
+11:26:16: INFO: Looking for file 'userdata_33.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_33.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 11012096 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 11012096, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 11012112'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: In handleProgram('userdata_34.img')
+11:26:16: INFO: Looking for file 'userdata_34.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_34.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 11274240 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 11274240, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 11274256'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: In handleProgram('userdata_35.img')
+11:26:16: INFO: Looking for file 'userdata_35.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_35.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 11276808 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 11276808, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 11276824'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.98%}
+11:26:16: INFO: In handleProgram('userdata_36.img')
+11:26:16: INFO: Looking for file 'userdata_36.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_36.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 11536384 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 11536384, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 11536400'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_37.img')
+11:26:16: INFO: Looking for file 'userdata_37.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_37.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 11798528 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 11798528, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 11798544'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_38.img')
+11:26:16: INFO: Looking for file 'userdata_38.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_38.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 12060672 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 12060672, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 12060688'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_39.img')
+11:26:16: INFO: Looking for file 'userdata_39.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_39.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 12322816 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 12322816, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 12322832'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_40.img')
+11:26:16: INFO: Looking for file 'userdata_40.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_40.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 12584960 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 12584960, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 12584976'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_41.img')
+11:26:16: INFO: Looking for file 'userdata_41.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_41.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 12847104 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 12847104, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 12847120'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_42.img')
+11:26:16: INFO: Looking for file 'userdata_42.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_42.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 13109248 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 13109248, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 13109264'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_43.img')
+11:26:16: INFO: Looking for file 'userdata_43.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_43.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 13371392 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 13371392, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 13371408'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_44.img')
+11:26:16: INFO: Looking for file 'userdata_44.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_44.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 13633536 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 13633536, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 13633552'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_45.img')
+11:26:16: INFO: Looking for file 'userdata_45.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_45.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 13895680 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 13895680, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 13895696'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred  99.99%}
+11:26:16: INFO: In handleProgram('userdata_46.img')
+11:26:16: INFO: Looking for file 'userdata_46.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_46.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 14157824 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 14157824, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.016 seconds (500.00 KBps)
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 14157840'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: In handleProgram('userdata_47.img')
+11:26:16: INFO: Looking for file 'userdata_47.img'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_47.img'}
+11:26:16: INFO: {<program> (8.00 KB) 16 sectors needed at location 14419968 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 14419968, num 16'
+11:26:16: INFO: FILE ACCESS SLOW!!    8.00 KB in  0.015 seconds ( 533.33 KBps) --- Overall to target  0.010 seconds (800.00 KBps)
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 14419984'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: In handleProgram('gpt_main0.bin')
+11:26:16: INFO: Looking for file 'gpt_main0.bin'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\gpt_main0.bin'}
+11:26:16: INFO: {<program> (17.00 KB) 34 sectors needed at location 0 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 0, num 34'
+11:26:16: INFO: FILE ACCESS SLOW!!   17.00 KB in  0.015 seconds (   1.11 MBps) --- Overall to target  0.010 seconds (1.66 MBps)
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 34'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: In handleProgram('gpt_backup0.bin')
+11:26:16: INFO: Looking for file 'gpt_backup0.bin'
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {<program> FILE: 'D:\Kemsys\Production_binaries\Production_binaries\common\build\gpt_backup0.bin'}
+11:26:16: INFO: {<program> (16.50 KB) 33 sectors needed at location 0 on LUN 0}
+11:26:16: INFO: =======================================================
+11:26:16: INFO: TARGET SAID: 'start 15269855, num 33'
+11:26:16: INFO: FILE ACCESS SLOW!!   16.50 KB in  0.015 seconds (   1.07 MBps) --- Overall to target  0.010 seconds (1.61 MBps)
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: TARGET SAID: 'Finished sector address 15269888'
+11:26:16: INFO: 
+11:26:16: INFO: =======================================================
+11:26:16: INFO: ==================== {SUCCESS} ========================
+11:26:16: INFO: =======================================================
+11:26:16: INFO: {percent files transferred 100.00%}
+11:26:16: INFO: TARGET SAID: 'Patched sector 9 with 00E8FFDE'
+11:26:16: INFO: TARGET SAID: 'Patched sector 15269862 with 00E8FFDE'
+11:26:17: INFO: TARGET SAID: 'Patched sector 1 with 00E8FFDE'
+11:26:17: INFO: TARGET SAID: 'Patched sector 15269887 with 00E8FFDE'
+11:26:17: INFO: TARGET SAID: 'Patched sector 1 with 00E8FFFF'
+11:26:17: INFO: TARGET SAID: 'Patched sector 15269887 with 00E8FFFF'
+11:26:17: INFO: TARGET SAID: 'Patched sector 15269887 with 00E8FFDF'
+11:26:17: INFO: TARGET SAID: 'crc start sector 2, over bytes 4096'
+11:26:17: INFO: TARGET SAID: 'Patched sector 1 with 5838A812'
+11:26:17: INFO: TARGET SAID: 'crc start sector 15269855, over bytes 4096'
+11:26:17: INFO: TARGET SAID: 'Patched sector 15269887 with 5838A812'
+11:26:17: INFO: TARGET SAID: 'Patched sector 1 with 00000000'
+11:26:17: INFO: TARGET SAID: 'crc start sector 1, over bytes 92'
+11:26:17: INFO: TARGET SAID: 'Patched sector 1 with 073A34C6'
+11:26:17: INFO: TARGET SAID: 'Patched sector 15269887 with 00000000'
+11:26:17: INFO: TARGET SAID: 'crc start sector 15269887, over bytes 92'
+11:26:17: INFO: TARGET SAID: 'Patched sector 15269887 with C092CA12'
+11:26:17: INFO: ==============================================================
+11:26:17: INFO: Files used and their paths
+11:26:17: INFO:   1 'C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\port_trace.txt'
+11:26:17: INFO:   2 'D:\Kemsys\Production_binaries\Production_binaries\contents.xml'
+11:26:17: INFO:   3 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\rawprogram_unsparse.xml'
+11:26:17: INFO:   4 'D:\Kemsys\Production_binaries\Production_binaries\common\build\patch0.xml'
+11:26:17: INFO:   5 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\NON-HLOS.bin'
+11:26:17: INFO:   6 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+11:26:17: INFO:   7 'D:\Kemsys\Production_binaries\Production_binaries\LINUX\android\out\target\product\msm8909\emmc_appsboot.mbn'
+11:26:17: INFO:   8 'D:\Kemsys\Production_binaries\Production_binaries\rpm_proc\build\ms\bin\8909\pm8909\rpm.mbn'
+11:26:17: INFO:   9 'D:\Kemsys\Production_binaries\Production_binaries\trustzone_images\build\ms\bin\MAZAANAA\tz.mbn'
+11:26:17: INFO:  10 'D:\Kemsys\Production_binaries\Production_binaries\common\tools\sectools\resources\build\sec.dat'
+11:26:17: INFO:  11 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_1.img'
+11:26:17: INFO:  12 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_2.img'
+11:26:17: INFO:  13 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_3.img'
+11:26:17: INFO:  14 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_4.img'
+11:26:17: INFO:  15 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_5.img'
+11:26:17: INFO:  16 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_6.img'
+11:26:17: INFO:  17 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_7.img'
+11:26:17: INFO:  18 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_8.img'
+11:26:17: INFO:  19 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_9.img'
+11:26:17: INFO:  20 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_10.img'
+11:26:17: INFO:  21 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_11.img'
+11:26:17: INFO:  22 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_12.img'
+11:26:17: INFO:  23 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_13.img'
+11:26:17: INFO:  24 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_14.img'
+11:26:17: INFO:  25 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_15.img'
+11:26:17: INFO:  26 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_16.img'
+11:26:17: INFO:  27 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_17.img'
+11:26:17: INFO:  28 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\system_18.img'
+11:26:17: INFO:  29 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\persist_1.img'
+11:26:17: INFO:  30 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\cache_1.img'
+11:26:17: INFO:  31 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\cache_2.img'
+11:26:17: INFO:  32 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\cache_3.img'
+11:26:17: INFO:  33 'D:\Kemsys\Production_binaries\Production_binaries\LINUX\android\out\target\product\msm8909\boot.img'
+11:26:17: INFO:  34 'D:\Kemsys\Production_binaries\Production_binaries\LINUX\android\out\target\product\msm8909\recovery.img'
+11:26:17: INFO:  35 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_1.img'
+11:26:17: INFO:  36 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_2.img'
+11:26:17: INFO:  37 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_3.img'
+11:26:17: INFO:  38 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_4.img'
+11:26:17: INFO:  39 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_5.img'
+11:26:17: INFO:  40 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_6.img'
+11:26:17: INFO:  41 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_7.img'
+11:26:17: INFO:  42 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_8.img'
+11:26:17: INFO:  43 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_9.img'
+11:26:17: INFO:  44 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_10.img'
+11:26:17: INFO:  45 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_11.img'
+11:26:17: INFO:  46 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_12.img'
+11:26:17: INFO:  47 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_13.img'
+11:26:17: INFO:  48 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_14.img'
+11:26:17: INFO:  49 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_15.img'
+11:26:17: INFO:  50 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_16.img'
+11:26:17: INFO:  51 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_17.img'
+11:26:17: INFO:  52 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_18.img'
+11:26:17: INFO:  53 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_19.img'
+11:26:17: INFO:  54 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_20.img'
+11:26:17: INFO:  55 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_21.img'
+11:26:17: INFO:  56 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_22.img'
+11:26:17: INFO:  57 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_23.img'
+11:26:17: INFO:  58 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_24.img'
+11:26:17: INFO:  59 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_25.img'
+11:26:17: INFO:  60 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_26.img'
+11:26:17: INFO:  61 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_27.img'
+11:26:17: INFO:  62 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_28.img'
+11:26:17: INFO:  63 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_29.img'
+11:26:17: INFO:  64 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_30.img'
+11:26:17: INFO:  65 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_31.img'
+11:26:17: INFO:  66 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_32.img'
+11:26:17: INFO:  67 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_33.img'
+11:26:17: INFO:  68 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_34.img'
+11:26:17: INFO:  69 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_35.img'
+11:26:17: INFO:  70 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_36.img'
+11:26:17: INFO:  71 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_37.img'
+11:26:17: INFO:  72 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_38.img'
+11:26:17: INFO:  73 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_39.img'
+11:26:17: INFO:  74 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_40.img'
+11:26:17: INFO:  75 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_41.img'
+11:26:17: INFO:  76 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_42.img'
+11:26:17: INFO:  77 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_43.img'
+11:26:17: INFO:  78 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_44.img'
+11:26:17: INFO:  79 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_45.img'
+11:26:17: INFO:  80 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_46.img'
+11:26:17: INFO:  81 'D:\Kemsys\Production_binaries\Production_binaries\common\build\bin\asic\sparse_images\userdata_47.img'
+11:26:17: INFO:  82 'D:\Kemsys\Production_binaries\Production_binaries\common\build\gpt_main0.bin'
+11:26:17: INFO:  83 'D:\Kemsys\Production_binaries\Production_binaries\common\build\gpt_backup0.bin'
+	                         (_)            
+	__      ____ _ _ __ _ __  _ _ __   __ _ 
+	\ \ /\ / / _` | '__| '_ \| | '_ \ / _` |
+	 \ V  V / (_| | |  | | | | | | | | (_| |
+	  \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |
+	                                   __/ |
+	                                  |___/ 
+11:26:17: INFO: ==============================================================
+11:26:17: INFO: NOTE: There were WARNINGS!! Repeated here, but please see log for more detail
+You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+You provided a contents.xml which specified 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\sbl1.mbn'
+However searching through --search_paths found 'D:\Kemsys\Production_binaries\Production_binaries\boot_images\build\ms\bin\8909\emmc\unsigned\sbl1.mbn'
+This is a FEATURE to allow you to override contents.xml mappings
+If you DID NOT WANT THIS behavior, use --forcecontentsxmlpaths
+NOTE: There were WARNINGS!! Repeated above, but please see log for more detail
+11:26:17: INFO: ==============================================================
+11:26:17: INFO:      _             (done)
+11:26:17: INFO:     | |                 
+11:26:17: INFO:   __| | ___  _ __   ___ 
+11:26:17: INFO:  / _` |/ _ \| '_ \ / _ \
+11:26:17: INFO: | (_| | (_) | | | |  __/
+11:26:17: INFO:  \__,_|\___/|_| |_|\___|
+11:26:17: INFO: {All Finished Successfully}
+11:26:17: INFO: Overall to target 46.785 seconds (17.50 MBps)
+11:26:17: INFO: {percent files transferred 100.00%}
+Writing log to 'C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\port_trace.txt', might take a minute
+Log is 'C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\port_trace.txt'
+***** Working Folder:C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9
+Base Version: 17.04.27.14.27
+Binary build date: May  9 2017 @ 03:56:18
+Incremental Build version: 17.05. 9.03.56.18
+11:26:18: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+C:\Program Files (x86)\QUALCOMM\QPST\bin\fh_loader.exe --port=\\.\COM9 --noprompt --showpercentagecomplete --zlpawarehost=1 --memoryname=emmc 
+************************************************
+11:26:18: INFO: Current working dir (cwd): C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\
+11:26:18: INFO: Showing network mappings to allow debugging
+11:26:18: INFO: User wants to talk to port '\\.\COM9'
+11:26:18: INFO: Took       0.00000000 seconds to open port
+11:26:18: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+11:26:18: INFO: If  you don't want this, use --dontsorttags
+11:26:18: INFO: Sending <configure>
+11:26:18: INFO: TARGET SAID: 'logbuf@0x08057C98 fh@0x08054B00'
+11:26:18: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+11:26:18: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+11:26:18: INFO: ==============================================================
+11:26:18: INFO: Files used and their paths
+11:26:18: INFO:   1 'C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\port_trace.txt'
+11:26:18: INFO:      _             (done)
+11:26:18: INFO:     | |                 
+11:26:18: INFO:   __| | ___  _ __   ___ 
+11:26:18: INFO:  / _` |/ _ \| '_ \ / _ \
+11:26:18: INFO: | (_| | (_) | | | |  __/
+11:26:18: INFO:  \__,_|\___/|_| |_|\___|
+11:26:18: INFO: {All Finished Successfully}
+11:26:18: INFO: FILE ACCESS SLOW!!     0.00 B in  0.015 seconds (    0.00 Bps) --- Overall to target  0.031 seconds (0.00 Bps)
+Writing log to 'C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\port_trace.txt', might take a minute
+Log is 'C:\Users\kumarbra\AppData\Roaming\Qualcomm\QFIL\COMPORT_9\port_trace.txt'
+Download Succeed
+Finish Download
