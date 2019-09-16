@@ -1,0 +1,376 @@
+vanganar@vtlw044l:~/workspace/MSM8909_LA_3.1.1/msm8909/common/build$ sudo python fastboot_complete.py 
+
+============================================================
+
+Platform is: linux2
+Python Version is: 2.7.6 (default, Nov 13 2018, 12:45:42) 
+[GCC 4.8.4]
+Current directory is: /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/common/build
+
+============================================================
+fastboot_complete.py: Processing input arguments
+============================================================
+Argument List : []
+No new APPS PATH specified. Taking from META...
+Storage type not specified, defaulting to emmc
+
+Apps path is:  /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/
+Common path is: /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/common/build
+Executing fastboot on Linux
+adb path: /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/adb
+
+============================================================
+fastboot_complete.py: List of builds to flash
+============================================================
+No image builds specified. Continuing to load all...
+
+============================================================
+fastboot_complete.py: List of files
+============================================================
+{}
+
+{'aboot': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/emmc_appsboot.mbn'],
+ 'boot': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/boot.img'],
+ 'cache': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/cache.img'],
+ 'cmnlib': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/cmnlib.mbn'],
+ 'devcfg': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/devcfg.mbn'],
+ 'keymaster': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/keymaster64.mbn'],
+ 'modem': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/common/build/emmc/bin/asic/NON-HLOS.bin'],
+ 'persist': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/persist.img'],
+ 'recovery': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/recovery.img'],
+ 'rpm': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/rpm_proc/build/ms/bin/8909/pm8909/rpm.mbn'],
+ 'sbl1': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/boot_images/build/ms/bin/8909/emmc/sbl1.mbn'],
+ 'system': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/system.img'],
+ 'tz': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/tz.mbn'],
+ 'userdata': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/userdata.img'],
+ 'vendor': ['/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/vendor.img']}
+=====================================================
+=======================================================
+
+============================================================
+fastboot_complete.py: Flashing partition layout
+============================================================
+
+============================================================
+fastboot_complete.py: Erasing listed partitions
+============================================================
+No partitions specified for erase
+Proceeding with load...
+
+
+============================================================
+fastboot_complete.py: Flashing binaries
+============================================================
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing aboot
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase aboot
+erasing 'aboot'...
+OKAY [  0.043s]
+finished. total time: 0.043s
+
+Tue Jun 11 17:01:28 2019 : Starting to flash aboot
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash aboot /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/emmc_appsboot.mbn
+target reported max download size of 262144000 bytes
+sending 'aboot' (588 KB)...
+OKAY [  0.042s]
+writing 'aboot'...
+OKAY [  0.016s]
+finished. total time: 0.058s
+
+Tue Jun 11 17:01:28 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing boot
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase boot
+erasing 'boot'...
+OKAY [  0.075s]
+finished. total time: 0.075s
+
+Tue Jun 11 17:01:28 2019 : Starting to flash boot
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash boot /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/boot.img
+target reported max download size of 262144000 bytes
+sending 'boot' (19723 KB)...
+OKAY [  0.683s]
+writing 'boot'...
+OKAY [  0.414s]
+finished. total time: 1.096s
+
+Tue Jun 11 17:01:29 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing cache
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase cache
+******** Did you mean to fastboot format this ext4 partition?
+erasing 'cache'...
+OKAY [  0.102s]
+finished. total time: 0.102s
+
+Tue Jun 11 17:01:29 2019 : Starting to flash cache
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash cache /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/cache.img
+target reported max download size of 262144000 bytes
+erasing 'cache'...
+OKAY [  0.132s]
+sending 'cache' (5912 KB)...
+OKAY [  0.318s]
+writing 'cache'...
+OKAY [  0.129s]
+finished. total time: 0.579s
+
+Tue Jun 11 17:01:30 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing cmnlib
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase cmnlib
+erasing 'cmnlib'...
+OKAY [  0.018s]
+finished. total time: 0.018s
+
+Tue Jun 11 17:01:30 2019 : Starting to flash cmnlib
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash cmnlib /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/cmnlib.mbn
+target reported max download size of 262144000 bytes
+sending 'cmnlib' (199 KB)...
+OKAY [  0.030s]
+writing 'cmnlib'...
+OKAY [  0.010s]
+finished. total time: 0.040s
+
+Tue Jun 11 17:01:30 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing devcfg
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase devcfg
+erasing 'devcfg'...
+OKAY [  0.027s]
+finished. total time: 0.027s
+
+Tue Jun 11 17:01:30 2019 : Starting to flash devcfg
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash devcfg /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/devcfg.mbn
+target reported max download size of 262144000 bytes
+sending 'devcfg' (36 KB)...
+OKAY [  0.006s]
+writing 'devcfg'...
+OKAY [  0.008s]
+finished. total time: 0.014s
+
+Tue Jun 11 17:01:30 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing keymaster
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase keymaster
+erasing 'keymaster'...
+OKAY [  0.022s]
+finished. total time: 0.022s
+
+Tue Jun 11 17:01:30 2019 : Starting to flash keymaster
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash keymaster /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/keymaster64.mbn
+target reported max download size of 262144000 bytes
+sending 'keymaster' (236 KB)...
+OKAY [  0.069s]
+writing 'keymaster'...
+OKAY [  0.011s]
+finished. total time: 0.080s
+
+Tue Jun 11 17:01:30 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing modem
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase modem
+erasing 'modem'...
+OKAY [  0.067s]
+finished. total time: 0.067s
+
+Tue Jun 11 17:01:30 2019 : Starting to flash modem
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash modem /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/common/build/emmc/bin/asic/NON-HLOS.bin
+target reported max download size of 262144000 bytes
+sending 'modem' (55921 KB)...
+OKAY [  1.773s]
+writing 'modem'...
+OKAY [  1.167s]
+finished. total time: 2.940s
+
+Tue Jun 11 17:01:33 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing persist
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase persist
+erasing 'persist'...
+OKAY [  0.061s]
+finished. total time: 0.061s
+
+Tue Jun 11 17:01:33 2019 : Starting to flash persist
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash persist /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/persist.img
+target reported max download size of 262144000 bytes
+sending 'persist' (4740 KB)...
+OKAY [  0.170s]
+writing 'persist'...
+OKAY [  0.122s]
+finished. total time: 0.292s
+
+Tue Jun 11 17:01:34 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing recovery
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase recovery
+erasing 'recovery'...
+OKAY [  0.068s]
+finished. total time: 0.068s
+
+Tue Jun 11 17:01:34 2019 : Starting to flash recovery
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash recovery /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/recovery.img
+target reported max download size of 262144000 bytes
+sending 'recovery' (24405 KB)...
+OKAY [  0.906s]
+writing 'recovery'...
+OKAY [  0.515s]
+finished. total time: 1.422s
+
+Tue Jun 11 17:01:35 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing rpm
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase rpm
+erasing 'rpm'...
+OKAY [  0.021s]
+finished. total time: 0.021s
+
+Tue Jun 11 17:01:35 2019 : Starting to flash rpm
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash rpm /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/rpm_proc/build/ms/bin/8909/pm8909/rpm.mbn
+target reported max download size of 262144000 bytes
+sending 'rpm' (158 KB)...
+OKAY [  0.034s]
+writing 'rpm'...
+OKAY [  0.009s]
+finished. total time: 0.043s
+
+Tue Jun 11 17:01:36 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing sbl1
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase sbl1
+erasing 'sbl1'...
+OKAY [  0.032s]
+finished. total time: 0.033s
+
+Tue Jun 11 17:01:36 2019 : Starting to flash sbl1
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash sbl1 /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/boot_images/build/ms/bin/8909/emmc/sbl1.mbn
+target reported max download size of 262144000 bytes
+sending 'sbl1' (242 KB)...
+OKAY [  0.016s]
+writing 'sbl1'...
+OKAY [  0.011s]
+finished. total time: 0.027s
+
+Tue Jun 11 17:01:36 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing system
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase system
+******** Did you mean to fastboot format this ext4 partition?
+erasing 'system'...
+OKAY [  0.721s]
+finished. total time: 0.721s
+
+Tue Jun 11 17:01:36 2019 : Starting to flash system
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash system /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/system.img
+target reported max download size of 262144000 bytes
+erasing 'system'...
+OKAY [  0.534s]
+sending sparse 'system' 1/3 (255999 KB)...
+OKAY [  8.951s]
+writing 'system' 1/3...
+OKAY [  5.688s]
+sending sparse 'system' 2/3 (252220 KB)...
+OKAY [  8.530s]
+writing 'system' 2/3...
+OKAY [  5.496s]
+sending sparse 'system' 3/3 (14416 KB)...
+OKAY [  0.470s]
+writing 'system' 3/3...
+OKAY [  0.298s]
+finished. total time: 29.968s
+
+Tue Jun 11 17:02:08 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing tz
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase tz
+erasing 'tz'...
+OKAY [  0.012s]
+finished. total time: 0.012s
+
+Tue Jun 11 17:02:08 2019 : Starting to flash tz
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash tz /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/trustzone_images/build/ms/bin/PAMAANBA/tz.mbn
+target reported max download size of 262144000 bytes
+sending 'tz' (982 KB)...
+OKAY [  0.044s]
+writing 'tz'...
+OKAY [  0.031s]
+finished. total time: 0.076s
+
+Tue Jun 11 17:02:08 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing userdata
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase userdata
+******** Did you mean to fastboot format this ext4 partition?
+erasing 'userdata'...
+OKAY [  3.393s]
+finished. total time: 3.393s
+
+Tue Jun 11 17:02:12 2019 : Starting to flash userdata
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash userdata /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/userdata.img
+target reported max download size of 262144000 bytes
+erasing 'userdata'...
+OKAY [  3.105s]
+sending 'userdata' (5000 KB)...
+OKAY [  0.173s]
+writing 'userdata'...
+OKAY [  0.123s]
+finished. total time: 3.401s
+
+Tue Jun 11 17:02:15 2019 : Complete
+Checking target state...
+Please set device to fastboot mode and check if USB is connected.
+Found device in fastboot mode
+Erasing vendor
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot erase vendor
+erasing 'vendor'...
+OKAY [  0.224s]
+finished. total time: 0.224s
+
+Tue Jun 11 17:02:15 2019 : Starting to flash vendor
+/home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/host/linux-x86/bin/fastboot flash vendor /home/vanganar/workspace/MSM8909_LA_3.1.1/msm8909/LINUX/android/out/target/product/msm8909go/vendor.img
+target reported max download size of 262144000 bytes
+sending 'vendor' (165637 KB)...
+OKAY [  5.372s]
+writing 'vendor'...
+OKAY [  4.247s]
+finished. total time: 9.619s
+
+Tue Jun 11 17:02:25 2019 : Complete
+
+============================================================
+FLASHING SUCCESSFUL!
+============================================================
+fastboot_complete.py: Loading complete. 
+
+vanganar@vtlw044l:~/workspace/MSM8909_LA_3.1.1/msm8909/common/build$ sudo fastboot reboot
+rebooting...
+
+finished. total time: 0.005s
+
