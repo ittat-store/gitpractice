@@ -8,4 +8,5 @@ unsigned  :17;
 main()
 {
 printf("%d\n",sizeof(struct st));
+printf("%d\n",sizeof(unsigned));
 }

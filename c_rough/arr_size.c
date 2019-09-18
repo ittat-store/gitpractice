@@ -4,6 +4,7 @@ void fun(int a[])
 {
 	int size=sizeof(a)/4;
 	int i;
+	printf("size: %d\n",size);
 	for(i=0;i<size;i++)
 	{
 		printf("%d\n",a[i]);
