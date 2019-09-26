@@ -1,0 +1,75 @@
+Feature phone :
+
+shell@msm8909_512:/ $ ls -l /dev/block/platform/soc/7824900.sdhci/by-name/
+total 0
+lrwxrwxrwx root     root              1970-01-13 21:18 DDR -> /dev/block/mmcblk0p17
+lrwxrwxrwx root     root              1970-01-13 21:18 aboot -> /dev/block/mmcblk0p4
+lrwxrwxrwx root     root              1970-01-13 21:18 abootbak -> /dev/block/mmcblk0p5
+lrwxrwxrwx root     root              1970-01-13 21:18 boot -> /dev/block/mmcblk0p20
+lrwxrwxrwx root     root              1970-01-13 21:18 cache -> /dev/block/mmcblk0p23
+lrwxrwxrwx root     root              1970-01-13 21:18 config -> /dev/block/mmcblk0p28
+lrwxrwxrwx root     root              1970-01-13 21:18 devinfo -> /dev/block/mmcblk0p25
+lrwxrwxrwx root     root              1970-01-13 21:18 fsc -> /dev/block/mmcblk0p14
+lrwxrwxrwx root     root              1970-01-13 21:18 fsg -> /dev/block/mmcblk0p18
+lrwxrwxrwx root     root              1970-01-13 21:18 keystore -> /dev/block/mmcblk0p26
+lrwxrwxrwx root     root              1970-01-13 21:18 misc -> /dev/block/mmcblk0p13
+lrwxrwxrwx root     root              1970-01-13 21:18 modem -> /dev/block/mmcblk0p1
+lrwxrwxrwx root     root              1970-01-13 21:18 modemst1 -> /dev/block/mmcblk0p11
+lrwxrwxrwx root     root              1970-01-13 21:18 modemst2 -> /dev/block/mmcblk0p12
+lrwxrwxrwx root     root              1970-01-13 21:18 oem -> /dev/block/mmcblk0p27
+lrwxrwxrwx root     root              1970-01-13 21:18 pad -> /dev/block/mmcblk0p10
+lrwxrwxrwx root     root              1970-01-13 21:18 persist -> /dev/block/mmcblk0p22
+lrwxrwxrwx root     root              1970-01-13 21:18 recovery -> /dev/block/mmcblk0p24
+lrwxrwxrwx root     root              1970-01-13 21:18 rpm -> /dev/block/mmcblk0p6
+lrwxrwxrwx root     root              1970-01-13 21:18 rpmbak -> /dev/block/mmcblk0p7
+lrwxrwxrwx root     root              1970-01-13 21:18 sbl1 -> /dev/block/mmcblk0p2
+lrwxrwxrwx root     root              1970-01-13 21:18 sbl1bak -> /dev/block/mmcblk0p3
+lrwxrwxrwx root     root              1970-01-13 21:18 sec -> /dev/block/mmcblk0p19
+lrwxrwxrwx root     root              1970-01-13 21:18 splash -> /dev/block/mmcblk0p16
+lrwxrwxrwx root     root              1970-01-13 21:18 ssd -> /dev/block/mmcblk0p15
+lrwxrwxrwx root     root              1970-01-13 21:18 system -> /dev/block/mmcblk0p21
+lrwxrwxrwx root     root              1970-01-13 21:18 tz -> /dev/block/mmcblk0p8
+lrwxrwxrwx root     root              1970-01-13 21:18 tzbak -> /dev/block/mmcblk0p9
+lrwxrwxrwx root     root              1970-01-13 21:18 userdata -> /dev/block/mmcblk0p29
+
+shell@msm8909_512:/ $ cat /proc/partitions                                     
+major minor  #blocks  name
+
+ 253        0     153600 zram0
+ 179        0    3702784 mmcblk0
+ 179        1      65536 mmcblk0p1
+ 179        2        512 mmcblk0p2
+ 179        3        512 mmcblk0p3
+ 179        4       1024 mmcblk0p4
+ 179        5       1024 mmcblk0p5
+ 179        6        512 mmcblk0p6
+ 179        7        512 mmcblk0p7
+ 179        8        768 mmcblk0p8
+ 179        9        768 mmcblk0p9
+ 179       10       1024 mmcblk0p10
+ 179       11       1536 mmcblk0p11
+ 179       12       1536 mmcblk0p12
+ 179       13       1024 mmcblk0p13
+ 179       14          1 mmcblk0p14
+ 179       15          8 mmcblk0p15
+ 179       16      10240 mmcblk0p16
+ 179       17         32 mmcblk0p17
+ 179       18       1536 mmcblk0p18
+ 179       19         16 mmcblk0p19
+ 179       20      32768 mmcblk0p20
+ 179       21    1258292 mmcblk0p21
+ 179       22      32768 mmcblk0p22
+ 179       23     262144 mmcblk0p23
+ 179       24      32768 mmcblk0p24
+ 179       25       1024 mmcblk0p25
+ 179       26        512 mmcblk0p26
+ 179       27      65536 mmcblk0p27
+ 179       28        512 mmcblk0p28
+ 179       29    1801199 mmcblk0p29
+ 179       32        512 mmcblk0rpmb
+
+ 
+shell@msm8909_512:/ $ ls -l /dev/block/mmcblk0p5
+brw------- root     root     179,   5 1970-01-13 22:10 mmcblk0p5
+shell@msm8909_512:/ $ 
+
