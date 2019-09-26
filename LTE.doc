@@ -1,0 +1,146 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A handover is a process in telecommunications and mobile communications in which a connected cellular call or a data session is transferred from one cell site (base station) to another without disconnecting the session.
+
+
+
+LTE is completely IP based network.
+
+The basic architecture contains the following network elements.
+1. LTE EUTRAN (Evolved Universal Terrestrial Radio)
+2. LTE Evolved Packet Core.
+
+
+LTE EUTRAN
+it provides higher data rates, lower latency and is optimized for packet data. EUTRAN (Evolved Universal Terrestrial Radio) consists of eNB (Base station). EUTRAN is responsible for complete radio management in LTE. When UE powered is on, eNB is responsible for Radio Resource Management, i.e. it shall do the radio bearer control, radio admission control, allocation of uplink and downlink to UE etc. When a packet from UE arrives to eNB, eNB shall compress the IP header and encrypt the data stream. It is also responsible for adding a GTP-U header to the payload and sending it to the SGW. Before the data is actually transmitted the control plane has to be established. eNB is responsible for choosing a MME using MME selection function. The QoS is taken care by eNB as the eNB is only entity on radio. Other functionalities include scheduling and transmission of paging messages, broadcast messages, and bearer level rate enforcements also done by eNB.
+
+The LTE EPC consists of MME, SGW, PGW, HSS and PCRF.
+Below is a brief description of each of the components shown in the above architecture:
+ The Home Subscriber Server (HSS) component has been carried forward from   	  UMTS and GSM and is a central database that contains information about all the network operator's subscribers.
+ The Packet Data Network (PDN) Gateway (P-GW) communicates with the outside world ie. packet data networks PDN, using SGi interface. Each packet data network is identified by an access point name (APN). The PDN gateway has the same role as the GPRS support node (GGSN) and the serving GPRS support node (SGSN) with UMTS and GSM.
+ The serving gateway (S-GW) acts as a router, and forwards data between the base station and the PDN gateway.
+ The mobility management entity (MME) controls the high-level operation of the mobile by means of signalling messages and Home Subscriber Server (HSS).
+ The Policy Control and Charging Rules Function (PCRF) is a component which is not shown in the above diagram but it is responsible for policy control decision-making, as well as for controlling the flow-based charging functionalities in the Policy Control Enforcement Function (PCEF), which resides in the P-GW.
+The interface between the serving and PDN gateways is known as S5/S8. This has two slightly different implementations, namely S5 if the two devices are in the same network, and S8 if they are in different networks.
+
+
+
+
+Mobility Management Entity (MME):
+The MME is a control entity. It is responsible for all the control plane operations. All the NAS signaling originates at UE and terminates in MME. MME is also responsible for tracking area list management, selection of PGW/SGW and also selection of other MME during handovers. MME is also responsible for SGSN (Serving GPRS Support Node) selection during LTE to 2G/3G handovers. The UE is also authenticated by MME.MME is also responsible for bearer management functions including establishment of dedicated bearers for all signaling traffic flow.
+
+Serving Gateway (SGW):
+Serving gateway terminates the interface towards EUTRAN. For each UE there is a single Serving GW associated with EPS at a given point of time
+SGW is responsible for packet routing and forwarding, buffering the downlink packets. As eNB is responsible for uplink packet marking, SGW is responsible for downlink packet marking.
+PDN Gateway (PGW):
+PGW terminates SGi interface towards the PDN. PGW is responsible for all the IP packet based operations such as deep packet inspection, UE IP address allocation, Transport level packet marking in uplink and downlink, accounting etc. PGW contacts PCRF to determine the QoS for bearers. It is also responsible for UL and DL rate enforcement.
+Home Subscriber Server (HSS):
+The HSS is a central database that contains user-related and subscription-related information. The functions of the HSS include functionalities such as mobility management, call and session establishment support, user authentication and access authorization. It also holds information about the PDNs to which the user can connect
+Policy Control and Charging Rules Function (PCRF):
+The PCRF is responsible for policy control decision-making as well as for controlling the flow-based charging functionalities in the Policy Control Enforcement Function (PCEF), which resides in the P-GW. The PCRF provides the QoS authorization (QoS class identifier [QCI] and bit rates) that decides how a certain data flow will be treated in the PCEF and ensures that this is in accordance with the user's subscription profile. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The figure-2 depicts LTE Advanced protocol stack. It is divided into two main parts viz. NAS (Non-Access Stratum) and AS (Access Stratum). Further it is categorized into control plane and user plane. User plane of eNB consists of PHY, MAC, RLC and PDCP layers. Control plane of eNB consists of these 4 layers and in addition houses RRC layer also.
+Following are functions of these LTE Advanced protocol stack layers. 
+• PHY : This layer takes care of frame formation as per TDD or FDD topology and as per OFDMA structure based on BW/FFT. Moreover it takes care of modulation and coding of different control and traffic channels. It covers scrambling and codeword to layer mapping functionalities. It incorporates reference signals (DMRS/ SRS in the uplink while C-RS/ CSI-RS/ UE-RS in the downlink) which are used for channel estimation and channel equalization. 
+• MAC-Medium Access Control : It takes care of following functions: 
+-Multiplexing/demultiplexing of RLC Packet Data Units (PDUs). 
+-Scheduling information reporting. 
+-Error correction through Hybrid ARQ (HARQ). 
+-Local Channel Prioritization. 
+-Padding.
+• RLC-Radio Link Control : 
+-Error correction through Automatic Repeat reQuest (ARQ).
+-Segmentation according to the size of the transport block and re-segmentation in case a retransmission is needed.
+-Concatenation of SDUs for the same radio bearer.
+-Protocol error detection and recovery. 
+-In-sequence delivery.
+• PDCP-Packet Data Convergence Protocol : 
+-Header compression. 
+-In-sequence delivery and retransmission of PDCP Session Data Units (SDUs) for acknowledge mode radio bearers at handover. 
+-Duplicate detection.
+-Ciphering and integrity protection.
+• RRC-Radio Resource Control: 
+-Broadcast system information related to Non-Access Stratum (NAS) and Access Stratum (AS). 
+-Establishment, maintenance, and release of RRC connection. 
+-Security functions including key management. 
+-Mobility functions. 
+-QoS management functions. 
+-UE measurement reporting and control of the reporting. 
+-NAS direct message transfer between UE and NAS. 
+• NAS-Non Access Stratum : 
+-Connection/session management between UE and the core network.
+-Authentication.
+-Registration.
+-Bearer context activation/deactivation.
+-Location registration management.
+
