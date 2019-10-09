@@ -1,0 +1,12 @@
+please follow the below steps
+
+
+1.sudo apt-get install openjdk-6-jre
+
+2.sudo update-alternatives --config java (SELECT /usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java)
+
+3.sudo apt-get install default-jdk
+
+4.sudo update-alternatives --config javac (select /usr/lib/jvm/java-6-openjdk-amd64/bin/javac )
+
+5. check java --version
