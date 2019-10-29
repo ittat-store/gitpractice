@@ -1,0 +1,41 @@
+creating system.img...
+Running:  mkuserimg.sh -s /tmp/targetfiles-AX9p3v/system /tmp/system-xYquK9.img ext4 system 1065250816 -T 1230748200 -C /tmp/targetfiles-AX9p3v/META/filesystem_config.txt -B /tmp/system-blocklist-jb5KCP.map -L system /tmp/targetfiles-AX9p3v/BOOT/RAMDISK/file_contexts
+make_ext4fs -s -T 1230748200 -S /tmp/targetfiles-AX9p3v/BOOT/RAMDISK/file_contexts -C /tmp/targetfiles-AX9p3v/META/filesystem_config.txt -B /tmp/system-blocklist-jb5KCP.map -L system -l 1065250816 -a system /tmp/system-xYquK9.img /tmp/targetfiles-AX9p3v/system
+Warning: -S not ignored
+loaded 2323 fs_config entries
+Creating filesystem with parameters:
+    Size: 1065250816
+    Block size: 4096
+    Blocks per group: 32768
+    Inodes per group: 8128
+    Inode size: 256
+    Journal blocks: 4063
+    Label: system
+    Blocks: 260071
+    Block groups: 8
+    Reserved block group size: 63
+Created filesystem with 2333/65024 inodes and 107018/260071 blocks
+build_verity_tree -A aee087a5be3b982978c923f566a94613496b417f2af592639bc80d141e34dfe7 /tmp/system-xYquK9.img /tmp/tmpZUOuKh_verity_images/verity.img
+system/extras/verity/build_verity_metadata.py 1065250816 /tmp/tmpZUOuKh_verity_images/verity_metadata.img 98509ed3afdedc6509ed5aa3ecc5cdfa4a794d2ce0716377d051197426394104 aee087a5be3b982978c923f566a94613496b417f2af592639bc80d141e34dfe7 /dev/block/bootdevice/by-name/system out/host/linux-x86/bin/verity_signer build/target/product/security/verity.pk8
+append2simg /tmp/system-xYquK9.img /tmp/tmpZUOuKh_verity_images/verity_metadata.img
+append2simg /tmp/system-xYquK9.img /tmp/tmpZUOuKh_verity_images/verity.img
+Running:  simg2img /tmp/system-xYquK9.img /tmp/unsparse_system-xYquK9.img
+
+Running:  e2fsck -f -n /tmp/unsparse_system-xYquK9.img
+e2fsck 1.42.9 (28-Dec-2013)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+system: 2333/65024 files (0.0% non-contiguous), 107018/260071 blocks
+compressing files of /tmp/targetfiles-AX9p3v/META to out/target/product/msm8909_512/oem_fota_meta.zip
+/tmp/targetfiles-AX9p3v/META
+compressing files of /tmp/targetfiles-AX9p3v/OTA to out/target/product/msm8909_512/oem_fota_meta.zip
+/tmp/targetfiles-AX9p3v/OTA
+done.
+
+#### make completed successfully (02:34:51 (hh:mm:ss)) ####
+
+votarytech@VTA063L:~/workspace/F220b/msm8905/LINUX/android$ s
+
