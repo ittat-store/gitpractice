@@ -6,7 +6,7 @@ union
 }u;
 int main()
 {
-	u.num=0x12345678;
+	u.num=0x1234;
 	char t;
 	int i,j;
 	for(i=0,j=sizeof(int)-1;i<j;i++,j--)

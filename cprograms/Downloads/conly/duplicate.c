@@ -11,6 +11,7 @@ main()
 	strcpy(buf,str);
 	printf("%s \n",buf);
 	for(i=0;i<strlen(buf);i++)
+	//for(i=0;buf[i]!='\0';i++)
 	{
 		for(j=i+1;buf[j]!=0;j++)
 		{
