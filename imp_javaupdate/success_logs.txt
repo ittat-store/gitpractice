@@ -1,0 +1,1451 @@
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=8.1.0
+TARGET_PRODUCT=msm8909go
+TARGET_BUILD_VARIANT=userdebug
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm
+TARGET_ARCH_VARIANT=armv7-a-neon
+TARGET_CPU_VARIANT=cortex-a7
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-3.13.0-32-generic-x86_64-with-Ubuntu-14.04-trusty
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+HOST_CROSS_2ND_ARCH=x86_64
+HOST_BUILD_TYPE=release
+BUILD_ID=SKATE212_NT_1.0
+OUT_DIR=out
+============================================
+[1/2] out/soong/.bootstrap/bin/minibp out/soong/.minibootstrap/build.ninja.in
+[2/2] bootstrap out/soong/.minibootstrap/build.ninja.in
+[1/1] out/soong/.bootstrap/bin/minibp out/soong/.bootstrap/build.ninja
+[1/1] out/soong/.bootstrap/bin/soong_build out/soong/build.ninja
+[ 50% 1/2] glob art
+[100% 2/2] out/soong/.bootstrap/bin/soong_build out/soong/build.ninja
+[ 50% 1/2] glob art
+[  0% 1/4766] build emmc_appsbootldr_clean
+[  0% 2/4766] build out/target/product/msm8909go/system/etc/cdrom_install.iso
+I: -input-charset not specified, using utf-8 (detected in locale settings)
+Total translation table size: 0
+Total rockridge attributes bytes: 0
+Total directory bytes: 0
+Path table size(bytes): 10
+Max brk space used 0
+483 extents written (0 MB)
+[  0% 3/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/CoreModule.cpp
+[  0% 4/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/DedicatedThreadMessage.cpp
+[  0% 5/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/DefaultRestriction.cpp
+[  0% 6/4766] target thumb C: lib_remote_simlock <= vendor/qcom/proprietary/qcril/common/uim/remote_simlock/remote_simlock.c
+[  0% 7/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/DedicatedThreadModule.cpp
+[  0% 8/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Dispatcher.cpp
+[  0% 9/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/DispatcherModule.cpp
+[  0% 10/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/GenericCallback.cpp
+[  0% 11/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Looper.cpp
+[  0% 12/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Log.cpp
+[  0% 13/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/ModuleLooper.cpp
+[  0% 14/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/MessageQueue.cpp
+[  0% 15/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Message.cpp
+[  0% 16/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Module.cpp
+[  0% 17/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/QcrilInitMessage.cpp
+[  0% 18/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/PolicyManager.cpp
+[  0% 19/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/QcrilMainLooper.cpp
+[  0% 20/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Resource.cpp
+[  0% 21/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Restriction.cpp
+[  0% 22/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/RejectSimultaneousDispatchRestriction.cpp
+[  0% 23/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/QcrilMainMessageQueue.cpp
+[  0% 24/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/SingleDispatchAndFamilyPairRestriction.cpp
+[  0% 25/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/SingleDispatchRestriction.cpp
+[  0% 26/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/TaskCompleteMessage.cpp
+[  0% 27/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/UnSolicitedMessage.cpp
+[  0% 28/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/SingleDispatchRestrictionHandleDuplicate.cpp
+[  0% 29/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/dispatcher_handle.cpp
+[  0% 30/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/TimeKeeper.cpp
+[  0% 31/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/host/FakeQmi.cc
+[  0% 32/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/Util.cpp
+[  0% 33/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/message_translator.cpp
+[  0% 34/4766] target thumb C++: libqcrilFramework <= vendor/qcom/proprietary/qcril-hal/framework/src/ThreadPoolManager.cpp
+[  0% 35/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/oem_socket/qcril_qmi_oem_msg_meta.cc
+[  0% 36/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/lte_direct/qcril_qmi_lte_direct_disc_msg_meta.cc
+[  0% 37/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/lte_direct/qcril_qmi_lte_direct_disc_misc.cc
+[  0% 38/4766] target SharedLib: libqcrilFramework (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libqcrilFramework_intermediates/LINKED/libqcrilFramework.so)
+[  0% 39/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/oem_socket/qcril_qmi_oemhook_service.cc
+[  0% 40/4766] target Pack Relocations: libqcrilFramework (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libqcrilFramework_intermediates/PACKED/libqcrilFramework.so)
+[  0% 41/4766] target Symbolic: libqcrilFramework (out/target/product/msm8909go/symbols/vendor/lib/libqcrilFramework.so)
+[  0% 42/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/oem_socket/qcril_qmi_oemhook_agent.cc
+[  0% 43/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_am.cc
+[  0% 44/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/oem_socket/qcril_qmi_oem_events.cc
+[  0% 45/4766] target Strip (mini debug info): libqcrilFramework (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libqcrilFramework_intermediates/libqcrilFramework.so)
+[  0% 46/4766] Install: out/target/product/msm8909go/vendor/lib/libqcrilFramework.so
+[  0% 47/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_mbn_sw_update.cc
+[  1% 48/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_mbn_hw_update.cc
+[  1% 49/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_audio_service.cc
+[  1% 50/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_pbm_legacy.cc
+[  1% 51/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_pbm.cc
+[  1% 52/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_other.cc
+[  1% 53/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_event.cc
+[  1% 54/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_generic_socket.cc
+[  1% 55/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_pil_monitor.cc
+[  1% 56/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qmi_ril_file_observer.cc
+[  1% 57/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_client.cc
+[  1% 58/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_pdc.cc
+[  1% 59/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_dispatch_helper.cc
+[  1% 60/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_meta.cc
+[  1% 61/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_meta_table.cc
+[  1% 62/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_meta_table_v02.cc
+[  1% 63/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_socket.cc
+[  1% 64/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_voice.cc
+[  1% 65/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_imss_v02.cc
+[  1% 66/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_imss.cc
+[  1% 67/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/lte_direct/qcril_qmi_lte_direct_disc_dispatcher.c
+[  1% 68/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/lte_direct/qcril_qmi_lte_direct_disc.c
+[  1% 69/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/utilities/list/util_list.c
+[  1% 70/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/legacy.c
+[  1% 71/4766] target thumb C++: qcrilVoiceModule <= vendor/qcom/proprietary/qcril-hal/modules/voice/src/RilRequestDialMessage.cpp
+[  1% 72/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/lte_direct/qcril_qmi_lte_direct_disc_packing.c
+[  1% 73/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/mbn_utils.c
+[  1% 74/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/utilities/memory/util_memory.c
+[  1% 75/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/nanopb_utils/qcril_qmi_npb_decode.c
+[  1% 76/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/nanopb_utils/qcril_qmi_npb_encode.c
+[  1% 77/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/nanopb_utils/qcril_qmi_npb_utils.c
+[  1% 78/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/oem_socket/qcril_qmi_oem_misc.c
+[  1% 79/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/oem_socket/qtiTelephonyService.pb.c
+[  1% 80/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/oem_socket/qcril_qmi_oem_packing.c
+[  1% 81/4766] target thumb C++: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/settings.cc
+[  1% 82/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/pdc_utils.c
+[  1% 83/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_dir_utils.c
+[  1% 84/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_cm_util.c
+[  1% 85/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_file_utils.c
+[  1% 86/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_cm_ss.c
+[  1% 87/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_log.c
+[  1% 88/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_mbn_db.c
+[  1% 89/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_mbn_ota_file_list.c
+[  1% 90/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_mbn_meta.c
+[  1% 91/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_pd_notifier.c
+[  1% 92/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril.c
+[  1% 93/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_cell_info.c
+[  1% 94/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_mbn_ota_daemon.c
+[  1% 95/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_cell_info_v12.c
+[  2% 96/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_signal.c
+[  2% 97/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_qmi_mbn_file.c
+[  2% 98/4766] Ensuring Jack server is installed and started
+Jack server already installed in "/home/votarytech/.jack-server"
+Launching Jack server java -XX:MaxJavaStackTraceDepth=-1 -Djava.io.tmpdir=/tmp -Dfile.encoding=UTF-8 -XX:+TieredCompilation -cp /home/votarytech/.jack-server/launcher.jar com.android.jack.launcher.ServerLauncher
+[  2% 99/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qmi_ril_peripheral_mng.c
+[  2% 100/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_data.c
+[  2% 101/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_misc.c
+[  2% 102/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qmi_ril_platform_dep.c
+[  2% 103/4766] Copying: out/target/common/obj/JAVA_LIBRARIES/apache-xml_intermediates/classes.dex
+[  2% 104/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/qcril_reqlist.c
+[  2% 105/4766] Copying: out/target/common/obj/JAVA_LIBRARIES/org.apache.http.legacy.boot_intermediates/classes.dex
+[  2% 106/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/radio_config/qcril_qmi_radio_config_packing.c
+[  2% 107/4766] build out/target/common/obj/JAVA_LIBRARIES/android_stubs_current_intermediates/classes.dex.toc
+[  2% 108/4766] build out/target/common/obj/JAVA_LIBRARIES/android_system_stubs_current_intermediates/classes.dex.toc
+[  2% 109/4766] target thumb C: libril-qc-hal-qmi <= vendor/qcom/proprietary/qcril-hal/qcril_qmi/services/qmi_embms_v01.c
+[  2% 110/4766] target Jar: org.apache.http.legacy.boot (out/target/common/obj/JAVA_LIBRARIES/org.apache.http.legacy.boot_intermediates/javalib.jar)
+[  2% 111/4766] target Jar: apache-xml (out/target/common/obj/JAVA_LIBRARIES/apache-xml_intermediates/javalib.jar)
+[  2% 112/4766] build out/target/product/msm8909go/emmc_appsboot.mbn
+make: Entering directory `/home/votarytech/msm8909/LINUX/android/bootable/bootloader/lk'
+including app/aboot dev/fbcon dev/gcdb/display dev/keys dev/pmic/pm8x41 dev/pmic/pmi8994 dev/qpnp_haptic dev/vib lib/debug lib/heap lib/libc lib/libfdt lib/openssl lib/ptable
+including lib/openssl/crypto lib/zlib_inflate
+make[1]: Entering directory `/home/votarytech/msm8909/LINUX/android/bootable/bootloader/lk'
+generating ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/config.h
+generating ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/system-onesegment.ld
+linking ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk
+../../../prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-ld: warning: /home/votarytech/msm8909/LINUX/android/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/../lib/gcc/arm-eabi/4.8/libgcc.a(bpabi.o) uses 32-bit enums yet the output is to use variable-size enums; use of enum values across objects may fail
+../../../prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-ld: warning: /home/votarytech/msm8909/LINUX/android/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/../lib/gcc/arm-eabi/4.8/libgcc.a(_divdi3.o) uses 32-bit enums yet the output is to use variable-size enums; use of enum values across objects may fail
+../../../prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-ld: warning: /home/votarytech/msm8909/LINUX/android/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/../lib/gcc/arm-eabi/4.8/libgcc.a(_udivdi3.o) uses 32-bit enums yet the output is to use variable-size enums; use of enum values across objects may fail
+generating image: ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk.bin
+   text	   data	    bss	    dec	    hex	filename
+ 369716	 202224	 202520	 774460	  bd13c	../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk
+../../../prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-objcopy -O binary ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk.bin
+generating listing: ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk.lst
+generating listing: ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk.debug.lst
+generating symbols: ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk.sym
+generating size map: ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk.size
+generating stripped elf: ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk_s.elf
+cp -f ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/build-msm8909/lk_s.elf ../../../out/target/product/msm8909go/obj/EMMC_BOOTLOADER_OBJ/../../emmc_appsboot.mbn
+make[1]: Leaving directory `/home/votarytech/msm8909/LINUX/android/bootable/bootloader/lk'
+make: Leaving directory `/home/votarytech/msm8909/LINUX/android/bootable/bootloader/lk'
+[  2% 113/4766] Building with Jack: out/target/common/obj/JAVA_LIBRARIES/android-support-annotations_intermediates/classes.jack
+[  2% 114/4766] build out/target/common/obj/JAVA_LIBRARIES/android-support-annotations_intermediates/classes.dex.toc
+[  2% 115/4766] build out/target/product/msm8909go/obj/kernel/msm-3.18/usr
+make: Entering directory `/home/votarytech/msm8909/LINUX/android/kernel/msm-3.18'
+make[1]: Entering directory `/home/votarytech/msm8909/LINUX/android/out/target/product/msm8909go/obj/kernel/msm-3.18'
+  GEN     ./Makefile
+arch/arm/configs/msm8909_defconfig:441:warning: override: reassigning to symbol LEDS_MSM_GPIO_FLASH
+arch/arm/configs/msm8909_defconfig:445:warning: override: reassigning to symbol LEDS_QPNP
+arch/arm/configs/msm8909_defconfig:446:warning: override: reassigning to symbol LEDS_AW2013
+arch/arm/configs/msm8909_defconfig:599:warning: override: reassigning to symbol MEMCG
+arch/arm/configs/msm8909_defconfig:600:warning: override: reassigning to symbol MEMCG_SWAP
+#
+# configuration written to .config
+#
+make[1]: Leaving directory `/home/votarytech/msm8909/LINUX/android/out/target/product/msm8909go/obj/kernel/msm-3.18'
+make: Leaving directory `/home/votarytech/msm8909/LINUX/android/kernel/msm-3.18'
+make: Entering directory `/home/votarytech/msm8909/LINUX/android/kernel/msm-3.18'
+make[1]: Entering directory `/home/votarytech/msm8909/LINUX/android/out/target/product/msm8909go/obj/kernel/msm-3.18'
+  CHK     include/generated/uapi/linux/version.h
+make[1]: Leaving directory `/home/votarytech/msm8909/LINUX/android/out/target/product/msm8909go/obj/kernel/msm-3.18'
+make: Leaving directory `/home/votarytech/msm8909/LINUX/android/kernel/msm-3.18'
+[  2% 116/4766] build out/target/product/msm8909go/obj/KERNEL_OBJ/usr
+[  2% 117/4766] target thumb C++: libqcomfm_jni <= vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp
+In file included from vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:35:
+In file included from vendor/qcom/opensource/fm/jni/FmIoctlsInterface.h:34:
+In file included from out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/videodev2.h:65:
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/v4l2-controls.h:79:9: warning: 'V4L2_CID_AUDIO_MUTE' macro redefined [-Wmacro-redefined]
+#define V4L2_CID_AUDIO_MUTE             (V4L2_CID_BASE+9)
+        ^
+vendor/qcom/opensource/fm/jni/FmConst.h:51:9: note: previous definition is here
+#define V4L2_CID_AUDIO_MUTE   (V4L2_CID_BASE + 9)
+        ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:658:31: warning: unused parameter 'thiz' [-Wunused-parameter]
+        (JNIEnv* env, jobject thiz, jstring path)
+                              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:727:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:727:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:752:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:752:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:784:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint freq)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:784:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint freq)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:809:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint id, jint value)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:809:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint id, jint value)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:834:16: warning: unused parameter 'env' [-Wunused-parameter]
+     (JNIEnv * env, jobject thiz, jint fd, jbyteArray buff)
+               ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:834:29: warning: unused parameter 'thiz' [-Wunused-parameter]
+     (JNIEnv * env, jobject thiz, jint fd, jbyteArray buff)
+                            ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:834:55: warning: unused parameter 'buff' [-Wunused-parameter]
+     (JNIEnv * env, jobject thiz, jint fd, jbyteArray buff)
+                                                      ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:856:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint id)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:856:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint id)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:891:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint dir)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:891:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint dir)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:923:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:923:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:955:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:955:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:988:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint low, jint high)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:988:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint low, jint high)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1026:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1026:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1059:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1059:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1091:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint val)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1091:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint val)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1121:25: warning: unused parameter 'thiz' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jbyteArray buff, jint index)
+                        ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1151:12: warning: unused parameter 'env' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jbooleanArray buff, jint count)
+           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1151:25: warning: unused parameter 'thiz' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jbooleanArray buff, jint count)
+                        ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1159:82: warning: unused parameter 'env' [-Wunused-parameter]
+static jint android_hardware_fmradio_FmReceiverJNI_setNotchFilterNative(JNIEnv * env, jobject thiz,jint fd, jint id, jboolean aValue)
+                                                                                 ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1159:95: warning: unused parameter 'thiz' [-Wunused-parameter]
+static jint android_hardware_fmradio_FmReceiverJNI_setNotchFilterNative(JNIEnv * env, jobject thiz,jint fd, jint id, jboolean aValue)
+                                                                                              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1221:81: warning: unused parameter 'env' [-Wunused-parameter]
+static jint android_hardware_fmradio_FmReceiverJNI_setAnalogModeNative(JNIEnv * env, jobject thiz, jboolean aValue)
+                                                                                ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1221:94: warning: unused parameter 'thiz' [-Wunused-parameter]
+static jint android_hardware_fmradio_FmReceiverJNI_setAnalogModeNative(JNIEnv * env, jobject thiz, jboolean aValue)
+                                                                                             ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1265:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint pty)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1265:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint pty)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1290:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint pi)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1290:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint pi)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1315:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jstring radio_text, jint count )
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1315:68: warning: unused parameter 'count' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jstring radio_text, jint count )
+                                                                   ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1373:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd )
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1373:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd )
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1395:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jstring buff, jint count )
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1395:62: warning: unused parameter 'count' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jstring buff, jint count )
+                                                             ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1452:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1452:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1476:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1476:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1499:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint repCount)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1499:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint repCount)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1524:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint powLevel)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1524:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd, jint powLevel)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1547:15: warning: unused parameter 'env' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+              ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1547:28: warning: unused parameter 'thiz' [-Wunused-parameter]
+    (JNIEnv * env, jobject thiz, jint fd)
+                           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1557:25: warning: unused parameter 'thiz' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jshortArray buff, jint count)
+                        ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1595:12: warning: unused parameter 'env' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jint val)
+           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1595:25: warning: unused parameter 'thiz' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jint val)
+                        ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1595:36: warning: unused parameter 'fd' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jint val)
+                                   ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1606:12: warning: unused parameter 'env' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jint val)
+           ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1606:25: warning: unused parameter 'thiz' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jint val)
+                        ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1606:36: warning: unused parameter 'fd' [-Wunused-parameter]
+ (JNIEnv * env, jobject thiz, jint fd, jint val)
+                                   ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1616:37: warning: unused parameter 'env' [-Wunused-parameter]
+static void classInitNative(JNIEnv* env, jclass clazz) {
+                                    ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1616:49: warning: unused parameter 'clazz' [-Wunused-parameter]
+static void classInitNative(JNIEnv* env, jclass clazz) {
+                                                ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1672:32: warning: unused parameter 'env' [-Wunused-parameter]
+static void initNative(JNIEnv *env, jobject object) {
+                               ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1672:45: warning: unused parameter 'object' [-Wunused-parameter]
+static void initNative(JNIEnv *env, jobject object) {
+                                            ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1691:35: warning: unused parameter 'env' [-Wunused-parameter]
+static void cleanupNative(JNIEnv *env, jobject object) {
+                                  ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1691:48: warning: unused parameter 'object' [-Wunused-parameter]
+static void cleanupNative(JNIEnv *env, jobject object) {
+                                               ^
+vendor/qcom/opensource/fm/jni/android_hardware_fm.cpp:1778:36: warning: unused parameter 'reserved' [-Wunused-parameter]
+jint JNI_OnLoad(JavaVM *jvm, void *reserved)
+                                   ^
+70 warnings generated.
+[  2% 118/4766] target thumb C++: libqcomfm_jni <= vendor/qcom/opensource/fm/jni/ConfFileParser.cpp
+vendor/qcom/opensource/fm/jni/ConfFileParser.cpp:490:24: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+            if((buf[i] == '\n')) {
+                ~~~~~~~^~~~~~~
+vendor/qcom/opensource/fm/jni/ConfFileParser.cpp:490:24: note: remove extraneous parentheses around the comparison to silence this warning
+            if((buf[i] == '\n')) {
+               ~       ^      ~
+vendor/qcom/opensource/fm/jni/ConfFileParser.cpp:490:24: note: use '=' to turn this equality comparison into an assignment
+            if((buf[i] == '\n')) {
+                       ^~
+                       =
+vendor/qcom/opensource/fm/jni/ConfFileParser.cpp:811:11: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  if((str == equal_start)) {
+      ~~~~^~~~~~~~~~~~~~
+vendor/qcom/opensource/fm/jni/ConfFileParser.cpp:811:11: note: remove extraneous parentheses around the comparison to silence this warning
+  if((str == equal_start)) {
+     ~    ^             ~
+vendor/qcom/opensource/fm/jni/ConfFileParser.cpp:811:11: note: use '=' to turn this equality comparison into an assignment
+  if((str == equal_start)) {
+          ^~
+          =
+2 warnings generated.
+[  2% 119/4766] target thumb C++: libqcomfm_jni <= vendor/qcom/opensource/fm/jni/ConfigFmThs.cpp
+[  2% 120/4766] target thumb C++: libqcomfm_jni <= vendor/qcom/opensource/fm/jni/FmIoctlsInterface.cpp
+In file included from vendor/qcom/opensource/fm/jni/FmIoctlsInterface.cpp:29:
+In file included from vendor/qcom/opensource/fm/jni/FmIoctlsInterface.h:34:
+In file included from out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/videodev2.h:65:
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/v4l2-controls.h:79:9: warning: 'V4L2_CID_AUDIO_MUTE' macro redefined [-Wmacro-redefined]
+#define V4L2_CID_AUDIO_MUTE             (V4L2_CID_BASE+9)
+        ^
+vendor/qcom/opensource/fm/jni/FmConst.h:51:9: note: previous definition is here
+#define V4L2_CID_AUDIO_MUTE   (V4L2_CID_BASE + 9)
+        ^
+1 warning generated.
+[  2% 121/4766] target thumb C++: libqcomfm_jni <= vendor/qcom/opensource/fm/jni/FmPerformanceParams.cpp
+In file included from vendor/qcom/opensource/fm/jni/FmPerformanceParams.cpp:30:
+In file included from vendor/qcom/opensource/fm/jni/FmIoctlsInterface.h:34:
+In file included from out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/videodev2.h:65:
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/v4l2-controls.h:79:9: warning: 'V4L2_CID_AUDIO_MUTE' macro redefined [-Wmacro-redefined]
+#define V4L2_CID_AUDIO_MUTE             (V4L2_CID_BASE+9)
+        ^
+vendor/qcom/opensource/fm/jni/FmConst.h:51:9: note: previous definition is here
+#define V4L2_CID_AUDIO_MUTE   (V4L2_CID_BASE + 9)
+        ^
+1 warning generated.
+[  2% 122/4766] target SharedLib: libqcomfm_jni (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libqcomfm_jni_intermediates/LINKED/libqcomfm_jni.so)
+[  2% 123/4766] target Pack Relocations: libqcomfm_jni (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libqcomfm_jni_intermediates/PACKED/libqcomfm_jni.so)
+[  2% 124/4766] target Symbolic: libqcomfm_jni (out/target/product/msm8909go/symbols/system/lib/libqcomfm_jni.so)
+[  2% 125/4766] target Strip (mini debug info): libqcomfm_jni (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libqcomfm_jni_intermediates/libqcomfm_jni.so)
+[  2% 126/4766] Install: out/target/product/msm8909go/system/lib/libqcomfm_jni.so
+[  2% 127/4766] target thumb C: libebt_802_3 <= external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c:13:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c:45:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c:83:34: warning: unused parameter 'match' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c:83:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c:84:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c:84:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_802_3.c:91:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+7 warnings generated.
+[  2% 128/4766] target thumb C: ebtables <= external/ebtables/userspace/ebtables2/ebtables-standalone.c
+In file included from external/ebtables/userspace/ebtables2/ebtables-standalone.c:2:
+external/ebtables/userspace/ebtables2/include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+1 warning generated.
+[  2% 129/4766] target thumb C: libebt_limit <= external/ebtables/userspace/ebtables2/extensions/ebt_limit.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:16:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:113:33: warning: unused parameter 'entry' [-Wunused-parameter]
+      const struct ebt_u_entry *entry,
+                                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:145:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:146:34: warning: unused parameter 'match' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:146:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:147:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:147:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_limit.c:177:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+8 warnings generated.
+[  2% 130/4766] target thumb C: libebtc <= external/ebtables/userspace/ebtables2/getethertype.c
+[  2% 131/4766] target thumb C: libebtc <= external/ebtables/userspace/ebtables2/communication.c
+In file included from external/ebtables/userspace/ebtables2/communication.c:23:
+external/ebtables/userspace/ebtables2/include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/communication.c:662:64: warning: unused parameter 'command' [-Wunused-parameter]
+static int retrieve_from_kernel(struct ebt_replace *repl, char command,
+                                                               ^
+2 warnings generated.
+[  2% 132/4766] target thumb C: libebtc <= external/ebtables/userspace/ebtables2/libebtc.c
+In file included from external/ebtables/userspace/ebtables2/libebtc.c:30:
+external/ebtables/userspace/ebtables2/include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/libebtc.c:45:21: warning: use of GNU 'missing =' extension in designator [-Wgnu-designator]
+        [NF_BR_PRE_ROUTING]"PREROUTING",
+                           ^
+                           = 
+external/ebtables/userspace/ebtables2/libebtc.c:46:18: warning: use of GNU 'missing =' extension in designator [-Wgnu-designator]
+        [NF_BR_LOCAL_IN]"INPUT",
+                        ^
+                        = 
+external/ebtables/userspace/ebtables2/libebtc.c:47:17: warning: use of GNU 'missing =' extension in designator [-Wgnu-designator]
+        [NF_BR_FORWARD]"FORWARD",
+                       ^
+                       = 
+external/ebtables/userspace/ebtables2/libebtc.c:48:19: warning: use of GNU 'missing =' extension in designator [-Wgnu-designator]
+        [NF_BR_LOCAL_OUT]"OUTPUT",
+                         ^
+                         = 
+external/ebtables/userspace/ebtables2/libebtc.c:49:22: warning: use of GNU 'missing =' extension in designator [-Wgnu-designator]
+        [NF_BR_POST_ROUTING]"POSTROUTING",
+                            ^
+                            = 
+external/ebtables/userspace/ebtables2/libebtc.c:50:18: warning: use of GNU 'missing =' extension in designator [-Wgnu-designator]
+        [NF_BR_BROUTING]"BROUTING"
+                        ^
+                        = 
+7 warnings generated.
+[  2% 133/4766] target thumb C: libebtc <= external/ebtables/userspace/ebtables2/useful_functions.c
+In file included from external/ebtables/userspace/ebtables2/useful_functions.c:25:
+external/ebtables/userspace/ebtables2/include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/useful_functions.c:59:27: warning: incompatible pointer types passing 'struct ether_addr *' to parameter of type 'const struct ether_addr *' [-Wincompatible-pointer-types]
+                printf("%s", ether_ntoa((struct ether_addr *) mac));
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+bionic/libc/include/netinet/ether.h:37:42: note: passing argument to parameter here
+char* ether_ntoa(const struct ether_addr*) __INTRODUCED_IN(11);
+                                         ^
+2 warnings generated.
+[  2% 134/4766] Generating signed appsbl using secimage tool for msm8909
+Completed secimage signed appsbl (logs in out/target/product/msm8909go/secimage.log)
+[  2% 135/4766] target asm: libmmjpeg <= vendor/qcom/proprietary/mm-still/jpeg2/src/asm/armv7/jpege_engine_sw_dct_fetch_dct_armv7_gcc.S
+[  2% 136/4766] target thumb C: libebtc <= external/ebtables/userspace/ebtables2/ebtables.c
+In file included from external/ebtables/userspace/ebtables2/ebtables.c:30:
+external/ebtables/userspace/ebtables2/include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/ebtables.c:532:28: warning: unused parameter 'signum' [-Wunused-parameter]
+static void sighandler(int signum)
+                           ^
+2 warnings generated.
+[  2% 137/4766] target SharedLib: libebtc (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtc_intermediates/LINKED/libebtc.so)
+[  2% 138/4766] target thumb C: libebt_among <= external/ebtables/userspace/ebtables2/extensions/ebt_among.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_among.c:15:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:308:30: warning: unused parameter 'entry' [-Wunused-parameter]
+                 const struct ebt_u_entry *entry, unsigned int *flags,
+                                           ^
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:390:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:391:34: warning: unused parameter 'match' [-Wunused-parameter]
+                        const struct ebt_entry_match *match,
+                                                      ^
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:392:16: warning: unused parameter 'name' [-Wunused-parameter]
+                        const char *name, unsigned int hookmask,
+                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:392:35: warning: unused parameter 'hookmask' [-Wunused-parameter]
+                        const char *name, unsigned int hookmask,
+                                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:393:17: warning: unused parameter 'time' [-Wunused-parameter]
+                        unsigned int time)
+                                     ^
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:446:21: warning: use of logical '&&' with constant operand [-Wconstant-logical-operand]
+                if (info->bitmask && EBT_AMONG_SRC_NEG) {
+                                  ^  ~~~~~~~~~~~~~~~~~
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:446:21: note: use '&' for a bitwise operation
+                if (info->bitmask && EBT_AMONG_SRC_NEG) {
+                                  ^~
+                                  &
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:446:21: note: remove constant to silence this warning
+                if (info->bitmask && EBT_AMONG_SRC_NEG) {
+                                 ~^~~~~~~~~~~~~~~~~~~~
+external/ebtables/userspace/ebtables2/extensions/ebt_among.c:432:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+9 warnings generated.
+[  2% 139/4766] target Pack Relocations: libebtc (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtc_intermediates/PACKED/libebtc.so)
+[  2% 140/4766] target Symbolic: libebtc (out/target/product/msm8909go/symbols/system/lib/libebtc.so)
+[  2% 141/4766] target Strip (mini debug info): libebtc (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtc_intermediates/libebtc.so)
+[  2% 142/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtc_intermediates/libebtc.so.toc
+[  3% 143/4766] Copy: out/target/product/msm8909go/obj/lib/libebtc.so
+[  3% 144/4766] target thumb C: libebt_arp <= external/ebtables/userspace/ebtables2/extensions/ebt_arp.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_arp.c:14:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arp.c:95:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arp.c:222:34: warning: unused parameter 'match' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arp.c:222:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arp.c:223:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arp.c:223:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arp.c:230:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+7 warnings generated.
+[  3% 145/4766] Copy: out/target/product/msm8909go/obj/lib/libebtc.so.toc
+[  3% 146/4766] target SharedLib: libebt_802_3 (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_802_3_intermediates/LINKED/libebt_802_3.so)
+[  3% 147/4766] target Pack Relocations: libebt_802_3 (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_802_3_intermediates/PACKED/libebt_802_3.so)
+[  3% 148/4766] target Symbolic: libebt_802_3 (out/target/product/msm8909go/symbols/system/lib/libebt_802_3.so)
+[  3% 149/4766] target thumb C: libebt_arpreply <= external/ebtables/userspace/ebtables2/extensions/ebt_arpreply.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_arpreply.c:14:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arpreply.c:50:32: warning: unused parameter 'argv' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc,
+                               ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arpreply.c:50:42: warning: unused parameter 'argc' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc,
+                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arpreply.c:51:30: warning: unused parameter 'entry' [-Wunused-parameter]
+   const struct ebt_u_entry *entry, unsigned int *flags,
+                             ^
+external/ebtables/userspace/ebtables2/extensions/ebt_arpreply.c:98:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+5 warnings generated.
+[  3% 150/4766] target SharedLib: libebt_among (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_among_intermediates/LINKED/libebt_among.so)
+[  3% 151/4766] target Pack Relocations: libebt_among (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_among_intermediates/PACKED/libebt_among.so)
+[  3% 152/4766] target Symbolic: libebt_among (out/target/product/msm8909go/symbols/system/lib/libebt_among.so)
+[  3% 153/4766] target Strip (mini debug info): libebt_802_3 (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_802_3_intermediates/libebt_802_3.so)
+[  3% 154/4766] target Strip (mini debug info): libebt_among (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_among_intermediates/libebt_among.so)
+[  3% 155/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_802_3.so
+[  3% 156/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_802_3_intermediates/libebt_802_3.so.toc
+[  3% 157/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_802_3.so.toc
+[  3% 158/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_among.so
+[  3% 159/4766] target SharedLib: libebt_arp (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arp_intermediates/LINKED/libebt_arp.so)
+[  3% 160/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_among_intermediates/libebt_among.so.toc
+[  3% 161/4766] target Pack Relocations: libebt_arp (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arp_intermediates/PACKED/libebt_arp.so)
+[  3% 162/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_among.so.toc
+[  3% 163/4766] target Symbolic: libebt_arp (out/target/product/msm8909go/symbols/system/lib/libebt_arp.so)
+[  3% 164/4766] target SharedLib: libebt_arpreply (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arpreply_intermediates/LINKED/libebt_arpreply.so)
+[  3% 165/4766] target Pack Relocations: libebt_arpreply (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arpreply_intermediates/PACKED/libebt_arpreply.so)
+[  3% 166/4766] target Symbolic: libebt_arpreply (out/target/product/msm8909go/symbols/system/lib/libebt_arpreply.so)
+[  3% 167/4766] target Strip (mini debug info): libebt_arp (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arp_intermediates/libebt_arp.so)
+[  3% 168/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arp_intermediates/libebt_arp.so.toc
+[  3% 169/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_arp.so
+[  3% 170/4766] target Strip (mini debug info): libebt_arpreply (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arpreply_intermediates/libebt_arpreply.so)
+[  3% 171/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_arp.so.toc
+[  3% 172/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_arpreply_intermediates/libebt_arpreply.so.toc
+[  3% 173/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_arpreply.so
+[  3% 174/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_arpreply.so.toc
+[  3% 175/4766] target thumb C: libebt_ip <= external/ebtables/userspace/ebtables2/extensions/ebt_ip.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_ip.c:18:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip.c:125:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip.c:208:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip.c:209:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip.c:209:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip.c:228:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+6 warnings generated.
+[  3% 176/4766] target SharedLib: libebt_ip (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip_intermediates/LINKED/libebt_ip.so)
+[  3% 177/4766] target thumb C: libebt_ip6 <= external/ebtables/userspace/ebtables2/extensions/ebt_ip6.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_ip6.c:22:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip6.c:323:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip6.c:412:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip6.c:413:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip6.c:413:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_ip6.c:438:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+6 warnings generated.
+[  3% 178/4766] target Pack Relocations: libebt_ip (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip_intermediates/PACKED/libebt_ip.so)
+[  3% 179/4766] target Symbolic: libebt_ip (out/target/product/msm8909go/symbols/system/lib/libebt_ip.so)
+[  3% 180/4766] target SharedLib: libebt_ip6 (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip6_intermediates/LINKED/libebt_ip6.so)
+[  3% 181/4766] target Pack Relocations: libebt_ip6 (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip6_intermediates/PACKED/libebt_ip6.so)
+[  3% 182/4766] target Symbolic: libebt_ip6 (out/target/product/msm8909go/symbols/system/lib/libebt_ip6.so)
+[  3% 183/4766] target Strip (mini debug info): libebt_ip (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip_intermediates/libebt_ip.so)
+[  3% 184/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip_intermediates/libebt_ip.so.toc
+[  3% 185/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_ip.so
+[  3% 186/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_ip.so.toc
+[  3% 187/4766] target Strip (mini debug info): libebt_ip6 (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip6_intermediates/libebt_ip6.so)
+[  3% 188/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_ip6_intermediates/libebt_ip6.so.toc
+[  3% 189/4766] target SharedLib: libebt_limit (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_limit_intermediates/LINKED/libebt_limit.so)
+[  3% 190/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_ip6.so
+[  4% 191/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_ip6.so.toc
+[  4% 192/4766] target Pack Relocations: libebt_limit (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_limit_intermediates/PACKED/libebt_limit.so)
+[  4% 193/4766] target Symbolic: libebt_limit (out/target/product/msm8909go/symbols/system/lib/libebt_limit.so)
+[  4% 194/4766] Building with Jack: out/target/common/obj/APPS/BuiltInPrintService_intermediates/with-local/classes.dex
+[  4% 195/4766] Copying: out/target/common/obj/APPS/BuiltInPrintService_intermediates/classes.dex
+[  4% 196/4766] target Strip (mini debug info): libebt_limit (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_limit_intermediates/libebt_limit.so)
+[  4% 197/4766] target thumb C: libebt_log <= external/ebtables/userspace/ebtables2/extensions/ebt_log.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_log.c:13:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_log.c:109:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_log.c:171:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_log.c:172:36: warning: unused parameter 'watcher' [-Wunused-parameter]
+   const struct ebt_entry_watcher *watcher, const char *name,
+                                   ^
+external/ebtables/userspace/ebtables2/extensions/ebt_log.c:172:57: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_watcher *watcher, const char *name,
+                                                        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_log.c:173:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_log.c:173:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_log.c:177:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+8 warnings generated.
+[  4% 198/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_limit.so
+[  4% 199/4766] target SharedLib: libebt_log (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_log_intermediates/LINKED/libebt_log.so)
+[  4% 200/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_limit_intermediates/libebt_limit.so.toc
+[  4% 201/4766] target Pack Relocations: libebt_log (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_log_intermediates/PACKED/libebt_log.so)
+[  4% 202/4766] target Symbolic: libebt_log (out/target/product/msm8909go/symbols/system/lib/libebt_log.so)
+[  4% 203/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_limit.so.toc
+[  4% 204/4766] target Strip (mini debug info): libebt_log (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_log_intermediates/libebt_log.so)
+[  4% 205/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_log_intermediates/libebt_log.so.toc
+[  4% 206/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_log.so
+[  4% 207/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_log.so.toc
+[  4% 208/4766] target thumb C: libebt_mark <= external/ebtables/userspace/ebtables2/extensions/ebt_mark.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_mark.c:13:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark.c:62:32: warning: unused parameter 'argv' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc,
+                               ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark.c:62:42: warning: unused parameter 'argc' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc,
+                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark.c:63:30: warning: unused parameter 'entry' [-Wunused-parameter]
+   const struct ebt_u_entry *entry, unsigned int *flags,
+                             ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark.c:114:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark.c:115:55: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_target *target, const char *name,
+                                                      ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark.c:127:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+7 warnings generated.
+[  4% 209/4766] target SharedLib: libebt_mark (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_intermediates/LINKED/libebt_mark.so)
+[  4% 210/4766] target Pack Relocations: libebt_mark (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_intermediates/PACKED/libebt_mark.so)
+[  4% 211/4766] target Symbolic: libebt_mark (out/target/product/msm8909go/symbols/system/lib/libebt_mark.so)
+[  4% 212/4766] target thumb C: libebt_mark_m <= external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:13:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:42:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:71:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:72:34: warning: unused parameter 'match' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:72:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:73:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:73:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_mark_m.c:77:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+8 warnings generated.
+[  4% 213/4766] target Strip (mini debug info): libebt_mark (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_intermediates/libebt_mark.so)
+[  4% 214/4766] target SharedLib: libebt_mark_m (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_m_intermediates/LINKED/libebt_mark_m.so)
+[  4% 215/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_mark.so
+[  4% 216/4766] target Pack Relocations: libebt_mark_m (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_m_intermediates/PACKED/libebt_mark_m.so)
+[  4% 217/4766] target Symbolic: libebt_mark_m (out/target/product/msm8909go/symbols/system/lib/libebt_mark_m.so)
+[  4% 218/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_intermediates/libebt_mark.so.toc
+[  4% 219/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_mark.so.toc
+[  4% 220/4766] target Strip (mini debug info): libebt_mark_m (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_m_intermediates/libebt_mark_m.so)
+[  4% 221/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_mark_m_intermediates/libebt_mark_m.so.toc
+[  4% 222/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_mark_m.so
+[  4% 223/4766] Building with Jack: out/target/common/obj/JAVA_LIBRARIES/android-ex-camera2-utils_intermediates/classes.jack
+[  4% 224/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_mark_m.so.toc
+[  4% 225/4766] target thumb C: libebt_nflog <= external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:17:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:58:36: warning: unused parameter 'entry' [-Wunused-parameter]
+                       const struct ebt_u_entry *entry, unsigned int *flags,
+                                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:121:57: warning: unused parameter 'entry' [-Wunused-parameter]
+static void nflog_final_check(const struct ebt_u_entry *entry,
+                                                        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:122:42: warning: unused parameter 'watcher' [-Wunused-parameter]
+                              const struct ebt_entry_watcher *watcher,
+                                                              ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:123:22: warning: unused parameter 'name' [-Wunused-parameter]
+                              const char *name, unsigned int hookmask,
+                                          ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:123:41: warning: unused parameter 'hookmask' [-Wunused-parameter]
+                              const char *name, unsigned int hookmask,
+                                                             ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:124:23: warning: unused parameter 'time' [-Wunused-parameter]
+                              unsigned int time)
+                                           ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nflog.c:128:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void nflog_print(const struct ebt_u_entry *entry,
+                                                  ^
+8 warnings generated.
+[  4% 226/4766] target SharedLib: libebt_nflog (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nflog_intermediates/LINKED/libebt_nflog.so)
+[  4% 227/4766] target Pack Relocations: libebt_nflog (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nflog_intermediates/PACKED/libebt_nflog.so)
+[  4% 228/4766] target Symbolic: libebt_nflog (out/target/product/msm8909go/symbols/system/lib/libebt_nflog.so)
+[  4% 229/4766] target thumb C: libebt_nat <= external/ebtables/userspace/ebtables2/extensions/ebt_nat.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:13:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:79:34: warning: unused parameter 'argv' [-Wunused-parameter]
+static int parse_s(int c, char **argv, int argc,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:79:44: warning: unused parameter 'argc' [-Wunused-parameter]
+static int parse_s(int c, char **argv, int argc,
+                                           ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:80:30: warning: unused parameter 'entry' [-Wunused-parameter]
+   const struct ebt_u_entry *entry, unsigned int *flags,
+                             ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:114:34: warning: unused parameter 'argv' [-Wunused-parameter]
+static int parse_d(int c, char **argv, int argc,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:114:44: warning: unused parameter 'argc' [-Wunused-parameter]
+static int parse_d(int c, char **argv, int argc,
+                                           ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:115:30: warning: unused parameter 'entry' [-Wunused-parameter]
+   const struct ebt_u_entry *entry, unsigned int *flags,
+                             ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:140:53: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check_s(const struct ebt_u_entry *entry,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:157:53: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check_d(const struct ebt_u_entry *entry,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:176:47: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print_s(const struct ebt_u_entry *entry,
+                                              ^
+external/ebtables/userspace/ebtables2/extensions/ebt_nat.c:188:47: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print_d(const struct ebt_u_entry *entry,
+                                              ^
+11 warnings generated.
+[  4% 230/4766] target SharedLib: libebt_nat (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nat_intermediates/LINKED/libebt_nat.so)
+[  4% 231/4766] target Pack Relocations: libebt_nat (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nat_intermediates/PACKED/libebt_nat.so)
+[  4% 232/4766] target Symbolic: libebt_nat (out/target/product/msm8909go/symbols/system/lib/libebt_nat.so)
+[  4% 233/4766] target Strip (mini debug info): libebt_nflog (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nflog_intermediates/libebt_nflog.so)
+[  4% 234/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nflog_intermediates/libebt_nflog.so.toc
+[  4% 235/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_nflog.so
+[  4% 236/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_nflog.so.toc
+[  4% 237/4766] target Strip (mini debug info): libebt_nat (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nat_intermediates/libebt_nat.so)
+[  4% 238/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_nat_intermediates/libebt_nat.so.toc
+[  5% 239/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_nat.so
+[  5% 240/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_nat.so.toc
+[  5% 241/4766] target thumb C: libebt_pkttype <= external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:14:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:51:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:83:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:84:34: warning: unused parameter 'match' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:84:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:85:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:85:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_pkttype.c:89:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+8 warnings generated.
+[  5% 242/4766] target SharedLib: libebt_pkttype (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_pkttype_intermediates/LINKED/libebt_pkttype.so)
+[  5% 243/4766] target Pack Relocations: libebt_pkttype (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_pkttype_intermediates/PACKED/libebt_pkttype.so)
+[  5% 244/4766] target Symbolic: libebt_pkttype (out/target/product/msm8909go/symbols/system/lib/libebt_pkttype.so)
+[  5% 245/4766] target thumb C: libebt_redirect <= external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c:13:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c:40:32: warning: unused parameter 'argv' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc,
+                               ^
+external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c:40:42: warning: unused parameter 'argc' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc,
+                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c:41:30: warning: unused parameter 'entry' [-Wunused-parameter]
+   const struct ebt_u_entry *entry, unsigned int *flags,
+                             ^
+external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c:59:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c:61:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_redirect.c:76:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+7 warnings generated.
+[  5% 246/4766] target SharedLib: libebt_redirect (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_redirect_intermediates/LINKED/libebt_redirect.so)
+[  5% 247/4766] target Pack Relocations: libebt_redirect (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_redirect_intermediates/PACKED/libebt_redirect.so)
+[  5% 248/4766] target Strip (mini debug info): libebt_pkttype (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_pkttype_intermediates/libebt_pkttype.so)
+[  5% 249/4766] target Symbolic: libebt_redirect (out/target/product/msm8909go/symbols/system/lib/libebt_redirect.so)
+[  5% 250/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_pkttype_intermediates/libebt_pkttype.so.toc
+[  5% 251/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_pkttype.so
+[  5% 252/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_pkttype.so.toc
+[  5% 253/4766] target Strip (mini debug info): libebt_redirect (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_redirect_intermediates/libebt_redirect.so)
+[  5% 254/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_redirect_intermediates/libebt_redirect.so.toc
+[  5% 255/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_redirect.so
+[  5% 256/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_redirect.so.toc
+[  5% 257/4766] target thumb C: libebt_standard <= external/ebtables/userspace/ebtables2/extensions/ebt_standard.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:12:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:30:22: warning: unused parameter 'c' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                     ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:30:32: warning: unused parameter 'argv' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                               ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:30:42: warning: unused parameter 'argc' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:30:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:31:18: warning: unused parameter 'flags' [-Wunused-parameter]
+   unsigned int *flags, struct ebt_entry_target **target)
+                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:31:51: warning: unused parameter 'target' [-Wunused-parameter]
+   unsigned int *flags, struct ebt_entry_target **target)
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:36:51: warning: unused parameter 'entry' [-Wunused-parameter]
+static void final_check(const struct ebt_u_entry *entry,
+                                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:37:35: warning: unused parameter 'target' [-Wunused-parameter]
+   const struct ebt_entry_target *target, const char *name,
+                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:37:55: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_target *target, const char *name,
+                                                      ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:38:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_standard.c:38:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+12 warnings generated.
+[  5% 258/4766] target SharedLib: libebt_standard (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_standard_intermediates/LINKED/libebt_standard.so)
+[  5% 259/4766] target Pack Relocations: libebt_standard (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_standard_intermediates/PACKED/libebt_standard.so)
+[  5% 260/4766] target Symbolic: libebt_standard (out/target/product/msm8909go/symbols/system/lib/libebt_standard.so)
+[  5% 261/4766] target Strip (mini debug info): libebt_standard (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_standard_intermediates/libebt_standard.so)
+[  5% 262/4766] target thumb C: libebt_stp <= external/ebtables/userspace/ebtables2/extensions/ebt_stp.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_stp.c:13:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_stp.c:157:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_stp.c:256:34: warning: unused parameter 'match' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_stp.c:256:53: warning: unused parameter 'name' [-Wunused-parameter]
+   const struct ebt_entry_match *match, const char *name,
+                                                    ^
+external/ebtables/userspace/ebtables2/extensions/ebt_stp.c:257:17: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                ^
+external/ebtables/userspace/ebtables2/extensions/ebt_stp.c:257:40: warning: unused parameter 'time' [-Wunused-parameter]
+   unsigned int hookmask, unsigned int time)
+                                       ^
+external/ebtables/userspace/ebtables2/extensions/ebt_stp.c:269:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+7 warnings generated.
+[  5% 263/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_standard.so
+[  5% 264/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_standard_intermediates/libebt_standard.so.toc
+[  5% 265/4766] target SharedLib: libebt_stp (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_stp_intermediates/LINKED/libebt_stp.so)
+[  5% 266/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_standard.so.toc
+[  5% 267/4766] target Pack Relocations: libebt_stp (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_stp_intermediates/PACKED/libebt_stp.so)
+[  5% 268/4766] target Symbolic: libebt_stp (out/target/product/msm8909go/symbols/system/lib/libebt_stp.so)
+[  5% 269/4766] target Strip (mini debug info): libebt_stp (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_stp_intermediates/libebt_stp.so)
+[  5% 270/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_stp.so
+[  5% 271/4766] target thumb C: libebt_vlan <= external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c:15:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c:62:74: warning: unused parameter 'entry' [-Wunused-parameter]
+static int parse(int c, char **argv, int argc, const struct ebt_u_entry *entry,
+                                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c:114:34: warning: unused parameter 'match' [-Wunused-parameter]
+   const struct ebt_entry_match *match,
+                                 ^
+external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c:115:16: warning: unused parameter 'name' [-Wunused-parameter]
+   const char *name, unsigned int hookmask, unsigned int time)
+               ^
+external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c:115:35: warning: unused parameter 'hookmask' [-Wunused-parameter]
+   const char *name, unsigned int hookmask, unsigned int time)
+                                  ^
+external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c:115:58: warning: unused parameter 'time' [-Wunused-parameter]
+   const char *name, unsigned int hookmask, unsigned int time)
+                                                         ^
+external/ebtables/userspace/ebtables2/extensions/ebt_vlan.c:128:45: warning: unused parameter 'entry' [-Wunused-parameter]
+static void print(const struct ebt_u_entry *entry,
+                                            ^
+7 warnings generated.
+[  5% 272/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_stp_intermediates/libebt_stp.so.toc
+[  5% 273/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_stp.so.toc
+[  5% 274/4766] target SharedLib: libebt_vlan (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_vlan_intermediates/LINKED/libebt_vlan.so)
+[  5% 275/4766] target Pack Relocations: libebt_vlan (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_vlan_intermediates/PACKED/libebt_vlan.so)
+[  5% 276/4766] target Symbolic: libebt_vlan (out/target/product/msm8909go/symbols/system/lib/libebt_vlan.so)
+[  5% 277/4766] target thumb C: libebtable_broute <= external/ebtables/userspace/ebtables2/extensions/ebtable_broute.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebtable_broute.c:10:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+1 warning generated.
+[  5% 278/4766] target SharedLib: libebtable_broute (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_broute_intermediates/LINKED/libebtable_broute.so)
+[  5% 279/4766] target Strip (mini debug info): libebt_vlan (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_vlan_intermediates/libebt_vlan.so)
+[  5% 280/4766] target Pack Relocations: libebtable_broute (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_broute_intermediates/PACKED/libebtable_broute.so)
+[  5% 281/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_vlan.so
+[  5% 282/4766] target Symbolic: libebtable_broute (out/target/product/msm8909go/symbols/system/lib/libebtable_broute.so)
+[  5% 283/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebt_vlan_intermediates/libebt_vlan.so.toc
+[  5% 284/4766] Copy: out/target/product/msm8909go/obj/lib/libebt_vlan.so.toc
+[  5% 285/4766] target Strip (mini debug info): libebtable_broute (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_broute_intermediates/libebtable_broute.so)
+[  6% 286/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_broute_intermediates/libebtable_broute.so.toc
+[  6% 287/4766] Copy: out/target/product/msm8909go/obj/lib/libebtable_broute.so
+[  6% 288/4766] Copy: out/target/product/msm8909go/obj/lib/libebtable_broute.so.toc
+[  6% 289/4766] target thumb C: libebtable_filter <= external/ebtables/userspace/ebtables2/extensions/ebtable_filter.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebtable_filter.c:10:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+1 warning generated.
+[  6% 290/4766] target SharedLib: libebtable_filter (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_filter_intermediates/LINKED/libebtable_filter.so)
+[  6% 291/4766] target Pack Relocations: libebtable_filter (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_filter_intermediates/PACKED/libebtable_filter.so)
+[  6% 292/4766] target Symbolic: libebtable_filter (out/target/product/msm8909go/symbols/system/lib/libebtable_filter.so)
+[  6% 293/4766] target thumb C: libebtable_nat <= external/ebtables/userspace/ebtables2/extensions/ebtable_nat.c
+In file included from external/ebtables/userspace/ebtables2/extensions/ebtable_nat.c:10:
+external/ebtables/userspace/ebtables2/extensions/../include/ebtables_u.h:29:9: warning: Found __ANDRIOD_API__, #undef __unused [-W#pragma-messages]
+#pragma message "Found __ANDRIOD_API__, #undef __unused"
+        ^
+1 warning generated.
+[  6% 294/4766] target Strip (mini debug info): libebtable_filter (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_filter_intermediates/libebtable_filter.so)
+[  6% 295/4766] target SharedLib: libebtable_nat (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_nat_intermediates/LINKED/libebtable_nat.so)
+[  6% 296/4766] Copy: out/target/product/msm8909go/obj/lib/libebtable_filter.so
+[  6% 297/4766] target Pack Relocations: libebtable_nat (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_nat_intermediates/PACKED/libebtable_nat.so)
+[  6% 298/4766] target Symbolic: libebtable_nat (out/target/product/msm8909go/symbols/system/lib/libebtable_nat.so)
+[  6% 299/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_filter_intermediates/libebtable_filter.so.toc
+[  6% 300/4766] Copy: out/target/product/msm8909go/obj/lib/libebtable_filter.so.toc
+[  6% 301/4766] Install: out/target/product/msm8909go/system/lib/libebtc.so
+[  6% 302/4766] Install: out/target/product/msm8909go/system/lib/libebt_mark.so
+[  6% 303/4766] Install: out/target/product/msm8909go/system/lib/libebt_mark_m.so
+[  6% 304/4766] Install: out/target/product/msm8909go/system/lib/libebt_nat.so
+[  6% 305/4766] Install: out/target/product/msm8909go/system/lib/libebt_nflog.so
+[  6% 306/4766] Install: out/target/product/msm8909go/system/lib/libebt_802_3.so
+[  6% 307/4766] Install: out/target/product/msm8909go/system/lib/libebt_among.so
+[  6% 308/4766] Install: out/target/product/msm8909go/system/lib/libebt_arp.so
+[  6% 309/4766] Install: out/target/product/msm8909go/system/lib/libebt_arpreply.so
+[  6% 310/4766] Install: out/target/product/msm8909go/system/lib/libebt_ip.so
+[  6% 311/4766] Install: out/target/product/msm8909go/system/lib/libebt_ip6.so
+[  6% 312/4766] Install: out/target/product/msm8909go/system/lib/libebt_limit.so
+[  6% 313/4766] Install: out/target/product/msm8909go/system/lib/libebt_log.so
+[  6% 314/4766] Install: out/target/product/msm8909go/system/lib/libebt_pkttype.so
+[  6% 315/4766] Install: out/target/product/msm8909go/system/lib/libebt_redirect.so
+[  6% 316/4766] Install: out/target/product/msm8909go/system/lib/libebt_standard.so
+[  6% 317/4766] target Strip (mini debug info): libebtable_nat (out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_nat_intermediates/libebtable_nat.so)
+[  6% 318/4766] Install: out/target/product/msm8909go/system/lib/libebt_stp.so
+[  6% 319/4766] Copy: out/target/product/msm8909go/obj/lib/libebtable_nat.so
+[  6% 320/4766] Install: out/target/product/msm8909go/system/lib/libebt_vlan.so
+[  6% 321/4766] Install: out/target/product/msm8909go/system/lib/libebtable_broute.so
+[  6% 322/4766] build out/target/product/msm8909go/obj/SHARED_LIBRARIES/libebtable_nat_intermediates/libebtable_nat.so.toc
+[  6% 323/4766] Install: out/target/product/msm8909go/system/lib/libebtable_filter.so
+[  6% 324/4766] Copy: out/target/product/msm8909go/obj/lib/libebtable_nat.so.toc
+[  6% 325/4766] Install: out/target/product/msm8909go/system/lib/libebtable_nat.so
+[  6% 326/4766] target Executable: ebtables (out/target/product/msm8909go/obj/EXECUTABLES/ebtables_intermediates/LINKED/ebtables)
+[  6% 327/4766] target Unpacked: ebtables (out/target/product/msm8909go/obj/EXECUTABLES/ebtables_intermediates/PACKED/ebtables)
+[  6% 328/4766] target Symbolic: ebtables (out/target/product/msm8909go/symbols/system/bin/ebtables)
+[  6% 329/4766] target Strip (mini debug info): ebtables (out/target/product/msm8909go/obj/EXECUTABLES/ebtables_intermediates/ebtables)
+[  6% 330/4766] Install: out/target/product/msm8909go/system/bin/ebtables
+[  6% 331/4766] target thumb C: fmconfig <= vendor/qcom/proprietary/fm/fmtest/main.c
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:86:9: warning: 'hci_opcode_pack' macro redefined [-Wmacro-redefined]
+#define hci_opcode_pack(ogf, ocf)    (uint16_t) (((ocf) & 0x03ff)|((ogf) << 10))
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:187:9: note: previous definition is here
+#define hci_opcode_pack(ogf, ocf)  ((__u16) ((ocf & 0x03ff)|(ogf << 10)))
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:89:9: warning: 'hci_recv_ctrl_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_recv_ctrl_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:190:9: note: previous definition is here
+#define hci_recv_ctrl_cmd_op_pack(ocf) \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:91:9: warning: 'hci_trans_ctrl_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_trans_ctrl_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:192:9: note: previous definition is here
+#define hci_trans_ctrl_cmd_op_pack(ocf) \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:93:9: warning: 'hci_common_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_common_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:194:9: note: previous definition is here
+#define hci_common_cmd_op_pack(ocf)     \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:95:9: warning: 'hci_status_param_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_status_param_op_pack(ocf)   \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:196:9: note: previous definition is here
+#define hci_status_param_op_pack(ocf)   \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:97:9: warning: 'hci_diagnostic_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_diagnostic_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:198:9: note: previous definition is here
+#define hci_diagnostic_cmd_op_pack(ocf) \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:115:9: warning: 'RADIO_HCI_COMMAND_PKT' macro redefined [-Wmacro-redefined]
+#define RADIO_HCI_COMMAND_PKT   (0x11)
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:60:9: note: previous definition is here
+#define RADIO_HCI_COMMAND_PKT   0x11
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/main.c:32:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:116:9: warning: 'RADIO_HCI_EVENT_PKT' macro redefined [-Wmacro-redefined]
+#define RADIO_HCI_EVENT_PKT     (0x14)
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:61:9: note: previous definition is here
+#define RADIO_HCI_EVENT_PKT     0x14
+        ^
+vendor/qcom/proprietary/fm/fmtest/main.c:36:9: warning: 'PROPERTY_VALUE_MAX' macro redefined [-Wmacro-redefined]
+#define PROPERTY_VALUE_MAX  92
+        ^
+system/core/libcutils/include/cutils/properties.h:37:9: note: previous definition is here
+#define PROPERTY_VALUE_MAX  PROP_VALUE_MAX
+        ^
+vendor/qcom/proprietary/fm/fmtest/main.c:334:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char *argv[])
+             ^
+vendor/qcom/proprietary/fm/fmtest/main.c:334:26: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char *argv[])
+                         ^
+11 warnings generated.
+[  6% 332/4766] target thumb C: fmconfig <= vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:86:9: warning: 'hci_opcode_pack' macro redefined [-Wmacro-redefined]
+#define hci_opcode_pack(ogf, ocf)    (uint16_t) (((ocf) & 0x03ff)|((ogf) << 10))
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:187:9: note: previous definition is here
+#define hci_opcode_pack(ogf, ocf)  ((__u16) ((ocf & 0x03ff)|(ogf << 10)))
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:89:9: warning: 'hci_recv_ctrl_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_recv_ctrl_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:190:9: note: previous definition is here
+#define hci_recv_ctrl_cmd_op_pack(ocf) \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:91:9: warning: 'hci_trans_ctrl_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_trans_ctrl_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:192:9: note: previous definition is here
+#define hci_trans_ctrl_cmd_op_pack(ocf) \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:93:9: warning: 'hci_common_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_common_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:194:9: note: previous definition is here
+#define hci_common_cmd_op_pack(ocf)     \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:95:9: warning: 'hci_status_param_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_status_param_op_pack(ocf)   \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:196:9: note: previous definition is here
+#define hci_status_param_op_pack(ocf)   \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:97:9: warning: 'hci_diagnostic_cmd_op_pack' macro redefined [-Wmacro-redefined]
+#define hci_diagnostic_cmd_op_pack(ocf) \
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:198:9: note: previous definition is here
+#define hci_diagnostic_cmd_op_pack(ocf) \
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:115:9: warning: 'RADIO_HCI_COMMAND_PKT' macro redefined [-Wmacro-redefined]
+#define RADIO_HCI_COMMAND_PKT   (0x11)
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:60:9: note: previous definition is here
+#define RADIO_HCI_COMMAND_PKT   0x11
+        ^
+In file included from vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:40:
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.h:116:9: warning: 'RADIO_HCI_EVENT_PKT' macro redefined [-Wmacro-redefined]
+#define RADIO_HCI_EVENT_PKT     (0x14)
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/media/radio-iris.h:61:9: note: previous definition is here
+#define RADIO_HCI_EVENT_PKT     0x14
+        ^
+vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:470:31: warning: unused parameter 'ptr' [-Wunused-parameter]
+void * interrupt_thread(void *ptr)
+                              ^
+vendor/qcom/proprietary/fm/fmtest/fmhalcmds.c:550:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+          if ((retval >= sizeof(versionStr))) {
+               ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~
+10 warnings generated.
+[  6% 333/4766] target thumb C: fmconfig <= vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.c
+vendor/qcom/proprietary/fm/fmtest/fmconfig_cherokee.c:79:43: warning: unused parameter 'buf' [-Wunused-parameter]
+static void evt_dummy_func(unsigned char *buf) {
+                                          ^
+1 warning generated.
+[  7% 334/4766] target Executable: fmconfig (out/target/product/msm8909go/obj/EXECUTABLES/fmconfig_intermediates/LINKED/fmconfig)
+[  7% 335/4766] target Unpacked: fmconfig (out/target/product/msm8909go/obj/EXECUTABLES/fmconfig_intermediates/PACKED/fmconfig)
+[  7% 336/4766] target Symbolic: fmconfig (out/target/product/msm8909go/symbols/system/bin/fmconfig)
+[  7% 337/4766] target thumb C: fmfactorytest <= vendor/qcom/proprietary/fm/fmfactorytest/fmfactorytestclient.c
+[  7% 338/4766] target Strip (mini debug info): fmconfig (out/target/product/msm8909go/obj/EXECUTABLES/fmconfig_intermediates/fmconfig)
+[  7% 339/4766] Install: out/target/product/msm8909go/system/bin/fmconfig
+[  7% 340/4766] target Executable: fmfactorytest (out/target/product/msm8909go/obj/EXECUTABLES/fmfactorytest_intermediates/LINKED/fmfactorytest)
+[  7% 341/4766] target Unpacked: fmfactorytest (out/target/product/msm8909go/obj/EXECUTABLES/fmfactorytest_intermediates/PACKED/fmfactorytest)
+[  7% 342/4766] target Symbolic: fmfactorytest (out/target/product/msm8909go/symbols/system/bin/fmfactorytest)
+[  7% 343/4766] target Strip (mini debug info): fmfactorytest (out/target/product/msm8909go/obj/EXECUTABLES/fmfactorytest_intermediates/fmfactorytest)
+[  7% 344/4766] Install: out/target/product/msm8909go/system/bin/fmfactorytest
+[  7% 345/4766] target thumb C++: fmfactorytestserver <= vendor/qcom/proprietary/fm/fmfactorytestserver/fmfactorytestserver.cpp
+In file included from vendor/qcom/proprietary/fm/fmfactorytestserver/fmfactorytestserver.cpp:10:
+vendor/qcom/proprietary/fm/fmfactorytestserver/FmRadioController_qcom.h:9:9: warning: '__QCOM_FM_RADIO_CTRL_H__' is used as a header guard here, followed by #define of a different macro [-Wheader-guard]
+#ifndef __QCOM_FM_RADIO_CTRL_H__
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+vendor/qcom/proprietary/fm/fmfactorytestserver/FmRadioController_qcom.h:10:9: note: '__QCOM_FM_RADIO_CTRL_H___' is defined here; did you mean '__QCOM_FM_RADIO_CTRL_H__'?
+#define __QCOM_FM_RADIO_CTRL_H___
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+        __QCOM_FM_RADIO_CTRL_H__
+vendor/qcom/proprietary/fm/fmfactorytestserver/fmfactorytestserver.cpp:47:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char *argv[])
+             ^
+vendor/qcom/proprietary/fm/fmfactorytestserver/fmfactorytestserver.cpp:47:26: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char *argv[])
+                         ^
+3 warnings generated.
+[  7% 346/4766] target thumb C++: fmfactorytestserver <= vendor/qcom/proprietary/fm/fmfactorytestserver/QcomFmIoctlsInterface.cpp
+[  7% 347/4766] target thumb C++: fmfactorytestserver <= vendor/qcom/proprietary/fm/fmfactorytestserver/FmRadioController_qcom.cpp
+In file included from vendor/qcom/proprietary/fm/fmfactorytestserver/FmRadioController_qcom.cpp:9:
+vendor/qcom/proprietary/fm/fmfactorytestserver/FmRadioController_qcom.h:9:9: warning: '__QCOM_FM_RADIO_CTRL_H__' is used as a header guard here, followed by #define of a different macro [-Wheader-guard]
+#ifndef __QCOM_FM_RADIO_CTRL_H__
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+vendor/qcom/proprietary/fm/fmfactorytestserver/FmRadioController_qcom.h:10:9: note: '__QCOM_FM_RADIO_CTRL_H___' is defined here; did you mean '__QCOM_FM_RADIO_CTRL_H__'?
+#define __QCOM_FM_RADIO_CTRL_H___
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+        __QCOM_FM_RADIO_CTRL_H__
+1 warning generated.
+[  7% 348/4766] target Executable: fmfactorytestserver (out/target/product/msm8909go/obj/EXECUTABLES/fmfactorytestserver_intermediates/LINKED/fmfactorytestserver)
+[  7% 349/4766] target Unpacked: fmfactorytestserver (out/target/product/msm8909go/obj/EXECUTABLES/fmfactorytestserver_intermediates/PACKED/fmfactorytestserver)
+[  7% 350/4766] target Symbolic: fmfactorytestserver (out/target/product/msm8909go/symbols/system/bin/fmfactorytestserver)
+[  7% 351/4766] target thumb C++: hal_ss_test_manual <= vendor/qcom/proprietary/fm/hal_ss_test/Qualcomm_FM_Test_HAL_Layer.cpp
+[  7% 352/4766] target Strip (mini debug info): fmfactorytestserver (out/target/product/msm8909go/obj/EXECUTABLES/fmfactorytestserver_intermediates/fmfactorytestserver)
+[  7% 353/4766] Install: out/target/product/msm8909go/system/bin/fmfactorytestserver
+[  7% 354/4766] target thumb C++: hal_ss_test_manual <= vendor/qcom/proprietary/fm/hal_ss_test/FmPerformanceParams.cpp
+[  7% 355/4766] target thumb C++: hal_ss_test_manual <= vendor/qcom/proprietary/fm/hal_ss_test/QcomFmIoctlsInterface.cpp
+[  7% 356/4766] target thumb C++: hal_ss_test_manual <= vendor/qcom/proprietary/fm/hal_ss_test/ConfigFmThs.cpp
+[  7% 357/4766] target thumb C++: hal_ss_test_manual <= vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:176:10: warning: unused parameter 'antenna' [-Wunused-parameter]
+    bool antenna
+         ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:196:9: warning: unused parameter 'th' [-Wunused-parameter]
+    int th
+        ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:213:9: warning: unused parameter 'th' [-Wunused-parameter]
+    int th
+        ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:433:10: warning: unused parameter 'rssi' [-Wunused-parameter]
+    long rssi
+         ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:441:10: warning: unused parameter 'snr' [-Wunused-parameter]
+    long snr
+         ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:449:20: warning: unused parameter 'rss_th' [-Wunused-parameter]
+    unsigned short rss_th
+                   ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:457:19: warning: unused parameter 'snr_th' [-Wunused-parameter]
+    unsigned char snr_th
+                  ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:465:19: warning: unused parameter 'cnt_th' [-Wunused-parameter]
+    unsigned char cnt_th
+                  ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:955:10: warning: unused parameter 'vol' [-Wunused-parameter]
+    long vol
+         ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:982:9: warning: unused parameter 'record_mode' [-Wunused-parameter]
+    int record_mode
+        ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:989:10: warning: unused parameter 'on_off' [-Wunused-parameter]
+    bool on_off
+         ^
+vendor/qcom/proprietary/fm/hal_ss_test/FmRadioController_qcom.cpp:1223:11: warning: unused parameter 'arg' [-Wunused-parameter]
+    void *arg
+          ^
+12 warnings generated.
+[  7% 358/4766] target thumb C++: hal_ss_test_manual <= vendor/qcom/proprietary/fm/hal_ss_test/ConfFileParser.cpp
+vendor/qcom/proprietary/fm/hal_ss_test/ConfFileParser.cpp:468:24: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+            if((buf[i] == '\n')) {
+                ~~~~~~~^~~~~~~
+vendor/qcom/proprietary/fm/hal_ss_test/ConfFileParser.cpp:468:24: note: remove extraneous parentheses around the comparison to silence this warning
+            if((buf[i] == '\n')) {
+               ~       ^      ~
+vendor/qcom/proprietary/fm/hal_ss_test/ConfFileParser.cpp:468:24: note: use '=' to turn this equality comparison into an assignment
+            if((buf[i] == '\n')) {
+                       ^~
+                       =
+vendor/qcom/proprietary/fm/hal_ss_test/ConfFileParser.cpp:789:11: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  if((str == equal_start)) {
+      ~~~~^~~~~~~~~~~~~~
+vendor/qcom/proprietary/fm/hal_ss_test/ConfFileParser.cpp:789:11: note: remove extraneous parentheses around the comparison to silence this warning
+  if((str == equal_start)) {
+     ~    ^             ~
+vendor/qcom/proprietary/fm/hal_ss_test/ConfFileParser.cpp:789:11: note: use '=' to turn this equality comparison into an assignment
+  if((str == equal_start)) {
+          ^~
+          =
+2 warnings generated.
+[  7% 359/4766] target Executable: hal_ss_test_manual (out/target/product/msm8909go/obj/EXECUTABLES/hal_ss_test_manual_intermediates/LINKED/hal_ss_test_manual)
+[  7% 360/4766] target Unpacked: hal_ss_test_manual (out/target/product/msm8909go/obj/EXECUTABLES/hal_ss_test_manual_intermediates/PACKED/hal_ss_test_manual)
+[  7% 361/4766] target Symbolic: hal_ss_test_manual (out/target/product/msm8909go/symbols/system/bin/hal_ss_test_manual)
+[  7% 362/4766] target Strip (mini debug info): hal_ss_test_manual (out/target/product/msm8909go/obj/EXECUTABLES/hal_ss_test_manual_intermediates/hal_ss_test_manual)
+[  7% 363/4766] Install: out/target/product/msm8909go/system/bin/hal_ss_test_manual
+[  7% 364/4766] target thumb C: libdsutils <= vendor/qcom/proprietary/data/dsutils/src/ds_sl_list.c
+[  7% 365/4766] target thumb C++: libmmqjpeg_codec <= vendor/qcom/proprietary/mm-still/codec_v1/common/QIBase.cpp
+In file included from <built-in>:6:
+./bionic/libc/kernel/uapi/linux/types.h:25:9: warning: '__bitwise' macro redefined [-Wmacro-redefined]
+#define __bitwise __bitwise__
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/types.h:24:9: note: previous definition is here
+#define __bitwise
+        ^
+1 warning generated.
+[  7% 366/4766] target Package: BuiltInPrintService (out/target/product/msm8909go/obj/APPS/BuiltInPrintService_intermediates/package.apk)
+warning: ignoring flag -c hdpi-v4. Use --preferred-density instead.
+warning: ignoring flag -c mdpi-v4. Use --preferred-density instead.
+warning: ignoring flag -c hdpi-v4. Use --preferred-density instead.
+warning: ignoring flag -c mdpi-v4. Use --preferred-density instead.
+[  7% 367/4766] Install: out/target/product/msm8909go/system/app/BuiltInPrintService/BuiltInPrintService.apk
+[  7% 368/4766] target thumb C++: libmmqjpeg_codec <= vendor/qcom/proprietary/mm-still/codec_v1/common/QIPlane.cpp
+In file included from <built-in>:6:
+./bionic/libc/kernel/uapi/linux/types.h:25:9: warning: '__bitwise' macro redefined [-Wmacro-redefined]
+#define __bitwise __bitwise__
+        ^
+out/target/product/msm8909go/obj/KERNEL_OBJ/usr/include/linux/types.h:24:9: note: previous definition is here
+#define __bitwise
+        ^
+1 warning generated.
