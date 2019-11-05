@@ -1,0 +1,69 @@
+
+1) A
+
+2) A
+
+3) E
+
+4) E
+
+5) B
+
+6) D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) Answer : c
+
+2) Answer : b
+
+3) Answer: c
+  Explanation: A C program can have same function name and same variable name.
+
+4) Answer: b
+   Explanation: printf returns the number of characters successfully written on output.Hence ch=0 and else statement executes.
+
+5) Answer: b
+   lvalue required as increment operation
+
+6) Answer: b
+   compiler executes right to left
+
+7) Answer: b
+   Explanation: Pointer variable (*ptr) cannot be initialized.
+
+8)  Answer: a 
+ 
+  Explanation : Here a pointer variable *j hold the address of i and then another pointer variable *k hold the address of j.
+                now
+       k = address of j
+       *k = address of i
+       **k = value of i.
+
+9) Answer: a 
+   Explanation : It skips the 6 characters and prints the given string.
+
+10) Answer: a 
+    Explanation :Print statement will not execute because ‘ if ‘condition return false. Value of variable d is 0.
+
+11) Answer: C
+
+12) Answer: C
+
+13) Answer: d
+
+

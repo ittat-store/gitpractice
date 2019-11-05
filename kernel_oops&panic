@@ -1,0 +1,168 @@
+[ 4927.567903] BUG: unable to handle kernel paging request at 0000000100080000
+[ 4927.570863] IP: [<ffffffff811bc9f7>] vfs_read+0xa7/0x160
+[ 4927.573795] PGD 95d4c067 PUD 0 
+[ 4927.576722] Oops: 0000 [#4] SMP 
+[ 4927.579615] Modules linked in: driver(OF) bnep rfcomm bluetooth snd_hda_codec_via snd_hda_codec_hdmi snd_hda_intel snd_hda_codec snd_hwdep snd_pcm snd_page_alloc snd_seq_midi snd_seq_midi_event snd_rawmidi snd_seq x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm crct10dif_pclmul snd_seq_device crc32_pclmul snd_timer ghash_clmulni_intel cryptd snd serio_raw lpc_ich i915 drm_kms_helper mei_me mei soundcore drm i2c_algo_bit parport_pc ppdev video lp parport mac_hid wmi psmouse r8169 mii [last unloaded: driver]
+[ 4927.592354] CPU: 1 PID: 6989 Comm: test_app Tainted: GF     D    O 3.13.0-32-generic #57-Ubuntu
+[ 4927.595601] Hardware name: Acer Veriton Series/H81H3-M4, BIOS 4.6.5 05/04/2015
+[ 4927.598903] task: ffff8800985ddfc0 ti: ffff88009875c000 task.ti: ffff88009875c000
+[ 4927.602177] RIP: 0010:[<ffffffff811bc9f7>]  [<ffffffff811bc9f7>] vfs_read+0xa7/0x160
+[ 4927.605496] RSP: 0018:ffff88009875df10  EFLAGS: 00010206
+[ 4927.608808] RAX: 0000000000000400 RBX: ffff880212987700 RCX: 0000000000000000
+[ 4927.612066] RDX: 0000000000000000 RSI: ffff88009875e2f7 RDI: 00000000006014a0
+[ 4927.615228] RBP: ffff88009875df38 R08: 0000000000000000 R09: 0000000000000000
+[ 4927.618380] R10: 0000000000000011 R11: 0000000000000246 R12: 0000000000000400
+[ 4927.621533] R13: 0000000000000001 R14: 0000000100080000 R15: 0000000000000000
+[ 4927.624680] FS:  00007fa0268f4740(0000) GS:ffff88021fb00000(0000) knlGS:0000000000000000
+[ 4927.627874] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 4927.630956] CR2: 0000000100080000 CR3: 00000000923c8000 CR4: 00000000000407e0
+[ 4927.633967] Stack:
+[ 4927.636851]  ffff880212667e00 00000000006010a0 0000000000000400 0000000000000000
+[ 4927.639726]  0000000000000000 ffff88009875df78 ffffffff811bd4f9 00007fffb23bdf10
+[ 4927.642579]  0000000000000000 0000000000000000 00000000004006a0 00007fffb23bdff0
+[ 4927.645398] Call Trace:
+[ 4927.648167]  [<ffffffff811bd4f9>] SyS_read+0x49/0xa0
+[ 4927.650948]  [<ffffffff8172c87f>] tracesys+0xe1/0xe6
+[ 4927.653673] Code: 28 4c 89 e9 4c 89 e6 48 89 df 48 8b 40 10 48 85 c0 0f 84 a5 00 00 00 ff d0 49 89 c4 4d 85 e4 7e 61 4c 8b 73 20 41 bd 01 00 00 00 <41> 0f b7 06 66 25 00 f0 66 3d 00 40 b8 01 00 00 40 44 0f 44 e8 
+[ 4927.659637] RIP  [<ffffffff811bc9f7>] vfs_read+0xa7/0x160
+[ 4927.662563]  RSP <ffff88009875df10>
+[ 4927.665465] CR2: 0000000100080000
+[ 4927.668463] ---[ end trace aa5279c73a718784 ]---
+[ 4927.668808] Device File Closed...!!!
+[ 4934.642855] Device File Opened...!!!
+[ 4938.876455] general protection fault: 0000 [#5] SMP 
+[ 4938.879369] Modules linked in: driver(OF) bnep rfcomm bluetooth snd_hda_codec_via snd_hda_codec_hdmi snd_hda_intel snd_hda_codec snd_hwdep snd_pcm snd_page_alloc snd_seq_midi snd_seq_midi_event snd_rawmidi snd_seq x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm crct10dif_pclmul snd_seq_device crc32_pclmul snd_timer ghash_clmulni_intel cryptd snd serio_raw lpc_ich i915 drm_kms_helper mei_me mei soundcore drm i2c_algo_bit parport_pc ppdev video lp parport mac_hid wmi psmouse r8169 mii [last unloaded: driver]
+[ 4938.889865] CPU: 1 PID: 6990 Comm: test_app Tainted: GF     D    O 3.13.0-32-generic #57-Ubuntu
+[ 4938.892464] Hardware name: Acer Veriton Series/H81H3-M4, BIOS 4.6.5 05/04/2015
+[ 4938.895077] task: ffff8800985ddfc0 ti: ffff8801b46a6000 task.ti: ffff8801b46a6000
+[ 4938.897714] RIP: 0010:[<ffffffff811bc9f7>]  [<ffffffff811bc9f7>] vfs_read+0xa7/0x160
+[ 4938.900361] RSP: 0018:ffff8801b46a7f10  EFLAGS: 00010206
+[ 4938.903011] RAX: 0000000000000400 RBX: ffff880098987760 RCX: 0000000000000000
+[ 4938.905616] RDX: 0000000000000000 RSI: ffff8801b46a82f7 RDI: 00000000006014a0
+[ 4938.908139] RBP: ffff8801b46a7f38 R08: 0000000000000000 R09: 0000000000000000
+[ 4938.910683] R10: 0000000000000011 R11: 0000000000000246 R12: 0000000000000400
+[ 4938.913201] R13: 0000000000000001 R14: 79745f746e657665 R15: 0000000000000000
+[ 4938.915692] FS:  00007feadaa48740(0000) GS:ffff88021fb00000(0000) knlGS:0000000000000000
+[ 4938.918211] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 4938.920706] CR2: 000034da90adf300 CR3: 00000001b46ce000 CR4: 00000000000407e0
+[ 4938.923238] Stack:
+[ 4938.925673]  ffff8800986a9000 00000000006010a0 0000000000000400 0000000000000000
+[ 4938.928111]  0000000000000000 ffff8801b46a7f78 ffffffff811bd4f9 00007fffcc1b3f20
+[ 4938.930469]  0000000000000000 0000000000000000 00000000004006a0 00007fffcc1b4000
+[ 4938.932759] Call Trace:
+[ 4938.934994]  [<ffffffff811bd4f9>] SyS_read+0x49/0xa0
+[ 4938.937233]  [<ffffffff8172c87f>] tracesys+0xe1/0xe6
+[ 4938.939442] Code: 28 4c 89 e9 4c 89 e6 48 89 df 48 8b 40 10 48 85 c0 0f 84 a5 00 00 00 ff d0 49 89 c4 4d 85 e4 7e 61 4c 8b 73 20 41 bd 01 00 00 00 <41> 0f b7 06 66 25 00 f0 66 3d 00 40 b8 01 00 00 40 44 0f 44 e8 
+[ 4938.944186] RIP  [<ffffffff811bc9f7>] vfs_read+0xa7/0x160
+[ 4938.946488]  RSP <ffff8801b46a7f10>
+[ 4938.948848] ---[ end trace aa5279c73a718785 ]---
+[ 4938.950540] Device File Closed...!!!
+root@VTA063L:/home/chegukee/kee# 
+
+...........................................................................................................................
+
+
+
+static ssize_t etx_read(struct file *filp, char __user *buf, size_t len, loff_t *off)
+{
+       // copy_to_user(buf, kernel_buffer, mem_size);
+        //printk(KERN_INFO "Data Write : Done!\n");
+        //return mem_size;
+    int ret;
+    char stack_buf[4];
+
+    // Let's try a buffer overflow  
+    //memset(stack_buf, "keerthikumariiii", 2);
+    memcpy(stack_buf,"ckk",4);
+    //if (len > 4)
+      //  len= 4;  copy 4 bytes to the user 
+    ret = copy_to_user(buf, stack_buf, len);
+    if (!ret)
+        return len;
+    return ret;
+}
+
+static ssize_t etx_write(struct file *filp, const char __user *buf, size_t len, loff_t *off)
+{
+        copy_from_user(kernel_buffer, buf, len);
+        printk(KERN_INFO "Data Read : Done!\n");
+        return len;
+}
+
+
+root@VTA063L:/home/chegukee/kee# ./test_app 
+*********************************
+*******WWW.EmbeTronicX.com*******
+****Please Enter the Option******
+        1. Write               
+        2. Read                 
+        3. Exit                 
+*********************************
+1
+Your Option = 1
+Enter the string to write into driver :kee
+Data Writing ...Done!
+****Please Enter the Option******
+        1. Write               
+        2. Read                 
+        3. Exit                 
+*********************************
+2
+Your Option = 2
+Data Reading ...Done!
+
+Data = ckk
+
+****Please Enter the Option******
+        1. Write               
+        2. Read                 
+        3. Exit                 
+*********************************
+3
+Your Option = 3
+
+
+
+09] Device File Closed...!!!
+[ 5538.060165] Device Driver Remove...Done!!!
+[ 5764.699958] Major = 251 Minor = 0 
+[ 5764.700010] Device Driver Insert...Done!!!
+[ 5791.718473] Device File Opened...!!!
+[ 5796.478678] Data Read : Done!
+[ 5809.848677] Device File Closed...!!!
+[ 5824.081045] Device File Opened...!!!
+[ 5826.541312] Data Read : Done!
+[ 5829.784947] Device File Closed...!!!
+root@VTA063L:/home/chegukee/kee# 
+
+
+
+static ssize_t etx_read(struct file *filp, char __user *buf, size_t len, loff_t *off)
+{
+       // copy_to_user(buf, kernel_buffer, mem_size);
+        //printk(KERN_INFO "Data Write : Done!\n");
+        //return mem_size;
+    int ret;
+    char stack_buf[4];
+
+    // Let's try a buffer overflow  
+    //memset(stack_buf, "keerthikumariiii", 2);
+    memcpy(stack_buf,kernel_buffer,len);
+    //if (len > 4)
+      //  len= 4;  copy 4 bytes to the user 
+    ret = copy_to_user(buf, stack_buf, len);
+    if (!ret)
+        return len;
+    return ret;
+}
+
+static ssize_t etx_write(struct file *filp, const char __user *buf, size_t len, loff_t *off)
+{
+        copy_from_user(kernel_buffer, buf, len);
+        printk(KERN_INFO "Data Read : Done!\n");
+        return len;
+}
+
+
+
+

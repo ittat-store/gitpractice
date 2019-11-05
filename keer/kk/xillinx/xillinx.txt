@@ -1,0 +1,31 @@
+
+
+.....difference between the const int *p and int const *const p
+
+
+......macro like x=1+2
+printf x*x*x;
+ans:7
+
+
+......char array[10];
+strcpy(array,"xillinxrocks);
+strcmp(array,xillinxrocks);
+ans: not same because array size is less than xillinxrocks size
+
+
+
+.....int a=10;
+out=(a++)--;
+ans:error because cannot decrement constant lvalue required
+
+
+.....prinf("%d",--fun());
+in fun()
+
+reurn num;
+
+ans:cannot decrement constant lvalue required
+
+
+
