@@ -3,7 +3,7 @@
 main()
 {
 int *ptr;
-int *p = malloc(sizeof(int));
+//int *p = malloc(sizeof(int));
 return 0;
 }
 
