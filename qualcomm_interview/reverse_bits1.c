@@ -6,7 +6,7 @@ void main()
 	scanf("%d",&num);
 	printf("Just printing binary of number..\n");
 	for(i=31;i>=0;i--)
-	printf("%d",num>>i&1);
+		printf("%d",num>>i&1);
 	for(i=0,j=31;i<j;i++,j--)
 	{
 		if(num>>i&1!=num>>j&1)
@@ -17,11 +17,11 @@ void main()
 	}
 	printf("\n");
 	for(i=31;i>=0;i--)
-	printf("%d",num>>i&1);
-        if(num>>i&1)
-        out=out<<1+1;
-        else 
-         out=out<<1;
-       printf("%d\n",out);
+		printf("%d",num>>i&1);
+	if(num>>i&1)
+		out=out<<1+1;
+	else 
+		out=out<<1;
+	printf("%d\n",out);
 	printf("\n");
 }
