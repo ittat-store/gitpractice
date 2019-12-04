@@ -1,0 +1,23 @@
+            Telephonic round by Arushi (QUALCOMM) 3rd DEC 2019 (33 min)
+
+1. what is memory leak
+2. what is dangling pointer and null pointer 
+3. thread why it is light weight
+4. what is context switching 
+5. deadlock (circular wait)
+6. explain all ipc's(pipe,fifo,shared memory,message queue)
+7. difference between semaphore and mutex
+8. virtual memory
+9. diffrence between multiprogramming and multiprocessing 
+10. differenct scheduling algorithms which is best (Round robin)
+11. where double pointer used (swapping)
+12. in which DS recursion is used (tress)
+13. git commands almost all covered 
+14. git fork , git cherrypick
+15. difference between git reset soft and hard
+16. about project 
+17. about repo creation.
+18. asked about any projects did on c,bash scripting and python languages 
+19. in c++ which data structures are used.
+20. in python what are data types.
+21. how you are working in hackerrank.
