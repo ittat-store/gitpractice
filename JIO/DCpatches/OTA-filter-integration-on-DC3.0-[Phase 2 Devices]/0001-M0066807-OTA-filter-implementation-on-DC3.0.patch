@@ -1,0 +1,1818 @@
+From 5150eff8b62e92dbd6f0060e1379d76191215bcb Mon Sep 17 00:00:00 2001
+From: Suchand Ghosh <suchand.ghosh@borqs.com>
+Date: Wed, 26 Dec 2018 17:08:16 +0530
+Subject: [PATCH] M0066807: OTA filter implementation on DC3.0
+
+1. Read OTA filter from metrics-daemon socket and apply it.
+2. Send filter apply response ACK or NCK to metrics-daemon.
+
+Change-Id: I28be9a63587add367027029751842bbdeec92462
+---
+ b2g_telephony/NetworkDataCollector.cpp       | 666 ++++++++++++++++++++-------
+ b2g_telephony/include/NetworkDataCollector.h |   9 +
+ b2g_telephony/include/RIL.h                  |  72 +--
+ qcril/data_collector/qcril_diag.c            | 283 ++++++++++--
+ qcril/data_collector/qcril_diag.h            |   9 +-
+ qcril/qcril_qmi/qcril_qmi_nas.c              | 137 ++++--
+ qcril/qcril_qmi/qcrili.h                     |  92 ++--
+ 7 files changed, 959 insertions(+), 309 deletions(-)
+
+diff --git a/b2g_telephony/NetworkDataCollector.cpp b/b2g_telephony/NetworkDataCollector.cpp
+index 7009718..f009233 100755
+--- a/b2g_telephony/NetworkDataCollector.cpp
++++ b/b2g_telephony/NetworkDataCollector.cpp
+@@ -56,9 +56,15 @@ NS_NAMED_LITERAL_CSTRING(DATA_COLLECTOR_SERVER_SOCKET_NAME, "/dev/socket/metrics
+ #define MAX_RESPONSE_BYTES 1024
+ 
+ #define INITIAL_HANDSHAKE_MESSAGE_WITH_SERVER_SOCKET  "{ \"source\": \"ril_metrics\" }"
++#define FILTER_APPLY_SUCCESS_MESSAGE  "{ \"kind\": \"FilterAck\", \"success\": true, \"reason\": \"NA\"}"
++#define FILTER_APPLY_FAILURE_MESSAGE_INVALID_FORMAT  "{ \"kind\": \"FilterAck\", \"success\": false, \"reason\": \"Error 1: Invalid Filter Format\"}"
++#define FILTER_APPLY_FAILURE_MESSAGE_MULTI_FILTERS  "{ \"kind\": \"FilterAck\", \"success\": false, \"reason\": \"Error 2: Many filters received at same time. Which one to apply?\"}"
++#define FILTER_APPLY_FAILURE_MESSAGE_INTENAL_ERROR  "{ \"kind\": \"FilterAck\", \"success\": false, \"reason\": \"Error 25: INTERNAL ERR. FILTER NOT APPLIED\"}"
+ 
+ #define DATA_COLLECTOR_UNSOL_OEM_HOOK_RAW_IND  525343
+ 
++#define DC_FILTER_CONFIG_EVENT_INTERNAL 101
++
+ #define LAST_CALL_FAIL_CAUSE_UNSOL_OEM_HOOK_RAW_IND 525344
+ 
+ #define QCRIL_QMI_VOICE_MAX_FAIL_CAUSE_STR_LEN     256
+@@ -155,6 +161,19 @@ NetworkDataCollector::~NetworkDataCollector() {
+     socketName.Assign(DATA_COLLECTOR_SERVER_SOCKET_NAME);
+     QLOGE("NetworkDataCollector  initialize");
+ 
++    char dcMask[PROPERTY_VALUE_MAX];
++    property_get(PROP_DATA_COLLECTOR_EVENT_MASK,dcMask,"63"); //63 as default value at Out of Box. NE1 to NE6 will be sent
++    eventFilterMask = atoll(dcMask);
++
++    bzero(dcMask,PROPERTY_VALUE_MAX);
++    property_get(PROP_DATA_COLLECTOR_DATA_MASK,dcMask,"4294967295"); // All data will be sent
++    dataFilterMask = atoll(dcMask);
++
++    bzero(dcMask,PROPERTY_VALUE_MAX);
++    property_get(PROP_DATA_COLLECTOR_COUNTER_MASK,dcMask,"4294967295"); // All counter values will be sent
++    counterFilterMask = atoll(dcMask);
++    QLOGD("NetworkDataCollector initialize masks: eventFilterMask = %llu, dataFilterMask = %llu, counterFilterMask = %llu", eventFilterMask,dataFilterMask, counterFilterMask);
++
+     mSocket = new DataCollectorSocket(this, socketName, true);
+  }
+ 
+@@ -582,6 +601,8 @@ const char* NetworkDataCollector::getDataCollectorEventCode(DataCollectorEventCo
+             return "NE25";
+         case DATA_COLLECTOR_EVENT_NON_RECOVERABLE_DATA_STALL:
+             return "NE26";
++        case DATA_COLLECTOR_EVENT_INCOMING_CALL:
++            return "NE27";
+ 
+        default:
+         QLOGD("getDataCollectorEventCode : unexpected event code");
+@@ -718,8 +739,11 @@ const char* NetworkDataCollector::getRrcRelStringFromRrcRelCode(uint32_t rrc_rel
+ }
+ 
+ bool NetworkDataCollector::requireToSendData(DataCollectorEventCodes event, DataCollectorDataCodes data) {
++    if(!isClientAllowDataUpdate(data)) {
++        return false;
++    }
+     switch(data) {
+-        case DATA_CODE_RI8:
++        case DATA_CODE_RI9:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_TAC_UPDATE:
+                 case DATA_COLLECTOR_EVENT_RRC_CONNECTION_FAILURE:
+@@ -730,15 +754,15 @@ bool NetworkDataCollector::requireToSendData(DataCollectorEventCodes event, Data
+                     return true;
+                 default:
+                     return false;
+-            }
+-        case DATA_CODE_RI9:
++        }
++        case DATA_CODE_RI10:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_RRC_CONNECTION_RELEASE:
+                     return true;
+                 default:
+                     return false;
+-            }
+-        case DATA_CODE_RI10:
++        }
++        case DATA_CODE_RI11:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_ATTACH_FAILURE:
+                 case DATA_COLLECTOR_EVENT_TAC_UPDATE:
+@@ -751,7 +775,7 @@ bool NetworkDataCollector::requireToSendData(DataCollectorEventCodes event, Data
+                 default:
+                     return false;
+         }
+-        case DATA_CODE_RI14:
++        case DATA_CODE_RI15:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_RADIO_LINK_FAILURE:
+                 case DATA_COLLECTOR_EVENT_INTRA_FREQUENCY_HANDOVER:
+@@ -762,31 +786,30 @@ bool NetworkDataCollector::requireToSendData(DataCollectorEventCodes event, Data
+                 default:
+                     return false;
+         }
+-        case DATA_CODE_NI1:
++        case DATA_CODE_NI2:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_ATTACH_FAILURE:
+                     return true;
+                 default:
+                     return false;
+         }
+-        case DATA_CODE_NI2:
++        case DATA_CODE_NI3:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_TAC_UPDATE:
+                     return true;
+                 default:
+                     return false;
+         }
+-        case DATA_CODE_NI3:
++        case DATA_CODE_NI4:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_IN_SERVICE:
++                case DATA_COLLECTOR_EVENT_TAC_UPDATE:
+                     return true;
+                 default:
+                     return false;
+         }
+-        case DATA_CODE_OI1:
+         case DATA_CODE_VI1:
+         case DATA_CODE_VI2:
+-        case DATA_CODE_VI3:
+             switch(event) {
+                 case DATA_COLLECTOR_EVENT_CALL_TRIGGERED:
+                 case DATA_COLLECTOR_EVENT_CALL_ATTEMPT_FAILED:
+@@ -798,8 +821,16 @@ bool NetworkDataCollector::requireToSendData(DataCollectorEventCodes event, Data
+                 default:
+                     return false;
+         }
++        case DATA_CODE_VI3:
++        case DATA_CODE_VI4:
++        case DATA_CODE_VI5:
++            switch(event) {
++                case DATA_COLLECTOR_EVENT_CALL_MUTING:
++                    return true;
++                default:
++                    return false;
++        }
+         default:
+-            QLOGD("requireToSendData : The data %d need to send always with all events", data);
+             return true;
+     }
+ }
+@@ -824,12 +855,60 @@ bool NetworkDataCollector::isDateChanged(time_t currentTime) {
+     return ret;
+ }
+ 
++bool NetworkDataCollector::isFilterDataValid(char *filterData) {
++    if ((filterData == NULL) || (strlen(filterData) < 1)) {
++        QLOGD("isFilterDataValid returns false because filterData=%s is null or empty string", filterData);
++        return false;
++    }
++    bool isVaild = false;
++    unsigned int i = 0;
++    unsigned int j = 0;
++    char tempFilterBuf[32];
++    bzero(tempFilterBuf,32);
++    for (i=0;i<strlen(filterData);i++) {
++        if((filterData[i]!=9) && (filterData[i]!=32)) { //remove white spaces, tab etc, trim it.
++            if ((48 > filterData[i]) || (57 < filterData[i])) { //return false if there is non-digit char other than spece, tab.
++                QLOGD("isFilterDataValid returns false because filterData=%s has non digit char at pos=%d", filterData, i);
++                return false;
++            }
++            tempFilterBuf[j]=filterData[i];
++            j++;
++        }
++    }
++    if((strlen(tempFilterBuf) > 0) && (47 < tempFilterBuf[0]) && (58 > tempFilterBuf[0])) { //Check if it's a number
++        isVaild = true;
++    }
++    QLOGD("NetworkDataCollector: isFilterDataValid %d because filterData=%s, after trim filterData=%s", isVaild, filterData, tempFilterBuf);
++    return isVaild;
++}
++
+ bool NetworkDataCollector::isClientAllowEventReporting(int event) {
+-    char dcEventMask[PROPERTY_VALUE_MAX];
+-    property_get(PROP_DATA_COLLECTOR_EVENT_MASK,dcEventMask,"4294967295");
+-    int dcEventMaskValueInt = atoi(dcEventMask);
+-    bool ret = (dcEventMaskValueInt & (1 << (event-1))) != 0;
+-    QLOGD("NetworkDataCollector: isClientFilterOutEventReporting of event = %d is %d (Filter: %d)", event,ret,dcEventMaskValueInt);
++    /* char dcEventMask[PROPERTY_VALUE_MAX];
++    property_get(PROP_DATA_COLLECTOR_EVENT_MASK,dcEventMask,"1024");
++    uint64_t dcEventMaskValueInt = atoll(dcEventMask);
++    bool ret = (~dcEventMaskValueInt & (1 << (event-1))) != 0; */
++    bool ret = (eventFilterMask & (1 << (event-1))) != 0;
++    QLOGD("NetworkDataCollector: isClientAllowEventReporting of event = %d is %d (Filter: %llu)", event,ret,eventFilterMask);
++    return ret;
++}
++
++bool NetworkDataCollector::isClientAllowCounterUpdate(int counter) {
++   /* char dcCounterMask[PROPERTY_VALUE_MAX];
++    property_get(PROP_DATA_COLLECTOR_COUNTER_MASK,dcCounterMask,"1024");
++    uint64_t dcCounterMaskValueInt = atoll(dcCounterMask);
++    bool ret = (~dcCounterMaskValueInt & (1 << (counter-1))) != 0; */
++    bool ret = (counterFilterMask & (1 << (counter-1))) != 0;
++    //QLOGD("NetworkDataCollector: isClientAllowCounterUpdate of counter = %d is %d (Filter: %llu)", counter,ret,counterFilterMask);
++    return ret;
++}
++
++bool NetworkDataCollector::isClientAllowDataUpdate(int data) {
++    /* char dcDataMask[PROPERTY_VALUE_MAX];
++    property_get(PROP_DATA_COLLECTOR_DATA_MASK,dcDataMask,"1024");
++    uint64_t dcDataMaskValueInt = atoll(dcDataMask);
++    bool ret = (~dcDataMaskValueInt & (1 << (data-1))) != 0; */
++    bool ret = (dataFilterMask & (1 << (data-1))) != 0;
++    //QLOGD("NetworkDataCollector: isClientAllowDataUpdate of data = %d is %d (Filter: %llu)", data,ret,dataFilterMask);
+     return ret;
+ }
+ 
+@@ -933,7 +1012,11 @@ void NetworkDataCollector::sendNWDataToServer(qmi_ril_nw_data_collector_Params *
+     uint8_t frame[MAX_RESPONSE_BYTES];
+     bzero(frame,MAX_RESPONSE_BYTES);
+     int activeband = 0;
+-    QLOGD("NetworkDataCollector  sentNWDataToServer");
++    if ((event == DATA_COLLECTOR_EVENT_INCOMING_CALL) || (event == DC_FILTER_CONFIG_EVENT_INTERNAL)) {
++        //Safe guard. Check if this is internal events. Do't send to server if so because server socket will get closed.
++        return;
++    }
++    QLOGD("sendNWDataToServer masks: eventFilterMask = %llu, dataFilterMask = %llu, counterFilterMask = %llu", eventFilterMask,dataFilterMask, counterFilterMask);
+ 
+     if(mSeqNumber >= 0xFFFFFFFFFFFFFFFF)
+         mSeqNumber = 1;
+@@ -979,152 +1062,106 @@ void NetworkDataCollector::sendNWDataToServer(qmi_ril_nw_data_collector_Params *
+     property_get(PROP_DATA_COLLECTOR_NUM_DETACH,NC9,"");
+ 
+ 
+-    sprintf (jsonPayload,"[{ \"seq_number\": %llu, \"timestamp\": %ld, \"payload\": { \n\"Name\":\"%s\",\n\"LI4\": %d,\n\"RI1\":%d,\n\"RI2\":%d,\n\"RI3\":%d,\n\"RI4\": %d,\n\"RI5\": %d,\n\"RI6\":%d,\n\"RI7\":%d,\n\"RI8\":%s,\n\"RI12\": %d,\n\"RI13\": %d,\n\"RI14\": %d,\n\"NI1\":%s,\n\"NI4\": \"{ %d, %s, %d, %d, %d, %d , %d }\",\n\"OI1\": [ %d, %d, %d ],\n\"NC1\": %d,\n\"NC2\": %d,\n\"NC3\": %d,\n\"NC4\": %d,\n\"NC5\": %d,\n\"NC6\": %d,\n\"NC7\": %d,\n\"NC8\": %d,\n\"NC9\": %d",
++    sprintf (jsonPayload,"[{ \"seq_number\": %llu, \"timestamp\": %ld, \"payload\": { \n\"Name\":\"%s\"",
+             mSeqNumber,
+             currentTime,
+-            getDataCollectorEventCode(event), //Name
+-            pNetworkParams->pci, /*LI4*/
+-            (140+pNetworkParams->rsrp), //RI1
+-            (20+pNetworkParams->rsrq), //RI2
+-            pNetworkParams->sinr/10, //RI3
+-            pNetworkParams->cqi, //RI4
+-            pNetworkParams->rankIndicator, //RI5
+-            activeband, //RI6
+-            pNetworkParams->lte_earfcn, /*RI7 */
+-            pNetworkParams->srv_status?"true":"false", //RI8
+-            pNetworkParams->bler, //RI12
+-            pNetworkParams->timing_advance>0?pNetworkParams->timing_advance:0, /*RI13 */
+-            pNetworkParams->tx_power, /*RI14*/
+-            pNetworkParams->Roaming_Indicator?"true":"false", //NI1
+-            pNetworkParams->bearer_id,  //NI4 - start
+-            (pNetworkParams->bearer_type == 1)?"dedicated":"default",
+-            pNetworkParams->qci,
+-            pNetworkParams->ambr_ul,
+-            pNetworkParams->ambr_dl,
+-            pNetworkParams->gbr_ul,
+-            pNetworkParams->gbr_dl, /* NI4-end*/
+-            pNetworkParams->rstd0, //OI1 - start
+-            pNetworkParams->rstd1,
+-            pNetworkParams->rstd2,// OI1 - end
+-            atoi(NC1), //NC1
+-            atoi(NC2), //NC2 */
+-            atoi(NC3), /*NC3*/
+-            atoi(NC4), //NC4
+-            atoi(NC5), //NC5 */
+-            atoi(NC6), /*NC6*/
+-            atoi(NC7), //NC7
+-            atoi(NC8), //NC8 */
+-            atoi(NC9) /*NC9*/
+-            );
+-
+-    //Disable this log because log marker assume this is duplicate events
+-    //QLOGD("Common data for all: jsonPayload = %s",jsonPayload);
++            getDataCollectorEventCode(event) /*Name*/);
+ 
+     bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    // Send LI4 always per jio request. This is common data
++    if(true /*requireToSendData(event, DATA_CODE_LI4) */) {
++        sprintf (tmpJsonPayload, ",\n\"LI4\": %d", pNetworkParams->pci /*LI4*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-    switch(event) {
+-        case DATA_COLLECTOR_EVENT_CALL_TRIGGERED:
+-        case DATA_COLLECTOR_EVENT_CALL_ATTEMPT_FAILED:
+-        case DATA_COLLECTOR_EVENT_CALL_ESTABLISHED:
+-        case DATA_COLLECTOR_EVENT_CALL_DISCONNECT:
+-        case DATA_COLLECTOR_EVENT_CALL_DROP:
+-            sprintf (tmpJsonPayload, ",\n\"VI1\": \"%s\",\n\"VI2\": %d",
+-                (pNetworkParams->sip_reg_status==1)?"REGISTERED":"NOT REGISTER", //VI1
+-                mRilLastFailCause /*VI2*/
+-               );
+-         break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI1)) {
++        sprintf (tmpJsonPayload, ",\n\"RI1\": %d", (140+pNetworkParams->rsrp) /*RI1*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_CALL_MUTING:
+-            sprintf (tmpJsonPayload, ",\n\"VI1\": \"%s\",\n\"VI2\": %d,\n\"VI3\": \"{%d, %d, %d, %d}\",\n\"VI4\": %d,\n\"VI5\": %d",
+-                (pNetworkParams->sip_reg_status==1)?"REGISTERED":"NOT REGISTER", //VI1
+-                mRilLastFailCause, /*VI2*/
+-                pNetworkParams->mute[0], //VI3 - start
+-                pNetworkParams->mute[1],
+-                pNetworkParams->mute[2],
+-                pNetworkParams->mute[3],/* VI3-end*/
+-                ((pNetworkParams->rtp_packet_loss < 0) || (pNetworkParams->rtp_packet_loss > 100))?0:pNetworkParams->rtp_packet_loss, /*VI4*/
+-                pNetworkParams->total_rtp_loss //VI5
+-               );
+-         break;
+-
+-        case DATA_COLLECTOR_EVENT_ATTACH_FAILURE: //NE14
+-            sprintf (tmpJsonPayload, ",\n\"RI11\": %d,\n\"NI2\": %d",
+-                pNetworkParams->prach_tx_power, //RI11
+-                pNetworkParams->attach_fail_cause /*NI2*/);
+-        break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI2)) {
++        sprintf (tmpJsonPayload, ",\n\"RI2\": %d", (20+pNetworkParams->rsrq) /*RI2*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_TAC_UPDATE: //NE15
+-            sprintf (tmpJsonPayload, ",\n\"RI9\":\"%s\",\n\"RI11\": %d,\n\"NI3\": %d",
+-                getRrcEstStringFromRrcConnCode(pNetworkParams->rrc_conn_cause), /*RI9*/
+-                pNetworkParams->prach_tx_power, //RI11
+-                pNetworkParams->tac_fail_cause /*NI3*/);
+-        break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI3)) {
++        sprintf (tmpJsonPayload, ",\n\"RI3\": %d", pNetworkParams->sinr/10 /*RI3*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_RRC_CONNECTION_RELEASE: //NE17
+-            sprintf (tmpJsonPayload, ",\n\"RI10\": %d",
+-                pNetworkParams->rrc_rel_cause /*RI10*/);
+-        break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI4)) {
++        sprintf (tmpJsonPayload, ",\n\"RI4\": %d", pNetworkParams->cqi /*RI4*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_RRC_CONNECTION_FAILURE: //NE18
+-            sprintf (tmpJsonPayload, ",\n\"RI9\":\"%s\",\n\"RI11\": %d",
+-                getRrcEstStringFromRrcConnCode(pNetworkParams->rrc_conn_cause), /*RI9*/
+-                pNetworkParams->prach_tx_power /*RI11*/);
+-        break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI5)) {
++        sprintf (tmpJsonPayload, ",\n\"RI5\": %d", pNetworkParams->rankIndicator /*RI5*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_RADIO_LINK_FAILURE: //NE19
+-            if (pNetworkParams->number_of_cells > 0) {
+-                strcat(tmpJsonPayload,",\n\"RI15\": ["); //End sequence. Must append
+-                int nocell = 0;
+-                char tmpCellJsonPayload[MAX_RESPONSE_BYTES/16];
+-                for (nocell = 0; nocell < pNetworkParams->number_of_cells; nocell++) {
+-                    bzero(tmpCellJsonPayload,MAX_RESPONSE_BYTES/16);
+-                    sprintf (tmpCellJsonPayload,"[ %d, %d, %d]",
+-                        pNetworkParams->cells[nocell][0], //R115 - start of ith cell
+-                        pNetworkParams->cells[nocell][1],
+-                        pNetworkParams->cells[nocell][2] //R115 - End of ith cell
+-                    );
+-                    if (nocell < pNetworkParams->number_of_cells-1) {
+-                        strcat(tmpCellJsonPayload,",");
+-                    } else {
+-                        strcat(tmpCellJsonPayload,"]");
+-                    }
+-                    strcat(tmpJsonPayload,tmpCellJsonPayload);
+-                }
+-            }
+-        break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI6)) {
++        sprintf (tmpJsonPayload, ",\n\"RI6\": %d", activeband /*RI6*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_INTRA_FREQUENCY_HANDOVER: //NE20
+-        case DATA_COLLECTOR_EVENT_INTER_FREQUENCY_HANDOVER: //NE21
+-        case DATA_COLLECTOR_EVENT_INTER_BAND_HANDOVER: //NE22
+-            sprintf (tmpJsonPayload, ",\n\"RI9\":\"%s\",\n\"RI11\": %d",
+-                getRrcEstStringFromRrcConnCode(pNetworkParams->rrc_conn_cause), /*RI9*/
+-                pNetworkParams->prach_tx_power /*RI11*/);
+-            if (pNetworkParams->number_of_cells > 0) {
+-                strcat(tmpJsonPayload,",\n\"RI15\": ["); //End sequence. Must append
+-                int nocell = 0;
+-                char tmpCellJsonPayload[MAX_RESPONSE_BYTES/16];
+-                for (nocell = 0; nocell < pNetworkParams->number_of_cells; nocell++) {
+-                    bzero(tmpCellJsonPayload,MAX_RESPONSE_BYTES/16);
+-                    sprintf (tmpCellJsonPayload,"[ %d, %d, %d]",
+-                        pNetworkParams->cells[nocell][0], //R115 - start of ith cell
+-                        pNetworkParams->cells[nocell][1],
+-                        pNetworkParams->cells[nocell][2] //R115 - end of ith cell
+-                    );
+-                    if (nocell < pNetworkParams->number_of_cells-1) {
+-                        strcat(tmpCellJsonPayload,",");
+-                    } else {
+-                        strcat(tmpCellJsonPayload,"]");
+-                    }
+-                    strcat(tmpJsonPayload,tmpCellJsonPayload);
+-                }
+-            }
+-        break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI7)) {
++        sprintf (tmpJsonPayload, ",\n\"RI7\": %d", pNetworkParams->lte_earfcn /*RI7*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_CELL_RESELECTION: //NE23
+-            sprintf (tmpJsonPayload, ",\n\"RI9\":\"%s\"",
+-                getRrcEstStringFromRrcConnCode(pNetworkParams->rrc_conn_cause) /*RI9*/);
+-            if (pNetworkParams->number_of_cells > 0) {
+-                strcat(tmpJsonPayload,",\n\"RI15\": ["); //End sequence. Must append
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI8)) {
++        sprintf (tmpJsonPayload, ",\n\"RI8\":%s", pNetworkParams->srv_status?"true":"false" /*RI8*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI9)) {
++        sprintf (tmpJsonPayload, ",\n\"RI9\":\"%s\"", getRrcEstStringFromRrcConnCode(pNetworkParams->rrc_conn_cause) /*RI9*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI10)) {
++        sprintf (tmpJsonPayload, ",\n\"RI10\": %d", pNetworkParams->rrc_rel_cause /*RI10*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI11)) {
++        sprintf (tmpJsonPayload, ",\n\"RI11\": %d", pNetworkParams->prach_tx_power /*RI11*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI12)) {
++        sprintf (tmpJsonPayload, ",\n\"RI12\": %d", pNetworkParams->bler /*RI12*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI13)) {
++        sprintf (tmpJsonPayload, ",\n\"RI13\": %d", pNetworkParams->timing_advance>0?pNetworkParams->timing_advance:0 /*RI13*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI14)) {
++        sprintf (tmpJsonPayload, ",\n\"RI14\": %d", pNetworkParams->tx_power/*RI14*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_RI15)) {
++        if (pNetworkParams->number_of_cells > 0) {
++                strcat(tmpJsonPayload,",\n\"RI15\": ["); //Start sequence. Must append
+                 int nocell = 0;
+                 char tmpCellJsonPayload[MAX_RESPONSE_BYTES/16];
+                 for (nocell = 0; nocell < pNetworkParams->number_of_cells; nocell++) {
+@@ -1142,25 +1179,141 @@ void NetworkDataCollector::sendNWDataToServer(qmi_ril_nw_data_collector_Params *
+                     strcat(tmpJsonPayload,tmpCellJsonPayload);
+                 }
+             }
+-        break;
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-        case DATA_COLLECTOR_EVENT_RACH_FAILURE: //NE24
+-            sprintf (tmpJsonPayload, ",\n\"RI11\": %d",
+-                pNetworkParams->prach_tx_power /*RI11*/);
+-        break;
+ 
+-        default:
+-            QLOGD("No extra specific data need to send with event %d.", event);
+-         break;
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_NI1)) {
++        sprintf (tmpJsonPayload, ",\n\"NI1\":%s", pNetworkParams->Roaming_Indicator?"true":"false" /*NI1*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_NI2)) {
++        sprintf (tmpJsonPayload, ",\n\"NI2\": %d", pNetworkParams->attach_fail_cause /*NI2*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_NI3)) {
++        sprintf (tmpJsonPayload, ",\n\"NI3\": %d", pNetworkParams->tac_fail_cause /*NI3*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_NI4)) {
++        sprintf (tmpJsonPayload, ",\n\"NI4\": \"{ %d, %s, %d, %d, %d, %d , %d }\"",
++            pNetworkParams->bearer_id, //NI4 - start
++            (pNetworkParams->bearer_type == 1)?"dedicated":"default",
++            pNetworkParams->qci,
++            pNetworkParams->ambr_ul,
++            pNetworkParams->ambr_dl,
++            pNetworkParams->gbr_ul,
++            pNetworkParams->gbr_dl /* NI4-end*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_OI1)) {
++        sprintf (tmpJsonPayload, ",\n\"OI1\": [ %d, %d, %d ]",
++            pNetworkParams->rstd0, //OI1 - start
++            pNetworkParams->rstd1,
++            pNetworkParams->rstd2 /* OI1 - end*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_VI1)) {
++        sprintf (tmpJsonPayload, ",\n\"VI1\": \"%s\"", (pNetworkParams->sip_reg_status==1)?"REGISTERED":"NOT REGISTER" /*VI1*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_VI2)) {
++        sprintf (tmpJsonPayload, ",\n\"VI2\": %d", mRilLastFailCause /*VI2*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_VI3)) {
++        sprintf (tmpJsonPayload, ",\n\"VI3\": \"{%d, %d, %d, %d}\"",
++            pNetworkParams->mute[0], //VI3 - start
++            pNetworkParams->mute[1],
++            pNetworkParams->mute[2],
++            pNetworkParams->mute[3] /* VI3-end*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_VI4)) {
++        sprintf (tmpJsonPayload, ",\n\"VI4\": %d", ((pNetworkParams->rtp_packet_loss < 0) || (pNetworkParams->rtp_packet_loss > 100))?0:pNetworkParams->rtp_packet_loss /*VI4*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(requireToSendData(event, DATA_CODE_VI5)) {
++        sprintf (tmpJsonPayload, ",\n\"VI5\": %d", pNetworkParams->total_rtp_loss /*VI5*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC1)) {
++        sprintf (tmpJsonPayload, ",\n\"NC1\": %d", atoi(NC1) /*NC1*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC2)) {
++        sprintf (tmpJsonPayload, ",\n\"NC2\": %d", atoi(NC2) /*NC2*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC3)) {
++        sprintf (tmpJsonPayload, ",\n\"NC3\": %d", atoi(NC3) /*NC3*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC4)) {
++        sprintf (tmpJsonPayload, ",\n\"NC4\": %d", atoi(NC4) /*NC4*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC5)) {
++        sprintf (tmpJsonPayload, ",\n\"NC5\": %d", atoi(NC5) /*NC5*/);
++        strcat(jsonPayload,tmpJsonPayload);
+     }
+ 
+-    QLOGD("Extra specific data for event %d: %s", event, tmpJsonPayload);
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC6)) {
++        sprintf (tmpJsonPayload, ",\n\"NC6\": %d", atoi(NC6) /*NC6*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+-    strcat(jsonPayload,tmpJsonPayload);
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC7)) {
++        sprintf (tmpJsonPayload, ",\n\"NC7\": %d", atoi(NC7) /*NC7*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC8)) {
++        sprintf (tmpJsonPayload, ",\n\"NC8\": %d", atoi(NC8) /*NC8*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
++
++    bzero(tmpJsonPayload,MAX_RESPONSE_BYTES/4);
++    if(isClientAllowCounterUpdate(COUNTER_CODE_NC9)) {
++        sprintf (tmpJsonPayload, ",\n\"NC9\": %d", atoi(NC9) /*NC9*/);
++        strcat(jsonPayload,tmpJsonPayload);
++    }
+ 
+     strcat(jsonPayload,"}}]"); //End sequence. Must append
+ 
+-    QLOGD("Complete jsonPayload = %s",jsonPayload);
++    QLOGD("Complete jsonPayload for event %d is: %s", event, jsonPayload);
+ 
+     mSeqNumber++;//increase it for next message
+     uint32_t length = strlen(jsonPayload);
+@@ -1235,6 +1388,58 @@ NS_IMETHODIMP NetworkDataCollector::sendHandShakeMsgToServer() {
+     return NS_OK;
+  }
+ 
++NS_IMETHODIMP NetworkDataCollector::sendFilterResponseToServer(bool isSuccess, int errorcode) {
++    uint8_t buffer[MAX_RESPONSE_BYTES];
++    std::string reason;
++    QLOGD("NetworkDataCollector sendFilterResponseToServer: is filter apply success? %d, errorcode %d", isSuccess, errorcode);
++    bzero(buffer,MAX_RESPONSE_BYTES);
++
++    if (isSuccess) {
++        reason = FILTER_APPLY_SUCCESS_MESSAGE;
++    } else {
++        switch (errorcode) {
++            case 1:
++                reason = FILTER_APPLY_FAILURE_MESSAGE_INVALID_FORMAT;
++                break;
++            case 2:
++                reason = FILTER_APPLY_FAILURE_MESSAGE_MULTI_FILTERS;
++                break;
++            default:
++                //Diag filter config to enable/disable log/event failed. Internal Error.
++                //This errorcode is > 1001
++                reason = FILTER_APPLY_FAILURE_MESSAGE_INTENAL_ERROR;
++                break;
++        }
++    }
++    int length = reason.length();
++    uint32_t nwByteOrderlength = htonl(length);
++    char numberStr[4];
++    memcpy(numberStr, &nwByteOrderlength, 4);
++    buffer[0] = 0x01; //  this is fixed value
++    buffer[1]=numberStr[0];
++    buffer[2]=numberStr[1];
++    buffer[3]=numberStr[2];
++    buffer[4]=numberStr[3];
++
++    char stringhexdata[MAX_RESPONSE_BYTES/2];
++    std::memcpy(stringhexdata, tohex(reason).c_str(), 2*length);
++    uint8_t* body = HexStringToBytes(stringhexdata,length);
++    std::memcpy(buffer+5,body,length);
++
++    if(mSocket && mSocket->mFd) {
++        int n = write(mSocket->mFd,buffer,5+length); // 1 for type, 4 for length -- total 5 bytes
++        if (n < 0) {
++            QLOGD("sendFilterResponseToServer: ERROR writing to socket");
++        }
++    } else {
++        QLOGD("sendFilterResponseToServer:ERROR no socket fd to server socket");
++    }
++
++    if(body != NULL)
++        delete [] body;
++
++    return NS_OK;
++ }
+ 
+ 
+ NS_IMETHODIMP NetworkDataCollector::Run() {
+@@ -1245,7 +1450,8 @@ NS_IMETHODIMP NetworkDataCollector::Run() {
+     nsCString socketName;
+     nsresult result = NS_ERROR_FAILURE;
+     struct sockaddr_un serveraddr;
+-    unsigned char readBuffer[MAX_RESPONSE_BYTES];
++    char readBuffer[MAX_RESPONSE_BYTES/4];
++    char eventFilterBuffer[MAX_RESPONSE_BYTES/4];
+ 
+     // server socket name
+     socketName.Assign(DATA_COLLECTOR_SERVER_SOCKET_NAME);
+@@ -1347,14 +1553,87 @@ NS_IMETHODIMP NetworkDataCollector::Run() {
+             }
+ 
+             // Read data from the socket
+-            int readResult = read(mSocket->mFd, readBuffer, MAX_RESPONSE_BYTES);
++            bzero(readBuffer,MAX_RESPONSE_BYTES/4);
++            int readResult = read(mSocket->mFd, readBuffer, MAX_RESPONSE_BYTES/4);
+             if((readResult < 0 )) {
+                  /* looks like socket got disconneccted at far end. */
+                  QLOGE("looks like server socket got disconneccted/closed  errno=%s",strerror(errno));
+                   break;
+              } else {
+-                  // handle the data collector server response.
+-                 QLOGD("got response from server socket ret=%d",readResult);
++                 // handle the data collector server response.
++                 int c = 0;
++                 int noOfFrame = 0;
++                 int validity = 0;
++                 for (c=0; c < readResult; c++) {
++                     if((readBuffer[c] < 48) && !((readBuffer[c] == 32) || (readBuffer[c] == 34) || (readBuffer[c] == 44))) {
++                         readBuffer[c] = '*';
++                     }
++                     if (readBuffer[c] == 123) {
++                         noOfFrame++;
++                     }
++                 }
++                 QLOGD("Received server data of total %d bytes from metrics-deamon with number of json frames is %d", readResult, noOfFrame);
++                 char tempEventFilterBuf[32];
++                 char tempDataFilterBuf[32];
++                 char tempCounterFilterBuf[32];
++                 char *frame_str;
++                 char *frames = (noOfFrame>0)?strtok_r(readBuffer, "{}", &frame_str):NULL;
++                 while (frames != NULL)
++                 {
++                   //Format of FilterFrame received from metrics_daemon socket is {"NC":3,"ND":117473409,"NE":67109836}
++                   //Check if it contains {"NC": and "ND": before parse filter values.
++                   bool hasFilterFrame = false;
++                   if (strlen(frames) > 5) {
++                     hasFilterFrame = (strstr(frames, "\"ND\":") != NULL) && (strstr(frames, "\"NC\":") != NULL);
++                     QLOGD("Has new filter come in frame {%s} from metrics daemon? %s", frames, hasFilterFrame? "Yes":"No");
++                   }
++                   if (hasFilterFrame) {
++                     bzero(eventFilterBuffer,MAX_RESPONSE_BYTES/4);
++                     strcpy(eventFilterBuffer, frames);
++                     QLOGD("Filter mask received from metrics daemon is={%s}",eventFilterBuffer);
++                     char *token_str;
++                     char *token = strtok_r(eventFilterBuffer, ",", &token_str);
++                     while (token != NULL)
++                     {
++                         if (strstr(token, "\"NC\":")) {
++                             QLOGD("Split Data from received response=%s",token);//"NC":xyz, e.g: "NC":3
++                             bzero(tempCounterFilterBuf,32);
++                             sprintf(tempCounterFilterBuf, "%s", &token[5]);
++                             if (isFilterDataValid(tempCounterFilterBuf)) {
++                                 validity +=5;
++                             }
++                         } else if (strstr(token, "\"ND\":")) {
++                             QLOGD("Split Data from received response=%s",token);//e.g. token="ND":117473409
++                             bzero(tempDataFilterBuf,32);
++                             sprintf(tempDataFilterBuf, "%s", &token[5]);
++                             if (isFilterDataValid(tempDataFilterBuf)) {
++                                 validity +=7;
++                             }
++                         } else if (strstr(token, "\"NE\":")) {
++                             QLOGD("Split Data from received response=%s",token);//e.g. token="NE":67109836
++                             bzero(tempEventFilterBuf,32);
++                             //strncpy(tempFilterBuf, &token[5],  (strlen(token)-6));
++                             sprintf(tempEventFilterBuf, "%s", &token[5]);
++                             if (isFilterDataValid(tempEventFilterBuf)) {
++                                 validity +=11;
++                             }
++                         }
++                         token = strtok_r(NULL, ",", &token_str);
++                     }
++                   }
++                   frames = strtok_r(NULL, "{}",&frame_str);
++                 }
++                 if (validity == 23) {
++                     //Filter is valid, apply it. e.g. {"NC":3,"ND":117473409,"NE":67109836}
++                     //And send filter apply response ACK/NAK to server.
++                     ApplyFilterAndSendResponseToServer(tempCounterFilterBuf, tempDataFilterBuf, tempEventFilterBuf);
++                 } else if ((validity/23 > 1) && (validity%23 == 0)) {
++                     //Multiple Filters came at same time. Which one to apply?
++                     sendFilterResponseToServer(false, 2);
++                 } else if (validity > 0) {
++                     //Invalid Filter frame. Filter format not supported.
++                     sendFilterResponseToServer(false, 1);
++                 }
+                  mServerReady = true; // need to set on first handshake message response.
+              }
+         }
+@@ -1375,6 +1654,56 @@ NS_IMETHODIMP NetworkDataCollector::Run() {
+         QRLOGD("HandleImsUnSolicitedResponse");
+         }
+ 
++    void  NetworkDataCollector::ApplyFilterAndSendResponseToServer(char* counterFilterBuf, char* dataFilterBuf, char* eventFilterBuf) {
++        uint32_t aRespLength = 0;
++        const uint8_t **mResponse = new const uint8_t*;
++        uint32_t aResult = 0;
++        uint32_t aReqLength = 4;
++        uint64_t new_eventFilterMask;
++        uint64_t new_dataFilterMask;
++        uint64_t new_counterFilterMask;
++        if(mShuttingDown) {
++            QLOGE(" ApplyFilterAndSendResponseToServer: server connection is not ready or shuting down");
++            return;
++        }
++        new_counterFilterMask = atoll(counterFilterBuf);
++        new_dataFilterMask = atoll(dataFilterBuf);
++        new_eventFilterMask = atoll(eventFilterBuf);
++        QLOGD("ApplyFilterAndSendResponseToServer Informing ril/diag socket %s to apply new filters. NC: %llu, ND: %llu, NE: %llu",
++                mRil->mOemSocket->GetName(), new_counterFilterMask, new_dataFilterMask, new_eventFilterMask);
++        OemRequest* rr = OemRequest::Obtain(QRIL_EVT_HOOK_NAS_GET_NW_DATA_COLLECTOR_PARAMS, this);
++
++        rr->mParcel.writeInt32(7);
++        rr->mParcel.writeInt32(DC_FILTER_CONFIG_EVENT_INTERNAL); //Event
++        rr->mParcel.writeInt32((int ) (new_counterFilterMask & 0xffffffff)); //Least significant 32 bits
++        rr->mParcel.writeInt32((int ) (new_counterFilterMask >> 32)); //Most significant 32 bits
++        rr->mParcel.writeInt32((int ) (new_dataFilterMask & 0xffffffff)); //Least significant 32 bits
++        rr->mParcel.writeInt32((int ) (new_dataFilterMask >> 32)); //Most significant 32 bits
++        rr->mParcel.writeInt32((int ) (new_eventFilterMask & 0xffffffff)); //Least significant 32 bits
++        rr->mParcel.writeInt32((int ) (new_eventFilterMask >> 32)); //Most significant 32 bits
++
++        SendRequest(mRil->GetClientId(), rr, false, &aResult, mResponse, &aRespLength);
++        if(aRespLength > 0) {
++            uint32_t *filterConfigError = (uint32_t *) *mResponse;
++            QLOGD("ApplyFilterAndSendResponseToServer: Received filter apply response from QCRIL/DIAG filterConfigError = %d aRespLength = %d", *filterConfigError, aRespLength);
++            if (*filterConfigError == 0) {
++                counterFilterMask = new_counterFilterMask;
++                dataFilterMask = new_dataFilterMask;
++                eventFilterMask = new_eventFilterMask;
++                //Send filter apply success. Send ACK to server.
++                sendFilterResponseToServer(true, *filterConfigError);
++                property_set(PROP_DATA_COLLECTOR_COUNTER_MASK, counterFilterBuf);
++                property_set(PROP_DATA_COLLECTOR_DATA_MASK, dataFilterBuf);
++                property_set(PROP_DATA_COLLECTOR_EVENT_MASK, eventFilterBuf);
++            } else {
++                //Internal Error while apply filter. Send NAK to server.
++                sendFilterResponseToServer(false, *filterConfigError);
++            }
++        }
++        if((mResponse != nullptr) && (*mResponse != nullptr))
++        delete [] mResponse;
++    }
++
+     void  NetworkDataCollector::SendNetworkDataToServer(DataCollectorEventCodes event) {
+     uint32_t aRespLength = 0;
+     const uint8_t **aResponse = new const uint8_t*;
+@@ -1390,7 +1719,10 @@ NS_IMETHODIMP NetworkDataCollector::Run() {
+ 
+     QLOGD(" NetworkDataCollector: Extracting nework data on socket %s",  mRil->mOemSocket->GetName());
+     OemRequest* rr = OemRequest::Obtain(QRIL_EVT_HOOK_NAS_GET_NW_DATA_COLLECTOR_PARAMS, this);
++    rr->mParcel.writeInt32(1);
++    rr->mParcel.writeInt32(event);
+     SendRequest(mRil->GetClientId(), rr, false, &aResult, aResponse, &aRespLength);
++    QLOGD("SendNetworkDataToServer aRespLength = %d",aRespLength);
+ 
+     if(aRespLength > 0) {
+         qmi_ril_nw_data_collector_Params *nwParams = (qmi_ril_nw_data_collector_Params *) *aResponse;
+diff --git a/b2g_telephony/include/NetworkDataCollector.h b/b2g_telephony/include/NetworkDataCollector.h
+index 6abac18..16d4fae 100755
+--- a/b2g_telephony/include/NetworkDataCollector.h
++++ b/b2g_telephony/include/NetworkDataCollector.h
+@@ -77,6 +77,7 @@ typedef struct
+     int32_t cells[12][3]; //Twelve set of neighbor cells each cell contains {pci, rsrp, rsrq}
+     int32_t number_of_cells;
+     int32_t mute[4]; //Array of numbers for extra short, short, medium and long muting events Ex: {5,2,4,0}
++    int32_t filterConfigError;
+ }qmi_ril_nw_data_collector_Params;
+ 
+ class DataCollectorSocket {
+@@ -108,11 +109,13 @@ public:
+   void Initialize();
+   NS_IMETHOD Run();
+   NS_IMETHODIMP sendHandShakeMsgToServer();
++  NS_IMETHODIMP sendFilterResponseToServer(bool isSuccess, int errorcode);
+   void HandleRilSolicitedResponse(RILResult& result);
+   void HandleRilUnSolicitedResponse(RILResult& result);
+   void HandleImsSolicitedResponse(RILResult& result);
+   void HandleImsUnSolicitedResponse(RILResult& result);
+   void  SendNetworkDataToServer(DataCollectorEventCodes event);
++  void ApplyFilterAndSendResponseToServer(char* counterFilterBuf, char* dataFilterBuf, char* eventFilterBuf);
+   void  SendCallTriggeredDataToServer();
+   void  SendCallAttemptFailedDataToServer();
+   void  SendCallEstablishedDataToServer();
+@@ -154,6 +157,9 @@ private:
+   void resetPersistValue(int event);
+   bool isDateChanged(time_t currentTime);
+   bool isClientAllowEventReporting(int event);
++  bool isClientAllowCounterUpdate(int counter);
++  bool isClientAllowDataUpdate(int data);
++  bool isFilterDataValid(char *filterData);
+ 
+   RIL* mRil;
+   DataCollectorSocket* mSocket;
+@@ -171,6 +177,9 @@ private:
+   uint64_t mSeqNumber;
+   DataCollectorEventCodes mSenderEvent;
+   uint32_t mRilLastFailCause;
++  uint64_t eventFilterMask;
++  uint64_t dataFilterMask;
++  uint64_t counterFilterMask;
+ };
+ 
+ #endif // NETWORK_DATA_COLLECTOR_H
+diff --git a/b2g_telephony/include/RIL.h b/b2g_telephony/include/RIL.h
+index 30cb4b9..88d838d 100755
+--- a/b2g_telephony/include/RIL.h
++++ b/b2g_telephony/include/RIL.h
+@@ -119,6 +119,8 @@ const char* RequestToString(int request);
+ #define PROP_DATA_COLLECTOR_NUM_DIAL_FAIL "persist.radio.dc.numofdialfail"
+ #define PROP_DATA_COLLECTOR_NUM_CALL_DROP "persist.radio.dc.numofcalldrop"
+ #define PROP_DATA_COLLECTOR_EVENT_MASK "persist.radio.dc.eventmask"
++#define PROP_DATA_COLLECTOR_COUNTER_MASK "persist.radio.dc.countermask"
++#define PROP_DATA_COLLECTOR_DATA_MASK "persist.radio.dc.datamask"
+ 
+ #define RIL_REQUEST_ENTER_DEPERSONALIZATION_CODE RIL_REQUEST_ENTER_NETWORK_DEPERSONALIZATION
+ 
+@@ -152,37 +154,37 @@ typedef enum {
+ } SocketId;
+ 
+ enum DataCollectorEventCodes {
+-    DATA_COLLECTOR_EVENT_CALL_TRIGGERED = 1,
+-    DATA_COLLECTOR_EVENT_CALL_ATTEMPT_FAILED,
+-    DATA_COLLECTOR_EVENT_CALL_ESTABLISHED,
+-    DATA_COLLECTOR_EVENT_CALL_DISCONNECT,
+-    DATA_COLLECTOR_EVENT_CALL_DROP,
+-    DATA_COLLECTOR_EVENT_CALL_MUTING,
+-    DATA_COLLECTOR_EVENT_SMS_SENT,
+-    DATA_COLLECTOR_EVENT_SMS_RECIVED,
+-    DATA_COLLECTOR_EVENT_VOLTE_REGISTRATION_EVENT,
+-    DATA_COLLECTOR_EVENT_VOLTE_CONNECTION_LOST,
+-    DATA_COLLECTOR_EVENT_AUTO_COLLECTOR_EVENT,
+-    DATA_COLLECTOR_EVENT_OUT_OF_SERVICE,
+-    DATA_COLLECTOR_EVENT_IN_SERVICE,
+-    DATA_COLLECTOR_EVENT_ATTACH_FAILURE,
+-    DATA_COLLECTOR_EVENT_TAC_UPDATE,
+-    DATA_COLLECTOR_EVENT_RSRP_LESS_THAN_110_DBM,
+-    DATA_COLLECTOR_EVENT_RRC_CONNECTION_RELEASE,
+-    DATA_COLLECTOR_EVENT_RRC_CONNECTION_FAILURE,
+-    DATA_COLLECTOR_EVENT_RADIO_LINK_FAILURE,
+-    DATA_COLLECTOR_EVENT_INTRA_FREQUENCY_HANDOVER,
+-    DATA_COLLECTOR_EVENT_INTER_FREQUENCY_HANDOVER,
+-    DATA_COLLECTOR_EVENT_INTER_BAND_HANDOVER,
+-    DATA_COLLECTOR_EVENT_CELL_RESELECTION,
+-    DATA_COLLECTOR_EVENT_RACH_FAILURE,
+-    DATA_COLLECTOR_EVENT_DATA_PAUSE_OR_RECOVERABLE_DATA_STALL,
+-    DATA_COLLECTOR_EVENT_NON_RECOVERABLE_DATA_STALL,
+-    DATA_COLLECTOR_EVENT_INCOMING_CALL
++    DATA_COLLECTOR_EVENT_CALL_TRIGGERED = 1, //NE1
++    DATA_COLLECTOR_EVENT_CALL_ATTEMPT_FAILED, //NE2
++    DATA_COLLECTOR_EVENT_CALL_ESTABLISHED, //NE3
++    DATA_COLLECTOR_EVENT_CALL_DISCONNECT, //NE4
++    DATA_COLLECTOR_EVENT_CALL_DROP, //NE5
++    DATA_COLLECTOR_EVENT_CALL_MUTING, //NE6
++    DATA_COLLECTOR_EVENT_SMS_SENT, //NE7
++    DATA_COLLECTOR_EVENT_SMS_RECIVED, //NE8
++    DATA_COLLECTOR_EVENT_VOLTE_REGISTRATION_EVENT, //NE9
++    DATA_COLLECTOR_EVENT_VOLTE_CONNECTION_LOST, //NE10
++    DATA_COLLECTOR_EVENT_AUTO_COLLECTOR_EVENT, //NE11
++    DATA_COLLECTOR_EVENT_OUT_OF_SERVICE, //NE12
++    DATA_COLLECTOR_EVENT_IN_SERVICE, //NE13
++    DATA_COLLECTOR_EVENT_ATTACH_FAILURE, //NE14
++    DATA_COLLECTOR_EVENT_TAC_UPDATE, //NE15
++    DATA_COLLECTOR_EVENT_RSRP_LESS_THAN_110_DBM, //NE16
++    DATA_COLLECTOR_EVENT_RRC_CONNECTION_RELEASE, //NE17
++    DATA_COLLECTOR_EVENT_RRC_CONNECTION_FAILURE, //NE18
++    DATA_COLLECTOR_EVENT_RADIO_LINK_FAILURE, //NE19
++    DATA_COLLECTOR_EVENT_INTRA_FREQUENCY_HANDOVER, //NE20
++    DATA_COLLECTOR_EVENT_INTER_FREQUENCY_HANDOVER, //NE21
++    DATA_COLLECTOR_EVENT_INTER_BAND_HANDOVER, //NE22
++    DATA_COLLECTOR_EVENT_CELL_RESELECTION, //NE23
++    DATA_COLLECTOR_EVENT_RACH_FAILURE, //NE24
++    DATA_COLLECTOR_EVENT_DATA_PAUSE_OR_RECOVERABLE_DATA_STALL, //NE25
++    DATA_COLLECTOR_EVENT_NON_RECOVERABLE_DATA_STALL, //NE26
++    DATA_COLLECTOR_EVENT_INCOMING_CALL //NE27 - Internal use
+ };
+ 
+ enum DataCollectorDataCodes {
+-    DATA_CODE_LI4 = 1, //PCI
++    DATA_CODE_LI4 = 0, //PCI
+     DATA_CODE_RI1,    //RSRP
+     DATA_CODE_RI2,    //RSRQ
+     DATA_CODE_RI3,    //SINR
+@@ -207,10 +209,24 @@ enum DataCollectorDataCodes {
+     DATA_CODE_VI2,    //SIP Session End (reason)
+     DATA_CODE_VI3,    //Mute related parameters
+     DATA_CODE_VI4,    //RTP Packet Loss
++    DATA_CODE_VI5,    //Jitter Loss
+     DATA_CODE_HI1,    //Rx bytes
+     DATA_CODE_HI2    //Tx bytes
+ };
+ 
++enum DataCollectorCounterCodes {
++    COUNTER_CODE_NC1 = 1, //Number of outgoing calls
++    COUNTER_CODE_NC2,    //Number of incoming calls
++    COUNTER_CODE_NC3,    //Number of call attempt failures
++    COUNTER_CODE_NC4,    //Number of call drops
++    COUNTER_CODE_NC5,    //Number of data sessions
++    COUNTER_CODE_NC6,    //Number of data session attempts failed
++    COUNTER_CODE_NC7,    //Number of ATTACHs
++    COUNTER_CODE_NC8,    //Number of ATTACH failures
++    COUNTER_CODE_NC9,    //Number of DETACHs
++    COUNTER_CODE_NC10    //unuse
++};
++
+ typedef struct {
+     int32_t unsol_event;
+     int32_t data_len;
+diff --git a/qcril/data_collector/qcril_diag.c b/qcril/data_collector/qcril_diag.c
+index 003da74..975d6df 100644
+--- a/qcril/data_collector/qcril_diag.c
++++ b/qcril/data_collector/qcril_diag.c
+@@ -61,7 +61,6 @@ static int rach_cause = -1;
+ 
+ static int cqi =0 ;
+ static int rankIndicator =0 ;
+-static int temp_rankIndicator = 0 ;
+ static int rrc_conn_cause =0 ;
+ static int attach_reject_cause =0 ;
+ static int rrc_rel_cause =0 ;
+@@ -107,6 +106,10 @@ uint16 log_codes_array[TOTAL_LOG_CODES] = {45248,45415,/*5481,*/6130,45415,45282
+ 
+ uint16 log_codes_array_cqi[1] = {45389};
+ uint16 log_codes_array_bler[1] = {45427};
++uint16 log_codes_array_rrc_rel_cause[1] = {45248};
++uint16 log_codes_array_rach_tx_power[1] = {45415};
++uint16 log_codes_array_eps_bearer[1] = {45282};
++uint16 log_codes_array_rstd[1] = {5529};
+ 
+ int event_codes_array[TOTAL_EVENT_CODES] = {
+     EVENT_LTE_RRC_RADIO_LINK_FAILURE,
+@@ -116,6 +119,9 @@ int event_codes_array[TOTAL_EVENT_CODES] = {
+     EVENT_LTE_EMM_OTA_OUTGOING_MSG
+ };
+ 
++int event_codes_array_feq_ho_cell_resel[1] = {EVENT_LTE_RRC_NEW_CELL_IND};
++int event_codes_array_band_ho[2] = {EVENT_LTE_RACH_ACCESS_START, EVENT_LTE_RACH_ACCESS_RESULT};
++
+ qmi_ril_nw_data_collector_Param diag_ril_nw_data_collector_Params;
+ 
+ void process_dci_log_stream(unsigned char *ptr, int len)
+@@ -125,7 +131,7 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+     print_bytes(ptr, len, FALSE);
+     switch (*(uint16 *)(ptr + 2)) {
+         case 45389:
+-            QCRIL_LOG_INFO(" cqi 45389  diag_log_stream_config 0xB14D  LTE LL1 PUCCH CSF – periodic temp_rankIndicator %d\n", temp_rankIndicator);
++            QCRIL_LOG_INFO(" cqi 45389  diag_log_stream_config 0xB14D  LTE LL1 PUCCH CSF – periodic\n");
+             int report_type = PUCCH_REPORT_TYPE_MASK & ptr[15] ;
+             report_type = report_type >> PUCCH_REPORT_TYPE_SHIFT;
+             QCRIL_LOG_INFO(" cqi 45389  diag_log_stream_config 0xB14D  LTE LL1 PUCCH CSF – periodic report_type %d\n", report_type);
+@@ -139,16 +145,8 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+             } else if (report_type == 4){
+                 rankIndicator = RI_MASK & ptr[16];
+                 rankIndicator = (rankIndicator >> RI_SHIFT ) +1; // 0 -> Rank 1
+-                temp_rankIndicator = rankIndicator;
+                 QCRIL_LOG_INFO("rankIndicator value = %d " , rankIndicator);
+             }
+-            if( (temp_rankIndicator > 0 ) && (cqi > 0) ) {
+-                QCRIL_LOG_INFO("45459 diag_log_stream_config disabling 0xB14D  LTE LL1 PUCCH CSF – periodic 0xB14E  LTE LL1 PUSCH CSF periodic cqi %d, rankIndicator %d\n", cqi,rankIndicator);
+-                err = diag_log_stream_config(client_id, DISABLE, log_codes_array_cqi,1);
+-                if (err != DIAG_DCI_NO_ERROR) {
+-                    QCRIL_LOG_INFO(" Error sending diag_log_stream_config - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
+-                }
+-            }
+             break;
+         case 45248:
+             QCRIL_LOG_INFO(" 45248  diag_log_stream_config 0xB0C0  LTE RRC OTA Packet \n");
+@@ -193,7 +191,7 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+             break;
+         case 45415:
+             QCRIL_LOG_INFO(" cqi 45415  diag_log_stream_config 0xB167  LTE Random Access Request (MSG1) Report \n");
+-            int value_p_tx_power = ptr[20] ;
++            int value_p_tx_power = ptr[20];
+             if (value_p_tx_power == 128) {
+                 value_p_tx_power = 0;
+             } else if (value_p_tx_power > 128) {
+@@ -254,7 +252,6 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+             if (msg_type == 75 || msg_type == 73) { //TAC rejected (75), TAC accept (73)
+                 int value_tac_fail_cause = ptr[18];
+                 tac_fail_cause = value_tac_fail_cause;
+-                temp_rankIndicator = 0; //Let retrieve rank indicator again in 0xB14D
+                 QCRIL_LOG_INFO(" QCRIL_DIAG:   45292  diag_log_stream_config 0xB0EC LTE NAS EMM Plain OTA Incoming Message   value_tac_fail_cause %d \n", value_tac_fail_cause);
+                 dataCollectorEvents = DATA_COLLECTOR_EVENT_TAC_UPDATE; //TAC accept, failed/rejected. Need update to metrics_daemon to know the TAC failure reason.
+                 QCRIL_LOG_INFO(" QCRIL_DIAG:   45292 data collector indication - %d", dataCollectorEvents);
+@@ -262,7 +259,6 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+             } else if (msg_type == 68) { //Attach failed
+                 number_of_attach_fail++;
+                 attach_reject_cause = ptr[18];
+-                temp_rankIndicator = 0; //Let retrieve rank indicator again in 0xB14D
+                 incrementPersistStorage(PROP_DATA_COLLECTOR_NUM_ATTACH_FAIL);
+                 dataCollectorEvents = DATA_COLLECTOR_EVENT_ATTACH_FAILURE;
+                 QCRIL_LOG_INFO(" QCRIL_DIAG:   45292 data collector indication - %d", dataCollectorEvents);
+@@ -331,9 +327,9 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+             QCRIL_LOG_INFO(" QCRIL_DIAG:   45427  diag_log_stream_config  crc_pass %d, crc_fail %d\n", crc_pass,crc_fail);
+         break;
+         case 6192:
+-            QCRIL_LOG_INFO(" QCRIL_DIAG:   6192  diag_log_stream_config   IMS VoLTE Session Setup (0x1830) \n");
++            QCRIL_LOG_INFO(" QCRIL_DIAG:   6192  diag_log_stream_config   IMS VoLTE Session Setup (0x1830) in_call = %d\n", in_call);
+             local_counter = sequence_number;
+-            if(!in_call) {
++           /* if(!in_call) {
+                 extra_short_mute = 0;
+                 short_mute = 0;
+                 medium_mute = 0;
+@@ -343,25 +339,34 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+                 rtp_packet_loss = 0;
+                 total_loss_rtp_pckt_cnt = 0;
+                 total_rtp_pckt_cnt = 0;
+-                temp_rankIndicator = 0; //Let retrieve rank indicator again in 0xB14D
+-                //enabling bler log packet during call
+-                err = diag_log_stream_config(client_id, ENABLE, log_codes_array_bler,1);
+-                if (err != DIAG_DCI_NO_ERROR) {
+-                    QCRIL_LOG_INFO(" Error sending diag_log_stream_config - log_codes_array_bler to peripheral, err: %d, errno: %d\n", err, errno);
++                boolean isEnabled = false;
++                diag_get_log_status(client_id, log_codes_array_bler[0], &isEnabled);
++                if (isClientAllowDataUpdate(DATA_CODE_RI12, dataFilterMask) && !isEnabled) {
++                    //enabling bler log packet during call
++                    err = diag_log_stream_config(client_id, ENABLE, log_codes_array_bler,1);
++                    if (err != DIAG_DCI_NO_ERROR) {
++                        QCRIL_LOG_INFO(" Error sending diag_log_stream_config - log_codes_array_bler to peripheral, err: %d, errno: %d\n", err, errno);
++                    }
+                 }
+-            }
+-            in_call = 1;
++            }*/
+             break;
++
+         case 6193:
+-            QCRIL_LOG_INFO(" QCRIL_DIAG:   6193  diag_log_stream_config   IMS VoLTE Session End (0x1831) \n");
++            QCRIL_LOG_INFO(" QCRIL_DIAG:   6193  diag_log_stream_config   IMS VoLTE Session End (0x1831) in_call = %d\n", in_call);
+             local_counter = sequence_number;
+-            //Disabling bler log packet at end of call
+-            err = diag_log_stream_config(client_id, DISABLE, log_codes_array_bler,1);
+-            if (err != DIAG_DCI_NO_ERROR) {
+-                QCRIL_LOG_INFO(" Error sending diag_log_stream_config - log_codes_array_bler to peripheral, err: %d, errno: %d\n", err, errno);
++            in_call--;
++            if(!in_call) {
++                //Disabling bler log packet at end of call
++                boolean isEnabled = false;
++                diag_get_log_status(client_id, log_codes_array_bler[0], &isEnabled);
++                if (isEnabled) {
++                    err = diag_log_stream_config(client_id, DISABLE, log_codes_array_bler,1);
++                    if (err != DIAG_DCI_NO_ERROR) {
++                        QCRIL_LOG_INFO(" Error sending diag_log_stream_config - log_codes_array_bler to peripheral, err: %d, errno: %d\n", err, errno);
++                    }
++                }
+             }
+-            QCRIL_LOG_INFO(" QCRIL_DIAG:   6192  diag_log_stream_config  crc_pass %d, crc_fail %d\n", crc_pass,crc_fail);
+-            in_call = 0;
++            QCRIL_LOG_INFO(" QCRIL_DIAG:   6192  at IMS VoLTE Session End  crc_pass %d  crc_fail %d \n",crc_pass,crc_fail);
+             if(crc_fail > 0) {
+                 if(crc_pass > 0) {
+                     bler = 0.5 + 100.0*crc_fail/(crc_fail+crc_pass); //Approx to next int value as in deamon RI12 is int type
+@@ -372,17 +377,17 @@ void process_dci_log_stream(unsigned char *ptr, int len)
+                 }
+             }
+             if ((total_rtp_pckt_cnt > 0 ) && (total_loss_rtp_pckt_cnt > 0)) {
+-                rtp_packet_loss = 0.5 + 100.0*total_loss_rtp_pckt_cnt/(total_loss_rtp_pckt_cnt+total_rtp_pckt_cnt);
++                rtp_packet_loss = 100*total_loss_rtp_pckt_cnt/(total_loss_rtp_pckt_cnt+total_rtp_pckt_cnt);
+             }
+             break;
+ 
+         case 5529:
+              QCRIL_LOG_INFO(" QCRIL_DIAG:   5529  diag_log_stream_config  GNSS LOC LTE OTDOA PRS RSTD MEAS (0x1599)  \n");
+             int ngbr_cell_len = ptr[17];
+-                    QCRIL_LOG_INFO(" QCRIL_DIAG:   5529  ngbr_cell_len  rstd[i] %d\n", ngbr_cell_len);
++            QCRIL_LOG_INFO(" QCRIL_DIAG:   5529  ngbr_cell_len  rstd[i] %d\n", ngbr_cell_len);
+ 
+             int flag_mask = 0x10 & (*(uint32 *)(ptr + 86));
+-                    QCRIL_LOG_INFO(" QCRIL_DIAG:   5529  diag_log_stream_config   %d  flag_mask , %d\n", *(int *)(ptr + 86),flag_mask);
++            QCRIL_LOG_INFO(" QCRIL_DIAG:   5529  diag_log_stream_config   %d,  flag_mask %d\n", *(int *)(ptr + 86),flag_mask);
+             index = 110;
+             for (i=0;i< ngbr_cell_len && (i < 3);i++) {
+                if(flag_mask) {
+@@ -415,7 +420,6 @@ void process_dci_event_stream(unsigned char *ptr, int len)
+     switch (event_id) {
+         case EVENT_LTE_RRC_RADIO_LINK_FAILURE :
+              QCRIL_LOG_INFO(" diag_event_stream_config EVENT_LTE_RRC_RADIO_LINK_FAILURE (ID=1608)l \n");
+-            temp_rankIndicator = 0; //Let retrieve rank indicator again in 0xB14D
+             dataCollectorEvents = DATA_COLLECTOR_EVENT_RADIO_LINK_FAILURE;
+             QCRIL_LOG_INFO ("data collector indication - %d", dataCollectorEvents);
+             break;
+@@ -459,7 +463,6 @@ void process_dci_event_stream(unsigned char *ptr, int len)
+                 QCRIL_LOG_INFO(" data collector number_of_attach - %d", number_of_attach);
+             } else if(ptr[12]==69) {
+                 number_of_detach++;
+-                temp_rankIndicator = 0; //Let retrieve rank indicator again in 0xB14D at APM ON/OFF, detach.
+                 incrementPersistStorage(PROP_DATA_COLLECTOR_NUM_DETACH);
+                 QCRIL_LOG_INFO(" data collector number_of_detach - %d", number_of_detach);
+             }
+@@ -484,6 +487,19 @@ void incrementPersistStorage(char *property) {
+     sprintf(valueStr, "%d", existingValueInt);
+     property_set(property, valueStr);
+ }
++
++bool isClientAllowDataUpdate(int data, uint64_t dataMask) {
++    bool ret = (dataMask & (1 << (data-1))) != 0;
++    //QCRIL_LOG_INFO("isClientAllowDataUpdate of data = %d is %d (Filter: %llu)\n", data,ret,dataFilterMask);
++    return ret;
++}
++
++bool isClientAllowEventReporting(int event, uint64_t eventMask) {
++    bool ret = (eventMask & (1 << (event-1))) != 0;
++    //QCRIL_LOG_INFO("isClientAllowEventReporting of event = %d is %d (Filter: %llu)\n", event,ret,eventFilterMask);
++    return ret;
++}
++
+ void process_response(unsigned char *ptr, int len, void *data_ptr)
+ {
+     int i = 0;
+@@ -588,12 +604,185 @@ void dci_data_handler(int signal)
+        processor. */
+ }
+ 
+-void qcril_diag_nas_get_nw_data_collector_params_req(qmi_ril_nw_data_collector_Param* diag_ril_nw_data_collector_Params){
+-    QCRIL_LOG_INFO("qcril_diag_nas_get_nw_data_collector_params_req");
+-    QCRIL_LOG_INFO("45459 diag_log_stream_config enabling 0xB14D  LTE LL1 PUCCH CSF – periodic 0xB14E  LTE LL1 PUSCH CSF – aperiodic \n");
+-    err = diag_log_stream_config(client_id, ENABLE, log_codes_array_cqi,1);
+-    if (err != DIAG_DCI_NO_ERROR) {
+-        QCRIL_LOG_INFO(" Error sending diag_log_stream_config - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++void qcril_diag_nas_get_nw_data_collector_params_req(qmi_ril_nw_data_collector_Param* diag_ril_nw_data_collector_Params, uint32_t dc_event, uint64_t counterFilter, uint64_t dataFilter, uint64_t eventFilter){
++    QCRIL_LOG_INFO("DC Event is %u, existing filters are: NC: %llu, ND: %llu, NE: %llu", dc_event, counterFilterMask, dataFilterMask, eventFilterMask);
++    //Enable bler when call established and if UE not already in call.
++    //IMS VoLTE Session Setup (0x1830) use to come though the call is not connected.
++    //e.g. it comes for miss call, call reject cases.
++    //But the corresponding IMS VoLTE Session End (0x1831) packet does not come for miss call, call reject.
++    if (DATA_COLLECTOR_EVENT_CALL_ESTABLISHED == dc_event) {
++        if(!in_call) {
++            extra_short_mute = 0;
++            short_mute = 0;
++            medium_mute = 0;
++            long_mute = 0;
++            crc_pass = 0;
++            crc_fail = 0;
++            rtp_packet_loss = 0;
++            total_loss_rtp_pckt_cnt = 0;
++            total_rtp_pckt_cnt = 0;
++            boolean isEnabled = false;
++            diag_get_log_status(client_id, log_codes_array_bler[0], &isEnabled);
++            if (isClientAllowDataUpdate(DATA_CODE_RI12, dataFilterMask) && !isEnabled) {
++                //enabling bler log packet during call
++                err = diag_log_stream_config(client_id, ENABLE, log_codes_array_bler,1);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    QCRIL_LOG_INFO(" Error sending diag_log_stream_config - log_codes_array_bler to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        }
++        in_call++;
++    } else if (DC_FILTER_CONFIG_EVENT_INTERNAL == dc_event) { // Apply config filter if this is filter config event.
++       /* char dcMask[PROPERTY_VALUE_MAX];
++        property_get(PROP_DATA_COLLECTOR_EVENT_MASK,dcMask,"63"); //63 as default value at Out of Box. NE1 to NE6 will be sent
++        uint64_t temp_eventFilterMask = atoll(dcMask);
++
++        bzero(dcMask,PROPERTY_VALUE_MAX);
++        property_get(PROP_DATA_COLLECTOR_DATA_MASK,dcMask,"4294967295"); // All data will be sent
++        uint64_t temp_dataFilterMask = atoll(dcMask); */
++        QCRIL_LOG_INFO("Filter event. Filter changes: counterFilter: %llu -> %llu, dataFilter: %llu -> %llu, eventFilter: %llu -> %llu\n",
++                counterFilterMask, counterFilter, dataFilterMask, dataFilter, eventFilterMask, eventFilter);
++        filterConfigError = 0;
++        boolean isEnabled = false;
++        if (isClientAllowDataUpdate(DATA_CODE_RI4, dataFilter) || isClientAllowDataUpdate(DATA_CODE_RI5, dataFilter)) {
++            diag_get_log_status(client_id, log_codes_array_cqi[0], &isEnabled);
++            QCRIL_LOG_INFO("Whether 45389 diag_log_stream_config enabling 0xB14D  LTE LL1 PUCCH CSF already enabled %d\n", isEnabled);
++            if(!isEnabled) {
++                QCRIL_LOG_INFO("Enable 45389 diag_log_stream_config enabling 0xB14D  LTE LL1 PUCCH CSF – periodic 0xB14E  LTE LL1 PUSCH CSF – aperiodic \n");
++                err = diag_log_stream_config(client_id, ENABLE, log_codes_array_cqi,1);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    filterConfigError = err;
++                    QCRIL_LOG_INFO(" Error enabling diag_log_stream_config 0xB14D - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        }
++
++        diag_get_log_status(client_id, log_codes_array_rrc_rel_cause[0], &isEnabled);
++        if (isClientAllowDataUpdate(DATA_CODE_RI9, dataFilter) || isClientAllowDataUpdate(DATA_CODE_RI10, dataFilter) ||
++                isClientAllowEventReporting(DATA_COLLECTOR_EVENT_RRC_CONNECTION_RELEASE,eventFilter) ||
++                isClientAllowEventReporting(DATA_COLLECTOR_EVENT_RRC_CONNECTION_FAILURE,eventFilter)) {
++            QCRIL_LOG_INFO(" Enable 45248  diag_log_stream_config 0xB0C0  LTE RRC OTA Packet already enabled %d\n", isEnabled);
++            if (!isEnabled) {
++                err = diag_log_stream_config(client_id, ENABLE, log_codes_array_rrc_rel_cause,1);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    filterConfigError = err;
++                    QCRIL_LOG_INFO(" Error enabling diag_log_stream_config 0xB0C0 - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        } else if (isEnabled) {
++            QCRIL_LOG_INFO(" Disable 45248  diag_log_stream_config 0xB0C0  LTE RRC OTA Packet enabled %d \n", isEnabled);
++            err = diag_log_stream_config(client_id, DISABLE, log_codes_array_rrc_rel_cause,1);
++            if (err != DIAG_DCI_NO_ERROR) {
++                filterConfigError = err;
++                QCRIL_LOG_INFO(" Error disabling diag_log_stream_config 0xB0C0 - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++            }
++        }
++
++        diag_get_log_status(client_id, log_codes_array_rach_tx_power[0], &isEnabled);
++        if (isClientAllowDataUpdate(DATA_CODE_RI11, dataFilter)) {
++            QCRIL_LOG_INFO(" Enable cqi 45415  diag_log_stream_config 0xB167  LTE Random Access Request (MSG1) Report already enabled %d\n", isEnabled);
++            if (!isEnabled) {
++                err = diag_log_stream_config(client_id, ENABLE, log_codes_array_rach_tx_power,1);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    filterConfigError = err;
++                    QCRIL_LOG_INFO(" Error enable diag_log_stream_config log_codes_array_rach_tx_power - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        } else if (isEnabled) {
++            QCRIL_LOG_INFO(" Disable 45415  diag_log_stream_config 0xB167  LTE Random Access Request (MSG1) Report enabled %d \n", isEnabled);
++            err = diag_log_stream_config(client_id, DISABLE, log_codes_array_rach_tx_power,1);
++            if (err != DIAG_DCI_NO_ERROR) {
++                filterConfigError = err;
++                QCRIL_LOG_INFO(" Error disable diag_log_stream_config log_codes_array_rach_tx_power - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++            }
++        }
++
++        diag_get_log_status(client_id, log_codes_array_eps_bearer[0], &isEnabled);
++        if (isClientAllowDataUpdate(DATA_CODE_NI4, dataFilter)) {
++            QCRIL_LOG_INFO(" Enable 45282  diag_log_stream_config 0xB0E2  Activate dedicated EPS bearer context request Msg already enabled %d\n", isEnabled);
++            if (!isEnabled) {
++                err = diag_log_stream_config(client_id, ENABLE, log_codes_array_eps_bearer,1);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    filterConfigError = err;
++                    QCRIL_LOG_INFO(" Error enable diag_log_stream_config log_codes_array_eps_bearer - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        } else if (isEnabled) {
++            QCRIL_LOG_INFO(" Disable 45282  diag_log_stream_config 0xB0E2  Activate dedicated EPS bearer context request enabled %d \n", isEnabled);
++            err = diag_log_stream_config(client_id, DISABLE, log_codes_array_eps_bearer,1);
++            if (err != DIAG_DCI_NO_ERROR) {
++                filterConfigError = err;
++                QCRIL_LOG_INFO(" Error disable diag_log_stream_config log_codes_array_eps_bearer - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++            }
++        }
++
++        diag_get_log_status(client_id, log_codes_array_rstd[0], &isEnabled);
++        if (isClientAllowDataUpdate(DATA_CODE_OI1, dataFilter)) {
++            QCRIL_LOG_INFO(" Enable 5529  diag_log_stream_config  GNSS LOC LTE OTDOA PRS RSTD MEAS (0x1599) already enabled %d\n", isEnabled);
++            if (!isEnabled) {
++                err = diag_log_stream_config(client_id, ENABLE, log_codes_array_rstd,1);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    filterConfigError = err;
++                    QCRIL_LOG_INFO(" Error enable diag_log_stream_config log_codes_array_rstd - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        } else if (isEnabled) {
++            QCRIL_LOG_INFO(" Disable 5529  diag_log_stream_config  GNSS LOC LTE OTDOA PRS RSTD MEAS (0x1599) enabled %d \n", isEnabled);
++            err = diag_log_stream_config(client_id, DISABLE, log_codes_array_rstd,1);
++            if (err != DIAG_DCI_NO_ERROR) {
++                filterConfigError = err;
++                QCRIL_LOG_INFO(" Error disable diag_log_stream_config log_codes_array_rstd - SET_LOG_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++            }
++        }
++
++        diag_get_event_status(client_id, event_codes_array_feq_ho_cell_resel[0], &isEnabled);
++        if (isClientAllowEventReporting(DATA_COLLECTOR_EVENT_CELL_RESELECTION,eventFilter) ||
++                isClientAllowEventReporting(DATA_COLLECTOR_EVENT_INTRA_FREQUENCY_HANDOVER,eventFilter) ||
++                isClientAllowEventReporting(DATA_COLLECTOR_EVENT_INTER_FREQUENCY_HANDOVER,eventFilter)) {
++            QCRIL_LOG_INFO(" Enable event_codes_array_feq_ho_cell_resel Packet already enabled %d\n", isEnabled);
++            if (!isEnabled) {
++                err = diag_event_stream_config(client_id, ENABLE, event_codes_array_feq_ho_cell_resel, 1);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    filterConfigError = err;
++                    QCRIL_LOG_INFO(" QCRIL_DIAG:   Error enable event_codes_array_feq_ho_cell_resel SET_EVENT_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        } else if (isEnabled) {
++            QCRIL_LOG_INFO(" Disable event_codes_array_feq_ho_cell_resel Packet enabled %d \n", isEnabled);
++            err = diag_event_stream_config(client_id, DISABLE, event_codes_array_feq_ho_cell_resel, 1);
++            if (err != DIAG_DCI_NO_ERROR) {
++                filterConfigError = err;
++                QCRIL_LOG_INFO(" QCRIL_DIAG:   Error disable event_codes_array_feq_ho_cell_resel SET_EVENT_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++            }
++        }
++
++        diag_get_event_status(client_id, event_codes_array_band_ho[0], &isEnabled);
++        if (!isEnabled) diag_get_event_status(client_id, event_codes_array_band_ho[1], &isEnabled);
++        if (isClientAllowEventReporting(DATA_COLLECTOR_EVENT_INTER_BAND_HANDOVER,eventFilter) ||
++                isClientAllowEventReporting(DATA_COLLECTOR_EVENT_RACH_FAILURE,eventFilter)) {
++            QCRIL_LOG_INFO(" Enable event_codes_array_band_ho Packet already enabled %d\n", isEnabled);
++            if (!isEnabled) {
++                err = diag_event_stream_config(client_id, ENABLE, event_codes_array_band_ho, 2);
++                if (err != DIAG_DCI_NO_ERROR) {
++                    filterConfigError = err;
++                    QCRIL_LOG_INFO(" QCRIL_DIAG:   Error enable event_codes_array_band_ho SET_EVENT_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++                }
++            }
++        } else if (isEnabled) {
++            QCRIL_LOG_INFO(" Disable event_codes_array_band_ho Packet enabled %d \n", isEnabled);
++            err = diag_event_stream_config(client_id, DISABLE, event_codes_array_band_ho, 2);
++            if (err != DIAG_DCI_NO_ERROR) {
++                filterConfigError = err;
++                QCRIL_LOG_INFO(" QCRIL_DIAG:   Error disable event_codes_array_band_ho SET_EVENT_MASK to peripheral, err: %d, errno: %d\n", err, errno);
++            }
++        }
++        if (filterConfigError == 0) {
++            //Filter apply success, update cache values.
++            counterFilterMask = counterFilter;
++            dataFilterMask = dataFilter;
++            eventFilterMask = eventFilter;
++        }
++
+     }
+ 
+     diag_ril_nw_data_collector_Params->cqi = cqi;
+@@ -623,6 +812,7 @@ void qcril_diag_nas_get_nw_data_collector_params_req(qmi_ril_nw_data_collector_P
+     diag_ril_nw_data_collector_Params->mute[1] = short_mute;
+     diag_ril_nw_data_collector_Params->mute[2] = medium_mute;
+     diag_ril_nw_data_collector_Params->mute[3] = long_mute;
++    diag_ril_nw_data_collector_Params->filterConfigError = filterConfigError;
+ 
+ return;
+ }
+@@ -663,6 +853,19 @@ int init_qcril_diag()
+         return -1;
+     }
+ 
++    char dcMask[PROPERTY_VALUE_MAX];
++    property_get(PROP_DATA_COLLECTOR_EVENT_MASK,dcMask,"63"); //63 as default value at Out of Box. NE1 to NE6 will be sent
++    eventFilterMask = atoll(dcMask);
++
++    bzero(dcMask,PROPERTY_VALUE_MAX);
++    property_get(PROP_DATA_COLLECTOR_DATA_MASK,dcMask,"4294967295"); // All data will be sent
++    dataFilterMask = atoll(dcMask);
++
++    bzero(dcMask,PROPERTY_VALUE_MAX);
++    property_get(PROP_DATA_COLLECTOR_COUNTER_MASK,dcMask,"4294967295"); // All data will be sent
++    counterFilterMask = atoll(dcMask);
++
++
+     /* Registering with DCI - This assigns a client ID */
+     /* Channel 0 - MSM, 1 - MDM */
+     err = diag_register_dci_client(&client_id, &list, channel, &signal_type);
+diff --git a/qcril/data_collector/qcril_diag.h b/qcril/data_collector/qcril_diag.h
+index 17d2f4c..e9424a6 100644
+--- a/qcril/data_collector/qcril_diag.h
++++ b/qcril/data_collector/qcril_diag.h
+@@ -46,5 +46,12 @@ Description
+ #define DIAG_STRESS_TEST_OP_IDX        8
+ 
+ int init_qcril_diag(void);
+-void qcril_diag_nas_get_nw_data_collector_params_req(qmi_ril_nw_data_collector_Param* diag_ril_nw_data_collector_Params);
++void qcril_diag_nas_get_nw_data_collector_params_req(qmi_ril_nw_data_collector_Param* diag_ril_nw_data_collector_Params, uint32_t dc_event, uint64_t counterFilter, uint64_t dataFilter, uint64_t eventFilter);
++bool isClientAllowDataUpdate(int data, uint64_t dataMask);
++bool isClientAllowEventUpdate(int data, uint64_t dataMask);
++
++uint64_t counterFilterMask;
++uint64_t eventFilterMask;
++uint64_t dataFilterMask;
++int32_t filterConfigError;
+ #endif
+\ No newline at end of file
+diff --git a/qcril/qcril_qmi/qcril_qmi_nas.c b/qcril/qcril_qmi/qcril_qmi_nas.c
+index 7385343..f11c1dd 100755
+--- a/qcril/qcril_qmi/qcril_qmi_nas.c
++++ b/qcril/qcril_qmi/qcril_qmi_nas.c
+@@ -837,6 +837,9 @@ int8 is_data_collector_available =1;
+ uint8_t dataCollectorEvents = -1;
+ int8 service_state_cache = -1;
+ int dc_rsrp_cache = -1;
++uint64_t counter_FilterMask;
++uint64_t data_FilterMask;
++uint64_t event_FilterMask;
+ qmi_ril_nw_data_collector_Param qmi_ril_nw_data_collector_Params;
+ 
+ typedef struct
+@@ -3966,6 +3969,18 @@ void qcril_qmi_nas_init()
+     qcril_qmi_nas_update_sim_mcc_mnc(FALSE, NULL, NULL);
+     qcril_qmi_nas_check_for_hardware_update(FALSE);
+ 
++    char dcMask[PROPERTY_VALUE_MAX];
++    property_get(PROP_DATA_COLLECTOR_EVENT_MASK,dcMask,"63"); //63 as default value at Out of Box. NE1 to NE6 will be sent
++    event_FilterMask = atoll(dcMask);
++
++    bzero(dcMask,PROPERTY_VALUE_MAX);
++    property_get(PROP_DATA_COLLECTOR_DATA_MASK,dcMask,"4294967295"); // All data will be sent
++    data_FilterMask = atoll(dcMask);
++
++    bzero(dcMask,PROPERTY_VALUE_MAX);
++    property_get(PROP_DATA_COLLECTOR_COUNTER_MASK,dcMask,"4294967295"); // All data will be sent
++    counter_FilterMask = atoll(dcMask);
++
+     QCRIL_LOG_FUNC_RETURN();
+ 
+ } // qcril_qmi_nas_init
+@@ -43981,14 +43996,16 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+     nas_get_cell_location_info_resp_msg_v01 get_cell_info_resp;
+     imsa_get_registration_status_resp_msg_v01 get_ims_reg_resp;
+     uint16_t           qmi_request_mask = NAS_NIL;
++    int **in_dc_event;
++    uint32_t dc_event;
++    uint32_t filterDuplex[2];
+     nas_get_signal_strength_req_msg_v01 get_signal_strength_req;
+     nas_get_signal_strength_resp_msg_v01  * get_signal_strength_resp = NULL;
+     nas_get_serving_system_resp_msg_v01 * qmi_serving_system_response = NULL;
+     qmi_client_error_type qmi_client_error;
+     nas_get_sig_info_resp_msg_v01 qmi_response_sig_info;
+     RIL_Errno ril_req_res = RIL_E_SUCCESS;
+-     imsa_get_rtp_statistics_resp_msg_v01 rtp_statistics_response_msg;
+-
++    imsa_get_rtp_statistics_resp_msg_v01 rtp_statistics_response_msg;
+ 
+     QCRIL_LOG_FUNC_ENTRY();
+     instance_id = QCRIL_DEFAULT_INSTANCE_ID;
+@@ -43996,7 +44013,45 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+ 
+     memset(&get_cell_info_resp, 0, sizeof(get_cell_info_resp));
+     memset(&get_ims_reg_resp, 0, sizeof(get_ims_reg_resp));
+-    if( E_SUCCESS !=
++
++    in_dc_event = (int **)(params_ptr->data);
++    dc_event = (int *) in_dc_event[0];
++    QCRIL_LOG_INFO("DC Event is %d, existing filters: counterFilterMask %llu, dataFilterMask %llu, eventFilterMask %llu",
++            dc_event, counter_FilterMask, data_FilterMask, event_FilterMask);
++    if(DC_FILTER_CONFIG_EVENT_INTERNAL == dc_event) {
++        uint64_t new_eventFilterMask;
++        uint64_t new_dataFilterMask;
++        uint64_t new_counterFilterMask;
++        filterDuplex[0] = in_dc_event[1]; //Least significant 32 bits
++        filterDuplex[1] = in_dc_event[2]; //MSB
++        new_counterFilterMask = ((uint64_t) filterDuplex[1] << 32) | filterDuplex[0];
++
++        filterDuplex[0] = in_dc_event[3]; //Least significant 32 bits
++        filterDuplex[1] = in_dc_event[4]; //MSB
++        new_dataFilterMask = ((uint64_t) filterDuplex[1] << 32) | filterDuplex[0];
++
++        filterDuplex[0] = in_dc_event[5]; //Least significant 32 bits
++        filterDuplex[1] = in_dc_event[6]; //MSB
++        new_eventFilterMask = ((uint64_t) filterDuplex[1] << 32) | filterDuplex[0];
++        QCRIL_LOG_INFO("New counterFilterMask %llu, dataFilterMask %llu, eventFilterMask %llu", new_counterFilterMask, new_dataFilterMask, new_eventFilterMask);
++        qcril_diag_nas_get_nw_data_collector_params_req(&qmi_ril_nw_data_collector_Params, dc_event, new_counterFilterMask, new_dataFilterMask, new_eventFilterMask);
++        QCRIL_LOG_INFO("FilterApplyError: %d", qmi_ril_nw_data_collector_Params.filterConfigError);
++        if (qmi_ril_nw_data_collector_Params.filterConfigError == 0) {
++            //Filter apply success, update cache values.
++            counter_FilterMask = new_counterFilterMask;
++            data_FilterMask = new_dataFilterMask;
++            event_FilterMask = new_eventFilterMask;
++        }
++        /* Send the response to UI */
++        qcril_qmi_nas_send_request_reponse(instance_id, params_ptr->t, params_ptr->event_id,
++                RIL_E_SUCCESS, (void *)&(qmi_ril_nw_data_collector_Params.filterConfigError), sizeof(qmi_ril_nw_data_collector_Params.filterConfigError));
++        QCRIL_LOG_FUNC_RETURN();
++        return;
++    }
++
++    if (isClientAllowDataUpdate(DATA_CODE_RI15, data_FilterMask) || isClientAllowDataUpdate(DATA_CODE_RI13, data_FilterMask) ||
++           isClientAllowDataUpdate(DATA_CODE_RI7, data_FilterMask)) {
++      if(E_SUCCESS !=
+          qmi_client_send_msg_sync_with_shm(qcril_qmi_client_get_user_handle( QCRIL_QMI_CLIENT_NAS ),
+                                              QMI_NAS_GET_CELL_LOCATION_INFO_REQ_MSG_V01, /* msg_id */
+                                              NULL,                                         /* *req_c_struct */
+@@ -44004,12 +44059,10 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+                                              &get_cell_info_resp,                    /* *resp_c_struct */
+                                              sizeof(get_cell_info_resp),              /* resp_c_struct_len */
+                                              QCRIL_QMI_SYNC_REQ_UNRESTRICTED_TIMEOUT
+-                                            ) )
+-   { /* error occurred during sending a message */
++                                            ) ) { /* error occurred during sending a message */
+         QCRIL_LOG_ERROR(" qcril_qmi_client_send_msg_sync returned erro for CELL_LOCATION");
+-   }
+-   else
+-    { /* message sending was successful and got the response */
++      } else {
++        /* message sending was successful and got the response */
+         /* check for standard response */
+         if(QMI_RESULT_SUCCESS_V01 != get_cell_info_resp.resp.result)
+         {
+@@ -44087,7 +44140,11 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+                 is_data_collector_available = 1;
+             }
+         }
++      }
+     }
++
++  if (isClientAllowDataUpdate(DATA_CODE_VI1, data_FilterMask) || isClientAllowDataUpdate(DATA_CODE_RI6, data_FilterMask)
++      || isClientAllowDataUpdate(DATA_CODE_RI14, data_FilterMask)) {
+     if( E_SUCCESS !=
+          qmi_client_send_msg_sync_with_shm(qcril_qmi_client_get_user_handle( QCRIL_QMI_CLIENT_IMSA ),
+                                              QMI_IMSA_GET_REGISTRATION_STATUS_REQ_V01, /* msg_id */
+@@ -44122,8 +44179,11 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+                is_data_collector_available = 1;
+            }
+        }
+-   }
++    }
++  }
+ 
++  if (isClientAllowDataUpdate(DATA_CODE_RI1, data_FilterMask) || isClientAllowDataUpdate(DATA_CODE_RI2, data_FilterMask)
++     || isClientAllowDataUpdate(DATA_CODE_RI3, data_FilterMask)) {
+    memset( &qmi_response_sig_info, 0, sizeof( qmi_response_sig_info ) );
+    qmi_client_error = qmi_client_send_msg_sync_with_shm( qcril_qmi_client_get_user_handle( QCRIL_QMI_CLIENT_NAS ),
+                                                                                                                       QMI_NAS_GET_SIG_INFO_REQ_MSG_V01,
+@@ -44153,9 +44213,10 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+        QCRIL_LOG_ERROR("get QMI_NAS_GET_SIG_INFO_REQ_MSG_V01 status error %d", ril_req_res);
+        dc_rsrp_cache = -1;
+    }
++  }
+ 
+     qmi_serving_system_response = qcril_malloc( sizeof( *qmi_serving_system_response ) );
+-    if ( qmi_serving_system_response )
++    if ((isClientAllowDataUpdate(DATA_CODE_RI8, data_FilterMask) || isClientAllowDataUpdate(DATA_CODE_NI1, data_FilterMask)) && qmi_serving_system_response )
+     {
+ 
+         qmi_client_error = qmi_client_send_msg_sync_with_shm( qcril_qmi_client_get_user_handle ( QCRIL_QMI_CLIENT_NAS ),
+@@ -44186,9 +44247,10 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+         }
+         qcril_free( qmi_serving_system_response );
+      }else {
+-            QCRIL_LOG_ERROR("malloc failed for QMI_NAS_GET_SERVING_SYSTEM_REQ_MSG_V01");
++            QCRIL_LOG_ERROR("RI8 and NI1 both are disabled or malloc failed for QMI_NAS_GET_SERVING_SYSTEM_REQ_MSG_V01");
+      }
+ 
++   if (isClientAllowDataUpdate(DATA_CODE_RI6, data_FilterMask)) {
+      NAS_CACHE_LOCK();
+      if(nas_cached_info.lte_sys_info_valid && nas_cached_info.lte_sys_info->lte_specific_sys_info.tac_valid) {
+          //copy tac value.
+@@ -44225,15 +44287,16 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+            /* successful */
+                QCRIL_LOG_INFO("calling QMI_IMSA_GET_RTP_STATISTICS_REQ_V01 successful");
+        }
++     }
+    }
+ 
+-
+-   nas_get_tx_rx_info_req_msg_v01 tx_rx_req;
+-   nas_get_tx_rx_info_resp_msg_v01 tx_rx_resp;
+-   memset( &tx_rx_req, 0, sizeof(tx_rx_req) );
+-   memset( &tx_rx_resp, 0, sizeof(tx_rx_resp) );
+-   tx_rx_req.radio_if = NAS_RADIO_IF_LTE_V01;
+-   if( E_SUCCESS !=
++   if (isClientAllowDataUpdate(DATA_CODE_RI14, data_FilterMask)) {
++     nas_get_tx_rx_info_req_msg_v01 tx_rx_req;
++     nas_get_tx_rx_info_resp_msg_v01 tx_rx_resp;
++     memset( &tx_rx_req, 0, sizeof(tx_rx_req) );
++     memset( &tx_rx_resp, 0, sizeof(tx_rx_resp) );
++     tx_rx_req.radio_if = NAS_RADIO_IF_LTE_V01;
++     if( E_SUCCESS !=
+         qmi_client_send_msg_sync_with_shm(qcril_qmi_client_get_user_handle( QCRIL_QMI_CLIENT_NAS ),
+                                             QMI_NAS_GET_TX_RX_INFO_REQ_MSG_V01, /* msg_id */
+                                             &tx_rx_req,                                         /* *req_c_struct */
+@@ -44242,11 +44305,11 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+                                             sizeof(tx_rx_resp),              /* resp_c_struct_len */
+                                             QCRIL_QMI_SYNC_REQ_UNRESTRICTED_TIMEOUT
+                                             ) )
+-   { /* error occurred during sending a message */
++     { /* error occurred during sending a message */
+         QCRIL_LOG_INFO(" qcril_qmi_client_send_msg_sync returned erro for Tx Power");
+-   }
+-   else
+-   {
++     }
++     else
++     {
+         QCRIL_LOG_INFO(" get QMI_NAS_GET_TX_RX_INFO_REQ_MSG_V01 status result %d tx_rx_resp.tx.is_in_traffic %d  tx_rx_resp.tx_valid %d ", tx_rx_resp.resp.result,tx_rx_resp.tx.is_in_traffic,tx_rx_resp.tx_valid);
+        /* message sending was successful and got the response */
+        /* check for standard response */
+@@ -44258,34 +44321,16 @@ void qcril_qmi_nas_get_nw_data_collector_params_req
+        else
+        {
+ 
+-           qmi_ril_nw_data_collector_Params.tx_power = (tx_rx_resp.tx.tx_pwr/10.0) > 0 ? (0.5 + tx_rx_resp.tx.tx_pwr/10.0) : (-0.5 + tx_rx_resp.tx.tx_pwr/10.0);
++           qmi_ril_nw_data_collector_Params.tx_power = (tx_rx_resp.tx.tx_pwr/10.0 > 0.0) ? (0.5 + tx_rx_resp.tx.tx_pwr/10.0) : (-0.5 + tx_rx_resp.tx.tx_pwr/10.0);
+            QCRIL_LOG_INFO(" get QMI_NAS_GET_TX_RX_INFO_REQ_MSG_V01 successful tx_power = %d ", qmi_ril_nw_data_collector_Params.tx_power);
+        }
++     }
+    }
+ 
+-    qcril_diag_nas_get_nw_data_collector_params_req(&qmi_ril_nw_data_collector_Params );
+-    QCRIL_LOG_INFO(" cqi value after %d", qmi_ril_nw_data_collector_Params.cqi);
+-    QCRIL_LOG_INFO(" rankIndicator value after %d", qmi_ril_nw_data_collector_Params.rankIndicator);
+-    QCRIL_LOG_INFO(" rrc_conn_cause value after %d", qmi_ril_nw_data_collector_Params.rrc_conn_cause);
+-    QCRIL_LOG_INFO(" rrc_rel_cause value after %d", qmi_ril_nw_data_collector_Params.rrc_rel_cause);
+-    QCRIL_LOG_INFO(" prach_tx_power value after %d", qmi_ril_nw_data_collector_Params.prach_tx_power);
+-    QCRIL_LOG_INFO(" rtp_packet_loss value after %d", qmi_ril_nw_data_collector_Params.rtp_packet_loss);
+-    QCRIL_LOG_INFO(" total_rtp_loss value after %d", qmi_ril_nw_data_collector_Params.total_rtp_loss);
+-    QCRIL_LOG_INFO(" tac_fail_cause value after %d", qmi_ril_nw_data_collector_Params.tac_fail_cause);
+-    QCRIL_LOG_INFO(" number_of_attach value after %d", qmi_ril_nw_data_collector_Params.number_of_attach);
+-    QCRIL_LOG_INFO(" number_of_attach_fail value after %d", qmi_ril_nw_data_collector_Params.number_of_attach_fail);
+-    QCRIL_LOG_INFO(" number_of_detach value after %d", qmi_ril_nw_data_collector_Params.number_of_detach);
+-
+-    QCRIL_LOG_INFO(" bearer_type value after %d", qmi_ril_nw_data_collector_Params.bearer_type);
+-    QCRIL_LOG_INFO(" qci value after %d", qmi_ril_nw_data_collector_Params.qci);
+-    QCRIL_LOG_INFO(" ambr_ul value after %d", qmi_ril_nw_data_collector_Params.ambr_ul);
+-    QCRIL_LOG_INFO(" ambr_dl value after %d", qmi_ril_nw_data_collector_Params.ambr_dl);
+-    QCRIL_LOG_INFO(" gbr_ul value after %d", qmi_ril_nw_data_collector_Params.gbr_ul);
+-    QCRIL_LOG_INFO(" gbr_dl value after %d", qmi_ril_nw_data_collector_Params.gbr_dl);
+-    QCRIL_LOG_INFO(" bler value after %d", qmi_ril_nw_data_collector_Params.bler);
+-    QCRIL_LOG_INFO(" rstd0 value after %d", qmi_ril_nw_data_collector_Params.rstd0);
+-    QCRIL_LOG_INFO(" rstd1 value after %d", qmi_ril_nw_data_collector_Params.rstd1);
+-    QCRIL_LOG_INFO(" rstd2 value after %d", qmi_ril_nw_data_collector_Params.rstd2);
++    qcril_diag_nas_get_nw_data_collector_params_req(&qmi_ril_nw_data_collector_Params, dc_event, counter_FilterMask, data_FilterMask, event_FilterMask);
++    QCRIL_LOG_INFO(" cqi value %d, rankIndicator %d, rrc_conn_cause %d, prach_tx_power %d, number_of_attach %d, number_of_detach %d ",
++            qmi_ril_nw_data_collector_Params.cqi, qmi_ril_nw_data_collector_Params.rankIndicator, qmi_ril_nw_data_collector_Params.rrc_conn_cause,
++            qmi_ril_nw_data_collector_Params.prach_tx_power, qmi_ril_nw_data_collector_Params.number_of_attach,qmi_ril_nw_data_collector_Params.number_of_detach);
+ 
+    /* Send the response to UI */
+    qcril_qmi_nas_send_request_reponse(instance_id, params_ptr->t, params_ptr->event_id,
+diff --git a/qcril/qcril_qmi/qcrili.h b/qcril/qcril_qmi/qcrili.h
+index fe1a361..a0a63b6 100755
+--- a/qcril/qcril_qmi/qcrili.h
++++ b/qcril/qcril_qmi/qcrili.h
+@@ -1076,35 +1076,66 @@ typedef struct {
+ } RIL_SubProvStatus;
+ 
+ typedef enum  {
+-    DATA_COLLECTOR_EVENT_CALL_TRIGGERED = 1,
+-    DATA_COLLECTOR_EVENT_CALL_ATTEMPT_FAILED,
+-    DATA_COLLECTOR_EVENT_CALL_ESTABLISHED,
+-    DATA_COLLECTOR_EVENT_CALL_DISCONNECT,
+-    DATA_COLLECTOR_EVENT_CALL_DROP,
+-    DATA_COLLECTOR_EVENT_CALL_MUTING,
+-    DATA_COLLECTOR_EVENT_SMS_SENT,
+-    DATA_COLLECTOR_EVENT_SMS_RECIVED,
+-    DATA_COLLECTOR_EVENT_VOLTE_REGISTRATION_EVENT,
+-    DATA_COLLECTOR_EVENT_VOLTE_CONNECTION_LOST,
+-    DATA_COLLECTOR_EVENT_AUTO_COLLECTOR_EVENT,
+-    DATA_COLLECTOR_EVENT_OUT_OF_SERVICE,
+-    DATA_COLLECTOR_EVENT_IN_SERVICE,
+-    DATA_COLLECTOR_EVENT_ATTACH_FAILURE,
+-    DATA_COLLECTOR_EVENT_TAC_UPDATE,
+-    DATA_COLLECTOR_EVENT_RSRP_LESS_THAN_110_DBM,
+-    DATA_COLLECTOR_EVENT_RRC_CONNECTION_RELEASE,
+-    DATA_COLLECTOR_EVENT_RRC_CONNECTION_FAILURE,
+-    DATA_COLLECTOR_EVENT_RADIO_LINK_FAILURE,
+-    DATA_COLLECTOR_EVENT_INTRA_FREQUENCY_HANDOVER,
+-    DATA_COLLECTOR_EVENT_INTER_FREQUENCY_HANDOVER,
+-    DATA_COLLECTOR_EVENT_INTER_BAND_HANDOVER,
+-    DATA_COLLECTOR_EVENT_CELL_RESELECTION,
+-    DATA_COLLECTOR_EVENT_RACH_FAILURE,
+-    DATA_COLLECTOR_EVENT_DATA_PAUSE_OR_RECOVERABLE_DATA_STALL,
+-    DATA_COLLECTOR_EVENT_NON_RECOVERABLE_DATA_STALL,
+-    DATA_COLLECTOR_EVENT_INCOMING_CALL
++    DATA_COLLECTOR_EVENT_CALL_TRIGGERED = 1, //NE1
++    DATA_COLLECTOR_EVENT_CALL_ATTEMPT_FAILED, //NE2
++    DATA_COLLECTOR_EVENT_CALL_ESTABLISHED, //NE3
++    DATA_COLLECTOR_EVENT_CALL_DISCONNECT, //NE4
++    DATA_COLLECTOR_EVENT_CALL_DROP, //NE5
++    DATA_COLLECTOR_EVENT_CALL_MUTING, //NE6
++    DATA_COLLECTOR_EVENT_SMS_SENT, //NE7
++    DATA_COLLECTOR_EVENT_SMS_RECIVED, //NE8
++    DATA_COLLECTOR_EVENT_VOLTE_REGISTRATION_EVENT, //NE9
++    DATA_COLLECTOR_EVENT_VOLTE_CONNECTION_LOST, //NE10
++    DATA_COLLECTOR_EVENT_AUTO_COLLECTOR_EVENT, //NE11
++    DATA_COLLECTOR_EVENT_OUT_OF_SERVICE, //NE12
++    DATA_COLLECTOR_EVENT_IN_SERVICE, //NE13
++    DATA_COLLECTOR_EVENT_ATTACH_FAILURE, //NE14
++    DATA_COLLECTOR_EVENT_TAC_UPDATE, //NE15
++    DATA_COLLECTOR_EVENT_RSRP_LESS_THAN_110_DBM, //NE16
++    DATA_COLLECTOR_EVENT_RRC_CONNECTION_RELEASE, //NE17
++    DATA_COLLECTOR_EVENT_RRC_CONNECTION_FAILURE, //NE18
++    DATA_COLLECTOR_EVENT_RADIO_LINK_FAILURE, //NE19
++    DATA_COLLECTOR_EVENT_INTRA_FREQUENCY_HANDOVER, //NE20
++    DATA_COLLECTOR_EVENT_INTER_FREQUENCY_HANDOVER, //NE21
++    DATA_COLLECTOR_EVENT_INTER_BAND_HANDOVER, //NE22
++    DATA_COLLECTOR_EVENT_CELL_RESELECTION, //NE23
++    DATA_COLLECTOR_EVENT_RACH_FAILURE, //NE24
++    DATA_COLLECTOR_EVENT_DATA_PAUSE_OR_RECOVERABLE_DATA_STALL, //NE25
++    DATA_COLLECTOR_EVENT_NON_RECOVERABLE_DATA_STALL, //NE26
++    DATA_COLLECTOR_EVENT_INCOMING_CALL //NE27 - Internal use
+ }Data_Collector_Event_e_type;
+ 
++enum DataCollectorDataCodes {
++    DATA_CODE_LI4 = 0, //PCI
++    DATA_CODE_RI1,    //RSRP
++    DATA_CODE_RI2,    //RSRQ
++    DATA_CODE_RI3,    //SINR
++    DATA_CODE_RI4,    //CQI
++    DATA_CODE_RI5,    //Rank Indicator
++    DATA_CODE_RI6,    //Band Indication
++    DATA_CODE_RI7,    //EARFCN
++    DATA_CODE_RI8,    //Service Indication
++    DATA_CODE_RI9,    //RRC Connection cause
++    DATA_CODE_RI10,    //RRC Release cause
++    DATA_CODE_RI11,    //RACH Max Power
++    DATA_CODE_RI12,    //BLER
++    DATA_CODE_RI13,    //TA
++    DATA_CODE_RI14,    //Tx Power
++    DATA_CODE_RI15,    //Neighbor cell info.
++    DATA_CODE_NI1,    //Roaming state
++    DATA_CODE_NI2,    //ATTACH fail causes
++    DATA_CODE_NI3,    //TAC update failures
++    DATA_CODE_NI4,    //EPS Details
++    DATA_CODE_OI1,    //OTDOA
++    DATA_CODE_VI1,    //SIP registration Status
++    DATA_CODE_VI2,    //SIP Session End (reason)
++    DATA_CODE_VI3,    //Mute related parameters
++    DATA_CODE_VI4,    //RTP Packet Loss
++    DATA_CODE_VI5,    //Jitter Loss
++    DATA_CODE_HI1,    //Rx bytes
++    DATA_CODE_HI2    //Tx bytes
++};
++
+ typedef struct
+ {
+     int32_t pci;
+@@ -1146,8 +1177,15 @@ typedef struct
+     int32_t cells[12][3]; //Twelve set of neighbor cells each cell contains {pci, rsrp, rsrq}
+     int32_t number_of_cells;
+     int32_t mute[4]; //Array of numbers for extra short, short, medium and long muting events Ex: {5,2,4,0}
++    int32_t filterConfigError;
+ }qmi_ril_nw_data_collector_Param;
+ 
++#define PROP_DATA_COLLECTOR_COUNTER_MASK "persist.radio.dc.countermask"
++#define PROP_DATA_COLLECTOR_EVENT_MASK "persist.radio.dc.eventmask"
++#define PROP_DATA_COLLECTOR_DATA_MASK "persist.radio.dc.datamask"
++
++#define DC_FILTER_CONFIG_EVENT_INTERNAL 101
++
+ #ifndef RIL_REQUEST_SET_RADIO_CAPABILITY
+ #define RIL_REQUEST_SET_RADIO_CAPABILITY 10117
+ #endif
+-- 
+1.9.1
+
