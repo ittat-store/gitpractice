@@ -1,10 +1,11 @@
 #include<stdio.h>
 main()
 {
-int a=1
+int a=1;
 switch(a)
 {
-case a: printf("hi");
-default:printf(......);
+case 1:printf("hi\n");
+       break;
+default:printf("......\n");
 }
 }
