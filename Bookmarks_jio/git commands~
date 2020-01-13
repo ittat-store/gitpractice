@@ -4,11 +4,24 @@ ssh-keygen -t rsa
 cd .ssh/
 ls
 cat id_rsa.pub
+...........................................................
+
+alt+tab .....for window tab switching
+......................................................................................................
 
 git clone ssh://ID@IP/~/workspace/path ( id,ip,path of system where u cloning) -b branch_name
+......................................................................................................
 
 git log --oneline -10 ..................to see the last 10 commits
 
 git log --oneline |grep stringname .....................to search a particular string in commits
 
 git show commitid ...........................to see the particular commitid changes
+..............................................................................................
+
+git am --show-current-patch ................. to show the current patchs
+...............................................................................
+
+git format-patch HEAD -1 ...... for patch creating
+
+git am -s patch-name .......... for patchapplying
