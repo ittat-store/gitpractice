@@ -9,21 +9,15 @@ https://www.tutorialspoint.com/android/android_sip_protocol.htm.................
 
 https://miketaylr.com/posts/2018/09/notable-moments-in-firefox-for-android-ua-string-history.html..................(imp user-agent)
 
+https://forum.xda-developers.com/showthread.php?t=2620389 ............................ for android directory structure
 
+https://opensourceforu.com/2011/02/linux-character-drivers/ ........................... for device drivers by opensource
 
-chegukee@VTLW041L:~/workspace/f120b/msm8905/LINUX/android$ grep -nr "general.useragent.device_string"
-device/qcom/msm8909_512/default-prefs/dev-pref.js:10:pref("general.useragent.device_string", "LYF/F120B/LYF-F120B-001-02-42-070120-i;Android");
-out/target/product/msm8909_512/obj/PACKAGING/target_files_intermediates/msm8909_512-target_files-eng.chegukee/SYSTEM/b2g/defaults/pref/dev-pref.js:10:pref("general.useragent.device_string", "LYF/F120B/LYF-F120B-001-02-42-070120-i;Android");
-Binary file out/target/product/msm8909_512/obj/PACKAGING/target_files_intermediates/msm8909_512-target_files-eng.chegukee/SYSTEM/b2g/libxul.so matches
-Binary file out/target/product/msm8909_512/obj/PACKAGING/systemimage_intermediates/system.img matches
-Binary file out/target/product/msm8909_512/obj/objdir-gecko/dist/lib/libxul.so matches
-Binary file out/target/product/msm8909_512/obj/lib/libxul.so matches
-out/target/product/msm8909_512/system/b2g/defaults/pref/dev-pref.js:10:pref("general.useragent.device_string", "LYF/F120B/LYF-F120B-001-02-42-070120-i;Android");
-Binary file out/target/product/msm8909_512/system/b2g/libxul.so matches
-Binary file objdir-gecko/dist/lib/libxul.so matches
-vendor/bluebank/build/set_version.sh:23:sed '/^pref(\"general.useragent.device_string/d' -i  device/qcom/msm8909_512/default-prefs/dev-pref.js
-vendor/bluebank/build/set_version.sh:26:#sed '/^pref(\"general.useragent.device_string/d' -i  device/qcom/b2g_common/gaia_settings/distribution/partner-prefs.js
-vendor/bluebank/build/set_version.sh:56:echo "pref(\"general.useragent.device_string\", \"$TARGET_PRODUCT_BRAND/$TARGET_PRODUCT_MODEL/$TARGET_BUILD_VERSION;Android\");" >> device/qcom/msm8909_512/default-prefs/dev-pref.js
-vendor/bluebank/build/set_version.sh:58:#echo "pref(\"general.useragent.device_string\", \"$TARGET_PRODUCT_BRAND/$TARGET_PRODUCT_MODEL/$TARGET_BUILD_VERSION\");" >> device/qcom/b2g_common/gaia_settings/distribution/partner-prefs.js
-chegukee@VTLW041L:~/workspace/f120b/msm8905/LINUX/android$ 
+https://source.android.com/devices/architecture/kernel/releases ..................... for android kernel releases and updates,security.
+
+https://www.geeksforgeeks.org/application-manifest-file-android/ ....................... for android manifest.xml file
+
+http://hackers4hackers.blogspot.com/2013/11/ram-dump-linux-system.html
+https://stackoverflow.com/questions/46148905/how-are-ramdumps-generated-on-a-system-crash  .................... for ram dump 
+
 

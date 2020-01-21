@@ -1,0 +1,15 @@
+About RAM DUMP:
+
+Used for forensic analysis of a crashed or freeze kernel/system.
+As the name points, its the dumping of complete ram contents for further investigation.
+
+During booting, boot-loader has to decide whether it has to enter in to ramdump mode or to boot linux normally. This is done by monitoring a magic value in any predefined location(typically SRAM register or any other, value should persists across reboot or reset). There are two magic numbers for example 0x12345678(for crash scenario) and  0x87654321(for freeze scenario). If the SRAM register is having any of the two magic number, the booloader will enter into ramdump mode and wait for the host side application to initiate upload. And if SRAM is not having any of these magic numbers, the bootloader will proceed with normal booting.
+
+During a crash
+------------------
+ Panic notifier registered from the ramdump driver will be called by kernel. Ramdump driver has to do few things.
+  a) Invoke cache sycn api to make sure all the content the ram is coherent.(flush_cache_all(),    outer_flush_all())
+  b) save core registers to ram
+  c) save MMU registers
+  d) write MAGIC_CRASH to SRAM regiter.
+ Then do a reboot. Now boot-loader finds the MAGIC_CRASH in SRAM register and goes to ramdump mode.
