@@ -1,0 +1,1248 @@
+--------- beginning of system
+01-08 02:28:38.369 I/vold    (  214): Vold 3.0 (the awakening) firing up
+01-08 02:28:38.379 V/vold    (  214): Detected support for: ext4 vfat
+01-08 02:28:40.659 I/irsc_util(  309): Starting irsc tool
+01-08 02:28:40.719 I/irsc_util(  309): Num of entries:284
+--------- beginning of radio
+01-08 02:28:40.759 D/RILD    (  297): **RIL Daemon Started**
+01-08 02:28:40.759 D/RILD    (  297): **RILd param count=1**
+01-08 02:28:40.789 I/irsc_util(  309): Ending irsc tool
+01-08 02:28:43.599 D/RILD    (  297): RIL_Init argc = 5 clientId = 0
+01-08 02:28:43.599 E/RILQ    (  297): log to /data/misc/radio/ril_log for QCRIL logging is not enabled
+01-08 02:28:44.069 I/RILQ    (  297): (0/297):RIL[0][rild] qmi_ril_qmi_client_pre_initialization_acquire: entry
+01-08 02:28:44.069 I/RILQ    (  297): (0/297):RIL[0][rild] qmi_ril_qmi_client_pre_initialization_acquire: exit
+01-08 02:28:44.079 W/RILC    (  297): RIL_onUnsolicitedResponse called before RIL_register
+01-08 02:28:44.079 D/RILD    (  297): RIL_Init rilInit completed
+01-08 02:28:44.079 I/RILC    (  297): SIM_COUNT: 1
+01-08 02:28:44.079 E/RILC    (  297): RIL_register: RIL version 12
+01-08 02:28:44.079 I/RILC    (  297): s_registerCalled flag set, 1
+01-08 02:28:44.079 I/RILC    (  297): Start to listen RIL_SOCKET_1
+01-08 02:28:44.079 D/RILD    (  297): RIL_Init RIL_register completed
+01-08 02:28:44.079 D/RILD    (  297): RIL_register_socket started
+01-08 02:28:44.079 D/RIL_UIM_SOCKET(  297): Adding socket with id: 0
+01-08 02:28:44.079 D/RILD    (  297): RIL_register_socket completed
+01-08 02:28:44.079 D/RILD    (  297): RIL_Init starting sleep loop
+01-08 02:28:48.129 I/RILQ    (  297): (0/297):RIL[0][main] qmi_ril_qmi_client_pre_initialization_release: entry
+01-08 02:28:48.129 I/RILQ    (  297): (0/297):RIL[0][main] qmi_ril_qmi_client_pre_initialization_release: exit
+01-08 02:28:48.219 E/RILQ    (  297): (0/297): RIL[0][main] qcril_qmi_nas_init: QCRIL_OPERATOR_NAME is persist.env.spec,  property_name is persist.env.spec. Failed to get operator name
+01-08 02:28:48.289 E/RILQ    (  297): (0/297): RIL[0][main] qcril_qmi_nas_retrieve_custom_emergency_numbers_configured_value: Invalid value for properties count 0
+01-08 02:28:48.349 I/        (  297): qmi_client_init succeeds for PDC
+01-08 02:28:48.349 I/        (  297): succeed to get config_list
+01-08 02:28:48.349 E/        (  297): QMI error, error code: 16
+01-08 02:28:48.349 E/Diag_Lib(  297): failed to get current config for SUB 1
+01-08 02:28:48.349 E/        (  297): QMI error, error code: 16
+01-08 02:28:48.349 E/Diag_Lib(  297): failed to get current config for SUB 2
+01-08 02:28:48.359 I/Diag_Lib(  297): current MBNs in modem EFS:
+01-08 02:28:48.359 I/Diag_Lib(  297):  0: config_id: Kðt'öÕàÇ¾¦ØÃÞyjUüˆ
+01-08 02:28:48.359 I/Diag_Lib(  297):     config_desc: ROW_Generic_3GPP
+01-08 02:28:48.359 I/Diag_Lib(  297):     config_version: 0x501081f
+01-08 02:28:48.359 I/Diag_Lib(  297):  1: config_id: OTA_/data/misc/radio/modem_config/reliance.mbn221:834136
+01-08 02:28:48.359 I/Diag_Lib(  297):     config_desc: Reliance_OpnMkt
+01-08 02:28:48.359 I/Diag_Lib(  297):     config_version: 0x5011b63
+01-08 02:28:48.359 I/Diag_Lib(  297):     This config is activated with SUBs:
+01-08 02:28:48.359 I/Diag_Lib(  297):     SUB0
+01-08 02:28:48.359 I/Diag_Lib(  297): Processing MBN file: /data/misc/radio/modem_config/reliance.mbn
+01-08 02:28:48.359 I/        (  297): file name: /data/misc/radio/modem_config/reliance.mbn
+01-08 02:28:48.359 I/        (  297): type_id: 0
+01-08 02:28:48.359 I/        (  297): type_id: 1
+01-08 02:28:48.359 I/Diag_Lib(  297): This MBN is no need to update
+01-08 02:28:48.359 I/Diag_Lib(  297): Processing MBN file: /data/misc/radio/modem_config/row.mbn
+01-08 02:28:48.359 I/        (  297): file name: /data/misc/radio/modem_config/row.mbn
+01-08 02:28:48.359 I/        (  297): type_id: 0
+01-08 02:28:48.359 I/        (  297): type_id: 1
+01-08 02:28:48.359 I/Diag_Lib(  297): This MBN is no need to update
+01-08 02:28:48.379 E/RILQ    (  297): (0/297): RIL[0][main] qcril_uim_find_modem_port: Property value does not match, using default port
+01-08 02:28:48.379 E/RILQ    (  297): (0/297): RIL[0][main] qcril_uim_find_modem_port: Property value does not match, using default port
+01-08 02:28:48.389 E/RILQ    (  297): (0/297): RIL[0][main] qcril_gstk_find_primary_modem_port: Property value does not match, using default port
+01-08 02:28:48.479 I/RILQ    (  297): (0/297):RIL[0][main] qcril_arb_set_dsd_sys_status: old_pref_data 0 - new_data_pref 0
+01-08 02:28:48.479 I/RILQ    (  297): (0/297):RIL[0][main] qcril_arb_set_dsd_sys_status: preferred dsd_sys_status nw=0x0, rat_value=0x0, so_mask=0x0000000000000000
+01-08 02:28:48.479 I/RILQ    (  297): (0/297):RIL[0][main] qcril_arb_set_dsd_sys_status: preferred 1 - dsd_sys_status nw=0x0, rat_value=0x0, so_mask=0x0000000000000000
+01-08 02:28:48.479 I/RILQ    (  297): (0/297):RIL[0][main] qcril_arb_set_dsd_sys_status: is_wwan_available 0
+01-08 02:28:48.479 I/RILQ    (  297): (0/297):RIL[0][main] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:28:48.519 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 0
+01-08 02:28:48.519 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:28:48.529 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:28:48.529 E/RILQ    (  297): (0/297): RIL[0][event] qcril_qmi_imss_command_cb_helper: Req ID: 0 not found
+01-08 02:28:48.529 E/RILQ    (  297): (0/297): RIL[0][event] qcril_uim_update_pbm_card_event: PBM_HANDLE_CARD 397315 processing Failed!
+01-08 02:28:48.529 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 0
+01-08 02:28:48.529 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:28:48.539 E/RILQ    (  297): (0/297): RIL[0][main] qcril_sms_perform_transport_layer_info_initialization: error while retrieving transport layer reg info
+01-08 02:28:48.549 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 9
+01-08 02:28:48.549 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:28:51.059 W/RIL_MODULE(  320): Examining Gecko interfaces...
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsICellBroadcastService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIIccService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIImsRegHandler: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIImsRegService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIMobileCellInfo: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIMobileConnectionInfo: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIMobileNetworkInfo: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIMobileMessageCallback: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIMobileMessageService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsINetworkInterface: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsINetworkManager: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIRadioInterfaceLayer: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIRadioInterface: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIRilContext: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIGonkMobileMessageDatabaseCallback: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIGonkMobileMessageDatabaseService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsISystemMessagesInternal: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsISubsidyLockService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIVoicemailService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIVoicemailProvider: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsITelephonyAudioService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsITelephonyService: ok
+01-08 02:28:51.059 W/RIL_MODULE(  320):   nsIMobileConnectionService: ok
+01-08 02:28:51.059 D/NS_RADIO_INTERFACE_LAYER(  320): Starting radio interface layer
+01-08 02:28:51.109 D/NS_RADIO_INTERFACE_LAYER(  320): Num radio interfaces: 1
+01-08 02:28:51.139 D/NS_RADIO_INTERFACE_LAYER(  320): Creating new radio interface for clientId = 0
+01-08 02:28:54.319 D/RIL     (  320): [SUB0] [0000]> RIL_REQUEST_IMS_REGISTRATION_STATE
+01-08 02:28:54.319 E/RIL     (  320): RilSocket to <unknown> (0) is closed; ignoring request
+01-08 02:28:54.409 D/RIL     (  320): [SUB0] [0001]> IMS REQUEST_IMS_REGISTRATION_STATE
+01-08 02:28:54.409 E/RIL     (  320): RilSocket to <unknown> (2) is closed; ignoring request
+01-08 02:28:54.469 D/use-Rlog/RLOG-RIL(  320):  ril: NetworkDataCollector: enable check = 1 dataCollectorInitilized = 0
+01-08 02:28:54.469 E/use-Rlog/RLOG-RIL(  320):  ril: NetworkDataCollector: initialization
+01-08 02:28:54.479 D/NW_DATA_COLLECTOR(  320):  NetworkDataCollector:run  begin
+01-08 02:28:54.939 V/vold    (  214): Waiting for FUSE to spin up...
+01-08 02:28:54.989 V/vold    (  214): Waiting for FUSE to spin up...
+01-08 02:28:55.039 D/vold    (  214): Linking /storage/emulated/0 to /mnt/user/0/primary
+01-08 02:28:55.579 D/TELEPHONY_LAUNCHER(  320): Starting Telephony Launcher
+01-08 02:28:55.579 D/TELEPHONY_LAUNCHER(  320): Initializing telephony services
+01-08 02:28:55.579 D/NS_MOBILECONNECTION_SERVICE(  320): Starting mobileconnection service
+01-08 02:28:55.579 D/TELEPHONY_LAUNCHER(  320): SubsidyLockService Result: rv 0
+01-08 02:28:55.579 D/QRIL_OEM_HOOK_SERVICE(  320): [SUB0] [0002]> RIL_REQUEST_OEM_HOOK_RAW
+01-08 02:28:55.579 E/RIL     (  320): RilSocket to qmux_radio/rild_oem0 (1) is closed; ignoring request
+01-08 02:28:56.699 I/Gecko   (  320): ============ KaiOS device information ============
+01-08 02:28:56.699 I/Gecko   (  320): Build UID         = 
+01-08 02:28:56.699 I/Gecko   (  320): Build Description = msm8909_512-userdebug 6.0.1 MMB29M eng.caerus.20200116.124829 dev-keys
+01-08 02:28:56.699 I/Gecko   (  320): Bootloader        = unknown
+01-08 02:28:56.699 I/Gecko   (  320): OS Version        = KaiOS 2.5 {kaios_jio_quoin_2_5_20181106_R3_ER11}
+01-08 02:28:56.699 I/Gecko   (  320): ==================================================
+01-08 02:28:58.469 D/RIL     (  320): [SUB0] Connected to socket qmux_radio/rild_oem0
+01-08 02:28:58.469 D/RIL     (  320): [SUB0] Connected to socket rild
+01-08 02:28:58.469 I/RILC    (  297): libril: new connection to RIL_SOCKET_1
+01-08 02:28:58.469 I/RILC    (  297): RIL Daemon version: Qualcomm RIL 1.0
+01-08 02:28:58.619 D/RIL     (  320): [SUB0] [0000]< RIL_REQUEST_IMS_REGISTRATION_STATE fails by RadioNotAvailable(1)
+01-08 02:28:58.659 D/RIL     (  320): [SUB0] [0001]< RIL_REQUEST_GET_SIM_STATUS fails by RadioNotAvailable(1)
+01-08 02:28:58.659 W/use-Rlog/RLOG-IMS_PHONE(  320): Request failed 1
+01-08 02:28:58.659 D/use-Rlog/RLOG-IMS_PHONE(  320): Error handling IMS state changed: 1
+01-08 02:28:58.659 D/use-Rlog/RLOG-IMS_PHONE(  320): IMS registration state is NOT REGISTERED
+01-08 02:28:58.949 D/RIL     (  320): [SUB0] [0003]> RIL_REQUEST_REPORT_SMS_MEMORY_STATUS (1)
+01-08 02:28:59.199 D/RIL     (  320): [SUB0] [0002]< RIL_REQUEST_OEM_HOOK_RAW fails by RadioNotAvailable(1)
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RIL_CONNECTED {12}
+01-08 02:28:59.309 D/use-Rlog/RLOG-PHONE(  320): Detected RIL version 12
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [0004]> RIL_REQUEST_RADIO_POWER off
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [0005]> RIL_REQUEST_SCREEN_STATE 1
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_RADIO_STATE_CHANGED {0}
+01-08 02:28:59.309 D/use-Rlog/RLOG-PHONE(  320): Radio state is 0
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [0006]> RIL_REQUEST_GET_SIM_STATUS
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [0007]> RIL_REQUEST_DEVICE_IDENTITY
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [0008]> RIL_REQUEST_GET_RADIO_CAPABILITY
+01-08 02:28:59.309 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_OEM_HOOK_RAW {len=17,buf="514F454D484F4F4BF10308000100000000"}
+01-08 02:28:59.319 D/RIL     (  320): [SUB0] [0003]< RIL_REQUEST_REPORT_SMS_MEMORY_STATUS fails by GenericFailure(2)
+01-08 02:28:59.339 D/RIL     (  320): [SUB0] [0005]< RIL_REQUEST_SCREEN_STATE {}
+01-08 02:28:59.339 I/RIL     (  320): ResponseIccCardStatus:: ResponseIccCardStatus
+01-08 02:28:59.339 D/RIL     (  320): [SUB0] [0006]< RIL_REQUEST_GET_SIM_STATUS {{ CardState : 'CARDSTATE_ABSENT', PinState : 'PINSTATE_UNKNOWN', GsmUmtsSub : -1, CdmaSub : -1, mImsSub : -1, num_apps : 0,  }
+01-08 02:28:59.339 I/RIL     (  320): ResponseIccCardStatus : { CardState : 'CARDSTATE_ABSENT', PinState : 'PINSTATE_UNKNOWN', GsmUmtsSub : -1, CdmaSub : -1, mImsSub : -1, num_apps : 0,  }
+01-08 02:28:59.349 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_dms_op_state_update_handler: reported op mode LPM
+01-08 02:28:59.349 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_dms_op_state_update_handler: expected op mode LPM
+01-08 02:28:59.349 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:28:59.359 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:28:59.369 D/RIL     (  320): [SUB0] [0008]< RIL_REQUEST_GET_RADIO_CAPABILITY {[Version = 0,Session = 0,Phase = 0,Rat = 16384,LogicalModemUuid = 0,Status = 1]}
+01-08 02:28:59.369 D/RIL     (  320): [SUB0] [0007]< RIL_REQUEST_DEVICE_IDENTITY {911599957005464,00,00000000,00000000000000}
+01-08 02:29:01.369 D/RIL     (  320): [SUB0] [0004]< RIL_REQUEST_RADIO_POWER {}
+01-08 02:29:01.369 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED {}
+01-08 02:29:01.369 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_RADIO_STATE_CHANGED {0}
+01-08 02:29:01.369 D/use-Rlog/RLOG-PHONE(  320): Radio state is 0
+01-08 02:29:01.369 D/RIL     (  320): [SUB0] [0009]> RIL_REQUEST_GET_SIM_STATUS
+01-08 02:29:01.369 D/RIL     (  320): [SUB0] [0010]> RIL_REQUEST_DEVICE_IDENTITY
+01-08 02:29:01.369 D/RIL     (  320): [SUB0] [0011]> RIL_REQUEST_GET_RADIO_CAPABILITY
+01-08 02:29:01.569 I/RIL     (  320): ResponseIccCardStatus:: ResponseIccCardStatus
+01-08 02:29:01.569 D/RIL     (  320): [SUB0] [0009]< RIL_REQUEST_GET_SIM_STATUS {{ CardState : 'CARDSTATE_ABSENT', PinState : 'PINSTATE_UNKNOWN', GsmUmtsSub : -1, CdmaSub : -1, mImsSub : -1, num_apps : 0,  }
+01-08 02:29:01.569 I/RIL     (  320): ResponseIccCardStatus : { CardState : 'CARDSTATE_ABSENT', PinState : 'PINSTATE_UNKNOWN', GsmUmtsSub : -1, CdmaSub : -1, mImsSub : -1, num_apps : 0,  }
+01-08 02:29:01.579 D/RIL     (  320): [SUB0] [0010]< RIL_REQUEST_DEVICE_IDENTITY {911599957005464,00,00000000,00000000000000}
+01-08 02:29:01.579 D/RIL     (  320): [SUB0] [0011]< RIL_REQUEST_GET_RADIO_CAPABILITY {[Version = 0,Session = 0,Phase = 0,Rat = 16384,LogicalModemUuid = 0,Status = 1]}
+01-08 02:29:09.209 D/RIL     (  320): [SUB0] [0012]> RIL_REQUEST_DEVICE_IDENTITY
+01-08 02:29:10.329 D/RIL     (  320): [SUB0] [0012]< RIL_REQUEST_DEVICE_IDENTITY {911599957005464,00,00000000,00000000000000}
+01-08 02:29:10.329 D/use-Rlog/RLOG-PHONE(  320): HandleDeviceIdentity
+01-08 02:29:18.479 D/RIL     (  320): [SUB0] [0013]> RIL_REQUEST_OEM_HOOK_RAW 1
+01-08 02:29:18.479 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] void qcril_qmi_generic_socket_agent::recv_thread_func(): read 4 bytes length message with length 32
+01-08 02:29:18.479 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] qmi_ril_parse_oem_hook_header: Received un-handled/oem command id = 524329
+01-08 02:29:18.479 D/RIL     (  320): [SUB0] [0014]> RIL_REQUEST_OEM_HOOK_RAW 1
+01-08 02:29:18.479 D/RIL     (  320): [SUB0] [0013]< RIL_REQUEST_OEM_HOOK_RAW {len=-1}
+01-08 02:29:18.479 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] void qcril_qmi_generic_socket_agent::recv_thread_func(): read 4 bytes length message with length 32
+01-08 02:29:18.479 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] qmi_ril_parse_oem_hook_header: Received un-handled/oem command id = 524328
+01-08 02:29:18.479 D/RIL     (  320): [SUB0] [0014]< RIL_REQUEST_OEM_HOOK_RAW {len=-1}
+01-08 02:29:18.489 D/RIL     (  320): [SUB0] [0015]> RIL_REQUEST_OEM_HOOK_RAW 0
+01-08 02:29:18.489 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] void qcril_qmi_generic_socket_agent::recv_thread_func(): read 4 bytes length message with length 32
+01-08 02:29:18.489 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] qmi_ril_parse_oem_hook_header: Received un-handled/oem command id = 524327
+01-08 02:29:18.499 D/RIL     (  320): [SUB0] [0015]< RIL_REQUEST_OEM_HOOK_RAW {len=-1}
+01-08 02:29:18.499 D/RIL     (  320): [SUB0] [0016]> RIL_REQUEST_ALLOW_DATA
+01-08 02:29:18.499 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_OEM_HOOK_RAW {len=24,buf="514F454D484F4F4B4C040800080000000200200001010001"}
+01-08 02:29:18.509 I/RILQ    (  297): (0/297):RIL[0][main] qcril_qmi_nas_request_allow_data: Already PS attached!
+01-08 02:29:18.509 I/RILQ    (  297): (0/297):RIL[0][main] qcril_qmi_nas_request_allow_data: PS ATTACH/DETACH resp 0
+01-08 02:29:18.509 D/RIL     (  320): [SUB0] [0016]< RIL_REQUEST_ALLOW_DATA {}
+01-08 02:29:21.929 D/RIL     (  320): [SUB0] [0017]> RIL_REQUEST_RADIO_POWER on
+01-08 02:29:21.949 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_dms_op_state_update_handler: reported op mode ONLINE
+01-08 02:29:21.949 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_dms_op_state_update_handler: expected op mode ONLINE
+01-08 02:29:21.969 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:21.969 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:21.989 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 9
+01-08 02:29:21.989 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:29:21.989 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:29:21.989 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 9
+01-08 02:29:21.989 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:29:22.009 D/RIL     (  320): [SUB0] [0017]< RIL_REQUEST_RADIO_POWER {}
+01-08 02:29:22.009 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_OEM_HOOK_RAW {len=20,buf="514F454D484F4F4BF2030800040000000050C011"}
+01-08 02:29:22.019 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED {}
+01-08 02:29:22.019 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_SIGNAL_STRENGTH {[signalStrength=99,bitErrorRate=0,CDMA_SS.dbm=-1,CDMA_SSecio=-1,EVDO_SS.dbm=-1,EVDO_SS.ecio=-1,EVDO_SS.signalNoiseRatio=-1,LTE_SS.signalStrength=99,LTE_SS.rsrp=2147483647,LTE_SS.rsrq=2147483647,LTE_SS.rssnr=2147483647,LTE_SS.cqi=2147483647]}
+01-08 02:29:22.029 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_RADIO_STATE_CHANGED {10}
+01-08 02:29:22.029 D/use-Rlog/RLOG-PHONE(  320): Radio state is 10
+01-08 02:29:22.029 D/RIL     (  320): [SUB0] [0018]> IMS REQUEST_SEND_UI_TTY_MODE
+01-08 02:29:22.029 D/RIL     (  320): [SUB0] [0019]> RIL_REQUEST_SET_TTY_MODE (0)
+01-08 02:29:22.029 D/RIL     (  320): [SUB0] [0020]> RIL_REQUEST_IMS_REGISTRATION_STATE
+01-08 02:29:22.029 D/RIL     (  320): [SUB0] [0021]> RIL_REQUEST_REPORT_SMS_MEMORY_STATUS (1)
+01-08 02:29:22.029 E/RIL     (  320): RilSocket to qmux_radio/rild_ims0 (2) is closed; ignoring request
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0022]> RIL_REQUEST_OPERATOR
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0023]> RIL_REQUEST_DATA_REGISTRATION_STATE
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0024]> RIL_REQUEST_VOICE_REGISTRATION_STATE
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0025]> RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0026]> RIL_REQUEST_GET_SIM_STATUS
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0027]> RIL_REQUEST_VOICE_RADIO_TECH
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0028]> RIL_REQUEST_DEVICE_IDENTITY
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [0029]> RIL_REQUEST_GET_RADIO_CAPABILITY
+01-08 02:29:22.039 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_OEM_HOOK_RAW {len=17,buf="514F454D484F4F4B1F040800010000000A"}
+01-08 02:29:22.049 E/RILQ    (  297): (0/297): RIL[0][cmd-112(808)] qcril_qmi_client_send_msg_sync_ex: error 2 / 0 / 1 / 52, context msg hex 4a, service 2 
+01-08 02:29:22.049 E/RILQ    (  297): (0/297): RIL[0][cmd-112(808)] qcril_sms_request_ims_registration_state: Failed to get the response of IMS NW registration state from qmi.
+01-08 02:29:22.049 I/RILQ    (  297): (0/297):RIL[0][cmd-21(848)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.069 I/RILQ    (  297): (0/297):RIL[0][cmd-20(368)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.089 D/RIL     (  320): [SUB0] [0018]< RIL_REQUEST_GET_IMEISV fails by RadioNotAvailable(1)
+01-08 02:29:22.089 D/RIL     (  320): [SUB0] [0021]< RIL_REQUEST_REPORT_SMS_MEMORY_STATUS fails by GenericFailure(2)
+01-08 02:29:22.089 I/RIL     (  320): ResponseIccCardStatus:: ResponseIccCardStatus
+01-08 02:29:22.089 D/RIL     (  320): [SUB0] [0026]< RIL_REQUEST_GET_SIM_STATUS {{ CardState : 'CARDSTATE_ABSENT', PinState : 'PINSTATE_UNKNOWN', GsmUmtsSub : -1, CdmaSub : -1, mImsSub : -1, num_apps : 0,  }
+01-08 02:29:22.089 I/RIL     (  320): ResponseIccCardStatus : { CardState : 'CARDSTATE_ABSENT', PinState : 'PINSTATE_UNKNOWN', GsmUmtsSub : -1, CdmaSub : -1, mImsSub : -1, num_apps : 0,  }
+01-08 02:29:22.089 D/RIL     (  320): [SUB0] [0020]< RIL_REQUEST_IMS_REGISTRATION_STATE fails by GenericFailure(2)
+01-08 02:29:22.089 D/RIL     (  320): [SUB0] [0029]< RIL_REQUEST_GET_RADIO_CAPABILITY {[Version = 0,Session = 0,Phase = 0,Rat = 16384,LogicalModemUuid = 0,Status = 1]}
+01-08 02:29:22.089 D/RIL     (  320): [SUB0] [0028]< RIL_REQUEST_DEVICE_IDENTITY {911599957005464,00,00000000,00000000000000}
+01-08 02:29:22.089 D/RIL     (  320): [SUB0] [0019]< RIL_REQUEST_SET_TTY_MODE {}
+01-08 02:29:22.099 D/RIL     (  320): [SUB0] [0030]> RIL_REQUEST_QUERY_TTY_MODE
+01-08 02:29:22.099 D/RIL     (  320): [SUB0] [0025]< RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE {0}
+01-08 02:29:22.099 D/RIL     (  320): [SUB0] [0027]< RIL_REQUEST_VOICE_RADIO_TECH {14}
+01-08 02:29:22.099 D/use-Rlog/RLOG-PHONE(  320): Switching Voice Phone : CDMA >>> GSM
+01-08 02:29:22.099 D/RIL     (  320): [SUB0] [0022]< RIL_REQUEST_OPERATOR {(null),(null),(null)}
+01-08 02:29:22.099 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_OEM_HOOK_RAW {len=17,buf="514F454D484F4F4B1F040800010000000C"}
+01-08 02:29:22.109 D/RIL     (  320): [SUB0] [0023]< RIL_REQUEST_DATA_REGISTRATION_STATE {2,(null),(null),(null),0,20,(null),(null),(null),(null),(null)}
+01-08 02:29:22.129 D/RIL     (  320): [SUB0] [0024]< RIL_REQUEST_VOICE_REGISTRATION_STATE {2,(null),(null),0,(null),(null),(null),0,(null),(null),(null),(null),(null),0,,}
+01-08 02:29:22.149 D/RIL     (  320): [SUB0] [0030]< RIL_REQUEST_QUERY_TTY_MODE {0}
+01-08 02:29:22.339 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.349 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.359 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.359 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.369 I/RILQ    (  297): (0/297):RIL[0][event] qcril_arb_set_dsd_sys_status: old_pref_data 1 - new_data_pref 1
+01-08 02:29:22.369 I/RILQ    (  297): (0/297):RIL[0][event] qcril_arb_set_dsd_sys_status: preferred dsd_sys_status nw=0x0, rat_value=0x0, so_mask=0x0000000000000800
+01-08 02:29:22.369 I/RILQ    (  297): (0/297):RIL[0][event] qcril_arb_set_dsd_sys_status: preferred 1 - dsd_sys_status nw=0x0, rat_value=0x0, so_mask=0x0000000000000800
+01-08 02:29:22.369 I/RILQ    (  297): (0/297):RIL[0][event] qcril_arb_set_dsd_sys_status: is_wwan_available 0
+01-08 02:29:22.369 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.369 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED {}
+01-08 02:29:22.369 D/RIL     (  320): [SUB0] [0031]> RIL_REQUEST_OPERATOR
+01-08 02:29:22.369 D/RIL     (  320): [SUB0] [0032]> RIL_REQUEST_DATA_REGISTRATION_STATE
+01-08 02:29:22.369 D/RIL     (  320): [SUB0] [0033]> RIL_REQUEST_VOICE_REGISTRATION_STATE
+01-08 02:29:22.369 D/RIL     (  320): [SUB0] [0034]> RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE
+01-08 02:29:22.389 I/RILQ    (  297): (0/297):RIL[0][cmd-20(328)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.389 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED {}
+01-08 02:29:22.389 D/RIL     (  320): [SUB0] [0035]> RIL_REQUEST_OPERATOR
+01-08 02:29:22.389 D/RIL     (  320): [SUB0] [0036]> RIL_REQUEST_DATA_REGISTRATION_STATE
+01-08 02:29:22.389 D/RIL     (  320): [SUB0] [0037]> RIL_REQUEST_VOICE_REGISTRATION_STATE
+01-08 02:29:22.389 D/RIL     (  320): [SUB0] [0038]> RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE
+01-08 02:29:22.389 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_OEM_HOOK_RAW {len=17,buf="514F454D484F4F4BFA0308000100000000"}
+01-08 02:29:22.389 I/RILQ    (  297): (0/297):RIL[0][cmd-21(808)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.389 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_SIGNAL_STRENGTH {[signalStrength=99,bitErrorRate=0,CDMA_SS.dbm=-1,CDMA_SSecio=-1,EVDO_SS.dbm=-1,EVDO_SS.ecio=-1,EVDO_SS.signalNoiseRatio=-1,LTE_SS.signalStrength=99,LTE_SS.rsrp=2147483647,LTE_SS.rsrq=2147483647,LTE_SS.rssnr=2147483647,LTE_SS.cqi=2147483647]}
+01-08 02:29:22.399 D/RIL     (  320): [SUB0] [0034]< RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE {0}
+01-08 02:29:22.399 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 9
+01-08 02:29:22.399 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-08 02:29:22.409 I/RILQ    (  297): (0/297):RIL[0][cmd-20(848)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0033]< RIL_REQUEST_VOICE_REGISTRATION_STATE {2,(null),(null),0,(null),(null),(null),0,(null),(null),(null),(null),(null),0,,}
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0032]< RIL_REQUEST_DATA_REGISTRATION_STATE {0,(null),(null),(null),0,20,(null),394,117891856,(null),(null)}
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0036]< RIL_REQUEST_DATA_REGISTRATION_STATE {0,(null),(null),(null),0,20,(null),394,117891856,(null),(null)}
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0031]< RIL_REQUEST_OPERATOR {(null),(null),(null)}
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0035]< RIL_REQUEST_OPERATOR {(null),(null),(null)}
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED {}
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0039]> RIL_REQUEST_OPERATOR
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0040]> RIL_REQUEST_DATA_REGISTRATION_STATE
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0041]> RIL_REQUEST_VOICE_REGISTRATION_STATE
+01-08 02:29:22.409 D/RIL     (  320): [SUB0] [0042]> RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE
+01-08 02:29:22.429 I/RILQ    (  297): (0/297):RIL[0][cmd-21(328)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-08 02:29:22.449 D/RIL     (  320): [SUB0] [0038]< RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE {0}
+01-08 02:29:22.449 D/RIL     (  320): [SUB0] [0042]< RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE {0}
+01-08 02:29:22.449 D/RIL     (  320): [SUB0] [0037]< RIL_REQUEST_VOICE_REGISTRATION_STATE {2,(null),(null),0,(null),(null),(null),0,(null),(null),(null),(null),(null),0,,}
+01-08 02:29:22.449 D/RIL     (  320): [SUB0] [0041]< RIL_REQUEST_VOICE_REGISTRATION_STATE {2,(null),(null),0,(null),(null),(null),0,(null),(null),(null),(null),(null),0,,}
+01-08 02:29:22.449 D/RIL     (  320): [SUB0] [0040]< RIL_REQUEST_DATA_REGISTRATION_STATE {0,(null),(null),(null),0,20,(null),394,117891856,(null),(null)}
+01-08 02:29:22.449 D/RIL     (  320): [SUB0] [0039]< RIL_REQUEST_OPERATOR {(null),(null),(null)}
+01-08 02:29:22.499 D/RIL     (  320): [SUB0] Connected to socket qmux_radio/rild_ims0
+01-08 02:29:22.529 D/use-Rlog/RLOG-RIL(  320): Parsed UNSOL_RADIO_STATE_CHANGED payload state: RADIO_STATE_ON
+01-08 02:29:22.529 D/RIL     (  320): [IMSUNSL]< UNSOL_RADIO_STATE_CHANGED
+01-08 02:29:22.529 D/RIL     (  320): [SUB0] [0043]> IMS REQUEST_IMS_REGISTRATION_STATE
+01-08 02:29:22.539 D/use-Rlog/RLOG-RIL(  320): Parsed REQUEST_IMS_REGISTRATION_STATE payload state: NOT_REGISTERED
+01-08 02:29:22.539 D/use-Rlog/RLOG-RIL(  320): errorCode: 0
+01-08 02:29:22.539 D/RIL     (  320): [0043]< IMS REQUEST_IMS_REGISTRATION_STATE
+01-08 02:29:22.539 D/use-Rlog/RLOG-IMS_PHONE(  320): IMS registration state is NOT REGISTERED
+01-08 02:29:22.989 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_OEM_HOOK_RAW {len=24,buf="514F454D484F4F4B4C040800080000000200190001010001"}
+01-08 02:29:22.989 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_NITZ_TIME_RECEIVED {time=20/01/23,07:03:11+22,00,receiveTime=48144}
+01-23 12:33:15.086 D/RIL     (  320): [SUB0] [0044]> RIL_REQUEST_CDMA_SET_PREFERRED_VOICE_PRIVACY_MODE (1)
+01-23 12:33:15.096 D/RIL     (  320): [SUB0] [0044]< RIL_REQUEST_CDMA_SET_PREFERRED_VOICE_PRIVACY_MODE {}
+01-23 12:33:15.156 D/RIL     (  320): [SUB0] [0045]> RIL_REQUEST_CDMA_SET_ROAMING_PREFERENCE (2)
+01-23 12:33:15.176 D/RIL     (  320): [SUB0] [0046]> RIL_REQUEST_SET_PREFERRED_NETWORK_TYPE (11)
+01-23 12:33:15.186 D/RIL     (  320): [SUB0] [0045]< RIL_REQUEST_CDMA_SET_ROAMING_PREFERENCE {}
+01-23 12:33:15.196 D/RIL     (  320): [SUB0] [0046]< RIL_REQUEST_SET_PREFERRED_NETWORK_TYPE {}
+01-23 12:33:15.306 D/use-Rlog/RLOG-IMS_PHONE(  320): SetServiceStatus: callType=0, network=14, status=2 sub=0
+01-23 12:33:15.306 D/RIL     (  320): [SUB0] [0047]> IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.306 D/use-Rlog/RLOG-IMS_PHONE(  320): SetServiceStatus: callType=0, network=18, status=2 sub=0
+01-23 12:33:15.306 D/RIL     (  320): [SUB0] [0048]> IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.306 D/RIL     (  320): [SUB0] [0049]> IMS REQUEST_IMS_REG_STATE_CHANGE
+01-23 12:33:15.326 E/RILQ    (  297): (0/297): RIL[0][event] qcril_qmi_imss_command_cb_helper: Req ID: 10 not found
+01-23 12:33:15.326 D/RIL     (  320): [0048]< IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.346 D/RIL     (  320): [0047]< IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.346 D/RIL     (  320): [0049]< IMS REQUEST_IMS_REG_STATE_CHANGE
+01-23 12:33:15.346 D/use-Rlog/RLOG-IMS_PHONE(  320): Updating mImsEnabled from false -> true
+01-23 12:33:15.396 D/use-Rlog/RLOG-IMS_PHONE(  320): SetConfigMsg: configItem=27, value=2 on sub=0
+01-23 12:33:15.396 D/RIL     (  320): [SUB0] [0050]> IMS REQUEST_SET_IMS_CONFIG
+01-23 12:33:15.396 D/use-Rlog/RLOG-IMS_PHONE(  320): SetServiceStatus: callType=0, network=18, status=0 sub=0
+01-23 12:33:15.396 D/RIL     (  320): [SUB0] [0051]> IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.396 D/use-Rlog/RLOG-IMS_PHONE(  320): SetServiceStatus: callType=0, network=14, status=2 sub=0
+01-23 12:33:15.396 D/RIL     (  320): [SUB0] [0052]> IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.396 D/use-Rlog/RLOG-IMS_PHONE(  320): SetConfigMsg: configItem=29, value=1 on sub=0
+01-23 12:33:15.396 D/RIL     (  320): [SUB0] [0053]> IMS REQUEST_SET_IMS_CONFIG
+01-23 12:33:15.406 E/RILQ    (  297): (0/297): RIL[0][event] qcril_qmi_imss_command_cb_helper: Req ID: 13 not found
+01-23 12:33:15.416 D/RIL     (  320): [0051]< IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.416 D/use-Rlog/RLOG-RIL(  320): Parsed REQUEST_SET_IMS_CONFIG payload item: CONFIG_ITEM_VOICE_OVER_WIFI_ENABLED
+01-23 12:33:15.416 D/RIL     (  320): [0050]< IMS REQUEST_SET_IMS_CONFIG
+01-23 12:33:15.416 D/use-Rlog/RLOG-IMS_PHONE(  320): Handling CONFIG_ITEM_VOICE_OVER_WIFI_ENABLED : 2
+01-23 12:33:15.416 D/RIL     (  320): [0052]< IMS REQUEST_SET_SERVICE_STATUS
+01-23 12:33:15.466 D/use-Rlog/RLOG-RIL(  320): Parsed REQUEST_SET_IMS_CONFIG payload item: CONFIG_ITEM_VOICE_OVER_WIFI_MODE
+01-23 12:33:15.466 D/RIL     (  320): [0053]< IMS REQUEST_SET_IMS_CONFIG
+01-23 12:33:15.466 D/use-Rlog/RLOG-IMS_PHONE(  320): Updating mWfcPreference from -1 -> 1
+01-23 12:33:15.466 D/use-Rlog/RLOG-IMS_PHONE(  320): Updated mWfcPreference 3
+01-23 12:33:17.576 D/RIL     (  320): [SUB0] [0054]> RIL_REQUEST_DEVICE_IDENTITY
+01-23 12:33:17.586 D/RIL     (  320): [SUB0] [0054]< RIL_REQUEST_DEVICE_IDENTITY {911599957005464,00,00000000,00000000000000}
+01-23 12:33:17.586 D/use-Rlog/RLOG-PHONE(  320): HandleDeviceIdentity
+01-23 12:33:42.466 D/NW_DATA_COLLECTOR(  320):  NetworkDataCollector: socket fd=259, sockaddress length= 110
+01-23 12:33:42.466 D/NW_DATA_COLLECTOR(  320): Connect socket successful
+01-23 12:33:42.466 D/NW_DATA_COLLECTOR(  320): Connected to socket /dev/socket/metricsd_socket
+01-23 12:33:44.206 E/NetlinkEvent( 2935): Unknown ifindex 22 in RTM_DELADDR
+01-23 12:33:44.206 E/NetlinkEvent( 2935): Unknown ifindex 22 in RTM_DELADDR
+01-23 12:33:52.466 D/NW_DATA_COLLECTOR(  320): [SUB0] [0055]> RIL_REQUEST_OEM_HOOK_RAW
+01-23 12:33:52.466 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] void qcril_qmi_generic_socket_agent::recv_thread_func(): read 4 bytes length message with length 56
+01-23 12:33:52.576 D/RIL     (  320): [SUB0] [0055]< RIL_REQUEST_OEM_HOOK_RAW {len=4,buf="00000000"}
+01-23 12:34:23.626 D/NW_DATA_COLLECTOR(  320): [SUB0] [0056]> RIL_REQUEST_OEM_HOOK_RAW
+01-23 12:34:23.626 E/RILQ    (  297): (0/297): RIL[0][oem_socket0] void qcril_qmi_generic_socket_agent::recv_thread_func(): read 4 bytes length message with length 56
+01-23 12:34:23.626 D/RIL     (  320): [SUB0] [0056]< RIL_REQUEST_OEM_HOOK_RAW {len=4,buf="00000000"}
+01-23 12:34:50.846 D/RIL     (  320): [SUB0] [0057]> RIL_REQUEST_SCREEN_STATE 0
+01-23 12:34:50.856 D/RIL     (  320): [SUB0] [0057]< RIL_REQUEST_SCREEN_STATE {}
+01-23 12:40:15.526 D/RIL     (  320): [SUB0] [0058]> RIL_REQUEST_SCREEN_STATE 1
+01-23 12:40:15.566 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-23 12:40:15.566 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-23 12:40:15.576 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 9
+01-23 12:40:15.576 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-23 12:40:15.576 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-23 12:40:15.576 I/RILQ    (  297): (0/297):RIL[0][event] qcril_qmi_nas_evaluate_custom_emergency_numbers_for_card: cur_status 0, card_state 9
+01-23 12:40:15.576 E/RILQ    (  297): (0/297): RIL[0][event] get_ecc_property_name: ecc list name : ril.ecclist.
+01-23 12:40:15.596 D/RIL     (  320): [SUB0] [0058]< RIL_REQUEST_SCREEN_STATE {}
+01-23 12:40:15.596 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED {}
+01-23 12:40:15.596 D/RIL     (  320): [SUB0] [0059]> RIL_REQUEST_OPERATOR
+01-23 12:40:15.596 D/RIL     (  320): [SUB0] [0060]> RIL_REQUEST_DATA_REGISTRATION_STATE
+01-23 12:40:15.596 D/RIL     (  320): [SUB0] [0061]> RIL_REQUEST_VOICE_REGISTRATION_STATE
+01-23 12:40:15.596 D/RIL     (  320): [SUB0] [0062]> RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE
+01-23 12:40:15.596 D/RIL     (  320): [SUB0] [UNSL]< RIL_UNSOL_SIGNAL_STRENGTH {[signalStrength=99,bitErrorRate=0,CDMA_SS.dbm=-1,CDMA_SSecio=-1,EVDO_SS.dbm=-1,EVDO_SS.ecio=-1,EVDO_SS.signalNoiseRatio=-1,LTE_SS.signalStrength=99,LTE_SS.rsrp=2147483647,LTE_SS.rsrq=2147483647,LTE_SS.rssnr=2147483647,LTE_SS.cqi=2147483647]}
+01-23 12:40:15.606 I/RILQ    (  297): (0/297):RIL[0][cmd-21(808)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-23 12:40:15.616 I/RILQ    (  297): (0/297):RIL[0][cmd-20(328)] qcril_qmi_nas_reset_data_snapshot_cache_and_timer: Resetting snapshot timer
+01-23 12:40:15.636 D/RIL     (  320): [SUB0] [0060]< RIL_REQUEST_DATA_REGISTRATION_STATE {0,(null),(null),(null),0,20,(null),394,117891856,(null),(null)}
+01-23 12:40:15.686 D/RIL     (  320): [SUB0] [0059]< RIL_REQUEST_OPERATOR {(null),(null),(null)}
+01-23 12:40:15.686 D/RIL     (  320): [SUB0] [0062]< RIL_REQUEST_QUERY_NETWORK_SELECTION_MODE {0}
+01-23 12:40:15.686 D/RIL     (  320): [SUB0] [0061]< RIL_REQUEST_VOICE_REGISTRATION_STATE {2,(null),(null),0,(null),(null),(null),0,(null),(null),(null),(null),(null),0,,}
+--------- beginning of main
+01-23 12:40:24.296 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: #, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:24.386 I/Gecko   (  320): [BrowserElement] event type: keyup, key: #, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:24.396 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: #, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:24.696 I/Gecko   (  320): [BrowserElement] event type: keydown, key: 0, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:24.726 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: 0, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:24.836 I/Gecko   (  320): [BrowserElement] event type: keyup, key: 0, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:24.836 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: 0, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.026 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:40:25.026 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:40:25.026 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:40:25.026 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:40:25.026 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:40:25.026 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:40:25.156 I/Gecko   (  320): [BrowserElement] event type: keydown, key: 5, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.166 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:25.176 I/Gecko   (  320): [BrowserElement] event type: keyup, key: 5, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.176 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: 5, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.196 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: 5, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.266 I/Gecko   (  320): [BrowserElement] event type: keydown, key: 7, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.316 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: 7, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.356 D/VM_BMS  (  388): wake_lock acquired
+01-23 12:40:25.356 D/VM_BMS  (  388): New BMS data - Size=56
+01-23 12:40:25.356 D/VM_BMS  (  388): Start process_bms_data
+01-23 12:40:25.356 D/VM_BMS  (  388): For batt_temp=283 fcc_mah=2075
+01-23 12:40:25.356 D/VM_BMS  (  388): For ocv=4138801 batt_temp=283 soc=98
+01-23 12:40:25.356 D/VM_BMS  (  388): fifo_count=5 acc_count=0
+01-23 12:40:25.356 D/VM_BMS  (  388): INIT: ocv=4138801 last_ocv=4138801 batt_temp=283 soc=98
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 slope=15600
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 rbatt_sf=97
+01-23 12:40:25.356 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=283
+01-23 12:40:25.356 D/VM_BMS  (  388): For ocv=4139299 batt_temp=283 soc=98
+01-23 12:40:25.356 D/VM_BMS  (  388): FIFO=0 fifo_avg=4.187787 rbatt=0.183000 slope=1.560000 ibatt=-0.266321 ocv=4.139299 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=9
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 slope=15600
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 rbatt_sf=97
+01-23 12:40:25.356 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=283
+01-23 12:40:25.356 D/VM_BMS  (  388): For ocv=4139792 batt_temp=283 soc=98
+01-23 12:40:25.356 D/VM_BMS  (  388): FIFO=1 fifo_avg=4.187787 rbatt=0.183000 slope=1.560000 ibatt=-0.263615 ocv=4.139792 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=9
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 slope=15600
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 rbatt_sf=97
+01-23 12:40:25.356 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=283
+01-23 12:40:25.356 D/VM_BMS  (  388): For ocv=4140283 batt_temp=283 soc=98
+01-23 12:40:25.356 D/VM_BMS  (  388): FIFO=2 fifo_avg=4.188094 rbatt=0.183000 slope=1.560000 ibatt=-0.262604 ocv=4.140283 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=9
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 slope=15600
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 rbatt_sf=97
+01-23 12:40:25.356 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=283
+01-23 12:40:25.356 D/VM_BMS  (  388): For ocv=4140766 batt_temp=283 soc=98
+01-23 12:40:25.356 D/VM_BMS  (  388): FIFO=3 fifo_avg=4.187787 rbatt=0.183000 slope=1.560000 ibatt=-0.258264 ocv=4.140766 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=9
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 slope=15600
+01-23 12:40:25.356 D/VM_BMS  (  388): For soc=98 batt_temp=283 rbatt_sf=97
+01-23 12:40:25.356 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=283
+01-23 12:40:25.356 D/VM_BMS  (  388): For ocv=4141265 batt_temp=283 soc=98
+01-23 12:40:25.356 D/VM_BMS  (  388): FIFO=4 fifo_avg=4.189848 rbatt=0.183000 slope=1.560000 ibatt=-0.266842 ocv=4.141265 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=9
+01-23 12:40:25.356 I/VM_BMS  (  388): power_supply_update: ocv_uv=4141265 ibatt=-266842 soc=98 seq_num=9
+01-23 12:40:25.356 D/VM_BMS  (  388): End process_bms_data
+01-23 12:40:25.356 D/VM_BMS  (  388): wake_lock released
+01-23 12:40:25.406 I/Gecko   (  320): [BrowserElement] event type: keyup, key: 7, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.406 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: 7, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.586 I/Gecko   (  320): [BrowserElement] event type: keydown, key: 4, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.606 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: 4, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.686 I/Gecko   (  320): [BrowserElement] event type: keyup, key: 4, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.696 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: 4, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.866 I/Gecko   (  320): [BrowserElement] event type: keydown, key: #, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.896 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: #, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.956 I/Gecko   (  320): [BrowserElement] event type: keyup, key: #, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:25.956 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: #, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:25.1415 I/KERNEL  (   28): [  483.586952] tfa98xx_monitor(): SYS_STATUS0: 0xd05e
+01-23 12:40:25.1415 I/KERNEL  (   28): [  483.587001] tfa98xx_monitor(): Misc errors detected: STATUS_FLAG0 = 0xd05e
+01-23 12:40:26.036 I/Gecko   (  320): [BrowserElement] event type: keydown, key: *, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:26.076 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: *, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:26.186 I/Gecko   (  320): [BrowserElement] event type: keydown, key: #, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:26.196 I/Gecko   (  320): [BrowserElement] event type: keyup, key: *, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:26.206 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: #, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:26.206 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: *, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:26.326 I/Gecko   (  320): [BrowserElement] event type: keydown, key: *, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:26.346 I/Gecko   (  320): [BrowserElement] event type: keyup, key: #, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:26.366 I/FocusManager( 3548): << focus() called >>
+01-23 12:40:26.366 I/FocusManager( 3548):    trying to set focus on, tag: DIV, id: main-view, class: 
+01-23 12:40:26.366 I/FocusManager( 3548):    current focused element, tag: INPUT, id: , class: dialer-input
+01-23 12:40:26.366 I/FocusManager( 3548): <- blur on, tag: INPUT, id: , class: dialer-input
+01-23 12:40:26.376 I/FocusManager( 3548): -> focus is now on, tag: DIV, id: main-view, class: 
+01-23 12:40:26.376 I/Gecko   (  320): XXX FIXME : Dispatch a mozChromeEvent: inputmethod-contextchange
+01-23 12:40:26.416 I/Gecko   ( 3548): [BrowserElement] event type: keydown, key: *, target: [object HTMLInputElement], class: dialer-input
+01-23 12:40:26.416 I/Gecko   (  320): XXX FIXME : Dispatch a mozChromeEvent: activity-choice
+01-23 12:40:26.436 I/GeckoDump(  320): XXX FIXME : Got a mozContentEvent: activity-choice
+01-23 12:40:26.456 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: #, target: [object HTMLDivElement], id: main-view
+01-23 12:40:26.456 I/WakeLock(  320): Acquire cpu wakelock
+01-23 12:40:26.456 I/Gecko   (  320): XXX FIXME : Dispatch a open-app: undefined
+01-23 12:40:26.496 I/WakeLock(  320): Acquire cpu wakelock
+01-23 12:40:26.506 I/Gecko   ( 3971): ######################## extensions.js loaded
+01-23 12:40:26.546 I/Gecko   (  320): [BrowserElement] event type: keyup, key: *, target: [object HTMLIFrameElement], src: app://launcher.gaiamobile.org/index.html, id: browser0, class: browser
+01-23 12:40:26.566 I/Gecko   ( 3548): [BrowserElement] event type: keyup, key: *, target: [object HTMLDivElement], id: main-view
+01-23 12:40:26.886 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: Initialized
+01-23 12:40:26.896 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:40:26.966 E/linker  ( 3971): readlink('/proc/self/fd/38') failed: Invalid argument [fd=38]
+01-23 12:40:26.966 E/linker  ( 3971): warning: unable to get realpath for the library "/system/lib/hw/gralloc.msm8909.so". Will use given name.
+01-23 12:40:26.966 E/linker  ( 3971): readlink('/proc/self/fd/38') failed: Invalid argument [fd=38]
+01-23 12:40:26.966 E/linker  ( 3971): warning: unable to get realpath for the library "libmemalloc.so". Will use given name.
+01-23 12:40:26.976 E/linker  ( 3971): readlink('/proc/self/fd/38') failed: Invalid argument [fd=38]
+01-23 12:40:26.976 E/linker  ( 3971): warning: unable to get realpath for the library "libqdMetaData.so". Will use given name.
+01-23 12:40:26.986 E/linker  ( 3971): readlink('/proc/self/fd/38') failed: Invalid argument [fd=38]
+01-23 12:40:26.986 E/linker  ( 3971): warning: unable to get realpath for the library "libqdutils.so". Will use given name.
+01-23 12:40:26.986 E/linker  ( 3971): readlink('/proc/self/fd/38') failed: Invalid argument [fd=38]
+01-23 12:40:26.986 E/linker  ( 3971): warning: unable to get realpath for the library "libGLESv1_CM.so". Will use given name.
+01-23 12:40:26.986 E/linker  ( 3971): readlink('/proc/self/fd/38') failed: Invalid argument [fd=38]
+01-23 12:40:26.986 E/linker  ( 3971): warning: unable to get realpath for the library "libqservice.so". Will use given name.
+01-23 12:40:26.996 I/FocusManager(  320): << focus() called >>
+01-23 12:40:26.996 I/FocusManager(  320):    trying to set focus on, tag: IFRAME, id: browser4, class: browser
+01-23 12:40:27.006 I/FocusManager(  320):    current focused element, tag: IFRAME, id: browser0, class: browser
+01-23 12:40:27.006 I/FocusManager(  320): <- blur on, tag: IFRAME, id: browser0, class: browser
+01-23 12:40:27.006 I/FocusManager( 3548): <- blur on, tag: DIV, id: main-view, class: 
+01-23 12:40:27.016 I/FocusManager(  320): -> focus is now on, tag: IFRAME, id: browser4, class: browser
+01-23 12:40:27.076 I/FocusManager( 3971): * WindowRaised *
+01-23 12:40:27.076 I/FocusManager( 3971): -> focus is now on, NULL, tag: , id: , class: 
+01-23 12:40:27.106 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist focusElements = [object NodeList]
+01-23 12:40:27.106 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 0 = logPositionitem0
+01-23 12:40:27.106 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.106 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.106 I/FocusManager( 3971):    current focused element, NULL, tag: , id: , class: 
+01-23 12:40:27.106 I/FocusManager( 3971): <- blur on, NULL, tag: , id: , class: 
+01-23 12:40:27.106 I/FocusManager( 3971): -> focus is now on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 1 = logPositionitem1
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 2 = tombstones
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 3 = bugreport
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 4 = qxdm
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 5 = dmesg
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 6 = logcat
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 7 = initlog
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 8 = crashlog
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 9 = tcpdump
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 10 = versioninfo
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 11 = settingsapnvalue
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 12 = propvalue
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:27.116 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 13 = clearlogs
+01-23 12:40:27.116 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:27.116 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:27.116 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:28.166 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:30.026 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:40:30.036 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:40:30.036 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:40:30.036 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:40:30.036 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:40:30.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:40:30.666 D/audio_hw_primary(  298): out_standby: enter: stream (0xb7066658) usecase(0: deep-buffer-playback)
+01-23 12:40:30.860 I/KERNEL  (  298): [  488.031768] tfa98xx 2-0034: state: 1
+01-23 12:40:30.866 D/audio_hw_primary(  298): disable_audio_route: reset and update mixer path: deep-buffer-playback speaker
+01-23 12:40:30.866 D/hardware_info(  298): hw_info_append_hw_type : device_name = speaker
+01-23 12:40:30.866 D/audio_hw_primary(  298): disable_snd_device: snd_device(2: speaker)
+01-23 12:40:31.166 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:31.616 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:31.626 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:31.626 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:31.626 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:31.636 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  logPositionitem1 is focus
+01-23 12:40:31.636 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:31.636 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:31.636 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logPositionitem1, class: contentBar last-child
+01-23 12:40:31.636 I/FocusManager( 3971):    current focused element, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:31.636 I/FocusManager( 3971): <- blur on, tag: LI, id: logPositionitem0, class: contentBar first-child
+01-23 12:40:31.636 I/FocusManager( 3971): -> focus is now on, tag: LI, id: logPositionitem1, class: contentBar last-child
+01-23 12:40:31.646 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: logPositionitem0, class: contentBar first-child
+01-23 12:40:31.876 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:31.886 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: logPositionitem1, class: contentBar last-child
+01-23 12:40:34.166 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:34.256 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:34.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:34.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:34.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:34.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  tombstones is focus
+01-23 12:40:34.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:34.256 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:34.256 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: tombstones, class: contentBar
+01-23 12:40:34.256 I/FocusManager( 3971):    current focused element, tag: LI, id: logPositionitem1, class: contentBar last-child
+01-23 12:40:34.256 I/FocusManager( 3971): <- blur on, tag: LI, id: logPositionitem1, class: contentBar last-child
+01-23 12:40:34.266 I/FocusManager( 3971): -> focus is now on, tag: LI, id: tombstones, class: contentBar
+01-23 12:40:34.266 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: logPositionitem1, class: contentBar last-child
+01-23 12:40:34.326 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:34.326 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: tombstones, class: contentBar
+01-23 12:40:34.376 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:34.376 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:34.376 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:34.376 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:34.376 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  bugreport is focus
+01-23 12:40:34.376 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:34.376 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:34.376 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: bugreport, class: contentBar
+01-23 12:40:34.376 I/FocusManager( 3971):    current focused element, tag: LI, id: tombstones, class: contentBar
+01-23 12:40:34.376 I/FocusManager( 3971): <- blur on, tag: LI, id: tombstones, class: contentBar
+01-23 12:40:34.386 I/FocusManager( 3971): -> focus is now on, tag: LI, id: bugreport, class: contentBar
+01-23 12:40:34.386 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: tombstones, class: contentBar
+01-23 12:40:34.386 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:34.386 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: bugreport, class: contentBar
+01-23 12:40:34.836 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:34.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:34.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:34.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:34.846 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  qxdm is focus
+01-23 12:40:34.846 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:34.846 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:34.846 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: qxdm, class: contentBar
+01-23 12:40:34.846 I/FocusManager( 3971):    current focused element, tag: LI, id: bugreport, class: contentBar
+01-23 12:40:34.846 I/FocusManager( 3971): <- blur on, tag: LI, id: bugreport, class: contentBar
+01-23 12:40:34.846 I/FocusManager( 3971): -> focus is now on, tag: LI, id: qxdm, class: contentBar
+01-23 12:40:34.846 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: bugreport, class: contentBar
+01-23 12:40:34.876 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:34.886 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: qxdm, class: contentBar
+01-23 12:40:35.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:40:35.036 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:40:35.036 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:40:35.036 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:40:35.036 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:40:35.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:40:37.166 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:40.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:40:40.036 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:40:40.036 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:40:40.036 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:40:40.036 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:40:40.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:40:40.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:40.406 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:40.406 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:40.406 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:40.406 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:40.406 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  dmesg is focus
+01-23 12:40:40.406 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:40.406 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:40.406 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: dmesg, class: contentBar
+01-23 12:40:40.406 I/FocusManager( 3971):    current focused element, tag: LI, id: qxdm, class: contentBar
+01-23 12:40:40.406 I/FocusManager( 3971): <- blur on, tag: LI, id: qxdm, class: contentBar
+01-23 12:40:40.416 I/FocusManager( 3971): -> focus is now on, tag: LI, id: dmesg, class: contentBar
+01-23 12:40:40.416 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: qxdm, class: contentBar
+01-23 12:40:40.476 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:40.476 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: dmesg, class: contentBar
+01-23 12:40:41.476 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:41.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:41.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:41.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:41.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  logcat is focus
+01-23 12:40:41.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:41.476 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:41.476 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:41.476 I/FocusManager( 3971):    current focused element, tag: LI, id: dmesg, class: contentBar
+01-23 12:40:41.476 I/FocusManager( 3971): <- blur on, tag: LI, id: dmesg, class: contentBar
+01-23 12:40:41.476 I/FocusManager( 3971): -> focus is now on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:41.486 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: dmesg, class: contentBar
+01-23 12:40:41.516 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:41.516 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:40:41.576 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:41.576 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:41.576 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:41.576 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:41.576 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  initlog is focus
+01-23 12:40:41.576 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:41.576 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:41.576 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:41.576 I/FocusManager( 3971):    current focused element, tag: LI, id: logcat, class: contentBar
+01-23 12:40:41.576 I/FocusManager( 3971): <- blur on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:41.576 I/FocusManager( 3971): -> focus is now on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:41.586 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:40:41.586 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:41.586 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: initlog, class: contentBar last-child
+01-23 12:40:43.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:43.796 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:43.796 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:40:43.796 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:40:43.796 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:40:43.796 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre logcat is focus
+01-23 12:40:43.796 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:43.796 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:43.796 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:43.796 I/FocusManager( 3971):    current focused element, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:43.796 I/FocusManager( 3971): <- blur on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:43.806 I/FocusManager( 3971): -> focus is now on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:43.806 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLLIElement], id: initlog, class: contentBar last-child
+01-23 12:40:43.926 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:43.936 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:40:44.976 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:44.976 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:40:44.976 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:40:44.976 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:40:44.976 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  initlog is focus
+01-23 12:40:44.976 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:44.976 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:44.976 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:44.976 I/FocusManager( 3971):    current focused element, tag: LI, id: logcat, class: contentBar
+01-23 12:40:44.976 I/FocusManager( 3971): <- blur on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:44.976 I/FocusManager( 3971): -> focus is now on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:44.986 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:40:45.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:40:45.036 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:40:45.036 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:40:45.036 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:40:45.036 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:40:45.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:40:45.116 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:45.126 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLLIElement], id: initlog, class: contentBar last-child
+01-23 12:40:45.446 I/Gecko   (  320): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:45.446 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmYes
+01-23 12:40:45.446 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = Enter
+01-23 12:40:45.446 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu 1 cmd = lmcmYes
+01-23 12:40:45.446 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changePageOrAlert
+01-23 12:40:45.446 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:40:45.456 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager el.name = initlog
+01-23 12:40:45.456 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener Enter
+01-23 12:40:45.456 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], id: initlog, class: contentBar last-child
+01-23 12:40:45.536 I/Gecko   (  320): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:45.586 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], id: initlog, class: contentBar last-child
+01-23 12:40:45.606 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: Initialized
+01-23 12:40:45.616 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:40:45.616 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:40:45.626 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: svn: logcat
+01-23 12:40:45.626 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: Get the generated file time:/data/usbmsc_mnt/logmanager/initlog/logcat*
+01-23 12:40:45.646 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: getFilesLastTime: type = normal
+01-23 12:40:45.646 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: getFilesLastTime: aParamAarry = /data/usbmsc_mnt/logmanager/initlog/logcat*
+01-23 12:40:45.646 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: getFilesLastTime: aLength = 1
+01-23 12:40:45.646 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: svn: 0
+01-23 12:40:45.656 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: receiveMessage: EngmodeSrv:GetFilesLastTime
+01-23 12:40:45.656 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: _getFilesLastTime   aFilePathArray: /data/usbmsc_mnt/logmanager/initlog/logcat*
+01-23 12:40:45.656 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: {"logcat":{"time":0}}
+01-23 12:40:45.656 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: {"/data/usbmsc_mnt/logmanager/initlog/":["logcat*"]}
+01-23 12:40:45.666 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: svn: logcat
+01-23 12:40:45.666 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: current persist.sys.initkeys.enable = logcat
+01-23 12:40:45.676 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: fireEvent for LOG_TYPE_KEYS[4] = initlog
+01-23 12:40:45.696 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:GetFilesLastTime:Return","sync":false,"json":{"data":{"logcat":{"time":1579763016000,"location":"/data/usbmsc_mnt/logmanager/initlog/"}},"requestID":"id{f78dede5-f5d0-450f-8a57-6d25d5c67189}"},"data":{"data":{"logcat":{"time":1579763016000,"location":"/data/usbmsc_mnt/logmanager/initlog/"}},"requestID":"id{f78dede5-f5d0-450f-8a57-6d25d5c67189}"},"objects":{},"ports":{}}
+01-23 12:40:45.696 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: _filesLastTimeMsgHdlr send data: {"logcat":{"timeStr":"2020-01-23,12:33","location":"/data/usbmsc_mnt/logmanager/initlog/"}}
+01-23 12:40:45.696 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:GetFilesLastTime:Return","sync":false,"json":{"data":{"logcat":{"time":1579763016000,"location":"/data/usbmsc_mnt/logmanager/initlog/"}},"requestID":"id{f78dede5-f5d0-450f-8a57-6d25d5c67189}"},"data":{"data":{"logcat":{"time":1579763016000,"location":"/data/usbmsc_mnt/logmanager/initlog/"}},"requestID":"id{f78dede5-f5d0-450f-8a57-6d25d5c67189}"},"objects":{},"ports":{}}
+01-23 12:40:45.696 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: _filesLastTimeMsgHdlr send data: {"logcat":{"timeStr":"2020-01-23,12:33","location":"/data/usbmsc_mnt/logmanager/initlog/"}}
+01-23 12:40:45.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist focusElements = [object NodeList]
+01-23 12:40:45.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 0 = home
+01-23 12:40:45.876 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:45.876 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:40:45.876 I/FocusManager( 3971):    current focused element, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:45.876 I/FocusManager( 3971): <- blur on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:45.876 I/FocusManager( 3971): -> focus is now on, tag: DIV, id: home, class: back
+01-23 12:40:45.886 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 1 = initlogRun
+01-23 12:40:45.886 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:45.886 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:40:45.886 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:45.886 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 2 = 
+01-23 12:40:45.886 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:45.886 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:40:45.886 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:45.886 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 3 = 
+01-23 12:40:45.886 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:45.886 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:40:45.886 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:45.886 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 4 = 
+01-23 12:40:45.886 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:45.886 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:40:45.886 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:45.886 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 5 = 
+01-23 12:40:45.886 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:45.886 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:40:45.886 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:40:46.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:49.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:50.036 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:40:50.046 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:40:50.046 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:40:50.046 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:40:50.046 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:40:50.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:40:52.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:53.466 I/Gecko   (  320): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:53.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmYes
+01-23 12:40:53.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = Enter
+01-23 12:40:53.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu 1 cmd = lmcmYes
+01-23 12:40:53.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager el.name = home
+01-23 12:40:53.476 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener Enter
+01-23 12:40:53.476 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLDivElement], id: home, class: back
+01-23 12:40:53.576 I/Gecko   (  320): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:53.586 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLDivElement], id: home, class: back
+01-23 12:40:53.676 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu::document.mvalue id = home2 value = initlog
+01-23 12:40:53.686 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu::::::::::::::::::::: document.activeElement home
+01-23 12:40:53.686 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:53.686 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:53.686 I/FocusManager( 3971):    current focused element, tag: DIV, id: home, class: back
+01-23 12:40:53.686 I/FocusManager( 3971): -> focus is now on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:53.696 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu after : document.activeElement home
+01-23 12:40:53.716 I/Gecko   ( 3971): -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=15032385542, cleanup.
+01-23 12:40:54.776 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:54.776 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:40:54.776 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:40:54.776 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:40:54.776 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre logcat is focus
+01-23 12:40:54.776 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:40:54.776 I/FocusManager( 3971): << focus() called >>
+01-23 12:40:54.776 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:54.786 I/FocusManager( 3971):    current focused element, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:54.786 I/FocusManager( 3971): <- blur on, tag: LI, id: initlog, class: contentBar last-child
+01-23 12:40:54.786 I/FocusManager( 3971): -> focus is now on, tag: LI, id: logcat, class: contentBar
+01-23 12:40:54.786 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLLIElement], id: initlog, class: contentBar last-child
+01-23 12:40:54.866 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:40:54.876 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:40:55.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:40:55.046 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:40:55.046 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:40:55.046 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:40:55.046 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:40:55.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:40:55.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:40:56.456 I/WakeLock(  320): Release cpu wakelock
+01-23 12:40:56.496 I/WakeLock(  320): Release cpu wakelock
+01-23 12:40:58.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:00.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:00.046 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:00.046 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:00.046 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:00.046 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:00.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:01.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:04.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:04.666 I/Gecko   (  320): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:04.666 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmYes
+01-23 12:41:04.666 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = Enter
+01-23 12:41:04.666 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu 1 cmd = lmcmYes
+01-23 12:41:04.666 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changePageOrAlert
+01-23 12:41:04.666 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:41:04.676 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager el.name = logcat
+01-23 12:41:04.676 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener Enter
+01-23 12:41:04.676 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:41:04.746 I/Gecko   (  320): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:04.776 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:41:04.826 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: Initialized
+01-23 12:41:04.846 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:41:04.846 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:41:04.846 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: Get the generated file time:/data/usbmsc_mnt/logmanager/logcat/logcat*
+01-23 12:41:04.846 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: getFilesLastTime: type = normal
+01-23 12:41:04.846 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: getFilesLastTime: aParamAarry = /data/usbmsc_mnt/logmanager/logcat/logcat*
+01-23 12:41:04.846 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: getFilesLastTime: aLength = 1
+01-23 12:41:04.846 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: receiveMessage: EngmodeSrv:GetFilesLastTime
+01-23 12:41:04.846 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: svn: 0
+01-23 12:41:04.846 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: _getFilesLastTime   aFilePathArray: /data/usbmsc_mnt/logmanager/logcat/logcat*
+01-23 12:41:04.846 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: {"logcat":{"time":0}}
+01-23 12:41:04.846 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: {"/data/usbmsc_mnt/logmanager/logcat/":["logcat*"]}
+01-23 12:41:04.866 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: svn: 
+01-23 12:41:04.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: fireEvent for LOG_TYPE_KEYS[1] = logcat
+01-23 12:41:04.896 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:GetFilesLastTime:Return","sync":false,"json":{"data":{"logcat":{"time":0}},"requestID":"id{622ae7d7-561e-4de4-93b6-c220282ff20a}"},"data":{"data":{"logcat":{"time":0}},"requestID":"id{622ae7d7-561e-4de4-93b6-c220282ff20a}"},"objects":{},"ports":{}}
+01-23 12:41:04.896 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: _filesLastTimeMsgHdlr send data: {"logcat":{"timeStr":"","location":""}}
+01-23 12:41:04.896 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:GetFilesLastTime:Return","sync":false,"json":{"data":{"logcat":{"time":0}},"requestID":"id{622ae7d7-561e-4de4-93b6-c220282ff20a}"},"data":{"data":{"logcat":{"time":0}},"requestID":"id{622ae7d7-561e-4de4-93b6-c220282ff20a}"},"objects":{},"ports":{}}
+01-23 12:41:04.896 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: _filesLastTimeMsgHdlr send data: {"logcat":{"timeStr":"","location":""}}
+01-23 12:41:04.946 I/Gecko   (  320): [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-23 12:41:05.026 I/Gecko   (  320): [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-23 12:41:05.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:05.046 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:05.046 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:05.046 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:05.046 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:05.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:05.076 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist focusElements = [object NodeList]
+01-23 12:41:05.076 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 0 = home
+01-23 12:41:05.076 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:05.076 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:41:05.076 I/FocusManager( 3971):    current focused element, tag: LI, id: logcat, class: contentBar
+01-23 12:41:05.076 I/FocusManager( 3971): <- blur on, tag: LI, id: logcat, class: contentBar
+01-23 12:41:05.086 I/FocusManager( 3971): -> focus is now on, tag: DIV, id: home, class: back
+01-23 12:41:05.086 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 1 = logcatRun
+01-23 12:41:05.086 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:05.086 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:41:05.086 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:41:05.086 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 2 = 
+01-23 12:41:05.086 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:05.086 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:41:05.086 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:41:05.086 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu addfocuslist 3 = 
+01-23 12:41:05.086 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:05.086 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:41:05.086 I/FocusManager( 3971): Warning: element is already focused.
+01-23 12:41:06.756 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:06.766 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:41:06.766 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:41:06.766 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:41:06.766 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  logcatRun is focus
+01-23 12:41:06.766 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:06.766 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:06.766 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: logcatRun, class: button
+01-23 12:41:06.766 I/FocusManager( 3971):    current focused element, tag: DIV, id: home, class: back
+01-23 12:41:06.766 I/FocusManager( 3971): <- blur on, tag: DIV, id: home, class: back
+01-23 12:41:06.776 I/FocusManager( 3971): -> focus is now on, tag: DIV, id: logcatRun, class: button
+01-23 12:41:06.776 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:06.896 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:06.906 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLDivElement], id: logcatRun, class: button
+01-23 12:41:07.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:07.1473 I/KERNEL  (    1): [  525.644731] init: Starting service 'lmlogcatservice'...
+01-23 12:41:08.186 I/Gecko   (  320): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:08.186 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmYes
+01-23 12:41:08.186 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = Enter
+01-23 12:41:08.186 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu 1 cmd = lmcmYes
+01-23 12:41:08.186 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: getPosition value : null
+01-23 12:41:08.186 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: createnewDirorFile:  typestr: FILE path: /data/usbmsc_mnt/logmanager/logcat/logcat20200123_124108.log
+01-23 12:41:08.196 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: receiveMessage: EngmodeSrv:CreateDirOrFile
+01-23 12:41:08.196 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: _createGivenDirOrFile--path:/data/usbmsc_mnt/logmanager/logcat/logcat20200123_124108.log
+01-23 12:41:08.196 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: setKAIOSLogPara: tempkeys1 = path tempkeys2 = /data/usbmsc_mnt/logmanager/logcat/logcat20200123_124108.log
+01-23 12:41:08.196 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager el.name = logcatRun
+01-23 12:41:08.196 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener Enter
+01-23 12:41:08.196 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLDivElement], id: logcatRun, class: button
+01-23 12:41:08.206 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: receiveMessage: EngmodeSrv:UniversalCommand
+01-23 12:41:08.206 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest--args:-c,setprop persist.sys.kaioslogcat.path /data/usbmsc_mnt/logmanager/logcat/logcat20200123_124108.log
+01-23 12:41:08.206 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest--UniversalCommand: init finished
+01-23 12:41:08.206 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:CreateDirOrFile:Return","sync":false,"json":{"data":"CREATE_SUCCESS","requestID":"id{1cbd75f4-a4d4-4718-8eb6-61baa53e31a2}"},"data":{"data":"CREATE_SUCCESS","requestID":"id{1cbd75f4-a4d4-4718-8eb6-61baa53e31a2}"},"objects":{},"ports":{}}
+01-23 12:41:08.216 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: _createFileMsgHdlr{}
+01-23 12:41:08.216 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:CreateDirOrFile:Return","sync":false,"json":{"data":"CREATE_SUCCESS","requestID":"id{1cbd75f4-a4d4-4718-8eb6-61baa53e31a2}"},"data":{"data":"CREATE_SUCCESS","requestID":"id{1cbd75f4-a4d4-4718-8eb6-61baa53e31a2}"},"objects":{},"ports":{}}
+01-23 12:41:08.216 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: _createFileMsgHdlr{"id{1cbd75f4-a4d4-4718-8eb6-61baa53e31a2}":{"typestr":"FILE","path":"/data/usbmsc_mnt/logmanager/logcat/logcat20200123_124108.log","storeToDevice":"INTERNAL_SDCARD","type":"CREATE_SIGNAL"}}
+01-23 12:41:08.216 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: CREATE_SIGNAL
+01-23 12:41:08.226 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-:            hwtest: _universalCommandProcess: null
+01-23 12:41:08.236 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:08.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:41:08.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:41:08.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:41:08.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre home is focus
+01-23 12:41:08.256 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:08.256 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:08.256 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:41:08.256 I/FocusManager( 3971):    current focused element, tag: DIV, id: logcatRun, class: button
+01-23 12:41:08.256 I/FocusManager( 3971): <- blur on, tag: DIV, id: logcatRun, class: button
+01-23 12:41:08.256 I/FocusManager( 3971): -> focus is now on, tag: DIV, id: home, class: back
+01-23 12:41:08.266 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLDivElement], id: logcatRun, class: button
+01-23 12:41:08.266 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowLeft, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:08.286 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd 
+01-23 12:41:08.286 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowLeft
+01-23 12:41:08.286 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowLeft
+01-23 12:41:08.286 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowLeft, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:08.326 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:08.336 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowLeft, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:08.336 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:08.336 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest--*********observe********
+01-23 12:41:08.336 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest-- aSubject:[xpconnect wrapped nsIProcess]
+01-23 12:41:08.336 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest-- aTopic:process-finished
+01-23 12:41:08.336 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest-- aData:null
+01-23 12:41:08.336 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowLeft, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:08.336 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:UniversalCommand:Return","sync":false,"json":{"data":"process-finished","requestID":"id{017e47a1-9fb4-4438-8a40-87b2b911f273}"},"data":{"data":"process-finished","requestID":"id{017e47a1-9fb4-4438-8a40-87b2b911f273}"},"objects":{},"ports":{}}
+01-23 12:41:08.336 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: Success: Can not find the request object with id{017e47a1-9fb4-4438-8a40-87b2b911f273}
+01-23 12:41:08.336 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:UniversalCommand:Return","sync":false,"json":{"data":"process-finished","requestID":"id{017e47a1-9fb4-4438-8a40-87b2b911f273}"},"data":{"data":"process-finished","requestID":"id{017e47a1-9fb4-4438-8a40-87b2b911f273}"},"objects":{},"ports":{}}
+01-23 12:41:08.336 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: setKAIOSLogPara: tempkeys1 = enable tempkeys2 = 1
+01-23 12:41:08.336 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: receiveMessage: EngmodeSrv:UniversalCommand
+01-23 12:41:08.336 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest--args:-c,setprop persist.sys.kaioslogcat.enable 1
+01-23 12:41:08.336 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest--UniversalCommand: init finished
+01-23 12:41:08.366 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-:            hwtest: _universalCommandProcess: null
+01-23 12:41:08.396 I/Gecko   (  320): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:08.396 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:08.426 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest--*********observe********
+01-23 12:41:08.426 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest-- aSubject:[xpconnect wrapped nsIProcess]
+01-23 12:41:08.426 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest-- aTopic:process-finished
+01-23 12:41:08.426 I/Gecko   (  320): <TZM_LOG> -*- engmodeEx_service.jsm -*-: hwtest-- aData:null
+01-23 12:41:08.426 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:UniversalCommand:Return","sync":false,"json":{"data":"process-finished","requestID":"id{bd3400fe-73e5-4f69-89b6-9f023dab4848}"},"data":{"data":"process-finished","requestID":"id{bd3400fe-73e5-4f69-89b6-9f023dab4848}"},"objects":{},"ports":{}}
+01-23 12:41:08.426 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: Success: Can not find the request object with id{bd3400fe-73e5-4f69-89b6-9f023dab4848}
+01-23 12:41:08.426 I/Gecko   ( 3971): <TZM_LOG> -*- EngmodeExtension -*-: receiveMessage: {"target":{},"name":"EngmodeSrv:UniversalCommand:Return","sync":false,"json":{"data":"process-finished","requestID":"id{bd3400fe-73e5-4f69-89b6-9f023dab4848}"},"data":{"data":"process-finished","requestID":"id{bd3400fe-73e5-4f69-89b6-9f023dab4848}"},"objects":{},"ports":{}}
+01-23 12:41:08.426 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: start lmlogKeyinfo
+01-23 12:41:10.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:10.046 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:10.046 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:10.046 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:10.046 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:10.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:10.156 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:10.156 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:41:10.156 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:41:10.156 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:41:10.166 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre  is focus
+01-23 12:41:10.166 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:10.166 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:10.166 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: , class: pack-switch
+01-23 12:41:10.166 I/FocusManager( 3971):    current focused element, tag: DIV, id: home, class: back
+01-23 12:41:10.166 I/FocusManager( 3971): <- blur on, tag: DIV, id: home, class: back
+01-23 12:41:10.166 I/FocusManager( 3971): -> focus is now on, tag: LI, id: , class: pack-switch
+01-23 12:41:10.166 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:10.176 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:10.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:10.176 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLLIElement], class: pack-switch
+01-23 12:41:13.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:13.496 D/VM_BMS  (  388): wake_lock acquired
+01-23 12:41:13.496 D/VM_BMS  (  388): New BMS data - Size=56
+01-23 12:41:13.496 D/VM_BMS  (  388): Start process_bms_data
+01-23 12:41:13.496 D/VM_BMS  (  388): For batt_temp=284 fcc_mah=2075
+01-23 12:41:13.496 D/VM_BMS  (  388): For ocv=4141265 batt_temp=284 soc=98
+01-23 12:41:13.496 D/VM_BMS  (  388): fifo_count=5 acc_count=0
+01-23 12:41:13.496 D/VM_BMS  (  388): INIT: ocv=4141265 last_ocv=4141265 batt_temp=284 soc=98
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 slope=15600
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 rbatt_sf=97
+01-23 12:41:13.496 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=284
+01-23 12:41:13.496 D/VM_BMS  (  388): For ocv=4141715 batt_temp=284 soc=98
+01-23 12:41:13.496 D/VM_BMS  (  388): FIFO=0 fifo_avg=4.185496 rbatt=0.183000 slope=1.560000 ibatt=-0.240470 ocv=4.141715 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=10
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 slope=15600
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 rbatt_sf=97
+01-23 12:41:13.496 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=284
+01-23 12:41:13.496 D/VM_BMS  (  388): For ocv=4142157 batt_temp=284 soc=98
+01-23 12:41:13.496 D/VM_BMS  (  388): FIFO=1 fifo_avg=4.185212 rbatt=0.183000 slope=1.560000 ibatt=-0.236480 ocv=4.142158 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=10
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 slope=15600
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 rbatt_sf=97
+01-23 12:41:13.496 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=284
+01-23 12:41:13.496 D/VM_BMS  (  388): For ocv=4142568 batt_temp=284 soc=98
+01-23 12:41:13.496 D/VM_BMS  (  388): FIFO=2 fifo_avg=4.182547 rbatt=0.183000 slope=1.560000 ibatt=-0.219588 ocv=4.142568 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=10
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 slope=15600
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 rbatt_sf=97
+01-23 12:41:13.496 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=284
+01-23 12:41:13.496 D/VM_BMS  (  388): For ocv=4142989 batt_temp=284 soc=98
+01-23 12:41:13.496 D/VM_BMS  (  388): FIFO=3 fifo_avg=4.184023 rbatt=0.183000 slope=1.560000 ibatt=-0.225377 ocv=4.142990 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=10
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 slope=15600
+01-23 12:41:13.496 D/VM_BMS  (  388): For soc=98 batt_temp=284 rbatt_sf=97
+01-23 12:41:13.496 D/VM_BMS  (  388): rbatt_mohm_default=138, rbatt_mohm=133, sf=97 batt_temp=284
+01-23 12:41:13.496 D/VM_BMS  (  388): For ocv=4143460 batt_temp=284 soc=98
+01-23 12:41:13.496 D/VM_BMS  (  388): FIFO=4 fifo_avg=4.189336 rbatt=0.183000 slope=1.560000 ibatt=-0.251972 ocv=4.143461 soc=98 fcc_ah=2.075000 sample_count=128 sample_interval=70 seq_num=10
+01-23 12:41:13.496 I/VM_BMS  (  388): power_supply_update: ocv_uv=4143460 ibatt=-251972 soc=98 seq_num=10
+01-23 12:41:13.496 D/VM_BMS  (  388): End process_bms_data
+01-23 12:41:13.496 D/VM_BMS  (  388): wake_lock released
+01-23 12:41:15.046 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:15.056 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:15.056 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:15.056 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:15.056 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:15.056 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:15.166 I/GeckoConsole(  320): Content JS LOG: [AppUsage] got an event:  idle 
+01-23 12:41:15.166 I/GeckoConsole(  320):     at debug (app://system.gaiamobile.org/js/app_usage_metrics.js:141:7)
+01-23 12:41:16.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:19.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:20.056 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:20.056 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:20.056 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:20.056 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:20.056 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:20.056 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:22.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:22.876 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:22.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:41:22.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:41:22.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:41:22.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre  is focus
+01-23 12:41:22.876 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:22.876 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:22.876 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: , class: pack-switch
+01-23 12:41:22.886 I/FocusManager( 3971):    current focused element, tag: LI, id: , class: pack-switch
+01-23 12:41:22.886 I/GeckoConsole(  320): Content JS LOG: [AppUsage] got an event:  active 
+01-23 12:41:22.886 I/GeckoConsole(  320):     at debug (app://system.gaiamobile.org/js/app_usage_metrics.js:141:7)
+01-23 12:41:22.886 I/FocusManager( 3971): <- blur on, tag: LI, id: , class: pack-switch
+01-23 12:41:22.896 I/FocusManager( 3971): -> focus is now on, tag: LI, id: , class: pack-switch
+01-23 12:41:22.896 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLLIElement], class: pack-switch
+01-23 12:41:23.006 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:23.016 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLLIElement], class: pack-switch
+01-23 12:41:23.526 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:23.536 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:41:23.536 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:41:23.536 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:41:23.536 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre logcatRun is focus
+01-23 12:41:23.536 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:23.536 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:23.536 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: logcatRun, class: button
+01-23 12:41:23.536 I/FocusManager( 3971):    current focused element, tag: LI, id: , class: pack-switch
+01-23 12:41:23.536 I/FocusManager( 3971): <- blur on, tag: LI, id: , class: pack-switch
+01-23 12:41:23.546 I/FocusManager( 3971): -> focus is now on, tag: DIV, id: logcatRun, class: button
+01-23 12:41:23.546 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLLIElement], class: pack-switch
+01-23 12:41:23.596 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:23.596 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLDivElement], id: logcatRun, class: button
+01-23 12:41:23.646 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:23.646 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:41:23.646 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:41:23.646 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:41:23.656 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre home is focus
+01-23 12:41:23.656 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:23.656 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:23.656 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:41:23.656 I/FocusManager( 3971):    current focused element, tag: DIV, id: logcatRun, class: button
+01-23 12:41:23.656 I/FocusManager( 3971): <- blur on, tag: DIV, id: logcatRun, class: button
+01-23 12:41:23.656 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:23.656 I/FocusManager( 3971): -> focus is now on, tag: DIV, id: home, class: back
+01-23 12:41:23.666 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLDivElement], id: logcatRun, class: button
+01-23 12:41:23.666 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:23.756 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:23.756 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmUp
+01-23 12:41:23.756 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowUp
+01-23 12:41:23.756 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowUp
+01-23 12:41:23.756 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus pre  is focus
+01-23 12:41:23.756 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:23.756 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:23.756 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: , class: pack-switch
+01-23 12:41:23.756 I/FocusManager( 3971):    current focused element, tag: DIV, id: home, class: back
+01-23 12:41:23.756 I/FocusManager( 3971): <- blur on, tag: DIV, id: home, class: back
+01-23 12:41:23.766 I/FocusManager( 3971): -> focus is now on, tag: LI, id: , class: pack-switch
+01-23 12:41:23.776 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowUp, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:23.876 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:23.886 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowUp, target: [object HTMLLIElement], class: pack-switch
+01-23 12:41:24.826 I/Gecko   (  320): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:24.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmDn
+01-23 12:41:24.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = ArrowDown
+01-23 12:41:24.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener ArrowDown
+01-23 12:41:24.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus next  home is focus
+01-23 12:41:24.836 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: changefocus tabIndex 1
+01-23 12:41:24.836 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:24.836 I/FocusManager( 3971):    trying to set focus on, tag: DIV, id: home, class: back
+01-23 12:41:24.836 I/FocusManager( 3971):    current focused element, tag: LI, id: , class: pack-switch
+01-23 12:41:24.836 I/FocusManager( 3971): <- blur on, tag: LI, id: , class: pack-switch
+01-23 12:41:24.846 I/FocusManager( 3971): -> focus is now on, tag: DIV, id: home, class: back
+01-23 12:41:24.846 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: ArrowDown, target: [object HTMLLIElement], class: pack-switch
+01-23 12:41:24.976 I/Gecko   (  320): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:24.986 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: ArrowDown, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:25.056 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:25.056 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:25.056 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:25.056 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:25.056 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:25.056 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:25.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:25.426 I/Gecko   (  320): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:25.426 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: ConvertToCmd lmcmYes
+01-23 12:41:25.426 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = Enter
+01-23 12:41:25.426 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu 1 cmd = lmcmYes
+01-23 12:41:25.436 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager el.name = home
+01-23 12:41:25.436 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener Enter
+01-23 12:41:25.436 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: Enter, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:25.536 I/Gecko   (  320): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:25.546 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: Enter, target: [object HTMLDivElement], id: home, class: back
+01-23 12:41:25.636 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu::document.mvalue id = home2 value = logcat
+01-23 12:41:25.646 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu::::::::::::::::::::: document.activeElement home
+01-23 12:41:25.646 I/FocusManager( 3971): << focus() called >>
+01-23 12:41:25.646 I/FocusManager( 3971):    trying to set focus on, tag: LI, id: logcat, class: contentBar
+01-23 12:41:25.646 I/FocusManager( 3971):    current focused element, tag: DIV, id: home, class: back
+01-23 12:41:25.646 I/FocusManager( 3971): -> focus is now on, tag: LI, id: logcat, class: contentBar
+01-23 12:41:25.656 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu after : document.activeElement home
+01-23 12:41:25.686 I/Gecko   ( 3971): -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=15032385544, cleanup.
+01-23 12:41:28.186 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:30.056 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:30.056 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 32000 .
+01-23 12:41:30.056 I/ThermalEngine(  315): Sensor:case_therm:32000 mC
+01-23 12:41:30.056 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:30.056 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:30.056 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:30.526 I/GeckoConsole(  320): Content JS LOG: [AppUsage] got an event:  idle 
+01-23 12:41:30.526 I/GeckoConsole(  320):     at debug (app://system.gaiamobile.org/js/app_usage_metrics.js:141:7)
+01-23 12:41:31.176 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:34.186 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:35.066 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:35.066 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:35.066 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:35.066 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:35.066 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:35.066 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:37.186 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:40.066 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:40.066 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:40.066 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:40.066 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:40.066 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:40.066 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:40.186 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:41.906 I/MozMtp  (  320): sessionEnded: 
+01-23 12:41:41.906 I/MozMtp  (  320): Run: MozMtpServer finished
+01-23 12:41:41.949 I/KERNEL  (    0): [  559.120892] msm_otg 78d9000.usb: Avail curr from USB = 2
+01-23 12:41:41.949 I/KERNEL  (    0): [  559.120930] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+01-23 12:41:41.949 I/KERNEL  ( 3959): [  559.121112] android_work: sent uevent USB_STATE=SUSPENDED
+01-23 12:41:41.953 I/KERNEL  ( 4121): [  559.125298] msm_otg 78d9000.usb: Avail curr from USB = 0
+01-23 12:41:41.953 I/KERNEL  ( 4121): [  559.125405] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_DISCONNECT_EVENT received
+01-23 12:41:41.954 I/KERNEL  (  320): [  559.125734] mtp_release
+01-23 12:41:41.954 I/KERNEL  ( 4001): [  559.125828] Error: returning -19 value
+01-23 12:41:41.954 I/KERNEL  ( 4001): [  559.126318] read descriptors
+01-23 12:41:41.954 I/KERNEL  ( 4001): [  559.126341] read descriptors
+01-23 12:41:41.954 I/KERNEL  ( 4001): [  559.126355] read strings
+01-23 12:41:41.954 I/KERNEL  ( 4001): [  559.126393] mtp_bind_config
+01-23 12:41:41.956 I/KERNEL  (  125): [  559.128013] android_work: sent uevent USB_STATE=DISCONNECTED
+01-23 12:41:41.916 I/AutoMounter(  320): Stopping MtpServer
+01-23 12:41:41.916 I/MozMtp  (  320): ~MozMtpStorage: Storage destructed for Volume sdcard mStorageID 0x00010001
+01-23 12:41:41.916 I/MozMtp  (  320): StorageUnavailable: Removing mStorageID 0x00010001 from MtpServer
+01-23 12:41:41.916 I/MozMtp  (  320): StorageUnavailable: Removing mStorageID 0x00010001 from MozMtpDatabse
+01-23 12:41:41.916 I/AutoMounter(  320): SetUsbFunction(default) sys.usb.config from 'mtp,adb' to 'diag,serial_smd,rmnet_qti_bam,adb'
+01-23 12:41:41.916 I/AutoMounter(  320): AutoMounter state changed from MTP_STARTED to IDLE
+01-23 12:41:41.916 I/AutoMounter(  320): UpdateState: ums:A0C0E0 mtp:A1C0E1 mode:3 usb:0 tryToShare:0 state:IDLE
+01-23 12:41:41.916 I/AutoMounter(  320): UpdateState: Volume sdcard is Mounted and inserted @ /data/usbmsc_mnt gen 1 locked 0 sharing x
+01-23 12:41:41.916 I/DongleAutoMounter(  320): Dongle USB Status : usb: 0, rndis: 0, retry: false
+01-23 12:41:41.916 I/DongleAutoMounter(  320): Dongle disable debouncing start
+01-23 12:41:41.916 I/DongleAutoMounter(  320): Dongle unpluged ?
+01-23 12:41:41.964 I/KERNEL  (    1): [  559.136276] init: Service 'adbd' is being killed...
+01-23 12:41:41.966 I/KERNEL  ( 4001): [  559.138492] Error: returning -512 value
+01-23 12:41:41.968 I/KERNEL  (    1): [  559.140423] init: Service 'adbd' (pid 4001) killed by signal 9
+01-23 12:41:41.969 I/KERNEL  (    1): [  559.140886] init: Service 'adbd' (pid 4001) killing any children in process group
+01-23 12:41:41.971 I/KERNEL  (    1): [  559.142962] init: Starting service 'adbd'...
+01-23 12:41:41.973 I/KERNEL  ( 4121): [  559.145544] msm_otg 78d9000.usb: USB in low power mode
+01-23 12:41:41.976 I/KERNEL  ( 4204): [  559.148041] read descriptors
+01-23 12:41:41.976 I/KERNEL  ( 4204): [  559.148134] read descriptors
+01-23 12:41:41.976 I/KERNEL  ( 4204): [  559.148181] read strings
+01-23 12:41:41.936 D/bt_btif ( 3348): BTHF: device_status_notification
+01-23 12:41:41.946 I/GeckoConsole(  320): QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-23 12:41:41.946 D/QLOC-OSAgent(  320): POWERSTATE: 0
+01-23 12:41:41.946 E/IzatSvc_OSObserver(  320): I/LocTech-Label :: OSOBSERVER :: Data Items In
+01-23 12:41:41.946 E/IzatSvc_OSObserver(  320): I/LocTech-Value :: Data Item Value: IS_POWER_CONNECTED: false
+01-23 12:41:41.946 E/LocSvc_api_v02(  320): I/---> locClientSendReq line 2035 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-23 12:41:41.946 E/LocSvc_libulp(  320): I/int ulp_msg_process_system_update(UlpSystemEvent): systemEvent:3 
+01-23 12:41:41.946 E/LocSvc_libulp(  320): I/int ulp_msg_process_start_req(), at ulp state = 1
+01-23 12:41:41.956 E/LocSvc_ApiV02(  320): I/<--- void globalRespCb(locClientHandleType, uint32_t, locClientRespIndUnionType, uint32_t, void*) line 117 QMI_LOC_SET_EXTERNAL_POWER_CONFIG_REQ_V02
+01-23 12:41:41.956 D/bt_btif ( 3348): BTHF: device_status_notification
+01-23 12:41:41.956 I/GeckoConsole(  320): QLOC: MozSettingShim: Got topic change:gonkhal-battery-notifier
+01-23 12:41:42.946 I/DongleAutoMounter(  320): Dongle disable tether
+01-23 12:41:42.946 I/DongleAutoMounter(  320): SetDongleTetherDB aEnable : 0
+01-23 12:41:42.956 I/DongleAutoMounter(  320): unplugged confirmed. reset retry Flag
+01-23 12:41:42.986 I/Gecko   (  320): [SUB0] QCONTENT_HELPER Received observer notification: mozsettings-changed
+01-23 12:41:43.186 E/sdcard  ( 2973): missing packages.list; retrying
+01-23 12:41:44.926 I/Gecko   (  320): [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:44.936 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = Backspace
+01-23 12:41:44.936 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener Backspace
+01-23 12:41:44.936 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:41:44.946 I/GeckoConsole(  320): Content JS LOG: [AppUsage] got an event:  active 
+01-23 12:41:44.946 I/GeckoConsole(  320):     at debug (app://system.gaiamobile.org/js/app_usage_metrics.js:141:7)
+01-23 12:41:45.066 D/ThermalEngine(  315): sensor_wait: case_therm Wait done.
+01-23 12:41:45.066 D/ThermalEngine(  315): sensor_monitor: case_therm Reading 31000 .
+01-23 12:41:45.066 I/ThermalEngine(  315): Sensor:case_therm:31000 mC
+01-23 12:41:45.066 D/ThermalEngine(  315): update_active_thresh: case_therm Active(1), Hi(1) 40000, Lo(0) -2147483648, Interval(1) 5000
+01-23 12:41:45.066 D/ThermalEngine(  315): sensor_monitor: case_therm Sensor wait.
+01-23 12:41:45.066 D/ThermalEngine(  315): sensor_wait: case_therm Wait start. 5000ms
+01-23 12:41:45.096 I/Gecko   (  320): [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:45.106 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:41:45.136 E/GeckoConsole(  320): Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-23 12:41:45.136 E/GeckoConsole(  320):     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:17:1)
+01-23 12:41:45.136 E/GeckoConsole(  320):     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:11:1)
+01-23 12:41:45.336 I/Gecko   (  320): [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:45.336 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: gaolu logmanager e.key = Backspace
+01-23 12:41:45.336 I/GeckoDump( 3971): <LM_LOG> -*- logmanager -*-: addEventListener Backspace
+01-23 12:41:45.336 I/Gecko   ( 3971): [BrowserElement] event type: keydown, key: Backspace, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:41:45.466 I/Gecko   (  320): [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLIFrameElement], src: app://logmanager.gaiamobile.org/index.html, id: browser4, class: browser
+01-23 12:41:45.476 I/Gecko   ( 3971): [BrowserElement] event type: keyup, key: Backspace, target: [object HTMLLIElement], id: logcat, class: contentBar
+01-23 12:41:45.476 E/GeckoConsole(  320): Content JS ERROR: Unexpected hardware key:  backspace-button-release 
+01-23 12:41:45.476 E/GeckoConsole(  320):     at HardwareButtonsBaseState.prototype.process (app://system.gaiamobile.org/js/hardware_buttons.js:17:1)
+01-23 12:41:45.476 E/GeckoConsole(  320):     at hb_handleEvent (app://system.gaiamobile.org/js/hardware_buttons.js:11:1)
+01-23 12:41:45.676 I/FocusManager( 3971): <- blur on, NULL, tag: , id: , class: 
+01-23 12:41:45.696 I/Gecko   ( 3971): -*- SettingsManager: Received: inner-window-destroyed for valid innerWindowID=15032385539, cleanup.
+01-23 12:41:45.736 I/Gecko   (  320): 
+01-23 12:41:45.736 I/Gecko   (  320): ###!!! [Child][MessageChannel] Error: (msgtype=0x440003,name=PCompositorBridge::Msg_DidComposite) Channel error: cannot send/recv
+01-23 12:41:45.736 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 I/Gecko   (  320): ###!!! [Child][OnMaybeDequeueOne] Error: Channel error: cannot send/recv
+01-23 12:41:45.746 I/Gecko   (  320): 
+01-23 12:41:45.746 

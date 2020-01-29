@@ -25,3 +25,15 @@ git am --show-current-patch ................. to show the current patchs
 git format-patch HEAD -1 ...... for patch creating
 
 git am -s patch-name .......... for patchapplying
+.........................................................................
+for taking internal logs of device 
+
+type *#*#0574#*#* in device (mobile) and do according to required settings
+...............................................................................................
+
+in device device storage 
+
+disable ---- windows
+enable  ---- linux
+............................................................................................................
+  
