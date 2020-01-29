@@ -1,0 +1,21 @@
+ARB  :
+
+ARB makes use of Android Verified Boot 2.0 (also known as Verified Boot). This prevents the device from booting if it detects that the device has been downgraded to an older, unapproved software build. 
+
+ARB is basically a new security mechanism introduced by Google within Android 8.1 Oreo. However, it is not mandatorily activated. OEM manufacturers can opt whether to use or not to use this feature on all shipped Android Oreo devices.
+
+
+ 1. abi       - This folder contains a sub folder called cpp which actually contains many C++ files linked to many places.
+ 2. Bionic    - C library,math and dynamic linker interface directory.The `tests/` directory contains unit tests
+ 3. bootable  - Boot and startup related code
+ 4. build     - The main entry point of the build system resides here - envsetup.sh, if you follow the instruction in source.android.com you will see that the first step before you do anything to build Android is to use the command source build/envsetup.sh
+The script will check few things to make sure all the needed application available in the local machine. It also setup the devices that can be built, which is extracted from the directory device.
+ 5. dalvik    - This is the folder responsible for the compilation of the Dalvik runtime for the Android devices.
+ 6. Device    - It contains the device specific configurations for many devices.
+ 7. external  - This directory contains source code for all external open source projects such as SQLite, Freetype, webkit and webview.
+ 8. framworks - Here you will find the implementation of key services such as the System Server with the Package- and Activity managers. A lot of the mapping between the java application APIs and the native libraries is also done here.
+ 9. gaia      - it conatins all applications like gallery,ringtones,camera,bluetooth,calenderetc.,
+ 10.Out       - The build output will be placed here after you run make. The folder structure is out/target/product/. In the default build for the emulator the output will be placed in out/target/product/generic. This is where you will find the images used by the emulator to start (or to be downloaded and flashed to a device if you are building for a hardware target).
+ 11.Packages - Standard Android application that are available as part of the AOSP - Camera, SMS, Dialer, Launcher, etc
+ 12.Prebuilt - Contains files that are distributed in binary form for convenience. Examples include the cross compilations toolchains for different development machines.
+ 13.Vendor - This directory contains vendors specific libraries. Most of the proprietary binary libraries from non-open source projects are stored here when building AOSP.
