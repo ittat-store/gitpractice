@@ -1,0 +1,24 @@
+Project 1: Building KaiOS on top Linux kernel and Android Framework for JIO Feature Phones using ARM Based SoC.
+COMPANY: Votary Softech Solutions, Hyderabad (Reliance ODC)
+Hardware Platform : Qualcomm MSM8905 Chipset ( ARM-Cortex A Series Processor)
+Platform: Linux, Android, KaiOS
+Tools Used: GIT, Repo, Make, Linux Device Drivers
+Languages : C, C++, and LSP.
+Customer Electronic Devices: Feature Phone Models: F30C, F90M, F300B, F120, And F120B
+Description:
+Developing and integrating the updates coming from KaiOS and Qualcomm specific to Vendor Devices from
+Reliance JIO. We are providing the long term support for reliance jio feature phones to resolve the issue specific
+to devices for all prospective, we need to generate the build and verify the updated features from verification team
+and generate the FOTA which need to be submitted to Reliance team.
+Roles & Responsibilities:
+
+Bootloader (LK Bootloader) and Recovery Code Development.
+Customization of Boot Up, Boot-Down Screen, Adding Boot Animation as per UI Specification.
+In charge of firmware deployment in production, flashing tools (QFIL, QFlash) & software validation.
+Updating the MMI Test App as per Target Device.
+Implement New Features and Resolve various issues reported by VIT Team / Internal Team.
+Getting the offline FOTA and online FOTA generated and verified.
+Develops software documentation.
+Develops test plans for product verification. Assists test department for test procedures creation.
+
+

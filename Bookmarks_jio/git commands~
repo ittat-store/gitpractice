@@ -37,3 +37,27 @@ disable ---- windows
 enable  ---- linux
 ............................................................................................................
   
+to search data in a terminal 
+press ctrl+shift+F after that one pop up window comes in that search particular string
+
+or in terminal above right goto edit ............> profile preferences ............> scrolling ...........>set unlimited.
+.....................................................................................................................................
+
+to comment node js tool ,edit below file
+
+LINUX/android/gaia/build/build-bundle.sh file 
+here comment #checknodeenv
+...............................................................................................................
+to check the ongoing build status use below command
+
+make -j4 &> build.log (build.log is file name)
+
+tail -f build.log
+...................................................................................................
+for taking scrennshot of particular area
+
+search screenshot in pc and nxt select garb particular area nxt by mouse selcet that particular area
+or shilt+printscreen key 
+
+
+
