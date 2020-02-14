@@ -1,0 +1,88 @@
+Android Bootloader - UART_DM Initialized!!!                                  
+[0] [0] welcome to lk                                                        
+                                                                             
+[10] [10] platform_init()                                                    
+[10] [10] target_init()                                                      
+[70] [70] GPIO[22] pull down            
+[70] [70] GPIO[98] pull down            
+[70] [70] Switch GPIO[14] PULL DOWN     
+[80] [80] GPIO[14] pull UP              
+[90] [90] GPIO[89] pull down            
+[90] [90] GPIO[88] pull down            
+[100] [100] Bluebank HWID: 0 om        |
+[100] [100] Bluebank HWID DRAM config: 0 
+[100] [100] KEY_VOLUMEDOWN 0 KEY_VOLUMEUP 1 ......................................... different
+[120] [120] SDHC Running in DDR mode
+[120] [120] Done initialization of the card
+[140] [140] ddr MR5=(6), MR8=(1b)
+[140] [140] pm8x41_get_is_cold_boot: cold boot
+[140] [140] Waiting for the RPM to populate smd channel table
+[190] [190] OEM panel override:holitech_gc9305_id_qvga_cmd
+[240] [240] Panel power on done
+[300] [300] Get gc9306 OTP id1 =0x11,id2 =0x93,id3 =0x5 
+[310] [310] Get GC OTP id =0x119305 
+[370] [370] Get gc9306 OTP id1 =0x11,id2 =0x93,id3 =0x5 
+[370] [370] Get GC OTP id =0x119305 
+[380] [380] Config SPI PANEL.
+[500] [500] ERROR: Splash image header invalid
+[520] [520] Turn on SPI PANEL.
+[810] [810] ddr MR5=(6), MR8=(1b)
+[810] [810] bluebank_target_pause_for_edl : pon_reason is:128 ...................................... different
+[820] [820] Unable to locate /bootselect partition
+[830] [830] Loading boot image (13322240): start
+[1000] [1000] Loading boot image (13322240): done
+[1000] [1000] use_signed_kernel=0, is_unlocked=0, is_tampered=0.
+[1050] [1050] DTB Total entry: 131, DTB version: 3
+[1060] [1060] Using DTB entry 0x0000014b/00000000/0x0001000b/256 for device 0x0000014b/00020000/0x0001000b/0
+[1070] [1070] Loading keystore failed status 5 [1070] [1070] pm8x41_get_is_cold_boot: cold boot
+[1080] [1080] target_pause_for_battery_charge : pon_reason is 128 cold_boot:1
+[1080] [1080] emmic manfid 144
+[1090] [1090] cmdline: console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=t
+[1250] [1250] Updating device tree: done
+[1260] [1260] Channel alloc freed
+[1270] [1270] booting linux @ 0x80008000, ramdisk @ 0x82000000 (1095443), tags/device tree @ 0x81e00000
+Android Bootloader - UART_DM Initialized!!!
+[0] [0] welcome to lk
+
+[10] [10] platform_init()
+[10] [10] target_init()
+[60] [60] GPIO[22] pull down
+[60] [60] GPIO[98] pull down
+[60] [60] Switch GPIO[14] PULL DOWN
+[70] [70] GPIO[14] pull UP
+[80] [80] GPIO[89] pull down
+[80] [80] GPIO[88] pull down
+[90] [90] Bluebank HWID: 0 
+[90] [90] Bluebank HWID DRAM config: 0 
+[90] [90] KEY_VOLUMEDOWN 0 KEY_VOLUMEUP 0
+[110] [110] SDHC Running in DDR mode
+[110] [110] Done initialization of the card
+[120] [120] ddr MR5=(6), MR8=(1b)
+[130] [130] pm8x41_get_is_cold_boot: cold boot
+[130] [130] Waiting for the RPM to populate smd channel table
+[190] [190] OEM panel override:holitech_gc9305_id_qvga_cmd
+[230] [230] Panel power on done
+[300] [300] Get gc9306 OTP id1 =0x11,id2 =0x93,id3 =0x5 
+[300] [300] Get GC OTP id =0x119305 
+[360] [360] Get gc9306 OTP id1 =0x11,id2 =0x93,id3 =0x5 
+[360] [360] Get GC OTP id =0x119305 
+[370] [370] Config SPI PANEL.
+[500] [500] ERROR: Splash image header invalid
+[520] [520] Turn on SPI PANEL.
+[800] [800] ddr MR5=(6), MR8=(1b)
+[810] [810] Unable to locate /bootselect partition
+[810] [810] Loading boot image (12763136): start
+[980] [980] Loading boot image (12763136): done
+[980] [980] use_signed_kernel=0, is_unlocked=0, is_tampered=0.
+[1030] [1030] DTB Total entry: 131, DTB version: 3
+[1030] [1030] Using DTB entry 0x0000014b/00000000/0x0001000b/256 for device 0x0000014b/00020000/0x0001000b/0
+[1040] [1040] pm8x41_get_is_cold_boot: cold boot
+[1050] [1050] target_pause_for_battery_charge : pon_reason is 1 cold_boot:1
+[1050] [1050] emmic manfid 144
+[1060] [1060] cmdline: console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=t
+[1220] [1220] Updating device tree: done
+[1230] [1230] Channel alloc freed
+[1240] [1240] booting linux @ 0x80008000, ramdisk @ 0x82000000 (534635), tags/device tree @ 0x81e00000
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB0                                                                         
+
