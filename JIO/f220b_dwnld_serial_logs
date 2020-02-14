@@ -1,0 +1,32 @@
+Android Bootloader - UART_DM Initialized!!!
+[0] [0] welcome to lk
+
+[10] [10] platform_init()
+[10] [10] target_init()
+[80] [80] GPIO[22] pull down
+[80] [80] GPIO[98] pull down
+[80] [80] Switch GPIO[14] PULL DOWN
+[90] [90] GPIO[14] pull UP
+[100] [100] GPIO[89] pull down
+[100] [100] GPIO[88] pull down
+[110] [110] Bluebank HWID: 0 
+[110] [110] Bluebank HWID DRAM config: 0 
+[110] [110] KEY_VOLUMEDOWN 1 KEY_VOLUMEUP 1 .................... different
+[130] [130] SDHC Running in DDR mode
+[130] [130] Done initialization of the card
+[150] [150] ddr MR5=(6), MR8=(1b)
+[150] [150] pm8x41_get_is_cold_boot: cold boot
+[150] [150] Waiting for the RPM to populate smd channel table
+[200] [200] OEM panel override:holitech_gc9305_id_qvga_cmd
+[250] [250] Panel power on done
+[310] [310] Get gc9306 OTP id1 =0x11,id2 =0x93,id3 =0x5 
+[320] [320] Get GC OTP id =0x119305 
+[380] [380] Get gc9306 OTP id1 =0x11,id2 =0x93,id3 =0x5 
+[380] [380] Get GC OTP id =0x119305 
+[380] [380] Config SPI PANEL.
+[510] [510] ERROR: Splash image header invalid
+[530] [530] Turn on SPI PANEL.
+[820] [820] ddr MR5=(6), MR8=(1b)
+[820] [820] bluebank_target_pause_for_edl : pon_reason is:16
+[830] [830] dload mode key sequence detected ..................................................extra
+
