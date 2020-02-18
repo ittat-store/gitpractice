@@ -73,3 +73,18 @@ in QFIL goto Tools
 same procedure for loading all the images.
 ................................................................................................................
 
+In Repo for creating branch and pulling code 
+
+Ex:     repo branches ... to check branches in repo 
+	 
+	F50Y/ repo forall -c "git checkout branchname"
+
+        F50Y/ repo forall -c "git pull"
+
+In device/qcom/msm8909_512 check here git log --oneline
+..............................................................................................................................................
+
+
+
+
+
