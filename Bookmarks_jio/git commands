@@ -83,7 +83,15 @@ Ex:     repo branches ... to check branches in repo
 
 In device/qcom/msm8909_512 check here git log --oneline
 ..............................................................................................................................................
+For F20A
 
+For In Windows pc NHLOS and in Linux PC compiled HLOS binaries 
+In windows pc run 1st line see in commands to clone doc for compilation..
+
+nxt in linux PC out/..../msm8909_512/ git add . and git commit 
+................................................................................
+
+													
 
 
 
