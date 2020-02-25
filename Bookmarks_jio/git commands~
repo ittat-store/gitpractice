@@ -88,8 +88,44 @@ For F20A
 For In Windows pc NHLOS and in Linux PC compiled HLOS binaries 
 In windows pc run 1st line see in commands to clone doc for compilation..
 
-nxt in linux PC out/..../msm8909_512/ git add . and git commit 
+nxt in linux PC out/..../msm8909_512/ git init . ,  git add . , and git commit 
 ................................................................................
+
+To change build tages
+
+In repo codes
+
+vi device/qcom/msm8909_512/hymost.prop  here change all the tags date if it is userdebug build then remove "production" (ro.product.version_tag=kaios_jio_quoin_2_5_20181106_R3_ER11_production)
+
+if debug put _i (ro.build.display.id=LYF-F50Y-001-03-10-060220)
+
+nxt goto vi device/qcom/msm8909_512/default-pref/default-pref change here also 
+
+
+In Bluebank code base
+
+vi version/version.... file change here
+................................................................................................
+
+
+In repo to check git log 
+
+cd objdir-gecko/dist/ git log --oneline
+
+or repo forall -c "git log --oneline"
+....................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
 
 													
 
