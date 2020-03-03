@@ -104,9 +104,8 @@ nxt goto vi device/qcom/msm8909_512/default-pref/default-pref change here also
 
 In Bluebank code base
 
-vi version/version.... file change here
+vi version/version.....txt  file change here
 ................................................................................................
-
 
 In repo to check git log 
 
@@ -115,14 +114,65 @@ cd objdir-gecko/dist/ git log --oneline
 or repo forall -c "git log --oneline"
 ....................................................................................
 
+Tocheck Backlight issue ( LCD adn Keyboard Flickering ) press *#2886# in device next select according to menu
+......................................................................................................................
+In Linux PC
+By default it is 8000 (python server)
+To give another port number in terminal type 
 
+python3 -m http.server 8001
 
+In Windows PC
+python -m SimpleHTTPServer (if need port number)
 
+..........................................................................................................
 
+To find file name find -iname filename
+or find . -type f -name "filename"
+.........................................................................................................
 
+To collect serial number from device
+adb devices
+adb root
+adb shell
+/system/bin/r 0x00058008 (8008 is a port number same for all, and 'r' is nothing but root)
 
+see here serial number (8 digits)
 
+........echo c >/proc/sysra --trigger (extra line ignore)
+...........................................................................................................
 
+To collect crash dumps :
+In NHLOS path :
+common/tools/sectools/config/msm8905/8905_secimage.xml
+
+in this file search crash and relace with serial number
+ex : <crashdumps> serial number </crashdump>
+
+search debug 
+here also change serail number 
+
+In HLOS Path :
+
+kernel/drivers/power/reset/msm_poweroff.c
+
+Next by QFIL flash 
+and QPST open select port number
+
+In Terminal adb root
+adb shell
+echo c > /proc/sysrq-trigger
+after enter this command device will go to off i.e., crash and observe in QPST green color loaded after green complted then device ON .i.e., comes out off crash state...
+
+These logs present in the QPST 
+help
+oprn log directory
+sahara
+with comport name log file will save ...
+....................................................................................................................................................
+
+RIL Domain ID : keerthi.cheguri
+...........................................................................................................................
 
 
 
