@@ -173,9 +173,12 @@ with comport name log file will save ...
 
 RIL Domain ID : keerthi.cheguri
 ...........................................................................................................................
+here data path is from device location , meta is current machine location
+and you have to use this command in terminal dont enter into device.
 
+$adb pull /data/bootchart/.  /home/chegukee/meta
 
-
+..................................................................................................................................
 
 													
 
