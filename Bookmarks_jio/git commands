@@ -29,6 +29,17 @@ git am -s patch-name .......... for patchapplying
 for taking internal logs of device 
 
 type *#*#0574#*#* in device (mobile) and do according to required settings
+
+after connect usb goto internal storage and select logmanger and collect logs
+if usb not enabled then by commands 
+
+adb shell
+goto /data/logmanager here log collect log file
+
+....................................................................
+in terminal $ adb shell dmesg > filename 
+
+
 ...............................................................................................
 
 in device device storage 
@@ -93,6 +104,9 @@ nxt in linux PC out/..../msm8909_512/ git init . ,  git add . , and git commit
 
 To change build tages
 
+first goto git log --oneline 
+inthat see the latest tag and with that commit id see which files are edited like git show commit id
+
 In repo codes
 
 vi device/qcom/msm8909_512/hymost.prop  here change all the tags date if it is userdebug build then remove "production" (ro.product.version_tag=kaios_jio_quoin_2_5_20181106_R3_ER11_production)
@@ -131,7 +145,9 @@ To find file name find -iname filename
 or find . -type f -name "filename"
 .........................................................................................................
 
-To collect serial number from device
+To collect 
+
+ number from device
 adb devices
 adb root
 adb shell
@@ -139,7 +155,7 @@ adb shell
 
 see here serial number (8 digits)
 
-........echo c >/proc/sysra --trigger (extra line ignore)
+........echo c >/proc/sysra --trigger (extra command ignore)
 ...........................................................................................................
 
 To collect crash dumps :
@@ -166,7 +182,7 @@ after enter this command device will go to off i.e., crash and observe in QPST g
 
 These logs present in the QPST 
 help
-oprn log directory
+open log directory
 sahara
 with comport name log file will save ...
 ....................................................................................................................................................
@@ -179,9 +195,34 @@ and you have to use this command in terminal dont enter into device.
 $adb pull /data/bootchart/.  /home/chegukee/meta
 
 ..................................................................................................................................
+http://192.168.2.220:8081/artifactory/webapp/#/home .......... for artifactory
 
-													
+..........................................................................................................
+https://prms.ril.com/prms/main/pc_index.aspx ... for timesheets
+.................................................................................................................
 
+http://192.168.2.50:1800/users/sign_in ................ for git lab 
+
+http://192.168.2.220:1800/dashboard/projects ................ new one
+......................................................................................
+hacker rank login : chegurikeerthikuamri@gmail.com	
+pwd : 527897@Keert
+......................................................................................
+RIL ID : keerthi.cheguri
+RIL mail : sudheer.gurram@votarytech.com
+...................................................................................................
+
+LT-800 EDL Mode ..... Volume up +down +power button
+build the code using : ./build_QC.sh QC80B 20 f userdebug
+
+
+......................................................................................................
+												
+rooted app issue :
+goto jio app store and check rooted app should be rooted app=false
+in dmesg logs secure _boot should be = true 
+and selinux is enforcing ,,, enabling dm-verity ,,, usermode =user
+.......................................................................
 
 
 
