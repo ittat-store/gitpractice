@@ -25,6 +25,10 @@ git am --show-current-patch ................. to show the current patchs
 git format-patch HEAD -1 ...... for patch creating
 
 git am -s patch-name .......... for patchapplying
+
+git apply --reject patchilename 
+
+patch p1 < patchfilename 
 .........................................................................
 for taking internal logs of device 
 
@@ -141,7 +145,8 @@ python -m SimpleHTTPServer (if need port number)
 
 ..........................................................................................................
 
-To find file name find -iname filename
+To find file name 
+find -iname filename
 or find . -type f -name "filename"
 .........................................................................................................
 
@@ -223,6 +228,25 @@ goto jio app store and check rooted app should be rooted app=false
 in dmesg logs secure _boot should be = true 
 and selinux is enforcing ,,, enabling dm-verity ,,, usermode =user
 .......................................................................
+hard pacth means sharing files by malis 
 
+soft patches means...
+git fetch id@ip pathofthe folder where changes present && git cherry-pick commit-id
+Ex : 
+git fetch ssh://gurrasud@192.168.2.112/home/gurrasud/workspace/F50Y/LINUX/android/bootable/bootloader/lk && git cherry-pick 771e583
+
+..............................................................................................................................................
+
+git remote change from one remote to another
+
+ex : $ git remote -v 
+	192.168.2.50
+
+next $ git branch -b 192.168.2.220:....patch (like clone command) branch name 
+     $ git checkout to that particular branch
+     $ git push command 
+
+or otherwise simply clone from new remote into new directory
+.......................................................................................................
 
 
