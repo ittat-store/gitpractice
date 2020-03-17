@@ -1,0 +1,187 @@
+From 371cc77c6bf1f808f6992b61e32a02a389374363 Mon Sep 17 00:00:00 2001
+From: chegurikeerthikumari <chegurikeerthikumari@gmail.com>
+Date: Tue, 4 Feb 2020 15:05:47 +0530
+Subject: [PATCH] F90M bootable patch
+
+---
+ .../bootable/bootloader/lk/app/aboot/aboot.c  |   4 +-
+ .../bootloader/lk/target/msm8909/init.c       | 107 ++++++++++++++++++
+ 2 files changed, 109 insertions(+), 2 deletions(-)
+ mode change 100644 => 100755 LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c
+ mode change 100644 => 100755 LINUX/android/bootable/bootloader/lk/target/msm8909/init.c
+
+diff --git a/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c b/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c
+old mode 100644
+new mode 100755
+index 0f55b7c37b..b721013001
+--- a/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c
++++ b/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c
+@@ -3923,8 +3923,8 @@ void aboot_init(const struct app_descriptor *app)
+ 		goto normal_boot;
+ 
+ 	/* Check if we should do something other than booting up */
+-	if (keys_get_state(KEY_MENU))
+-	//if (keys_get_state(KEY_VOLUMEUP) && keys_get_state(KEY_VOLUMEDOWN))
++	//if (keys_get_state(KEY_MENU))
++	if (keys_get_state(KEY_VOLUMEUP) && keys_get_state(KEY_VOLUMEDOWN))
+ 	{
+ 		dprintf(ALWAYS,"dload mode key sequence detected\n");
+ 		if (set_download_mode(EMERGENCY_DLOAD))
+diff --git a/LINUX/android/bootable/bootloader/lk/target/msm8909/init.c b/LINUX/android/bootable/bootloader/lk/target/msm8909/init.c
+old mode 100644
+new mode 100755
+index 7241b2a738..87825e66af
+--- a/LINUX/android/bootable/bootloader/lk/target/msm8909/init.c
++++ b/LINUX/android/bootable/bootloader/lk/target/msm8909/init.c
+@@ -63,6 +63,9 @@
+ #include <vibrator.h>
+ #endif
+ 
++
++#define TRUE 1
++
+ #define PMIC_ARB_CHANNEL_NUM    0
+ #define PMIC_ARB_OWNER_ID       0
+ #define TLMM_VOL_UP_BTN_GPIO    90
+@@ -215,6 +218,28 @@ void *target_mmc_device()
+ /* Return 1 if vol_up pressed */
+ int target_volume_up()
+ {
++#if TRUE 
++#define STAR_KEY_ROW 95
++
++//	KEY_VOLUMEUP(Star) -- Recovery
++//	KEY_DOWN   (POUND)  -- Fastboot 
++//	KEY_VOLUMEUP +  KEY_DOWN Dload
++	uint32_t status = 0;
++	
++	gpio_tlmm_config(STAR_KEY_ROW, 0, GPIO_INPUT, GPIO_PULL_DOWN, GPIO_2MA, GPIO_ENABLE);
++	gpio_tlmm_config(56, 0, GPIO_OUTPUT, GPIO_NO_PULL, GPIO_8MA, GPIO_DISABLE);
++	gpio_set(56,2);
++
++	thread_sleep(10);
++	status = gpio_status(STAR_KEY_ROW);
++	if(status != 0){// debouce
++		thread_sleep(10);
++		status = gpio_status(STAR_KEY_ROW);
++	}
++	
++	return status;
++
++#else
+         static uint8_t first_time = 0;
+ 	uint8_t status = 0;
+ 
+@@ -232,11 +257,32 @@ int target_volume_up()
+ 
+ 	/* Active low signal. */
+ 	return !status;
++
++#endif
+ }
+ 
+ /* Return 1 if vol_down pressed */
+ uint32_t target_volume_down()
+ {
++#if TRUE
++#define POUND_KEY_ROW 96
++//	KEY_VOLUMEUP(Star) -- Recovery
++//	KEY_DOWN   (POUND)  -- Fastboot 
++//	KEY_VOLUMEUP +  KEY_DOWN Dload
++	uint32_t status = 0;
++	
++	gpio_tlmm_config(POUND_KEY_ROW, 0, GPIO_INPUT, GPIO_PULL_DOWN, GPIO_2MA, GPIO_ENABLE);
++	gpio_tlmm_config(56, 0, GPIO_OUTPUT, GPIO_NO_PULL, GPIO_8MA, GPIO_DISABLE);
++	gpio_set(56,2);
++	thread_sleep(10);
++	status = gpio_status(POUND_KEY_ROW);
++	if(status != 0){// debouce
++		thread_sleep(10);
++		status = gpio_status(POUND_KEY_ROW);
++	}
++	return status;
++#else
++
+ 	if ((board_hardware_id() == HW_PLATFORM_QRD) &&
+ 			(board_hardware_subtype() == SUB_TYPE_SKUT)) {
+ 		uint32_t status = 0;
+@@ -255,8 +301,62 @@ uint32_t target_volume_down()
+ 		/* Volume down button tied in with PMIC RESIN. */
+ 		return pm8x41_resin_status();
+ 	}
++#endif
++}
++/* Return 1 if vol_down pressed */
++uint32_t target_key_8()
++{
++#if TRUE
++#define KEY_8_ROW 94
++//	KEY_VOLUMEUP(Star) -- Recovery
++//	KEY_DOWN   (POUND)  -- Fastboot 
++//	KEY_VOLUMEUP +  KEY_DOWN Dload
++	uint32_t status = 0;
++	
++	gpio_tlmm_config(KEY_8_ROW, 0, GPIO_INPUT, GPIO_PULL_DOWN, GPIO_2MA, GPIO_ENABLE);
++	gpio_tlmm_config(56, 0, GPIO_OUTPUT, GPIO_NO_PULL, GPIO_8MA, GPIO_DISABLE);
++	gpio_set(56,2);
++	thread_sleep(10);
++	status = gpio_status(KEY_8_ROW);
++	if(status != 0){// debouce
++		thread_sleep(10);
++		status = gpio_status(KEY_8_ROW);
++	}
++	return status;
++#else
++  return 0;
++#endif
+ }
+ 
++
++uint32_t target_key_6()
++{
++#if TRUE
++#define KEY_6_ROW 97
++//	KEY_VOLUMEUP(Star) -- Recovery
++//	KEY_DOWN   (POUND)  -- Fastboot 
++//	KEY_VOLUMEUP +  KEY_DOWN Dload
++	uint32_t status = 0;
++	
++	gpio_tlmm_config(KEY_6_ROW, 0, GPIO_INPUT, GPIO_PULL_DOWN, GPIO_2MA, GPIO_ENABLE);
++	gpio_tlmm_config(56, 0, GPIO_OUTPUT, GPIO_NO_PULL, GPIO_8MA, GPIO_DISABLE);
++	gpio_set(56,2);
++	thread_sleep(10);
++	status = gpio_status(KEY_6_ROW);
++	if(status != 0){// debouce
++		thread_sleep(10);
++		status = gpio_status(KEY_6_ROW);
++	}
++	return status;
++#else
++
++	return 0;
++#endif
++}
++
++
++
++
+ uint32_t target_downloader()
+ {
+ 	uint32_t status = 0;
+@@ -283,6 +383,13 @@ static void target_keystatus()
+ 
+ 	if(target_volume_up())
+ 		keys_post_event(KEY_VOLUMEUP, 1);
++    if(target_key_8())
++        keys_post_event(KEY_8, 1);
++    if(target_key_6())
++        keys_post_event(KEY_6, 1);
++    
++	//target_ferrite();
++		
+ 
+ 	if(target_downloader())
+ 		keys_post_event(KEY_MENU, 1);
+-- 
+2.24.1
+
