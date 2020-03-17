@@ -1,0 +1,93 @@
+From 385ff720e9bcacd797a3e6b073c12d8018c2cbc8 Mon Sep 17 00:00:00 2001
+From: chegurikeerthikumari <keerthikumari.cheguri@votarytech.com>
+Date: Tue, 25 Feb 2020 18:19:24 +0530
+Subject: [PATCH] FDR_25per_Battery
+
+Change-Id: I4e9894e68da62656d3c758dd72e8e7c75c211312
+---
+ recovery.cpp | 55 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+
+diff --git a/recovery.cpp b/recovery.cpp
+index 0d8e85e..fd54129 100644
+--- a/recovery.cpp
++++ b/recovery.cpp
+@@ -51,6 +51,14 @@
+ #include "fuse_sdcard_provider.h"
+ #include "private/android_filesystem_config.h"
+ 
++#define BATTERY_OK_PERCENTAGE 25
++#define BATTERY_WITH_CHARGER_OK_PERCENTAGE 15
++#define RECOVERY_BATTERY_LOW         3020
++
++
++#define BATTERY_CAPCITY_FILE "/sys/class/power_supply/battery/capacity"
++#define BATTERY_STATUS_FILE  "/sys/class/power_supply/battery/status"
++
+ struct selabel_handle *sehandle;
+ #define UFS_DEV_SDCARD_BLK_PATH "/dev/block/mmcblk0p1"
+ static const struct option OPTIONS[] = {
+@@ -230,6 +238,46 @@ check_and_fclose(FILE *fp, const char *name) {
+     fclose(fp);
+ }
+ 
++
++ static int readFromFile(const char* path, char* buf, size_t size) {
++    char *cp = NULL;
++
++    if (path == NULL || strlen(path) == 0)
++        return -1;
++    int fd = open(path, O_RDONLY, 0);
++    if (fd < 0) {
++        printf("Could not open '%s'\n", path);
++        return -1;
++    }
++
++    ssize_t count = read(fd, buf, size);
++    close(fd);
++    return count;
++}
++
++static bool is_battery_ok() {
++  char buf[64] = {0};
++  int capacity = 0;
++  bool charged = false;
++  int i = 0;
++
++  while (i < 5 && readFromFile(BATTERY_CAPCITY_FILE,buf,64) <= 0) {
++     sleep(1);
++     i++;
++  }
++  if (i < 5) {
++    sscanf(buf,"%d",&capacity);
++  } else {
++    return false;
++ }
++  printf("The left battery capcity:%d\n",capacity);
++  memset(buf,0,64);
++  readFromFile(BATTERY_STATUS_FILE,buf,64);
++  printf("The battery status:%s\n",buf);
++  charged = (strcmp(buf,"Charging") == 0);
++  return ((capacity >= BATTERY_OK_PERCENTAGE) || (charged && capacity >= BATTERY_WITH_CHARGER_OK_PERCENTAGE));
++}
++
+ // command line args come from, in decreasing precedence:
+ //   - the actual command line
+ //   - the bootloader control block (one per line, after "recovery")
+@@ -820,6 +868,13 @@ static bool wipe_data(int should_confirm, Device* device) {
+         return false;
+     }
+ 
++if (is_battery_ok() == false) {
++       if (err_no != NULL) err_no = RECOVERY_BATTERY_LOW;
++	ui->Print("\n-- Wiping data failed...\n");
++        return false;
++    }
++
++
+     modified_flash = true;
+ 
+     ui->Print("\n-- Wiping data...\n");
+-- 
+2.24.1
+

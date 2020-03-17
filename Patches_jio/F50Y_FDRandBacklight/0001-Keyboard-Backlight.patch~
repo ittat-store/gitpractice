@@ -1,0 +1,166 @@
+From 23f2256f14b42a7d8cf9872fd2e933f3a40ca800 Mon Sep 17 00:00:00 2001
+From: chegurikeerthikumari <chegurikeerthikumari@gmail.com>
+Date: Fri, 21 Feb 2020 14:25:07 +0530
+Subject: [PATCH] Keyboard-Backlight
+
+Change-Id: I0893ffdb7ec3a9472ed82b82e4b0c756f35ffeed
+---
+ drivers/leds/Makefile             |   1 +
+ drivers/leds/keyboard-backlight.c | 133 ++++++++++++++++++++++++++++++
+ 2 files changed, 134 insertions(+)
+ create mode 100755 drivers/leds/keyboard-backlight.c
+
+diff --git a/drivers/leds/Makefile b/drivers/leds/Makefile
+index 201a9097c35..7125b708f8d 100644
+--- a/drivers/leds/Makefile
++++ b/drivers/leds/Makefile
+@@ -58,6 +58,7 @@ obj-$(CONFIG_LEDS_LM355x)		+= leds-lm355x.o
+ obj-$(CONFIG_LEDS_BLINKM)		+= leds-blinkm.o
+ obj-$(CONFIG_LEDS_MSM_GPIO_FLASH)	+= leds-msm-gpio-flash.o
+ obj-$(CONFIG_LEDS_AW2013)		+= leds-aw2013.o
++obj-y 					+=keyboard-backlight.o
+ 
+ # LED SPI Drivers
+ obj-$(CONFIG_LEDS_DAC124S085)		+= leds-dac124s085.o
+diff --git a/drivers/leds/keyboard-backlight.c b/drivers/leds/keyboard-backlight.c
+new file mode 100755
+index 00000000000..1898475f5d5
+--- /dev/null
++++ b/drivers/leds/keyboard-backlight.c
+@@ -0,0 +1,133 @@
++/*
++ * Keyboard Backlight Driver
++ *
++ * Copyright 2020 (C) keerthi kumari <keerthikumari.cheguri@votarytech.com>
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License version 2 as
++ * published by the Free Software Foundation.
++ *
++ */
++
++#include <linux/kernel.h>
++#include <linux/module.h>
++#include <linux/init.h>
++#include <linux/leds.h>
++#include <linux/io.h>
++#include <linux/platform_device.h>
++#include <linux/slab.h>
++#include <linux/uaccess.h>
++#include <linux/gpio.h>
++#include <linux/device.h>
++#include <linux/init.h>
++#include <linux/fs.h>
++#include <linux/cdev.h>
++
++
++#define KEYBOARD_DRIVER_NAME	"keyboard-backlight"
++#define KEYBOARD_GPIO_PIN 	903
++#define KEYBOARD_LED_ENABLE 1
++#define KEYBOARD_LED_DISABLE 0
++
++struct keyboard_led_data {
++	struct led_classdev led_cdev;
++	int gpio;
++};
++
++static void keyboard_led_set_brightness(struct led_classdev *led_cdev,
++				enum led_brightness led_val)
++{
++	if(!led_val)
++	{
++		gpio_set_value(KEYBOARD_GPIO_PIN, KEYBOARD_LED_DISABLE);
++	}
++	else
++		gpio_set_value(KEYBOARD_GPIO_PIN, KEYBOARD_LED_ENABLE);
++}
++
++static int keyboard_led_probe(struct platform_device *pdev)
++{
++	struct led_classdev *lp = NULL;
++	struct keyboard_led_data *data;
++	int  err;
++
++	printk("%s enter.\n", __func__);
++	data = devm_kzalloc(&pdev->dev, sizeof(*data), GFP_KERNEL);
++	if (!data) {
++		dev_err(&pdev->dev, "Could not allocate struct sunfire_drvdata\n");
++		return -ENOMEM;
++	}
++
++	gpio_direction_output(KEYBOARD_GPIO_PIN, 0);
++
++	data->gpio = KEYBOARD_GPIO_PIN;
++	lp = &data->led_cdev;
++	lp->name = KEYBOARD_DRIVER_NAME;
++	lp->brightness = 1;
++	lp->max_brightness = 1;
++	lp->brightness_set = keyboard_led_set_brightness;
++
++	err = led_classdev_register(&pdev->dev, lp);
++	if (err) {
++		dev_err(&pdev->dev, "Could not register %s LED\n", lp->name);
++		led_classdev_unregister(&data->led_cdev);
++		return err;
++	}
++
++	dev_set_drvdata(&pdev->dev, data);
++
++	return 0;
++}
++
++static int keyboard_led_remove(struct platform_device *pdev)
++{
++	struct keyboard_led_data *data = dev_get_drvdata(&pdev->dev);
++
++	led_classdev_unregister(&data->led_cdev);
++
++	return 0;
++}
++
++MODULE_ALIAS("platform:keyboard-backlight");
++
++static struct platform_driver keyboard_led_driver = {
++	.probe		= keyboard_led_probe,
++	.remove		= keyboard_led_remove,
++	.driver		= {
++		.name	= KEYBOARD_DRIVER_NAME,
++		.owner	= THIS_MODULE,
++	},
++};
++
++static int __init keyboard_leds_init(void)
++{
++	static struct platform_device *pdev;
++	int err;
++
++	err = platform_driver_register(&keyboard_led_driver);
++	if (err) {
++		pr_err("Could not register keyboard backlight driver\n");
++		goto out;
++	}
++
++	pdev = platform_device_register_simple(KEYBOARD_DRIVER_NAME, -1, NULL, 0);
++	if (IS_ERR(pdev)) {
++		err = PTR_ERR(pdev);
++		platform_driver_unregister(&keyboard_led_driver);
++		goto out;
++	}
++out:
++	return err;
++}
++
++static void __exit keyboard_leds_exit(void)
++{
++	platform_driver_unregister(&keyboard_led_driver);
++}
++
++module_init(keyboard_leds_init);
++module_exit(keyboard_leds_exit);
++
++MODULE_AUTHOR("keerthikumari <keerthikumari.cheguri@votarytech.com>");
++MODULE_DESCRIPTION("Keyboard Backlight Driver");
++MODULE_LICENSE("GPL");
+-- 
+2.24.1
+

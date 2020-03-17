@@ -1,0 +1,11 @@
+
+1) system/core/init/bootchart.cpp
+
+2) kernel/arch/arm/configs/F220B_.....defconfig file (unset configs )
+
+3) system/core/rootdir/init.rc
+   device/qcom/commom/rootdir/etc/init.qcom.rc
+   device/qcom/msm8909_512
+   gonk_misc/init.b2g.rc
+
+

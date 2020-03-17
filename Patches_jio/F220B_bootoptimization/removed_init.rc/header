@@ -1,0 +1,7 @@
+version = Android init 0.8
+title = Boot chart for Android (1970-01-01 01:12:56)
+system.uname = Linux 3.10.49 #1 SMP PREEMPT Mon Mar 16 12:32:46 IST 2020 armv7l
+system.release = LYF/F220B/msm8909_512:6.0.1/MMB29M/root03161217:userdebug/dev-keys
+system.cpu = armv7l
+system.kernel.options = sched_enable_hmp=1 console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=enforcing console=logk0 androidboot.emmc=true androidboot.serialno=3ae90eae androidboot.lcdid=9305_11 androidboot.ddrmanfid=6 androidboot.ddrmr8=1b androidboot.emmcmid=90 androidboot.emmccid=90014a483447326111023ae90eae6500 secure_boot_enabled=true androidboot.baseband=msm androidboot.ferrite=1 androidboot.hwid=H01 mdss_mdp3.panel=1:spi:0:qcom,mdss_spi_holitech_gc9305_id_qvga_cmd:1:none androidboot.panelname=holitech_gc9305_id_qvga_cmd
+

@@ -1,0 +1,1498 @@
+[    1.079723] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.099730] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.119769] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.139720] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.159730] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.179719] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091383c8 OPER:0x00000010
+[    1.199715] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.219728] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.239722] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.259719] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.279727] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.299718] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.319718] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.339726] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x35 MSTR_STS:0x091343c8 OPER:0x00000010
+[    1.359663] fs16xx 2-0035: read transfer error -107
+[    1.359670] fs16xx_i2c_probe FS16XX_ID_REG 0x0
+[    1.359690] fs16xx: probe of 2-0035 failed with error -1
+[    1.359753] aw889x driver version v1.0.2
+[    1.359806] aw889x_i2c_probe enter
+[    1.359984] aw889x_smartpa 2-0031: aw889x_parse_dt: reset gpio provided ok
+[    1.359994] aw889x_smartpa 2-0031: aw889x_parse_dt: no irq gpio provided.
+[    1.360006] aw889x_smartpa 2-0031: aw889x_i2c_probe: rst request failed
+[    1.360078] aw889x_smartpa: probe of 2-0031 failed with error -16
+[    1.369399] msm-pcm-lpa qcom,msm-pcm-lpa.47: msm_pcm_probe: dev name qcom,msm-pcm-lpa.47
+[    1.370296] platform qcom,msm-voip-dsp.49: Driver msm-voip-dsp requests probe deferral
+[    1.370641] platform qcom,msm-pcm-voice.50: Driver msm-pcm-voice requests probe deferral
+[    1.374283] msm8x16_asoc_machine_probe
+[    1.374292] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    1.374319] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    1.374332] msm8x16-asoc-wcd sound.71: default codec configured
+[    1.374341] msm8x16_asoc_machine_probe: ext_pa = 8
+[    1.374668] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    1.375837] msm8x16-asoc-wcd sound.71: ASoC: platform (null) not registered
+[    1.375875] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    1.375933] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.376179] u32 classifier
+[    1.376185]     Actions configured
+[    1.376195] Netfilter messages via NETLINK v0.30.
+[    1.376293] nf_conntrack version 0.5.0 (6264 buckets, 25056 max)
+[    1.376689] ctnetlink v0.93: registering with nfnetlink.
+[    1.376759] NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+[    1.376765] NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+[    1.377137] xt_time: kernel timezone is -0000
+[    1.377404] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.377549] arp_tables: (C) 2002 David S. Miller
+[    1.377589] TCP: cubic registered
+[    1.377595] Initializing XFRM netlink socket
+[    1.377930] NET: Registered protocol family 10
+[    1.378727] mip6: Mobile IPv6
+[    1.378763] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    1.378888] sit: IPv6 over IPv4 tunneling driver
+[    1.379351] NET: Registered protocol family 17
+[    1.379454] Bridge firewalling registered
+[    1.379466] Ebtables v2.0 registered
+[    1.379736] Bluetooth: dd451ef0
+[    1.379765] Bluetooth: dd451ee8Bluetooth: dd451f00
+[    1.379775] Bluetooth: dd451ed8Bluetooth: dd451ed8
+[    1.379790] Bluetooth: dd451ed0Bluetooth: dd451f10
+[    1.379804] Bluetooth: dd451f10<6>[    1.385974] BMS: parse_bms_dt_properties: v_cutoff_uv=3400000, max_v=4200000
+[    1.385987] BMS: parse_bms_dt_properties: r_conn=0 shutdown_soc_valid_limit=100 low_temp_threshold=0 ibat_avg_samples=16
+[    1.385995] BMS: parse_bms_dt_properties: ignore_shutdown_soc=0, use_voltage_soc=0 low_soc_fifo_length=2
+[    1.386003] BMS: parse_bms_dt_properties: force-s3-on-suspend=1 report-charger-eoc=1 disable-bms=0 disable-suspend-on-usb=1 aging_compensation=0
+[    1.386009] BMS: parse_bms_dt_properties: use-reported-soc is 1
+[    1.387436] of_batterydata_read_data: mars_4v2_2000mah_data loaded
+[    1.399262] BMS: bms_load_hw_defaults: BMS_EN=1 Sample_Interval-S1=[100]S2=[70]  Sample_Count-S1=[256]S2=[128] Fifo_Length-S1=[5]S2=[5] FSM_state=2
+[    1.406328] BMS: read_and_update_ocv: ocv_raw=0x37fb last_ocv_raw=0x37fb last_ocv_uv=4163016
+[    1.406368] BMS: calculate_initial_soc: warm_reset=0 est_ocv=0  shutdown_soc_invalid=0 shutdown_ocv=4175000 shutdown_soc=100 last_soc=100 calculated_soc=100 last_ocv_uv=4175000
+[    1.407764] BMS: check_eoc_condition: Unable to read battery status
+[    1.407774] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4374
+[    1.414272] BMS: check_eoc_condition: Unable to read battery status
+[    1.414283] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4374
+[    1.419431] BMS: check_eoc_condition: Unable to read battery status
+[    1.419442] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4374
+[    1.419582] BMS: qpnp_vm_bms_probe: probe success: soc=100 vbatt=4173473 ocv=4175000 warm_reset=0
+[    1.419957] CHG: qpnp_charger_read_dt_props: vddmax-mv=4200, vddsafe-mv=4200, vinmin-mv=4308, ibatsafe-ma=$=720
+[    1.419967] CHG: qpnp_charger_read_dt_props: warm-bat-decidegc=450, cool-bat-decidegc=100, batt-hot-percentage=25, batt-cold-percentage=70
+[    1.419974] CHG: qpnp_charger_read_dt_props: tchg-mins=232, vbatweak-uv=0, resume-soc=0
+[    1.419982] CHG: qpnp_charger_read_dt_props: bpd-detection=1, ibatmax-warm-ma=500, ibatmax-cool-ma=500, warm-bat-mv=4000, cool-bat-mv=4000
+[    1.419990] CHG: qpnp_charger_read_dt_props: btc-disabled=0, charging-disabled=0, use-default-batt-values=0, float-charge=0
+[    1.419998] CHG: qpnp_charger_read_dt_props: charger-detect-eoc=0, disable-vbatdet-based-recharge=1, chgr-led-support=1
+[    1.420005] CHG: qpnp_charger_read_dt_props: collapsible-chg-support=0, use-external-charger=0, thermal_levels=4
+[    1.426996] BMS: check_eoc_condition: Unable to read battery status
+[    1.427008] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4374
+[    1.447595] BMS: check_eoc_condition: Battery FULL
+[    1.447616] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4374
+[    1.448929] BMS: battery_status_check: battery full
+[    1.455346] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    1.455365] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4374
+[    1.460443] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    1.460463] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4374
+[    1.460497] CHG: qpnp_lbc_main_probe: Probe chg_dis=0 bpd=1 usb=1 batt_pres=1 batt_volt=4125641 soc=100
+[    1.460576] spmi msm8x16_wcd_codec-13: Driver wcd-spmi-core requests probe deferral
+[    1.460622] spmi msm8x16_wcd_codec-14: Driver wcd-spmi-core requests probe deferral
+[    1.462744] msm8x16_asoc_machine_probe
+[    1.462752] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    1.462790] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    1.462806] msm8x16-asoc-wcd sound.71: default codec configured
+[    1.462815] msm8x16_asoc_machine_probe: ext_pa = 8
+[    1.463139] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    1.464470] msm8x16-asoc-wcd sound.71: ASoC: CODEC (null) not registered
+[    1.464508] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    1.464567] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.464633] spmi msm8x16_wcd_codec-13: Driver wcd-spmi-core requests probe deferral
+[    1.464676] spmi msm8x16_wcd_codec-14: Driver wcd-spmi-core requests probe deferral
+[    1.465764] Registering SWP/SWPB emulation handler
+[    1.572215] regulator-dummy: disabling
+[    1.573023] msm8x16_asoc_machine_probe
+[    1.573032] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    1.573059] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    1.573075] msm8x16-asoc-wcd sound.71: default codec configured
+[    1.573083] msm8x16_asoc_machine_probe: ext_pa = 8
+[    1.573408] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    1.574748] msm8x16-asoc-wcd sound.71: ASoC: CODEC (null) not registered
+[    1.574785] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    1.574847] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.574925] spmi msm8x16_wcd_codec-13: Driver wcd-spmi-core requests probe deferral
+[    1.574969] spmi msm8x16_wcd_codec-14: Driver wcd-spmi-core requests probe deferral
+[    1.576366] file system registered
+[    1.577177] android_usb gadget: Mass Storage Function, version: 2009/09/11
+[    1.577185] android_usb gadget: Number of LUNs=2
+[    1.577193]  lun0: LUN: removable file: (no medium)
+[    1.577199]  lun1: LUN: read only CD-ROM file: (no medium)
+[    1.577428] android_usb gadget: android_usb ready
+[    1.577440] msm_hsusb msm_hsusb: [ci13xxx_start] hw_ep_max = 16
+[    1.577473] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESET_EVENT received
+[    1.578592] msm8x16_asoc_machine_probe
+[    1.578604] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    1.578645] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    1.578660] msm8x16-asoc-wcd sound.71: default codec configured
+[    1.578675] msm8x16_asoc_machine_probe: ext_pa = 8
+[    1.578765] msm-tlmm-pinctrl 1000000.pinctrl: pin gp-52 already requested by matrix_keypad.70; cannot claim for gpio_keys.67
+[    1.578776] msm-tlmm-pinctrl 1000000.pinctrl: pin-52 (gpio_keys.67) status -22
+[    1.578785] msm-tlmm-pinctrl 1000000.pinctrl: could not request pin 52 on device msm-pinctrl
+[    1.578793] gpio-keys gpio_keys.67: Error applying setting, reverse things back
+[    1.578801] input (null): cannot set ts pinctrl active state
+[    1.578808] gpio-keys gpio_keys.67: cannot set ts pinctrl active state
+[    1.578831] gpio-keys: probe of gpio_keys.67 failed with error -22
+[    1.579118] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    1.579139] qcom,qpnp-rtc qpnp-rtc-6: setting system clock to 1970-01-01 01:12:55 UTC (4375)
+[    1.579143] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4375
+[    1.579340] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    1.580535] msm_thermal:interrupt_mode_init Interrupt mode init
+[    1.581136] msm8x16-asoc-wcd sound.71: ASoC: CODEC (null) not registered
+[    1.581177] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    1.581245] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.581333] spmi msm8x16_wcd_codec-13: Driver wcd-spmi-core requests probe deferral
+[    1.581366] /soc/qcom,lpm-levels/qcom,pm-cluster@0: No CPU phandle, assuming single cluster
+[    1.581380] spmi msm8x16_wcd_codec-14: Driver wcd-spmi-core requests probe deferral
+[    1.582872] msm8x16_asoc_machine_probe
+[    1.582882] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    1.582941] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    1.582957] msm8x16-asoc-wcd sound.71: default codec configured
+[    1.582965] msm8x16_asoc_machine_probe: ext_pa = 8
+[    1.583359] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    1.583930] led_gpio_flash_probe:probe successfully!
+[    1.584835] msm8x16-asoc-wcd sound.71: ASoC: CODEC (null) not registered
+[    1.584872] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    1.584935] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.585024] spmi msm8x16_wcd_codec-13: Driver wcd-spmi-core requests probe deferral
+[    1.585069] spmi msm8x16_wcd_codec-14: Driver wcd-spmi-core requests probe deferral
+[    1.585713] msm8x16_asoc_machine_probe
+[    1.585724] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    1.585748] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    1.585762] msm8x16-asoc-wcd sound.71: default codec configured
+[    1.585770] msm8x16_asoc_machine_probe: ext_pa = 8
+[    1.585928] qcom,cc-debug-8909 1874000.qcom,cc-debug: Registered Debug Mux successfully
+[    1.586120] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    1.586597] clock_late_init: Removing enables held for handed-off clocks
+[    1.587537] msm8x16-asoc-wcd sound.71: ASoC: CODEC (null) not registered
+[    1.587572] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    1.587637] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.587727] spmi msm8x16_wcd_codec-13: Driver wcd-spmi-core requests probe deferral
+[    1.587771] spmi msm8x16_wcd_codec-14: Driver wcd-spmi-core requests probe deferral
+[    1.588387] msm8x16_asoc_machine_probe
+[    1.588394] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    1.588416] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    1.588429] msm8x16-asoc-wcd sound.71: default codec configured
+[    1.588437] msm8x16_asoc_machine_probe: ext_pa = 8
+[    1.588753] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    1.589371] ALSA device list:
+[    1.589380]   No soundcards found.
+[    1.589622] Warning: unable to open an initial console.
+[    1.590002] Freeing unused kernel memory: 384K (c0d2c000 - c0d8c000)
+[    1.591223] msm8x16-asoc-wcd sound.71: ASoC: CODEC (null) not registered
+[    1.591262] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    1.591336] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.591738] init: init started!
+[    1.591856] init: Loading SELinux policy... 
+[    1.596773] SELinux: 2048 avtab hash slots, 11339 rules.
+[    1.603039] SELinux: 2048 avtab hash slots, 11339 rules.
+[    1.603069] SELinux:  1 users, 2 roles, 957 types, 0 bools, 1 sens, 1024 cats
+[    1.603079] SELinux:  87 classes, 11339 rules
+[    1.605483] SELinux:  Completing initialization.
+[    1.605491] SELinux:  Setting up existing superblocks.
+[    1.605519] SELinux: initialized (dev sysfs, type sysfs), uses genfs_contexts
+[    1.605537] SELinux: initialized (dev rootfs, type rootfs), uses genfs_contexts
+[    1.605620] SELinux: initialized (dev bdev, type bdev), not configured for labeling
+[    1.605641] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[    1.605666] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    1.605692] SELinux: initialized (dev debugfs, type debugfs), uses genfs_contexts
+[    1.611910] SELinux: initialized (dev sockfs, type sockfs), uses task SIDs
+[    1.611934] SELinux: initialized (dev pipefs, type pipefs), uses task SIDs
+[    1.611949] SELinux: initialized (dev anon_inodefs, type anon_inodefs), not configured for labeling
+[    1.611963] SELinux: initialized (dev devpts, type devpts), uses transition SIDs
+[    1.611992] SELinux: initialized (dev selinuxfs, type selinuxfs), uses genfs_contexts
+[    1.612052] SELinux: initialized (dev configfs, type configfs), not configured for labeling
+[    1.612062] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    1.612088] SELinux: initialized (dev sysfs, type sysfs), uses genfs_contexts
+[    1.617784] type=1403 audit(4375.529:2): policy loaded auid=4294967295 ses=4294967295
+[    1.618028] init: SELinux: Loaded policy from /sepolicy
+[    1.618353] type=1404 audit(4375.529:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    1.623643] init: (Initializing SELinux enforcing took 0.03s.)
+[    1.641799] init: SELinux: Loaded file_contexts contexts from /file_contexts.
+[    1.643260] init: init second stage started!
+[    1.662068] init: SELinux: Loaded file_contexts contexts from /file_contexts.
+[    1.663219] init: SELinux: Loaded property_contexts from /property_contexts.
+[    1.800778] init: waitpid failed: No child processes
+[    1.801088] init: (Loading properties from /default.prop took 0.00s.)
+[    1.802922] init: (Parsing /init.environ.rc took 0.00s.)
+[    1.803234] init: (Parsing /init.usb.rc took 0.00s.)
+[    1.804449] init: /init.qcom.rc: 621: user option requires a user id
+[    1.807762] init: (Parsing init.qcom.usb.rc took 0.00s.)
+[    1.808130] init: init.target.rc: 108: ignored duplicate definition of service 'perfd'
+[    1.808216] init: init.target.rc: 139: invalid command 'load_all_props'
+[    1.808503] init: could not import file 'init.carrier.rc' from 'init.target.rc'
+[    1.808639] init: (Parsing init.emmc.true.rc took 0.00s.)
+[    1.808661] init: (Parsing init.target.rc took 0.00s.)
+[    1.810277] init: (Parsing init.qcom.factory.rc took 0.00s.)
+[    1.810301] init: (Parsing /init.qcom.rc took 0.01s.)
+[    1.810754] init: (Parsing /init.usb.configfs.rc took 0.00s.)
+[    1.810983] init: /init.b2g.rc: 57: ignored duplicate definition of service 'lmlogcatservice'
+[    1.811026] init: /init.b2g.rc: 67: ignored duplicate definition of service 'lmgeckologsvc'
+[    1.811068] init: /init.b2g.rc: 77: ignored duplicate definition of service 'lmdmesgservice'
+[    1.811108] init: /init.b2g.rc: 87: ignored duplicate definition of service 'lmqxdmservice'
+[    1.811148] init: /init.b2g.rc: 97: ignored duplicate definition of service 'lmtcpdpservice'
+[    1.811189] init: /init.b2g.rc: 107: ignored duplicate definition of service 'lmitlogservice'
+[    1.811302] init: (Parsing /init.bluetooth.rc took 0.00s.)
+[    1.811324] init: (Parsing /init.b2g.rc took 0.00s.)
+[    1.811534] init: (Parsing /init.trace.rc took 0.00s.)
+[    1.811608] init: /init.bluetooth.rc: 19: ignored duplicate definition of service 'bluetoothd'
+[    1.811633] init: (Parsing /init.bluetooth.rc took 0.00s.)
+[    1.811653] init: (Parsing /init.rc took 0.01s.)
+[    1.811926] init: SELinux: Could not get canonical path /adb_keys restorecon: No such file or directory.
+[    1.812002] init: Starting service 'ueventd'...
+[    1.813243] init: Waiting for /dev/.coldboot_done...
+[    1.813796] ueventd: ueventd started!
+[    1.833162] ueventd: SELinux: Loaded file_contexts contexts from /file_contexts.
+[    1.853823] ueventd: SELinux: Loaded file_contexts contexts from /file_contexts.
+[    1.885396] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    1.885419] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4375
+[    2.065342] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    2.065364] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4375
+[    2.327973] ueventd: Coldboot took 0.49s.
+[    2.329096] init: Waiting for /dev/.coldboot_done took 0.52s.
+[    2.333001] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    2.333454] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    2.336242] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    2.339243] init: write_file: Unable to open '/proc/sys/kernel/hung_task_timeout_secs': No such file or directory
+[    2.339366] init: write_file: Unable to open '/proc/sys/kernel/sched_tunable_scaling': No such file or directory
+[    2.339410] init: write_file: Unable to open '/proc/sys/kernel/sched_latency_ns': No such file or directory
+[    2.339450] init: write_file: Unable to open '/proc/sys/kernel/sched_wakeup_granularity_ns': No such file or directory
+[    2.339490] init: write_file: Unable to open '/proc/sys/kernel/sched_compat_yield': No such file or directory
+[    2.341024] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    2.341213] init: write_file: Unable to write to '/dev/cpuctl/cpu.shares': Invalid argument
+[    2.344352] init: write_file: Unable to open '/proc/sys/abi/swp': No such file or directory
+[    2.349081] SELinux: initialized (dev functionfs, type functionfs), uses genfs_contexts
+[    2.441063] fs_mgr: Enabling dm-verity for system (mode 0)
+[    2.446413] bio: create slab <bio-1> at 1
+[    2.468266] EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts: barrier=1
+[    2.468304] SELinux: initialized (dev dm-0, type ext4), uses xattr
+[    2.468404] fs_mgr: __mount(source=/dev/block/dm-0,target=/system,type=ext4)=0
+[    2.469149] EXT4-fs (mmcblk0p25): Ignoring removed nomblk_io_submit option
+[    2.473495] EXT4-fs (mmcblk0p25): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=remount-ro
+[    2.473518] SELinux: initialized (dev mmcblk0p25, type ext4), uses xattr
+[    2.473620] fs_mgr: check_fs(): mount(/dev/block/bootdevice/by-name/usbmsc,/data/usbmsc_mnt,ext4)=0: Success
+[    2.474947] fs_mgr: check_fs(): unmount(/data/usbmsc_mnt) succeeded
+[    2.480185] fs_mgr: Running /system/bin/e2fsck on /dev/block/bootdevice/by-name/usbmsc
+[    2.628274] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    2.628274] 
+[    2.628324] e2fsck: /dev/block/bootdevice/by-name/usbmsc: clean, 14/62336 files, 8161/249023 blocks
+[    2.628324] 
+[    2.633369] EXT4-fs (mmcblk0p25): mounted filesystem with ordered data mode. Opts: barrier=1,noauto_da_alloc,discard
+[    2.633398] SELinux: initialized (dev mmcblk0p25, type ext4), uses xattr
+[    2.633489] fs_mgr: __mount(source=/dev/block/bootdevice/by-name/usbmsc,target=/data/usbmsc_mnt,type=ext4)=0
+[    2.634103] EXT4-fs (mmcblk0p36): Ignoring removed nomblk_io_submit option
+[    2.638310] EXT4-fs (mmcblk0p36): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=remount-ro
+[    2.638332] SELinux: initialized (dev mmcblk0p36, type ext4), uses xattr
+[    2.638394] fs_mgr: check_fs(): mount(/dev/block/bootdevice/by-name/userdata,/data,ext4)=0: Success
+[    2.639626] fs_mgr: check_fs(): unmount(/data) succeeded
+[    2.639802] fs_mgr: Running /system/bin/e2fsck on /dev/block/bootdevice/by-name/userdata
+[    2.667530] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    2.667530] 
+[    2.667573] e2fsck: data: clean, 545/50624 files, 21922/202240 blocks
+[    2.667573] 
+[    2.672705] EXT4-fs (mmcblk0p36): mounted filesystem with ordered data mode. Opts: barrier=1,noauto_da_alloc,discard
+[    2.672737] SELinux: initialized (dev mmcblk0p36, type ext4), uses xattr
+[    2.672808] fs_mgr: __mount(source=/dev/block/bootdevice/by-name/userdata,target=/data,type=ext4)=0
+[    2.716118] Adding 153596k swap on /dev/block/zram0.  Priority:-1 extents:1 across:153596k SS
+[    2.786901] type=1400 audit(4376.699:4): avc:  denied  { getattr } for  pid=210 comm="e2fsck" path="/dev/block/mmcblk0p26" dev="tmpfs" ino=6649 scontext=u:r:qti_init_shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    2.787132] type=1400 audit(4376.699:5): avc:  denied  { getattr } for  pid=210 comm="e2fsck" path="/dev/block/mmcblk0p26" dev="tmpfs" ino=6649 scontext=u:r:qti_init_shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    2.787212] type=1400 audit(4376.699:6): avc:  denied  { read write } for  pid=210 comm="e2fsck" name="mmcblk0p26" dev="tmpfs" ino=6649 scontext=u:r:qti_init_shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    2.798972] check_fs:/dev/block/bootdevice/by-name/cache
+[    2.806141] EXT4-fs (mmcblk0p26): mounted filesystem with ordered data mode. Opts: barrier=1
+[    2.806169] SELinux: initialized (dev mmcblk0p26, type ext4), uses xattr
+[    2.811714] EXT4-fs (mmcblk0p24): mounted filesystem with ordered data mode. Opts: barrier=1
+[    2.811742] SELinux: initialized (dev mmcblk0p24, type ext4), uses xattr
+[    2.813168] init: SELinux: Skipping restorecon_recursive(/persist)
+[    2.819934] SELinux: initialized (dev mmcblk0p1, type vfat), uses mountpoint labeling
+[    2.824570] fs_mgr: Error creating device mapping (Device or resource busy)fs_mgr: Couldn't create verity device!fs_mgr: Could not set up verified partition, skipping!
+[    2.825980] fs_mgr: check_fs(): mount(/dev/block/bootdevice/by-name/usbmsc,/data/usbmsc_mnt,ext4)=0: Success
+[    2.826031] fs_mgr: check_fs(): unmount(/data/usbmsc_mnt) succeeded
+[    2.826058] fs_mgr: Running /system/bin/e2fsck on /dev/block/bootdevice/by-name/usbmsc
+[    2.846795] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    2.846795] 
+[    2.846845] e2fsck: /dev/block/bootdevice/by-name/usbmsc is in use.
+[    2.846845] 
+[    2.846862] e2fsck: e2fsck: Cannot continue, aborting.
+[    2.846862] 
+[    2.846875] e2fsck: 
+[    2.846875] 
+[    2.846888] e2fsck: 
+[    2.846888] 
+[    2.846908] e2fsck: e2fsck terminated by exit(8)
+[    2.846908] 
+[    2.847225] fs_mgr: __mount(source=/dev/block/bootdevice/by-name/usbmsc,target=/data/usbmsc_mnt,type=ext4)=0
+[    2.847404] fs_mgr: check_fs(): mount(/dev/block/bootdevice/by-name/userdata,/data,ext4)=-1: Device or resource busy
+[    2.847432] fs_mgr: Running /system/bin/e2fsck on /dev/block/bootdevice/by-name/userdata
+[    2.867228] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    2.867228] 
+[    2.867266] e2fsck: /dev/block/bootdevice/by-name/userdata is in use.
+[    2.867266] 
+[    2.867281] e2fsck: e2fsck: Cannot continue, aborting.
+[    2.867281] 
+[    2.867295] e2fsck: 
+[    2.867295] 
+[    2.867308] e2fsck: 
+[    2.867308] 
+[    2.867328] e2fsck: e2fsck terminated by exit(8)
+[    2.867328] 
+[    2.867708] fs_mgr: __mount(source=/dev/block/bootdevice/by-name/userdata,target=/data,type=ext4)=-1
+[    2.867811] fs_mgr: Failed to mount an un-encryptable or wiped partition on/dev/block/bootdevice/by-name/userdata at /data options: barrier=1,noauto_da_alloc,discard error: Device or resource busy
+[    2.867866] init: fs_mgr_mount_all returned an error
+[    2.868114] init: fs_mgr_mount_all returned unexpected error 255
+[    2.869225] SELinux: mount invalid.  Same superblock, different security settings for (dev mmcblk0p1, type vfat)
+[    2.871735] init: SELinux: Skipping restorecon_recursive(/cache)
+[    2.903003] init: property_set("ro.config.low_ram", "true") failed
+[    2.917130] init: property_set("ro.kaios.torch_node", "/sys/class/leds/flashlight/brightness") failed
+[    2.917153] init: property_set("ro.kaios.torch_enable_value", "127") failed
+[    2.920989] init: property_set("ro.frp.pst", "/dev/block/bootdevice/by-name/config") failed
+[    2.930253] init: (Loading properties from /system/build.prop took 0.06s.)
+[    2.930341] init: (Loading properties from /vendor/build.prop took 0.00s.)
+[    2.930380] init: (Loading properties from /factory/factory.prop took 0.00s.)
+[    2.930558] init: /recovery not specified in fstab
+[    2.934998] init: Starting service 'vold'...
+[    2.945083] init: Bootcharting started (will run for 240 s).
+[    2.973205] init: Starting service 'exec 0 (/system/bin/rm)'...
+[    3.010682] init: Service 'exec 0 (/system/bin/rm)' (pid 221) exited with status 0
+[    3.028013] init: SELinux: Attempting to reload policy files
+[    3.051213] init: SELinux: Loaded file_contexts contexts from /file_contexts.
+[    3.052444] init: SELinux: Loaded property_contexts from /property_contexts.
+[    3.053789] init: SELinux: Skipping restorecon_recursive(/data)
+[    3.054270] init: Starting service 'exec 1 (/system/bin/tzdatacheck)'...
+[    3.092413] init: Service 'exec 1 (/system/bin/tzdatacheck)' (pid 222) exited with status 0
+[    3.134324] init: (Loading properties from /data/local.prop took 0.00s.)
+[    3.629285] init: cannot find '/system/bin/logd', disabling 'logd-reinit'
+[    3.629890] init: property 'persist.sys.ssr.enable_debug' doesn't exist while expanding '${persist.sys.ssr.enable_debug}'
+[    3.629916] init: cannot expand '${persist.sys.ssr.enable_debug}' while writing to '/sys/module/subsystem_restart/parameters/enable_debug'
+[    3.629994] init: property 'persist.sys.mba_boot_timeout' doesn't exist while expanding '${persist.sys.mba_boot_timeout}'
+[    3.630014] init: cannot expand '${persist.sys.mba_boot_timeout}' while writing to '/sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms'
+[    3.630089] init: property 'persist.sys.modem_auth_timeout' doesn't exist while expanding '${persist.sys.modem_auth_timeout}'
+[    3.630109] init: cannot expand '${persist.sys.modem_auth_timeout}' while writing to '/sys/module/pil_msa/parameters/modem_auth_timeout_ms'
+[    3.630183] init: property 'persist.sys.pil_proxy_timeout' doesn't exist while expanding '${persist.sys.pil_proxy_timeout}'
+[    3.630202] init: cannot expand '${persist.sys.pil_proxy_timeout}' while writing to '/sys/module/peripheral_loader/parameters/proxy_timeout_ms'
+[    3.635731] pil-q6v5-mss 4080000.qcom,mss: modem: loading from 0x88000000 to 0x8cd00000
+[    3.641112] pil-q6v5-mss 4080000.qcom,mss: MBA: loading from 0x9df00000 to 0x9e000000
+[    3.770696] pil-q6v5-mss 4080000.qcom,mss: MBA boot done
+[    4.491316] pil-q6v5-mss 4080000.qcom,mss: modem: Brought out of reset
+[    4.561414] spmi msm8x16_wcd_codec-13: Driver wcd-spmi-core requests probe deferral
+[    4.561555] spmi msm8x16_wcd_codec-14: Driver wcd-spmi-core requests probe deferral
+[    4.562286] msm8x16_asoc_machine_probe
+[    4.562295] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    4.562319] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    4.562333] msm8x16-asoc-wcd sound.71: default codec configured
+[    4.562341] msm8x16_asoc_machine_probe: ext_pa = 8
+[    4.562667] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    4.563535] pil-q6v5-mss 4080000.qcom,mss: Subsystem error monitoring/handling services are up
+[    4.563584] pil-q6v5-mss 4080000.qcom,mss: modem: Power/Clock ready interrupt received
+[    4.563593] memshare: Modem Restart has happened
+[    4.564608] M-Notify: General: 7
+[    4.565220] msm8x16-asoc-wcd sound.71: ASoC: CODEC (null) not registered
+[    4.565249] msm8x16-asoc-wcd sound.71: snd_soc_register_card failed (-517)
+[    4.565326] platform sound.71: Driver msm8x16-asoc-wcd requests probe deferral
+[    4.576176] init: Starting service 'exec 2 (/init.qcom.early_boot.sh)'...
+[    4.671227] sysmon-qmi: sysmon_clnt_svc_arrive: Connection established between QMI handle and modem's SSCTL service
+[    4.672847] msm8x16_asoc_machine_probe
+[    4.672858] msm8x16_asoc_machine_probe use tfa98xx tfa98xx.2-0034
+[    4.672884] populate_ext_snd_card_dailinks: CARD is 8x16 wcd internal card
+[    4.672900] msm8x16-asoc-wcd sound.71: default codec configured
+[    4.672908] msm8x16_asoc_machine_probe: ext_pa = 8
+[    4.673237] msm8x16-asoc-wcd sound.71: Headset is using internal micbias
+[    4.678956] msm-pcm-routing qcom,msm-pcm-routing.44: ASoC: no dapm match for VOICEMMODE1_DL --> VoiceMMode1 --> SEC_MI2S_RX_Voice Mixer
+[    4.678970] msm-pcm-routing qcom,msm-pcm-routing.44: ASoC: Failed to add route VOICEMMODE1_DL -> VoiceMMode1 -> SEC_MI2S_RX_Voice Mixer
+[    4.678990] msm-pcm-routing qcom,msm-pcm-routing.44: ASoC: no dapm match for VOICEMMODE2_DL --> VoiceMMode2 --> SEC_MI2S_RX_Voice Mixer
+[    4.678999] msm-pcm-routing qcom,msm-pcm-routing.44: ASoC: Failed to add route VOICEMMODE2_DL -> VoiceMMode2 -> SEC_MI2S_RX_Voice Mixer
+[    4.682157] msm-pcm-routing qcom,msm-pcm-routing.44: ASoC: no dapm match for VOICE2_STUB_DL --> Voice2 Stub --> INTERNAL_BT_SCO_RX_Voice Mixer
+[    4.682170] msm-pcm-routing qcom,msm-pcm-routing.44: ASoC: Failed to add route VOICE2_STUB_DL -> Voice2 Stub -> INTERNAL_BT_SCO_RX_Voice Mixer
+[    4.705700] msm-pcm-routing qcom,msm-pcm-routing.44: ASoC: mux SLIM_0_RX AANC MUX has no paths
+[    4.726914] tfa98xx_probe(): Container loading requested: 0
+[    4.727145] init: property_set("ro.opengles.version", "196608") failed
+[    4.727446] tfa98xx 2-0034: tfa98xx codec registered ()
+[    4.727656] wcd-spmi-core msm8x16_wcd_codec-13: Error: regulator not found
+[    4.728109] wcd_mbhc_init: enter get pa status NXP 1 AW889x 0 
+[    4.730092] tfa98xx_container_loaded(): loaded tfa98xx.cnt - size: 8172
+[    4.730123] tfa98xx_container_loaded(): 1_01
+[    4.730129] tfa98xx_container_loaded(): BlueBank
+[    4.730135] tfa98xx_container_loaded(): TFA
+[    4.730140] tfa98xx_container_loaded(): TFA9897
+[    4.730146] tfa98xx_container_loaded(): 1 ndev
+[    4.730151] tfa98xx_container_loaded(): 4 nprof
+[    4.730218] tfa98xx_register_dsp(): tfa98xx_register_dsp: i=0 - dev = 0x34
+[    4.730228] tfa98xx 2-0034: Registered DSP instance with handle 0
+[    4.730966] slave:0x68 revid:0x0b97
+[    4.730979] tfa98xx_container_loaded(): Firmware init complete
+[    4.730999] tfa98xx_create_controls(): profile added [0]: hp
+[    4.731011] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 0)
+[    4.731019] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 0)
+[    4.731027] add_sr_to_profile(): added profile:samplerate = [0:48000] for mixer profile: hp
+[    4.731035] tfa98xx_create_controls(): profile added [1]: hp_test
+[    4.731045] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 1)
+[    4.731052] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 1)
+[    4.731060] add_sr_to_profile(): added profile:samplerate = [1:48000] for mixer profile: hp_test
+[    4.731068] tfa98xx_create_controls(): profile added [2]: speech
+[    4.731078] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 2)
+[    4.731085] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 2)
+[    4.731092] add_sr_to_profile(): added profile:samplerate = [2:48000] for mixer profile: speech
+[    4.731101] tfa98xx_create_controls(): profile added [3]: standby
+[    4.731109] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 3)
+[    4.731116] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 3)
+[    4.731123] add_sr_to_profile(): added profile:samplerate = [3:48000] for mixer profile: standby
+[    4.745088] wcd-spmi-core msm8x16_wcd_codec-13: ASoC: mux RX3 MIX1 INP3 has no paths
+[    4.745273] wcd-spmi-core msm8x16_wcd_codec-13: ASoC: mux RX2 MIX1 INP3 has no paths
+[    5.028018] init: Service 'exec 2 (/init.qcom.early_boot.sh)' (pid 229) exited with status 0
+[    5.037614] init: Starting service 'servicemanager'...
+[    5.038687] init: Starting service 'qcom-debug'...
+[    5.039939] init: Starting service 'qcom-c_core-sh'...
+[    5.051041] init: Starting service 'config_bt_addr'...
+[    5.052025] init: Starting service 'config_bluetooth'...
+[    5.053183] init: Starting service 'qseecomd'...
+[    5.054336] init: Starting service 'per_mgr'...
+[    5.097607] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet0/accept_ra': No such file or directory
+[    5.097709] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet1/accept_ra': No such file or directory
+[    5.097799] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet2/accept_ra': No such file or directory
+[    5.097890] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet3/accept_ra': No such file or directory
+[    5.097979] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet4/accept_ra': No such file or directory
+[    5.099125] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet5/accept_ra': No such file or directory
+[    5.101077] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet6/accept_ra': No such file or directory
+[    5.101196] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet7/accept_ra': No such file or directory
+[    5.101330] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio0/accept_ra': No such file or directory
+[    5.101431] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio1/accept_ra': No such file or directory
+[    5.101545] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio2/accept_ra': No such file or directory
+[    5.101640] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio3/accept_ra': No such file or directory
+[    5.101731] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio4/accept_ra': No such file or directory
+[    5.101820] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra': No such file or directory
+[    5.101908] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra': No such file or directory
+[    5.101995] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra': No such file or directory
+[    5.102114] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_usb0/accept_ra': No such file or directory
+[    5.104620] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_usb1/accept_ra': No such file or directory
+[    5.104813] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_usb2/accept_ra': No such file or directory
+[    5.104989] init: write_file: Unable to open '/proc/sys/net/ipv6/conf/rmnet_usb3/accept_ra': No such file or directory
+[    5.145245] init: property_set("persist.sys.kaiosgeckolog.enable", "0") failed
+[    5.204376] init: Service 'qcom-debug' (pid 270) exited with status 0
+[    5.233241] init: Starting service 'rmt_storage'...
+[    5.234488] init: Starting service 'exec 3 (/system/bin/rm)'...
+[    5.308599] init: Service 'exec 3 (/system/bin/rm)' (pid 287) exited with status 1
+[    5.308766] init: property_set("persist.sys.kaiosgeckolog.enable", "0") failed
+[    5.363301] init: service 'console' requires console
+[    5.392107] warning: `qseecomd' uses 32-bit capabilities (legacy support in use)
+[    5.399032] init: Service 'qcom-c_core-sh' (pid 271) exited with status 0
+[    5.405388] init: service 'console' requires console
+[    5.406648] init: Starting service 'netd'...
+[    5.407878] init: Starting service 'debuggerd'...
+[    5.409106] init: Starting service 'ril-daemon'...
+[    5.411507] init: Starting service 'media'...
+[    5.412811] init: Starting service 'flash_recovery'...
+[    5.413997] init: Starting service 'keystore'...
+[    5.414302] handle_qmi_request: Error getting req_desc for msg_id 36
+[    5.414339] mem_share_svc_recv_msg: Error receiving message
+[    5.415212] init: Starting service 'qcomsysd'...
+[    5.416295] init: Starting service 'qcom-c_main-sh'...
+[    5.417477] init: Starting service 'cnd'...
+[    5.418764] init: Starting service 'irsc_util'...
+[    5.431904] apr_tal:Modem Is Up
+[    5.463861] init: Starting service 'tftp_server'...
+[    5.468311] init: Starting service 'ptt_socket_app'...
+[    5.469606] init: Starting service 'bms-sh'...
+[    5.494993] init: Starting service 'qcom-usb-sh'...
+[    5.501439] init: Starting service 'thermal-engine'...
+[    5.502741] init: Starting service 'imsstarter'...
+[    5.504029] init: Starting service 'gonksched'...
+[    5.525727] init: Starting service 'fakeappops'...
+[    5.527044] init: Starting service 'b2g'...
+[    5.571150] init: Starting service 'metrics-daemon'...
+[    5.572503] init: Starting service 'api-daemon'...
+[    5.639870] aprv2_core_fn_q: Received ADSP version as 2.8
+[    5.644848] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> MultiMedia1 mapping ok
+[    5.645434] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> MultiMedia2 mapping ok
+[    5.645816] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> CS-VOICE mapping ok
+[    5.646172] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> VoIP mapping ok
+[    5.646561] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> MultiMedia3 mapping ok
+[    5.646878] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> PRI_MI2S_RX_HOSTLESS mapping ok
+[    5.647199] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> INT_FM_HOSTLESS mapping ok
+[    5.647985] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-afe-proxy-rx.13 mapping ok
+[    5.648694] msm8x16-asoc-wcd sound.71:  msm-stub-tx <-> qcom,msm-dai-q6-afe-proxy-tx.14 mapping ok
+[    5.649992] compress asoc: snd-soc-dummy-dai <-> MultiMedia4 mapping ok
+[    5.650821] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> AUXPCM_HOSTLESS mapping ok
+[    5.651588] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> TERT_MI2S_TX_HOSTLESS mapping ok
+[    5.652602] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> MultiMedia5 mapping ok
+[    5.653467] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> Voice2 mapping ok
+[    5.654409] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> MultiMedia9 mapping ok
+[    5.655175] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> VoLTE mapping ok
+[    5.655919] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> VoWLAN mapping ok
+[    5.660279] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> INT_HFP_BT_HOSTLESS mapping ok
+[    5.661357] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> MultiMedia6 mapping ok
+[    5.662164] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> LSM1 mapping ok
+[    5.662909] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> LSM2 mapping ok
+[    5.663655] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> LSM3 mapping ok
+[    5.695739] init: Starting service 'gatekeeperd'...
+[    5.697059] init: Starting service 'qcom-sh'...
+[    5.698646] init: Starting service 'fidodaemon'...
+[    5.700730] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> LSM4 mapping ok
+[    5.701673] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> LSM5 mapping ok
+[    5.702801] compress asoc: snd-soc-dummy-dai <-> MultiMedia7 mapping ok
+[    5.703741] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> QUAT_MI2S_RX_HOSTLESS mapping ok
+[    5.704605] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> QCHAT mapping ok
+[    5.705376] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> VoiceMMode1 mapping ok
+[    5.706315] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> VoiceMMode2 mapping ok
+[    5.707039] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-pri-auxpcm.61 mapping ok
+[    5.710501] msm8x16-asoc-wcd sound.71:  msm-stub-tx <-> qcom,msm-pri-auxpcm.61 mapping ok
+[    5.730184] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-bt-sco-rx.132 mapping ok
+[    5.730985] msm8x16-asoc-wcd sound.71:  msm-stub-tx <-> qcom,msm-dai-q6-bt-sco-tx.133 mapping ok
+[    5.731670] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-int-fm-rx.135 mapping ok
+[    5.732358] msm8x16-asoc-wcd sound.71:  msm-stub-tx <-> qcom,msm-dai-q6-int-fm-tx.136 mapping ok
+[    5.733023] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-be-afe-pcm-rx.1 mapping ok
+[    5.733699] msm8x16-asoc-wcd sound.71:  msm-stub-tx <-> qcom,msm-dai-q6-be-afe-pcm-tx.1 mapping ok
+[    5.750501] msm8x16-asoc-wcd sound.71:  msm-stub-tx <-> qcom,msm-dai-q6-incall-record-t mapping ok
+[    5.751457] msm8x16-asoc-wcd sound.71:  msm-stub-tx <-> qcom,msm-dai-q6-incall-record-r mapping ok
+[    5.752378] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-incall-music-rx mapping ok
+[    5.753171] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-incall-music-2- mapping ok
+[    5.754557] msm8x16-asoc-wcd sound.71:  tfa98xx-aif <-> qcom,msm-dai-q6-mi2s-quat.147 mapping ok
+[    5.755325] msm8x16-asoc-wcd sound.71:  snd-soc-dummy-dai <-> qcom,msm-dai-q6-mi2s-quat.147 mapping ok
+[    5.760210] init: Starting service 'qcamerasvr'...
+[    5.761590] init: Starting service 'time_daemon'...
+[    5.762808] init: Starting service 'audiod'...
+[    5.764017] init: Starting service 'wcnss-service'...
+[    5.765428] init: Service 'irsc_util' (pid 312) exited with status 0
+[    5.766572] init: Warning!  Service ftmd needs a SELinux domain defined; please fix!
+[    5.766598] init: Starting service 'ftmd'...
+[    5.768910] init: Starting service 'ssr_setup'...
+[    5.778037] msm8x16-asoc-wcd sound.71:  msm8x16_wcd_i2s_rx1 <-> qcom,msm-dai-q6-mi2s-prim.145 mapping ok
+[    5.779937] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-mi2s-sec.146 mapping ok
+[    5.781331] msm8x16-asoc-wcd sound.71:  msm8x16_wcd_i2s_tx1 <-> qcom,msm-dai-q6-mi2s-tert.148 mapping ok
+[    5.782119] msm8x16-asoc-wcd sound.71:  msm-stub-rx <-> qcom,msm-dai-q6-bt-a2dp-rx.134 mapping ok
+[    5.929949] input: msm8909-skub-snd-card Button Jack as /devices/soc.0/sound.71/sound/card0/input2
+[    5.930337] input: msm8909-skub-snd-card Headset Jack as /devices/soc.0/sound.71/sound/card0/input3
+[    5.937433] Get fm-vdd-supply OK!
+[    5.937531] aprv2_core_fn_q: Received ADSP version as 2.8
+[    5.937581] msm8x16_asoc_machine_probe: Create sys node pa_support for ti smart amp
+[    6.050776] init: Starting service 'pa_support'...
+[    6.053451] init: Starting service 'lmitlogservice'...
+[    6.055028] init: Starting service 'loc_launcher'...
+[    6.056752] android_usb: already disabled
+[    6.057752] init: Starting service 'adbd'...
+[    6.216621] init: Starting service 'qmuxd'...
+[    6.232094] read descriptors
+[    6.232110] read descriptors
+[    6.232122] read strings
+[    6.240348] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_CONNECT_EVENT received
+[    6.312549] init: Service 'ssr_setup' (pid 350) exited with status 0
+[    6.319423] init: Starting service 'imsqmidaemon'...
+[    6.340363] init: no such service 'ipacm-diag'
+[    6.340696] init: Starting service 'imsdatadaemon'...
+[    6.341989] init: Service 'imsstarter' (pid 324) exited with status 0
+[    6.410229] init: no such service 'ipacm'
+[    6.421170] msm_otg 78d9000.usb: Avail curr from USB = 100
+[    6.421342] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current100 mA
+[    6.421482] android_work: did not send uevent (0 0   (null))
+[    6.428186] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    6.428211] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4379
+[    6.491610] android_work: sent uevent USB_STATE=CONNECTED
+[    6.495411] android_work: sent uevent USB_STATE=DISCONNECTED
+[    6.502216] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    6.502239] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4380
+[    6.548622] init: Starting service 'vm_bms'...
+[    6.571728] init: Service 'keystore' (pid 308) exited with status 1
+[    6.571759] init: Service 'keystore' (pid 308) killing any children in process group
+[    6.574823] init: Service 'bms-sh' (pid 321) exited with status 0
+[    6.583670] android_work: sent uevent USB_STATE=CONNECTED
+[    6.585476] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[    6.585491] diag: USB channel diag connected
+[    6.585595] msm_otg 78d9000.usb: Avail curr from USB = 500
+[    6.585720] gbam_connect_work: Bam channel is not ready
+[    6.585882] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current500 mA
+[    6.592901] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    6.592925] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4380
+[    6.639878] android_work: sent uevent USB_STATE=CONFIGURED
+[    6.691476] IPC_RTR: ipc_router_set_conn: Invalid remote endpoint
+[    6.726293] init: Service 'ftmd' (pid 349) exited with status 0
+[    6.761901] msm_thermal:set_enabled enabled = 0
+[    6.776251] init: Service 'pa_support' (pid 369) exited with status 0
+[    6.810508] init: Starting service 'qti'...
+[    6.894130] init: no such service 'rfs_access'
+[    6.930701] init: Starting service 'netmgrd'...
+[    7.079613] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[    7.079735] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4380
+[    7.088620] init: Service 'qcom-c_main-sh' (pid 310) exited with status 0
+[    7.283446] init: Service 'qcom-usb-sh' (pid 322) exited with status 0
+[    7.316381] init: Service 'qcom-sh' (pid 339) exited with status 0
+[    7.485551] init: Service 'config_bluetooth' (pid 273) exited with status 0
+[    7.697836] init: Service 'flash_recovery' (pid 307) exited with status 0
+[    8.653843] msm_pm_qos_add_request: add request
+[    8.698318] msm_sensor_driver_probe:ov8858_q8v19w is not support on this board
+[    8.721114] msm_sensor_driver_probe:ov5670_q5v41b is not support on this board
+[    8.730496] msm_sensor_driver_probe:ov2680_5987fhq is not support on this board
+[    8.751274] msm_sensor_driver_probe:s5k3m2xm is not support on this board
+[    8.888812] msm_sensor_driver_probe:ar0542 is not support on this board
+[    8.928263] msm_sensor_driver_probe:ov5670_qc700 is not support on this board
+[    8.930827] Generating power_down_setting
+[    8.930844] msm_camera_fill_vreg_params:65 i 0 j 0 cam_vio
+[    8.930854] msm_camera_fill_vreg_params:76 i 1 j 1 cam_vana
+[    8.930860] msm_camera_fill_vreg_params:76 i 4 j 1 cam_vana
+[    8.930866] msm_camera_fill_vreg_params:65 i 5 j 0 cam_vio
+[    8.930872] check ID!
+[    8.931330] msm_camera_config_single_vreg : can't find sub reg name
+[    8.984116] New hardware version!
+[    9.035659] msm_camera_config_single_vreg : can't find sub reg name
+[    9.047380] Rear camera ID is 3, front camera ID is 2
+[    9.121255] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[    9.069786] msm_camera_config_single_vreg : can't find sub reg name
+[    9.121318] msm_sensor_match_id: gc2365: read id failed
+[    9.121328] msm_sensor_check_id:1578 match id failed rc -107
+[    9.160908] msm_camera_config_single_vreg : can't find sub reg name
+[    9.199849] msm_camera_config_single_vreg : can't find sub reg name<3>[    9.250984] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[    9.251050] msm_sensor_match_id: gc2365: read id failed
+[    9.251060] msm_sensor_check_id:1578 match id failed rc -107
+[    9.289795] msm_camera_config_single_vreg : can't find sub reg name
+[    9.329809] msm_camera_config_single_vreg : can't find sub reg name<7>[    9.349855] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[    9.349894] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[    9.349922] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[    9.379834] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x091343c8 OPER:0x00000010
+[    9.379966] msm_sensor_match_id: gc2365: read id failed
+[    9.379975] msm_sensor_check_id:1578 match id failed rc -107
+[    9.419729] msm_camera_config_single_vreg : can't find sub reg name
+[    9.459750] gc2365 power up failed<3>[    9.459767] MSM-SENSOR-INIT msm_sensor_driver_cmd:80 failed: msm_sensor_driver_probe rc -107
+[    9.531563] Generating power_down_setting
+[    9.531583] msm_camera_fill_vreg_params:65 i 2 j 0 cam_vio
+[    9.531594] msm_camera_fill_vreg_params:76 i 4 j 1 cam_vana
+[    9.531600] msm_camera_fill_vreg_params:76 i 3 j 1 cam_vana
+[    9.531606] msm_camera_fill_vreg_params:65 i 5 j 0 cam_vio
+[    9.543824] init: Starting service 'pa_support'...
+[    9.559782] msm_camera_config_single_vreg : can't find sub reg name
+[    9.570949] msm_camera_config_single_vreg : can't find sub reg name<3>[    9.616173] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x091343c8 OPER:0x00000010
+[    9.616359] msm_sensor_match_id: gc2385: read id failed
+[    9.616368] msm_sensor_check_id:1578 match id failed rc -107
+[    9.637731] init: Service 'pa_support' (pid 592) exited with status 0
+[    9.644873] msm_camera_config_single_vreg : can't find sub reg name
+[    9.655966] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[    9.745858] msm_camera_config_single_vreg : can't find sub reg name<3>[    9.785706] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[    9.785773] msm_sensor_match_id: gc2385: read id failed
+[    9.785780] msm_sensor_check_id:1578 match id failed rc -107
+[    9.814319] msm_camera_config_single_vreg : can't find sub reg name
+[    9.825510] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[    9.913081] msm_camera_config_single_vreg : can't find sub reg name<3>[    9.952937] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[    9.952992] msm_sensor_match_id: gc2385: read id failed
+[    9.952999] msm_sensor_check_id:1578 match id failed rc -107
+[    9.981124] msm_camera_config_single_vreg : can't find sub reg name
+[    9.992197] msm_camera_config_single_vreg : can't find sub reg namegc2385 power up failed
+[   10.049761] MSM-SENSOR-INIT msm_sensor_driver_cmd:80 failed: msm_sensor_driver_probe rc -107
+[   10.108031] Generating power_down_setting
+[   10.108052] msm_camera_fill_vreg_params:65 i 2 j 0 cam_vio
+[   10.108062] msm_camera_fill_vreg_params:76 i 4 j 1 cam_vana
+[   10.108069] msm_camera_fill_vreg_params:76 i 3 j 1 cam_vana
+[   10.108075] msm_camera_fill_vreg_params:65 i 5 j 0 cam_vio
+[   10.109512] init: Starting service 'keystore'...
+[   10.129756] msm_camera_config_single_vreg : can't find sub reg name
+[   10.140822] msm_camera_config_single_vreg : can't find sub reg name<3>[   10.180890] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[   10.181023] msm_sensor_match_id: gc2375: read id failed
+[   10.181031] msm_sensor_check_id:1578 match id failed rc -107
+[   10.216743] init: Service 'keystore' (pid 615) exited with status 1
+[   10.216776] init: Service 'keystore' (pid 615) killing any children in process group
+[   10.209569] msm_camera_config_single_vreg : can't find sub reg name
+[   10.219888] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   10.330883] msm_camera_config_single_vreg : can't find sub reg name<3>[   10.370883] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[   10.370944] msm_sensor_match_id: gc2375: read id failed
+[   10.370954] msm_sensor_check_id:1578 match id failed rc -107
+[   10.399718] msm_camera_config_single_vreg : can't find sub reg name
+[   10.410774] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   10.503122] msm_camera_config_single_vreg : can't find sub reg name<3>[   10.543199] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[   10.543355] msm_sensor_match_id: gc2375: read id failed
+[   10.543364] msm_sensor_check_id:1578 match id failed rc -107
+[   10.571056] msm_camera_config_single_vreg : can't find sub reg name
+[   10.582134] msm_camera_config_single_vreg : can't find sub reg namegc2375 power up failed
+[   10.639769] MSM-SENSOR-INIT msm_sensor_driver_cmd:80 failed: msm_sensor_driver_probe rc -107
+[   10.661011] Generating power_down_setting
+[   10.661033] msm_camera_fill_vreg_params:65 i 2 j 0 cam_vio
+[   10.661043] msm_camera_fill_vreg_params:76 i 4 j 1 cam_vana
+[   10.661055] msm_camera_fill_vreg_params:76 i 3 j 1 cam_vana
+[   10.661065] msm_camera_fill_vreg_params:65 i 5 j 0 cam_vio
+[   10.683307] msm_camera_config_single_vreg : can't find sub reg name
+[   10.694394] msm_camera_config_single_vreg : can't find sub reg name<3>[   10.734729] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[   10.734888] msm_sensor_match_id: gc2395: read id failed
+[   10.734898] msm_sensor_check_id:1578 match id failed rc -107
+[   10.763713] msm_camera_config_single_vreg : can't find sub reg name
+[   10.774794] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   10.862920] msm_camera_config_single_vreg : can't find sub reg name<3>[   10.902808] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[   10.902866] msm_sensor_match_id: gc2395: read id failed
+[   10.902873] msm_sensor_check_id:1578 match id failed rc -107
+[   10.931092] msm_camera_config_single_vreg : can't find sub reg name
+[   10.942166] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   11.032994] msm_camera_config_single_vreg : can't find sub reg name<3>[   11.070859] display reset gpio request failed
+[   11.072837] i2c-msm-v2 78b7000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0x37 MSTR_STS:0x0d1300c8 OPER:0x00000010
+[   11.072895] msm_sensor_match_id: gc2395: read id failed
+[   11.072903] msm_sensor_check_id:1578 match id failed rc -107
+[   11.092580] devbw qcom,gpubw.23: Governor already resumed!
+[   11.092597] devbw qcom,gpubw.23: Unable to resume BW HW mon governor (-16)
+[   11.101095] msm_camera_config_single_vreg : can't find sub reg name
+[   11.112166] msm_camera_config_single_vreg : can't find sub reg namegc2395 power up failed
+[   11.169825] MSM-SENSOR-INIT msm_sensor_driver_cmd:80 failed: msm_sensor_driver_probe rc -107
+[   11.286927] Generating power_down_setting
+[   11.286948] msm_camera_fill_vreg_params:65 i 0 j 0 cam_vio
+[   11.286958] msm_camera_fill_vreg_params:76 i 1 j 1 cam_vana
+[   11.286965] msm_camera_fill_vreg_params:76 i 7 j 1 cam_vana
+[   11.286971] msm_camera_fill_vreg_params:65 i 8 j 0 cam_vio
+[   11.287025] msm_camera_config_single_vreg : can't find sub reg name
+[   11.289088] msm_camera_config_single_vreg : can't find sub reg name<3>[   11.328339] OV-star OVX2515-VenusB-SP250A camera probe
+[   11.328355] msm_sensor_match_id chip id doesnot match
+[   11.328363] msm_sensor_check_id:1578 match id failed rc -19
+[   11.367769] msm_camera_config_single_vreg : can't find sub reg name
+[   11.368070] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   11.390155] msm_camera_config_single_vreg : can't find sub reg name<3>[   11.429745] OV-star OVX2515-VenusB-SP250A camera probe
+[   11.429760] msm_sensor_match_id chip id doesnot match
+[   11.429769] msm_sensor_check_id:1578 match id failed rc -19
+[   11.469051] msm_camera_config_single_vreg : can't find sub reg name
+[   11.469372] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   11.490147] msm_camera_config_single_vreg : can't find sub reg name<3>[   11.529744] OV-star OVX2515-VenusB-SP250A camera probe
+[   11.529758] msm_sensor_match_id chip id doesnot match
+[   11.529765] msm_sensor_check_id:1578 match id failed rc -19
+[   11.569320] msm_camera_config_single_vreg : can't find sub reg name
+[   11.569691] msm_camera_config_single_vreg : can't find sub reg namesp250a power up failed
+[   11.600079] MSM-SENSOR-INIT msm_sensor_driver_cmd:80 failed: msm_sensor_driver_probe rc -19
+[   11.614970] msm_camera_fill_vreg_params:65 i 0 j 0 cam_vio
+[   11.614986] msm_camera_fill_vreg_params:76 i 1 j 1 cam_vana
+[   11.614994] msm_camera_fill_vreg_params:65 i 4 j 0 cam_vio
+[   11.615000] msm_camera_fill_vreg_params:76 i 5 j 1 cam_vana
+[   11.615382] msm_camera_config_single_vreg : can't find sub reg name
+[   11.644553] OV-star,ZRT camera probe
+[   11.644567] msm_sensor_match_id chip id doesnot match
+[   11.644574] msm_sensor_check_id:1578 match id failed rc -19
+[   11.654231] msm_camera_config_single_vreg : can't find sub reg name
+[   11.680070] msm_camera_config_single_vreg : can't find sub reg name<3>[   11.709017] OV-star,ZRT camera probe
+[   11.709029] msm_sensor_match_id chip id doesnot match
+[   11.709037] msm_sensor_check_id:1578 match id failed rc -19
+[   11.719255] msm_camera_config_single_vreg : can't find sub reg name
+[   11.750094] msm_camera_config_single_vreg : can't find sub reg name<3>[   11.778956] OV-star,ZRT camera probe
+[   11.778970] msm_sensor_match_id chip id doesnot match
+[   11.778978] msm_sensor_check_id:1578 match id failed rc -19
+[   11.789155] msm_camera_config_single_vreg : can't find sub reg name
+[   11.819718] sp0a09 power up failed<3>[   11.819737] MSM-SENSOR-INIT msm_sensor_driver_cmd:80 failed: msm_sensor_driver_probe rc -19
+[   11.829820] Generating power_down_setting
+[   11.829836] msm_camera_fill_vreg_params:65 i 0 j 0 cam_vio
+[   11.829845] msm_camera_fill_vreg_params:76 i 1 j 1 cam_vana
+[   11.829852] msm_camera_fill_vreg_params:76 i 7 j 1 cam_vana
+[   11.829858] msm_camera_fill_vreg_params:65 i 8 j 0 cam_vio
+[   11.829916] msm_camera_config_single_vreg : can't find sub reg name
+[   11.830307] msm_camera_config_single_vreg : can't find sub reg name<3>[   11.871068] OV-star OVX2515-VenusB-SP250A camera probe
+[   11.871111] sp2509 probe succeeded
+[   11.911016] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   11.938653] slot 0 has some other sensor
+[   11.951699] msm_camera_fill_vreg_params:65 i 0 j 0 cam_vio
+[   11.951713] msm_camera_fill_vreg_params:76 i 1 j 1 cam_vana
+[   11.951719] msm_camera_fill_vreg_params:65 i 4 j 0 cam_vio
+[   11.951726] msm_camera_fill_vreg_params:76 i 5 j 1 cam_vana
+[   11.952021] msm_camera_config_single_vreg : can't find sub reg name
+[   11.980999] OV-star,ZRT camera probe
+[   11.981036] sp0a08 probe succeeded
+[   11.991580] msm_camera_config_single_vreg : can't find sub reg name<3>[   12.097814] slot 1 has some other sensor
+[   12.101442] slot 1 has some other sensor
+[   12.103574] slot 1 has some other sensor
+[   12.105602] slot 1 has some other sensor
+[   12.106260] msm_csid_init: CSID_VERSION = 0x30010000
+[   12.106726]  msm_csid_init: Failed in getting TOP gdscr regulator handle
+[   12.108278] msm_csid_init: CSID_VERSION = 0x30010000
+[   12.108721]  msm_csid_init: Failed in getting TOP gdscr regulator handle
+[   12.113688] msm_pm_qos_update_request: update request 100<3>[   12.124674] msm_isp_close_node: halt timeout rc=0
+[   12.228224] msm_csid_init: CSID_VERSION = 0x30010000
+[   12.228688]  msm_csid_init: Failed in getting TOP gdscr regulator handle
+[   12.229137] ------------[ cut here ]------------
+[   12.229161] WARNING: at /home/chegukee/workspace/F220b/msm8905/LINUX/android/kernel/drivers/clk/qcom/clock-local2.c:158 rcg_clk_prepare+0x2c/0x40()
+[   12.229168] Attempting to prepare csi1_clk_src before setting its rate. Set the rate first!
+[   12.229172] Modules linked in:
+[   12.229183] CPU: 1 PID: 708 Comm: mct_pipe_start Tainted: G        W    3.10.49 #1
+[   12.229207] [<c0013efc>] (unwind_backtrace+0x0/0x11c) from [<c0011a98>] (show_stack+0x10/0x14)
+[   12.229223] [<c0011a98>] (show_stack+0x10/0x14) from [<c0021980>] (warn_slowpath_common+0x4c/0x6c)
+[   12.229238] [<c0021980>] (warn_slowpath_common+0x4c/0x6c) from [<c00219cc>] (warn_slowpath_fmt+0x2c/0x3c)
+[   12.229251] [<c00219cc>] (warn_slowpath_fmt+0x2c/0x3c) from [<c0637fa4>] (rcg_clk_prepare+0x2c/0x40)
+[   12.229265] [<c0637fa4>] (rcg_clk_prepare+0x2c/0x40) from [<c0634c78>] (clk_enable+0x13c/0x17c)
+[   12.229279] [<c0634c78>] (clk_enable+0x13c/0x17c) from [<c0634bbc>] (clk_enable+0x80/0x17c)
+[   12.229294] [<c0634bbc>] (clk_enable+0x80/0x17c) from [<c0507850>] (msm_cam_clk_enable+0x120/0x26c)
+[   12.229310] [<c0507850>] (msm_cam_clk_enable+0x120/0x26c) from [<c050ea60>] (msm_csiphy_subdev_ioctl+0x2f0/0xac0)
+[   12.229326] [<c050ea60>] (msm_csiphy_subdev_ioctl+0x2f0/0xac0) from [<c04bc29c>] (subdev_do_ioctl+0x6c8/0x72c)
+[   12.229341] [<c04bc29c>] (subdev_do_ioctl+0x6c8/0x72c) from [<c04b55ec>] (video_usercopy+0x2b8/0x40c)
+[   12.229356] [<c04b55ec>] (video_usercopy+0x2b8/0x40c) from [<c04b10c8>] (v4l2_ioctl+0x60/0x124)
+[   12.229370] [<c04b10c8>] (v4l2_ioctl+0x60/0x124) from [<c0106340>] (vfs_ioctl+0x28/0x3c)
+[   12.229384] [<c0106340>] (vfs_ioctl+0x28/0x3c) from [<c0106dbc>] (do_vfs_ioctl+0x4c0/0x570)
+[   12.229397] [<c0106dbc>] (do_vfs_ioctl+0x4c0/0x570) from [<c0106eb8>] (SyS_ioctl+0x4c/0x78)
+[   12.229411] [<c0106eb8>] (SyS_ioctl+0x4c/0x78) from [<c000e080>] (ret_fast_syscall+0x0/0x30)
+[   12.229418] ---[ end trace da227214a82491ba ]---
+[   12.238470] msm_camera_config_single_vreg : can't find sub reg name
+[   12.238858] msm_camera_config_single_vreg : can't find sub reg name<3>[   12.278215] OV-star OVX2515-VenusB-SP250A camera probe
+[   12.278231] msm_sensor_config:1487 sensor state 1
+[   12.604969] msm_pm_qos_update_request: update request -1
+[   12.842340] sps:BAM 0x04044000 is registered.<6>[   12.842539] sps:BAM 0x04044000 (va:0xe2be0000) enabled: ver:0x25, number of pipes:6
+[   12.938006] wcnss_wlan triggered by userspace
+[   12.938544] wcnss_pm_qos_add_request: add request
+[   12.938561] wcnss_pm_qos_update_request: update request 100
+[   12.938749] Couldn't get snoc_qosgen
+[   12.938759] wcnss_trigger_config:  vadc get failed
+[   12.939778] wcnss_notif_cb: wcnss notification event: 2
+[   12.942345] subsys-pil-tz a21b000.qcom,pronto: wcnss: loading from 0x8d000000 to 0x8d4fc000
+[   12.942632] wcnss_notif_cb: wcnss notification event: 6
+[   12.945209] wcnss: IRIS Reg: 91100004
+[   13.145950] subsys-pil-tz a21b000.qcom,pronto: wcnss: Brought out of reset
+[   13.341451] IPC_RTR: msm_ipc_router_send_to: permission failure for rild
+[   13.341463] IPC_RTR: msm_ipc_router_sendmsg: Send_to failure -1
+[   13.341575] IPC_RTR: msm_ipc_router_send_to: permission failure for rild
+[   13.341582] IPC_RTR: msm_ipc_router_sendmsg: Send_to failure -1
+[   13.382464] init: Service 'config_bt_addr' (pid 272) exited with status 0
+[   13.447516] subsys-pil-tz a21b000.qcom,pronto: wcnss: Power/Clock ready interrupt received
+[   13.447844] wcnss_notif_cb: wcnss notification event: 7
+[   13.464178] subsys-pil-tz a21b000.qcom,pronto: Subsystem error monitoring/handling services are up
+[   13.464565] wcnss_notif_cb: wcnss notification event: 3
+[   13.464590] wcnss_pm_qos_update_request: update request -1
+[   13.464610] wcnss_pm_qos_remove_request: remove request
+[   13.854971] init: Starting service 'ims_rtp_daemon'...
+[   14.628418] wcnss_wlan_ctrl_probe: SMD ctrl channel up
+[   14.629480] wcnss: version 01050102
+[   14.629493] wcnss: schedule dnld work for pronto
+[   14.630052] wcnss: build version CNSS-PR-2-0-2-c3-1-00038
+[   14.629502] wcnss: NV download
+[   14.634064] wcnss: NV bin size: 31719, total_fragments: 11
+[   14.634099] wcnss: no space available for smd frame
+[   14.659774] wcnss: no space available for smd frame
+[   14.689821] wcnss: no space available for smd frame
+[   14.719799] wcnss: no space available for smd frame
+[   14.679747] msm_pm_qos_update_request: update request 100
+[   14.723449] msm_camera_config_single_vreg : can't find sub reg namemsm_camera_config_single_vreg : can't find sub reg name
+[   14.723804] msm_sensor_config:1514 sensor state 0
+[   14.735710] msm_isp_close_node: halt timeout rc=0
+[   14.751131] msm_csid_init: CSID_VERSION = 0x30010000
+[   14.752662]  msm_csid_init: Failed in getting TOP gdscr regulator handle
+[   14.755414] ------------[ cut here ]------------
+[   14.755441] WARNING: at /home/chegukee/workspace/F220b/msm8905/LINUX/android/kernel/drivers/clk/qcom/clock-local2.c:158 rcg_clk_prepare+0x2c/0x40()
+[   14.755448] Attempting to prepare csi1_clk_src before setting its rate. Set the rate first!
+[   14.755453] Modules linked in:
+[   14.755464] CPU: 1 PID: 1212 Comm: mct_pipe_start Tainted: G        W    3.10.49 #1
+[   14.755488] [<c0013efc>] (unwind_backtrace+0x0/0x11c) from [<c0011a98>] (show_stack+0x10/0x14)
+[   14.755505] [<c0011a98>] (show_stack+0x10/0x14) from [<c0021980>] (warn_slowpath_common+0x4c/0x6c)
+[   14.755519] [<c0021980>] (warn_slowpath_common+0x4c/0x6c) from [<c00219cc>] (warn_slowpath_fmt+0x2c/0x3c)
+[   14.755533] [<c00219cc>] (warn_slowpath_fmt+0x2c/0x3c) from [<c0637fa4>] (rcg_clk_prepare+0x2c/0x40)
+[   14.755548] [<c0637fa4>] (rcg_clk_prepare+0x2c/0x40) from [<c0634c78>] (clk_enable+0x13c/0x17c)
+[   14.755562] [<c0634c78>] (clk_enable+0x13c/0x17c) from [<c0634bbc>] (clk_enable+0x80/0x17c)
+[   14.755577] [<c0634bbc>] (clk_enable+0x80/0x17c) from [<c0507850>] (msm_cam_clk_enable+0x120/0x26c)
+[   14.755593] [<c0507850>] (msm_cam_clk_enable+0x120/0x26c) from [<c050ea60>] (msm_csiphy_subdev_ioctl+0x2f0/0xac0)
+[   14.755609] [<c050ea60>] (msm_csiphy_subdev_ioctl+0x2f0/0xac0) from [<c04bc29c>] (subdev_do_ioctl+0x6c8/0x72c)
+[   14.755624] [<c04bc29c>] (subdev_do_ioctl+0x6c8/0x72c) from [<c04b55ec>] (video_usercopy+0x2b8/0x40c)
+[   14.755639] [<c04b55ec>] (video_usercopy+0x2b8/0x40c) from [<c04b10c8>] (v4l2_ioctl+0x60/0x124)
+[   14.755655] [<c04b10c8>] (v4l2_ioctl+0x60/0x124) from [<c0106340>] (vfs_ioctl+0x28/0x3c)
+[   14.755669] [<c0106340>] (vfs_ioctl+0x28/0x3c) from [<c0106dbc>] (do_vfs_ioctl+0x4c0/0x570)
+[   14.755682] [<c0106dbc>] (do_vfs_ioctl+0x4c0/0x570) from [<c0106eb8>] (SyS_ioctl+0x4c/0x78)
+[   14.755696] [<c0106eb8>] (SyS_ioctl+0x4c/0x78) from [<c000e080>] (ret_fast_syscall+0x0/0x30)
+[   14.755704] ---[ end trace da227214a82491bb ]---
+[   14.766060] msm_camera_config_single_vreg : can't find sub reg name
+[   14.807306] OV-star,ZRT camera probe
+[   14.807326] msm_sensor_config:1487 sensor state 1
+[   14.910497] msm_pm_qos_update_request: update request -1
+[   15.028180] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   15.028217] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   15.028244] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   15.069305] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   15.069343] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   15.069371] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   15.074029] init: Starting service 'keystore'...
+[   15.121954] msm_qti_pp_get_rms_value_control, back not active to query rms be_idx:3
+[   15.124271] core_get_license_status: cmdrsp_license_result.result = 0x15 for module 0x1
+[   15.124416] msm_dolby_dap_param_to_get_control_get, port_id not set, do not query ADM
+[   15.124450] msm_dolby_dap_param_visualizer_control_get Incorrect VCNB length
+[   15.180467] msm_pcm_volume_ctl_get substream runtime not found
+[   15.180556] msm_pcm_volume_ctl_get substream runtime not found
+[   15.180764] msm_pcm_volume_ctl_get substream runtime not found
+[   15.180881] msm_pcm_volume_ctl_get substream runtime not found
+[   15.180913] msm_pcm_volume_ctl_get substream or runtime not found
+[   15.180994] msm_pcm_volume_ctl_get substream runtime not found
+[   15.364859] init: Service 'keystore' (pid 1254) exited with status 1
+[   15.364890] init: Service 'keystore' (pid 1254) killing any children in process group
+[   15.461680] wcdcal_hwdep_ioctl_shared: codec didn't set this 0!!
+[   15.461775] wcdcal_hwdep_ioctl_shared: codec didn't set this 1!!
+[   15.461911] wcdcal_hwdep_ioctl_shared: codec didn't set this 3!!
+[   15.468839] init: Starting service 'tfa98xxx'...
+[   15.564069] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   15.564113] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   15.564146] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   15.616146] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   15.616187] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   15.616223] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   15.685089] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   15.685129] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   15.685156] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   15.719023] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 0)
+[   15.719039] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 0)
+[   15.719049] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 1)
+[   15.719057] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 1)
+[   15.727772] q6asm_callback: cmd = 0x10bcd returned error = 0x1
+[   15.727827] __q6asm_cmd: DSP returned error[-1] opcode 68557
+[   15.728174] tfa98xx 2-0034: state: 1
+[   15.731151] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 0)
+[   15.731166] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 0)
+[   15.731175] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 1)
+[   15.731182] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 1)
+[   15.732493] tfa98xx_hw_params(): Requested rate: 48000, sample size: 16, physical size: 16
+[   15.732505] tfa98xx_hw_params(): mixer profile:container profile = [0:0]
+[   15.742650] tfa98xx 2-0034: state: 0
+[   15.743448] coldstart :
+[   15.895616]  8111 mOhms 
+[   15.901034] tfa98xx 2-0034: tfa_start success (0)
+[   15.927896] msm_camera_config_single_vreg : can't find sub reg name
+[   15.932208] msm_sensor_config:1514 sensor state 0
+[   16.009183] tfa98xx 2-0034: state: 1
+[   16.114513] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   16.114553] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   16.114580] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   16.163771] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   16.163807] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   16.163834] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   16.188422] wcnss: received WCNSS_CBC_COMPLETE_IND from FW
+[   16.233924] tfa98xx_info_vstep(): vsteps count: 1 [prof=0]
+[   16.233964] tfa98xx_info_vstep(): vsteps count: 10 [prof=1]
+[   16.233990] tfa98xx_info_vstep(): vsteps count: 1 [prof=2]
+[   16.302754] init: Service 'tfa98xxx' (pid 1282) exited with status 0
+[   16.403853] msm_ds2_dap_set_security_control: dmid 0 license key 0
+[   16.403876] core_set_license: Invalid cal block to send
+[   16.404285] wcdcal_hwdep_ioctl_shared: codec didn't set this 0!!
+[   16.404365] wcdcal_hwdep_ioctl_shared: codec didn't set this 1!!
+[   16.404489] wcdcal_hwdep_ioctl_shared: codec didn't set this 3!!
+[   17.479576] HTB: quantum of class 10001 is big. Consider r2q change.
+[   17.490914] init: Service 'netd' is being killed...
+[   17.493284] init: Service 'netd' (pid 303) killed by signal 9
+[   17.493316] init: Service 'netd' (pid 303) killing any children in process group
+[   17.505982] HTB: quantum of class 10010 is big. Consider r2q change.
+[   17.593376] init: Starting service 'netd'...
+[   18.089131] SELinux: initialized (dev fuse, type fuse), uses genfs_contexts
+[   18.122034] SELinux: initialized (dev fuse, type fuse), uses genfs_contexts
+[   18.122715] SELinux: initialized (dev fuse, type fuse), uses genfs_contexts
+[   20.225600] init: Starting service 'keystore'...
+[   20.363990] init: Service 'keystore' (pid 2297) exited with status 1
+[   20.364022] init: Service 'keystore' (pid 2297) killing any children in process group
+[   24.539123] BMS: check_eoc_condition: new_ocv(4175000) > ocv_at_100(4175000) maintaining SOC to 100
+[   24.539148] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4398
+[   25.239841] init: Starting service 'keystore'...
+[   25.342348] init: Service 'keystore' (pid 2527) exited with status 1
+[   25.342382] init: Service 'keystore' (pid 2527) killing any children in process group
+[   30.202900] init: Starting service 'keystore'...
+[   30.293895] init: Service 'keystore' (pid 2600) exited with status 1
+[   30.293928] init: Service 'keystore' (pid 2600) killing any children in process group
+[   32.280183] Boot completed init: Starting service 'qcom-post-boot'...
+[   32.282023] init: Starting service 'qti-testscripts'...
+[   32.283262] init: Starting service 'config-zram'...
+[   32.312935] init: Service 'qti-testscripts' (pid 2606) exited with status 0
+[   32.389449] init: Service 'config-zram' (pid 2607) exited with status 1
+[   32.400242] zram: Cannot change disksize for initialized device
+[   32.436867] msm_thermal:store_cc_enabled Core control disabled
+[   32.437461] msm_thermal:store_cc_enabled Core control enabled
+[   32.464080] core_ctl: module license 'BSD' taints kernel.
+[   32.464095] Disabling lock debugging due to kernel taint
+[   32.465690] core_ctl: Creating CPU group 0
+[   32.465701] core_ctl: Init CPU0 state
+[   32.465707] core_ctl: Init CPU1 state
+[   32.640048] init: Starting service 'perfd'...
+[   33.131300] init: Service 'qcom-post-boot' (pid 2605) exited with status 0
+[   35.087877] init: Starting service 'keystore'...
+[   35.171547] init: Service 'keystore' (pid 2667) exited with status 1
+[   35.171580] init: Service 'keystore' (pid 2667) killing any children in process group
+[   40.026944] init: Starting service 'keystore'...
+[   40.122167] init: Service 'keystore' (pid 2673) exited with status 1
+[   40.122209] init: Service 'keystore' (pid 2673) killing any children in process group
+[   41.908167] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 0)
+[   41.908185] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 0)
+[   41.908194] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 1)
+[   41.908201] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 1)
+[   41.908550] tfa98xx_hw_params(): Requested rate: 48000, sample size: 16, physical size: 16
+[   41.908563] tfa98xx_hw_params(): mixer profile:container profile = [0:0]
+[   41.909739] afe_callback: cmd = 0x100ef returned error = 0x2
+[   41.919266] tfa98xx 2-0034: state: 0
+[   41.924254] tfa98xx 2-0034: tfa_start success (0)
+[   41.926647] adm_callback: cmd = 0x10328 returned error = 0x3
+[   42.922137] tfa98xx_monitor(): SYS_STATUS0: 0xd05e
+[   42.922150] tfa98xx_monitor(): Misc errors detected: STATUS_FLAG0 = 0xd05e
+[   45.218426] init: Starting service 'keystore'...
+[   45.301183] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4418
+[   45.397461] init: Service 'keystore' (pid 2697) exited with status 1
+[   45.397494] init: Service 'keystore' (pid 2697) killing any children in process group
+[   47.758045] tfa98xx 2-0034: state: 1
+[   50.190099] init: Starting service 'keystore'...
+[   50.310429] init: Service 'keystore' (pid 2823) exited with status 1
+[   50.310469] init: Service 'keystore' (pid 2823) killing any children in process group
+[   52.749722] init: Service 'adbd' is being killed...
+[   52.749993] Error: returning -4 value
+[   52.750218] diag: USB channel diag disconnected
+[   52.750519] gbam_disconnect_work: Bam channel is not opened
+[   52.750751] init: Service 'adbd' (pid 372) killed by signal 9
+[   52.750778] init: Service 'adbd' (pid 372) killing any children in process group
+[   52.882629] android_usb: already disabled
+[   52.883367] init: Starting service 'adbd'...
+[   52.895372] read descriptors
+[   52.895391] read descriptors
+[   52.895402] read strings
+[   52.895438] rndis_function_bind_config MAC: 02:56:00:00:39:30
+[   52.895554] android_usb gadget: using random self ethernet address
+[   52.895609] android_usb gadget: using random host ethernet address
+[   52.900365] rndis0: MAC 8e:20:fa:97:90:3f
+[   52.900378] rndis0: HOST MAC 3a:cc:2c:74:a4:7c
+[   52.900522] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_CONNECT_EVENT received
+[   52.903706] msm_otg 78d9000.usb: Avail curr from USB = 2
+[   52.903731] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[   52.903773] android_work: did not send uevent (1 1   (null))
+[   52.903815] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[   52.915994] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   52.938798] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   52.985059] IPv6: ADDRCONF(NETDEV_UP): rndis0: link is not ready
+[   52.986253] IPv6: ADDRCONF(NETDEV_UP): rndis0: link is not ready
+[   53.052160] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESUME_EVENT received
+[   53.052234] msm_otg 78d9000.usb: Avail curr from USB = 100
+[   53.052411] android_work: sent uevent USB_STATE=DISCONNECTED
+[   53.052445] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current100 mA
+[   53.059547] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   53.089547] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   53.122640] android_work: sent uevent USB_STATE=CONNECTED
+[   53.126415] android_work: sent uevent USB_STATE=DISCONNECTED
+[   53.133151] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   53.137039] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   53.214854] android_work: sent uevent USB_STATE=CONNECTED
+[   53.216595] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[   53.217100] msm_otg 78d9000.usb: Avail curr from USB = 500
+[   53.217245] IPv6: ADDRCONF(NETDEV_CHANGE): rndis0: link becomes ready
+[   53.222058] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current500 mA
+[   53.230826] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   53.234480] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4426
+[   53.279799] android_work: sent uevent USB_STATE=CONFIGURED
+[   55.222746] init: Starting service 'keystore'...
+[   55.310315] init: Service 'keystore' (pid 2883) exited with status 1
+[   55.310350] init: Service 'keystore' (pid 2883) killing any children in process group
+[   55.851791] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 0)
+[   55.851808] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 0)
+[   55.851817] tfa98xx_get_profile_sr - profile fs: 0xffffffff = 0Hz (0 - 1)
+[   55.851824] tfa98xx_get_profile_sr - default fs: 0x8 = 48000Hz (0 - 1)
+[   55.852338] tfa98xx_hw_params(): Requested rate: 48000, sample size: 16, physical size: 16
+[   55.852351] tfa98xx_hw_params(): mixer profile:container profile = [0:0]
+[   55.855001] afe_callback: cmd = 0x100ef returned error = 0x2
+[   55.864356] tfa98xx 2-0034: state: 0
+[   55.874745] tfa98xx 2-0034: tfa_start success (0)
+[   55.876274] adm_callback: cmd = 0x10328 returned error = 0x3
+[   56.240958] init: Service 'adbd' is being killed...
+[   56.241233] Error: returning -4 value
+[   56.340345] init: Service 'adbd' (pid 2856) killed by signal 9
+[   56.340376] init: Service 'adbd' (pid 2856) killing any children in process group
+[   56.444060] init: Starting service 'adbd'...
+[   56.451738] read descriptors
+[   56.451758] read descriptors
+[   56.451769] read strings
+[   56.451870] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_CONNECT_EVENT received
+[   56.454979] msm_otg 78d9000.usb: Avail curr from USB = 2
+[   56.455005] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[   56.456503] android_work: did not send uevent (1 1   (null))
+[   56.456549] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[   56.464427] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4429
+[   56.468086] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4429
+[   56.624065] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESUME_EVENT received
+[   56.624143] msm_otg 78d9000.usb: Avail curr from USB = 100
+[   56.624352] android_work: sent uevent USB_STATE=DISCONNECTED
+[   56.624387] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current100 mA
+[   56.632503] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4430
+[   56.643585] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4430
+[   56.694635] android_work: sent uevent USB_STATE=CONNECTED
+[   56.698502] android_work: sent uevent USB_STATE=DISCONNECTED
+[   56.713080] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4430
+[   56.716272] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4430
+[   56.786694] android_work: sent uevent USB_STATE=CONNECTED
+[   56.788281] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[   56.788301] diag: USB channel diag connected
+[   56.788411] msm_otg 78d9000.usb: Avail curr from USB = 500
+[   56.788531] gbam_connect_work: Bam channel is not ready
+[   56.788605] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current500 mA
+[   56.795906] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4430
+[   56.803278] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4430
+[   56.839886] android_work: sent uevent USB_STATE=CONFIGURED
+[   56.870018] tfa98xx_monitor(): SYS_STATUS0: 0xd05e
+[   56.870032] tfa98xx_monitor(): Misc errors detected: STATUS_FLAG0 = 0xd05e
+[   60.035562] init: Starting service 'keystore'...
+[   60.163625] init: Service 'keystore' (pid 2929) exited with status 1
+[   60.163659] init: Service 'keystore' (pid 2929) killing any children in process group
+[   61.881559] tfa98xx_monitor(): SYS_STATUS0: 0xd05e
+[   61.881576] tfa98xx_monitor(): Misc errors detected: STATUS_FLAG0 = 0xd05e
+[   65.235835] init: Starting service 'keystore'...
+[   65.332031] init: Service 'keystore' (pid 2944) exited with status 1
+[   65.332065] init: Service 'keystore' (pid 2944) killing any children in process group
+[   66.891831] tfa98xx_monitor(): SYS_STATUS0: 0xd05e
+[   66.891847] tfa98xx_monitor(): Misc errors detected: STATUS_FLAG0 = 0xd05e
+[   70.188070] init: Starting service 'keystore'...
+[   70.261350] init: Service 'keystore' (pid 2954) exited with status 1
+[   70.261385] init: Service 'keystore' (pid 2954) killing any children in process group
+[   71.910484] tfa98xx_monitor(): SYS_STATUS0: 0xd05e
+[   71.910501] tfa98xx_monitor(): Misc errors detected: STATUS_FLAG0 = 0xd05e
+[   75.144940] init: Starting service 'keystore'...
+[   75.247063] init: Service 'keystore' (pid 2980) exited with status 1
+[   75.247099] init: Service 'keystore' (pid 2980) killing any children in process group
+[   76.920364] tfa98xx_monitor(): SYS_STATUS0: 0xd05e
+[   76.920377] tfa98xx_monitor(): Misc errors detected: STATUS_FLAG0 = 0xd05e
+[   77.967124] tfa98xx 2-0034: state: 1
+[   78.303619] init: Service 'lmitlogservice' is being killed...
+[   78.304442] init: Service 'lmitlogservice' is being killed...
+[   78.305323] init: Service 'lmitlogservice' (pid 370) killed by signal 9
+[   78.306625] init: Untracked pid 485 killed by signal 9
+[   80.081016] init: Starting service 'keystore'...
+[   80.159886] init: Service 'keystore' (pid 3022) exited with status 1
+[   80.159920] init: Service 'keystore' (pid 3022) killing any children in process group
+[   85.040280] init: Starting service 'keystore'...
+[   85.111913] init: Service 'keystore' (pid 3027) exited with status 1
+[   85.111947] init: Service 'keystore' (pid 3027) killing any children in process group
+[   90.175841] init: Starting service 'keystore'...
+[   90.258824] init: Service 'keystore' (pid 3030) exited with status 1
+[   90.258856] init: Service 'keystore' (pid 3030) killing any children in process group
+[   93.469031] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4466
+[   95.068215] init: Starting service 'keystore'...
+[   95.137093] init: Service 'keystore' (pid 3036) exited with status 1
+[   95.137125] init: Service 'keystore' (pid 3036) killing any children in process group
+[  100.191092] init: Starting service 'keystore'...
+[  100.253523] init: Service 'keystore' (pid 3038) exited with status 1
+[  100.253554] init: Service 'keystore' (pid 3038) killing any children in process group
+[  105.115657] init: Starting service 'keystore'...
+[  105.189284] init: Service 'keystore' (pid 3041) exited with status 1
+[  105.189317] init: Service 'keystore' (pid 3041) killing any children in process group
+[  110.024182] init: Starting service 'keystore'...
+[  110.091200] init: Service 'keystore' (pid 3045) exited with status 1
+[  110.091232] init: Service 'keystore' (pid 3045) killing any children in process group
+[  115.134499] init: Starting service 'keystore'...
+[  115.236719] init: Service 'keystore' (pid 3047) exited with status 1
+[  115.236751] init: Service 'keystore' (pid 3047) killing any children in process group
+[  120.030214] init: Starting service 'keystore'...
+[  120.108840] init: Service 'keystore' (pid 3052) exited with status 1
+[  120.108871] init: Service 'keystore' (pid 3052) killing any children in process group
+[  124.702065] msm_otg 78d9000.usb: Avail curr from USB = 2
+[  124.702096] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[  124.702252] android_work: sent uevent USB_STATE=SUSPENDED
+[  124.702295] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[  124.714012] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4498
+[  124.720407] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[  124.720583] msm_otg 78d9000.usb: Avail curr from USB = 0
+[  124.720733] diag: USB channel diag disconnected
+[  124.720951] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_DISCONNECT_EVENT received
+[  124.721057] BMS: battery_status_check: battery not-full anymore
+[  124.721203] gbam_disconnect_work: Bam channel is not opened
+[  124.721526] Error: returning -19 value
+[  124.722165] android_work: sent uevent USB_STATE=DISCONNECTED
+[  124.722281] read descriptors
+[  124.722293] read descriptors
+[  124.722306] read strings
+[  124.728321] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4498
+[  124.735385] msm_otg 78d9000.usb: USB in low power mode
+[  124.755705] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4498
+[  124.778058] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4498
+[  125.151916] init: Starting service 'keystore'...
+[  125.242344] init: Service 'keystore' (pid 3057) exited with status 1
+[  125.242382] init: Service 'keystore' (pid 3057) killing any children in process group
+[  130.128678] init: Starting service 'keystore'...
+[  130.212205] init: Service 'keystore' (pid 3058) exited with status 1
+[  130.212247] init: Service 'keystore' (pid 3058) killing any children in process group
+[  132.422424] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[  132.422657] BMS: battery_status_check: battery full
+[  132.431678] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4505
+[  132.432206] msm_otg 78d9000.usb: USB exited from low power mode
+[  132.435897] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4505
+[  132.560403] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[  132.567890] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESET_EVENT received
+[  132.567911] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_CONNECT_EVENT received
+[  132.569480] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.572972] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.746505] msm_otg 78d9000.usb: Avail curr from USB = 100
+[  132.746613] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current100 mA
+[  132.747223] android_work: did not send uevent (0 0   (null))
+[  132.747260] BMS: battery_status_check: charging started
+[  132.758408] BMS: battery_status_check: battery not-full anymore
+[  132.765648] BMS: check_eoc_condition: Battery FULL
+[  132.765677] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.767238] BMS: battery_status_check: charging stopped
+[  132.778352] BMS: battery_status_check: battery full
+[  132.782651] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  132.782683] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.790164] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  132.790190] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.798489] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  132.798516] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.817044] android_work: sent uevent USB_STATE=CONNECTED
+[  132.821841] android_work: sent uevent USB_STATE=DISCONNECTED
+[  132.829426] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  132.829451] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.833471] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  132.833494] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.909045] android_work: sent uevent USB_STATE=CONNECTED
+[  132.910367] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[  132.910389] diag: USB channel diag connected
+[  132.910520] msm_otg 78d9000.usb: Avail curr from USB = 500
+[  132.910679] gbam_connect_work: Bam channel is not ready
+[  132.910807] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current500 mA
+[  132.919186] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  132.919216] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.923078] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  132.923107] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  132.970565] android_work: sent uevent USB_STATE=CONFIGURED
+[  133.028870] init: Service 'adbd' is being killed...
+[  133.029168] Error: returning -4 value
+[  133.029388] diag: USB channel diag disconnected
+[  133.029750] gbam_disconnect_work: Bam channel is not opened
+[  133.029990] init: Service 'adbd' (pid 2888) killed by signal 9
+[  133.030018] init: Service 'adbd' (pid 2888) killing any children in process group
+[  133.133871] enable_store: 1 callbacks suppressed
+[  133.133887] android_usb: already disabled
+[  133.135054] init: Starting service 'adbd'...
+[  133.145684] read descriptors
+[  133.145705] read descriptors
+[  133.145718] read strings
+[  133.145760] rndis_function_bind_config MAC: 02:56:00:00:39:30
+[  133.145881] android_usb gadget: using random self ethernet address
+[  133.145920] android_usb gadget: using random host ethernet address
+[  133.146852] rndis0: MAC ce:de:e8:57:ab:e4
+[  133.146865] rndis0: HOST MAC c2:68:61:b0:c4:58
+[  133.146979] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_CONNECT_EVENT received
+[  133.150089] msm_otg 78d9000.usb: Avail curr from USB = 2
+[  133.150125] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[  133.150198] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[  133.157246] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.157272] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  133.160477] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.160506] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  133.236770] IPv6: ADDRCONF(NETDEV_UP): rndis0: link is not ready
+[  133.237554] IPv6: ADDRCONF(NETDEV_UP): rndis0: link is not ready
+[  133.310374] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESUME_EVENT received
+[  133.310442] msm_otg 78d9000.usb: Avail curr from USB = 100
+[  133.310632] android_work: sent uevent USB_STATE=DISCONNECTED
+[  133.310668] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current100 mA
+[  133.317443] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.317466] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  133.380906] android_work: sent uevent USB_STATE=CONNECTED
+[  133.389974] android_work: sent uevent USB_STATE=DISCONNECTED
+[  133.396751] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.396774] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  133.438590] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.438614] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  133.446815] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.446838] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4506
+[  133.472987] android_work: sent uevent USB_STATE=CONNECTED
+[  133.474610] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[  133.475064] msm_otg 78d9000.usb: Avail curr from USB = 500
+[  133.475197] IPv6: ADDRCONF(NETDEV_CHANGE): rndis0: link becomes ready
+[  133.477524] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current500 mA
+[  133.487750] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.487775] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4507
+[  133.529870] android_work: sent uevent USB_STATE=CONFIGURED
+[  133.618742] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  133.618764] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4507
+[  135.099626] init: Starting service 'keystore'...
+[  135.172005] init: Service 'keystore' (pid 3099) exited with status 1
+[  135.172037] init: Service 'keystore' (pid 3099) killing any children in process group
+[  136.444539] init: Service 'adbd' is being killed...
+[  136.444792] Error: returning -4 value
+[  136.477055] init: Service 'adbd' (pid 3062) killed by signal 9
+[  136.477084] init: Service 'adbd' (pid 3062) killing any children in process group
+[  136.548407] init: Starting service 'adbd'...
+[  136.553514] read descriptors
+[  136.553534] read descriptors
+[  136.553549] read strings
+[  136.553655] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_CONNECT_EVENT received
+[  136.556757] msm_otg 78d9000.usb: Avail curr from USB = 2
+[  136.556793] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[  136.556846] android_work: did not send uevent (1 1   (null))
+[  136.556893] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[  136.568284] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.568314] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.584313] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.584342] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.698236] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESUME_EVENT received
+[  136.698307] msm_otg 78d9000.usb: Avail curr from USB = 100
+[  136.698750] android_work: sent uevent USB_STATE=DISCONNECTED
+[  136.698784] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current100 mA
+[  136.706278] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.706301] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.712904] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.712929] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.768864] android_work: sent uevent USB_STATE=CONNECTED
+[  136.772763] android_work: sent uevent USB_STATE=DISCONNECTED
+[  136.780172] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.780196] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.784097] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.784120] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.861054] android_work: sent uevent USB_STATE=CONNECTED
+[  136.862675] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[  136.862696] diag: USB channel diag connected
+[  136.862810] msm_otg 78d9000.usb: Avail curr from USB = 500
+[  136.862989] gbam_connect_work: Bam channel is not ready
+[  136.863108] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current500 mA
+[  136.872524] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.872549] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.876081] BMS: check_eoc_condition: new_ocv(4169976) > ocv_at_100(4169976) maintaining SOC to 100
+[  136.876104] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4510
+[  136.919854] android_work: sent uevent USB_STATE=CONFIGURED
+[  140.240145] init: Starting service 'keystore'...
+[  140.311565] init: Service 'keystore' (pid 3114) exited with status 1
+[  140.311597] init: Service 'keystore' (pid 3114) killing any children in process group
+[  141.644827] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=4515
+[  141.654414] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=0
+[  141.658338] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=0
+[  142.369046] mdp3_ctrl_ioctl_handler: mdp3_ctrl_ioctl_handler, display off!
+[  145.192411] init: Starting service 'keystore'...
+[  145.290751] init: Service 'keystore' (pid 3130) exited with status 1
+[  145.290789] init: Service 'keystore' (pid 3130) killing any children in process group
+[  150.104225] init: Starting service 'keystore'...
+[  150.198835] init: Service 'keystore' (pid 3150) exited with status 1
+[  150.198874] init: Service 'keystore' (pid 3150) killing any children in process group
+[  151.748292] Error: returning -4 value
+[  151.748549] diag: USB channel diag disconnected
+[  151.748910] gbam_disconnect_work: Bam channel is not opened
+[  151.749300] init: Service 'adbd' (pid 3101) exited with status 1
+[  151.749340] init: Service 'adbd' (pid 3101) killing any children in process group
+[  151.750969] init: Starting service 'adbd'...
+[  151.755775] read descriptors
+[  151.755793] read descriptors
+[  151.755806] read strings
+[  151.755905] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_CONNECT_EVENT received
+[  151.759102] msm_otg 78d9000.usb: Avail curr from USB = 2
+[  151.759132] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_SUSPEND_EVENT received
+[  151.759188] android_work: did not send uevent (1 1   (null))
+[  151.759231] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current90 mA
+[  151.769482] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  151.998083] msm_hsusb msm_hsusb: CI13XXX_CONTROLLER_RESUME_EVENT received
+[  151.998153] msm_otg 78d9000.usb: Avail curr from USB = 100
+[  151.998463] android_work: sent uevent USB_STATE=DISCONNECTED
+[  151.998497] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current100 mA
+[  152.005789] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  152.069557] android_work: sent uevent USB_STATE=CONNECTED
+[  152.073221] android_work: sent uevent USB_STATE=DISCONNECTED
+[  152.080064] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  152.160518] android_work: sent uevent USB_STATE=CONNECTED
+[  152.162133] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[  152.162151] diag: USB channel diag connected
+[  152.162278] msm_otg 78d9000.usb: Avail curr from USB = 500
+[  152.162281] gbam_connect_work: Bam channel is not ready
+[  152.162377] CHG: qpnp_lbc_set_appropriate_current: qpnp_lbc_set_appropriate_current500 mA
+[  152.169268] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  152.220107] android_work: sent uevent USB_STATE=CONFIGURED
+[  152.274170] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  152.281847] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  152.286840] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  152.357966] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=10
+[  155.218378] init: Starting service 'keystore'...
+[  155.285420] init: Service 'keystore' (pid 3194) exited with status 1
+[  155.285451] init: Service 'keystore' (pid 3194) killing any children in process group
+[  160.147357] init: Starting service 'keystore'...
+[  160.216917] init: Service 'keystore' (pid 3198) exited with status 1
+[  160.216954] init: Service 'keystore' (pid 3198) killing any children in process group
+[  161.697846] BMS: report_vm_bms_soc: last_soc=100 calculated_soc=100 soc=100 time_since_last_change=20
+[  165.055820] init: Starting service 'keystore'...
+[  165.128669] init: Service 'keystore' (pid 3203) exited with status 1
+[  165.128707] init: Service 'keystore' (pid 3203) killing any children in process group
+[  170.194828] init: Starting service 'keystore'...
+[  170.268247] init: Service 'keystore' (pid 3206) exited with status 1
+[  170.268285] init: Service 'keystore' (pid 3206) killing any children in process group
+[  175.118937] init: Starting service 'keystore'...
+[  175.184226] init: Service 'keystore' (pid 3208) exited with status 1
+[  175.184257] init: Service 'keystore' (pid 3208) killing any children in process group
+[  180.072406] init: Starting service 'keystore'...
+[  180.155222] init: Service 'keystore' (pid 3210) exited with status 1
+[  180.155270] init: Service 'keystore' (pid 3210) killing any children in process group
+[  185.215833] init: Starting service 'keystore'...
+[  185.278408] init: Service 'keystore' (pid 3213) exited with status 1
+[  185.278440] init: Service 'keystore' (pid 3213) killing any children in process group
+[  189.794724] BMS: check_eoc_condition: SOC dropped (99) discarding ocv_at_100
+[  189.794749] BMS: report_vm_bms_soc: last_soc=99 calculated_soc=99 soc=99 time_since_last_change=48
+[  189.804226] BMS: report_vm_bms_soc: last_soc=99 calculated_soc=99 soc=99 time_since_last_change=0
+[  189.807761] BMS: report_vm_bms_soc: last_soc=99 calculated_soc=99 soc=99 time_since_last_change=0
+[  190.166030] init: Starting service 'keystore'...
+[  190.238879] init: Service 'keystore' (pid 3215) exited with status 1
+[  190.238915] init: Service 'keystore' (pid 3215) killing any children in process group
+[  195.053645] init: Starting service 'keystore'...
+[  195.141867] init: Service 'keystore' (pid 3217) exited with status 1
+[  195.141903] init: Service 'keystore' (pid 3217) killing any children in process group
+[  200.182376] init: Starting service 'keystore'...
+[  200.253199] init: Service 'keystore' (pid 3221) exited with status 1
+[  200.253232] init: Service 'keystore' (pid 3221) killing any children in process group
+[  205.134943] init: Starting service 'keystore'...
+[  205.204361] init: Service 'keystore' (pid 3224) exited with status 1
+[  205.204392] init: Service 'keystore' (pid 3224) killing any children in process group
+[  209.858717] BMS: report_vm_bms_soc: last_soc=99 calculated_soc=99 soc=99 time_since_last_change=20
+[  210.072694] init: Starting service 'keystore'...
+[  210.146914] init: Service 'keystore' (pid 3225) exited with status 1
+[  210.146952] init: Service 'keystore' (pid 3225) killing any children in process group
+[  212.499504] mdp3_ctrl_ioctl_handler: mdp3_ctrl_ioctl_handler, display off!
+[  215.203373] init: Starting service 'keystore'...
+[  215.281138] init: Service 'keystore' (pid 3239) exited with status 1
+[  215.281176] init: Service 'keystore' (pid 3239) killing any children in process group
+[  220.131456] init: Starting service 'keystore'...
+[  220.204478] init: Service 'keystore' (pid 3240) exited with status 1
+[  220.204516] init: Service 'keystore' (pid 3240) killing any children in process group
+[  225.088592] init: Starting service 'keystore'...
+[  225.154322] init: Service 'keystore' (pid 3241) exited with status 1
+[  225.154354] init: Service 'keystore' (pid 3241) killing any children in process group
+[  230.225907] init: Starting service 'keystore'...
+[  230.298272] init: Service 'keystore' (pid 3242) exited with status 1
+[  230.298310] init: Service 'keystore' (pid 3242) killing any children in process group
+[  235.135310] init: Starting service 'keystore'...
+[  235.208382] init: Service 'keystore' (pid 3243) exited with status 1
+[  235.208415] init: Service 'keystore' (pid 3243) killing any children in process group
+[  237.941590] BMS: report_vm_bms_soc: last_soc=99 calculated_soc=99 soc=99 time_since_last_change=48
+[  240.039501] init: Starting service 'keystore'...
+[  240.133020] init: Service 'keystore' (pid 3244) exited with status 1
+[  240.133057] init: Service 'keystore' (pid 3244) killing any children in process group
+[  245.208575] init: Starting service 'keystore'...
+[  245.281175] init: Service 'keystore' (pid 3245) exited with status 1
+[  245.281212] init: Service 'keystore' (pid 3245) killing any children in process group
+[  250.177733] init: Starting service 'keystore'...
+[  250.246696] init: Service 'keystore' (pid 3246) exited with status 1
+[  250.246733] init: Service 'keystore' (pid 3246) killing any children in process group
+[  255.110975] init: Starting service 'keystore'...
+[  255.189929] init: Service 'keystore' (pid 3247) exited with status 1
+[  255.189966] init: Service 'keystore' (pid 3247) killing any children in process group
+[  257.929530] type=1400 audit(1584348208.972:7): avc:  denied  { write open } for  pid=665 comm="Gecko_IOThread" path="/data/bootchart/proc_stat.log" dev="mmcblk0p36" ino=28930 scontext=u:r:b2g:s0 tcontext=u:object_r:bootchart_data_file:s0 tclass=file permissive=0
+[  260.936697] init: Starting service 'keystore'...
+[  261.014181] init: Service 'keystore' (pid 3249) exited with status 1
+[  261.014219] init: Service 'keystore' (pid 3249) killing any children in process group
+[  266.020687] init: Starting service 'keystore'...
+[  266.102989] init: Service 'keystore' (pid 3250) exited with status 1
+[  266.103027] init: Service 'keystore' (pid 3250) killing any children in process group
+[  271.108533] init: Starting service 'keystore'...
+[  271.191613] init: Service 'keystore' (pid 3251) exited with status 1
+[  271.191657] init: Service 'keystore' (pid 3251) killing any children in process group
+[  276.198665] init: Starting service 'keystore'...
+[  276.272915] init: Service 'keystore' (pid 3252) exited with status 1
+[  276.272952] init: Service 'keystore' (pid 3252) killing any children in process group
+[  281.280322] init: Starting service 'keystore'...
+[  281.348538] init: Service 'keystore' (pid 3253) exited with status 1
+[  281.348576] init: Service 'keystore' (pid 3253) killing any children in process group
+[  286.080777] BMS: report_vm_bms_soc: last_soc=99 calculated_soc=99 soc=99 time_since_last_change=96
+[  286.355028] init: Starting service 'keystore'...
+[  286.458800] init: Service 'keystore' (pid 3255) exited with status 1
+[  286.458834] init: Service 'keystore' (pid 3255) killing any children in process group
+[  291.465019] init: Starting service 'keystore'...
+[  291.536101] init: Service 'keystore' (pid 3256) exited with status 1
+[  291.536141] init: Service 'keystore' (pid 3256) killing any children in process group
+[  296.542495] init: Starting service 'keystore'...
+[  296.606101] init: Service 'keystore' (pid 3267) exited with status 1
+[  296.606133] init: Service 'keystore' (pid 3267) killing any children in process group
+[  301.612490] init: Starting service 'keystore'...
+[  301.683408] init: Service 'keystore' (pid 3268) exited with status 1
+[  301.683447] init: Service 'keystore' (pid 3268) killing any children in process group
+[  306.690110] init: Starting service 'keystore'...
+[  306.757138] init: Service 'keystore' (pid 3272) exited with status 1
+[  306.757169] init: Service 'keystore' (pid 3272) killing any children in process group
+[  311.763606] init: Starting service 'keystore'...
+[  311.848387] init: Service 'keystore' (pid 3276) exited with status 1
+[  311.848431] init: Service 'keystore' (pid 3276) killing any children in process group
+[  316.855117] init: Starting service 'keystore'...
+[  316.934761] init: Service 'keystore' (pid 3278) exited with status 1
+[  316.934799] init: Service 'keystore' (pid 3278) killing any children in process group
+[  321.942090] init: Starting service 'keystore'...
+[  322.007407] init: Service 'keystore' (pid 3279) exited with status 1
+[  322.007437] init: Service 'keystore' (pid 3279) killing any children in process group
+[  327.014620] init: Starting service 'keystore'...
+[  327.090052] init: Service 'keystore' (pid 3280) exited with status 1
+[  327.090090] init: Service 'keystore' (pid 3280) killing any children in process group
+[  331.096215] init: Starting service 'keystore'...
+[  331.170217] init: Service 'keystore' (pid 3281) exited with status 1
+[  331.170255] init: Service 'keystore' (pid 3281) killing any children in process group
+[  334.234486] BMS: report_vm_bms_soc: last_soc=99 calculated_soc=99 soc=99 time_since_last_change=144
+[  336.176597] init: Starting service 'keystore'...
+[  336.259991] init: Service 'keystore' (pid 3282) exited with status 1
+[  336.260028] init: Service 'keystore' (pid 3282) killing any children in process group
+[  341.266523] init: Starting service 'keystore'...
+[  341.341265] init: Service 'keystore' (pid 3283) exited with status 1
+[  341.341302] init: Service 'keystore' (pid 3283) killing any children in process group
+[  346.348549] init: Starting service 'keystore'...
+[  346.422317] init: Service 'keystore' (pid 3284) exited with status 1
+[  346.422356] init: Service 'keystore' (pid 3284) killing any children in process group

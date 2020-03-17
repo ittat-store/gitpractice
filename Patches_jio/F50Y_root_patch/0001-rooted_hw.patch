@@ -1,0 +1,73 @@
+From 780506243c23b28256866416dd3a3c3efbfd58f8 Mon Sep 17 00:00:00 2001
+From: Kailas Kharse <kailas.kharse@votarytech.com>
+Date: Fri, 13 Mar 2020 18:16:43 +0530
+Subject: [PATCH] rooted_hw
+
+Change-Id: I1dae51ea89dfe9182e943f7a2425ba5586a37916
+---
+ default-prefs/dev-pref.js |  2 +-
+ hymost.prop               | 14 +++++++-------
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/default-prefs/dev-pref.js b/default-prefs/dev-pref.js
+index e571159..8a8a5da 100644
+--- a/default-prefs/dev-pref.js
++++ b/default-prefs/dev-pref.js
+@@ -1,6 +1,6 @@
+ pref('dom.fmradio.antenna.internal', true);
+ pref("general.useragent.use_device", true);
+-pref("general.useragent.device_string", "LYF/F50Y/LYF-F50Y-001-03-ER11-060320_i;Android");
++pref("general.useragent.device_string", "LYF/F50Y/LYF-F50Y-001-03-RQER10_RPMB-130320;Android");
+ pref("device.capability.vilte", false);
+ pref("device.capability.vowifi", false);
+ pref("app.kaiapi.version", "2.0");
+diff --git a/hymost.prop b/hymost.prop
+index a9aed33..0f62f7b 100644
+--- a/hymost.prop
++++ b/hymost.prop
+@@ -2,7 +2,7 @@
+ # HY property
+ #
+ ro.hw_version=X68N_V1.01_PCB
+-ro.build.display.id=LYF-F50Y-001-03-ER11-060320_i
++ro.build.display.id=LYF-F50Y-001-03-RQER10_RPMB-130320
+ ro.product.ui_model=F50Y
+ 
+ ro.product.brand=LYF
+@@ -11,18 +11,18 @@ ro.product.name=F50Y
+ ro.product.device=F50Y
+ ro.product.board=F50Y
+ ro.build.product=msm8905_X68N
+-ro.build.inter_version=msm8905_X68n_Reliance_03_ER11_060320_userdebug
++ro.build.inter_version=msm8905_X68n_Reliance_03_RQER10_RPMB_130320_user
+ 
+ ro.product.manufacturer_code=F50Y
+ ro.product.model=F50Y
+-ro.hardware=F50Y_0
++#ro.hardware=F50Y_0
+ ro.product.usb=F50Y
+ ro.device.model=F50Y
+ ro.product.operator=CT
+ ro.fota.cu_ref=F50Y-EBJIINA
+-ro.fota.sw_ver=03ER11
++ro.fota.sw_ver=03RQER10_RPMB
+ 
+-ro.build.version.incremental=LYF-F50Y-001-03-ER11-060320_i
++ro.build.version.incremental=LYF-F50Y-001-03-RQER10_RPMB-130320
+ #ro.fota
+ ro.fota.SUMaster=fota.mst.kai.jiophone.net
+ ro.fota.network_type=https
+@@ -33,8 +33,8 @@ ro.moz.ril.0.network_types=lte
+ ro.product.sar_value=Head SAR-0.495 W/kg Body-worn SAR-0.727
+ #add base version
+ ro.product.base_version=MSM8905.LF.1.3.c1-10033-STD.PROD-1
+-ro.product.version_tag=kaios_jio_quoin_2_5_20181106_R3_ER11
+-ro.build.software.version=LYF-F50Y-001-03-ER11-060320_i
++ro.product.version_tag=kaios_jio_quoin_2_5_20181106_R3_ER10
++ro.build.software.version=LYF-F50Y-001-03-RQER10_RPMB-130320
+ #for MBN
+ persist.radio.start_ota_daemon=1
+ persist.radio.dc.enabled=1
+-- 
+1.9.1
+
