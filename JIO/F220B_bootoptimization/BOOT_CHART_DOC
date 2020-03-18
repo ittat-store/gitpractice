@@ -1,0 +1,59 @@
+
+1) Boot chart utility: 
+===================
+$ sudo apt-get install bootchart
+
+1. start from a clean build, and set the variable INIT_BOOTCHART=true 
+
+   $ cd <build_folder>
+   $ export INIT_BOOTCHART=true
+   $ make clean
+   $ make
+
+Flash the build after success
+ 
+
+2. Triggering bootchart functionality on system boot
+   $ adb root
+   $ adb shell 'echo 120 > /data/bootchart-start'
+
+(120 - sec)
+
+
+3. reboot the device 
+
+When you reboot your device, bootcharting will start when /init is run, 
+and will end after the indicated period. (120 seconds = 2 minutes)
+
+4.In the device 
+	$cd /data/bootchart
+	
+we can see the all logs here 
+
+
+5. Retrieving the collected data from the system
+ -->on host machine run the below script 
+ 
+   $ ./system/core/init/grab-bootchart.sh
+
+
+
+In current directory will generates the .png image file.
+
+
+For more details check the below link. 
+
+Ref: 
+====
+https://elinux.org/Using_Bootchart_on_Android
+
+
+
+2) Optimizing Boot Times: TODO
+=========================
+
+
+
+
+
+
