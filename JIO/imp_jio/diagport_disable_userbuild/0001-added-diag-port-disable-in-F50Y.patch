@@ -1,0 +1,30 @@
+From 1d14bcca9e4d182077710e02566c8d6844d0f161 Mon Sep 17 00:00:00 2001
+From: Kailas Kharse <kailas.kharse@votarytech.com>
+Date: Wed, 18 Mar 2020 14:46:55 +0530
+Subject: [PATCH] added diag port disable in F50Y
+
+Change-Id: Ibf0edd85426a650e91359ad4a3117a7c5999f3d5
+---
+ rootdir/etc/init.qcom.post_boot.sh | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/rootdir/etc/init.qcom.post_boot.sh b/rootdir/etc/init.qcom.post_boot.sh
+index e6b4f37..eb2ad3d 100644
+--- a/rootdir/etc/init.qcom.post_boot.sh
++++ b/rootdir/etc/init.qcom.post_boot.sh
+@@ -1217,6 +1217,12 @@ case "$target" in
+         else
+            soc_id=`cat /sys/devices/system/soc/soc0/id`
+         fi
++	
++	build_type=`getprop ro.build.type`
++        if  [ "$build_type" != "userdebug" ] ; then
++                setprop persist.sys.usb.config mtp,adb
++        fi
++
+ 
+ 	#Set LMK, adaptive LMK, zram, mmcblk read_ahead
+ 	if [ $MemTotal -le 262144 ]; then
+-- 
+1.9.1
+
