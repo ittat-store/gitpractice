@@ -1,0 +1,65 @@
+From 6bb1685443fb6d2088f3b66bf535eb7b5c56bb5d Mon Sep 17 00:00:00 2001
+From: chegurikeerthikumari <keerthikumari.cheguri@votarytech.com>
+Date: Tue, 25 Feb 2020 11:20:13 +0530
+Subject: [PATCH] backlight_lcd_issue
+
+Change-Id: I3ad09cbc9dfe5ffc5cfa558df4835ba6b4fc2e62
+---
+ js/backlight.js | 32 ++++++++++++++++++++++++++++++--
+ 1 file changed, 30 insertions(+), 2 deletions(-)
+
+diff --git a/js/backlight.js b/js/backlight.js
+index 7f3fda9..aedb37f 100644
+--- a/js/backlight.js
++++ b/js/backlight.js
+@@ -27,9 +27,37 @@ const HIGH_BRIGHTNESS = 1;
+ 
+ var BacklightTest = new TestItem();
+ 
++BacklightTest.disableScreen = function() {
++  debug('Disable the device screen.');
++  navigator.engmodeExtension.setKeypadLED(0);
++  this.power.screenEnabled = false;
++  this.power.screenBrightness = LOW_BRIGHTNESS;
++  setTimeout(this.timeoutCallback.bind(this), 1500);
++},
++
++BacklightTest.enableScreen = function() {
++  debug('Light the device screen.');
++  navigator.engmodeExtension.setKeypadLED(100);
++  this.power.screenEnabled = true;
++  this.power.screenBrightness = HIGH_BRIGHTNESS;
++  setTimeout(this.timeoutCallback.bind(this), 1500);
++},
++
+ BacklightTest.toggleBacklight = function() {
+   debug('this.power.screenBrightness = ' + navigator.mozPower.screenBrightness);
+-  if (navigator.mozPower.screenBrightness === this.orignScreenBrightness) {
++
++if (this.count === 0) {
++    this.disableScreen();
++  }
++
++  if (navigator.mozPower.screenBrightness >= this.orignScreenBrightness) {
++    this.disableScreen();
++  } else {
++    this.enableScreen();
++    this.count += 1;
++  }
++
++  /*if (navigator.mozPower.screenBrightness === this.orignScreenBrightness) {
+     debug('Disable the device screen.');
+     navigator.engmodeExtension.setKeypadLED(0);
+     this.power.screenEnabled = false;
+@@ -43,7 +71,7 @@ BacklightTest.toggleBacklight = function() {
+     this.power.screenBrightness = HIGH_BRIGHTNESS;
+     setTimeout(this.timeoutCallback.bind(this), 1000);
+     this.count += 1;
+-  }
++  }*/
+ 
+   // Show fail/pass button after three time flash
+   if (this.count === REPEAT) {
+-- 
+2.24.1
+

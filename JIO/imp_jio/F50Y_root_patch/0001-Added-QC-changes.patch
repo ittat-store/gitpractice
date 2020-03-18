@@ -1,0 +1,48 @@
+From fa7791c96ee19189cb1a161529d10fe6f9dff79f Mon Sep 17 00:00:00 2001
+From: Kailas Kharse <kailas.kharse@votarytech.com>
+Date: Thu, 12 Mar 2020 17:40:26 +0530
+Subject: [PATCH 1/2] Added QC changes
+
+Change-Id: I696614b3c9ad2e886bd9b912ae6952d28d92c169
+---
+ app/aboot/aboot.c         | 4 ++--
+ platform/msm_shared/scm.c | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/app/aboot/aboot.c b/app/aboot/aboot.c
+index a7ce98a..dcbdd71 100644
+--- a/app/aboot/aboot.c
++++ b/app/aboot/aboot.c
+@@ -397,7 +397,7 @@ unsigned char *update_cmdline(const char * cmdline)
+ 	if(target_use_signed_kernel() && auth_kernel_img) {
+ 		cmdline_len += strlen(auth_kernel);
+ 	}
+-	if(secure_boot_enabled) {
++	if(is_secure_boot_enable()) {
+ 			cmdline_len += strlen(sec_boot);
+ 		}else{
+ 			cmdline_len += strlen(non_sec_boot);
+@@ -616,7 +616,7 @@ unsigned char *update_cmdline(const char * cmdline)
+ 		}
+ 		
+ 		/*appending secure boot status in cmdline*/
+-		src = secure_boot_enabled?sec_boot:non_sec_boot;
++		src = is_secure_boot_enable()?sec_boot:non_sec_boot;
+ 		if (have_cmdline) --dst;
+ 			while ((*dst++ = *src++));
+ 			
+diff --git a/platform/msm_shared/scm.c b/platform/msm_shared/scm.c
+index f48b417..90fd6f0 100644
+--- a/platform/msm_shared/scm.c
++++ b/platform/msm_shared/scm.c
+@@ -1290,6 +1290,7 @@ void scm_check_boot_fuses()
+ 	if (!ret) {
+ 		/* Check for secure device: Bit#0 = 0, Bit#1 = 0 Bit#2 = 0 , Bit#5 = 0 */
+ 		/* Check Bit#6 = 1 only for TZ.BF.4.0 */
++                dprintf(CRITICAL, "check secure boot status Bit#1: 0x%x, Bit#2: 0x%x, Bit#3: 0x%x,Bit#4: 0x%x, Bit#5: 0x%x\n", CHECK_BIT(resp[0], SECBOOT_FUSE_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_SHK_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_RE_ENABLED_BIT) );
+         	if (!CHECK_BIT(resp[0], SECBOOT_FUSE_BIT) && !CHECK_BIT(resp[0], SECBOOT_FUSE_SHK_BIT) &&
+         		!CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT) &&
+                         !CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT)) {
+-- 
+1.9.1
+

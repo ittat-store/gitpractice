@@ -1,0 +1,11 @@
+1) Diag port diasble .............. device /qcom/common/rootdir/etc/init.qcom.post_boot.sh
+2) Backlight issue ------------------- apps/mmitest/js/backlight.js
+3) backlight issue .................... kernel/drivers/leds/keypad_backlight.c
+4) keysequence .................... bootable/bootloader/lk/app/aboot/aboot.c
+5) user-agent ..................  LINUX/android/gaia/b2g_sdk/x86_64/b2g/precomplete
+				 LINUX/android/gaia/b2g_sdk/x86_64/b2g/ua-update.json
+6) rooted app ........................ bootable/bootloader/lk/platform/msm_shared/scm.c
+					bootable/bootloader/lk/app/aboot/aboot.c	
+7) after sales ( no network ) ............. modem_proc/uim/simlock/usr/simlock.c
+8) FDR below 25% issue (factory data reset) ................. bootable/recovery/recovery.cpp
+

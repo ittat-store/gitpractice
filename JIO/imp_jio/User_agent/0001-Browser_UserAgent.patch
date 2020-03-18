@@ -1,0 +1,54 @@
+From 838fe6b1a193e2887dcaf06aefbc1c7ffdad68b7 Mon Sep 17 00:00:00 2001
+From: sudhir <sudhirkumar.r08@gmail.com>
+Date: Fri, 13 Dec 2019 14:59:43 +0530
+Subject: [PATCH] Browser_UserAgent
+
+---
+ LINUX/android/gaia/b2g_sdk/x86_64/b2g/precomplete    | 4 ----
+ LINUX/android/gaia/b2g_sdk/x86_64/b2g/ua-update.json | 5 +++--
+ 2 files changed, 3 insertions(+), 6 deletions(-)
+
+diff --git a/LINUX/android/gaia/b2g_sdk/x86_64/b2g/precomplete b/LINUX/android/gaia/b2g_sdk/x86_64/b2g/precomplete
+index dadcaddbb5..e7c03420fc 100644
+--- a/LINUX/android/gaia/b2g_sdk/x86_64/b2g/precomplete
++++ b/LINUX/android/gaia/b2g_sdk/x86_64/b2g/precomplete
+@@ -1,6 +1,4 @@
+ remove "xpcshell"
+-remove "ua-update.json"
+-remove "run-mozilla.sh"
+ remove "res/text_caret_tilt_right@2x.png"
+ remove "res/text_caret_tilt_right@2.25x.png"
+ remove "res/text_caret_tilt_right@1.5x.png"
+@@ -605,8 +603,6 @@ remove "modules/Webapps.jsm"
+ remove "modules/WebappOSUtils.jsm"
+ remove "modules/WebChannel.jsm"
+ remove "modules/UserCustomizations.jsm"
+-remove "modules/UserAgentUpdates.jsm"
+-remove "modules/UserAgentOverrides.jsm"
+ remove "modules/UpdateChannel.jsm"
+ remove "modules/UITelemetry.jsm"
+ remove "modules/TrustedHostedAppsUtils.jsm"
+diff --git a/LINUX/android/gaia/b2g_sdk/x86_64/b2g/ua-update.json b/LINUX/android/gaia/b2g_sdk/x86_64/b2g/ua-update.json
+index 783a9cbdd6..729e4bd0ea 100644
+--- a/LINUX/android/gaia/b2g_sdk/x86_64/b2g/ua-update.json
++++ b/LINUX/android/gaia/b2g_sdk/x86_64/b2g/ua-update.json
+@@ -1,5 +1,6 @@
+ {
+-  "msn.com": "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19",
++  "whatismybrowser.com": "Mozilla/5.0 (Mobile;LYF/F300B/LYF-F300B-001-01-43-131219; Android;rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5",
++  "msn.com": "Mozilla/5.0 (Mobile;LYF/F300B/LYF-F300B-001-01-43-131219; Android;rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5",
+   "itau.com.br": "\\(Mobile#(Android; Mobile",
+   "r7.com": "\\(Mobile#(Android; Mobile",
+   "estadao.com.br": "\\(Mobile#(Android; Mobile",
+@@ -9,7 +10,7 @@
+   "groupon.com.br": "\\(Mobile#(Android; Mobile",
+   "hao123.com": "\\(Mobile#(Android; Mobile",
+   "webmotors.com.br": "\\(Mobile#(Android; Mobile",
+-  "elpais.com.co": "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19",
++  "elpais.com.co": "Mozilla/5.0 (Mobile;LYF/F300B/LYF-F300B-001-01-43-131219; Android;rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5",
+   "avianca.com": "\\(Mobile#(Android; Mobile",
+   "marca.com": "\\(Mobile#(Android; Mobile",
+   "ingbank.pl": "\\(Mobile#(Android; Mobile",
+-- 
+2.24.0
+

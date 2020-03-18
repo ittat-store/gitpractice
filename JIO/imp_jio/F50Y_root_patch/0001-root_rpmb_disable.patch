@@ -1,0 +1,28 @@
+From 5feb701df458748eaf15c05202d0fae8cabcbd6d Mon Sep 17 00:00:00 2001
+From: Kailas Kharse <kailas.kharse@votarytech.com>
+Date: Fri, 13 Mar 2020 18:12:53 +0530
+Subject: [PATCH] root_rpmb_disable
+
+Change-Id: Ibda4ac197da4716afe59da972997f6d4e33b80ef
+---
+ platform/msm_shared/scm.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/platform/msm_shared/scm.c b/platform/msm_shared/scm.c
+index 90fd6f0..ef9c77a 100644
+--- a/platform/msm_shared/scm.c
++++ b/platform/msm_shared/scm.c
+@@ -1292,8 +1292,8 @@ void scm_check_boot_fuses()
+ 		/* Check Bit#6 = 1 only for TZ.BF.4.0 */
+                 dprintf(CRITICAL, "check secure boot status Bit#1: 0x%x, Bit#2: 0x%x, Bit#3: 0x%x,Bit#4: 0x%x, Bit#5: 0x%x\n", CHECK_BIT(resp[0], SECBOOT_FUSE_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_SHK_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_RE_ENABLED_BIT) );
+         	if (!CHECK_BIT(resp[0], SECBOOT_FUSE_BIT) && !CHECK_BIT(resp[0], SECBOOT_FUSE_SHK_BIT) &&
+-        		!CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT) &&
+-                        !CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT)) {
++        		!CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT)) /*&&
++                        !CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT))*/ {
+                         if ((qseecom_get_version() < QSEE_VERSION_40))
+ 	                        secure_boot_enabled = true;
+                         else if (CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_RE_ENABLED_BIT))
+-- 
+1.9.1
+
