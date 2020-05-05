@@ -1,0 +1,29 @@
+From a6ef48a37dd535ca92524532ed494d3dc0fbaa2d Mon Sep 17 00:00:00 2001
+From: keerthi kumari cheguri <keerthikumari.cheguri@votarytech.com>
+Date: Fri, 13 Mar 2020 14:36:27 +0530
+Subject: [PATCH] rooted_rpmb_disable
+
+---
+ .../android/bootable/bootloader/lk/platform/msm_shared/scm.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/LINUX/android/bootable/bootloader/lk/platform/msm_shared/scm.c b/LINUX/android/bootable/bootloader/lk/platform/msm_shared/scm.c
+index f48b417d5d..bff4ed4c30 100644
+--- a/LINUX/android/bootable/bootloader/lk/platform/msm_shared/scm.c
++++ b/LINUX/android/bootable/bootloader/lk/platform/msm_shared/scm.c
+@@ -1290,9 +1290,10 @@ void scm_check_boot_fuses()
+ 	if (!ret) {
+ 		/* Check for secure device: Bit#0 = 0, Bit#1 = 0 Bit#2 = 0 , Bit#5 = 0 */
+ 		/* Check Bit#6 = 1 only for TZ.BF.4.0 */
++		dprintf(CRITICAL, "check secure boot status Bit#1: 0x%x, Bit#2: 0x%x, Bit#3: 0x%x,Bit#4: 0x%x, Bit#5: 0x%x\n", CHECK_BIT(resp[0], SECBOOT_FUSE_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_SHK_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT), CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_RE_ENABLED_BIT) );
+         	if (!CHECK_BIT(resp[0], SECBOOT_FUSE_BIT) && !CHECK_BIT(resp[0], SECBOOT_FUSE_SHK_BIT) &&
+-        		!CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT) &&
+-                        !CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT)) {
++        		!CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_DISABLED_BIT)) /*&&
++                        !CHECK_BIT(resp[0], SECBOOT_FUSE_RPMB_ENABLED_BIT)) */{
+                         if ((qseecom_get_version() < QSEE_VERSION_40))
+ 	                        secure_boot_enabled = true;
+                         else if (CHECK_BIT(resp[0], SECBOOT_FUSE_DEBUG_RE_ENABLED_BIT))
+-- 
+2.24.1
+

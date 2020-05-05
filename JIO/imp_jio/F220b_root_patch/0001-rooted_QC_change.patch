@@ -1,0 +1,34 @@
+From e469617b3a7698761c7af3e90f5b3d6087f13aa8 Mon Sep 17 00:00:00 2001
+From: keerthi kumari cheguri <keerthikumari.cheguri@votarytech.com>
+Date: Mon, 16 Mar 2020 10:48:21 +0530
+Subject: [PATCH] rooted_QC_change
+
+---
+ LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c b/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c
+index 0864a2e18d..4c3cef2bf6 100755
+--- a/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c
++++ b/LINUX/android/bootable/bootloader/lk/app/aboot/aboot.c
+@@ -436,7 +436,7 @@ unsigned char *update_cmdline(const char * cmdline)
+ 	if(target_use_signed_kernel() && auth_kernel_img) {
+ 		cmdline_len += strlen(auth_kernel);
+ 	}
+-	if(secure_boot_enabled) {
++	if(is_secure_boot_enable()) {
+ 			cmdline_len += strlen(sec_boot);
+ 		}else{
+ 			cmdline_len += strlen(non_sec_boot);
+@@ -681,7 +681,7 @@ snprintf(android_bluebank_hwid, MAX_RSP_SIZE, " androidboot.hwid=H%x%x",bluebank
+ 		}
+ 		
+ 		/*appending secure boot status in cmdline*/
+-		src = secure_boot_enabled?sec_boot:non_sec_boot;
++		src = is_secure_boot_enable()?sec_boot:non_sec_boot;
+ 		if (have_cmdline) --dst;
+ 			while ((*dst++ = *src++));
+ 			
+-- 
+2.24.1
+
