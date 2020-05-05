@@ -249,4 +249,20 @@ next $ git branch -b 192.168.2.220:....patch (like clone command) branch name
 or otherwise simply clone from new remote into new directory
 .......................................................................................................
 
+in git if wrongly commited large files like .zip of builds 
+then it won't push to server get errors like 
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: 09c5282c93ac631d77bb80110425f9f7
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File JIO/F220B_bootoptimization/LYF-F220B-003-01-SIT-090320-i_userdebug_f3_signed.zip is 771.75 MB; this exceeds GitHub's file size limit of 100.00 MB
+To https://github.com/chegurikeerthikumari/gitpractice.git
+ ! [remote rejected] new -> new (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/chegurikeerthikumari/gitpractice.git'
+ 
+Solution :  use git filter-branch --tree-filter 'rm -rf JIO/F220B_bootoptimization/LYF-F220B-003-01-SIT-090320-i_userdebug_f3_signed.zip (i.e./path to that large file)'  HEAD
+
+
+
+
+
 
