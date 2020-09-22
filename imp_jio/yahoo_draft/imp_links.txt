@@ -1,0 +1,61 @@
+Top 20 Git Commands With Examples - DZone Open Source.............imp git commands
+https://gyires.inf.unideb.hu/GyBITT/20/ch02s02.html  ................... boot process
+https://lwn.net/Articles/433601/  ................ API for sensors
+Understanding the GitHub flow · GitHub Guides
+Git - About Version Control
+https://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/
+Linux Practice Questions and Answers - Sanfoundry
+https://wiki.analog.com/resources/tools-software/linux-drivers/input-misc/adxl345
+
+http://www.tortosaforum.com/raspberrypi/dht11driver.htm
+The Linux kernel: Filesystems
+Conceptual Architecture of the Linux Kernel
+https://www.javatpoint.com/android-ui-widgets-tutorial
+
+Android Q Beta
+https://www.electroschematics.com/5231/mobile-phone-how-it-works/
+https://www.sanfoundry.com/linux-device-drivers-major-minor-numbers-questions-answers/
+https://www.sanfoundry.com/c-programming-questions-answers-pointers-pointers-1/
+http://placementstudy.com/c-programming/56/expressions/6
+
+https://www.balena.io/blog/sensors-and-data-logging-with-embedded-linux-the-ultimate-guide-part-1/#hardware  .........
+imp for sensor building
+
+https://github.com/digi-embedded/linux/tree/v4.9/dey-2.4/maint/drivers/iio
+http://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
+https://os.mbed.com/users/sam_grove/code/MPR121/file/eb4012317732/MPR121.cpp/
+https://www.raspberrypi.org/documentation/installation/....................os installation
+
+https://www.softwaretestinghelp.com/c-programming-interview-questions/
+
+https://www.geeksforgeeks.org/quiz-corner-gq/#C%20Programming%20Mock%20Tests
+https://www.linux.com/learn/kernel-newbie-corner-kernel-and-module-debugging-gdb
+
+device drivers
+
+https://www.kernel.org/doc/Documentation/x86/exception-tables.txt
+https://www.kernel.org/doc/html/latest/driver-api/index.html
+http://www.tldp.org/LDP/lkmpg/2.6/html/
+https://www.fsl.cs.sunysb.edu/kernel-api/index.html
+A Simple Driver for Linux OS
+
+https://github.com/PacktPublishing/Linux-Device-Drivers-Development
+https://linux-kernel-labs.github.io/master/lectures/syscalls.html
+http://swift.siphos.be/linux_sea/
+https://0xax.gitbooks.io/linux-insides/content/Interrupts/linux-interrupts-5.html
+
+https://www.javatpoint.com/os-page-replacement-algorithms
+What is a watchdog timer and why is it important? - Power House - Blogs - TI E2E Community
+Operating Systems - GeeksforGeeks
+https://stackoverflow.com/questions/34519/what-is-a-semaphore
+
+
+What is VxWorks? - Definition from Techopedia
+https://cseweb.ucsd.edu/classes/wi18/cse237A-a/handouts/06.rtos.pdf
+https://www.efxkits.us/real-time-operating-systems-rtos-in-vxworks/
+VxWorks and RTLinux RTOS | Biomedical Tutorials | Mepits
+
+
+time and space complexcity
+A Simplified Explanation of the Big O Notation – Karuna Sehgal – Medium
+Time and Space Complexity

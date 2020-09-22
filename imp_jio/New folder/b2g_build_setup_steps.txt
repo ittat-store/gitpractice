@@ -1,0 +1,54 @@
+For First time build 
+
+1. add .mozbuild folder in home directory 
+2. add .cargo folder in home directory
+                                             
+3. upgrade python to 3.7 by following steps 
+   sudo apt install software-properties-commonsudo add-apt-repository ppa:deadsnakes/ppa
+   sudo add-apt-repository ppa:deadsnakes/ppa
+   sudo apt update -y
+   sudo apt install python3.7
+  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
+  sudo update-alternatives --config python3
+
+3. sudo apt install python3.7-gdbm
+   sudo apt remove rustc
+
+   source build/envsetup.sh
+   lunch ----> option 10 
+
+4.   goto gonkmisc and give following commands   
+   rustup install stable
+   rustup default stable 
+   export PATH=$PATH:/home/<username>/.cargo/bin/
+    ---Give username as your pc username 
+ rustup target add thumbv7neon-linux-androideabi
+
+5. in gonk misc give mma
+   remove surfaceflinger.rc in out folder
+
+6. After that come to android folder and give make snod
+7 . after building pack all images.
+----------------------------------------------------------------------------------------------------------------------
+For Incremental Build
+
+
+   source build/envsetup.sh
+   lunch ----> option 10 
+
+4.   goto gonkmisc and give following commands   
+
+   export PATH=$PATH:/home/<username>/.cargo/bin/
+   ---Give username as your pc username 
+
+5. in gonk misc give mma
+   Aftersuccesful build 
+   remove surfaceflinger.rc in out folder
+
+6. After that come to android folder and give make snod
+7 . after building pack all images.
+
+
+

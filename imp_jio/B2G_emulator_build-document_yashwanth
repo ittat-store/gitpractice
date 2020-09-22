@@ -1,0 +1,21 @@
+
+step for building b2g emulator 
+
+1. Give the following commands 
+   git clone git://github.com/mozilla-b2g/B2G.git
+   cd B2G
+   ./config.sh emulator-l
+   
+2.Replace or merge changes from attached makefile into B2G/gaia/
+
+3.Download android-ndk-r11c from the https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip  and put it in your /home/username/.mozbuild/ folder and rename it to android-ndk-r11b. Ex:- /home/username/.mozbuild/android-ndk-r11b
+  If .mozbuild is not there , create it with same name 
+  
+4.Move all the manifests xml file from .repo/manifests/ to .repo
+
+5.Delete out folder, any sdk under B2G/gaia/b2g_sdk as wrong file got downloaded earlier, objdir-gecko.
+
+6. Run ./build.sh command to build the code .
+7. Run ./run-emulator.sh
+
+

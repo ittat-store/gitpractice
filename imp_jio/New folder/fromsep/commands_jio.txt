@@ -1,0 +1,531 @@
+to check ubuntu version using linux commands
+
+lsb_release -a
+hostnamectl
+cat /etc/0s-release
+.................................................................
+for pubkey generation in linux system
+
+ssh-keygen -t rsa 
+cd .ssh/
+ls
+cat id_rsa.pub
+...........................................................
+
+alt+tab .....for window tab switching
+......................................................................................................
+
+git clone ssh://ID@IP/~/workspace/path ( id,ip,path of system where u cloning) -b branch_name
+......................................................................................................
+
+git log --oneline -10 ..................to see the last 10 commits
+
+git log --oneline |grep stringname .....................to search a particular string in commits
+
+git show commitid ...........................to see the particular commitid changes
+..............................................................................................
+
+git am --show-current-patch ................. to show the current patchs
+...............................................................................
+
+git format-patch HEAD -1 ...... for patch creating
+
+git am -s patch-name .......... for patchapplying  ...here changes are commited and we can see in git log --oneline...(here patch is created after commited patch chnages)
+or 
+git apply pathname ....... here the changes are not commited ...( it is used when the patch is created by git diff . > patch )
+
+git apply --reject patchilename 
+
+patch p1 < patchfilename 
+.........................................................................
+for taking internal logs of device 
+
+type *#*#0574#*#* in device (mobile) and do according to required settings
+
+after connect usb goto internal storage and select logmanger and collect logs
+if usb not enabled then by commands 
+
+adb shell
+goto /data/logmanager here log collect log file
+
+....................................................................
+in terminal $ adb shell dmesg > filename 
+
+
+...............................................................................................
+
+in device device storage 
+
+disable ---- windows
+enable  ---- linux
+............................................................................................................
+  
+to search data in a terminal 
+press ctrl+shift+F after that one pop up window comes in that search particular string
+
+or in terminal above right goto edit ............> profile preferences ............> scrolling ...........>set unlimited.
+.....................................................................................................................................
+
+to comment node js tool ,edit below file
+
+LINUX/android/gaia/build/build-bundle.sh file 
+here comment #checknodeenv
+...............................................................................................................
+to check the ongoing build status use below command
+
+make -j4 &> build.log (build.log is file name)
+
+tail -f build.log
+...................................................................................................
+for taking scrennshot of particular area
+
+search screenshot in pc and nxt select garb particular area nxt by mouse selcet that particular area
+or shift+printscreen key
+.......................................................................................................... 
+
+To flash only particular image the ex: boot image 
+put device in EDL mode or if device should be in uer debug mode
+in QFIL goto Tools
+             partition manager
+	     select image type 
+	     right click select manage partition data
+	     load image 
+		and wait for loading 
+	     nxt close
+
+same procedure for loading all the images.
+................................................................................................................
+
+In Repo for creating branch and pulling code 
+
+Ex:     repo branches ... to check branches in repo 
+	 
+	F50Y/ repo forall -c "git checkout branchname"
+
+        F50Y/ repo forall -c "git pull"
+
+In device/qcom/msm8909_512 check here git log --oneline
+..............................................................................................................................................
+For F20A
+
+For In Windows pc NHLOS and in Linux PC compiled HLOS binaries 
+In windows pc run 1st line see in commands to clone doc for compilation..
+
+nxt in linux PC out/..../msm8909_512/ git init . ,  git add . , and git commit -m "commit msg"
+or 
+one 232 ip pc has b2g code and 
+another pc 167 need this code then 
+in 232 pc go to that b2g code path nxt do 
+$ git init 
+$ git add .
+$git commit -m " sharing_code(ex)"
+
+nxt in 167 pc type :
+$ git clone ssh://chegukee@192.168.2.232:/home/chegukee/Workspace/B2G
+
+
+
+................................................................................
+
+To change build tages
+
+first goto git log --oneline 
+inthat see the latest tag and with that commit id see which files are edited like git show commit id
+
+In repo codes
+
+vi device/qcom/msm8909_512/hymost.prop  here change all the tags date if it is userdebug build then remove "production" (ro.product.version_tag=kaios_jio_quoin_2_5_20181106_R3_ER11_production)
+
+if debug put _i (ro.build.display.id=LYF-F50Y-001-03-10-060220)
+
+nxt goto vi device/qcom/msm8909_512/default-pref/default-pref change here also 
+
+
+In Bluebank code base
+
+vi version/version.....txt  file change here
+................................................................................................
+
+In repo to check git log 
+
+cd objdir-gecko/dist/ git log --oneline
+
+or repo forall -c "git log --oneline"
+....................................................................................
+
+Tocheck Backlight issue ( LCD adn Keyboard Flickering ) press *#2886# in device next select according to menu
+https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/Navigator
+here we can see APIs related to mmitests
+
+......................................................................................................................
+In Linux PC
+By default it is 8000 (python server)
+To give another port number in terminal type 
+
+python3 -m http.server 8001
+
+In Windows PC
+python -m SimpleHTTPServer (if need port number)
+
+..........................................................................................................
+
+To find file name 
+find -iname filename
+or find . -type f -name "filename"
+.........................................................................................................
+
+To collect 
+
+ number from device
+adb devices
+adb root
+adb shell
+/system/bin/r 0x00058008 (8008 is a port number same for all, and 'r' is nothing but root)
+
+see here serial number (8 digits)
+
+........echo c >/proc/sysra --trigger (extra command ignore)
+...........................................................................................................
+
+To collect crash dumps :
+In NHLOS path :
+common/tools/sectools/config/msm8905/8905_secimage.xml
+
+in this file search crash and relace with serial number
+ex : <crashdumps> serial number </crashdump>
+
+search debug 
+here also change serail number 
+
+In HLOS Path :
+
+kernel/drivers/power/reset/msm_poweroff.c
+
+Next by QFIL flash 
+and QPST open select port number
+
+In Terminal adb root
+adb shell
+echo c > /proc/sysrq-trigger
+after enter this command device will go to off i.e., crash and observe in QPST green color loaded after green complted then device ON .i.e., comes out off crash state...
+
+These logs present in the QPST 
+help
+open log directory
+sahara
+with comport name log file will save ...
+....................................................................................................................................................
+
+RIL Domain ID : keerthi.cheguri
+...........................................................................................................................
+here data path is from device location , meta is current machine location
+and you have to use this command in terminal dont enter into device.
+
+$adb pull /data/bootchart/.  /home/chegukee/meta
+
+..................................................................................................................................
+http://192.168.2.220:8081/artifactory/webapp/#/home .......... for artifactory
+
+..........................................................................................................
+https://prms.ril.com/prms/main/pc_index.aspx ... for timesheets
+.................................................................................................................
+
+http://192.168.2.50:1800/users/sign_in ................ for git lab 
+
+http://192.168.2.220:1800/dashboard/projects ................ new one
+
+http://192.168.2.221:8080/ ........................ jenkins
+......................................................................................
+hacker rank login : chegurikeerthikuamri@gmail.com	
+pwd : 527897@Keert
+......................................................................................
+RIL ID : keerthi.cheguri
+RIL mail : sudheer.gurram@votarytech.com
+...................................................................................................
+
+LT-800 EDL Mode ..... Volume up +down +power button
+build the code using : ./build_QC.sh QC80B 20 f userdebug
+
+
+......................................................................................................
+												
+rooted app issue :
+goto jio app store and check rooted app should be rooted app=false
+in dmesg logs secure _boot should be = true 
+and selinux is enforcing ,,, enabling dm-verity ,,, usermode =user
+.......................................................................
+hard pacth means sharing files by malis 
+
+soft patches means...
+git fetch id@ip pathofthe folder where changes present && git cherry-pick commit-id
+Ex : 
+git fetch ssh://gurrasud@192.168.2.112/home/gurrasud/workspace/F50Y/LINUX/android/bootable/bootloader/lk && git cherry-pick 771e583
+
+..............................................................................................................................................
+
+git remote change from one remote to another
+
+ex : $ git remote -v 
+	192.168.2.50
+
+next $ git branch -b 192.168.2.220:....patch (like clone command) branch name 
+     $ git checkout to that particular branch
+     $ git push command 
+
+or otherwise simply clone from new remote into new directory
+.......................................................................................................
+see yahoo mail for b2g build process
+.................................................
+in terminal how to place some folder through ssh 
+ex : in terminal 
+$ wget (link of folder in inernet or in our downloads list jst right click and copy link...place that link here )
+....................................................
+unzip filename
+tar -xvf filename
+..................................................................................
+
+for accessing pc remotely use ssh by 
+
+putty 
+mobxterm
+netextender sonic firwall
+virtual box ........... for in windoes pc linux os using
+nomachie
+meld usage in putty 
+for better experirnce see youtube videos
+..........................................................................
+if u want to move or copy some particular files use below command
+
+$ mv *.xml flodername ( moving all xml files to particular folder ....  if folder present out side then use $ mv *.xml ../../foldername)
+
+if u want to move or copy all files then use
+$ mv * foldername
+.......................................................................................
+
+ make -j4 > file.txt 2>&1
+see this in 
+$ tail -f file.txt
+or 
+$ make -j1 2>&1 | tee file.txt
+.........................................................................
+rename to directory
+$ mv -v olddirectory  newdirectory
+
+copy directory 
+$ cp -R directory name pathofwheretocopy
+...................................................................................
+to find directory in the current path
+$ find . -name "nameofdirectory"
+.................................................................................................
+Taking log into one file
+
+$ make -j4 > filename 
+use $ tail -f filename in another terminal
+$ make -j4 > filename  2>&1
+
+..............................................................................
+
+to capture kernel using 
+$ adb pull /proc/kmsg. 
+
+....................................................................................................................................................
+$ make kerne version 
+or 
+to know the kernel version or check in kernel/android.mk file i.e., see in inside kernel check in .mk file 
+$ gcc -v or gcc -version
+
+GNU Make 3.81
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
+.....................................................................................................
+To check android version 
+$ build/core/version_defaults.mk
+
+in this see PLATFORM_VERSION
+...............................................................................................................
+
+java update :
+
+1.sudo apt-get install openjdk-6-jre or jdk
+
+2.sudo update-alternatives --config java (SELECT /usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java)
+
+3.sudo apt-get install default-jdk
+
+4.sudo update-alternatives --config javac (select /usr/lib/jvm/java-6-openjdk-amd64/bin/javac )
+
+5. check java --version
+......................................................................................................................................................................
+
+downgrading to 1.7 in ubuntu 16.04
+
+sudo add-apt-repository ppa:openjdk-r/ppa  
+sudo apt-get update   
+sudo apt-get install openjdk-7-jdk  
+
+sudo update-java-alternatives --list
+
+sudo update-alternatives --config java
+select open jdk 7 
+
+
+sudo update-alternatives --config javac
+select open jdk 7 
+
+sudo update-alternatives --config javap
+select open jdk 7 
+
+sudo update-alternatives --config javadoc
+select open jdk 7 
+...................................................................................................................
+http://ubuntuhandbjook.org/index.php/2015/01/install-openjdk-8-ubuntu-14-04-12-04-lts/
+...................................................................................................................................................
+clang error means do downgrade changes in makefile
+for reference see belo link
+https://android-review.googlesource.com/c/platform/build/+/223100/1/core/clang/HOST_x86_common.mk#17
+
+..........................................................................................
+command to list out all the .mk files or .c files present in a directory 
+
+Ex: $ find -iname "*.mk"
+$ find -iname "*.c"
+...........................................................................................................................
+Command to create patch for files  :
+diff -u file1.html file2.html > patchfile.patch
+command to create patch for folders :
+diff -ruN folder1/ folder2/ > patchfile.patch
+...............................................................................................................
+for seperate compilation use mma in particular folders
+ex: /gaia $mma
+if errors came like c++ configuration cannot create execuatbles then do mma in abi/cpp folder and 
+bionic/libc folder do mma
+.........................................................................................................................................
+sudo apt get install python-dev
+..................................................................................................................................
+On the other hand if you are on the computer wanting to receive file from a remote computer:
+
+scp username@remote:/file/to/send /where/to/put
+
+and 
+
+If you are on the computer from which you want to send file to a remote computer:
+
+scp /file/to/send username@remote:/where/to/put
+...........................................................................................................
+https://www.oreilly.com/library/view/embedded-android/9781449327958/ch04.html2
+ for build/envesetup.sh information
+.........................................................................
+
+Please use the url https://mantis.votarytech.com/mantis  with AD credential.
+............................................................................................................................................
+
+to clone code from another machine
+git clone ssh://id@ip: path -b branchname 
+...................................................................................................................
+
+To make zip in linux terminal
+$ tar -zcvf  keerthi.tar  pathtokeerthi.file
+Ex:
+$ tar -zvcf keerti.tar (any name) keerthi.file
+
+c – Creates a new .tar archive file.
+v – Verbosely show the .tar file progress.
+f – File name type of the archive file.
+x --- option x (extract)
+
+to untar 
+$ tar -xvf keerthi.tar
+
+if want to tar in different directory
+$tar -xvf keerthi.tar -C pathtoanotherdirectory
+..........................................................................................
+https://github.com/kaiostech/B2G  .................. imp for android-10 kaios
+........................................................................................
+
+To upgrade python from 2.7.12 to 3.7.8
+
+https://dev.to/serhatteker/how-to-upgrade-to-python-3-7-on-ubuntu-18-04-18-10-5hab
+
+$ sudo apt update -y
+$ sudo apt install python3.7
+$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
+$sudo update-alternatives --config python3
+$python3 -V
+............................................................................................
+To remove .git files recursively from any source code
+
+find . -type d -name ".git" && find . -name ".gitignore" && find . -name ".gitmodules" | xargs rm -rf
+.........................................................................
+
+https://elinux.org/Android_Build_System  ............. imp for build of android
+
+$make snod command for building system image for more commands see above link
+.............................................................................
+https://www.programmersought.com/article/26622300846/
+https://blog.csdn.net/zembers/article/details/48495627
+
+above links for b2g startup flow 
+............................................................................................
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1507074 ................. this is bug of Shader compilation failed when GL_OES_EGL_image_external_essl3
+ is not supported on android device in b2g porting on LS5030 
+............................................................................................................
+
+https://leanpub.com/gaiafromabove/read#leanpub-auto-booting-path  ........................ b2g booting path
+........................................................................................................................
+To search for multiple strings
+
+grep  -wi 'string1 \ | string2 '  filename.
+
+to search multiple words same like give backslash symbols
+
+-i for ignoring casesesitive
+-w for particluar string i.e.,
+string kee we want to search
+keerthi is not displayed only kee is software i.e., sepeate kee word is displayed
+
+
+like to jst count how many times the string appeas in large log file
+
+grep -c 'warning\|error' filename (home/chegukee/filename)
+or to want to see in all .c files then give filanme as *.c
+ex:  grep -c 'warning\|error' home/chegukee/*.c
+
+>> This is for greping ril string in .rc files
+>> find -iname "*.rc" | xargs grep -nri "ril"
+
+>> Options Description
+-c : This prints only a count of the lines that match a pattern
+-h : Display the matched lines, but do not display the filenames.
+-i : Ignores, case for matching
+-l : Displays list of a filenames only.
+-n : Display the matched lines and their line numbers.
+-v : This prints out all the lines that do not matches the pattern
+-e exp : Specifies expression with this option. Can use multiple times.
+($grep –e "Agarwal" –e "Aggarwal" –e "Agrawal" geekfile.txt) 
+-f file : Takes patterns from file, one per line.
+-E : Treats pattern as an extended regular expression (ERE)
+-w : Match whole word
+-o : Print only the matched parts of a matching line,
+ with each such part on a separate output line.
+
+
+
+............................................................................
+To check folder size in linux command :
+$ sudo du -sh foldername
+output comes in GB's
+
+>> To get the total disk usage of with subdirectories
+sudo du -shc /foldername/*
+
+
+>> By default, the du command shows the disk space
+ used by the directory or file. To find the apparent size of a directory, 
+use the --apparent-size option. The “apparent size” of a file is how much data is actually in the file.
+
+$ sudo du -sh --apparent-size /foldername
+
+................................................................................
+https://bugzilla.mozilla.org/show_bug.cgi?id=1636085   ............ most imp for webrender issue
+...................................................................................

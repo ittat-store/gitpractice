@@ -1,0 +1,84 @@
+after removing pdk,sdk,packages,vendor directory error is 
+
+home/chegukee/workspace/LS5030/uranus/LINUX/android/out/soong/.bootstrap/soong-cc-config/test/test.go:64 +0x58
+[2/8] compile out/soong/.bootstrap/soong_build/obj/soong_build.a
+[3/8] link out/soong/.bootstrap/soong-cc/test/test
+ninja: build stopped: subcommand failed.
+15:31:49 soong failed with: exit status 1
+
+........................................................................................
+
+so added vendor directory and now error is 
+
+built-in sensor multihal support. USE_SENSOR_MULTI_HAL should not be set.
+[933/1123] including ./vendor/partner_gms/apps/SearchLauncher/Android.mk ...
+./vendor/partner_gms/apps/SearchLauncher/Android.mk:31: error: FindEmulator: find: `packages/apps/Launcher3/src': No such file or directory
+17:17:18 ckati failed with: exit status 1
+
+#### failed to build some targets (46 seconds) ####
+
+because in vendor path open android.mk here packages path is there but packages we deleted so commenting that path
+
+................................................................................................................
+
+ including ./vendor/qcom/proprietary/telephony-apps/ConferenceDialer/Android.mk ...
+./vendor/qcom/proprietary/telephony-apps/ConferenceDialer/Android.mk:15: error: FindEmulator: find: `packages/apps/PhoneCommon/src': No such file or directory
+17:27:36 ckati failed with: exit status 1
+
+#### failed to build some targets (50 seconds) ####
+
+went to that error path and commented 
+...............................................................................................................................................................................................
+
+[ 50% 3/6] Install: out/target/product/msm8909/system/bin/art
+[ 66% 4/6] Install: out/host/linux-x86/bin/art
+[ 83% 5/6] glob art
+ninja: error: 'out/target/common/obj/JAVA_LIBRARIES/android.car_intermediates/classes.dex.toc', needed by
+ 'out/target/common/obj/APPS/SystemUI_intermediates/with-local/classes.dex', missing and no known rule to make it
+17:34:10 ninja failed with: exit status 1
+
+#### failed to build some targets (01:09 (mm:ss)) ####
+
+removing art directory nxt below error came
+.............................................................................................................................................
+
+
+ out/soong/.bootstrap/bin/soong_build out/soong/build.ninja
+ninja: error: 'out/host/linux-x86/obj32/SHARED_LIBRARIES/libopenjdkjvm_intermediates/export_includes', 
+needed by 'out/host/linux-x86/obj32/SHARED_LIBRARIES/libopenjdk_intermediates/import_includes', missing and no known rule to make it
+16:05:18 ninja failed with: exit status 1
+
+#### failed to build some targets (54 seconds) ####
+
+"USE_CUSTOM_AUDIO_POLICY := 1" flag to "0" in BoardConfig.mk.
+
+export USE_NINJA=false
+............................................................................................................................................................................................
+
+genisoimage: No such file or directory. Unable to open disc image file 'out/target/product/msm8909/system/etc/cdrom_install.iso'.
+
+make: *** [out/target/product/msm8909/system/etc/cdrom_install.iso] Error 2
+
+make: *** Waiting for unfinished jobs....
+
+ solution :  Close the terminal, and build in a new terminal using make -j1
+
+....................................................................................................................................
+checking for xargs... /usr/bin/xargs
+checking for autoconf... 
+ERROR: Could not find autoconf 2.13
+*** Fix above errors and then restart with\
+               "make -f client.mk build"
+make[3]: *** [configure] Error 1
+make[2]: *** [/home/chegukee/Workspace/B2G/B2G/out/target/product/msm8909/obj/objdir-gecko/Makefile] Error 2
+make[1]: *** [build] Error 2
+make: *** [out/target/product/msm8909/obj/DATA/gecko_intermediates/gecko] Error 2
+
+#### make failed to build some targets (23:02 (mm:ss)) ####
+
+installing sudo apt-get install autoconfig 2.13
+................................................................................................................................................................
+
+
+
+

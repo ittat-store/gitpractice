@@ -1,0 +1,18 @@
+Hi Sudeer,
+
+here is the build steps for LT8002 Tab device
+
+Clone the source code from : http://192.168.2.50:1800/vtech/rjio/akash/msm8909.git
+
+$ cd msm8909/LINUX/android
+$ ./build_QC.sh QC80B 20 f userdebug
+
+( 1. QC70AL or QC70AW or QC80B
+2. version
+3. t -GMS enable, f -GMS disable
+4. VARIANT, user or userdebug)
+
+This script generates the flat build in   " msm8909/pub " directory
+LYF_LT8002ASP_032OB_0101_130320_i_userdebug_flat_signed.tgz
+
+Load the flat build using QFIL

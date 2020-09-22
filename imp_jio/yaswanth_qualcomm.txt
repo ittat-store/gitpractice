@@ -1,0 +1,10 @@
+Aim  :  To integrate new Audio codec device to platform
+Interview questions asked ,
+
+1.what are steps followed to integrate new device to kernel
+2. what is device tree and what consists of and  its functionality
+3. how we will set gpio pins and where we will set
+4. what probe in kernel where it will set
+5. machine driver functionality
+6.what is interrupt , how it is generated and how we identify interrupt is generated .
+7.what 
