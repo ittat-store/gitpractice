@@ -1,0 +1,38 @@
+From 192b27ca5294111c67b862ecf6cab7ed172fcc6e Mon Sep 17 00:00:00 2001
+From: Sreekanth Bolloju <sreekanth.bolloju@votarytech.com>
+Date: Thu, 20 Aug 2020 12:31:57 +0530
+Subject: [PATCH 2/6] [B2G] fixed init: could not get context while starting
+ 'b2g'
+
+---
+ .../android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop | 4 ++--
+ LINUX/android/device/qcom/sepolicy/Android.mk                 | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop b/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
+index ce56b8f7836..57deed61caa 100755
+--- a/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
++++ b/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
+@@ -32,6 +32,6 @@ ro.build.display.id=
+ ro.product.brand=LYF
+ ro.product.model=LS-5030
+ ro.bluebank.sw_base=MSM8909.LA.3.1.1_CS2.3.0.0.008.3
+-ro.bluebank.iver=LYF_B0_LS-5030_032_01_09_150820_i
++ro.bluebank.iver=LYF_B0_LS-5030_032_01_09_200820_i
+ ro.bluebank.hwv=V1
+-ro.version.release=LYF_B0_LS-5030_032_01_09_150820_i
++ro.version.release=LYF_B0_LS-5030_032_01_09_200820_i
+diff --git a/LINUX/android/device/qcom/sepolicy/Android.mk b/LINUX/android/device/qcom/sepolicy/Android.mk
+index b7dd62947d5..570a3de01ac 100644
+--- a/LINUX/android/device/qcom/sepolicy/Android.mk
++++ b/LINUX/android/device/qcom/sepolicy/Android.mk
+@@ -30,5 +30,5 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
+ 
+ # Add sepolicy version to support OS upgrade and backward compatibility
+ BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
+-BOARD_SEPOLICY_DIRS += gonk-misc/sepolicy/common
++#BOARD_SEPOLICY_DIRS += gonk-misc/sepolicy/common
+ endif
+-- 
+2.26.0
+

@@ -1,0 +1,75 @@
+From 30743a4585748833559c5322197463abfc68b383 Mon Sep 17 00:00:00 2001
+From: Sreekanth Bolloju <sreekanth.bolloju@votarytech.com>
+Date: Mon, 24 Aug 2020 10:37:48 +0530
+Subject: [PATCH 4/6] [B2G] skip installation of Signal handlers, to fix b2g
+ crash
+
+---
+ .../gecko/js/src/wasm/WasmSignalHandlers.cpp      | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+
+diff --git a/LINUX/android/gecko/js/src/wasm/WasmSignalHandlers.cpp b/LINUX/android/gecko/js/src/wasm/WasmSignalHandlers.cpp
+index 061461ae15f..d2da459d32c 100644
+--- a/LINUX/android/gecko/js/src/wasm/WasmSignalHandlers.cpp
++++ b/LINUX/android/gecko/js/src/wasm/WasmSignalHandlers.cpp
+@@ -984,6 +984,8 @@ static ExclusiveData<InstallState> sEagerInstallState(
+     mutexid::WasmSignalInstallState);
+ 
+ void wasm::EnsureEagerProcessSignalHandlers() {
++    
++ __android_log_print(ANDROID_LOG_DEBUG, "WASM", "+++EnsureEagerProcessSignalHandlers");
+   auto eagerInstallState = sEagerInstallState.lock();
+   if (eagerInstallState->tried) {
+     return;
+@@ -997,12 +999,14 @@ void wasm::EnsureEagerProcessSignalHandlers() {
+   return;
+ #endif
+ 
+-#if defined(ANDROID) && defined(MOZ_LINKER)
++//#if defined(ANDROID) && defined(MOZ_LINKER)
+   // Signal handling is broken on some android systems.
+-  if (IsSignalHandlingBroken()) {
++  __android_log_print(ANDROID_LOG_DEBUG, "WASM", "calling IsSignalHandlingBroken");
++  if (1/*IsSignalHandlingBroken()*/) {
++    __android_log_print(ANDROID_LOG_DEBUG, "WASM", "SignalHandlingBroken");
+     return;
+   }
+-#endif
++//#endif
+ 
+   sAlreadyHandlingTrap.infallibleInit();
+ 
+@@ -1039,6 +1043,7 @@ void wasm::EnsureEagerProcessSignalHandlers() {
+   faultHandler.sa_sigaction = WasmTrapHandler;
+   sigemptyset(&faultHandler.sa_mask);
+   if (sigaction(SIGSEGV, &faultHandler, &sPrevSEGVHandler)) {
++    __android_log_print(ANDROID_LOG_ERROR, "WASM", "unable to install segv handler");
+     MOZ_CRASH("unable to install segv handler");
+   }
+ 
+@@ -1049,6 +1054,7 @@ void wasm::EnsureEagerProcessSignalHandlers() {
+   busHandler.sa_sigaction = WasmTrapHandler;
+   sigemptyset(&busHandler.sa_mask);
+   if (sigaction(SIGBUS, &busHandler, &sPrevSIGBUSHandler)) {
++    __android_log_print(ANDROID_LOG_ERROR, "WASM", "unable to install sigbus handler");
+     MOZ_CRASH("unable to install sigbus handler");
+   }
+ #  endif
+@@ -1060,11 +1066,14 @@ void wasm::EnsureEagerProcessSignalHandlers() {
+   wasmTrapHandler.sa_sigaction = WasmTrapHandler;
+   sigemptyset(&wasmTrapHandler.sa_mask);
+   if (sigaction(kWasmTrapSignal, &wasmTrapHandler, &sPrevWasmTrapHandler)) {
++    __android_log_print(ANDROID_LOG_ERROR, "WASM", "unable to install wasm trap handler");
+     MOZ_CRASH("unable to install wasm trap handler");
+   }
+ #endif
+ 
+   eagerInstallState->success = true;
++
++ __android_log_print(ANDROID_LOG_DEBUG, "WASM", "---EnsureEagerProcessSignalHandlers");
+ }
+ 
+ static ExclusiveData<InstallState> sLazyInstallState(
+-- 
+2.26.0
+

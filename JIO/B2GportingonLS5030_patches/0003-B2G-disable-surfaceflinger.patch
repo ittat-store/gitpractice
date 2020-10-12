@@ -1,0 +1,115 @@
+From ec84fc52f42ef86a968c0a158053026a28de7968 Mon Sep 17 00:00:00 2001
+From: Sreekanth Bolloju <sreekanth.bolloju@votarytech.com>
+Date: Thu, 20 Aug 2020 12:44:13 +0530
+Subject: [PATCH 3/6] [B2G] disable surfaceflinger
+
+---
+ .../native/services/surfaceflinger/Android.mk | 92 +++++++++----------
+ 1 file changed, 46 insertions(+), 46 deletions(-)
+
+diff --git a/LINUX/android/frameworks/native/services/surfaceflinger/Android.mk b/LINUX/android/frameworks/native/services/surfaceflinger/Android.mk
+index 06df3cd397a..09fffb9568b 100644
+--- a/LINUX/android/frameworks/native/services/surfaceflinger/Android.mk
++++ b/LINUX/android/frameworks/native/services/surfaceflinger/Android.mk
+@@ -148,52 +148,52 @@ include $(BUILD_SHARED_LIBRARY)
+ 
+ ###############################################################
+ # build surfaceflinger's executable
+-include $(CLEAR_VARS)
+-
+-LOCAL_CLANG := true
+-
+-LOCAL_LDFLAGS_32 := -Wl,--version-script,art/sigchainlib/version-script32.txt -Wl,--export-dynamic
+-LOCAL_LDFLAGS_64 := -Wl,--version-script,art/sigchainlib/version-script64.txt -Wl,--export-dynamic
+-LOCAL_CFLAGS := -DLOG_TAG=\"SurfaceFlinger\"
+-
+-#LOCAL_INIT_RC := surfaceflinger.rc
+-
+-ifeq ($(TARGET_USES_HWC2),true)
+-    LOCAL_CFLAGS += -DUSE_HWC2
+-endif
+-
+-LOCAL_SRC_FILES := \
+-    main_surfaceflinger.cpp
+-
+-LOCAL_SHARED_LIBRARIES := \
+-    android.frameworks.displayservice@1.0 \
+-    android.hardware.configstore@1.0 \
+-    android.hardware.configstore-utils \
+-    android.hardware.graphics.allocator@2.0 \
+-    libsurfaceflinger \
+-    libcutils \
+-    libdisplayservicehidl \
+-    liblog \
+-    libbinder \
+-    libhidlbase \
+-    libhidltransport \
+-    libutils \
+-    libui \
+-    libgui \
+-    libdl
+-
+-LOCAL_WHOLE_STATIC_LIBRARIES := libsigchain
+-LOCAL_STATIC_LIBRARIES := libtrace_proto
+-
+-LOCAL_MODULE := surfaceflinger
+-
+-ifdef TARGET_32_BIT_SURFACEFLINGER
+-LOCAL_32_BIT_ONLY := true
+-endif
+-
+-LOCAL_CFLAGS += -Wall -Werror -Wunused -Wunreachable-code
+-
+-include $(BUILD_EXECUTABLE)
++#include $(CLEAR_VARS)
++#
++#LOCAL_CLANG := true
++#
++#LOCAL_LDFLAGS_32 := -Wl,--version-script,art/sigchainlib/version-script32.txt -Wl,--export-dynamic
++#LOCAL_LDFLAGS_64 := -Wl,--version-script,art/sigchainlib/version-script64.txt -Wl,--export-dynamic
++#LOCAL_CFLAGS := -DLOG_TAG=\"SurfaceFlinger\"
++#
++##LOCAL_INIT_RC := surfaceflinger.rc
++#
++#ifeq ($(TARGET_USES_HWC2),true)
++#    LOCAL_CFLAGS += -DUSE_HWC2
++#endif
++#
++#LOCAL_SRC_FILES := \
++#    main_surfaceflinger.cpp
++#
++#LOCAL_SHARED_LIBRARIES := \
++#    android.frameworks.displayservice@1.0 \
++#    android.hardware.configstore@1.0 \
++#    android.hardware.configstore-utils \
++#    android.hardware.graphics.allocator@2.0 \
++#    libsurfaceflinger \
++#    libcutils \
++#    libdisplayservicehidl \
++#    liblog \
++#    libbinder \
++#    libhidlbase \
++#    libhidltransport \
++#    libutils \
++#    libui \
++#    libgui \
++#    libdl
++#
++#LOCAL_WHOLE_STATIC_LIBRARIES := libsigchain
++#LOCAL_STATIC_LIBRARIES := libtrace_proto
++#
++#LOCAL_MODULE := surfaceflinger
++#
++#ifdef TARGET_32_BIT_SURFACEFLINGER
++#LOCAL_32_BIT_ONLY := true
++#endif
++#
++#LOCAL_CFLAGS += -Wall -Werror -Wunused -Wunreachable-code
++#
++#include $(BUILD_EXECUTABLE)
+ 
+ ###############################################################
+ # uses jni which may not be available in PDK
+-- 
+2.26.0
+

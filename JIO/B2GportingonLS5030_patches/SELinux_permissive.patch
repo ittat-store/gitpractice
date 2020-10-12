@@ -1,0 +1,32 @@
+commit 98c2aaefde2166839f96cdb4b6ea48cbb86663b3
+Author: keerthikumari <keerthikumari.cheguri@votarytech.com>
+Date:   Thu Aug 13 11:46:39 2020 +0530
+
+    [B2G] SELinux permissive
+
+diff --git a/LINUX/android/device/qcom/msm8909/BoardConfig.mk b/LINUX/android/device/qcom/msm8909/BoardConfig.mk
+index 0cb5b988325..2b1aa311013 100755
+--- a/LINUX/android/device/qcom/msm8909/BoardConfig.mk
++++ b/LINUX/android/device/qcom/msm8909/BoardConfig.mk
+@@ -97,7 +97,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
+ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+ BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
+ 
+-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.memcg=false earlyprintk
++BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.memcg=false earlyprintk androidboot.selinux=permissive
+ 
+ BOARD_EGL_CFG := device/qcom/msm8909/egl.cfg
+ 
+diff --git a/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop b/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
+index 06ac3f08fd1..c785f481b2e 100755
+--- a/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
++++ b/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
+@@ -32,6 +32,6 @@ ro.build.display.id=
+ ro.product.brand=LYF
+ ro.product.model=LS-5030
+ ro.bluebank.sw_base=MSM8909.LA.3.1.1_CS2.3.0.0.008.3
+-ro.bluebank.iver=LYF_B0_LS-5030_032_01_09_100820_i
++ro.bluebank.iver=LYF_B0_LS-5030_032_01_09_110820_i
+ ro.bluebank.hwv=V1
+-ro.version.release=LYF_B0_LS-5030_032_01_09_100820_i
++ro.version.release=LYF_B0_LS-5030_032_01_09_110820_i

@@ -1,0 +1,114 @@
+From 543418edabe2afd02e3adebea357ee5d5c31921a Mon Sep 17 00:00:00 2001
+From: vinukyas <yaswanth@votaytech.com>
+Date: Wed, 9 Sep 2020 15:07:09 +0530
+Subject: [PATCH 6/6] b2g apps fix
+
+Signed-off-by: vinukyas <yaswanth@votaytech.com>
+---
+ LINUX/android/gecko/b2g/app/b2g.js            | 24 ++++++++++++++-----
+ .../gecko/b2g/chrome/content/shell.html       |  3 ++-
+ LINUX/android/gonk-misc/Android.mk            |  4 ++--
+ 3 files changed, 22 insertions(+), 9 deletions(-)
+
+diff --git a/LINUX/android/gecko/b2g/app/b2g.js b/LINUX/android/gecko/b2g/app/b2g.js
+index a797ef1494d..9e4e907f89f 100644
+--- a/LINUX/android/gecko/b2g/app/b2g.js
++++ b/LINUX/android/gecko/b2g/app/b2g.js
+@@ -8,7 +8,7 @@ pref("toolkit.defaultChromeURI", "chrome://b2g/content/shell.html");
+ pref("browser.chromeURL", "chrome://b2g/content/");
+ 
+ // Bug 945235: Prevent all bars to be considered visible:
+-pref("toolkit.defaultChromeFeatures", "chrome,dialog=no,close,resizable,scrollbars,extrachrome");
++pref("toolkit.defaultChromeFeatures", "chrome,dialog=no,close,resizable,scrollbars,extrachrome,mozdisplayid=0");
+ 
+ // Disable focus rings
+ pref("browser.display.focus_ring_width", 0);
+@@ -591,6 +591,11 @@ pref("layout.scrollbar.side", 1);
+ // CSS Scroll Snapping
+ pref("layout.css.scroll-snap.enabled", true);
+ 
++// CSS: @media (prefers-contrast)
++// true: prefers-contrast will toggle based on OS and browser settings.
++// false: prefers-contrast will only parse and toggle in the chrome and ua.
++pref("layout.css.prefers-contrast.enabled", true);
++
+ // Enable the ProcessPriorityManager, and give processes with no visible
+ // documents a 1s grace period before they're eligible to be marked as
+ // background. Background processes that are perceivable due to playing
+@@ -733,8 +738,6 @@ pref("accessibility.accessfu.skip_empty_images", true);
+ // 2 - words, 3 - both)
+ pref("accessibility.accessfu.keyboard_echo", 3);
+ 
+-pref("ui.largeText.enabled", false);
+-
+ // Enable hit-target fluffing
+ pref("ui.touch.radius.enabled", true);
+ pref("ui.touch.radius.leftmm", 3);
+@@ -1000,6 +1003,7 @@ pref("dom.performance.enable_notify_performance_timing", true);
+ pref("b2g.multiscreen.enabled", true);
+ pref("b2g.multiscreen.chrome_remote_url", "chrome://b2g/content/shell_remote.html");
+ pref("b2g.multiscreen.system_remote_url", "index_remote.html");
++pref("toolkit.multiscreen.defaultChromeFeatures", "chrome,dialog=no,close,resizable,scrollbars,extrachrome");
+ 
+ // Blocklist service
+ pref("extensions.blocklist.enabled", true);
+@@ -1103,7 +1107,7 @@ pref("extensions.systemAddon.update.enabled", false);
+ 
+ pref("browser.privatebrowsing.autostart", false);
+ 
+-//pref("security.sandbox.content.level", 3);
++pref("security.sandbox.content.level", 4);
+ 
+ pref("gfx.e10s.font-list.shared", true);
+ 
+@@ -1130,8 +1134,16 @@ pref("dom.ipc.forkserver.enable", true);
+ // the system app, until nsContentSecurityManager.cpp stabilizes (eg. bug 1544011)
+ pref("dom.security.skip_remote_script_assertion_in_system_priv_context", true);
+ 
+-// Enable WebRender by default
+-pref("gfx.webrender.all", true);
++// Disable WebRender by default
++pref("gfx.webrender.all", false);
++pref("gfx.webrender.enabled", false);
++pref("gfx.webrender.force-disabled", true);
+ 
+ // We control process prelaunch from the embedding api.
+ pref("dom.ipc.processPrelaunch.enabled", false);
++
++#ifdef TARGET_VARIANT_USERDEBUG
++// Enable Marionette
++pref("marionette.enabled", true);
++#endif
++
+diff --git a/LINUX/android/gecko/b2g/chrome/content/shell.html b/LINUX/android/gecko/b2g/chrome/content/shell.html
+index 740e13e5a5b..5dcb82b5c31 100644
+--- a/LINUX/android/gecko/b2g/chrome/content/shell.html
++++ b/LINUX/android/gecko/b2g/chrome/content/shell.html
+@@ -17,7 +17,8 @@
+   <link rel="stylesheet" type="text/css" href="desktop.css">
+   <script defer type="application/javascript" src="desktop.js"></script>
+ #endif
+-  <script type="application/javascript" src="shell.js"></script>
++  <script type="application/javascript" src="chrome://b2g/content/shell.js"></script>
++  <script type="application/javascript" src="chrome://b2g/content/settings.js"></script>
+   <script type="application/javascript" src="devtools/RemoteDebugger.js"></script>
+ </head>
+ 
+diff --git a/LINUX/android/gonk-misc/Android.mk b/LINUX/android/gonk-misc/Android.mk
+index 27282e3942e..af094809b62 100644
+--- a/LINUX/android/gonk-misc/Android.mk
++++ b/LINUX/android/gonk-misc/Android.mk
+@@ -280,8 +280,8 @@ $(LOCAL_BUILT_MODULE): $(TARGET_CRTBEGIN_DYNAMIC_O) $(TARGET_CRTEND_O) $(addpref
+ 	export PRODUCT_MANUFACTURER="$(PRODUCT_MANUFACTURER)" && \
+ 	export MOZ_DISABLE_LTO="$(MOZ_DISABLE_LTO)" && \
+ 	export HOST_OS="$(HOST_OS)" && \
+-	(cd gecko ; $(SHELL) build-b2g.sh) && \
+-	(cd gecko ; $(SHELL) build-b2g.sh package) && \
++	(cd $(GECKO_PATH) ; $(SHELL) build-b2g.sh) && \
++	(cd $(GECKO_PATH) ; $(SHELL) build-b2g.sh package) && \
+ 	mkdir -p $(@D) && cp $(GECKO_OBJDIR)/dist/b2g-*.tar.gz $@
+ 
+ # Include a copy of the repo manifest that has the revisions used
+-- 
+2.26.0
+

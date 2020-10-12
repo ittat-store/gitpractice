@@ -1,0 +1,1176 @@
+commit 798a69962e436649f0a5635f1630a9a1a8ba07b7
+Author: keerthikumari <keerthikumari.cheguri@votarytech.com>
+Date:   Tue Aug 18 18:02:16 2020 +0530
+
+    [B2G] vold related modifications
+
+diff --git a/LINUX/android/device/qcom/common/base.mk b/LINUX/android/device/qcom/common/base.mk
+index e7da4b7577a..8c6066a7c8f 100644
+--- a/LINUX/android/device/qcom/common/base.mk
++++ b/LINUX/android/device/qcom/common/base.mk
+@@ -271,6 +271,7 @@ INIT += init.qcom.class_core.sh
+ INIT += init.class_main.sh
+ INIT += init.qcom.wifi.sh
+ INIT += vold.fstab
++INIT += volume.cfg
+ INIT += init.qcom.ril.path.sh
+ INIT += init.qcom.usb.rc
+ INIT += init.msm.usb.configfs.rc
+diff --git a/LINUX/android/device/qcom/msm8909/AndroidBoard.mk b/LINUX/android/device/qcom/msm8909/AndroidBoard.mk
+index fac389c89fc..b5c1bf0c83e 100755
+--- a/LINUX/android/device/qcom/msm8909/AndroidBoard.mk
++++ b/LINUX/android/device/qcom/msm8909/AndroidBoard.mk
+@@ -60,6 +60,13 @@ LOCAL_MODULE_CLASS := ETC
+ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+ include $(BUILD_PREBUILT)
+ 
++include $(CLEAR_VARS)
++LOCAL_MODULE       := volume.cfg
++LOCAL_MODULE_TAGS  := optional eng
++LOCAL_MODULE_CLASS := ETC
++LOCAL_SRC_FILES    := $(LOCAL_MODULE)
++include $(BUILD_PREBUILT)
++
+ include $(CLEAR_VARS)
+ LOCAL_MODULE       := init.target.rc
+ LOCAL_MODULE_TAGS  := optional eng
+diff --git a/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop b/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
+index c785f481b2e..ce56b8f7836 100755
+--- a/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
++++ b/LINUX/android/device/qcom/msm8909/Uranus_MSM8909/overrides.prop
+@@ -32,6 +32,6 @@ ro.build.display.id=
+ ro.product.brand=LYF
+ ro.product.model=LS-5030
+ ro.bluebank.sw_base=MSM8909.LA.3.1.1_CS2.3.0.0.008.3
+-ro.bluebank.iver=LYF_B0_LS-5030_032_01_09_110820_i
++ro.bluebank.iver=LYF_B0_LS-5030_032_01_09_150820_i
+ ro.bluebank.hwv=V1
+-ro.version.release=LYF_B0_LS-5030_032_01_09_110820_i
++ro.version.release=LYF_B0_LS-5030_032_01_09_150820_i
+diff --git a/LINUX/android/device/qcom/msm8909/volume.cfg b/LINUX/android/device/qcom/msm8909/volume.cfg
+new file mode 100644
+index 00000000000..16dc5e867fb
+--- /dev/null
++++ b/LINUX/android/device/qcom/msm8909/volume.cfg
+@@ -0,0 +1 @@
++create sdcard /data/usbmsc_mnt
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/AutoMounter.cpp b/LINUX/android/gecko/dom/system/gonk/volume/AutoMounter.cpp
+index ac1c8894d5e..7c1e375ca49 100644
+--- a/LINUX/android/gecko/dom/system/gonk/volume/AutoMounter.cpp
++++ b/LINUX/android/gecko/dom/system/gonk/volume/AutoMounter.cpp
+@@ -206,13 +206,33 @@ class AutoVolumeEventObserver : public Volume::EventObserver {
+ 
+ /***************************************************************************/
+ 
++class AutoMounterResponseCallback : public VolumeResponseCallback
++{
++public:
++  AutoMounterResponseCallback()
++    : mErrorCount(0)
++  {
++  }
++
++protected:
++  virtual void ResponseReceived(const VolumeCommand* aCommand);
++
++private:
++    const static int kMaxErrorCount = 3; // Max number of errors before we give up
++
++    int   mErrorCount;
++};
++
++/***************************************************************************/
+ class AutoMounter {
+  public:
+   NS_INLINE_DECL_REFCOUNTING(AutoMounter)
+ 
+   typedef nsTArray<RefPtr<Volume>> VolumeArray;
+ 
+-  AutoMounter() : mState(STATE_IDLE), mMode(AUTOMOUNTER_DISABLE) {
++  AutoMounter() : mState(STATE_IDLE),
++                  mResponseCallback(new AutoMounterResponseCallback),
++                  mMode(AUTOMOUNTER_DISABLE) {
+     VolumeManager::RegisterStateObserver(&mVolumeManagerStateObserver);
+     Volume::RegisterVolumeObserver(&mVolumeEventObserver, "AutoMounter");
+ 
+@@ -455,6 +475,7 @@ class AutoMounter {
+ 
+   AutoVolumeEventObserver mVolumeEventObserver;
+   AutoVolumeManagerStateObserver mVolumeManagerStateObserver;
++  RefPtr<VolumeResponseCallback>  mResponseCallback;
+   int32_t mMode;
+ // TODO: temporarily comment out Mtp related code.
+ #if 0
+@@ -509,6 +530,25 @@ void AutoVolumeEventObserver::Notify(Volume* const&) {
+   sAutoMounter->UpdateState();
+ }
+ 
++void
++AutoMounterResponseCallback::ResponseReceived(const VolumeCommand* aCommand)
++{
++
++  if (WasSuccessful()) {
++    DBG("Calling UpdateState due to Volume::OnSuccess");
++    mErrorCount = 0;
++    sAutoMounter->UpdateState();
++    return;
++  }
++  ERR("Command '%s' failed: %d '%s'",
++      aCommand->CmdStr(), ResponseCode(), ResponseStr().get());
++
++  if (++mErrorCount < kMaxErrorCount) {
++    DBG("Calling UpdateState due to VolumeResponseCallback::OnError");
++    sAutoMounter->UpdateState();
++  }
++}
++
+ static bool IsUsbFunctionEnabled(const char* aConfig, const char* aUsbFunc) {
+   nsAutoCString config(aConfig);
+   nsCCharSeparatedTokenizer tokenizer(config, ',');
+@@ -1032,7 +1072,7 @@ void AutoMounter::UpdateState() {
+           // Volume is mounted, we need to unmount before
+           // we can share.
+           LOG("UpdateState: Unmounting %s", vol->NameStr());
+-          vol->StartUnmount();
++          vol->StartUnmount(mResponseCallback);
+           return;  // UpdateState will be called again when the Unmount command
+                    // completes
+         }
+@@ -1044,7 +1084,7 @@ void AutoMounter::UpdateState() {
+             if (!(tryToShare && vol->IsSharingEnabled()) &&
+                 volState == nsIVolume::STATE_IDLE) {
+               LOG("UpdateState: Mounting %s", vol->NameStr());
+-              vol->StartMount();
++              vol->StartMount(mResponseCallback);
+               break;
+             }
+           }
+@@ -1054,12 +1094,12 @@ void AutoMounter::UpdateState() {
+           if (vol->IsFormatRequested()) {
+             // Volume is unmounted. We can go ahead and format.
+             LOG("UpdateState: Formatting %s", vol->NameStr());
+-            vol->StartFormat();
++            //vol->StartFormat(mResponseCallback);
+           } else if (tryToShare && vol->IsSharingEnabled() &&
+                      volState == nsIVolume::STATE_IDLE) {
+             // Volume is unmounted. We can go ahead and share.
+             LOG("UpdateState: Sharing %s", vol->NameStr());
+-            vol->StartShare();
++            //vol->StartShare(mResponseCallback);
+           }
+           return;  // UpdateState will be called again when the Share/Format
+                    // command completes
+@@ -1072,19 +1112,19 @@ void AutoMounter::UpdateState() {
+     } else {
+       // We're going to try and unshare and remount the volumes
+       switch (volState) {
+-        case nsIVolume::STATE_SHARED: {
++       /* case nsIVolume::STATE_SHARED: {
+           // Volume is shared. We can go ahead and unshare.
+           LOG("UpdateState: Unsharing %s", vol->NameStr());
+           vol->StartUnshare();
+           return;  // UpdateState will be called again when the Unshare command
+                    // completes
+-        }
++        }*/
+         case nsIVolume::STATE_IDLE: {
+           if (!vol->IsUnmountRequested()) {
+             // Volume is unmounted and mount-requested, try to mount.
+ 
+             LOG("UpdateState: Mounting %s", vol->NameStr());
+-            vol->StartMount();
++            vol->StartMount(mResponseCallback);
+           }
+           return;  // UpdateState will be called again when Mount command
+                    // completes
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/Volume.cpp b/LINUX/android/gecko/dom/system/gonk/volume/Volume.cpp
+index c5e429166a4..d5081149348 100644
+--- a/LINUX/android/gecko/dom/system/gonk/volume/Volume.cpp
++++ b/LINUX/android/gecko/dom/system/gonk/volume/Volume.cpp
+@@ -4,6 +4,7 @@
+ 
+ #include "Volume.h"
+ #include "VolumeManager.h"
++#include "VolumeCommand.h"
+ #include "VolumeManagerLog.h"
+ #include "nsIVolume.h"
+ #include "nsXULAppAPI.h"
+@@ -390,22 +391,26 @@ void Volume::SetMountPoint(const nsACString& aMountPoint) {
+   ResolveAndSetMountPoint(aMountPoint);
+ }
+ 
+-void Volume::StartMount() {
++void
++Volume::StartMount(VolumeResponseCallback* aCallback)
++{
+   MOZ_ASSERT(XRE_IsParentProcess());
+   MOZ_ASSERT(MessageLoop::current() == XRE_GetIOMessageLoop());
+ 
+-  const ::std::string volId(this->Uuid().get());
+-  //B2g8//VoldProxy::Mount(volId, VolumeInfo::kPrimary, 0);
++  //StartCommand(new VolumeActionCommand(this, "mount", "1", aCallback));
+ }
+ 
+-void Volume::StartUnmount() {
++
++void
++Volume::StartUnmount(VolumeResponseCallback* aCallback)
++{
+   MOZ_ASSERT(XRE_IsParentProcess());
+   MOZ_ASSERT(MessageLoop::current() == XRE_GetIOMessageLoop());
+ 
+-  const ::std::string volId(this->Uuid().get());
+- //B2g8// VoldProxy::Unmount(volId);
++ // StartCommand(new VolumeActionCommand(this, "unmount", "force", aCallback));
+ }
+ 
++
+ void Volume::StartFormat() {
+   MOZ_ASSERT(XRE_IsParentProcess());
+   MOZ_ASSERT(MessageLoop::current() == XRE_GetIOMessageLoop());
+@@ -425,6 +430,15 @@ void Volume::StartUnshare() {
+   MOZ_ASSERT(MessageLoop::current() == XRE_GetIOMessageLoop());
+ }
+ 
++void
++Volume::StartCommand(VolumeCommand* aCommand)
++{
++  MOZ_ASSERT(XRE_IsParentProcess());
++  MOZ_ASSERT(MessageLoop::current() == XRE_GetIOMessageLoop());
++
++  VolumeManager::PostCommand(aCommand);
++}
++
+ // static
+ void Volume::RegisterVolumeObserver(Volume::EventObserver* aObserver,
+                                     const char* aName) {
+@@ -475,6 +489,48 @@ void Volume::UpdateMountLock(const nsACString& aVolumeName,
+   }
+ }
+ 
++void
++Volume::HandleVoldResponse(int aResponseCode, nsCWhitespaceTokenizer& aTokenizer)
++{
++  MOZ_ASSERT(XRE_IsParentProcess());
++  MOZ_ASSERT(MessageLoop::current() == XRE_GetIOMessageLoop());
++
++  // The volume name will have already been parsed, and the tokenizer will point
++  // to the token after the volume name
++  switch (aResponseCode) {
++    
++    case ::ResponseCode::VolumeDiskInserted:
++      SetMediaPresent(true);
++      break;
++
++    case ::ResponseCode::VolumeDiskRemoved: // fall-thru
++    case ::ResponseCode::VolumeBadRemoval:
++      SetMediaPresent(false);
++      break;
++#if ANDROID_VERSION >= 23
++    case ::ResponseCode::VolumeStateChanged: {
++      nsDependentCSubstring id(aTokenizer.nextToken());
++      nsresult errCode;
++      nsCString token(aTokenizer.nextToken());
++      int32_t newState = (int32_t)(token.ToInteger(&errCode));
++      nsDependentCSubstring mountpoint(aTokenizer.nextToken());
++      if (newState == static_cast<int32_t>(VolumeInfo::State::kMounted)) {
++	SetState(nsIVolume::STATE_MOUNTED);
++	} else if (newState == static_cast<int32_t>(VolumeInfo::State::kEjecting)) {
++	SetState(nsIVolume::STATE_UNMOUNTING);
++	} else if (newState == static_cast<int32_t>(VolumeInfo::State::kFormatting)) {
++	SetState(nsIVolume::STATE_FORMATTING);
++	} else if (newState == static_cast<int32_t>(VolumeInfo::State::kUnmounted)) {
++	SetState(nsIVolume::STATE_IDLE);
++	}
++      break;
++    }
++#endif
++    default:
++      LOG("Volume: %s unrecognized reponse code (ignored)", NameStr());
++      break;
++  }
++}
+ void Volume::HandleVolumeStateChanged(int32_t aState) {
+   MOZ_ASSERT(XRE_IsParentProcess());
+   MOZ_ASSERT(MessageLoop::current() == XRE_GetIOMessageLoop());
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/Volume.h b/LINUX/android/gecko/dom/system/gonk/volume/Volume.h
+index a125fdc6719..2cccef55dcd 100644
+--- a/LINUX/android/gecko/dom/system/gonk/volume/Volume.h
++++ b/LINUX/android/gecko/dom/system/gonk/volume/Volume.h
+@@ -4,7 +4,7 @@
+ 
+ #ifndef mozilla_system_volume_h__
+ #define mozilla_system_volume_h__
+-
++#include "VolumeCommand.h"
+ #include "nsIVolume.h"
+ #include "nsString.h"
+ #include "mozilla/Observer.h"
+@@ -112,8 +112,8 @@ class Volume final {
+   // The StartXxx functions will queue up a command to the VolumeManager.
+   // You can queue up as many commands as you like, and aCallback will
+   // be called as each one completes.
+-  void StartMount();
+-  void StartUnmount();
++  void StartMount(VolumeResponseCallback* aCallback);
++  void StartUnmount(VolumeResponseCallback* aCallback);
+   void StartFormat();
+   void StartShare();
+   void StartUnshare();
+@@ -126,6 +126,7 @@ class Volume final {
+   void SetState(STATE aNewState);
+   void SetMediaPresent(bool aMediaPresent);
+   void SetMountPoint(const nsACString& aMountPoint);
++  void StartCommand(VolumeCommand* aCommand);
+ 
+   void ResolveAndSetMountPoint(const nsACString& aMountPoint);
+ 
+@@ -133,6 +134,7 @@ class Volume final {
+   void SetConfig(const nsCString& aConfigName, const nsCString& aConfigValue);
+ 
+   void HandleVolumeStateChanged(int32_t aState);
++  void HandleVoldResponse(int aResponseCode, nsCWhitespaceTokenizer& aTokenizer);
+ 
+   static void UpdateMountLock(const nsACString& aVolumeName,
+                               const int32_t& aMountGeneration,
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/VolumeCommand.cpp b/LINUX/android/gecko/dom/system/gonk/volume/VolumeCommand.cpp
+new file mode 100644
+index 00000000000..4dfc2b56274
+--- /dev/null
++++ b/LINUX/android/gecko/dom/system/gonk/volume/VolumeCommand.cpp
+@@ -0,0 +1,83 @@
++/* This Source Code Form is subject to the terms of the Mozilla Public
++ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
++ * You can obtain one at http://mozilla.org/MPL/2.0/. */
++
++#include "nsString.h"
++#include "nsWhitespaceTokenizer.h"
++
++#include "Volume.h"
++#include "VolumeCommand.h"
++#include "VolumeManager.h"
++#include "VolumeManagerLog.h"
++
++namespace mozilla {
++namespace system {
++
++/***************************************************************************
++*
++* The VolumeActionCommand class is used to send commands which apply
++* to a particular volume.
++*
++* The following commands would fit into this category:
++*
++*   volume mount <volname>
++*   volume unmount <volname> [force]
++*   volume format <volname>
++*   volume share <volname> <method>
++*   volume unshare <volname> <method>
++*   volume shared <volname> <method>
++*
++* A typical response looks like:
++*
++*   # vdc volume unshare sdcard ums
++*   605 Volume sdcard /mnt/sdcard state changed from 7 (Shared-Unmounted) to 1 (Idle-Unmounted)
++*   200 volume operation succeeded
++*
++*   Note that the 600 series of responses are considered unsolicited and
++*   are dealt with directly by the VolumeManager. This command will only
++*   see the terminating response code (200 in the example above).
++*
++***************************************************************************/
++//VolumeActionCommand::~VolumeActionCommand(){}
++
++VolumeActionCommand::VolumeActionCommand(Volume* aVolume,
++                                         const char* aAction,
++                                         const char* aExtraArgs,
++                                         VolumeResponseCallback* aCallback)
++  : VolumeCommand(aCallback),
++    mVolume(aVolume)
++{
++  nsAutoCString cmd;
++
++  cmd = "volume ";
++  cmd += aAction;
++  cmd += " ";
++#if ANDROID_VERSION >= 23
++  cmd += aVolume->Uuid().get() ? aVolume->Uuid().get():aVolume->Name().get();
++#else
++  cmd += aVolume->Name().get();
++#endif
++
++  // vold doesn't like trailing white space, so only add it if we really need to.
++  if (aExtraArgs && (*aExtraArgs != '\0')) {
++    cmd += " ";
++    cmd += aExtraArgs;
++  }
++  SetCmd(cmd);
++}
++
++/***************************************************************************
++*
++* The VolumeResetCommand class is used to send the "volume reset" command to
++* vold.
++*
++***************************************************************************/
++
++VolumeResetCommand::VolumeResetCommand(VolumeResponseCallback* aCallback)
++  : VolumeCommand("volume reset"_ns, aCallback)
++{
++}
++
++} // system
++} // mozilla
++
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/VolumeCommand.h b/LINUX/android/gecko/dom/system/gonk/volume/VolumeCommand.h
+new file mode 100644
+index 00000000000..9a27c409467
+--- /dev/null
++++ b/LINUX/android/gecko/dom/system/gonk/volume/VolumeCommand.h
+@@ -0,0 +1,205 @@
++/* This Source Code Form is subject to the terms of the Mozilla Public
++ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
++ * You can obtain one at http://mozilla.org/MPL/2.0/. */
++
++#ifndef mozilla_system_volumecommand_h__
++#define mozilla_system_volumecommand_h__
++
++#include "nsString.h"
++#include "nsISupportsImpl.h"
++#include "mozilla/RefPtr.h"
++#include <algorithm>
++#include <vold/ResponseCode.h>
++
++namespace mozilla {
++namespace system {
++
++class Volume;
++class VolumeCommand;
++
++/***************************************************************************
++*
++*   The VolumeResponseCallback class is an abstract base class. The ResponseReceived
++*   method will be called for each response received.
++*
++*   Depending on the command, there may be multiple responses for the
++*   command. Done() will return true if this is the last response.
++*
++*   The responses from vold are all of the form:
++*
++*     <ResponseCode> <String>
++*
++*   Valid Response codes can be found in the vold/ResponseCode.h header.
++*
++***************************************************************************/
++
++class VolumeResponseCallback
++{
++protected:
++  virtual ~VolumeResponseCallback() {}
++
++public:
++  NS_INLINE_DECL_REFCOUNTING(VolumeResponseCallback)
++  VolumeResponseCallback()
++    : mResponseCode(0), mPending(false) {}
++
++  bool Done() const
++  {
++    // Response codes from the 200, 400, and 500 series all indicated that
++    // the command has completed.
++
++    return (mResponseCode >= ::ResponseCode::CommandOkay)
++        && (mResponseCode < ::ResponseCode::UnsolicitedInformational);
++  }
++
++  bool WasSuccessful() const
++  {
++    return mResponseCode == ::ResponseCode::CommandOkay;
++  }
++
++  bool              IsPending() const     { return mPending; }
++  int               ResponseCode() const  { return mResponseCode; }
++  const nsCString  &ResponseStr() const   { return mResponseStr; }
++
++protected:
++  virtual void ResponseReceived(const VolumeCommand* aCommand) = 0;
++
++private:
++  friend  class VolumeCommand;  // Calls HandleResponse and SetPending
++
++  void HandleResponse(const VolumeCommand* aCommand,
++                      int aResponseCode,
++                      nsACString& aResponseStr)
++  {
++    mResponseCode = aResponseCode;
++#if ANDROID_VERSION >= 17
++    // There's a sequence number here that we don't care about
++    // We expect it to be 0. See VolumeCommand::SetCmd
++    mResponseStr = Substring(aResponseStr, 2);
++#else
++    mResponseStr = aResponseStr;
++#endif
++    if (mResponseCode >= ::ResponseCode::CommandOkay) {
++      // This is a final response.
++      mPending = false;
++    }
++    ResponseReceived(aCommand);
++  }
++
++  void SetPending(bool aPending) { mPending = aPending; }
++
++  int       mResponseCode;  // The response code parsed from vold
++  nsCString mResponseStr;   // The rest of the line.
++  bool      mPending;       // Waiting for response?
++};
++
++
++/***************************************************************************
++*
++*   The VolumeCommand class is an abstract base class used to encapsulate
++*   volume commands send to vold.
++*
++*   See VolumeManager.h for a list of the volume commands.
++*
++*   Commands sent to vold need an explicit null character so we add one
++*   to the command to ensure that it's included in the length.
++*
++*   All of these commands are asynchronous in nature, and the
++*   ResponseReceived callback will be called when a response is available.
++*
++***************************************************************************/
++
++class VolumeCommand
++{
++protected:
++  virtual ~VolumeCommand() {}
++
++public:
++  NS_INLINE_DECL_REFCOUNTING(VolumeCommand)
++
++  VolumeCommand(VolumeResponseCallback* aCallback)
++    : mBytesConsumed(0),
++      mCallback(aCallback)
++  {
++    SetCmd(""_ns);
++  }
++
++  VolumeCommand(const nsACString& aCommand, VolumeResponseCallback* aCallback)
++    : mBytesConsumed(0),
++      mCallback(aCallback)
++  {
++    SetCmd(aCommand);
++  }
++
++  void SetCmd(const nsACString& aCommand)
++  {
++    mCmd.Truncate();
++#if ANDROID_VERSION >= 17
++    // JB requires a sequence number at the beginning of messages.
++    // It doesn't matter what we use, so we use 0.
++    mCmd = "0 ";
++#endif
++    mCmd.Append(aCommand);
++    // Add a null character. We want this to be included in the length since
++    // vold uses it to determine the end of the command.
++    mCmd.Append('\0');
++  }
++
++  const char* CmdStr() const    { return mCmd.get(); }
++  const char* Data() const      { return mCmd.Data() + mBytesConsumed; }
++  size_t BytesConsumed() const  { return mBytesConsumed; }
++
++  size_t BytesRemaining() const
++  {
++    return mCmd.Length() - std::min(mCmd.Length(), mBytesConsumed);
++  }
++
++  void ConsumeBytes(size_t aNumBytes)
++  {
++    mBytesConsumed += std::min(BytesRemaining(), aNumBytes);
++  }
++
++private:
++  friend class VolumeManager;   // Calls SetPending & HandleResponse
++
++  void SetPending(bool aPending)
++  {
++    if (mCallback) {
++      mCallback->SetPending(aPending);
++    }
++  }
++
++  void HandleResponse(int aResponseCode, nsACString& aResponseStr)
++  {
++    if (mCallback) {
++      mCallback->HandleResponse(this, aResponseCode, aResponseStr);
++    }
++  }
++
++  nsCString mCmd;           // Command being sent
++  size_t    mBytesConsumed; // How many bytes have been sent
++
++  // Called when a response to the command is received.
++  RefPtr<VolumeResponseCallback>  mCallback;
++};
++
++class VolumeActionCommand : public VolumeCommand
++{
++public:
++  VolumeActionCommand(Volume* aVolume, const char* aAction,
++                      const char* aExtraArgs, VolumeResponseCallback* aCallback);
++  virtual ~VolumeActionCommand(){}
++private:
++  RefPtr<Volume>  mVolume;
++};
++
++class VolumeResetCommand : public VolumeCommand
++{
++public:
++  VolumeResetCommand(VolumeResponseCallback* aCallback);
++};
++
++} // system
++} // mozilla
++
++#endif  // mozilla_system_volumecommand_h__
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.cpp b/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.cpp
+index 04e8146900c..e7eb1947f8d 100644
+--- a/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.cpp
++++ b/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.cpp
+@@ -2,9 +2,10 @@
+  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+  * You can obtain one at http://mozilla.org/MPL/2.0/. */
+ 
+-#include "VolumeManager.h"
+ 
++#include "VolumeManager.h"
+ #include "Volume.h"
++#include "VolumeCommand.h"
+ #include "VolumeManagerLog.h"
+ #include "VolumeServiceTest.h"
+ 
+@@ -21,6 +22,10 @@
+ #include <fcntl.h>
+ #include <sys/socket.h>
+ 
++#include <iostream>
++#include <chrono>
++#include <thread>
++
+ namespace mozilla {
+ namespace system {
+ 
+@@ -40,7 +45,12 @@ VolumeInfo::VolumeInfo(const nsACString& aId, int aType,
+   // mDiskId.Data(), mState, mType);
+ }
+ 
+-VolumeManager::VolumeManager() { DBG("VolumeManager constructor called"); }
++//VolumeManager::VolumeManager() { DBG("VolumeManager constructor called"); }
++VolumeManager::VolumeManager()
++  : LineWatcher('\0', kRcvBufSize),
++    mSocket(-1),
++    mCommandPending(false)
++ { DBG("VolumeManager constructor called"); }
+ 
+ VolumeManager::~VolumeManager() {}
+ 
+@@ -189,8 +199,10 @@ void VolumeManager::InitConfig() {
+   int n = 0;
+   char line[255];
+   const char* filename = "/system/etc/volume.cfg";
++  DBG("+++VolumeManager::InitConfig+++");
+   if (!(fp = fopen(filename, "r"))) {
+-    LOG("Unable to open volume configuration file '%s' - ignoring", filename);
++    DBG("Unable to open volume configuration file '%s' - ignoring", filename);
++    DBG("---VolumeManager::InitConfig---");
+     return;
+   }
+   while (fgets(line, sizeof(line), fp)) {
+@@ -261,6 +273,7 @@ void VolumeManager::InitConfig() {
+     }
+     ERR("Unrecognized command: '%s'", command.get());
+   }
++  DBG("---VolumeManager::InitConfig---");
+ }
+ 
+ void VolumeManager::DefaultConfig() {
+@@ -291,6 +304,189 @@ void VolumeManager::DefaultConfig() {
+   }
+ }
+ 
++/*class VolumeResetCallback : public VolumeResponseCallback
++{
++  virtual void ResponseReceived(const VolumeCommand* aCommand)
++  {
++    switch (ResponseCode()) {
++      case ::ResponseCode::CommandOkay: {
++        // We've received the reset of volumes. Now read the Volume.cfg
++        // file to perform customizations, and then tell everybody
++        // that we're ready for business.
++        VolumeManager::DefaultConfig();
++        VolumeManager::InitConfig();
++        VolumeManager::Dump("READY");
++        VolumeManager::SetState(VolumeManager::VOLUMES_READY);
++        break;
++      }
++    }
++  }
++};*/
++bool
++VolumeManager::OpenSocket()
++{
++  SetState(STARTING);
++
++  LOG("+++VolumeManager::OpenSocket+++");
++  if ((mSocket.rwget() = socket_local_client("vold",
++                                             ANDROID_SOCKET_NAMESPACE_RESERVED,
++                                             SOCK_STREAM)) < 0) {
++      ERR("Error connecting to vold: (%s) - will retry", strerror(errno));
++      return false;
++  }
++  // add FD_CLOEXEC flag
++  int flags = fcntl(mSocket.get(), F_GETFD);
++  if (flags == -1) {
++      return false;
++  }
++  flags |= FD_CLOEXEC;
++  if (fcntl(mSocket.get(), F_SETFD, flags) == -1) {
++    return false;
++  }
++  // set non-blocking
++  if (fcntl(mSocket.get(), F_SETFL, O_NONBLOCK) == -1) {
++    return false;
++  }
++  if (!MessageLoopForIO::current()->
++      WatchFileDescriptor(mSocket.get(),
++                          true,
++                          MessageLoopForIO::WATCH_READ,
++                          &mReadWatcher,
++                          this)) {
++      return false;
++  }
++
++  LOG("Connected to vold");
++  VolumeCommand *mVolumeCommand = new VolumeCommand("volume reset"_ns, NULL);
++  //PostCommand(new VolumeResetCommand(new VolumeResetCallback));
++  PostCommand(mVolumeCommand);
++  mVolumeCommand = new VolumeCommand("volume user_added 0 0"_ns, NULL);
++  PostCommand(mVolumeCommand);
++  mVolumeCommand = new VolumeCommand("volume user_started 0"_ns, NULL);
++  PostCommand(mVolumeCommand);
++  
++  std::chrono::milliseconds timespan(30000);
++
++  std::this_thread::sleep_for(timespan);
++  VolumeManager::DefaultConfig();
++  VolumeManager::InitConfig();
++  VolumeManager::Dump("READY");
++  VolumeManager::SetState(VolumeManager::VOLUMES_READY);
++
++  LOG("---VolumeManager::OpenSocket---");
++  return true;
++}
++
++//static
++void
++VolumeManager::PostCommand(VolumeCommand* aCommand)
++{
++
++  LOG("+++VolumeManager::PostCommand+++");
++  if (!sVolumeManager) {
++    ERR("VolumeManager not initialized. Dropping command '%s'", aCommand->Data());
++    return;
++  }
++  aCommand->SetPending(true);
++
++  DBG("Sending command '%s'", aCommand->Data());
++  // vold can only process one command at a time, so add our command
++  // to the end of the command queue.
++  sVolumeManager->mCommands.push(aCommand);
++  if (!sVolumeManager->mCommandPending) {
++    // There aren't any commands currently being processed, so go
++    // ahead and kick this one off.
++    sVolumeManager->mCommandPending = true;
++    sVolumeManager->WriteCommandData();
++  }
++  LOG("---VolumeManager::PostCommand---");
++}
++
++/***************************************************************************
++* The WriteCommandData initiates sending of a command to vold. Since
++* we're running on the IOThread and not allowed to block, WriteCommandData
++* will write as much data as it can, and if not all of the data can be
++* written then it will setup a file descriptor watcher and
++* OnFileCanWriteWithoutBlocking will call WriteCommandData to write out
++* more of the command data.
++*/
++void
++VolumeManager::WriteCommandData()
++{
++  LOG("+++VolumeManager::WriteCommand+++");
++  if (mCommands.size() == 0) {
++    return;
++  }
++
++  VolumeCommand* cmd = mCommands.front();
++  if (cmd->BytesRemaining() == 0) {
++    // All bytes have been written. We're waiting for a response.
++    return;
++  }
++  // There are more bytes left to write. Try to write them all.
++  ssize_t bytesWritten = write(mSocket.get(), cmd->Data(), cmd->BytesRemaining());
++  if (bytesWritten < 0) {
++    ERR("Failed to write %d bytes to vold socket", cmd->BytesRemaining());
++    LOG("---VolumeManager::WriteCommand---");
++    Restart();
++    return;
++  }
++  DBG("Wrote %d bytes (of %d)", bytesWritten, cmd->BytesRemaining());
++  cmd->ConsumeBytes(bytesWritten);
++  if (cmd->BytesRemaining() == 0) {
++    LOG("---VolumeManager::WriteCommand---");
++    return;
++  }
++  // We were unable to write all of the command bytes. Setup a watcher
++  // so we'll get called again when we can write without blocking.
++  if (!MessageLoopForIO::current()->
++      WatchFileDescriptor(mSocket.get(),
++                          false, // one-shot
++                          MessageLoopForIO::WATCH_WRITE,
++                          &mWriteWatcher,
++                          this)) {
++    ERR("Failed to setup write watcher for vold socket");
++    Restart();
++  }
++    LOG("---VolumeManager::WriteCommand---");
++}
++
++void
++VolumeManager::OnLineRead(int aFd, nsDependentCSubstring& aMessage)
++{
++  MOZ_ASSERT(aFd == mSocket.get());
++  char* endPtr;
++  int responseCode = strtol(aMessage.Data(), &endPtr, 10);
++  if (*endPtr == ' ') {
++    endPtr++;
++  }
++
++  // Now fish out the rest of the line after the response code
++  nsDependentCString  responseLine(endPtr, aMessage.Length() - (endPtr - aMessage.Data()));
++  DBG("Rcvd: %d '%s'", responseCode, responseLine.Data());
++
++  if (responseCode >= ::ResponseCode::UnsolicitedInformational) {
++    // These are unsolicited broadcasts. We intercept these and process
++    // them ourselves
++    //HandleBroadcast(responseCode, responseLine);
++  } else {
++    // Everything else is considered to be part of the command response.
++    if (mCommands.size() > 0) {
++      VolumeCommand* cmd = mCommands.front();
++      cmd->HandleResponse(responseCode, responseLine);
++      if (responseCode >= ::ResponseCode::CommandOkay) {
++        // That's a terminating response. We can remove the command.
++        mCommands.pop();
++        mCommandPending = false;
++        // Start the next command, if there is one.
++        WriteCommandData();
++      }
++    } else {
++      ERR("Response with no command");
++    }
++  }
++}
++
+ bool VolumeManager::InitVold() {
+   SetState(STARTING);
+ //B2G8//
+@@ -300,26 +496,162 @@ bool VolumeManager::InitVold() {
+ 
+   if (!VoldProxy::Reset()) {
+     return false;
+-  }
++  }*/
+ 
+   DefaultConfig();
+   InitConfig();
+   Dump("READY");
+   SetState(VolumeManager::VOLUMES_READY);
+ 
+-  if (!VoldProxy::OnUserAdded(0, 0) || !VoldProxy::OnUserStarted(0) ||
++  /*if (!VoldProxy::OnUserAdded(0, 0) || !VoldProxy::OnUserStarted(0) ||
+       !VoldProxy::OnSecureKeyguardStateChanged(false)) {
+     return false;
+-  }
++  }*/
+ 
+-  return true;*/
+-  return false;
++  return true;
+ }
+ 
+ nsTArray<RefPtr<VolumeInfo>>& VolumeManager::GetVolumeInfoArray() {
+   return sVolumeManager->mVolumeInfoArray;
+ }
+-
++/*
++void
++VolumeManager::HandleBroadcast(int aResponseCode, nsACString& aResponseLine)
++{
++  nsCWhitespaceTokenizer tokenizer(aResponseLine);
++  nsresult rv;
++  switch (aResponseCode) {
++    case ::ResponseCode::VolumeCreated: {
++      VolumeCommand *mVolumeCommand;
++      nsACString id(tokenizer.nextToken());
++
++      nsCString type_str(tokenizer.nextToken());
++      int type = type_str.ToInteger(&rv);
++      nsCString diskid(tokenizer.nextToken());
++      nsCString state_str(tokenizer.nextToken());
++      int state = state_str.ToInteger(&rv);
++
++      if (!id.Equals("emulated")) {
++        mVolumeInfoArray.AppendElement(new VolumeInfo(id, type, diskid, state));
++      }
++      nsCString command("volume mount"_ns);
++      command.Append(" ");
++      command.Append(id);
++      command.Append(" ");
++      command.AppendInt(VolumeInfo::kPrimary);
++      command.Append(" 0");
++
++      mVolumeCommand = new VolumeCommand(command, NULL);
++      PostCommand(mVolumeCommand);
++      break;
++    }
++    case ::ResponseCode::VolumeStateChanged: {
++      nsCString id(tokenizer.nextToken());
++      nsCString state_str(tokenizer.nextToken());
++      int state = state_str.ToInteger(&rv);
++
++      for (VolumeInfoArray::index_type volIndex = 0; volIndex < mVolumeInfoArray.Length(); volIndex++){
++        if (id.Equals(mVolumeInfoArray[volIndex]->getId())) {
++          mVolumeInfoArray[volIndex]->setState(state);
++          if (state == VolumeInfo::STATE_MOUNTED) {
++            RefPtr<Volume> vol = VolumeManager::FindAddVolumeByName("sdcard1"_ns, id);
++            nsCString fakeResponseLine(id);
++            fakeResponseLine.Append(" ");
++            fakeResponseLine.Append(state_str);
++            fakeResponseLine.Append(" ");
++            fakeResponseLine.Append(mVolumeInfoArray[volIndex]->getMountPoint());
++            nsCWhitespaceTokenizer tokenizer_tmp(fakeResponseLine);
++            vol->HandleVoldResponse(aResponseCode, tokenizer_tmp);
++            return;
++          } else {
++            RefPtr<Volume> vol = FindVolumeByName("sdcard1"_ns);
++            if (!vol) {
++              return;
++            }
++            nsCString fakeResponseLine(id);
++            fakeResponseLine.Append(" ");
++            fakeResponseLine.Append(state_str);
++            nsCWhitespaceTokenizer tokenizer_tmp(fakeResponseLine);
++            vol->HandleVoldResponse(aResponseCode, tokenizer_tmp);
++            return;
++          }
++        }
++      }
++      break;
++    }
++    case ::ResponseCode::VolumeFsTypeChanged: {
++      nsCString id(tokenizer.nextToken());
++      nsCString fsType(tokenizer.nextToken());
++
++      for (VolumeInfoArray::index_type volIndex = 0; volIndex < mVolumeInfoArray.Length(); volIndex++){
++        if (id.Equals(mVolumeInfoArray[volIndex]->getId())) {
++          mVolumeInfoArray[volIndex]->setFsType(fsType);
++          return;
++        }
++      }
++      break;
++    }
++    case ::ResponseCode::VolumeFsUuidChanged: {
++      nsCString id(tokenizer.nextToken());
++      nsCString uuid(tokenizer.nextToken());
++
++      for (VolumeInfoArray::index_type volIndex = 0; volIndex < mVolumeInfoArray.Length(); volIndex++){
++        if (id.Equals(mVolumeInfoArray[volIndex]->getId())) {
++          mVolumeInfoArray[volIndex]->setUuid(uuid);
++          return;
++        }
++      }
++      break;
++    }
++    case ::ResponseCode::VolumeFsLabelChanged: {
++      nsCString id(tokenizer.nextToken());
++      nsCString fsLabel(tokenizer.nextToken());
++
++      for (VolumeInfoArray::index_type volIndex = 0; volIndex < mVolumeInfoArray.Length(); volIndex++){
++        if (id.Equals(mVolumeInfoArray[volIndex]->getId())) {
++          mVolumeInfoArray[volIndex]->setFsLabel(fsLabel);
++          return;
++        }
++      }
++      break;
++    }
++    case ::ResponseCode::VolumePathChanged: {
++      nsCString id(tokenizer.nextToken());
++      nsCString mountpoint(tokenizer.nextToken());
++
++      for (VolumeInfoArray::index_type volIndex = 0; volIndex < mVolumeInfoArray.Length(); volIndex++){
++        if (id.Equals(mVolumeInfoArray[volIndex]->getId())) {
++          mVolumeInfoArray[volIndex]->setMountPoint(mountpoint);
++          return;
++        }
++      }
++      break;
++    }
++    case ::ResponseCode::VolumeInternalPathChanged: {
++      nsCString id(tokenizer.nextToken());
++      nsCString internalMountpoint(tokenizer.nextToken());
++
++      for (VolumeInfoArray::index_type volIndex = 0; volIndex < mVolumeInfoArray.Length(); volIndex++){
++        if (id.Equals(mVolumeInfoArray[volIndex]->getId())) {
++          mVolumeInfoArray[volIndex]->setInternalMountPoint(internalMountpoint);
++          return;
++        }
++      }
++      break;
++    }
++    case ::ResponseCode::VolumeDestroyed: {
++      nsCString id(tokenizer.nextToken());
++
++      for (VolumeInfoArray::index_type volIndex = 0; volIndex < mVolumeInfoArray.Length(); volIndex++){
++        if (id.Equals(mVolumeInfoArray[volIndex]->getId())) {
++          mVolumeInfoArray.RemoveElementAt(volIndex);
++          return;
++        }
++      }
++      break;
++    }
++  }
++}*/
+ void VolumeManager::Restart() { Start(); }
+ 
+ // static
+@@ -330,7 +662,7 @@ void VolumeManager::Start() {
+     return;
+   }
+   SetState(STARTING);
+-  if (!sVolumeManager->InitVold()) {
++  if (!sVolumeManager->OpenSocket()) {
+     // Initialize vold failed, try again in a second.
+     MessageLoopForIO::current()->PostDelayedTask(
+         NewRunnableFunction("VolumeManagerStartRunnable", VolumeManager::Start),
+@@ -338,6 +670,8 @@ void VolumeManager::Start() {
+   }
+ }
+ 
++
++
+ void VolumeManager::OnError() { Restart(); }
+ 
+ /***************************************************************************/
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.h b/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.h
+index c0930d1bdcb..a8ea7a0bf08 100644
+--- a/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.h
++++ b/LINUX/android/gecko/dom/system/gonk/volume/VolumeManager.h
+@@ -17,6 +17,7 @@
+ 
+ //B2G8//#include "VoldProxy.h"
+ #include "Volume.h"
++#include "VolumeCommand.h"
+ 
+ namespace mozilla {
+ namespace system {
+@@ -149,7 +150,8 @@ class VolumeInfo final {
+  *
+  ***************************************************************************/
+ 
+-class VolumeManager final {
++class VolumeManager final : public MessageLoopForIO::LineWatcher
++{
+   virtual ~VolumeManager();
+ 
+  public:
+@@ -202,15 +204,17 @@ class VolumeManager final {
+                                                       const nsACString& aUuid);
+   static bool RemoveVolumeByName(const nsACString& aName);
+   static void InitConfig();
+-
++  static void       PostCommand(VolumeCommand* aCommand);
+   static nsTArray<RefPtr<VolumeInfo>>& GetVolumeInfoArray();
+ 
+  protected:
+   virtual void OnError();
++  virtual void OnLineRead(int aFd, nsDependentCSubstring& aMessage);
+ 
+   static void DefaultConfig();
+ 
+  private:
++  bool OpenSocket();
+   bool InitVold();
+ 
+   //friend class VoldProxy;  // Calls SetState
+@@ -219,12 +223,45 @@ class VolumeManager final {
+   static void SetState(STATE aNewState);
+ 
+   void Restart();
++  void WriteCommandData();
++  void HandleBroadcast(int aResponseCode, nsACString& aResponseLine);
++
++  typedef std::queue<RefPtr<VolumeCommand> > CommandQueue;
+ 
+   static STATE mState;
+   static StateObserverList mStateObserverList;
+ 
+-  VolumeArray mVolumeArray;
+-  VolumeInfoArray mVolumeInfoArray;
++  static const int    kRcvBufSize = 1024;
++  ScopedClose         mSocket;
++  VolumeArray         mVolumeArray;
++  CommandQueue        mCommands;
++  bool                mCommandPending;
++
++
++  VolumeInfoArray     mVolumeInfoArray;
++  MessageLoopForIO::FileDescriptorWatcher mReadWatcher;
++  MessageLoopForIO::FileDescriptorWatcher mWriteWatcher;
++  RefPtr<VolumeResponseCallback>          mBroadcastCallback;
++
++};
++
++class VolumeResetCallback : public VolumeResponseCallback
++{
++  virtual void ResponseReceived(const VolumeCommand* aCommand)
++  {
++    switch (ResponseCode()) {
++      case ::ResponseCode::CommandOkay: {
++        // We've received the reset of volumes. Now read the Volume.cfg
++        // file to perform customizations, and then tell everybody
++        // that we're ready for business.
++        VolumeManager::DefaultConfig();
++        VolumeManager::InitConfig();
++        VolumeManager::Dump("READY");
++        VolumeManager::SetState(VolumeManager::VOLUMES_READY);
++        break;
++      }
++    }
++  }
+ };
+ 
+ /***************************************************************************
+diff --git a/LINUX/android/gecko/dom/system/gonk/volume/moz.build b/LINUX/android/gecko/dom/system/gonk/volume/moz.build
+index 532d8601680..3d1c1e0e72b 100644
+--- a/LINUX/android/gecko/dom/system/gonk/volume/moz.build
++++ b/LINUX/android/gecko/dom/system/gonk/volume/moz.build
+@@ -34,8 +34,8 @@ UNIFIED_SOURCES += [
+     'nsVolumeMountLock.cpp',
+     'nsVolumeService.cpp',
+     'nsVolumeStat.cpp',
+-#    'VoldProxy.cpp',
+     'Volume.cpp',
++    'VolumeCommand.cpp',
+     'VolumeManager.cpp',
+     'VolumeServiceIOThread.cpp',
+     'VolumeServiceTest.cpp',

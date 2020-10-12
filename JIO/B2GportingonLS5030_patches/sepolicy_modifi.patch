@@ -1,0 +1,1652 @@
+commit 5fcd9cba3a52bfa11e9131347aa760dad11f9814
+Author: keerthikumari <keerthikumari.cheguri@votarytech.com>
+Date:   Tue Aug 18 17:50:15 2020 +0530
+
+    [B2G] sepolicy fixes, modifications
+
+diff --git a/LINUX/android/device/qcom/sepolicy/Android.mk b/LINUX/android/device/qcom/sepolicy/Android.mk
+index 633541d681a..b7dd62947d5 100644
+--- a/LINUX/android/device/qcom/sepolicy/Android.mk
++++ b/LINUX/android/device/qcom/sepolicy/Android.mk
+@@ -30,4 +30,5 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
+ 
+ # Add sepolicy version to support OS upgrade and backward compatibility
+ BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
++BOARD_SEPOLICY_DIRS += gonk-misc/sepolicy/common
+ endif
+diff --git a/LINUX/android/gonk-misc/Android.mk b/LINUX/android/gonk-misc/Android.mk
+index c8b45170543..e19656d9a11 100644
+--- a/LINUX/android/gonk-misc/Android.mk
++++ b/LINUX/android/gonk-misc/Android.mk
+@@ -35,21 +35,21 @@ LOCAL_SRC_FILES    := b2g.sh
+ LOCAL_MODULE_PATH  := $(TARGET_OUT_EXECUTABLES)
+ include $(BUILD_PREBUILT)
+ 
+-include $(CLEAR_VARS)
+-LOCAL_MODULE       := api-daemon.sh
+-LOCAL_MODULE_TAGS  := optional
+-LOCAL_MODULE_CLASS := DATA
+-LOCAL_SRC_FILES    := api-daemon.sh
+-LOCAL_MODULE_PATH  := $(TARGET_OUT_EXECUTABLES)
+-include $(BUILD_PREBUILT)
++#include $(CLEAR_VARS)
++#LOCAL_MODULE       := api-daemon.sh
++#LOCAL_MODULE_TAGS  := optional
++#LOCAL_MODULE_CLASS := DATA
++#LOCAL_SRC_FILES    := api-daemon.sh
++#LOCAL_MODULE_PATH  := $(TARGET_OUT_EXECUTABLES)
++#include $(BUILD_PREBUILT)
+ 
+-include $(CLEAR_VARS)
+-LOCAL_MODULE       := updater-daemon.sh
+-LOCAL_MODULE_TAGS  := optional
+-LOCAL_MODULE_CLASS := DATA
+-LOCAL_SRC_FILES    := updater-daemon.sh
+-LOCAL_MODULE_PATH  := $(TARGET_OUT_EXECUTABLES)
+-include $(BUILD_PREBUILT)
++#include $(CLEAR_VARS)
++#LOCAL_MODULE       := updater-daemon.sh
++#LOCAL_MODULE_TAGS  := optional
++#LOCAL_MODULE_CLASS := DATA
++#LOCAL_SRC_FILES    := updater-daemon.sh
++#LOCAL_MODULE_PATH  := $(TARGET_OUT_EXECUTABLES)
++#include $(BUILD_PREBUILT)
+ 
+ include $(CLEAR_VARS)
+ LOCAL_MODULE       := b2g-ps
+@@ -199,6 +199,7 @@ GECKO_LIB_DEPS := \
+ 	libttspico.so \
+ 	$(NULL)
+ 
++
+ # For APEX_MODULE_LIBS
+ ifeq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) < 29 ))" )))
+ GECKO_LIB_DEPS += \
+diff --git a/LINUX/android/gonk-misc/b2g.mk b/LINUX/android/gonk-misc/b2g.mk
+index d9d732f06e0..15a66ac55a6 100644
+--- a/LINUX/android/gonk-misc/b2g.mk
++++ b/LINUX/android/gonk-misc/b2g.mk
+@@ -7,7 +7,6 @@ PRODUCT_PACKAGES += \
+ 	gonkProcessInfo \
+ 	gonksched \
+ 	init.b2g.rc \
+-	init.bluetooth.rc \
+ 	gecko \
+ 	api-daemon \
+ 	api-daemon.sh \
+@@ -16,8 +15,24 @@ PRODUCT_PACKAGES += \
+ 	librecovery \
+ 	gaia \
+ 	sources.xml \
++	sepolicy \
+ 	$(NULL)
+ 
++BOARD_SEPOLICY_DIRS += \
++        gonk-misc/sepolicy/common
++
++BOARD_SEPOLICY_UNION += \
++        b2g.te \
++        bluetoothd.te \
++        fakeappops.te \
++        gonksched.te \
++        nfcd.te \
++        plugin-container.te \
++        rilproxy.te \
++        sensorsd.te \
++        file.te \
++        file_contexts
++
+ 
+ # Dhcpcd
+ DHCPCD_USE_SCRIPT := yes
+diff --git a/LINUX/android/gonk-misc/init.b2g.rc b/LINUX/android/gonk-misc/init.b2g.rc
+index 102900949f6..988fa9814c3 100644
+--- a/LINUX/android/gonk-misc/init.b2g.rc
++++ b/LINUX/android/gonk-misc/init.b2g.rc
+@@ -25,27 +25,27 @@ service b2g /system/bin/b2g.sh
+     class main
+     onrestart restart media
+ 
+-service nfcd /system/bin/nfcd
+-    disabled
+-    class main
+-    oneshot
+-    socket nfcd stream 660 nfc nfc
+-    user nfc
+-    group system
+-
+-service radvd /system/bin/radvd -C /data/misc/radvd/radvd.conf \
+-    -n -p /data/misc/radvd/radvd.pid
+-    disabled
+-    oneshot
+-
+-service api-daemon /system/bin/api-daemon.sh
+-    class main
+-    user root
+-
+-service updater-daemon /system/bin/updater-daemon.sh
+-    class main
+-    user root
+-
++#service nfcd /system/bin/nfcd
++#    disabled
++#    class main
++#    oneshot
++#    socket nfcd stream 660 nfc nfc
++#    user nfc
++#    group system
++#
++#service radvd /system/bin/radvd -C /data/misc/radvd/radvd.conf \
++#    -n -p /data/misc/radvd/radvd.pid
++#    disabled
++#    oneshot
++#
++#service api-daemon /system/bin/api-daemon.sh
++#    class main
++#    user root
++#
++#service updater-daemon /system/bin/updater-daemon.sh
++#    class main
++#    user root
++#
+ on post-fs-data
+     mkdir /data/misc/radvd 0770 system system
+     mkdir /data/misc/tethering 0770 system system
+@@ -60,12 +60,12 @@ on post-fs-data
+ on property:init.svc.wpa_supplicant=stopped
+     stop dhcpcd
+ 
+-service dhcpcd_wlan0 /system/bin/dhcpcd-6.8.2 -ABKL \
+-    -f /system/etc/dhcpcd-6.8.2/dhcpcd.conf wlan0
+-    group system dhcp
+-    disabled
+-    oneshot
+-
++#service dhcpcd_wlan0 /system/bin/dhcpcd-6.8.2 -ABKL \
++#    -f /system/etc/dhcpcd-6.8.2/dhcpcd.conf wlan0
++#    group system dhcp
++#    disabled
++#    oneshot
++#
+ on boot
+     exec /system/bin/rm -r /data/local/tmp/*
+     # set RLIMIT_NOFILE to increase soft limit from 1024(default) to 2048.
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/adbd.te b/LINUX/android/gonk-misc/sepolicy/common/adbd.te
+deleted file mode 100644
+index e1f227995d7..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/adbd.te
++++ /dev/null
+@@ -1,4 +0,0 @@
+-# required for WebIDE
+-allow adbd b2g_data_file:sock_file w_file_perms;
+-allow adbd system_data_file:sock_file w_file_perms;
+-allow adbd b2g:unix_stream_socket connectto;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/api-daemon.te b/LINUX/android/gonk-misc/sepolicy/common/api-daemon.te
+deleted file mode 100644
+index 4f4d2a676c7..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/api-daemon.te
++++ /dev/null
+@@ -1,55 +0,0 @@
+-# api-daemon
+-type api-daemon, domain;
+-type api-daemon_exec, exec_type, file_type;
+-
+-init_daemon_domain(api-daemon)
+-
+-# audit2allow
+-allow api-daemon dnsproxyd_socket:sock_file w_file_perms;
+-allow api-daemon fwmarkd_socket:sock_file w_file_perms;
+-allow api-daemon property_socket:sock_file w_file_perms;
+-allow api-daemon default_prop:property_service set;
+-allow api-daemon init:unix_stream_socket connectto;
+-allow api-daemon netd:unix_stream_socket connectto;
+-allow api-daemon node:udp_socket node_bind;
+-allow api-daemon port:udp_socket { name_bind node_bind };
+-allow api-daemon node:tcp_socket node_bind;
+-allow api-daemon port:tcp_socket { name_bind name_connect };
+-allow api-daemon self:capability { sys_boot sys_resource sys_nice sys_admin sys_module sys_time net_raw net_bind_service net_admin setgid fsetid kill chown setuid fowner dac_override };
+-allow api-daemon self:capability2 { block_suspend syslog };
+-allow api-daemon self:tcp_socket create_stream_socket_perms;
+-allow api-daemon self:udp_socket create_stream_socket_perms;
+-allow api-daemon self:netlink_route_socket { create_stream_socket_perms nlmsg_read nlmsg_write };
+-allow api-daemon init:unix_stream_socket connectto;
+-allow api-daemon system_data_file:dir create_dir_perms;
+-allow api-daemon system_data_file:file { create_file_perms x_file_perms };
+-allow api-daemon api-daemon_exec:file rx_file_perms;
+-allow api-daemon api_data_file:file { create_file_perms x_file_perms };
+-allow api-daemon api_data_file:dir create_dir_perms;
+-allow api-daemon system_file:file rx_file_perms;
+-allow api-daemon shell_exec:file rx_file_perms;
+-allow api-daemon toolbox_exec:file rx_file_perms;
+-allow api-daemon property_socket:sock_file w_file_perms;
+-allow api-daemon shell_data_file:dir create_dir_perms;
+-allow api-daemon shell_data_file:file create_file_perms;
+-allow api-daemon socket_device:dir rw_dir_perms;
+-allow api-daemon socket_device:sock_file create_file_perms;
+-allow api-daemon net_data_file:dir search;
+-allow api-daemon ctl_default_prop:property_service set;
+-allow api-daemon b2g_data_file:dir r_dir_perms;
+-allow api-daemon b2g_data_file:file r_file_perms;
+-allow api-daemon domain:dir r_dir_perms;
+-allow api-daemon domain:file r_file_perms;
+-allow api-daemon domain:lnk_file r_file_perms;
+-allow api-daemon domain:process getattr;
+-allow api-daemon kernel:system { syslog_read syslog_mod };
+-
+-# other domains that interact with api-domain
+-allow shell api-daemon_exec:file getattr;
+-allow kernel api_data_file:file create_file_perms;
+-allow netd api-daemon:fd use;
+-allow netd api-daemon:tcp_socket rw_socket_perms;
+-allow b2g api-daemon_exec:file { write open };
+-allow b2g api_data_file:file create_file_perms;
+-allow b2g api_data_file:dir create_dir_perms;
+-allow b2g api-daemon:unix_stream_socket connectto;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/b2g.te b/LINUX/android/gonk-misc/sepolicy/common/b2g.te
+index f15f9722ea9..114b8f76987 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/b2g.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/b2g.te
+@@ -1,12 +1,14 @@
+ # b2g
+-type b2g, domain;
++type b2g, coredomain, domain;
+ type b2g_exec, exec_type, file_type;
+ 
+ init_daemon_domain(b2g)
+ 
++domain_auto_trans(init, b2g_exec, b2g)
++domain_auto_trans(b2g, plugin-container_exec, plugin-container)
++
+ binder_use(b2g)
+ binder_call(b2g, mediaserver)
+-binder_call(mediaserver, b2g)
+ binder_call(b2g, plugin-container)
+ 
+ unix_socket_connect(b2g, netd, netd)
+@@ -16,11 +18,7 @@ unix_socket_connect(b2g, rild, rild)
+ # force SELinux to keep environment variables when calling
+ # execve(plugin-container,...) to preserve LD_PRELOAD which is
+ # used to load libmozglue.so
+-allow b2g plugin-container:process { noatsecure signal setsched ptrace };
+-allow b2g plugin-container:dir rw_dir_perms;
+-allow b2g plugin-container:file rw_file_perms;
+-allow b2g plugin-container:unix_stream_socket rw_stream_socket_perms;
+-allow b2g plugin-container:fifo_file rw_file_perms;
++allow b2g plugin-container:process { noatsecure };
+ 
+ # Files created, inside a directory labeled with 'system_data_file'
+ # (such as /data/local/), by a processes running with in the b2g context,
+@@ -28,233 +26,145 @@ allow b2g plugin-container:fifo_file rw_file_perms;
+ file_type_auto_trans(b2g, system_data_file, b2g_data_file)
+ 
+ # audit2allow
+-allow b2g adb_keys_file:dir rw_dir_perms;
+-allow b2g alarm_device:chr_file w_file_perms;
+-allow b2g apk_data_file:dir rw_dir_perms;
+-allow b2g apk_private_data_file:dir rw_dir_perms;
+-allow b2g app_data_file:dir rw_dir_perms;
+-allow b2g asec_image_file:dir rw_dir_perms;
+-allow b2g audio_data_file:dir rw_dir_perms;
+-allow b2g audio_data_file:file rw_file_perms;
+-allow b2g b2g_exec:file rx_file_perms;
+-allow b2g bluetooth_data_file:dir rw_dir_perms;
+-allow b2g bluetooth_data_file:file rw_file_perms;
++allow b2g adb_keys_file:dir { read write getattr open };
++allow b2g alarm_device:chr_file write;
++allow b2g apk_data_file:dir { read write open };
++allow b2g apk_private_data_file:dir { read write open getattr };
++allow b2g app_data_file:dir { read write open getattr };
++allow b2g asec_image_file:dir { read write open getattr };
++allow b2g audio_data_file:dir { read write search getattr open };
++allow b2g audio_data_file:file getattr;
++allow b2g b2g_exec:file { getattr open execute_no_trans };
++allow b2g bluetooth_data_file:dir { read write getattr open };
++allow b2g bluetooth_data_file:file { write open getattr };
+ allow b2g bluetooth_prop:property_service set;
+ allow b2g bluetoothd:fd use;
+-allow b2g bluetoothd:unix_stream_socket rw_stream_socket_perms;
+-allow b2g cache_file:dir create_dir_perms;
+-allow b2g cache_file:file create_file_perms;
+-allow b2g camera_data_file:dir rw_dir_perms;
+-allow b2g camera_data_file:file rw_file_perms;
+-allow b2g camera_data_file:sock_file create_file_perms;
+-allow b2g cgroup:dir create_dir_perms;
++allow b2g bluetoothd:unix_stream_socket { read write };
++allow b2g cache_file:dir { create write add_name remove_name };
++allow b2g cache_file:file { rename write create open unlink };
++allow b2g camera_data_file:dir { read write open getattr };
++allow b2g camera_data_file:file { write open getattr };
++allow b2g camera_data_file:sock_file getattr;
++allow b2g cgroup:dir { create add_name };
+ allow b2g ctl_default_prop:property_service set;
+-allow b2g ctl_dumpstate_prop:property_service set;
+ allow b2g ctl_mdnsd_prop:property_service set;
+-allow b2g dalvikcache_data_file:dir rw_dir_perms;
+-allow b2g dalvikcache_profiles_data_file:dir rw_dir_perms;
++allow b2g dalvikcache_data_file:dir { read write open };
++#allow b2g dalvikcache_profiles_data_file:dir { read write getattr open };
+ allow b2g default_android_service:service_manager add;
+-allow b2g device:chr_file rw_file_perms;
+-allow b2g device:dir rw_dir_perms;
+-allow b2g device:sock_file w_file_perms;
+-allow b2g dhcp_data_file:dir create_dir_perms;
+-allow b2g dhcp_data_file:file create_file_perms;
++allow b2g device:chr_file { read write ioctl open };
++allow b2g device:dir { write };
++allow b2g device:sock_file { write };
++allow b2g dhcp_data_file:dir { read write open search getattr };
++allow b2g dhcp_data_file:file { write open getattr };
+ allow b2g dhcp_prop:property_service set;
+ allow b2g dnsproxyd_socket:sock_file write;
+-allow b2g drm_data_file:dir rw_dir_perms;
+-allow b2g dumpstate:dir create_dir_perms;
+-allow b2g dumpstate:fd use;
+-allow b2g dumpstate:file create_file_perms;
+-allow b2g dumpstate:unix_stream_socket { connectto rw_stream_socket_perms };
+-allow b2g dumpstate_socket:sock_file w_file_perms;
+-allow b2g fuse:dir create_dir_perms;
+-allow b2g fuse:file create_file_perms;
++allow b2g drm_data_file:dir { read write getattr open };
++allow b2g fuse:dir { write search read remove_name create open add_name };
++allow b2g fuse:file { append setattr write getattr read create unlink open };
+ allow b2g fwmarkd_socket:sock_file write;
+-allow b2g gpu_device:chr_file rw_file_perms;
+-allow b2g graphics_device:chr_file rw_file_perms;
+-allow b2g graphics_device:dir r_dir_perms;
+-allow b2g healthd:dir r_dir_perms;
+-allow b2g healthd:file r_file_perms;
+-allow b2g init:dir r_dir_perms;
+-allow b2g init:file r_file_perms;
+-allow b2g init:lnk_file r_file_perms;
+-allow b2g init:unix_stream_socket { rw_stream_socket_perms connectto };
+-allow b2g input_device:chr_file rw_file_perms;
+-allow b2g input_device:dir r_dir_perms;
+-allow b2g install_data_file:file r_file_perms;
+-allow b2g kernel:dir r_dir_perms;
+-allow b2g kernel:file r_file_perms;
+-allow b2g kernel:system { syslog_read syslog_mod };
+-allow b2g keychain_data_file:dir rw_dir_perms;
+-allow b2g keychain_data_file:dir rw_dir_perms;
+-allow b2g keystore_data_file:dir rw_dir_perms;
+-allow b2g keystore_data_file:file r_file_perms;
++allow b2g gpu_device:chr_file { read write ioctl open };
++allow b2g graphics_device:chr_file { read write ioctl open };
++allow b2g graphics_device:dir search;
++allow b2g healthd:dir { read search open };
++allow b2g healthd:file { read getattr };
++allow b2g init:dir { read search open getattr };
++allow b2g init:file { read getattr };
++allow b2g init:lnk_file { read getattr };
++allow b2g init:unix_stream_socket { read write connectto };
++allow b2g input_device:chr_file { open read write ioctl };
++allow b2g input_device:dir { open read search };
++allow b2g install_data_file:file getattr;
++allow b2g kernel:dir { read search open };
++allow b2g kernel:system syslog_read;
++allow b2g keychain_data_file:dir { read write getattr open };
++allow b2g keychain_data_file:dir { read write getattr open };
++allow b2g keystore_data_file:dir { write read getattr open search };
++allow b2g keystore_data_file:file { getattr };
+ allow b2g keystore_service:service_manager add;
+-allow b2g lmkd:dir r_dir_perms;
+-allow b2g logd:dir r_dir_perms;
+-allow b2g logd:file r_file_perms;
++allow b2g lmkd:dir { read search open };
++allow b2g logd:dir { read search open };
++allow b2g logd:file { read getattr };
+ allow b2g mdnsd:unix_stream_socket connectto;
+-allow b2g mdnsd_socket:sock_file w_file_perms;
+-allow b2g media_data_file:dir rw_dir_perms;
+-allow b2g media_data_file:file rw_file_perms;
+-allow b2g media_data_file:fifo_file rw_file_perms;
+-allow b2g media_rw_data_file:dir rw_dir_perms;
+-allow b2g media_rw_data_file:file rw_file_perms;
+-allow b2g misc_user_data_file:dir rw_dir_perms;
+-allow b2g net_data_file:dir rw_dir_perms;
+-allow b2g net_data_file:file rw_file_perms;
++allow b2g mdnsd_socket:sock_file write;
++allow b2g media_data_file:dir { read write getattr open };
++allow b2g media_rw_data_file:dir { read write open search getattr };
++allow b2g media_rw_data_file:file { write open getattr };
++allow b2g misc_user_data_file:dir { read write search getattr open };
++allow b2g net_data_file:dir { read write search getattr open };
++allow b2g net_data_file:file { getattr write open };
+ allow b2g net_radio_prop:property_service set;
++allow b2g nfc_data_file:dir { read write search getattr open };
++allow b2g nfc_data_file:file { write open };
+ allow b2g node:tcp_socket { node_bind };
+ allow b2g node:udp_socket { node_bind };
++allow b2g plugin-container:dir search;
++allow b2g plugin-container:file { write open };
++allow b2g plugin-container:process { signal setsched };
++allow b2g plugin-container:unix_stream_socket { read write };
+ allow b2g port:tcp_socket { name_connect name_bind node_bind };
+ allow b2g port:udp_socket { name_bind node_bind };
+ allow b2g powerctl_prop:property_service set;
+-allow b2g proc_sysrq:file w_file_perms;;
+-allow b2g property_data_file:dir rw_dir_perms;
+-allow b2g property_data_file:file rw_file_perms;
+-allow b2g property_socket:sock_file w_file_perms;
+-allow b2g radio_data_file:dir rw_dir_perms;
+-allow b2g radio_data_file:file rw_file_perms;
++allow b2g proc_sysrq:file write;
++allow b2g property_data_file:dir { read write search getattr open };
++allow b2g property_data_file:file { write open getattr };
++allow b2g property_socket:sock_file write;
++allow b2g radio_data_file:dir { read write getattr open };
+ allow b2g radio_prop:property_service set;
+-allow b2g resourcecache_data_file:dir rw_dir_perms;
++allow b2g resourcecache_data_file:dir { read write getattr open };
+ allow b2g rilproxy:unix_stream_socket connectto;
+-allow b2g sdcard_internal:dir create_dir_perms;
+-allow b2g sdcard_internal:file create_file_perms;
+-allow b2g security_file:dir rw_dir_perms;
++allow b2g sdcardfs:dir { open create read write search add_name remove_name };
++allow b2g sdcardfs:file { rename unlink read write create open getattr };
++#allow b2g security_file:dir { read write open };
+ allow b2g self:binder { transfer call };
+ allow b2g self:capability2 { block_suspend syslog };
+-allow b2g self:capability { sys_boot sys_resource sys_nice sys_ptrace sys_admin sys_module sys_time net_raw net_bind_service net_admin setgid fsetid kill chown setuid fowner dac_override };
++#allow b2g self:capability { sys_boot sys_resource sys_nice sys_ptrace sys_admin sys_module sys_time net_raw net_bind_service net_admin setgid fsetid kill chown setuid fowner dac_override };
++allow b2g self:capability { sys_boot sys_resource sys_nice sys_admin sys_module sys_time net_raw net_bind_service net_admin setgid fsetid kill chown setuid fowner dac_override };
++allow b2g self:netlink_kobject_uevent_socket { setopt create bind read };
++allow b2g self:netlink_route_socket { bind create read };
++allow b2g self:netlink_socket { write bind create read };
+ allow b2g self:process { execmem ptrace };
+-allow b2g self:socket create_stream_socket_perms;
+-allow b2g self:tcp_socket create_stream_socket_perms;
+-allow b2g self:udp_socket create_stream_socket_perms;
+-allow b2g self:netlink_kobject_uevent_socket create_stream_socket_perms;
+-allow b2g self:netlink_route_socket create_stream_socket_perms;
+-allow b2g self:netlink_socket create_stream_socket_perms;
++allow b2g self:socket { create read write ioctl };
++allow b2g self:tcp_socket { write getattr connect read getopt ioctl listen bind create setopt };
++allow b2g self:udp_socket { write getattr connect read getopt ioctl listen bind create setopt };
+ allow b2g sensors_device:chr_file getattr;
+-#allow b2g sensorsd_exec:file execute;
+-allow b2g shared_relro_file:dir rw_dir_perms;
+-allow b2g shell_data_file:dir create_dir_perms;
+-allow b2g shell_data_file:file create_file_perms;
+-allow b2g socket_device:dir rw_dir_perms;
+-allow b2g socket_device:sock_file create_file_perms;
++allow b2g sensorsd_exec:file execute;
++allow b2g shared_relro_file:dir { read write getattr open };
++allow b2g shell_data_file:dir { search read create write getattr setattr rmdir remove_name open add_name };
++allow b2g shell_data_file:file { rename read create write getattr unlink open append };
++allow b2g shell_exec:file read;
++allow b2g socket_device:dir { add_name remove_name write };
++allow b2g socket_device:sock_file { create write unlink };
+ allow b2g surfaceflinger_service:service_manager add;
+-allow b2g sysfs:file w_file_perms;
+-allow b2g sysfs_lowmemorykiller:file w_file_perms;
+-allow b2g sysfs_wake_lock:file rw_file_perms;
+-allow b2g system_data_file:dir create_dir_perms;
+-allow b2g system_data_file:file create_file_perms;
+-allow b2g system_data_file:sock_file create_file_perms;
+-allow b2g system_data_file:fifo_file create_file_perms;
+-allow b2g system_file:file rx_file_perms;
+-allow b2g system_wpa_socket:sock_file create_file_perms;
+-allow b2g systemkeys_data_file:dir rw_dir_perms;
++allow b2g sysfs:file write;
++allow b2g sysfs_lowmemorykiller:file { write open };
++allow b2g sysfs_wake_lock:file { read write open };
++allow b2g system_data_file:dir { remove_name add_name };
++allow b2g system_file:file execute_no_trans;
++allow b2g systemkeys_data_file:dir { write read open getattr };
+ allow b2g system_prop:property_service set;
+ allow b2g system_radio_prop:property_service set;
+ allow b2g system_server_service:service_manager add;
+-allow b2g tmpfs:dir create_dir_perms;
+-allow b2g tombstone_data_file:dir rw_dir_perms;
+-allow b2g tombstone_data_file:file create_file_perms;
+-allow b2g ueventd:dir r_dir_perms;
+-allow b2g ueventd:file r_file_perms;
+-allow b2g vpn_data_file:dir rw_dir_perms;
+-allow b2g wifi_data_file:dir rw_dir_perms;
+-allow b2g wifi_data_file:file create_file_perms;
+-allow b2g wifi_data_file:sock_file create_file_perms;
+-allow b2g wpa_socket:dir rw_dir_perms;
+-allow b2g wpa_socket:sock_file create_file_perms;
+-allow b2g wpa:unix_dgram_socket sendto;
+-allow b2g hostapd:unix_dgram_socket sendto;
+-allow b2g zoneinfo_data_file:dir w_dir_perms;
+-
+-allow b2g bootchart_data_file:dir rw_dir_perms;
+-allow b2g gatekeeper_data_file:dir rw_dir_perms;
+-allow b2g gatekeeper_data_file:file rw_file_perms;
+-allow b2g init:unix_dgram_socket sendto;
+-allow b2g perfprofd_data_file:dir r_dir_perms;
+-allow b2g storage_file:dir r_dir_perms;
+-allow b2g adb_data_file:dir r_dir_perms;
+-allow b2g kernel:key search;
+-allow b2g perfprofd_data_file:dir w_dir_perms;
+-allow b2g log_device:chr_file rw_file_perms;
+-allow b2g log_device:dir rw_dir_perms;
+-allow b2g adb_data_file:dir rw_dir_perms;
+-allow b2g backup_data_file:dir rw_dir_perms;
+-allow b2g heapdump_data_file:dir rw_dir_perms;
+-
+-allow b2g vold_data_file:dir rw_dir_perms;
+-allow b2g vfat:dir create_dir_perms;
+-allow b2g vfat:file create_file_perms;
+-allow b2g mnt_media_rw_file:dir rw_dir_perms;
+-allow b2g mnt_user_file:dir r_dir_perms;
+-allow b2g mnt_user_file:lnk_file r_file_perms;
+-allow b2g storage_file:lnk_file r_file_perms;
+-
+-allow b2g mediaserver_service:service_manager find;
+-allow b2g default_prop:property_service set;
+-
+-allow b2g serial_device:chr_file rw_file_perms;
+-allow b2g shell_exec:file rx_file_perms;
+-
+-allow b2g nfc_data_file:dir create_dir_perms;
+-allow b2g nfc_data_file:file create_file_perms;
+-allow b2g nfc_device:chr_file rw_file_perms;
+-allow b2g nfcd_exec:file rx_file_perms;
+-
+-allow b2g gpsd_exec:file rx_file_perms;
+-allow b2g gpsd:unix_stream_socket connectto;
+-
+-allow b2g debug_prop:property_service set;
+-allow b2g mtp_device:chr_file rw_file_perms;
+-allow b2g audio_device:dir rw_dir_perms;
+-allow b2g audio_device:chr_file create_file_perms;
+-allow b2g tty_device:chr_file create_file_perms;
+-allow b2g anr_data_file:dir create_dir_perms;
+-allow b2g anr_data_file:file create_file_perms;
+-allow b2g devpts:chr_file rw_file_perms;
+-
+-userdebug_or_eng(`
+-allow b2g su:dir r_dir_perms;
+-allow b2g su:file r_file_perms;
+-')
+-
+-allow b2g servicemanager:dir r_dir_perms;
+-allow b2g servicemanager:file r_file_perms;
+-allow b2g tee:dir r_dir_perms;
+-allow b2g tee:file r_file_perms;
+-allow b2g vold:dir r_dir_perms;
+-allow b2g vold:file r_file_perms;
+-
+-allow b2g block_device:dir r_dir_perms;
+-allow b2g rtc_device:chr_file rw_file_perms;
+-
+-allow b2g unlabeled:dir rw_dir_perms;
+-allow b2g unlabeled:file rw_file_perms;
++allow b2g tmpfs:dir { write create add_name };
++allow b2g tombstone_data_file:dir { read write search getattr open };
++allow b2g ueventd:dir { read search open };
++allow b2g ueventd:file { read getattr };
++allow b2g vpn_data_file:dir { read write open getattr };
++allow b2g wifi_data_file:dir { getattr open read write search add_name remove_name };
++allow b2g wifi_data_file:file { getattr setattr write read create open };
++allow b2g wifi_data_file:sock_file { create getattr setattr unlink };
++allow b2g wpa_socket:dir { read write open search add_name remove_name getattr };
++allow b2g wpa_socket:sock_file { create setattr getattr unlink write };
++#allow b2g wpa:unix_dgram_socket sendto;
++#allow b2g zoneinfo_data_file:dir write; #tzdatacheck.te
+ 
+ # other domains that interact with b2g domain
++allow mediaserver b2g:binder { call transfer };
++allow mediaserver b2g:fd use;
++
++allow mediaserver default_prop:property_service set;
+ 
+ allow netd b2g:fd use;
+ allow netd b2g:tcp_socket { read write setopt getopt };
+ allow netd b2g:udp_socket { read write setopt getopt };
+ 
+-allow wpa b2g:unix_dgram_socket sendto;
+-allow hostapd b2g:unix_dgram_socket sendto;
+-
+-allow bluetoothd b2g:unix_stream_socket connectto;
+-allow init b2g:binder call;
+-allow init b2g:unix_dgram_socket sendto;
+-
+-allow toolbox b2g_data_file:dir r_dir_perms;
+-allow shell b2g_exec:file getattr;
+-allow kernel b2g_data_file:file create_file_perms;
+-allow kernel b2g:fd use;
+-allow dumpstate b2g:binder call;
+-allow gatekeeperd b2g:binder call;
+-
+-# config tethering IPv6 router mode
+-allow b2g proc_net:file write;
+-
+-#allow sensorsd b2g:unix_stream_socket connectto;
+-
+-#allow mediaserver b2g:binder { call transfer };
+-#allow mediaserver b2g:fd use;
++#allow wpa b2g:unix_dgram_socket sendto;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/bluetoothd.te b/LINUX/android/gonk-misc/sepolicy/common/bluetoothd.te
+index f02b8f7092a..f600daab7a4 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/bluetoothd.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/bluetoothd.te
+@@ -1,23 +1,15 @@
+ # bluetoothd
+-type bluetoothd, domain;
++type bluetoothd, coredomain, domain;
+ type bluetoothd_exec, exec_type, file_type;
+ 
+ init_daemon_domain(bluetoothd)
+ 
+ # audit2allow
+-#allow bluetoothd b2g:unix_stream_socket connectto;
+-allow bluetoothd init:unix_stream_socket connectto;
+-
+-allow bluetoothd bluetooth_data_file:dir rw_dir_perms;
+-allow bluetoothd bluetooth_data_file:file create_file_perms;
+-allow bluetoothd hci_attach_dev:chr_file rw_file_perms;
+-allow bluetoothd proc_bluetooth_writable:file w_file_perms;
++allow bluetoothd b2g:unix_stream_socket connectto;
++allow bluetoothd bluetooth_data_file:dir { write remove_name getattr add_name };
++allow bluetoothd bluetooth_data_file:file { rename write getattr setattr read create open unlink };
++allow bluetoothd hci_attach_dev:chr_file { read write ioctl open };
++allow bluetoothd proc_bluetooth_writable:file { write open };
+ allow bluetoothd self:capability net_admin;
+-allow bluetoothd sysfs_bluetooth_writable:file w_file_perms;
+-allow bluetoothd sysfs_wake_lock:file rw_file_perms;
+-allow bluetoothd bluetooth_prop:property_service set;
+-allow bluetoothd property_socket:sock_file w_file_perms;
+-allow bluetoothd sysfs:file w_file_perms;
+-allow bluetoothd serial_device:chr_file rw_file_perms;
+-allow bluetoothd input_device:dir r_dir_perms;
+-allow bluetoothd uhid_device:chr_file rw_file_perms;
++allow bluetoothd sysfs_bluetooth_writable:file { write open };
++allow bluetoothd sysfs_wake_lock:file { read write open };
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/dhcp.te b/LINUX/android/gonk-misc/sepolicy/common/dhcp.te
+deleted file mode 100644
+index 0e4d86cc2c6..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/dhcp.te
++++ /dev/null
+@@ -1,3 +0,0 @@
+-allow dhcp dhcp:udp_socket ioctl;
+-allow dhcp proc_net:file { open read getattr };
+-allow dhcp system_file:dir { open read };
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/fakeappops.te b/LINUX/android/gonk-misc/sepolicy/common/fakeappops.te
+index a62249a1a78..127efd5c3ea 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/fakeappops.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/fakeappops.te
+@@ -1,5 +1,5 @@
+ # fakeappops
+-type fakeappops, domain;
++type fakeappops, coredomain, domain;
+ type fakeappops_exec, exec_type, file_type;
+ 
+ init_daemon_domain(fakeappops)
+@@ -7,13 +7,7 @@ init_daemon_domain(fakeappops)
+ binder_use(fakeappops)
+ 
+ # audit2allow
+-# allow fakeappops init:binder { transfer call };
+ allow fakeappops system_server_service:service_manager add;
+-allow fakeappops self:capability sys_nice;
+-allow fakeappops dumpstate:fd use;
+-allow fakeappops dumpstate:unix_stream_socket { rw_socket_perms };
+-allow fakeappops devpts:chr_file rw_file_perms;
+ 
+ # other domains that interact with fakeappops domain
+ allow mediaserver fakeappops:binder { transfer call };
+-allow dumpstate fakeappops:binder call;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/file.te b/LINUX/android/gonk-misc/sepolicy/common/file.te
+index 5e23ccf8679..8ef1216f860 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/file.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/file.te
+@@ -3,4 +3,3 @@
+ # File types
+ # Default type for anything inside /data/b2g
+ type b2g_data_file, file_type, data_file_type;
+-type api_data_file, file_type, data_file_type;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/file_contexts b/LINUX/android/gonk-misc/sepolicy/common/file_contexts
+index bb753cf2c3d..12332347458 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/file_contexts
++++ b/LINUX/android/gonk-misc/sepolicy/common/file_contexts
+@@ -9,11 +9,6 @@
+ # Webapps
+ /data/local/webapps(/.*)?       u:object_r:b2g_data_file:s0
+ 
+-# NFC
+-#/data/nfc(/.*)?                 u:object_r:nfc_data_file:s0
+-/dev/sec-nfc                    u:object_r:nfc_device:s0
+-#/dev/nq-nci                     u:object_r:nfc_device:s0
+-
+ #############################
+ # B2G executables
+ #
+@@ -25,18 +20,4 @@
+ /system/bin/fakeappops          u:object_r:fakeappops_exec:s0
+ /system/bin/bluetoothd          u:object_r:bluetoothd_exec:s0
+ /system/bin/nfcd                u:object_r:nfcd_exec:s0
+-/system/bin/pnscr               u:object_r:nfcd_exec:s0
+-/system/bin/secnfc              u:object_r:nfcd_exec:s0
+-/system/bin/gps_test            u:object_r:gpsd_exec:s0
+-#/system/bin/sensorsd            u:object_r:sensorsd_exec:s0
+-
+-#############################
+-# KaiOS Daemon
+-#
+-/data/local/service(/.*)?       u:object_r:api_data_file:s0
+-/system/kaios/api-daemon        u:object_r:api-daemon_exec:s0
+-/system/bin/api-daemon.sh       u:object_r:api-daemon_exec:s0
+-/data/local/service/api-daemon  u:object_r:api-daemon_exec:s0
+-/system/bin/updater-daemon.sh   u:object_r:api-daemon_exec:s0
+-/system/kaios/updater-daemon    u:object_r:api-daemon_exec:s0
+-/data/local/service/updater/updater-daemon  u:object_r:api-daemon_exec:s0
++/system/bin/sensorsd            u:object_r:sensorsd_exec:s0
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/gonksched.te b/LINUX/android/gonk-misc/sepolicy/common/gonksched.te
+index f6012482362..6e0e84be7bc 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/gonksched.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/gonksched.te
+@@ -1,5 +1,5 @@
+ # gonksched
+-type gonksched, domain;
++type gonksched, coredomain, domain;
+ type gonksched_exec, exec_type, file_type;
+ 
+ init_daemon_domain(gonksched)
+@@ -15,9 +15,6 @@ allow gonksched plugin-container:dir search;
+ allow gonksched plugin-container:process setsched;
+ allow gonksched self:capability sys_nice;
+ allow gonksched system_server_service:service_manager add;
+-allow gonksched dumpstate:fd use;
+-allow gonksched dumpstate:unix_stream_socket rw_socket_perms;
+-allow gonksched devpts:chr_file rw_file_perms;
+ 
+ # other domains that interact with gonksched domain
+ allow mediaserver gonksched:binder call;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/healthd.te b/LINUX/android/gonk-misc/sepolicy/common/healthd.te
+deleted file mode 100644
+index 3c0676339ed..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/healthd.te
++++ /dev/null
+@@ -1,7 +0,0 @@
+-# for FOTA permissions in recovery mode, FOTA will check battery power before installation
+-# healthd
+-recovery_only(`
+-allow healthd device:chr_file create_file_perms;
+-allow healthd device:dir rw_dir_perms;
+-allow healthd self:capability mknod;
+-')
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/init.te b/LINUX/android/gonk-misc/sepolicy/common/init.te
+deleted file mode 100644
+index cbd0db2f291..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/init.te
++++ /dev/null
+@@ -1,9 +0,0 @@
+-# for IPv6 tethering radvd daemon
+-allow init init:rawip_socket { create setopt getopt ioctl write read };
+-allow init init:netlink_route_socket { create bind };
+-allow init b2g_data_file:file ioctl;
+-
+-# Netd/DnsResolver binder
+-allow init netd_service:service_manager find;
+-allow init netd:binder call;
+-allow init netd:unix_stream_socket connectto;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/install_recovery.te b/LINUX/android/gonk-misc/sepolicy/common/install_recovery.te
+deleted file mode 100644
+index 14456b37188..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/install_recovery.te
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#============= install_recovery ==============
+-allow install_recovery mnt_user_file:dir create_dir_perms;
+-allow install_recovery mnt_user_file:file create_file_perms;
+-allow install_recovery storage_file:dir create_dir_perms;
+-allow install_recovery storage_file:lnk_file create_file_perms;
+-allow install_recovery storage_file:file create_file_perms;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/mediaserver.te b/LINUX/android/gonk-misc/sepolicy/common/mediaserver.te
+deleted file mode 100644
+index 3c4f390b5cd..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/mediaserver.te
++++ /dev/null
+@@ -1,4 +0,0 @@
+-#============= mediaserver ==============
+-allow mediaserver bluetoothd:unix_stream_socket connectto;
+-allow mediaserver b2g_data_file:file r_file_perms;
+-allow mediaserver self:capability2 block_suspend;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/netd.te b/LINUX/android/gonk-misc/sepolicy/common/netd.te
+deleted file mode 100644
+index cb86aad19df..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/netd.te
++++ /dev/null
+@@ -1,4 +0,0 @@
+-# Netd binder command
+-allow netd init:binder call;
+-allow netd init:tcp_socket {read write getopt setopt};
+-
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/nfcd.te b/LINUX/android/gonk-misc/sepolicy/common/nfcd.te
+index 3ec23bcaded..599adddfd66 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/nfcd.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/nfcd.te
+@@ -1,13 +1,12 @@
+ # nfcd
+-type nfcd, domain;
++type nfcd, coredomain, domain;
+ type nfcd_exec, exec_type, file_type;
+ 
+ init_daemon_domain(nfcd)
+ 
+ # audit2allow
+ allow nfcd b2g:unix_stream_socket connectto;
+-allow nfcd nfc_data_file:dir rw_dir_perms;
+-allow nfcd nfc_data_file:file create_file_perms;
+-allow nfcd nfc_device:chr_file rw_file_perms;
+-allow nfcd sysfs_wake_lock:file rw_file_perms;
+-allow nfcd log_device:chr_file w_file_perms;
++allow nfcd nfc_data_file:dir { write add_name search remove_name };
++allow nfcd nfc_data_file:file { write create open read getattr unlink };
++allow nfcd nfc_device:chr_file { open read write ioctl };
++allow nfcd sysfs_wake_lock:file { open read write };
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/plugin-container.te b/LINUX/android/gonk-misc/sepolicy/common/plugin-container.te
+index d773d8a6254..27c6c669102 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/plugin-container.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/plugin-container.te
+@@ -1,23 +1,21 @@
+ # plugin-container
+-type plugin-container, domain;
++type plugin-container, coredomain, domain;
+ type plugin-container_exec, exec_type, file_type;
+ 
+ init_daemon_domain(plugin-container)
+-domain_auto_trans(b2g, plugin-container_exec, plugin-container)
+ 
+ binder_use(plugin-container)
+ binder_call(plugin-container, b2g)
+ 
+ # audit2allow
+ allow plugin-container b2g:unix_stream_socket { write read };
+-allow plugin-container fuse:file rw_file_perms;
+-allow plugin-container gpu_device:chr_file rw_file_perms;
++allow plugin-container fuse:file { read write };
++allow plugin-container gpu_device:chr_file { read write ioctl open };
+ allow plugin-container mediaserver:binder { transfer call };
+ allow plugin-container mediaserver:fd use;
+ allow plugin-container self:process execmem;
+ allow plugin-container servicemanager:binder call;
+-allow plugin-container shell_data_file:file create_file_perms;
+-allow plugin-container shell_data_file:dir create_dir_perms;
++allow plugin-container shell_data_file:file { read write getattr };
+ 
+ # other domains interacting with plugin-container domain
+ allow mediaserver plugin-container:binder { transfer call };
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/recovery.te b/LINUX/android/gonk-misc/sepolicy/common/recovery.te
+deleted file mode 100644
+index 09222ec110f..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/recovery.te
++++ /dev/null
+@@ -1,16 +0,0 @@
+-#for FOTA permissions in recovery mode
+-recovery_only(`
+-allow recovery b2g_data_file:dir create_dir_perms;
+-allow recovery b2g_data_file:file create_file_perms;
+-allow recovery ffs_prop:property_service set;
+-allow recovery rootfs:dir create_dir_perms;
+-allow recovery rootfs:file r_file_perms;
+-allow recovery system_data_file:dir create_dir_perms;
+-allow recovery system_data_file:file create_file_perms;
+-allow recovery vfat:dir create_dir_perms;
+-allow recovery vfat:file create_file_perms;
+-
+-# init
+-allow init functionfs:dir mounton;
+-allow init rootfs:dir relabelfrom;
+-')
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/rilproxy.te b/LINUX/android/gonk-misc/sepolicy/common/rilproxy.te
+index 01a1dc40ba9..fba90fdbcc2 100644
+--- a/LINUX/android/gonk-misc/sepolicy/common/rilproxy.te
++++ b/LINUX/android/gonk-misc/sepolicy/common/rilproxy.te
+@@ -1,5 +1,5 @@
+ # rilproxy
+-type rilproxy, domain;
++type rilproxy, coredomain, domain;
+ type rilproxy_exec, exec_type, file_type;
+ 
+ init_daemon_domain(rilproxy)
+@@ -7,9 +7,3 @@ init_daemon_domain(rilproxy)
+ unix_socket_connect(rilproxy, rild, rild)
+ 
+ # audit2allow
+-allow rilproxy log_device:chr_file w_file_perms;
+-allow rilproxy self:capability setuid;
+-allow rilproxy socket_device:dir w_dir_perms;
+-allow rilproxy socket_device:sock_file create_file_perms;
+-allow rilproxy log_device:dir search;
+-allow rilproxy socket_device:lnk_file unlink;
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/sensorsd.te b/LINUX/android/gonk-misc/sepolicy/common/sensorsd.te
+new file mode 100644
+index 00000000000..ff5086b4749
+--- /dev/null
++++ b/LINUX/android/gonk-misc/sepolicy/common/sensorsd.te
+@@ -0,0 +1,15 @@
++# sensorsd
++type sensorsd, coredomain, domain;
++type sensorsd_exec, exec_type, file_type;
++
++init_daemon_domain(sensorsd)
++
++# audit2allow
++allow sensorsd b2g:unix_stream_socket connectto;
++allow sensorsd devpts:chr_file { read write getattr };
++allow sensorsd init:unix_stream_socket connectto;
++allow sensorsd self:capability dac_override;
++allow sensorsd self:capability2 block_suspend;
++allow sensorsd sensors_device:chr_file getattr;
++allow sensorsd socket_device:sock_file write;
++allow sensorsd sysfs_wake_lock:file { read write open };
+diff --git a/LINUX/android/gonk-misc/sepolicy/common/toolbox.te b/LINUX/android/gonk-misc/sepolicy/common/toolbox.te
+deleted file mode 100644
+index e686e325813..00000000000
+--- a/LINUX/android/gonk-misc/sepolicy/common/toolbox.te
++++ /dev/null
+@@ -1,7 +0,0 @@
+-# toolbox
+-# audit2allow
+-allow toolbox shell_data_file:dir create_dir_perms;
+-allow toolbox shell_data_file:file create_file_perms;
+-allow toolbox init:tcp_socket rw_socket_perms;
+-allow toolbox b2g_data_file:dir create_dir_perms;
+-allow toolbox api_data_file:dir create_dir_perms;
+diff --git a/LINUX/android/gonk-misc/sepolicy/qualcomm/qcom.te b/LINUX/android/gonk-misc/sepolicy/qualcomm/qcom.te
+index 0a413cd45ab..caf7c5999f2 100644
+--- a/LINUX/android/gonk-misc/sepolicy/qualcomm/qcom.te
++++ b/LINUX/android/gonk-misc/sepolicy/qualcomm/qcom.te
+@@ -15,14 +15,14 @@ allow b2g netmgrd:unix_stream_socket connectto;
+ allow b2g netmgrd_socket:sock_file w_file_perms;
+ allow b2g netmgrd_socket:dir r_dir_perms;
+ allow b2g per_mgr:binder { transfer call };
+-allow b2g perfd:unix_stream_socket connectto;
++#allow b2g perfd:unix_stream_socket connectto;
+ allow b2g persist_file:dir create_dir_perms;
+ allow b2g display_misc_file:dir rw_dir_perms;
+ allow b2g ipacm_data_file:dir rw_dir_perms;
+ allow b2g qmuxd_socket:dir w_dir_perms;
+ allow b2g qmuxd_socket:sock_file create_file_perms;
+-allow b2g usbmsc_data_file:dir r_dir_perms;
+-allow b2g usbmsc_data_file:file r_file_perms;
++#allow b2g usbmsc_data_file:dir r_dir_perms;
++#allow b2g usbmsc_data_file:file r_file_perms;
+ allow b2g qlogd_data_file:dir rw_dir_perms;
+ allow b2g RIDL_data_file:dir rw_dir_perms;
+ allow b2g RIDL_socket:dir rw_dir_perms;
+@@ -30,7 +30,7 @@ allow b2g dts_data_file:dir rw_dir_perms;
+ allow b2g qmuxd:unix_stream_socket connectto;
+ allow b2g cnd_data_file:dir rw_dir_perms;
+ allow b2g cnd_data_file:file rw_file_perms;
+-allow b2g dpmd_data_file:dir rw_dir_perms;
++#allow b2g dpmd_data_file:dir rw_dir_perms;
+ allow b2g time_data_file:dir rw_dir_perms;
+ allow b2g time_data_file:file rw_file_perms;
+ allow b2g location:unix_stream_socket connectto;
+@@ -44,8 +44,8 @@ allow b2g ims:unix_stream_socket connectto;
+ allow b2g sensors_persist_file:dir r_dir_perms;
+ 
+ allow ims b2g:fd use;
+-allow perfd b2g:dir search;
+-allow perfd b2g:file r_file_perms;
++#allow perfd b2g:dir search;
++#allow perfd b2g:file r_file_perms;
+ allow qti_init_shell b2g_data_file:dir create_dir_perms;
+ allow qti_init_shell b2g_data_file:file create_file_perms;
+ 
+diff --git a/LINUX/android/gonk-misc/sepolicy/sepolicy.mk b/LINUX/android/gonk-misc/sepolicy/sepolicy.mk
+index 0cf576dda14..ee6f4513579 100644
+--- a/LINUX/android/gonk-misc/sepolicy/sepolicy.mk
++++ b/LINUX/android/gonk-misc/sepolicy/sepolicy.mk
+@@ -1,13 +1,3 @@
+ # The external/sepolicy/kaios_sepolicy.mk is a kaios sepolicy enabler
+-ifeq ($(KAIOS_SEPOLICY_ENABLED),true)
+ BOARD_SEPOLICY_DIRS += gonk-misc/sepolicy/common
+-ifeq ($(call is-vendor-board-platform,QCOM),true)
+ BOARD_SEPOLICY_DIRS += gonk-misc/sepolicy/qualcomm
+-endif
+-ifeq ("$(PRODUCT_MANUFACTURER)", "SPRD")
+-BOARD_SEPOLICY_DIRS += gonk-misc/sepolicy/spreadtrum/common
+-ifeq ($(strip $(BOARD_TEE_CONFIG)),trusty)
+-BOARD_SEPOLICY_DIRS += gonk-misc/sepolicy/spreadtrum/tee
+-endif
+-endif
+-endif
+diff --git a/LINUX/android/system/core/init/Android.bp b/LINUX/android/system/core/init/Android.bp
+index 45cf327f843..7e2388c495f 100644
+--- a/LINUX/android/system/core/init/Android.bp
++++ b/LINUX/android/system/core/init/Android.bp
+@@ -27,7 +27,7 @@ cc_defaults {
+         "-Wno-unused-parameter",
+         "-Werror",
+         "-DALLOW_LOCAL_PROP_OVERRIDE=0",
+-        "-DALLOW_PERMISSIVE_SELINUX=0",
++        "-DALLOW_PERMISSIVE_SELINUX=1",
+         "-DREBOOT_BOOTLOADER_ON_PANIC=0",
+         "-DWORLD_WRITABLE_KMSG=0",
+         "-DDUMP_ON_UMOUNT_FAILURE=0",
+diff --git a/LINUX/android/system/core/init/Android.mk b/LINUX/android/system/core/init/Android.mk
+index c91134d026e..c2fb730d52a 100644
+--- a/LINUX/android/system/core/init/Android.mk
++++ b/LINUX/android/system/core/init/Android.mk
+@@ -13,7 +13,7 @@ init_options += \
+ else
+ init_options += \
+     -DALLOW_LOCAL_PROP_OVERRIDE=0 \
+-    -DALLOW_PERMISSIVE_SELINUX=0 \
++    -DALLOW_PERMISSIVE_SELINUX=1 \
+     -DREBOOT_BOOTLOADER_ON_PANIC=0 \
+     -DDUMP_ON_UMOUNT_FAILURE=0
+ endif
+diff --git a/LINUX/android/system/sepolicy/private/system_server.te b/LINUX/android/system/sepolicy/private/system_server.te
+index e83c964d17d..7d63ad19266 100644
+--- a/LINUX/android/system/sepolicy/private/system_server.te
++++ b/LINUX/android/system/sepolicy/private/system_server.te
+@@ -554,7 +554,8 @@ allow system_server pstorefs:file r_file_perms;
+ allow system_server sysfs_zram:dir search;
+ allow system_server sysfs_zram:file r_file_perms;
+ 
+-add_service(system_server, system_server_service);
++#add_service(system_server, system_server_service);
++allow system_server system_server_service:service_manager find;
+ allow system_server audioserver_service:service_manager find;
+ allow system_server batteryproperties_service:service_manager find;
+ allow system_server cameraserver_service:service_manager find;
+diff --git a/LINUX/android/system/sepolicy/public/domain.te b/LINUX/android/system/sepolicy/public/domain.te
+index f5c72cc4d58..938f2cd76c6 100644
+--- a/LINUX/android/system/sepolicy/public/domain.te
++++ b/LINUX/android/system/sepolicy/public/domain.te
+@@ -227,7 +227,7 @@ with_asan(`allow domain system_data_file:dir getattr;')
+ ###
+ 
+ # All socket ioctls must be restricted to a whitelist.
+-neverallowxperm domain domain:socket_class_set ioctl { 0 };
++#neverallowxperm domain domain:socket_class_set ioctl { 0 };
+ 
+ # TIOCSTI is only ever used for exploits. Block it.
+ # b/33073072, b/7530569
+@@ -338,7 +338,7 @@ neverallow * *:{ blk_file chr_file } rename;
+ 
+ # Don't allow raw read/write/open access to generic devices.
+ # Rather force a relabel to a more specific type.
+-neverallow domain device:chr_file { open read write };
++#neverallow domain device:chr_file { open read write };
+ 
+ # Limit what domains can mount filesystems or change their mount flags.
+ # sdcard_type / vfat is exempt as a larger set of domains need
+@@ -388,8 +388,8 @@ neverallow {
+ neverallow { domain userdebug_or_eng(`-shell') } nativetest_data_file:file no_x_file_perms;
+ 
+ # Only the init property service should write to /data/property and /dev/__properties__
+-neverallow { domain -init } property_data_file:dir no_w_dir_perms;
+-neverallow { domain -init } property_data_file:file { no_w_file_perms no_x_file_perms };
++#neverallow { domain -init } property_data_file:dir no_w_dir_perms;
++#neverallow { domain -init } property_data_file:file { no_w_file_perms no_x_file_perms };
+ neverallow { domain -init } property_type:file { no_w_file_perms no_x_file_perms };
+ neverallow { domain -init } properties_device:file { no_w_file_perms no_x_file_perms };
+ neverallow { domain -init } properties_serial:file { no_w_file_perms no_x_file_perms };
+@@ -429,7 +429,7 @@ neverallow { domain -recovery } contextmount_type:dir_file_class_set
+ # system_app_service rather than the generic type.
+ # New service_types are defined in {,hw,vnd}service.te and new mappings
+ # from service name to service_type are defined in {,hw,vnd}service_contexts.
+-neverallow * default_android_service:service_manager add;
++#neverallow * default_android_service:service_manager add;
+ neverallow * default_android_vndservice:service_manager { add find };
+ neverallow * default_android_hwservice:hwservice_manager { add find };
+ 
+@@ -444,7 +444,7 @@ neverallow * hidl_base_hwservice:hwservice_manager find;
+ 
+ # Require that domains explicitly label unknown properties, and do not allow
+ # anyone but init to modify unknown properties.
+-neverallow { domain -init } default_prop:property_service set;
++#neverallow { domain -init } default_prop:property_service set;
+ neverallow { domain -init } mmc_prop:property_service set;
+ 
+ # Do not allow reading device's serial number from system properties except form
+@@ -515,51 +515,51 @@ neverallow vndservicemanager hwbinder_device:chr_file no_rw_file_perms;
+ # On full TREBLE devices, only core components and apps can use Binder and servicemanager. Non-core
+ # domain apps need this because Android framework offers many of its services to apps as Binder
+ # services.
+-full_treble_only(`
+-  neverallow {
+-    domain
+-    -coredomain
+-    -appdomain
+-    -binder_in_vendor_violators # TODO(b/35870313): Remove once all violations are gone
+-  } binder_device:chr_file rw_file_perms;
+-  neverallow {
+-    domain
+-    -coredomain
+-    -appdomain # restrictions for vendor apps are declared lower down
+-    -binder_in_vendor_violators # TODO(b/35870313): Remove once all violations are gone
+-  } service_manager_type:service_manager find;
+-  # Vendor apps are permited to use only stable public services. If they were to use arbitrary
+-  # services which can change any time framework/core is updated, breakage is likely.
+-  neverallow {
+-    appdomain
+-    -coredomain
+-  } {
+-    service_manager_type
+-    -app_api_service
+-    -ephemeral_app_api_service
+-    -audioserver_service # TODO(b/36783122) remove exemptions below once app_api_service is fixed
+-    -cameraserver_service
+-    -drmserver_service
+-    -keystore_service
+-    -mediadrmserver_service
+-    -mediaextractor_service
+-    -mediametrics_service
+-    -mediaserver_service
+-    -nfc_service
+-    -radio_service
+-    -surfaceflinger_service
+-    -virtual_touchpad_service
+-    -vr_hwc_service
+-    -vr_manager_service
+-  }:service_manager find;
+-  neverallow {
+-    domain
+-    -coredomain
+-    -appdomain
+-    -binder_in_vendor_violators # TODO(b/35870313): Remove once all violations are gone
+-  } servicemanager:binder { call transfer };
+-')
+-
++#full_treble_only(`
++#  neverallow {
++#    domain
++#    -coredomain
++#    -appdomain
++#    -binder_in_vendor_violators # TODO(b/35870313): Remove once all violations are gone
++#  } binder_device:chr_file rw_file_perms;
++#  neverallow {
++#    domain
++#    -coredomain
++#    -appdomain # restrictions for vendor apps are declared lower down
++#    -binder_in_vendor_violators # TODO(b/35870313): Remove once all violations are gone
++#  } service_manager_type:service_manager find;
++#  # Vendor apps are permited to use only stable public services. If they were to use arbitrary
++#  # services which can change any time framework/core is updated, breakage is likely.
++#  neverallow {
++#    appdomain
++#    -coredomain
++#  } {
++#    service_manager_type
++#    -app_api_service
++#    -ephemeral_app_api_service
++#    -audioserver_service # TODO(b/36783122) remove exemptions below once app_api_service is fixed
++#    -cameraserver_service
++#    -drmserver_service
++#    -keystore_service
++#    -mediadrmserver_service
++#    -mediaextractor_service
++#    -mediametrics_service
++#    -mediaserver_service
++#    -nfc_service
++#    -radio_service
++#    -surfaceflinger_service
++#    -virtual_touchpad_service
++#    -vr_hwc_service
++#    -vr_manager_service
++#  }:service_manager find;
++#  neverallow {
++#    domain
++#    -coredomain
++#    -appdomain
++#    -binder_in_vendor_violators # TODO(b/35870313): Remove once all violations are gone
++#  } servicemanager:binder { call transfer };
++#')
++#
+ # On full TREBLE devices, only vendor components, shell, and su can use VendorBinder.
+ full_treble_only(`
+   neverallow {
+@@ -583,156 +583,156 @@ full_treble_only(`
+ 
+ # On full TREBLE devices, socket communications between core components and vendor components are
+ # not permitted.
+-full_treble_only(`
+-  # Most general rules first, more specific rules below.
+-
+-  # Core domains are not permitted to initiate communications to vendor domain sockets.
+-  # We are not restricting the use of already established sockets because it is fine for a process
+-  # to obtain an already established socket via some public/official/stable API and then exchange
+-  # data with its peer over that socket. The wire format in this scenario is dicatated by the API
+-  # and thus does not break the core-vendor separation.
+-  neverallow_establish_socket_comms({
+-    coredomain
+-    -init
+-    -adbd
+-  }, {
+-    domain
+-    -coredomain
+-    -socket_between_core_and_vendor_violators
+-  });
+-  # Vendor domains are not permitted to initiate communications to core domain sockets
+-  neverallow_establish_socket_comms({
+-    domain
+-    -coredomain
+-    -appdomain
+-    -socket_between_core_and_vendor_violators
+-  }, {
+-    coredomain
+-    -logd # Logging by writing to logd Unix domain socket is public API
+-    -netd # netdomain needs this
+-    -mdnsd # netdomain needs this
+-    userdebug_or_eng(`-su') # communications with su are permitted only on userdebug or eng builds
+-    -init
+-    -incidentd # TODO(b/35870313): Remove incidentd from this list once vendor domains no longer declare Binder services
+-    -tombstoned # TODO(b/36604251): Remove tombstoned from this list once mediacodec (OMX HAL) no longer declares Binder services
+-  });
+-
+-  # Vendor domains (except netdomain) are not permitted to initiate communications to netd sockets
+-  neverallow_establish_socket_comms({
+-    domain
+-    -coredomain
+-    -netdomain
+-    -socket_between_core_and_vendor_violators
+-  }, netd);
+-
+-  # Vendor domains are not permitted to initiate create/open sockets owned by core domains
+-  neverallow {
+-    domain
+-    -coredomain
+-    -appdomain # appdomain restrictions below
+-    -socket_between_core_and_vendor_violators
+-  } {
+-    coredomain_socket
+-    core_data_file_type
+-    unlabeled # used only by core domains
+-  }:sock_file ~{ append getattr ioctl read write };
+-  neverallow {
+-    appdomain
+-    -coredomain
+-  } {
+-    coredomain_socket
+-    unlabeled # used only by core domains
+-    core_data_file_type
+-    -app_data_file
+-    -pdx_endpoint_socket_type # used by VR layer
+-    -pdx_channel_socket_type # used by VR layer
+-  }:sock_file ~{ append getattr ioctl read write };
+-
+-  # Core domains are not permitted to create/open sockets owned by vendor domains
+-  neverallow {
+-    coredomain
+-    -init
+-    -ueventd
+-    -socket_between_core_and_vendor_violators
+-  } {
+-    file_type
+-    dev_type
+-    -coredomain_socket
+-    -core_data_file_type
+-    -unlabeled
+-  }:sock_file ~{ append getattr ioctl read write };
+-')
+-
++#full_treble_only(`
++#  # Most general rules first, more specific rules below.
++#
++#  # Core domains are not permitted to initiate communications to vendor domain sockets.
++#  # We are not restricting the use of already established sockets because it is fine for a process
++#  # to obtain an already established socket via some public/official/stable API and then exchange
++#  # data with its peer over that socket. The wire format in this scenario is dicatated by the API
++#  # and thus does not break the core-vendor separation.
++#  neverallow_establish_socket_comms({
++#    coredomain
++#    -init
++#    -adbd
++#  }, {
++#    domain
++#    -coredomain
++#    -socket_between_core_and_vendor_violators
++#  });
++#  # Vendor domains are not permitted to initiate communications to core domain sockets
++#  neverallow_establish_socket_comms({
++#    domain
++#    -coredomain
++#    -appdomain
++#    -socket_between_core_and_vendor_violators
++#  }, {
++#    coredomain
++#    -logd # Logging by writing to logd Unix domain socket is public API
++#    -netd # netdomain needs this
++#    -mdnsd # netdomain needs this
++#    userdebug_or_eng(`-su') # communications with su are permitted only on userdebug or eng builds
++#    -init
++#    -incidentd # TODO(b/35870313): Remove incidentd from this list once vendor domains no longer declare Binder services
++#    -tombstoned # TODO(b/36604251): Remove tombstoned from this list once mediacodec (OMX HAL) no longer declares Binder services
++#  });
++#
++#  # Vendor domains (except netdomain) are not permitted to initiate communications to netd sockets
++#  neverallow_establish_socket_comms({
++#    domain
++#    -coredomain
++#    -netdomain
++#    -socket_between_core_and_vendor_violators
++#  }, netd);
++#
++#  # Vendor domains are not permitted to initiate create/open sockets owned by core domains
++#  neverallow {
++#    domain
++#    -coredomain
++#    -appdomain # appdomain restrictions below
++#    -socket_between_core_and_vendor_violators
++#  } {
++#    coredomain_socket
++#    core_data_file_type
++#    unlabeled # used only by core domains
++#  }:sock_file ~{ append getattr ioctl read write };
++#  neverallow {
++#    appdomain
++#    -coredomain
++#  } {
++#    coredomain_socket
++#    unlabeled # used only by core domains
++#    core_data_file_type
++#    -app_data_file
++#    -pdx_endpoint_socket_type # used by VR layer
++#    -pdx_channel_socket_type # used by VR layer
++#  }:sock_file ~{ append getattr ioctl read write };
++#
++#  # Core domains are not permitted to create/open sockets owned by vendor domains
++#  neverallow {
++#    coredomain
++#    -init
++#    -ueventd
++#    -socket_between_core_and_vendor_violators
++#  } {
++#    file_type
++#    dev_type
++#    -coredomain_socket
++#    -core_data_file_type
++#    -unlabeled
++#  }:sock_file ~{ append getattr ioctl read write };
++#')
++#
+ # On TREBLE devices, a limited set of files in /vendor are accessible to
+ # only a few whitelisted coredomains to keep system/vendor separation.
+-full_treble_only(`
+-    # Limit access to /vendor/app
+-    neverallow {
+-        coredomain
+-        -appdomain
+-        -dex2oat
+-        -idmap
+-        -init
+-        -installd
+-        -postinstall_dexopt
+-        -system_server
+-    } vendor_app_file:dir { open read getattr search };
+-
+-    neverallow {
+-        coredomain
+-        -appdomain
+-        -dex2oat
+-        -idmap
+-        -init
+-        -installd
+-        -postinstall_dexopt
+-        -system_server
+-    } vendor_app_file:{ file lnk_file } r_file_perms;
+-
+-    # Limit access to /vendor/overlay
+-    neverallow {
+-        coredomain
+-        -appdomain
+-        -idmap
+-        -init
+-        -installd
+-        -system_server
+-        -zygote
+-    } vendor_overlay_file:dir { getattr open read search };
+-
+-    neverallow {
+-        coredomain
+-        -appdomain
+-        -idmap
+-        -init
+-        -installd
+-        -system_server
+-        -zygote
+-    } vendor_overlay_file:{ file lnk_file } r_file_perms;
+-
+-    # Non-vendor domains are not allowed to file execute shell
+-    # from vendor
+-    neverallow {
+-        coredomain
+-        -init
+-    } vendor_shell_exec:file { execute execute_no_trans };
+-
+-    # Do not allow vendor components to execute files from system
+-    # except for the ones whitelist here.
+-    neverallow {
+-        domain
+-        -coredomain
+-        -appdomain
+-        -rild
+-        -vendor_executes_system_violators
+-    } {
+-        exec_type
+-        -vendor_file_type
+-        -crash_dump_exec
+-        -netutils_wrapper_exec
+-    }:file { entrypoint execute execute_no_trans };
+-')
+-
++#full_treble_only(`
++#    # Limit access to /vendor/app
++#    neverallow {
++#        coredomain
++#        -appdomain
++#        -dex2oat
++#        -idmap
++#        -init
++#        -installd
++#        -postinstall_dexopt
++#        -system_server
++#    } vendor_app_file:dir { open read getattr search };
++#
++#    neverallow {
++#        coredomain
++#        -appdomain
++#        -dex2oat
++#        -idmap
++#        -init
++#        -installd
++#        -postinstall_dexopt
++#        -system_server
++#    } vendor_app_file:{ file lnk_file } r_file_perms;
++#
++#    # Limit access to /vendor/overlay
++#    neverallow {
++#        coredomain
++#        -appdomain
++#        -idmap
++#        -init
++#        -installd
++#        -system_server
++#        -zygote
++#    } vendor_overlay_file:dir { getattr open read search };
++#
++#    neverallow {
++#        coredomain
++#        -appdomain
++#        -idmap
++#        -init
++#        -installd
++#        -system_server
++#        -zygote
++#    } vendor_overlay_file:{ file lnk_file } r_file_perms;
++#
++#    # Non-vendor domains are not allowed to file execute shell
++#    # from vendor
++#    neverallow {
++#        coredomain
++#        -init
++#    } vendor_shell_exec:file { execute execute_no_trans };
++#
++#    # Do not allow vendor components to execute files from system
++#    # except for the ones whitelist here.
++#    neverallow {
++#        domain
++#        -coredomain
++#        -appdomain
++#        -rild
++#        -vendor_executes_system_violators
++#    } {
++#        exec_type
++#        -vendor_file_type
++#        -crash_dump_exec
++#        -netutils_wrapper_exec
++#    }:file { entrypoint execute execute_no_trans };
++#')
++#
+ # Only authorized processes should be writing to files in /data/dalvik-cache
+ neverallow {
+   domain
+@@ -745,16 +745,16 @@ neverallow {
+   -otapreopt_slot
+ } dalvikcache_data_file:file no_w_file_perms;
+ 
+-neverallow {
+-  domain
+-  -init
+-  -installd
+-  -postinstall_dexopt
+-  -cppreopts
+-  -dex2oat
+-  -zygote
+-  -otapreopt_slot
+-} dalvikcache_data_file:dir no_w_dir_perms;
++#neverallow {
++#  domain
++#  -init
++#  -installd
++#  -postinstall_dexopt
++#  -cppreopts
++#  -dex2oat
++#  -zygote
++#  -otapreopt_slot
++#} dalvikcache_data_file:dir no_w_dir_perms;
+ 
+ # Only system_server should be able to send commands via the zygote socket
+ neverallow { domain -zygote -system_server } zygote:unix_stream_socket connectto;
+@@ -885,18 +885,18 @@ neverallow {
+ # permissible for the "shell user". If you need a process to exec a shell
+ # script with differing privilege, define a domain and set up a transition.
+ #
+-neverallow {
+-  domain
+-  -adbd
+-  -init
+-  -runas
+-  -zygote
+-} shell:process { transition dyntransition };
++#neverallow {
++#  domain
++#  -adbd
++#  -init
++#  -runas
++#  -zygote
++#} shell:process { transition dyntransition };
+ 
+ # Only domains spawned from zygote and runas may have the appdomain attribute.
+-neverallow { domain -runas -webview_zygote -zygote } {
+-  appdomain -shell userdebug_or_eng(`-su')
+-}:process { transition dyntransition };
++#neverallow { domain -runas -webview_zygote -zygote } {
++#  appdomain -shell userdebug_or_eng(`-su')
++#}:process { transition dyntransition };
+ 
+ # Minimize read access to shell- or app-writable symlinks.
+ # This is to prevent malicious symlink attacks.
+@@ -918,37 +918,37 @@ neverallow {
+ # write access to shell owned directories. The /data/local/tmp
+ # directory is untrustworthy, and non-whitelisted domains should
+ # not be trusting any content in those directories.
+-neverallow {
+-  domain
+-  -adbd
+-  -dumpstate
+-  -installd
+-  -init
+-  -shell
+-  -vold
+-} shell_data_file:dir no_w_dir_perms;
+-
+-neverallow {
+-  domain
+-  -adbd
+-  -appdomain
+-  -dumpstate
+-  -init
+-  -installd
+-  -system_server # why?
+-  userdebug_or_eng(`-uncrypt')
+-} shell_data_file:dir { open search };
++#neverallow {
++#  domain
++#  -adbd
++#  -dumpstate
++#  -installd
++#  -init
++#  -shell
++#  -vold
++#} shell_data_file:dir no_w_dir_perms;
++#
++#neverallow {
++#  domain
++#  -adbd
++#  -appdomain
++#  -dumpstate
++#  -init
++#  -installd
++#  -system_server # why?
++#  userdebug_or_eng(`-uncrypt')
++#} shell_data_file:dir { open search };
+ 
+ # Same as above for /data/local/tmp files. We allow shell files
+ # to be passed around by file descriptor, but not directly opened.
+-neverallow {
+-  domain
+-  -adbd
+-  -appdomain
+-  -dumpstate
+-  -installd
+-  userdebug_or_eng(`-uncrypt')
+-} shell_data_file:file open;
++#neverallow {
++#  domain
++#  -adbd
++#  -appdomain
++#  -dumpstate
++#  -installd
++#  userdebug_or_eng(`-uncrypt')
++#} shell_data_file:file open;
+ 
+ 
+ # servicemanager and vndservicemanager are the only processes which handle the
+diff --git a/LINUX/android/system/sepolicy/public/keystore.te b/LINUX/android/system/sepolicy/public/keystore.te
+index ee5e6757456..8252c9b10b0 100644
+--- a/LINUX/android/system/sepolicy/public/keystore.te
++++ b/LINUX/android/system/sepolicy/public/keystore.te
+@@ -11,7 +11,8 @@ allow keystore keystore_data_file:dir create_dir_perms;
+ allow keystore keystore_data_file:notdevfile_class_set create_file_perms;
+ allow keystore keystore_exec:file { getattr };
+ 
+-add_service(keystore, keystore_service)
++#add_service(keystore, keystore_service)
++allow keystore keystore_service:service_manager find;
+ allow keystore sec_key_att_app_id_provider_service:service_manager find;
+ 
+ # Check SELinux permissions.
+@@ -25,10 +26,10 @@ r_dir_file(keystore, cgroup)
+ ### Protect ourself from others
+ ###
+ 
+-neverallow { domain -keystore } keystore_data_file:dir ~{ open create read getattr setattr search relabelto ioctl };
++#neverallow { domain -keystore } keystore_data_file:dir ~{ open create read getattr setattr search relabelto ioctl };
+ neverallow { domain -keystore } keystore_data_file:notdevfile_class_set ~{ relabelto getattr };
+ 
+-neverallow { domain -keystore -init } keystore_data_file:dir *;
+-neverallow { domain -keystore -init } keystore_data_file:notdevfile_class_set *;
++#neverallow { domain -keystore -init } keystore_data_file:dir *;
++#neverallow { domain -keystore -init } keystore_data_file:notdevfile_class_set *;
+ 
+ neverallow * keystore:process ptrace;

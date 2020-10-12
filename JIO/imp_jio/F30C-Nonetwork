@@ -1,0 +1,16 @@
+ISSUE   ::: F30C - No Network, CLM- 1242446 -Device fail to latch on Network post replacing CPU
+
+Below code is seen in the simlock_run_algorithm() function in oem source files, which is not present in QC code. 
+
+Seems fuse_blown() is returning false and so below check becomes true and returns generic error.
+
+ 
+
+Please check (comment below code )
+
+ 
+
+if(!simlock_fuse_is_fuse_blown())
+{
+return SIMLOCK_GENERIC_ERROR;
+}

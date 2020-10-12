@@ -1,0 +1,107 @@
+From 1807f1d036e74e62b6bb389c0549f615e63bba2b Mon Sep 17 00:00:00 2001
+From: vinukyas <yaswanth@votaytech.com>
+Date: Wed, 9 Sep 2020 09:29:18 +0530
+Subject: [PATCH 5/6] b2g homescreen
+
+Signed-off-by: vinukyas <yaswanth@votaytech.com>
+---
+ LINUX/android/build/soong/root.bp             |  2 +
+ .../gecko/dom/system/gonk/network/moz.build   | 10 ++---
+ LINUX/android/gonk-misc/Android.mk            | 45 ++++++++++++++++++-
+ 3 files changed, 51 insertions(+), 6 deletions(-)
+
+diff --git a/LINUX/android/build/soong/root.bp b/LINUX/android/build/soong/root.bp
+index 5f55e730bec..6fe9a3c9a7c 100644
+--- a/LINUX/android/build/soong/root.bp
++++ b/LINUX/android/build/soong/root.bp
+@@ -23,6 +23,8 @@ optional_subdirs = [
+     "frameworks/hardware/interfaces",
+     "frameworks/opt/net/wifi",
+     "gonk-misc/",
++    "gecko/",
++    "gaia/",
+     "hardware/*",
+     "libcore",
+     "libnativehelper",
+diff --git a/LINUX/android/gecko/dom/system/gonk/network/moz.build b/LINUX/android/gecko/dom/system/gonk/network/moz.build
+index 0584328043f..9390f60d805 100644
+--- a/LINUX/android/gecko/dom/system/gonk/network/moz.build
++++ b/LINUX/android/gecko/dom/system/gonk/network/moz.build
+@@ -44,11 +44,11 @@ EXTRA_JS_MODULES += [
+     'TetheringConfigStore.jsm',
+     'TetheringService.jsm',
+ ]
+-LOCAL_INCLUDES += [
+-    '%' + '%s/%s' % (CONFIG['GONK_PATH'], d) for d in [
+-	'out/target/product/msm8909/obj/SHARED_LIBRARIES/libnetdaidl_intermediates/aidl-generated/include',
+-    ]
+-]
++#LOCAL_INCLUDES += [
++#    '%' + '%s/%s' % (CONFIG['GONK_PATH'], d) for d in [
++#	'out/target/product/msm8909/obj/SHARED_LIBRARIES/libnetdaidl_intermediates/aidl-generated/include',
++#    ]
++#]
+ 
+ include('/ipc/chromium/chromium-config.mozbuild')
+ 
+diff --git a/LINUX/android/gonk-misc/Android.mk b/LINUX/android/gonk-misc/Android.mk
+index e19656d9a11..27282e3942e 100644
+--- a/LINUX/android/gonk-misc/Android.mk
++++ b/LINUX/android/gonk-misc/Android.mk
+@@ -148,9 +148,52 @@ LOCAL_MODULE := gecko
+ LOCAL_MODULE_CLASS := DATA
+ LOCAL_MODULE_TAGS := optional
+ LOCAL_MODULE_PATH := $(TARGET_OUT)
+-include $(BUILD_SYSTEM)/base_rules.mk
++include $(BUILD_PREBUILT)
+ 
+ B2G_SYSTEM_APPS ?= 0
++
++#gaia changes added by haranatth
++
++PRESERVE_B2G_WEBAPPS := 0
++
++# In user (production) builds, gaia goes in $(TARGET_OUT)/b2g/webapps
++# This flag helps us preserve the directory when cleaning out $(TARGET_OUT)/b2g
++ifneq ($(filter user userdebug, $(TARGET_BUILD_VARIANT)),)
++B2G_SYSTEM_APPS := 1
++#B2G_UPDATER ?= 1
++else
++#B2G_UPDATER ?= 0
++B2G_SYSTEM_APPS := 1
++endif
++
++ifeq ($(B2G_SYSTEM_APPS),1)
++PRESERVE_B2G_WEBAPPS := 1
++endif
++
++GAIA_PATH ?= $(abspath $(LOCAL_PATH)/../gaia)
++ifeq (,$(wildcard $(GAIA_PATH)))
++$(error GAIA_PATH is not defined)
++endif
++
++# Preserve the /system/b2g/distribution/ directory as its contents are not
++# populated as a part of this rule, and may even be populated before this
++# rule executes
++PRESERVE_DIRS := distribution
++ifeq ($(PRESERVE_B2G_WEBAPPS), 1)
++PRESERVE_DIRS += apps # This is for use with kanikani gaia branch
++PRESERVE_DIRS += webapps
++endif
++$(LOCAL_INSTALLED_MODULE): $(LOCAL_BUILT_MODULE) gaia-prefs $(APRIORI) $(PRELINK_MAP)
++	@echo Install dir: $(TARGET_OUT)/b2g
++	rm -rf $(filter-out $(addprefix $(TARGET_OUT)/b2g/,$(PRESERVE_DIRS)),$(wildcard $(TARGET_OUT)/b2g/*))
++	mkdir -p $(TARGET_OUT)/b2g/defaults/pref
++	cp -r $(GAIA_PATH)/profile/defaults/* $(TARGET_OUT)/b2g/defaults/
++ifneq (,$(EXPORT_DEVICE_PREFS))
++	cp -n $(EXPORT_DEVICE_PREFS)/*.js $(TARGET_OUT)/b2g/defaults/pref/
++endif
++	cd $(TARGET_OUT) && tar xvfz $(abspath $<)
++
++
+ # Preserve the /system/b2g/defaults as its contents will be populated before this rule.
+ PRESERVE_DIRS := defaults
+ ifeq ($(B2G_SYSTEM_APPS), 1)
+-- 
+2.26.0
+

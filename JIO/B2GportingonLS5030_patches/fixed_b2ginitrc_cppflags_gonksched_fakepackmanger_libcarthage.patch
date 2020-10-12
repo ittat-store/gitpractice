@@ -1,0 +1,667 @@
+commit dcfb3d22693df62f96315d6fe979040c29899587
+Author: keerthikumari <keerthikumari.cheguri@votarytech.com>
+Date:   Wed Aug 12 11:20:47 2020 +0530
+
+    [B2G] fixed b2g init rc entries, cpp flags, add gonksched, fakepackagemanager, libcarthage
+
+diff --git a/LINUX/android/gecko/widget/gonk/nativewindow/moz.build b/LINUX/android/gecko/widget/gonk/nativewindow/moz.build
+index d20dac2b56b..ca86ce65ce2 100644
+--- a/LINUX/android/gecko/widget/gonk/nativewindow/moz.build
++++ b/LINUX/android/gecko/widget/gonk/nativewindow/moz.build
+@@ -91,7 +91,7 @@ if CONFIG['GNU_CC']:
+   CXXFLAGS += ['-Wno-error=attributes', '-Wno-overloaded-virtual']
+ 
+ CXXFLAGS += [
+-    '-std=c++17',
++    '-std=c++11',
+     '-Wno-macro-redefined',
+     '-Wno-mismatched-tags',
+ ]
+diff --git a/LINUX/android/gonk-misc/Android.mk b/LINUX/android/gonk-misc/Android.mk
+index 18f0330861a..c8b45170543 100644
+--- a/LINUX/android/gonk-misc/Android.mk
++++ b/LINUX/android/gonk-misc/Android.mk
+@@ -107,32 +107,32 @@ include $(BUILD_EXECUTABLE)
+ #LOCAL_SHARED_LIBRARIES := libbinder libutils libsensorprivacy
+ #include $(BUILD_EXECUTABLE)
+ 
+-#include $(CLEAR_VARS)
+-#LOCAL_MODULE       := fakePackageManagerNative
+-#LOCAL_MODULE_TAGS  := optional
+-#LOCAL_MODULE_CLASS := EXECUTABLES
+-#LOCAL_SRC_FILES    := fakePackageManagerNative.cpp
+-#LOCAL_SHARED_LIBRARIES := libbinder libutils
+-#include $(BUILD_EXECUTABLE)
+-#
+-#include $(CLEAR_VARS)
+-#LOCAL_MODULE       := gonkProcessInfo
+-#LOCAL_MODULE_TAGS  := optional
+-#LOCAL_MODULE_CLASS := EXECUTABLES
+-#LOCAL_SRC_FILES    := gonkProcessInfo.cpp
+-#LOCAL_SHARED_LIBRARIES := libbinder libutils
+-#include $(BUILD_EXECUTABLE)
++include $(CLEAR_VARS)
++LOCAL_MODULE       := fakePackageManagerNative
++LOCAL_MODULE_TAGS  := optional
++LOCAL_MODULE_CLASS := EXECUTABLES
++LOCAL_SRC_FILES    := fakePackageManagerNative.cpp
++LOCAL_SHARED_LIBRARIES := libbinder libutils
++include $(BUILD_EXECUTABLE)
+ 
+-#include $(CLEAR_VARS)
+-#LOCAL_MODULE       := gonksched
+-#LOCAL_MODULE_TAGS  := optional
+-#LOCAL_MODULE_CLASS := EXECUTABLES
+-#LOCAL_SRC_FILES    := gonksched.cpp
+-#LOCAL_SHARED_LIBRARIES := libbinder libutils libcutils libmediautils libprocessgroup
+-#LOCAL_CFLAGS := -DANDROID_VERSION=$(PLATFORM_SDK_VERSION)
++include $(CLEAR_VARS)
++LOCAL_MODULE       := gonkProcessInfo
++LOCAL_MODULE_TAGS  := optional
++LOCAL_MODULE_CLASS := EXECUTABLES
++LOCAL_SRC_FILES    := gonkProcessInfo.cpp
++LOCAL_SHARED_LIBRARIES := libbinder libutils
++include $(BUILD_EXECUTABLE)
+ 
+-#LOCAL_C_INCLUDES := frameworks/av/media/utils
+-#include $(BUILD_EXECUTABLE)
++include $(CLEAR_VARS)
++LOCAL_MODULE       := gonksched
++LOCAL_MODULE_TAGS  := optional
++LOCAL_MODULE_CLASS := EXECUTABLES
++LOCAL_SRC_FILES    := gonksched.cpp
++LOCAL_SHARED_LIBRARIES := libbinder libutils libcutils libmediautils libprocessgroup
++LOCAL_CFLAGS := -DANDROID_VERSION=$(PLATFORM_SDK_VERSION)
++
++LOCAL_C_INCLUDES := frameworks/av/media/utils
++include $(BUILD_EXECUTABLE)
+ 
+ #
+ # Gecko glue
+diff --git a/LINUX/android/gonk-misc/b2g.sh b/LINUX/android/gonk-misc/b2g.sh
+index f063858006d..5c10d896a4d 100755
+--- a/LINUX/android/gonk-misc/b2g.sh
++++ b/LINUX/android/gonk-misc/b2g.sh
+@@ -70,7 +70,7 @@ if [ -d "/system/lib64" ]; then
+   LIBDIR="lib64"
+ fi;
+ 
+-export LD_LIBRARY_PATH=/vendor/$LIBDIR:/system/$LIBDIR:"$B2G_DIR":/apex/com.android.runtime/$LIBDIR:/system/apex/com.android.runtime.debug/$LIBDIR
++export LD_LIBRARY_PATH=/vendor/$LIBDIR:/system/$LIBDIR:"$B2G_DIR"
+ export GRE_HOME="$B2G_DIR"
+ 
+ # Run in jar logging mode if needed.
+diff --git a/LINUX/android/gonk-misc/bootanimation_hvga.zip b/LINUX/android/gonk-misc/bootanimation_hvga.zip
+new file mode 100644
+index 00000000000..88ff2c53892
+Binary files /dev/null and b/LINUX/android/gonk-misc/bootanimation_hvga.zip differ
+diff --git a/LINUX/android/gonk-misc/fakePackageManagerNative.cpp b/LINUX/android/gonk-misc/fakePackageManagerNative.cpp
+index 88fe728d2b0..de9cb914068 100644
+--- a/LINUX/android/gonk-misc/fakePackageManagerNative.cpp
++++ b/LINUX/android/gonk-misc/fakePackageManagerNative.cpp
+@@ -33,7 +33,7 @@ public:
+ 
+     virtual Status getNamesForUids(const std::vector<int32_t>& uids, std::vector<std::string>* _aidl_return);
+     virtual Status getInstallerForPackage(const String16& packageName, std::string* _aidl_return);
+-    virtual Status getVersionCodeForPackage(const String16& packageName, int64_t* _aidl_return);
++    virtual Status getVersionCodeForPackage(const String16& packageName, int32_t* _aidl_return);
+     virtual Status isAudioPlaybackCaptureAllowed(const std::vector<std::string>& packageNames, std::vector<bool>* _aidl_return);
+     virtual Status getLocationFlags(const std::string& packageName, int32_t* _aidl_return);
+     virtual Status getTargetSdkVersionForPackage(const String16& packageName, int32_t* _aidl_return);
+@@ -57,7 +57,7 @@ Status FakePackageManagerNative::getInstallerForPackage(const String16& packageN
+     return Status::ok();
+ }
+ 
+-Status FakePackageManagerNative::getVersionCodeForPackage(const String16& packageName, int64_t* _aidl_return) {
++Status FakePackageManagerNative::getVersionCodeForPackage(const String16& packageName, int32_t* _aidl_return) {
+     (void)packageName;
+     *_aidl_return = 0;
+     return Status::ok();
+diff --git a/LINUX/android/gonk-misc/gonkProcessInfo.cpp b/LINUX/android/gonk-misc/gonkProcessInfo.cpp
+index 0db86f56bcd..5dacdc24524 100644
+--- a/LINUX/android/gonk-misc/gonkProcessInfo.cpp
++++ b/LINUX/android/gonk-misc/gonkProcessInfo.cpp
+@@ -71,7 +71,7 @@ GonkProcessInfoService::getProcessStatesAndOomScoresFromPids( size_t length,
+         return -ENOSYS;
+     }
+ 
+-    for (int i = 0; i < length; i++) {
++    for (unsigned int i = 0; i < length; i++) {
+         FILE *fp;
+         char cmd[80], result[80];
+         { /* handle process states */
+diff --git a/LINUX/android/gonk-misc/gonksched.cpp b/LINUX/android/gonk-misc/gonksched.cpp
+index 1467a163404..75b3ffdfbda 100644
+--- a/LINUX/android/gonk-misc/gonksched.cpp
++++ b/LINUX/android/gonk-misc/gonksched.cpp
+@@ -39,13 +39,9 @@ public:
+ 
+     virtual status_t dump(int fd, const Vector<String16>& args);
+     int requestPriority(int32_t pid, int32_t tid, int32_t prio);
+-#if ANDROID_VERSION >= 29
+     virtual int requestPriority(int32_t pid, int32_t tid,
+                     int32_t prio, bool isForApp, bool asynchronous);
+-    virtual int requestCpusetBoost(bool enable, const sp<IInterface>& client);
+-#else
+-    virtual int requestPriority(int32_t pid, int32_t tid, int32_t prio, bool async);
+-#endif
++    //virtual int requestCpusetBoost(bool enable, const sp<IInterface>& client);
+     virtual status_t onTransact(uint32_t code, const Parcel& data, Parcel* reply, uint32_t flags);
+ };
+ 
+@@ -101,7 +97,6 @@ GonkSchedulePolicyService::requestPriority(int32_t pid, int32_t tid, int32_t pri
+     return NO_ERROR; /* PackageManger.PERMISSION_GRANTED */
+ }
+ 
+-#if ANDROID_VERSION >= 29
+ int
+ GonkSchedulePolicyService::requestPriority(int32_t pid, int32_t tid, int32_t prio,
+     bool isForApp, bool asynchronous)
+@@ -112,23 +107,6 @@ GonkSchedulePolicyService::requestPriority(int32_t pid, int32_t tid, int32_t pri
+     return requestPriority(pid, tid, prio);
+ }
+ 
+-int
+-GonkSchedulePolicyService::requestCpusetBoost(bool enable, const sp<IInterface>& client)
+-{
+-    (void)enable;
+-    (void)client;
+-
+-    return NO_ERROR;
+-}
+-#else
+-int
+-GonkSchedulePolicyService::requestPriority(int32_t pid, int32_t tid, int32_t prio, bool async)
+-{
+-    (void)async;
+-
+-    return requestPriority(pid, tid, prio);
+-}
+-#endif
+ 
+ enum {
+     REQUEST_PRIORITY_TRANSACTION = IBinder::FIRST_CALL_TRANSACTION,
+diff --git a/LINUX/android/gonk-misc/init.b2g.rc b/LINUX/android/gonk-misc/init.b2g.rc
+index 20e953fec8c..102900949f6 100644
+--- a/LINUX/android/gonk-misc/init.b2g.rc
++++ b/LINUX/android/gonk-misc/init.b2g.rc
+@@ -1,5 +1,5 @@
+-import /init.logmanager.rc
+-import /init.bluetooth.rc
++#import /init.logmanager.rc
++#import /init.bluetooth.rc
+ 
+ service fakeappops /system/bin/fakeappops
+     class main
+diff --git a/LINUX/android/gonk-misc/libcarthage/Android.mk b/LINUX/android/gonk-misc/libcarthage/Android.mk
+index 2ef17e3477d..79b70dea19e 100644
+--- a/LINUX/android/gonk-misc/libcarthage/Android.mk
++++ b/LINUX/android/gonk-misc/libcarthage/Android.mk
+@@ -1,43 +1,46 @@
+-#LOCAL_PATH:= $(call my-dir)
+-#
+-#include $(CLEAR_VARS)
+-#
+-#LOCAL_SRC_FILES:= \
+-#    WorkThread.cpp \
+-#    FramebufferSurface.cpp \
+-#    GonkDisplay.cpp \
+-#    GrallocUsageConversion.cpp \
+-#    NativeFramebufferDevice.cpp \
+-#    NativeGralloc.cpp \
+-#
+-#LOCAL_SHARED_LIBRARIES := \
+-#    android.frameworks.vr.composer@1.0 \
+-#    android.hardware.graphics.allocator@2.0 \
+-#    android.hardware.graphics.composer@2.1 \
+-#    android.hardware.configstore@1.0 \
+-#    android.hardware.configstore-utils \
+-#    android.hardware.power@1.0 \
+-#    libbase \
+-#    libbinder \
+-#    liblog \
+-#    libcutils \
+-#    libdl \
+-#    libEGL \
+-#    libfmq \
+-#    libGLESv1_CM \
+-#    libGLESv2 \
+-#    libgui \
+-#    libhardware \
+-#    libhidlbase \
+-#    libhidltransport \
+-#    libhwbinder \
+-#    libpowermanager \
+-#    libprotobuf-cpp-lite \
+-#    libsuspend \
+-#    libsync \
+-#    libui \
+-#    libutils
+-#
++LOCAL_PATH:= $(call my-dir)
++
++include $(CLEAR_VARS)
++
++LOCAL_SRC_FILES:= \
++    WorkThread.cpp \
++    FramebufferSurface.cpp \
++    GonkDisplay.cpp \
++    GrallocUsageConversion.cpp \
++    NativeFramebufferDevice.cpp \
++    NativeGralloc.cpp \
++    HWC/android_10/ComposerHal.cpp \
++    HWC/android_10/HWC2.cpp
++
++LOCAL_SHARED_LIBRARIES := \
++    android.frameworks.vr.composer@1.0 \
++    android.hardware.graphics.allocator@2.0 \
++    android.hardware.graphics.composer@2.1 \
++    android.hardware.configstore@1.0 \
++    android.hardware.configstore-utils \
++    android.hardware.power@1.0 \
++    libbase \
++    libbinder \
++    liblog \
++    libcutils \
++    libdl \
++    libEGL \
++    libfmq \
++    libGLESv1_CM \
++    libGLESv2 \
++    libgui \
++    libhardware \
++    libhidlbase \
++    libhidltransport \
++    libhwbinder \
++    libnativewindow \
++    libpowermanager \
++    libprotobuf-cpp-lite \
++    libsuspend \
++    libsync \
++    libui \
++    libutils
++
+ #ifeq ($(PLATFORM_SDK_VERSION),29)
+ #    LOCAL_SRC_FILES += \
+ #        HWC/android_10/ComposerHal.cpp \
+@@ -70,27 +73,27 @@
+ #
+ #    $(error "supports only android version larger than 29(android 10)")
+ #endif
+-#
+-#LOCAL_MODULE_TAGS := tests
+-#
+-#LOCAL_MODULE:= libcarthage
+-#
+-#LOCAL_C_INCLUDES += \
+-#    $(LOCAL_PATH)/HWC \
+-#    $(LOCAL_PATH)/include \
+-#    system/core/libsuspend/include \
+-#    frameworks/native/libs/ui/include \
+-#
+-#LOCAL_CFLAGS := \
+-#    -DANDROID_VERSION=$(PLATFORM_SDK_VERSION)
+-#
+-#LOCAL_CFLAGS += \
+-#    -DGL_GLEXT_PROTOTYPES -UNDEBUG
+-#
+-## For emulator
+-#ifeq ($(strip $(TARGET_PRODUCT)),$(filter $(TARGET_PRODUCT),aosp_arm aosp_x86_64))
+-#    LOCAL_CFLAGS += -DANDROID_EMULATOR
+-#endif
+-#
+-#include $(BUILD_SHARED_LIBRARY)
+-#
++
++LOCAL_MODULE_TAGS := tests
++
++LOCAL_MODULE:= libcarthage
++
++LOCAL_C_INCLUDES += \
++    $(LOCAL_PATH)/HWC \
++    $(LOCAL_PATH)/include \
++    system/core/libsuspend/include \
++    frameworks/native/libs/ui/include \
++
++LOCAL_CFLAGS := \
++    -DANDROID_VERSION=$(PLATFORM_SDK_VERSION)
++
++LOCAL_CFLAGS += \
++    -DGL_GLEXT_PROTOTYPES -UNDEBUG
++
++# For emulator
++ifeq ($(strip $(TARGET_PRODUCT)),$(filter $(TARGET_PRODUCT),aosp_arm aosp_x86_64))
++    LOCAL_CFLAGS += -DANDROID_EMULATOR
++endif
++
++include $(BUILD_SHARED_LIBRARY)
++
+diff --git a/LINUX/android/gonk-misc/libcarthage/FramebufferSurface.cpp b/LINUX/android/gonk-misc/libcarthage/FramebufferSurface.cpp
+index 32c614898d8..0f5be9d5b53 100644
+--- a/LINUX/android/gonk-misc/libcarthage/FramebufferSurface.cpp
++++ b/LINUX/android/gonk-misc/libcarthage/FramebufferSurface.cpp
+@@ -214,7 +214,8 @@ void FramebufferSurface::presentLocked(const int slot,
+         return;
+     }
+ 
+-    ui::Dataspace dataspace = ui::Dataspace::UNKNOWN;
++//    ui::Dataspace dataspace = ui::Dataspace::UNKNOWN;
++    android_dataspace_t dataspace = HAL_DATASPACE_UNKNOWN;
+     (void)hwcDisplay->setClientTarget(slot, buffer, acquireFence, dataspace);
+ 
+     error = hwcDisplay->present(&mLastPresentFence);
+@@ -263,7 +264,7 @@ void FramebufferSurface::onFrameCommitted()
+ {
+     if (mHasPendingRelease) {
+         addReleaseFenceLocked(mPreviousBufferSlot, mPreviousBuffer, mLastPresentFence);
+-        releaseBufferLocked(mPreviousBufferSlot, mPreviousBuffer);
++        releaseBufferLocked(mPreviousBufferSlot, mPreviousBuffer, EGL_NO_DISPLAY, EGL_NO_SYNC_KHR);
+         mHasPendingRelease = false;
+     }
+ }
+diff --git a/LINUX/android/gonk-misc/libcarthage/GonkDisplay.cpp b/LINUX/android/gonk-misc/libcarthage/GonkDisplay.cpp
+index 6f4ac4b2a37..f3676a78920 100644
+--- a/LINUX/android/gonk-misc/libcarthage/GonkDisplay.cpp
++++ b/LINUX/android/gonk-misc/libcarthage/GonkDisplay.cpp
+@@ -14,9 +14,9 @@
+  * limitations under the License.
+  */
+ 
+-#if ANDROID_VERSION < 29
++/*#if ANDROID_VERSION < 29
+ #error "Only ANDROID_VERSION >= 29 devices are supported"
+-#endif
++#endif*/
+ 
+ #include <gui/Surface.h>
+ #include <gui/IProducerListener.h>
+@@ -56,7 +56,7 @@ class HWComposerCallback : public HWC2::ComposerCallback
+             int64_t timestamp) override;
+ 
+         void onHotplugReceived(int32_t sequenceId, hwc2_display_t display,
+-            HWC2::Connection connection
++            HWC2::Connection connection, bool primaryDisplay
+             ) override;
+ 
+         void onRefreshReceived(int32_t sequenceId, hwc2_display_t display) override;
+@@ -86,12 +86,12 @@ HWComposerCallback::onVsyncReceived(int32_t sequenceId, hwc2_display_t display,
+ 
+ void
+ HWComposerCallback::onHotplugReceived(int32_t sequenceId, hwc2_display_t display,
+-    HWC2::Connection connection)
++    HWC2::Connection connection, bool primaryDisplay)
+ {
+     {
+         std::lock_guard<std::mutex> lock(hotplugMutex);
+-        ALOGI("HWComposerCallback::onHotplugReceived %d %llu %d", sequenceId,
+-            (unsigned long long)display, (uint32_t)connection);
++        ALOGI("HWComposerCallback::onHotplugReceived %d %llu %d %d", sequenceId,
++            (unsigned long long)display, (uint32_t)connection, primaryDisplay);
+         hwcDevice->onHotplug(display, connection);
+     }
+ 
+@@ -149,9 +149,11 @@ GonkDisplayP::GonkDisplayP()
+     , mExtFBEnabled(false) // Initial value should sync with hal::GetExtScreenEnabled()
+     , mHwcDisplay(nullptr)
+ {
+-    std::string serviceName = "default";
+-    mHwc = std::make_unique<HWC2::Device>(
+-        std::make_unique<Hwc2::impl::Composer>(serviceName));
++    //std::string serviceName = "default";
++    bool useVrComposer = false;
++    /*mHwc = std::make_unique<HWC2::Device>(
++        std::make_unique<Hwc2::Composer>(useVrComposer));*/
++    mHwc = std::make_unique<HWC2::Device>(useVrComposer);
+     assert(mHwc);
+     mHwc->registerCallback(new HWComposerCallback(mHwc.get()), 0);
+ 
+diff --git a/LINUX/android/gonk-misc/libcarthage/HWC/android_10/HWC2.h b/LINUX/android/gonk-misc/libcarthage/HWC/android_10/HWC2.h
+index 0e1953bac77..56c8f4d883e 100644
+--- a/LINUX/android/gonk-misc/libcarthage/HWC/android_10/HWC2.h
++++ b/LINUX/android/gonk-misc/libcarthage/HWC/android_10/HWC2.h
+@@ -37,6 +37,7 @@
+ #include <vector>
+ #include <map>
+ 
++#include "MozTypes.h"
+ namespace android {
+     class Fence;
+     class FloatRect;
+diff --git a/LINUX/android/system/core/init/service.cpp b/LINUX/android/system/core/init/service.cpp
+index f5e54dfda6b..686d711ee47 100644
+--- a/LINUX/android/system/core/init/service.cpp
++++ b/LINUX/android/system/core/init/service.cpp
+@@ -84,9 +84,13 @@ static std::string ComputeContextFromExecutable(std::string& service_name,
+         free(new_con);
+     }
+     if (rc == 0 && computed_context == mycon.get()) {
++#if ALLOW_PERMISSIVE_SELINUX
++// Allow permissive don't return error
++#else
+         LOG(ERROR) << "service " << service_name << " does not have a SELinux domain defined";
+         return "";
+-    }
++#endif   
++ }
+     if (rc < 0) {
+         LOG(ERROR) << "could not get context while starting '" << service_name << "'";
+         return "";
+diff --git a/LINUX/android/system/core/libcutils/fs_config.cpp b/LINUX/android/system/core/libcutils/fs_config.cpp
+index 6693b8a9aec..98e64b4ce84 100644
+--- a/LINUX/android/system/core/libcutils/fs_config.cpp
++++ b/LINUX/android/system/core/libcutils/fs_config.cpp
+@@ -71,6 +71,7 @@ static const struct fs_path_config android_dirs[] = {
+     { 00771, AID_SHELL,        AID_SHELL,        0, "data/local/tmp" },
+     { 00771, AID_SHELL,        AID_SHELL,        0, "data/local" },
+     { 00770, AID_DHCP,         AID_DHCP,         0, "data/misc/dhcp" },
++    { 00770, AID_DHCP,         AID_DHCP,         0, "data/misc/dhcp-6.8.2" },
+     { 00771, AID_SHARED_RELRO, AID_SHARED_RELRO, 0, "data/misc/shared_relro" },
+     { 01771, AID_SYSTEM,       AID_MISC,         0, "data/misc" },
+     { 00775, AID_MEDIA_RW,     AID_MEDIA_RW,     0, "data/media/Music" },
+@@ -125,6 +126,10 @@ static const char* conf[][2] = {
+ 
+ static const struct fs_path_config android_files[] = {
+     // clang-format off
++
++    { 00775, AID_ROOT,      AID_ROOT,      0, "system/b2g/b2g" },
++    { 00775, AID_ROOT,      AID_ROOT,      0, "system/b2g/updater" },
++    { 00775, AID_ROOT,      AID_ROOT,      0, "system/b2g/plugin-container" },
+     { 00644, AID_SYSTEM,    AID_SYSTEM,    0, "data/app/*" },
+     { 00644, AID_SYSTEM,    AID_SYSTEM,    0, "data/app-ephemeral/*" },
+     { 00644, AID_SYSTEM,    AID_SYSTEM,    0, "data/app-private/*" },
+@@ -146,6 +151,7 @@ static const struct fs_path_config android_files[] = {
+     { 00755, AID_ROOT,      AID_SHELL,     0, "system/bin/crash_dump32" },
+     { 00755, AID_ROOT,      AID_SHELL,     0, "system/bin/crash_dump64" },
+     { 00755, AID_ROOT,      AID_SHELL,     0, "system/bin/debuggerd" },
++    { 00550, AID_DHCP,      AID_SHELL,     0, "system/etc/dhcpcd-6.8.2/dhcpcd-run-hooks" },
+     { 00750, AID_ROOT,      AID_ROOT,      0, "system/bin/install-recovery.sh" },
+     { 00700, AID_ROOT,      AID_ROOT,      0, "system/bin/secilc" },
+     { 00750, AID_ROOT,      AID_ROOT,      0, "system/bin/uncrypt" },
+diff --git a/LINUX/android/system/core/rootdir/init.rc b/LINUX/android/system/core/rootdir/init.rc
+index b0319835606..16f22af5242 100644
+--- a/LINUX/android/system/core/rootdir/init.rc
++++ b/LINUX/android/system/core/rootdir/init.rc
+@@ -294,7 +294,7 @@ on late-init
+     trigger post-fs-data
+ 
+     # Now we can start zygote for devices with file based encryption
+-    trigger zygote-start
++    #trigger zygote-start
+ 
+     # Load persist properties and override properties (if enabled) from /data.
+     trigger load_persist_props_action
+@@ -536,26 +536,26 @@ on post-fs-data
+ 
+ # It is recommended to put unnecessary data/ initialization from post-fs-data
+ # to start-zygote in device's init.rc to unblock zygote start.
+-on zygote-start && property:ro.crypto.state=unencrypted
++#on zygote-start && property:ro.crypto.state=unencrypted
+     # A/B update verifier that marks a successful boot.
+-    exec_start update_verifier_nonencrypted
+-    start netd
+-    start zygote
+-    start zygote_secondary
++ #   exec_start update_verifier_nonencrypted
++  #  start netd
++   # start zygote
++   # start zygote_secondary
+ 
+-on zygote-start && property:ro.crypto.state=unsupported
++#on zygote-start && property:ro.crypto.state=unsupported
+     # A/B update verifier that marks a successful boot.
+-    exec_start update_verifier_nonencrypted
+-    start netd
+-    start zygote
+-    start zygote_secondary
++   # exec_start update_verifier_nonencrypted
++   # start netd
++   # start zygote
++   # start zygote_secondary
+ 
+-on zygote-start && property:ro.crypto.state=encrypted && property:ro.crypto.type=file
++#on zygote-start && property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+     # A/B update verifier that marks a successful boot.
+-    exec_start update_verifier_nonencrypted
+-    start netd
+-    start zygote
+-    start zygote_secondary
++ #   exec_start update_verifier_nonencrypted
++  #  start netd
++   # start zygote
++    #start zygote_secondary
+ 
+ on boot
+     # basic network init
+diff --git a/LINUX/android/system/core/rootdir/init.zygote32_64.rc b/LINUX/android/system/core/rootdir/init.zygote32_64.rc
+index 80bb6730db5..14498a986dc 100644
+--- a/LINUX/android/system/core/rootdir/init.zygote32_64.rc
++++ b/LINUX/android/system/core/rootdir/init.zygote32_64.rc
+@@ -1,23 +1,23 @@
+-service zygote /system/bin/app_process32 -Xzygote /system/bin --zygote --start-system-server --socket-name=zygote
+-    class main
+-    priority -20
+-    user root
+-    group root readproc
+-    socket zygote stream 660 root system
+-    onrestart write /sys/android_power/request_state wake
+-    onrestart write /sys/power/state on
+-    onrestart restart audioserver
+-    onrestart restart cameraserver
+-    onrestart restart media
+-    onrestart restart netd
+-    onrestart restart wificond
+-    writepid /dev/cpuset/foreground/tasks
++#service zygote /system/bin/app_process32 -Xzygote /system/bin --zygote --start-system-server --socket-name=zygote
++ #   class main
++  #  priority -20
++  #  user root
++  #  group root readproc
++  #  socket zygote stream 660 root system
++  #  onrestart write /sys/android_power/request_state wake
++  #  onrestart write /sys/power/state on
++  #  onrestart restart audioserver
++  #  onrestart restart cameraserver
++  #  onrestart restart media
++  #  onrestart restart netd
++  #  onrestart restart wificond
++  #  writepid /dev/cpuset/foreground/tasks
+ 
+-service zygote_secondary /system/bin/app_process64 -Xzygote /system/bin --zygote --socket-name=zygote_secondary
+-    class main
+-    priority -20
+-    user root
+-    group root readproc
+-    socket zygote_secondary stream 660 root system
+-    onrestart restart zygote
+-    writepid /dev/cpuset/foreground/tasks
++#service zygote_secondary /system/bin/app_process64 -Xzygote /system/bin --zygote --socket-name=zygote_secondary
++ #   class main
++ #   priority -20
++ #   user root
++ #   group root readproc
++ #   socket zygote_secondary stream 660 root system
++ #   onrestart restart zygote
++  # writepid /dev/cpuset/foreground/tasks
+diff --git a/LINUX/android/system/core/rootdir/init.zygote64.rc b/LINUX/android/system/core/rootdir/init.zygote64.rc
+index 05ec16fc97d..c40cf6d94bf 100644
+--- a/LINUX/android/system/core/rootdir/init.zygote64.rc
++++ b/LINUX/android/system/core/rootdir/init.zygote64.rc
+@@ -1,14 +1,14 @@
+-service zygote /system/bin/app_process64 -Xzygote /system/bin --zygote --start-system-server
+-    class main
+-    priority -20
+-    user root
+-    group root readproc
+-    socket zygote stream 660 root system
+-    onrestart write /sys/android_power/request_state wake
+-    onrestart write /sys/power/state on
+-    onrestart restart audioserver
+-    onrestart restart cameraserver
+-    onrestart restart media
+-    onrestart restart netd
+-    onrestart restart wificond
+-    writepid /dev/cpuset/foreground/tasks
++#service zygote /system/bin/app_process64 -Xzygote /system/bin --zygote --start-system-server
++ #   class main
++  #  priority -20
++  #  user root
++  #  group root readproc
++  #  socket zygote stream 660 root system
++  #  onrestart write /sys/android_power/request_state wake
++  #  onrestart write /sys/power/state on
++  #  onrestart restart audioserver
++  #  onrestart restart cameraserver
++  #  onrestart restart media
++  #  onrestart restart netd
++  #  onrestart restart wificond
++  #  writepid /dev/cpuset/foreground/tasks
+diff --git a/LINUX/android/system/core/rootdir/init.zygote64_32.rc b/LINUX/android/system/core/rootdir/init.zygote64_32.rc
+index 09db7b03dc1..9a280d43d39 100644
+--- a/LINUX/android/system/core/rootdir/init.zygote64_32.rc
++++ b/LINUX/android/system/core/rootdir/init.zygote64_32.rc
+@@ -1,23 +1,23 @@
+-service zygote /system/bin/app_process64 -Xzygote /system/bin --zygote --start-system-server --socket-name=zygote
+-    class main
+-    priority -20
+-    user root
+-    group root readproc
+-    socket zygote stream 660 root system
+-    onrestart write /sys/android_power/request_state wake
+-    onrestart write /sys/power/state on
+-    onrestart restart audioserver
+-    onrestart restart cameraserver
+-    onrestart restart media
+-    onrestart restart netd
+-    onrestart restart wificond
+-    writepid /dev/cpuset/foreground/tasks
++#service zygote /system/bin/app_process64 -Xzygote /system/bin --zygote --start-system-server --socket-name=zygote
++ #   class main
++ #   priority -20
++ #   user root
++ #   group root readproc
++ #   socket zygote stream 660 root system
++ #   onrestart write /sys/android_power/request_state wake
++ #   onrestart write /sys/power/state on
++ #   onrestart restart audioserver
++ #   onrestart restart cameraserver
++ #   onrestart restart media
++ #   onrestart restart netd
++ #   onrestart restart wificond
++ #  writepid /dev/cpuset/foreground/tasks
+ 
+-service zygote_secondary /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+-    class main
+-    priority -20
+-    user root
+-    group root readproc
+-    socket zygote_secondary stream 660 root system
+-    onrestart restart zygote
+-    writepid /dev/cpuset/foreground/tasks
++#service zygote_secondary /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
++ #   class main
++ #   priority -20
++ #   user root
++ #   group root readproc
++ #   socket zygote_secondary stream 660 root system
++ #   onrestart restart zygote
++ #   writepid /dev/cpuset/foreground/tasks
