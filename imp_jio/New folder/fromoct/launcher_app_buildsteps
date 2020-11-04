@@ -1,0 +1,68 @@
+.............................................................
+Node setup and Build instructions
+.............................................................
+
+
+Please install below packages.
+o   sudo dpkg --add-architecture i386
+
+o   sudo dpkg --add-architecture amd64
+
+o   sudo apt-get install --no-install-recommends autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git lib32ncurses5-dev lib32z1-dev libgconf2-dev zlib1g:amd64 zlib1g-dev:amd64 zlib1g:i386 zlib1g-dev:i386 libgl1-mesa-dev libx11-dev make zip lzop libxml2-utils openjdk-7-jdk nodejs unzip python libxt6
+
+o   curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+o   sudo apt-get update && sudo apt-get install -y nodejs build-essential
+
+o   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+o   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+o   sudo apt-get update && sudo apt-get install -y yarn
+
+
+
+Build instructions for Launcher app:
+1. Execute "yarn install" command in the path where package.json file is present
+2. Execute the command "yarn build" once the previous step succeeds
+
+
+
+If u get error while "yarn install" command 
+Error like :
+
+/usr/share/yarn/lib/cli.js:46100
+  let {
+      ^
+
+SyntaxError: Unexpected token {
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:373:25)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (/usr/share/yarn/bin/yarn.js:24:13)
+    at M
+
+follow below steps reslove above error 
+
+There could be another reason for that. Your nodejs version is very old. You just need to upgrade your nodejs with below command (using npm).
+>>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+>>apt-get install -y nodejs
+
+>> sudo npm install -g n
+>> sudo n stable
+
+and check versions
+>> node --version 
+v4.9.1
+
+>> yarn --version 
+1.22.5
+
+
+another error like CDrom you cant write then modify below file
+sudo nano /etc/apt/sources.list Here open that particular error line and comment it ... for more info search in google
+

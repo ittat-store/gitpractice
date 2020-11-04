@@ -1,0 +1,1071 @@
+diff --git a/LINUX/android/gecko/dom/wifi/hal/ScanEventService.cpp b/LINUX/android/gecko/dom/wifi/hal/ScanEventService.cpp
+index ff8d743199d..8cef2b94c9e 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/ScanEventService.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/ScanEventService.cpp
+@@ -46,7 +46,7 @@ android::sp<ScanEventService> ScanEventService::sScanEvent = nullptr;
+ 
+ android::sp<ScanEventService> ScanEventService::CreateService(
+     const std::string& aInterfaceName) {
+-  if (sScanEvent) {
++  if (sScanEvent != nullptr) {
+     return sScanEvent;
+   }
+   g_InterfaceName = aInterfaceName;
+@@ -96,7 +96,7 @@ android::sp<PnoScanEventService> PnoScanEventService::sPnoScanEvent = nullptr;
+ 
+ android::sp<PnoScanEventService> PnoScanEventService::CreateService(
+     const std::string& aInterfaceName) {
+-  if (sPnoScanEvent) {
++  if (sPnoScanEvent != nullptr) {
+     return sPnoScanEvent;
+   }
+   g_InterfaceName = aInterfaceName;
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.cpp b/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.cpp
+index d3d863286fc..ba0809592d0 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.cpp
+@@ -29,6 +29,7 @@ SoftapEventService* SoftapEventService::CreateService(
+     return sInstance;
+   }
+   // Create new instance
++#if 0
+   sInstance = new SoftapEventService(aInterfaceName);
+   ClearOnShutdown(&sInstance);
+ 
+@@ -45,6 +46,8 @@ SoftapEventService* SoftapEventService::CreateService(
+   ps->startThreadPool();
+   ps->giveThreadPoolName();
+   return sInstance;
++#endif
++  return nullptr;
+ }
+ 
+ void SoftapEventService::RegisterEventCallback(
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.h b/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.h
+index a291d2d3f96..998d5b32e04 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.h
++++ b/LINUX/android/gecko/dom/wifi/hal/SoftapEventService.h
+@@ -7,15 +7,15 @@
+ #ifndef SoftapEventService_H
+ #define SoftapEventService_H
+ 
+-#include <android/net/wifi/BnApInterfaceEventCallback.h>
++#include <android/net/wifi/BnInterfaceEventCallback.h>
+ #include <binder/BinderService.h>
+ 
+ class SoftapEventService
+     : virtual public android::BinderService<SoftapEventService>,
+-      virtual public android::net::wifi::BnApInterfaceEventCallback {
++      virtual public android::net::wifi::BnInterfaceEventCallback {
+  public:
+   explicit SoftapEventService(const std::string& aInterfaceName)
+-      : android::net::wifi::BnApInterfaceEventCallback(),
++      : android::net::wifi::BnInterfaceEventCallback(),
+         mSoftapInterfaceName(aInterfaceName) {}
+   virtual ~SoftapEventService() = default;
+ 
+@@ -27,9 +27,9 @@ class SoftapEventService
+ 
+   // IApInterfaceEventCallback
+   android::binder::Status onNumAssociatedStationsChanged(
+-      int32_t numStations) override;
++      int32_t numStations);
+   android::binder::Status onSoftApChannelSwitched(int32_t frequency,
+-                                                  int32_t bandwidth) override;
++                                                  int32_t bandwidth);
+ 
+  private:
+   static SoftapEventService* sInstance;
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SoftapManager.cpp b/LINUX/android/gecko/dom/wifi/hal/SoftapManager.cpp
+index b3828777e53..19a25acd981 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SoftapManager.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/SoftapManager.cpp
+@@ -29,14 +29,14 @@ void SoftapManager::HostapdDeathRecipient::serviceDied(
+   WIFI_LOGE(LOG_TAG, "IHostapd HAL died, cleanup instance.");
+   MutexAutoLock lock(sLock);
+ 
+-  if (mOuter != nullptr) {
++  /*if (mOuter != nullptr) {
+     mOuter->mHostapd = nullptr;
+-  }
++  }*/
+ }
+ 
+ SoftapManager::SoftapManager()
+     : mServiceManager(nullptr),
+-      mHostapd(nullptr),
++      //mHostapd(nullptr),
+       mServiceManagerDeathRecipient(nullptr),
+       mHostapdDeathRecipient(nullptr) {}
+ 
+@@ -60,9 +60,9 @@ void SoftapManager::CleanUp() {
+ }
+ 
+ Result_t SoftapManager::InitInterface() {
+-  if (mHostapd != nullptr) {
++ /* if (mHostapd != nullptr) {
+     return nsIWifiResult::SUCCESS;
+-  }
++  }*/
+ 
+   Result_t result = InitServiceManager();
+   if (result != nsIWifiResult::SUCCESS) {
+@@ -70,7 +70,7 @@ Result_t SoftapManager::InitInterface() {
+   }
+ 
+   // start hostapd daemon through lazy HAL.
+-  IHostapd_1_1::getService();
++  //IHostapd_1_1::getService();
+   return nsIWifiResult::SUCCESS;
+ }
+ 
+@@ -83,7 +83,7 @@ bool SoftapManager::IsInterfaceInitializing() {
+ 
+ bool SoftapManager::IsInterfaceReady() {
+   MutexAutoLock lock(sLock);
+-  return mHostapd != nullptr;
++  return false; //mHostapd != nullptr;
+ }
+ 
+ Result_t SoftapManager::InitServiceManager() {
+@@ -93,7 +93,7 @@ Result_t SoftapManager::InitServiceManager() {
+     return nsIWifiResult::SUCCESS;
+   }
+ 
+-  mHostapd = nullptr;
++  //mHostapd = nullptr;
+   mServiceManager =
+       ::android::hidl::manager::V1_0::IServiceManager::getService();
+   if (mServiceManager == nullptr) {
+@@ -113,17 +113,18 @@ Result_t SoftapManager::InitServiceManager() {
+   }
+ 
+   // interface name android.hardware.wifi.hostapd@1.1::IHostapd
+-  if (!mServiceManager->registerForNotifications(IHostapd_1_1::descriptor, "",
++  /*if (!mServiceManager->registerForNotifications(IHostapd_1_1::descriptor, "",
+                                                  this)) {
+     WIFI_LOGE(LOG_TAG, "Failed to register for notifications to IHostapd");
+     mServiceManager = nullptr;
+     return nsIWifiResult::ERROR_COMMAND_FAILED;
+-  }
++  }*/
+   return nsIWifiResult::SUCCESS;
+ }
+ 
+ Result_t SoftapManager::InitHostapdInterface() {
+   MutexAutoLock lock(sLock);
++#if 0
+   if (mHostapd != nullptr) {
+     return nsIWifiResult::SUCCESS;
+   }
+@@ -157,17 +158,20 @@ Result_t SoftapManager::InitHostapdInterface() {
+     mHostapd = nullptr;
+     return nsIWifiResult::ERROR_COMMAND_FAILED;
+   }
+-  return nsIWifiResult::SUCCESS;
++#endif
++  return nsIWifiResult::ERROR_COMMAND_FAILED;//nsIWifiResult::SUCCESS;
+ }
+ 
+ Result_t SoftapManager::TearDownInterface() {
+   MutexAutoLock lock(sLock);
++#if 0
+   if (mHostapd.get()) {
+     mHostapd->terminate();
+   }
+ 
+   mHostapd = nullptr;
+   mServiceManager = nullptr;
++#endif
+   return nsIWifiResult::SUCCESS;
+ }
+ 
+@@ -187,10 +191,10 @@ Result_t SoftapManager::StartSoftap(const std::string& aInterfaceName,
+     }
+   }
+ 
+-  if (mHostapd == nullptr) {
++ // if (mHostapd == nullptr) {
+     return InitHostapdInterface();
+-  }
+-
++ // }
++#if 0
+   // Remove running softap in hostapd
+   StopSoftap(aInterfaceName);
+ 
+@@ -234,13 +238,15 @@ Result_t SoftapManager::StartSoftap(const std::string& aInterfaceName,
+       ifaceParams_1_1, networkParams,
+       [&](const HostapdStatus& status) { response = status; });
+   return CHECK_SUCCESS(response.code == HostapdStatusCode::SUCCESS);
++#endif
+ }
+ 
+ Result_t SoftapManager::StopSoftap(const std::string& aInterfaceName) {
+-  HostapdStatus response;
++  /*HostapdStatus response;
+   HIDL_SET(mHostapd, removeAccessPoint, HostapdStatus, response,
+            aInterfaceName);
+-  return CHECK_SUCCESS(response.code == HostapdStatusCode::SUCCESS);
++  return CHECK_SUCCESS(response.code == HostapdStatusCode::SUCCESS);*/
++  return nsIWifiResult::SUCCESS;
+ }
+ 
+ /**
+@@ -250,18 +256,18 @@ Return<void> SoftapManager::onRegistration(const hidl_string& fqName,
+                                            const hidl_string& name,
+                                            bool preexisting) {
+   // start to initialize hostapd hidl interface.
+-  if (InitHostapdInterface() != nsIWifiResult::SUCCESS) {
++ /* if (InitHostapdInterface() != nsIWifiResult::SUCCESS) {
+     WIFI_LOGE(LOG_TAG, "Failed to initialize hostapd interface");
+     mServiceManager = nullptr;
+     mHostapd = nullptr;
+-  }
++  }*/
+   return Return<void>();
+ }
+ 
+ /**
+  * IHostapdCallback implementation
+  */
+-Return<void> SoftapManager::onFailure(const hidl_string& ifaceName) {
++/*Return<void> SoftapManager::onFailure(const hidl_string& ifaceName) {
+   WIFI_LOGD(LOG_TAG, "IHostapdCallback::onFailure()");
+   return android::hardware::Void();
+-}
++}*/
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SoftapManager.h b/LINUX/android/gecko/dom/wifi/hal/SoftapManager.h
+index 6137c5875f9..e9a8b599954 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SoftapManager.h
++++ b/LINUX/android/gecko/dom/wifi/hal/SoftapManager.h
+@@ -12,9 +12,9 @@
+ 
+ #include <android/hidl/manager/1.0/IServiceManager.h>
+ #include <android/hidl/manager/1.0/IServiceNotification.h>
+-#include <android/hardware/wifi/hostapd/1.0/types.h>
+-#include <android/hardware/wifi/hostapd/1.1/IHostapd.h>
+-#include <android/hardware/wifi/hostapd/1.1/IHostapdCallback.h>
++//#include <android/hardware/wifi/hostapd/1.0/types.h>
++//#include <android/hardware/wifi/hostapd/1.1/IHostapd.h>
++//#include <android/hardware/wifi/hostapd/1.1/IHostapdCallback.h>
+ #include "mozilla/Mutex.h"
+ 
+ /**
+@@ -25,16 +25,17 @@ using ::android::hardware::hidl_string;
+ using ::android::hardware::hidl_vec;
+ using ::android::hardware::Return;
+ using ::android::hardware::Void;
+-using ::android::hardware::wifi::hostapd::V1_0::HostapdStatus;
+-using ::android::hardware::wifi::hostapd::V1_0::HostapdStatusCode;
+-using ::android::hardware::wifi::hostapd::V1_0::IHostapd;
++//using ::android::hardware::wifi::hostapd::V1_0::HostapdStatus;
++//using ::android::hardware::wifi::hostapd::V1_0::HostapdStatusCode;
++//using ::android::hardware::wifi::hostapd::V1_0::IHostapd;
+ using ::android::hidl::manager::V1_0::IServiceNotification;
+ 
+-using IHostapd_1_1 = ::android::hardware::wifi::hostapd::V1_1::IHostapd;
++//using IHostapd_1_1 = ::android::hardware::wifi::hostapd::V1_1::IHostapd;
+ 
+ class SoftapManager
+-    : virtual public android::hidl::manager::V1_0::IServiceNotification,
+-      virtual public android::hardware::wifi::hostapd::V1_1::IHostapdCallback {
++    : virtual public android::hidl::manager::V1_0::IServiceNotification
++  //    virtual public android::hardware::wifi::hostapd::V1_1::IHostapdCallback 
++{
+  public:
+   static SoftapManager* Get();
+   static void CleanUp();
+@@ -63,7 +64,7 @@ class SoftapManager
+    *
+    * @param ifaceName Name of the interface.
+    */
+-  Return<void> onFailure(const hidl_string& ifaceName) override;
++  //Return<void> onFailure(const hidl_string& ifaceName) override;
+ 
+   struct ServiceManagerDeathRecipient : public hidl_death_recipient {
+     explicit ServiceManagerDeathRecipient(SoftapManager* aOuter)
+@@ -96,7 +97,7 @@ class SoftapManager
+   static mozilla::Mutex sLock;
+ 
+   android::sp<android::hidl::manager::V1_0::IServiceManager> mServiceManager;
+-  android::sp<IHostapd_1_1> mHostapd;
++  //android::sp<IHostapd_1_1> mHostapd;
+   android::sp<ServiceManagerDeathRecipient> mServiceManagerDeathRecipient;
+   android::sp<HostapdDeathRecipient> mHostapdDeathRecipient;
+   std::string mCountryCode;
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.cpp b/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.cpp
+index 1074c3215fd..192a599829d 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.cpp
+@@ -282,6 +282,7 @@ void SupplicantStaIfaceCallback::NotifyAssociatedBssid(
+ /**
+  * SupplicantStaIfaceCallbackV1_1 implementation
+  */
++#if 0
+ SupplicantStaIfaceCallbackV1_1::SupplicantStaIfaceCallbackV1_1(
+     const std::string& aInterfaceName,
+     const android::sp<WifiEventCallback>& aCallback,
+@@ -408,10 +409,11 @@ Return<void> SupplicantStaIfaceCallbackV1_1::onEapFailure_1_1(
+   WIFI_LOGD(LOG_TAG, "ISupplicantStaIfaceCallbackV1_1.onEapFailure_1_1()");
+   return android::hardware::Void();
+ }
+-
++#endif
+ /**
+  * SupplicantStaIfaceCallbackV1_2 implementation
+  */
++#if 0
+ SupplicantStaIfaceCallbackV1_2::SupplicantStaIfaceCallbackV1_2(
+     const std::string& aInterfaceName,
+     const android::sp<WifiEventCallback>& aCallback,
+@@ -564,3 +566,4 @@ Return<void> SupplicantStaIfaceCallbackV1_2::onDppFailure(
+   WIFI_LOGD(LOG_TAG, "SupplicantStaIfaceCallbackV1_2.onDppFailure()");
+   return android::hardware::Void();
+ }
++#endif
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.h b/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.h
+index 883e34f0081..25181153499 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.h
++++ b/LINUX/android/gecko/dom/wifi/hal/SupplicantCallback.h
+@@ -9,14 +9,14 @@
+ 
+ #include "WifiCommon.h"
+ 
+-#include <android/hardware/wifi/supplicant/1.2/ISupplicantStaIfaceCallback.h>
++#include <android/hardware/wifi/supplicant/1.0/ISupplicantStaIfaceCallback.h>
+ 
+ using ISupplicantStaIfaceCallbackV1_0 =
+     ::android::hardware::wifi::supplicant::V1_0::ISupplicantStaIfaceCallback;
+-using ISupplicantStaIfaceCallbackV1_1 =
++/*using ISupplicantStaIfaceCallbackV1_1 =
+     ::android::hardware::wifi::supplicant::V1_1::ISupplicantStaIfaceCallback;
+ using ISupplicantStaIfaceCallbackV1_2 =
+-    ::android::hardware::wifi::supplicant::V1_2::ISupplicantStaIfaceCallback;
++    ::android::hardware::wifi::supplicant::V1_2::ISupplicantStaIfaceCallback;*/
+ 
+ /**
+  * Class to handle callback from supplicant station mode interface.
+@@ -217,6 +217,7 @@ class SupplicantStaIfaceCallback : public ISupplicantStaIfaceCallbackV1_0 {
+  * Class to handle callback from supplicant station mode interface.
+  * Implement supplicant hal version 1.1.
+  */
++#if 0
+ class SupplicantStaIfaceCallbackV1_1 : public ISupplicantStaIfaceCallbackV1_1 {
+  public:
+   explicit SupplicantStaIfaceCallbackV1_1(
+@@ -279,11 +280,12 @@ class SupplicantStaIfaceCallbackV1_1 : public ISupplicantStaIfaceCallbackV1_1 {
+   android::sp<WifiEventCallback> mCallback;
+   android::sp<SupplicantStaIfaceCallback> mSupplicantCallback;
+ };
+-
++#endif
+ /**
+  * Class to handle callback from supplicant station mode interface.
+  * Implement supplicant hal version 1.2.
+  */
++#if 0
+ class SupplicantStaIfaceCallbackV1_2 : public ISupplicantStaIfaceCallbackV1_2 {
+  public:
+   explicit SupplicantStaIfaceCallbackV1_2(
+@@ -367,5 +369,5 @@ class SupplicantStaIfaceCallbackV1_2 : public ISupplicantStaIfaceCallbackV1_2 {
+   android::sp<WifiEventCallback> mCallback;
+   android::sp<SupplicantStaIfaceCallbackV1_1> mSupplicantCallbackV1_1;
+ };
+-
++#endif
+ #endif  // SupplicantCallback_H
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.cpp b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.cpp
+index 18e194b9591..09d9384087d 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.cpp
+@@ -188,8 +188,8 @@ Result_t SupplicantStaManager::TearDownInterface() {
+       info.name = mInterfaceName;
+       info.type = SupplicantNameSpaceV1_0::IfaceType::STA;
+ 
+-      GetSupplicantV1_1()->removeInterface(
+-          info, [&](const SupplicantStatus& status) { response = status; });
++      /*GetSupplicantV1_1()->removeInterface(
++          info, [&](const SupplicantStatus& status) { response = status; });*/
+ 
+       if (response.code != SupplicantStatusCode::SUCCESS) {
+         WIFI_LOGE(LOG_TAG, "Failed to remove sta interface");
+@@ -226,41 +226,6 @@ Result_t SupplicantStaManager::GetSupportedFeatures(
+     uint32_t& aSupportedFeatures) {
+   uint32_t capabilities = 0;
+ 
+-  SupplicantStatus response;
+-  if (IsSupplicantV1_2()) {
+-    android::sp<ISupplicantStaIfaceV1_2> supplicantV1_2 =
+-        GetSupplicantStaIfaceV1_2();
+-    if (!supplicantV1_2.get()) {
+-      return nsIWifiResult::ERROR_INVALID_INTERFACE;
+-    }
+-
+-    supplicantV1_2->getKeyMgmtCapabilities(
+-        [&](const SupplicantStatus& status, uint32_t keyMgmtMask) {
+-          capabilities = keyMgmtMask;
+-          response = status;
+-        });
+-
+-    if (response.code != SupplicantStatusCode::SUCCESS) {
+-      return nsIWifiResult::ERROR_COMMAND_FAILED;
+-    }
+-
+-    if (capabilities & ISupplicantStaNetworkV1_2::KeyMgmtMask::SAE) {
+-      // SAE supported
+-      aSupportedFeatures |= nsIWifiResult::FEATURE_WPA3_SAE;
+-    }
+-    if (capabilities & ISupplicantStaNetworkV1_2::KeyMgmtMask::SUITE_B_192) {
+-      // SUITE_B supported
+-      aSupportedFeatures |= nsIWifiResult::FEATURE_WPA3_SUITE_B;
+-    }
+-    if (capabilities & ISupplicantStaNetworkV1_2::KeyMgmtMask::OWE) {
+-      // OWE supported
+-      aSupportedFeatures |= nsIWifiResult::FEATURE_OWE;
+-    }
+-    if (capabilities & ISupplicantStaNetworkV1_2::KeyMgmtMask::DPP) {
+-      // DPP supported
+-      aSupportedFeatures |= nsIWifiResult::FEATURE_DPP;
+-    }
+-  }
+   return nsIWifiResult::SUCCESS;
+ }
+ 
+@@ -405,25 +370,9 @@ Result_t SupplicantStaManager::SetupStaInterface(
+   // Instantiate supplicant callback
+   android::sp<SupplicantStaIfaceCallback> supplicantCallback =
+       new SupplicantStaIfaceCallback(mInterfaceName, mCallback);
+-  if (IsSupplicantV1_2()) {
+-    android::sp<SupplicantStaIfaceCallbackV1_1> supplicantCallbackV1_1 =
+-        new SupplicantStaIfaceCallbackV1_1(mInterfaceName, mCallback,
+-                                           supplicantCallback);
+-    android::sp<SupplicantStaIfaceCallbackV1_2> supplicantCallbackV1_2 =
+-        new SupplicantStaIfaceCallbackV1_2(mInterfaceName, mCallback,
+-                                           supplicantCallbackV1_1);
+-    HIDL_SET(GetSupplicantStaIfaceV1_2(), registerCallback_1_2,
+-             SupplicantStatus, response, supplicantCallbackV1_2);
+-  } else if (IsSupplicantV1_1()) {
+-    android::sp<SupplicantStaIfaceCallbackV1_1> supplicantCallbackV1_1 =
+-        new SupplicantStaIfaceCallbackV1_1(mInterfaceName, mCallback,
+-                                           supplicantCallback);
+-    HIDL_SET(GetSupplicantStaIfaceV1_1(), registerCallback_1_1,
+-             SupplicantStatus, response, supplicantCallbackV1_1);
+-  } else {
+-    HIDL_SET(mSupplicantStaIface, registerCallback, SupplicantStatus, response,
++  
++  HIDL_SET(mSupplicantStaIface, registerCallback, SupplicantStatus, response,
+              supplicantCallback);
+-  }
+ 
+   if (response.code != SupplicantStatusCode::SUCCESS) {
+     WIFI_LOGE(LOG_TAG, "registerCallback failed: %d", response.code);
+@@ -472,8 +421,8 @@ android::sp<ISupplicantStaIface> SupplicantStaManager::AddSupplicantStaIface() {
+   if (FindIfaceOfType(SupplicantNameSpaceV1_0::IfaceType::STA, &info) ==
+       nsIWifiResult::SUCCESS) {
+     // STA interface already exist, remove it to add a new one
+-    GetSupplicantV1_1()->removeInterface(
+-        info, [&](const SupplicantStatus& status) { response = status; });
++    //GetSupplicant()->removeInterface(
++    //    info, [&](const SupplicantStatus& status) { response = status; });
+ 
+     if (response.code != SupplicantStatusCode::SUCCESS) {
+       WIFI_LOGE(LOG_TAG, "Failed to remove exist STA interface");
+@@ -484,7 +433,7 @@ android::sp<ISupplicantStaIface> SupplicantStaManager::AddSupplicantStaIface() {
+   info.type = SupplicantNameSpaceV1_0::IfaceType::STA;
+   android::sp<ISupplicantStaIface> staIface;
+   // Here add a STA interface in supplicant.
+-  GetSupplicantV1_1()->addInterface(
++  GetSupplicant()->getInterface(
+       info, [&](const SupplicantStatus& status,
+                 const android::sp<ISupplicantIface>& iface) {
+         response = status;
+@@ -856,24 +805,6 @@ android::sp<ISupplicant> SupplicantStaManager::GetSupplicant() {
+   return mSupplicant.get() ? mSupplicant : ISupplicant::getService();
+ }
+ 
+-android::sp<ISupplicantV1_1> SupplicantStaManager::GetSupplicantV1_1() {
+-  return ISupplicantV1_1::castFrom(GetSupplicant());
+-}
+-
+-android::sp<ISupplicantV1_2> SupplicantStaManager::GetSupplicantV1_2() {
+-  return ISupplicantV1_2::castFrom(GetSupplicant());
+-}
+-
+-android::sp<ISupplicantStaIfaceV1_1>
+-SupplicantStaManager::GetSupplicantStaIfaceV1_1() {
+-  return ISupplicantStaIfaceV1_1::castFrom(mSupplicantStaIface);
+-}
+-
+-android::sp<ISupplicantStaIfaceV1_2>
+-SupplicantStaManager::GetSupplicantStaIfaceV1_2() {
+-  return ISupplicantStaIfaceV1_2::castFrom(mSupplicantStaIface);
+-}
+-
+ bool SupplicantStaManager::IsSupplicantV1_1() {
+   return SupplicantVersionSupported(SUPPLICANT_INTERFACE_NAME_V1_1);
+ }
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.h b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.h
+index 42e4d66315f..d9ee447115c 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.h
++++ b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaManager.h
+@@ -21,9 +21,9 @@
+ #include <android/hidl/manager/1.0/IServiceNotification.h>
+ #include <android/hardware/wifi/supplicant/1.0/ISupplicantIface.h>
+ #include <android/hardware/wifi/supplicant/1.0/types.h>
+-#include <android/hardware/wifi/supplicant/1.2/ISupplicant.h>
+-#include <android/hardware/wifi/supplicant/1.2/ISupplicantStaIface.h>
+-#include <android/hardware/wifi/supplicant/1.2/ISupplicantP2pIface.h>
++#include <android/hardware/wifi/supplicant/1.0/ISupplicant.h>
++#include <android/hardware/wifi/supplicant/1.0/ISupplicantStaIface.h>
++#include <android/hardware/wifi/supplicant/1.0/ISupplicantP2pIface.h>
+ 
+ #if defined(OLD_DEBUG)
+ #  define DEBUG = OLD_DEBUG
+@@ -50,18 +50,19 @@ using ::android::hardware::wifi::supplicant::V1_0::SupplicantStatusCode;
+ using ::android::hidl::base::V1_0::IBase;
+ using ::android::hidl::manager::V1_0::IServiceManager;
+ 
+-using ISupplicantV1_1 = android::hardware::wifi::supplicant::V1_1::ISupplicant;
+-using ISupplicantV1_2 = android::hardware::wifi::supplicant::V1_2::ISupplicant;
+-using ISupplicantStaIfaceV1_1 =
+-    android::hardware::wifi::supplicant::V1_1::ISupplicantStaIface;
+-using ISupplicantStaIfaceV1_2 =
+-    android::hardware::wifi::supplicant::V1_2::ISupplicantStaIface;
++using ISupplicantV1_0 = android::hardware::wifi::supplicant::V1_0::ISupplicant;
++using ISupplicantV1_0 = android::hardware::wifi::supplicant::V1_0::ISupplicant;
++using ISupplicantStaIfaceV1_0 =
++    android::hardware::wifi::supplicant::V1_0::ISupplicantStaIface;
++using ISupplicantStaIfaceV1_0 =
++   android::hardware::wifi::supplicant::V1_0::ISupplicantStaIface;
+ 
+ namespace SupplicantNameSpaceV1_0 = ::android::hardware::wifi::supplicant::V1_0;
+ 
+ class SupplicantStaManager
+     : virtual public android::hidl::manager::V1_0::IServiceNotification,
+-      virtual public SupplicantNameSpaceV1_0::ISupplicantCallback {
++      virtual public SupplicantNameSpaceV1_0::ISupplicantCallback 
++{
+  public:
+   static SupplicantStaManager* Get();
+   static void CleanUp();
+@@ -171,10 +172,6 @@ class SupplicantStaManager
+ 
+   android::sp<IServiceManager> GetServiceManager();
+   android::sp<ISupplicant> GetSupplicant();
+-  android::sp<ISupplicantV1_1> GetSupplicantV1_1();
+-  android::sp<ISupplicantV1_2> GetSupplicantV1_2();
+-  android::sp<ISupplicantStaIfaceV1_1> GetSupplicantStaIfaceV1_1();
+-  android::sp<ISupplicantStaIfaceV1_2> GetSupplicantStaIfaceV1_2();
+ 
+   bool IsSupplicantV1_1();
+   bool IsSupplicantV1_2();
+@@ -184,7 +181,7 @@ class SupplicantStaManager
+   android::sp<ISupplicantStaIface> AddSupplicantStaIface();
+   android::sp<ISupplicantP2pIface> GetSupplicantP2pIface();
+   Result_t FindIfaceOfType(SupplicantNameSpaceV1_0::IfaceType aDesired,
+-                           ISupplicant::IfaceInfo* aInfo);
++                         ISupplicant::IfaceInfo* aInfo);
+ 
+   bool CompareConfiguration(const NetworkConfiguration& aOld,
+                             const NetworkConfiguration& aNew);
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.cpp b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.cpp
+index 0be53910a65..f1ed3246389 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.cpp
+@@ -26,6 +26,7 @@ constexpr uint32_t key_mgmt_osen =
+     (ISupplicantStaNetwork::KeyMgmtMask::OSEN | 0x0);
+ 
+ // key management supported on 1.2
++#if 0
+ constexpr uint32_t key_mgmt_wpa_eap_sha256 =
+     (ISupplicantStaNetworkV1_2::KeyMgmtMask::WPA_EAP_SHA256 | 0x0);
+ constexpr uint32_t key_mgmt_wpa_psk_sha256 =
+@@ -38,7 +39,7 @@ constexpr uint32_t key_mgmt_owe =
+     (ISupplicantStaNetworkV1_2::KeyMgmtMask::OWE | 0x0);
+ constexpr uint32_t key_mgmt_dpp =
+     (ISupplicantStaNetworkV1_2::KeyMgmtMask::DPP | 0x0);
+-
++#endif
+ constexpr uint32_t protocol_wpa = (ISupplicantStaNetwork::ProtoMask::WPA | 0x0);
+ constexpr uint32_t protocol_rsn = (ISupplicantStaNetwork::ProtoMask::RSN | 0x0);
+ constexpr uint32_t protocol_osen =
+@@ -88,7 +89,7 @@ SupplicantStaNetwork::~SupplicantStaNetwork() {}
+ /**
+  * Hal wrapper functions
+  */
+-android::sp<ISupplicantStaNetworkV1_1>
++/*android::sp<ISupplicantStaNetworkV1_1>
+ SupplicantStaNetwork::GetSupplicantStaNetworkV1_1() {
+   return ISupplicantStaNetworkV1_1::castFrom(mNetwork);
+ }
+@@ -96,7 +97,7 @@ SupplicantStaNetwork::GetSupplicantStaNetworkV1_1() {
+ android::sp<ISupplicantStaNetworkV1_2>
+ SupplicantStaNetwork::GetSupplicantStaNetworkV1_2() {
+   return ISupplicantStaNetworkV1_2::castFrom(mNetwork);
+-}
++}*/
+ 
+ /**
+  * Set configurations to supplicant.
+@@ -141,11 +142,7 @@ Result_t SupplicantStaNetwork::SetConfiguration(
+   if (!config.mPsk.empty()) {
+     if (config.mPsk.front() == '"' && config.mPsk.back() == '"') {
+       Dequote(config.mPsk);
+-      if (keyMgmtMask & key_mgmt_sae) {
+-        stateCode = SetSaePassword(config.mPsk);
+-      } else {
+-        stateCode = SetPassphrase(config.mPsk);
+-      }
++      stateCode = SetPassphrase(config.mPsk);
+     } else {
+       stateCode = SetPsk(config.mPsk);
+     }
+@@ -386,18 +383,8 @@ SupplicantStatusCode SupplicantStaNetwork::SetKeyMgmt(uint32_t aKeyMgmtMask) {
+   MOZ_ASSERT(mNetwork);
+   WIFI_LOGD(LOG_TAG, "key_mgmt => %d", aKeyMgmtMask);
+ 
+-  android::sp<ISupplicantStaNetworkV1_2> networkV1_2 =
+-      GetSupplicantStaNetworkV1_2();
+-
+   SupplicantStatus response;
+   HIDL_SET(mNetwork, setKeyMgmt, SupplicantStatus, response, aKeyMgmtMask);
+-  if (networkV1_2.get()) {
+-    // Use HAL V1.2 if supported.
+-    HIDL_SET(networkV1_2, setKeyMgmt_1_2, SupplicantStatus, response,
+-             aKeyMgmtMask);
+-  } else {
+-    HIDL_SET(mNetwork, setKeyMgmt, SupplicantStatus, response, aKeyMgmtMask);
+-  }
+ 
+   WIFI_LOGD(LOG_TAG, "set key_mgmt return: %s",
+             ConvertStatusToString(response.code).c_str());
+@@ -407,18 +394,8 @@ SupplicantStatusCode SupplicantStaNetwork::SetKeyMgmt(uint32_t aKeyMgmtMask) {
+ SupplicantStatusCode SupplicantStaNetwork::SetSaePassword(
+     const std::string& aSaePassword) {
+   MOZ_ASSERT(mNetwork);
+-  WIFI_LOGD(LOG_TAG, "sae => %s", aSaePassword.c_str());
+-
+-  android::sp<ISupplicantStaNetworkV1_2> networkV1_2 =
+-      GetSupplicantStaNetworkV1_2();
+-
+-  if (!networkV1_2.get()) {
+-    return SupplicantStatusCode::FAILURE_NETWORK_INVALID;
+-  }
+ 
+   SupplicantStatus response;
+-  HIDL_SET(networkV1_2, setPskPassphrase, SupplicantStatus, response,
+-           aSaePassword);
+   WIFI_LOGD(LOG_TAG, "set psk return: %s",
+             ConvertStatusToString(response.code).c_str());
+   return response.code;
+@@ -1028,7 +1005,7 @@ SupplicantStatusCode SupplicantStaNetwork::GetKeyMgmt(
+   SupplicantStatus response;
+   mNetwork->getKeyMgmt(
+       [&](const SupplicantStatus& status,
+-          hidl_bitfield<ISupplicantStaNetwork::KeyMgmtMask> keyMgmtMask) {
++          uint32_t keyMgmtMask) {
+         response = status;
+         aKeyMgmtMask = (uint32_t)keyMgmtMask;
+       });
+@@ -1067,24 +1044,6 @@ uint32_t SupplicantStaNetwork::ConvertKeyMgmtToMask(
+   if (aKeyMgmt.compare("OSEN") == 0) {
+     mask |= key_mgmt_osen;
+   }
+-  if (aKeyMgmt.compare("WPA-EAP-SHA256") == 0) {
+-    mask |= key_mgmt_wpa_eap_sha256;
+-  }
+-  if (aKeyMgmt.compare("WPA-PSK-SHA256") == 0) {
+-    mask |= key_mgmt_wpa_psk_sha256;
+-  }
+-  if (aKeyMgmt.compare("SAE") == 0) {
+-    mask |= key_mgmt_sae;
+-  }
+-  if (aKeyMgmt.compare("SUITE-B-192") == 0) {
+-    mask |= key_mgmt_suite_b_192;
+-  }
+-  if (aKeyMgmt.compare("OWE") == 0) {
+-    mask |= key_mgmt_owe;
+-  }
+-  if (aKeyMgmt.compare("DPP") == 0) {
+-    mask |= key_mgmt_dpp;
+-  }
+   return mask;
+ }
+ 
+diff --git a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.h b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.h
+index e87a5d16b5e..7a61fa2274f 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.h
++++ b/LINUX/android/gecko/dom/wifi/hal/SupplicantStaNetwork.h
+@@ -12,7 +12,7 @@
+ #include <string.h>
+ #include <android/hardware/wifi/supplicant/1.0/ISupplicantNetwork.h>
+ #include <android/hardware/wifi/supplicant/1.0/types.h>
+-#include <android/hardware/wifi/supplicant/1.2/ISupplicantStaNetwork.h>
++#include <android/hardware/wifi/supplicant/1.0/ISupplicantStaNetwork.h>
+ 
+ #include "mozilla/Mutex.h"
+ 
+@@ -23,10 +23,10 @@ using ::android::hardware::wifi::supplicant::V1_0::
+ using ::android::hardware::wifi::supplicant::V1_0::SupplicantStatus;
+ using ::android::hardware::wifi::supplicant::V1_0::SupplicantStatusCode;
+ 
+-using ISupplicantStaNetworkV1_1 =
+-    ::android::hardware::wifi::supplicant::V1_1::ISupplicantStaNetwork;
+-using ISupplicantStaNetworkV1_2 =
+-    ::android::hardware::wifi::supplicant::V1_2::ISupplicantStaNetwork;
++//using ISupplicantStaNetworkV1_1 =
++    //::android::hardware::wifi::supplicant::V1_1::ISupplicantStaNetwork;
++//using ISupplicantStaNetworkV1_2 =
++    //::android::hardware::wifi::supplicant::V1_2::ISupplicantStaNetwork;
+ 
+ using RequestGsmAuthParams =
+     ISupplicantStaNetworkCallback::NetworkRequestEapSimGsmAuthParams;
+@@ -166,7 +166,8 @@ class NetworkConfiguration {
+ class SupplicantStaNetwork
+     : virtual public android::RefBase,
+       virtual public android::hardware::wifi::supplicant::V1_0::
+-          ISupplicantStaNetworkCallback {
++         ISupplicantStaNetworkCallback 
++{
+  public:
+   explicit SupplicantStaNetwork(
+       const std::string& aInterfaceName,
+@@ -191,8 +192,8 @@ class SupplicantStaNetwork
+  private:
+   virtual ~SupplicantStaNetwork();
+ 
+-  android::sp<ISupplicantStaNetworkV1_1> GetSupplicantStaNetworkV1_1();
+-  android::sp<ISupplicantStaNetworkV1_2> GetSupplicantStaNetworkV1_2();
++//  android::sp<ISupplicantStaNetworkV1_1> GetSupplicantStaNetworkV1_1();
++ // android::sp<ISupplicantStaNetworkV1_2> GetSupplicantStaNetworkV1_2();
+ 
+   //..................... ISupplicantStaNetworkCallback ......................./
+   /**
+diff --git a/LINUX/android/gecko/dom/wifi/hal/WifiCommon.h b/LINUX/android/gecko/dom/wifi/hal/WifiCommon.h
+index 1a1ef2a40a7..1be85f2e8a3 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/WifiCommon.h
++++ b/LINUX/android/gecko/dom/wifi/hal/WifiCommon.h
+@@ -461,7 +461,7 @@ void Dequote(std::string& s);
+ 
+ #define INVOKE_CALLBACK(callback, event, interface) \
+   do {                                              \
+-    if (callback) {                                 \
++    if (callback != nullptr) {                                 \
+       callback->Notify(event, interface);           \
+     }                                               \
+   } while (0)
+diff --git a/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.cpp b/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.cpp
+index a61260da576..f543bfe09f9 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.cpp
+@@ -542,7 +542,7 @@ Result_t WifiHal::GetVendorCapabilities() {
+   if (mWifiChip != nullptr) {
+     mWifiChip->getCapabilities(
+         [&](const WifiStatus& status,
+-            hidl_bitfield<ChipCapabilityMask> capabilities) {
++            uint32_t capabilities) {
+           response = status;
+           chipCapas = capabilities;
+         });
+@@ -550,7 +550,7 @@ Result_t WifiHal::GetVendorCapabilities() {
+     if (mStaIface != nullptr) {
+       mStaIface->getCapabilities(
+           [&](const WifiStatus& status,
+-              hidl_bitfield<StaIfaceCapabilityMask> capabilities) {
++              uint32_t capabilities) {
+             response = status;
+             staCapas = capabilities;
+           });
+@@ -632,11 +632,11 @@ Return<void> WifiHal::onDebugErrorAlert(int32_t errorCode,
+   return android::hardware::Void();
+ }
+ 
+-Return<void> WifiHal::onRadioModeChange(
++/*Return<void> WifiHal::onRadioModeChange(
+     const hidl_vec<IWifiChipEventCallback::RadioModeInfo>& radioModeInfos) {
+   WIFI_LOGD(LOG_TAG, "WifiChipEventCallback.onRadioModeChange()");
+   return android::hardware::Void();
+-}
++}*/
+ 
+ /**
+  * IWifiStaIfaceEventCallback implementation
+diff --git a/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.h b/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.h
+index a8fab818fc0..e57a54483e2 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.h
++++ b/LINUX/android/gecko/dom/wifi/hal/WifiHalManager.h
+@@ -20,8 +20,8 @@
+ #include <android/hardware/wifi/1.0/IWifiChip.h>
+ #include <android/hardware/wifi/1.0/IWifiStaIface.h>
+ #include <android/hardware/wifi/1.0/IWifiEventCallback.h>
+-#include <android/hardware/wifi/1.2/IWifiChipEventCallback.h>
+-#include <android/hardware/wifi/1.3/types.h>
++#include <android/hardware/wifi/1.0/IWifiChipEventCallback.h>
++#include <android/hardware/wifi/1.0/types.h>
+ #include <unordered_map>
+ 
+ #include "mozilla/Mutex.h"
+@@ -29,7 +29,7 @@
+ #define START_HAL_RETRY_TIMES 3
+ 
+ using ::android::hardware::hidl_array;
+-using ::android::hardware::hidl_bitfield;
++//using ::android::hardware::hidl_bitfield;
+ using ::android::hardware::hidl_death_recipient;
+ using ::android::hardware::hidl_string;
+ using ::android::hardware::hidl_vec;
+@@ -49,7 +49,7 @@ using ::android::hardware::wifi::V1_0::StaScanResult;
+ using ::android::hardware::wifi::V1_0::WifiDebugRingBufferStatus;
+ using ::android::hardware::wifi::V1_0::WifiStatus;
+ using ::android::hardware::wifi::V1_0::WifiStatusCode;
+-using ::android::hardware::wifi::V1_2::IWifiChipEventCallback;
++using ::android::hardware::wifi::V1_0::IWifiChipEventCallback;
+ using ::android::hidl::base::V1_0::IBase;
+ 
+ namespace wifiNameSpaceV1_0 = ::android::hardware::wifi::V1_0;
+@@ -58,7 +58,8 @@ class WifiHal
+     : virtual public android::hidl::manager::V1_0::IServiceNotification,
+       virtual public android::hardware::wifi::V1_0::IWifiEventCallback,
+       virtual public android::hardware::wifi::V1_0::IWifiStaIfaceEventCallback,
+-      virtual public android::hardware::wifi::V1_2::IWifiChipEventCallback {
++      virtual public android::hardware::wifi::V1_0::IWifiChipEventCallback 
++{
+  public:
+   static WifiHal* Get();
+   static void CleanUp();
+@@ -193,9 +194,9 @@ class WifiHal
+    * @param radioModeInfos List of RadioModeInfo structures for each
+    * radio chain (hardware MAC) on the device.
+    */
+-  Return<void> onRadioModeChange(
++  /*Return<void> onRadioModeChange(
+       const hidl_vec<IWifiChipEventCallback::RadioModeInfo>& radioModeInfos)
+-      override;
++      override;*/
+ 
+   //.................... IWifiStaIfaceEventCallback ....................../
+   /**
+diff --git a/LINUX/android/gecko/dom/wifi/hal/WifiNative.cpp b/LINUX/android/gecko/dom/wifi/hal/WifiNative.cpp
+index d4d9d83805f..4c2d4bc3900 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/WifiNative.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/WifiNative.cpp
+@@ -405,10 +405,10 @@ Result_t WifiNative::StopWifi() {
+     return result;
+   }
+ 
+-  if (mScanEventService) {
++  if (mScanEventService != nullptr) {
+     mScanEventService->UnregisterEventCallback();
+   }
+-  if (mPnoScanEventService) {
++  if (mPnoScanEventService != nullptr) {
+     mPnoScanEventService->UnregisterEventCallback();
+   }
+ 
+@@ -705,7 +705,7 @@ Result_t WifiNative::StartSoftAp(SoftapConfigurationOptions* aSoftapConfig,
+     return result;
+   }
+ 
+-  mSoftapEventService = SoftapEventService::CreateService(mApInterfaceName);
++ // mSoftapEventService = SoftapEventService::CreateService(mApInterfaceName);
+   if (mSoftapEventService == nullptr) {
+     WIFI_LOGE(LOG_TAG, "Failed to create softap event service");
+     return nsIWifiResult::ERROR_COMMAND_FAILED;
+@@ -714,7 +714,7 @@ Result_t WifiNative::StartSoftAp(SoftapConfigurationOptions* aSoftapConfig,
+ 
+   result = sWificondControl->SetupApIface(
+       mApInterfaceName,
+-      android::interface_cast<android::net::wifi::IApInterfaceEventCallback>(
++      android::interface_cast<android::net::wifi::IInterfaceEventCallback>(
+           mSoftapEventService));
+   if (result != nsIWifiResult::SUCCESS) {
+     WIFI_LOGE(LOG_TAG, "Failed to setup softap iface in wificond");
+@@ -760,7 +760,7 @@ Result_t WifiNative::StopSoftAp() {
+     return result;
+   }
+ 
+-  if (mSoftapEventService) {
++  if (mSoftapEventService != nullptr) {
+     mSoftapEventService->UnregisterEventCallback();
+   }
+ 
+diff --git a/LINUX/android/gecko/dom/wifi/hal/WificondControl.cpp b/LINUX/android/gecko/dom/wifi/hal/WificondControl.cpp
+index c198b3688d6..06eb85e1dd6 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/WificondControl.cpp
++++ b/LINUX/android/gecko/dom/wifi/hal/WificondControl.cpp
+@@ -22,7 +22,7 @@ using ::android::defaultServiceManager;
+ using ::android::IBinder;
+ using ::android::interface_cast;
+ using ::android::String16;
+-using ::android::net::wifi::IApInterfaceEventCallback;
++using ::android::net::wifi::IInterfaceEventCallback;
+ using ::android::net::wifi::IPnoScanEvent;
+ using ::android::net::wifi::IScanEvent;
+ 
+@@ -128,7 +128,7 @@ Result_t WificondControl::TearDownClientInterface(
+     mScanner->unsubscribePnoScanEvents();
+   }
+ 
+-  bool success = false;
++  /*bool success = false;
+   if (!mWificond->tearDownClientInterface(aIfaceName, &success).isOk()) {
+     WIFI_LOGE(LOG_TAG,
+               "Failed to teardown client interface due to remote exception");
+@@ -138,7 +138,7 @@ Result_t WificondControl::TearDownClientInterface(
+   if (!success) {
+     WIFI_LOGE(LOG_TAG, "Failed to teardown client interface");
+     return nsIWifiResult::ERROR_COMMAND_FAILED;
+-  }
++  }*/
+ 
+   mWificond = nullptr;
+   mClientInterface = nullptr;
+@@ -153,7 +153,7 @@ Result_t WificondControl::TearDownSoftapInterface(
+     return nsIWifiResult::ERROR_INVALID_INTERFACE;
+   }
+ 
+-  bool success = false;
++  /*bool success = false;
+   if (!mWificond->tearDownApInterface(aIfaceName, &success).isOk()) {
+     WIFI_LOGE(LOG_TAG,
+               "Failed to teardown ap interface due to remote exception");
+@@ -163,7 +163,7 @@ Result_t WificondControl::TearDownSoftapInterface(
+   if (!success) {
+     WIFI_LOGE(LOG_TAG, "Failed to teardown ap interface");
+     return nsIWifiResult::ERROR_COMMAND_FAILED;
+-  }
++  }*/
+ 
+   mApInterface = nullptr;
+   return nsIWifiResult::SUCCESS;
+@@ -226,7 +226,7 @@ Result_t WificondControl::SetupClientIface(
+     return result;
+   }
+ 
+-  if (!mWificond->createClientInterface(aIfaceName, &mClientInterface).isOk()) {
++  if (!mWificond->createClientInterface(&mClientInterface).isOk()) {
+     WIFI_LOGE(LOG_TAG, "Failed to create client interface");
+     return nsIWifiResult::ERROR_COMMAND_FAILED;
+   }
+@@ -248,7 +248,7 @@ Result_t WificondControl::SetupClientIface(
+ 
+ Result_t WificondControl::SetupApIface(
+     const std::string& aIfaceName,
+-    const android::sp<IApInterfaceEventCallback>& aApCallback) {
++    const android::sp<IInterfaceEventCallback>& aApCallback) {
+   Result_t result = nsIWifiResult::ERROR_UNKNOWN;
+ 
+   result = InitWificondInterface();
+@@ -256,14 +256,15 @@ Result_t WificondControl::SetupApIface(
+     return result;
+   }
+ 
+-  if (!mWificond->createApInterface(aIfaceName, &mApInterface).isOk()) {
++  if (!mWificond->createApInterface(&mApInterface).isOk()) {
+     WIFI_LOGE(LOG_TAG, "Failed to create ap interface");
+     return nsIWifiResult::ERROR_COMMAND_FAILED;
+   }
+ 
+   bool success = false;
+-  mApInterface->registerCallback(aApCallback, &success);
+-  return CHECK_SUCCESS(success);
++  /*mApInterface->registerCallback(aApCallback, &success);
++  return CHECK_SUCCESS(success);*/
++  return nsIWifiResult::SUCCESS;
+ }
+ 
+ Result_t WificondControl::StartSingleScan(ScanSettingsOptions* aScanSettings) {
+@@ -272,7 +273,7 @@ Result_t WificondControl::StartSingleScan(ScanSettingsOptions* aScanSettings) {
+     return nsIWifiResult::ERROR_INVALID_INTERFACE;
+   }
+   Wificond::SingleScanSettings settings;
+-  settings.scan_type_ = aScanSettings->mScanType;
++  //settings.scan_type_ = aScanSettings->mScanType;
+ 
+   std::vector<Wificond::ChannelSettings> channels;
+   for (auto& freq : aScanSettings->mChannels) {
+@@ -331,7 +332,7 @@ Result_t WificondControl::StartPnoScan(
+       network.ssid_ = ssid;
+ 
+       for (int32_t freq : pno.mFrequencies) {
+-        network.frequencies_.push_back(freq);
++        //network.frequencies_.push_back(freq);
+       }
+       pnoNetworks.push_back(network);
+     }
+@@ -390,17 +391,17 @@ Result_t WificondControl::GetChannelsForBand(uint32_t aBandMask,
+ 
+   std::unique_ptr<std::vector<int32_t>> channels;
+   if (aBandMask & nsIScanSettings::BAND_2_4_GHZ) {
+-    mWificond->getAvailable2gChannels(&channels);
++    //mWificond->getAvailable2gChannels(&channels);
+     aChannels.insert(aChannels.end(), (*channels).begin(), (*channels).end());
+   }
+ 
+   if (aBandMask & nsIScanSettings::BAND_5_GHZ) {
+-    mWificond->getAvailable5gNonDFSChannels(&channels);
++    //mWificond->getAvailable5gNonDFSChannels(&channels);
+     aChannels.insert(aChannels.end(), (*channels).begin(), (*channels).end());
+   }
+ 
+   if (aBandMask & nsIScanSettings::BAND_5_GHZ_DFS) {
+-    mWificond->getAvailable5gNonDFSChannels(&channels);
++    //mWificond->getAvailable5gNonDFSChannels(&channels);
+     aChannels.insert(aChannels.end(), (*channels).begin(), (*channels).end());
+   }
+   return nsIWifiResult::SUCCESS;
+diff --git a/LINUX/android/gecko/dom/wifi/hal/WificondControl.h b/LINUX/android/gecko/dom/wifi/hal/WificondControl.h
+index 13609db9480..d15d6519f16 100644
+--- a/LINUX/android/gecko/dom/wifi/hal/WificondControl.h
++++ b/LINUX/android/gecko/dom/wifi/hal/WificondControl.h
+@@ -41,7 +41,7 @@ class WificondControl : virtual public android::RefBase {
+       const android::sp<android::net::wifi::IPnoScanEvent>& aPnoScanCallback);
+   Result_t SetupApIface(
+       const std::string& aIfaceName,
+-      const android::sp<android::net::wifi::IApInterfaceEventCallback>&
++      const android::sp<android::net::wifi::IInterfaceEventCallback>&
+           aApCallback);
+   Result_t StartSoftap(ConfigurationOptions* aConfig);
+   Result_t StartSingleScan(ScanSettingsOptions* aScanSettings);
+diff --git a/LINUX/android/gecko/dom/wifi/moz.build b/LINUX/android/gecko/dom/wifi/moz.build
+index 975b09ec5bc..27e5d327859 100644
+--- a/LINUX/android/gecko/dom/wifi/moz.build
++++ b/LINUX/android/gecko/dom/wifi/moz.build
+@@ -78,14 +78,8 @@ if not CONFIG['DISABLE_WIFI']:
+           '%' + '%s/%s' % (CONFIG['GONK_PATH'], d) for d in [
+               'out/soong/.intermediates/hardware/interfaces/wifi/1.0/android.hardware.wifi@1.0_genc++_headers/gen',
+               'out/soong/.intermediates/hardware/interfaces/wifi/1.1/android.hardware.wifi@1.1_genc++_headers/gen',
+-              'out/soong/.intermediates/hardware/interfaces/wifi/1.2/android.hardware.wifi@1.2_genc++_headers/gen',
+-              'out/soong/.intermediates/hardware/interfaces/wifi/1.3/android.hardware.wifi@1.3_genc++_headers/gen',
+-              'out/soong/.intermediates/hardware/interfaces/wifi/hostapd/1.0/android.hardware.wifi.hostapd@1.0_genc++_headers/gen',
+-              'out/soong/.intermediates/hardware/interfaces/wifi/hostapd/1.1/android.hardware.wifi.hostapd@1.1_genc++_headers/gen',
+               'out/soong/.intermediates/hardware/interfaces/wifi/supplicant/1.0/android.hardware.wifi.supplicant@1.0_genc++_headers/gen',
+-              'out/soong/.intermediates/hardware/interfaces/wifi/supplicant/1.1/android.hardware.wifi.supplicant@1.1_genc++_headers/gen',
+-              'out/soong/.intermediates/hardware/interfaces/wifi/supplicant/1.2/android.hardware.wifi.supplicant@1.2_genc++_headers/gen',
+-              'out/soong/.intermediates/system/connectivity/wificond/libwificond_ipc/android_%s_core_static/gen/aidl' % CONFIG['TARGET_ARCH_NAME'],
++              'out/target/product/msm8909/obj/STATIC_LIBRARIES/libwificond_ipc_intermediates/aidl-generated/include',
+               'system/connectivity',
+           ]
+       ]
+diff --git a/LINUX/android/gecko/mozconfig-b2g b/LINUX/android/gecko/mozconfig-b2g
+index bc542633340..33e9ee50ab2 100644
+--- a/LINUX/android/gecko/mozconfig-b2g
++++ b/LINUX/android/gecko/mozconfig-b2g
+@@ -103,7 +103,6 @@ fi
+ 
+ ac_add_options --disable-b2g-camera
+ ac_add_options --disable-b2g-bt
+-ac_add_options --disable-wifi-support
+ 
+ ac_add_options --with-gnss1.0-so="$SYS_LIB/android.hardware.gnss@1.0.so"
+ if [ $PLATFORM_VERSION -ge 29 ]; then
+@@ -126,7 +125,7 @@ ac_add_options --with-hostapd-1.1-so=
+ ac_add_options --with-supplicant-1.0-so="$SYS_LIB/android.hardware.wifi.supplicant@1.0.so"
+ ac_add_options --with-supplicant-1.1-so=
+ ac_add_options --with-supplicant-1.2-so=
+-ac_add_options --with-wificond-so=
++ac_add_options --with-wificond-so="$SYS_LIB/libwificond_ipc.so"
+ ac_add_options --with-binder-b2g-connectivity-so=
+ ac_add_options --with-binder-b2g-telephony-so=
+ ac_add_options --with-vold-so=
