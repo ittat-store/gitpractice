@@ -1,0 +1,43 @@
+>> Download method :
+(initial  base packages )
+https://drive.google.com/drive/folders/1GWB6mLcpTx_EbevbIo7JN_Mos8Qga9zI?usp=sharing                 (part1  ,include  xaa xab xac  )
+https://drive.google.com/drive/folders/1WbgP6Ys4RmmRDmMQIvvXErA3_CR0aaOt?usp=sharing            (part2  , include xdd)
+please download  xaa xab xac xad from above link , and put together ,
+uner  ubuntu:
+
+
+execute   cat  x* > RIL_JioOS_20200615.tar.xz
+
+
+extract RIL_JioOS_20200615.tar.xz
+3   in current directory there will be a .git directory .
+execute git checkout share/SPF/2.0/main/RIL_JioOS_20200615  to  release code to current directory ,  the code is latest  (commit 04b231eaea552be0685ee470347e74ded705044e)
+
+
+>> Build Step :
+
+
+cd   LA.UM.8.6.2/LINUX/android/
+source build/envsetup.sh
+lunch  msm8937_32go_Smartphone_RAM1G-userdebug
+make -jn
+after build finished .  you can  go to root dir of source code , execute: below command to pack fastboot flashable image to a zip
+./pack_all_QM215.sh    （generate a package that contain  system.img   vendor.img boot.img dtbo.img   ）
+images will be at  source_root/pub/LYF_LS-5035_001_0101_310820_i_userdebug_fastboot  after pack
+SW Flash steps：
+
+
+has a phone already flashed (LYF_LS-5035_001_0101_310820_i_userdebug_signed) from bluebank .
+
+
+disabled verity   with  command " adb disable-verity"
+
+
+execute  FASTBOOTdownload.bat   under  source_root/pub/LYF_LS-5035_001_0101_310820_i_userdebug_fastboot
+to flash  system.img   vendor.img boot.img dtbo.img
+
+>>  or just flash single image  by execute  fastboot flash  ... command
+note :  if you flashed your own vendor.img , you also need to flash your  boot.img   vice versa , because some audio related ko is in vendor.img.
+SW Image Download  Link  (LYF_LS-5035_001_0101_310820_i_userdebug_signed)
+https://we.tl/t-2me0A4MZBd    (Pleae note  after flashed this sw , device will be secure boot enabled .)
+below accounts have access permission for bluebank gerrit server

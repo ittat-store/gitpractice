@@ -473,6 +473,14 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1507074 ................. this is b
 
 https://leanpub.com/gaiafromabove/read#leanpub-auto-booting-path  ........................ b2g booting path
 ........................................................................................................................
+
+example to search monkey string in  only particluar .mk or .txt files then use below command 
+( at end ./ used for current directory you are searching not necessary) 
+grep -nri --include=\*.mk 'monkey' ./  
+
+
+
+
 To search for multiple strings
 
 grep  -wi 'string1 \ | string2 '  filename.
@@ -532,3 +540,28 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1636085   ............ most imp for
 
  https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API ............. b2g os apis
 ..............................................................................................
+
+
+
+https://plnkr.co/edit/?p=preview    for launcher app.... clock.js file checking output
+
+.................................................................................
+For <No available sessions on this server> no machine error : 
+solution is below :::
+
+
+sudo /etc/NX/nxserver --restart
+or 
+sudo /etc/NX/nxserver status
+sudo /etc/NX/nxserver stop
+sudo /etc/NX/nxserver start
+..............................................................
+Terminal commands 
+
+Press Esc + gg : Go to top the file
+Esc + G : Go to bottom of the file
+Esc + A + $ : Go to bottom of the file and end of line.
+esc line number + G  to go particular line number
+
+...................................................................
+
