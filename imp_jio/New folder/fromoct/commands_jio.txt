@@ -36,7 +36,7 @@ git apply pathname ....... here the changes are not commited ...( it is used whe
 
 git apply --reject patchilename 
 
-patch p1 < patchfilename 
+patch -p1 < patchfilename 
 .........................................................................
 for taking internal logs of device 
 

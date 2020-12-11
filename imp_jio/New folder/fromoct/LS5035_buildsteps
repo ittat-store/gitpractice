@@ -1,0 +1,11 @@
+Please go through the following link https://source.android.com/setup/build/gsi
+and sync the GSI code using the commands.
+
+$ repo init -u https://android.googlesource.com/platform/manifest -b android10-gsi
+$ repo sync -cq
+
+................................................................................................
+
+git clone http://192.168.2.50:1800/vlab/quoin/nub/LS5035/SDM429.git -b RIL_JIOOS_LS5035_DEV
+
+.........................................................................................................
