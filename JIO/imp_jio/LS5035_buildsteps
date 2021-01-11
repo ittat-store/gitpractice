@@ -14,7 +14,24 @@ extract RIL_JioOS_20200615.tar.xz
 execute git checkout share/SPF/2.0/main/RIL_JioOS_20200615  to  release code to current directory ,  the code is latest  (commit 04b231eaea552be0685ee470347e74ded705044e)
 
 
->> Build Step :
+>> Build Step :  From here imp to us ...above for SCM team 
+
+Below for LS5035_CAF code clone command  ( Not builded this code jst this changes ported into GSI code)
+
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+
+chmod a+x ~/bin/repo
+
+rm -rf ~/.repoconfig/
+repo init
+
+after this run the commands
+$ repo init -u http://source.codeaurora.org/quic/la/platform/manifest -b release -m LA.UM.8.6.2.r1-07600-89xx.0.xml --repo-url=git://codeaurora.org/tools/repo.git --repo-branch=caf-stable  
+$ repo sync 
+
+>> Below link for LS5035_BB code 
+
+git clone http://192.168.2.50:1800/vlab/quoin/nub/LS5035/SDM429.git -b RIL_JIOOS_LS5035_DEV
 
 
 cd   LA.UM.8.6.2/LINUX/android/

@@ -1,0 +1,21 @@
+https://source.android.com/setup/develop/repo  ............................. (about repo )
+
+
+https://wladimir-tm4pda.github.io/source/git-repo.html  ......................... (about repo )
+
+
+http://blog.udinic.com/2014/05/24/aosp-part-1-get-the-code-using-the-manifest-and-repo/           ............ (about repo )
+
+https://wiki.codeaurora.org/xwiki/bin/QAEP/ ........................... ( For code downloading )
+
+https://source.android.com/setup/build/building#choose-a-target  .......... ( build setup)
+
+https://source.android.com/setup/build/gsi        ................ GSI ( generic system image )
+
+https://www.e-consystems.com/blog/system-on-module-SOM/android-hal-and-device-driver-architecture/                ............... (about HAL 
+
+check below URL's for what purpose
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1588233 
+https://phabricator.services.mozilla.com/D52932 
+https://www.khronos.org/registry/OpenGL/extensions/OES/OES_EGL_image_external.txt  

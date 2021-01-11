@@ -1,7 +1,3 @@
-git format-patch -1 <commit_sha>        create pacth for specific commit
-
-
-
 
 to check ubuntu version using linux commands
 
@@ -34,6 +30,8 @@ git am --show-current-patch ................. to show the current patchs
 ...............................................................................
 
 git format-patch HEAD -1 ...... for patch creating
+
+git format-patch -1 <commit_sha>  ......      create pacth for specific commit
 
 or
 To create patch for our commit id 
@@ -91,7 +89,9 @@ to check the ongoing build status use below command
 
 make -j4 &> build.log (build.log is file name)
 
-tail -f build.log
+tail -f build.log in another terminal 
+or 
+make -j4 2>&1 | tee build.txt .. it is best command 
 ...................................................................................................
 for taking scrennshot of particular area
 
@@ -499,7 +499,7 @@ grep -nri --include=\*.mk 'monkey' ./
 
 To search for multiple strings
 
-grep  -wi 'string1 \ | string2 '  filename.
+grep  -wi 'string1\| string2 '  filename. ( no space )
 
 to search multiple words same like give backslash symbols
 
@@ -572,7 +572,7 @@ sudo /etc/NX/nxserver status
 sudo /etc/NX/nxserver stop
 sudo /etc/NX/nxserver start
 ..............................................................
-Terminal commands 
+linux Terminal commands 
 
 Press Esc + gg : Go to top the file
 Esc + G : Go to bottom of the file
@@ -595,4 +595,64 @@ if any FTP and SFTP issues then goto File in left corner and goto general settin
 nxt to upload any file gave path in local site and remote path nxt right click on local side and click upload 
 if needdownlaod then remote side rightclick and click download option
 ...................................................................
+
+>> sudo apt-get install libxml-parser-perl  for modem failure issues 
+
+For node js and yarn 
+>> sudo apt install nodejs-legacy ,  for node js check node -v 
+>> sudo apt install npm
+>> if yarn -v then error like 
+
+/usr/share/yarn/lib/cli.js:46100
+  let {
+      ^
+>> The above error is caused by the old version of nodejs (usually lower than v6).
+First install the latest stable version of nodejs or more recent version than you are using now
+
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+
+## Run `sudo apt-get install -y nodejs` to install Node.js 14.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+>> sudo npm install npm -g to update npm
+>> To change to particular node version use 
+
+$node -v
+$sudo npm install -g n
+$sudo n 8.17.0  (like want 8.17.0 version)
+
+or 
+
+To chnage node.js version
+https://www.geeksforgeeks.org/how-to-install-the-previous-version-of-node-js-and-npm/    ..... link URL
+
+sudo  apt-get install nodejs=8.17.0-1chl1~precise1
+error :  E: Version '8.17.0-1chl1~precise1' for 'nodejs' was not found
+
+but this above one not worked
+...................................................................................................................
+https://www.digitalocean.com/community/tutorials/how-to-build-android-roms-on-ubuntu-16-04                         ..... repo dependencies
+...........................................................
+ls | wc -l
+
+to find number of files present in directory
+......................................................................................
+use below command to apply the patch. In case of any errors  .rej files are created in the specified directory, we need to apply the modification to the file manually.
+
+Below commit used when git apply and git am command not worked.(and patches is taken from different baselines)
+$ git apply --reject -p1 --directory='vendor/nxp/opensource/halimpl/'(Ex: directory path)  0001-M0100709-Exclude-NFC-modules-for-Jio-Pro-as-NFC-is-n.patch (ex: patch name )
+................................................................................................
+
+
+
+
+
+
 

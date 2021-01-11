@@ -1,0 +1,47 @@
+
+Here LS5035_CAF(android10)  changes are integrated on GSI (android10) code  nxt comipiled GSI code and flashed only system imag on device LS5035
+integrated external , framework, system, packages dir changes and total vendor folder also,
+fixed build issues and pulled some dependencies from  (LS5035_BB) changes 
+
+GSI code build steps
+
+https://source.android.com/setup/build/gsi#gsi-configuration-and-variances    ... for theory of GSI
+
+
+$ repo init -u https://android.googlesource.com/platform/manifest -b android10-gsi
+$ repo sync -cq
+$ source build/envsetup.sh
+$ lunch aosp_arm_eng
+$ make -j4
+
+
+Below external dir changed
+
+external/ImageMagik/coders
+external/android-clat/
+external/ant-wireless/
+external/libavb/avb_vbmeta_image.c
+external/lib/vtls/openssl.c
+external/drm_hwcomposer
+external/dtc/libfdt/fdt_rw.c
+external/gptfdisk/gpt.cc
+external/iperf3/Android.bp
+external/iproute/tc/
+external/iw/
+external/json-c
+external/libdrm/freedreno/msm/
+external/libgav1/
+external/libhevc/decoder
+external/libhevc/encoder
+external/libmepeg2
+external/libunwind_llvm/Android.bp
+external/libwebm
+external/libyuv
+external/minigbm
+external/okhttp
+external/repackaged
+external/protobuf
+external/selinux/libselinux
+external/swiftshader/
+external/wpa_supplicant_8
+external/zlib

@@ -1,0 +1,53 @@
+ Current Company: VOTARY TECH (10/07/2019 to till date)
+
+Project 1: VT platform for MSM8909 based hardware
+
+Description:
+
+Android Oreo Go OS is designed for low cost and low memory phones  ~1GB RAM. It is quite lightweight, takes less storage and increases the performance. Create a VT platform by porting android-go on APQ 8009 based hardware
+
+Role: Developer
+
+Responsibilities held:
+
+    Validated and made Environment setup for MSM 8909 and APQ8009 based hardwares
+
+    Cloned and Built Android source code with different version and flashed it on device using fast boot and adb commands
+
+    Navigated the source code and done analysis on it for porting in different areas like device , hardware,kernel, LK, Boot loader etc.
+
+    Done analysis and worked on functioning of Audio and camera on device after porting.
+
+    Created META and done analysis on partition sizes for mounting on hardware though SD card and EMMC.
+
+    Used Qfil to flash the meta whenever fast boot not worked due to board conditions
+
+    Done ADB and Mini com log analysis
+
+
+Project 2: Porting of Android Kitkat 4.4 on MSM8905 based hardware
+
+Description:
+
+Android Kitkat 4.4 is used in low memory devices I.e 512MB Ram which gives good
+
+support for entry level devices. We have successfully ported this on low power and
+
+low memory 8905 based chip set which is initially running with Kaios.
+
+
+Role: Developer
+
+Responsibilities held:
+
+    Created ODM patches for hardware & vendor and ported the same to kitkat.
+
+    Navigated the source code and done analysis on it for porting in different areas like platform, SD card mounting, LK, Boot loader etc.
+
+    Done analysis and worked on functioning of Audio and camera on device after porting.
+
+    Fixing the audio sound card issue occurred after porting .
+
+
+
+
