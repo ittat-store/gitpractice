@@ -1,0 +1,70 @@
+From 7be34c0a1a37be57caffe26589bfed6f49487044 Mon Sep 17 00:00:00 2001
+From: haranatth <haranath.pasupuleti@votarytech.com>
+Date: Tue, 2 Feb 2021 10:33:55 +0530
+Subject: [PATCH] [vt-dev]Fix for no child process
+
+---
+ build/envsetup.sh | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/build/envsetup.sh b/build/envsetup.sh
+index 2dcf0248a..c69d81ce9 100644
+--- a/build/envsetup.sh
++++ b/build/envsetup.sh
+@@ -205,7 +205,7 @@ function setpaths()
+         export ANDROID_PRE_BUILD_PATHS=$ANDROID_JAVA_TOOLCHAIN:
+         export PATH=$ANDROID_PRE_BUILD_PATHS$PATH
+     fi
+-	export PATH=$T/prebuilts/misc/linux-x86/ccache/:$PATH
++	#export PATH=$T/prebuilts/misc/linux-x86/ccache/:$PATH
+     unset ANDROID_PRODUCT_OUT
+     export ANDROID_PRODUCT_OUT=$(get_abs_build_var PRODUCT_OUT)
+     export OUT=$ANDROID_PRODUCT_OUT
+@@ -671,7 +671,7 @@ function m()
+     local T=$(gettop)
+     local DRV=$(getdriver $T)
+     if [ "$T" ]; then
+-        $DRV make -C $T -f build/core/main.mk -j$(getcpunum) $@
++        $DRV make -C $T -f build/core/main.mk $@
+     else
+         echo "Couldn't locate the top of the tree.  Try setting TOP."
+         return 1
+@@ -730,7 +730,7 @@ function mm()
+               MODULES=all_modules
+               ARGS=$@
+             fi
+-            ONE_SHOT_MAKEFILE=$M $DRV make -C $T -f build/core/main.mk -j$(getcpunum) $MODULES $ARGS
++            ONE_SHOT_MAKEFILE=$M $DRV make -C $T -f build/core/main.mk $MODULES $ARGS
+         fi
+     fi
+ }
+@@ -776,7 +776,7 @@ function mmm()
+           ARGS=$GET_INSTALL_PATH
+           MODULES=
+         fi
+-        ONE_SHOT_MAKEFILE="$MAKEFILE" $DRV make -C $T -f build/core/main.mk -j$(getcpunum) $DASH_ARGS $MODULES $ARGS
++        ONE_SHOT_MAKEFILE="$MAKEFILE" $DRV make -C $T -f build/core/main.mk $DASH_ARGS $MODULES $ARGS
+     else
+         echo "Couldn't locate the top of the tree.  Try setting TOP."
+         return 1
+@@ -795,7 +795,7 @@ function mma()
+       return 1
+     fi
+     local MY_PWD=`PWD= /bin/pwd|sed 's:'$T'/::'`
+-    $DRV make -C $T -f build/core/main.mk -j$(getcpunum) $@ all_modules BUILD_MODULES_IN_PATHS="$MY_PWD"
++    $DRV make -C $T -f build/core/main.mk $@ all_modules BUILD_MODULES_IN_PATHS="$MY_PWD"
+   fi
+ }
+ 
+@@ -829,7 +829,7 @@ function mmma()
+         esac
+       fi
+     done
+-    $DRV make -C $T -f build/core/main.mk -j$(getcpunum) $DASH_ARGS $ARGS all_modules BUILD_MODULES_IN_PATHS="$MODULE_PATHS"
++    $DRV make -C $T -f build/core/main.mk $DASH_ARGS $ARGS all_modules BUILD_MODULES_IN_PATHS="$MODULE_PATHS"
+   else
+     echo "Couldn't locate the top of the tree.  Try setting TOP."
+     return 1
+-- 
+2.29.0
+

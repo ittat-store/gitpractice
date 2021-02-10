@@ -1,0 +1,25 @@
+From c2b7b0c5f50d8860a1df95fd946f1152fe3644ed Mon Sep 17 00:00:00 2001
+From: haranatth <haranath.pasupuleti@votarytech.com>
+Date: Thu, 21 Jan 2021 12:32:47 +0530
+Subject: [PATCH 2/3] Manufacturer ro property changed to BlueBank
+
+---
+ .../device/qcom/msm8909_512/JIOP_MSM8909_512/overrides.prop     | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/LINUX/android/device/qcom/msm8909_512/JIOP_MSM8909_512/overrides.prop b/LINUX/android/device/qcom/msm8909_512/JIOP_MSM8909_512/overrides.prop
+index e86b149c07..ae95595124 100644
+--- a/LINUX/android/device/qcom/msm8909_512/JIOP_MSM8909_512/overrides.prop
++++ b/LINUX/android/device/qcom/msm8909_512/JIOP_MSM8909_512/overrides.prop
+@@ -9,7 +9,7 @@ ro.fota.network_port=443
+ ro.product.name=LS-5031
+ ro.product.device=LS-5031
+ ro.product.board=msm8909
+-ro.product.manufacturer=Bluebank
++ro.product.manufacturer=BlueBank
+ #ro.fota.cu_ref=LF2403N-ABJIINA  #has been moved to features.mk
+  ro.fota.sw_ver=0108
+ 
+-- 
+2.29.0
+

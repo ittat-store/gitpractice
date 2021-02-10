@@ -1,0 +1,10 @@
+
+$ adb devices
+$ adb shell
+$ cd /data/local/tmp/
+$ ls
+flatland
+updater 
+rjio( have to come but not showing in ls )
+$ cd /data/local/tmp/rjio
+system/bin/sh :  cd /data/local/tmp/rjio No such file or directory

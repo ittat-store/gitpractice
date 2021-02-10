@@ -650,6 +650,72 @@ Below commit used when git apply and git am command not worked.(and patches is t
 $ git apply --reject -p1 --directory='vendor/nxp/opensource/halimpl/'(Ex: directory path)  0001-M0100709-Exclude-NFC-modules-for-Jio-Pro-as-NFC-is-n.patch (ex: patch name )
 ................................................................................................
 
+git command to make tracked files to untracked ( green to red)
+
+changes to be commited 
+ex : modified Android.mk (green )
+if do git diff Android.mk then u cant see change untill commit the file
+
+and want to make (red)
+ex : git reset Android.mk ( if we do git checkout Android.mk then we lost chnages )
+...........................................................................................................................................
+
+If some time doing revert it wil not happen 
+git revert commitid
+error : could not revert commitid
+
+solution :
+
+then goto that file :
+remove below lines
+<<<<< HEAD ...... remove this line and
+======== ............... remove this line and below of all chnages upto >>>> parent 
+
+>>> parent ..........  remove this line also 
+
+Next then git add .
+Next git revert --continue 
+Now u can see the reverted commit at top of commit list 
+.................................................................................................
+git fetch ssh://bollosre@192.168.2.112:/home/bollosre/workspace/gsi2/GSI && git cherry-pick commit id 
+.......................................................................................................................
+
+nproc command to check how many cores in our pc
+so that we can   run by make -jn ((n = 4,8,12 ......)
+................................................................................
+Sometimes disk space errors willcome not by disk space but by RAM space
+so at that time reboot pc and build again code 
+
+Ex--- Error : 
+_common/srcjars"
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000006dac00000, 287309824, 0) failed; error='Not enough space' (errno=12)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 287309824 bytes for committing reserved
+.........................................................................................................................
+
+commit 1
+commit 2
+commit 3
+
+if we do git reset --hard commit 3
+
+then commit 1 and commit 2 we lost  and want to restore commit 1 then use below command (but u have log history )
+
+$ git checkout commit 1 ( but here you will get commit 1 and commit 2 i.e. we get inbetween commits from commit 1 to resetd commit 3)
+
+or 
+
+git merge commit 1 (nhere also u get in between commits from 1 to 3)
+
+or 
+git reflog show (To check history of head in the branch )
+git reset commit id ( which u want to restore ) ( here also u will get all inbetweeen command not only one commit we want )
+...........................................................................................................
+
+
+
+............................................................
 
 
 
