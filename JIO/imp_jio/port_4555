@@ -1,0 +1,29 @@
+port 4555: rsip should be colsed but here it is open in F220B code
+Debugged code related to telnet
+...............................................................................
+
+
+Verify the port issue with the F220B build
+
+a.       connect ip port
+                 telnet <ip address of device> port
+b.      #cat /proc/net/tcp
+c.       sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode 
+d.      find st is ESTABLISHED and port is 4555
+                         then the inode is the select.
+e.      find the pid
+                 ls -l /proc/[0-9]*/fd|grep <the inode>
+                 the pid is that open the port.
+...........................................................................................
+You can check 2828, 4555 ,4046, 5555 ,666 & 8080 etc.. ports status with h
+
+Telnet utility helps you to connect to a remote Linux computer and work on it
+
+Telnet is an old network protocol that is used to connect to remote systems over a TCP/IP network ( not secure bcoz unencrypted, in ssh encrypted so ssh using now a days)
+
+sudo apt install telnetd -y  
+
+>> external/curl/lib/urldata.h , telnet.c :31: .................. #define PORT_TELNET 23
+
+>> external/curl/lib/config-vxworks.h:65: .................... /* to disable TELNET */
+.........................................................................................................

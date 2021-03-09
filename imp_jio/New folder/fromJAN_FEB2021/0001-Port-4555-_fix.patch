@@ -1,0 +1,25 @@
+From 9cd1000b33ec4aa9085cfa9228673bdd340ea133 Mon Sep 17 00:00:00 2001
+From: cheguri keerthi kumari <keerthikumari.cheguri@votarytech.com>
+Date: Sat, 20 Feb 2021 10:01:18 +0530
+Subject: [PATCH] Port(4555)_fix
+
+---
+ .../android/hardware/qcom/audio/hal/audio_extn/ti_smartpa/ti_smartpa.h  | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/LINUX/android/hardware/qcom/audio/hal/audio_extn/ti_smartpa/ti_smartpa.h b/LINUX/android/hardware/qcom/audio/hal/audio_extn/ti_smartpa/ti_smartpa.h
+index 60227c9..96f6678 100644
+--- a/LINUX/android/hardware/qcom/audio/hal/audio_extn/ti_smartpa/ti_smartpa.h
++++ b/LINUX/android/hardware/qcom/audio/hal/audio_extn/ti_smartpa/ti_smartpa.h
+@@ -3,7 +3,7 @@
+ 
+ #include "SmartPA.h"
+ 
+-#define ENABLE_RCCD2 1  /*only for tuning, this macro needs to be deleted once tuning is completed*/
++#define ENABLE_RCCD2 0  /*only for tuning, this macro needs to be deleted once tuning is completed*/
+ #define LIB_INIT_FAILED 1000
+ 
+ #define MAX_STRING	25
+-- 
+2.7.4
+
