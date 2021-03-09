@@ -1,0 +1,63 @@
+{
+  "scripts": {
+    "lint:js": "eslint src",
+    "lint:css": "stylelint 'style/scss/**/*.scss'",
+    "lint": "npm run lint:js && npm run lint:css",
+    "clean": "make clean",
+    "distclean": "make distclean",
+    "dev": "make watch",
+    "build": "make build"
+  },
+  "pre-push": [
+    "lint"
+  ],
+  "devDependencies": {
+    "babel-core": "6.4.5",
+    "babel-eslint": "7.2.1",
+    "babel-loader": "6.2.1",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "css-loader": "0.23.1",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.3.0",
+    "extract-text-webpack-plugin": "1.0.1",
+    "fatigue-scripts": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/fatigue-scripts-master",
+    "file-loader": "0.8.5",
+    "font-fit": "0.3.7",
+    "node-sass": "^4.14.1",
+    "pre-push": "^0.1.1",
+    "sass-loader": "3.2.0",
+    "style-loader": "0.13.1",
+    "stylelint": "7.10.1",
+    "stylelint-config-standard": "16.0.0",
+    "webpack": "1.13.0"
+  },
+  "dependencies": {
+    "base-component": "^0.0.3",
+    "base-emitter": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master",
+    "base-module": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-module-master",
+    "enhance-animation": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/enhance-animation-master",
+    "hammerjs": "^2.0.8",
+    "mobile-operator": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/mobile-operator-master",
+    "node-gyp": "^6.1.0",
+    "npm": "^6.14.5",
+    "react": "15.1.0",
+    "react-animation-composer": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-animation-composer",
+    "react-dialog": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-dialog-master",
+    "react-dom": "15.1.0",
+    "react-option-menu": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-option-menu-master",
+    "react-sim-chooser": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-sim-chooser-master",
+    "react-soft-key": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-soft-key-master",
+    "resolve-url-loader": "1.6.0",
+    "service": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master",
+    "settings-manager": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/settings-manager-master",
+    "sim-settings-helper": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/sim-settings-helper-master",
+    "simple-navigation-helper": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simple-navigation-helper-master",
+    "simslot-manager": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simslot-manager-master",
+    "soft-key-store": "file:/home/bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
+  }
+}

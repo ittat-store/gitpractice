@@ -1,0 +1,124 @@
+.notices_container{
+  margin-top:2rem;
+    padding:0 5%;
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+      .still_more{
+        margin-top:1rem;
+        clear:both;
+      }
+  }
+.notice_content{
+    border-radius: 1rem;
+    background: #f4f4f4;
+    border:1px solid #f4f4f4;
+    display: flex;
+    padding: 1.4rem 1.6rem 1.4rem 2rem;
+    margin-top: 1rem;
+    clear:both;
+  }
+.top_menu
+  {
+  .left_side {
+        float:left;
+  .app_name_text{
+        font-size: 2rem;
+    }
+  }
+.right_side {
+    float:right;
+  }
+.show_less_text{
+    font-size:1.5rem;
+    margin-right: 4.5rem;
+    vertical-align: middle;
+    margin-left: 1.5rem;
+    margin-top:-2rem;
+  }
+  .right_side > span, .right_side > img{
+    display: inline-block;
+    }
+  }
+.circle_blue{
+    background:#00CEFF;
+    border-radius: 4rem;
+    width:20%;
+    height:20%;
+    padding:2.5rem;
+  }
+.left_part{
+    float:left;
+    margin-top:0.5rem;
+   }
+  
+.right_part{
+    float:right;
+    margin-left:5%;
+  .app_name, .time_part {
+    font-size:1.4rem;
+    color:#666666;
+    }
+  .app_name{
+        float: left;
+      }
+  .time_part{
+          float: right;
+      }
+  .person_name, .notice_desc{
+        font-size:1.6rem;
+      }
+  .person_name{
+        color:#000;
+        clear: both;
+      }
+  .notice_desc{
+        margin-top:0.5rem;
+        color:#666666;
+      }
+}
+
+ //bottom-back,home tab bars 
+ .notices_container .tab_bars{
+    position: fixed;
+    display: flex;
+    bottom:5rem;
+    left:0%;
+    width: 100%;
+    justify-content: center;
+      >hr{
+      background: #EBEBEB;
+      border-radius: 0.4rem;
+      height: 0.8rem;
+      }
+      .first_bar, .third_bar{
+        width:9.6rem;
+      }
+      .second_bar{
+        width:19.2rem;
+      }
+}
+
+.instantSettings__wall{
+  display:none;
+}
+
+.lock_section{
+  position: relative;
+  top:0rem;
+  left:19rem;
+
+    img.unlock_icon{
+      height:40px;
+      width:45px;
+    }
+  }
+  .clock_section{
+    position: relative;
+    top:3rem;
+  }
+  .notices_section{
+    position: relative;
+    top:10rem;
+  }
+  

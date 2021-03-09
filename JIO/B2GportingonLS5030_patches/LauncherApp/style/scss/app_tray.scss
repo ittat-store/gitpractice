@@ -1,0 +1,54 @@
+.appTray {
+  position: fixed;
+  bottom: 0px;
+  width: 15%; 
+}
+
+.col3parent_trans {
+  width: 91%;
+  padding: 0.6rem;
+  opacity: 0.7;
+  background: rgba($color: #555555, $alpha: 0.2);
+  border-radius: 1.5rem;
+  position: fixed;
+  bottom: 6rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 9.5rem;
+ 
+  > row > div{
+    margin-right: 2.3rem;
+  }
+ > row > div:last-child{
+  margin-right:0 !important;
+}
+}
+.col3 {
+ width:25%;
+ border:1px solid rgb(66, 63, 63);
+ height: 7.6rem;
+ background: #423f3f 0% 0% no-repeat padding-box;
+ border-radius: 1.6rem;
+ opacity: 1;
+ padding:0rem;
+}
+
+row {
+  width: 100%;
+  padding: 0px;
+  padding-left: 1.2rem;
+  display:flex;
+  padding-top : 0.4rem;
+  .col3 {
+    width: 20%;
+    padding: 0rem;
+    text-align: center;
+    padding-top: 0.4rem;
+  } 
+}
+
+.img_val {
+  width:6.6rem;
+  height:6.6rem;
+}

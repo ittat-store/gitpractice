@@ -1,0 +1,47 @@
+#main-view {
+  position: absolute;
+  top:0;
+  left:4.5rem;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4vh;
+  box-sizing: border-box;
+  transition: opacity 0.3s;
+
+
+  @media only screen and (orientation: landscape) {
+    flex-direction: row;
+    padding-top: unset;
+  }
+
+  .grid & {
+    opacity: 0;
+    transition-duration: 0s;
+  }
+}
+
+.main_view.tab_bars{
+  position: fixed;
+  top:1rem;
+  left:2rem;
+  width: 92%;
+  justify-content: center;
+  opacity:0.5;
+    >hr{
+    background: #EBEBEB;
+    border-radius: 2rem;
+    padding: 0.2rem 0;
+    }
+    .left_bar, .right_bar{
+      width:8.5rem;
+    }
+    .left_bar{
+      float: left;
+    }
+    .right_bar{
+      float: right;
+    }
+}
+

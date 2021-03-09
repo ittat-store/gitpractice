@@ -1,0 +1,143 @@
+$clock-shadow: 0 0.1rem 0.3rem rgba(#000, 0.3);
+$clock-component-gap: 1rem;
+$clock-digi-ani-duration: 0.3s;
+$clock-digi-ani-delay: $clock-digi-ani-duration / 3;
+$clock-digi-ani-offset-y: 3rem;
+$clock-shadow: 0 0.1rem 0.3rem rgba(#000, 0.5);
+
+%digi-slide-in-style {
+  animation: ani-digi-slide-in $clock-digi-ani-duration $clock-digi-ani-delay ease-in-out forwards;
+
+  @keyframes ani-digi-slide-in {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, - $clock-digi-ani-offset-y);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+@mixin digi-size($w, $h: $w) {
+  width: $w;
+  height: $h;
+  font-size: $h;
+  line-height: $h;
+}
+
+.clock-upper {
+  display: flex;
+  justify-content: center;
+}
+
+.clockDigi-container {
+  display: inline-flex;
+  align-items: center;
+
+  .clockDigi-box {
+    direction: ltr;
+    display: inline-flex;
+    align-items: inherit;
+  }
+
+  .clockDigi {
+    position: relative;
+    display: none;
+
+    // show this digi when its value is meaningful
+    &[data-now]:not([data-now=""]) {
+      display: block;
+    }
+
+    @for $i from 0 through 9 {
+      &[data-now="#{$i}"] [data-icon^="numeric_#{$i}"] {
+        @extend %digi-slide-in-style;
+      }
+    }
+  }
+
+  [data-icon] {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: inline-flex;
+    opacity: 0;
+    transform: translate3d(-50%, $clock-digi-ani-offset-y, 0);
+    transition: $clock-digi-ani-duration 0s cubic-bezier(0, 0, 0, 1);
+  }
+}
+
+.ClockComponent {
+  min-width: 80vw;
+  height: calc(100% - 60rem);
+  padding-top: 1rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-gs00);
+  pointer-events: none;
+  text-shadow: $clock-shadow;
+
+  @media only screen and (orientation: landscape) {
+    min-width: unset;
+    height: unset;
+    margin: auto;
+  }
+}
+
+.clock-divider {
+  color: inherit;
+  border: none;
+  border-top: 0.1rem solid;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  opacity: 0.8;
+  box-shadow: $clock-shadow;
+  display: none;
+}
+
+.clock-colon {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 0.6rem;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 1em;
+    height: 1em;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1em, $clock-shadow;
+  }
+}
+
+.clock-ampm {
+  align-self: flex-end;
+  margin-inline-start: 0.5rem;
+  margin-bottom: -0.1rem; // char height hack, for visaul correction
+
+  &[data-hour-24="true"] {
+    display: none;
+  }
+}
+
+.clockDigi--time {
+  @include digi-size(3.2rem, 5.4rem);
+
+  &:not(:first-child) {
+    margin-inline-start: 0.8rem;
+  }
+}
+.date.primary
+{
+  margin-top:1rem;
+  font-size:1.8rem;
+}

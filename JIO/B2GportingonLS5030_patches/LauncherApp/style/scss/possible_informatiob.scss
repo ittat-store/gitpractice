@@ -1,0 +1,17 @@
+.weather_section{
+  color: #fff;
+  position: absolute;
+  top:15rem;
+  left:15rem;
+
+    img.weather_icon{
+      height:40px;
+      width:45px;
+    }
+    span.weather_degree{
+        position: relative;
+        top:0.7rem;
+        font-size:2rem;
+        padding-left: 0.5rem;
+      }
+}

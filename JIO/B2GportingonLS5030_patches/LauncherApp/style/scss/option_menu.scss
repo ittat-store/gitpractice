@@ -1,0 +1,12 @@
+.option-menu-container {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: var(--softkeybar-height);
+    background-color: var(--color-gs100);
+  }
+}

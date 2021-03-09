@@ -1,0 +1,114 @@
+:root {
+  --softkeybar-background-color: var(--color-gs20, #ccc);
+  --softkey-color: var(--color-gs90, #323232);
+  --softkey-color--icon: var(--color-gs70, #6a6a6a);
+  --softkey-color--disabled: var(--color-eta, #c7c7c7);
+  --softkey-background-color--active: #0ac;
+  --softkey-font-size: 1.4rem;
+  --softkey-icon-size: 2rem;
+  --softkey-font-weight: 600;
+}
+
+.skbar {
+  $skbar-gap: 0.5rem;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-index--softkey, 99999);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  outline: none;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--softkey-color);
+  direction: ltr;
+  background-color: var(--softkeybar-background-color);
+
+  &:not(.visible) {
+    display: none;
+  }
+
+  > * {
+    min-width: 1rem;
+    padding-left: $skbar-gap;
+    padding-right: $skbar-gap;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:nth-child(2) {
+      --softkey-font-size: 1.6rem;
+      --softkey-font-weight: 700;
+
+      flex-shrink: 0;
+      min-width: 2rem - $skbar-gap * 2; // min gap between LSK & RSK = 2rem
+      text-transform: uppercase;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.sk-button {
+  display: block;
+  max-width: 100%;
+  height: var(--softkeybar-height, 3rem);
+  line-height: var(--softkeybar-height, 3rem);
+  border: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: inherit;
+  font-size: var(--softkey-font-size);
+  font-weight: var(--softkey-font-weight);
+  color: var(--softkey-color);
+  background: unset;
+
+  &:-moz-dir(rtl) {
+    direction: rtl;
+  }
+
+  &:active,
+  &.active {
+    background-color: var(--softkey-background-color--active);
+  }
+
+  &[disabled] {
+    --softkey-color: var(--softkey-color--disabled);
+
+    background-color: transparent;
+    pointer-events: auto;
+  }
+
+  &[data-icon] {
+    --softkey-font-size: var(--softkey-icon-size);
+
+    &:empty {
+      --softkey-color: var(--softkey-color--icon);
+    }
+
+    &[data-icon="ok"] {
+      --softkey-icon-size: 2.4rem;
+    }
+
+    &::before {
+      content: unset;
+    }
+
+    &::after {
+      content: attr(data-icon);
+      font-family: 'gaia-icons';
+      display: inline-block;
+      font-weight: 500;
+      font-style: normal;
+      text-decoration: inherit;
+      text-transform: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}

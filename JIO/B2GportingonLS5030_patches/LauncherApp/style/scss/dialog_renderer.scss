@@ -1,0 +1,32 @@
+@import "helper/mixins";
+
+.dialog-root {
+  @include fill();
+
+  .dialog {
+    bottom: var(--softkeybar-height);
+  }
+
+  &.is-loading {
+    .content:first-child {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 1rem;
+        background: url('../images/loading.png');
+      }
+    }
+  }
+}
+
+.dialog-container {
+  background: rgba(#000, 0.85) linear-gradient(transparent, rgba(#000, 0.5) 75%) no-repeat;
+}
+
+.dialog > .content {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,412 @@
+@mixin common_display{
+  display: flex;
+  flex-direction: row;
+}
+@mixin common_style{
+  text-align: center;
+  border-radius:1.5rem;
+}
+.instant_settings_container{
+  
+  position: fixed;
+  top:3.6rem;
+  width:100%;
+  z-index:100;
+  font-size:1.1rem;
+  padding:0 1rem;
+  // background: rgb(19, 17, 17);
+  background: #1c1c1c;
+  color:#fff;
+    @keyframes flow-in 
+    {
+      0% { transform: translateY(-90rem); }
+      100% { transform: translateY(-0); }
+    }
+    animation: flow-in 1s;
+  }
+.middle_icons_container.common_div, .bottom_icons_container.common_div{
+  @include common_display;
+
+  justify-content: center;
+}
+.middle_icons_container.common_div .ele,  .icons_section .ele > img{
+     @include common_style;
+}
+
+.middle_icons_container.common_div .ele, .bottom_icons_container.common_div .ele{
+margin-right: 3rem;
+width:8rem;
+}
+.middle_icons_container.common_div>.ele:last-child, .bottom_icons_container.common_div>.ele:last-child{
+  margin-right:0 !important;
+}
+.bottom_icons_container.common_div .ele > img,
+.icons_section .ele > img{
+     border:1px solid black;
+}
+
+.top_parent{
+  @include common_display;
+  .left_child, .right_child{
+      float:left;
+      border-radius: 1.5rem;
+      display: flex;
+  }
+  .left_child{
+      margin-right: 8.5rem;
+      margin-left:2.5rem;
+      flex-direction: column;
+      background: #000;
+        height:31rem;
+        padding-top: 0.5rem;
+        width:18.5rem;
+      .ele{
+        padding:0.5rem;
+        text-align: center;
+        >span.icon_name{
+          display: block;
+          margin: -1rem 0 0 -0.8rem;
+        }
+    }
+    }
+  .right_child{
+      flex-direction: column;
+      text-align: center;
+      width:35%;
+
+  
+  .music_section{
+    padding: 1rem 0;
+    background: #000;
+    border-radius: 1rem;
+    margin-left:-5.2rem;
+    margin-right:2rem;
+    >row{
+      justify-content: center;
+      padding-left:0;
+    }
+    .ele.music_text{
+      padding: 5rem 0 3.5rem 0;
+      font-size:2rem;
+      width:100%;
+    }
+    .ele.music_icons{
+      padding-bottom: 1.5rem;
+    > img{
+      padding: 0 0.8rem;
+    }}
+  }
+  .icons_section{
+    margin:2rem -3rem 0 -3rem;
+    display: flex;
+      .ele{
+        text-align: center;
+        width:100%;
+        float:left; 
+        padding: 0.5rem;  
+        margin: 0 -4rem;
+    }
+    .second_icon>img{
+      margin-left:-0.5rem;
+    }
+  }
+    }
+  }
+  .top_icons_container
+  { 
+    >div{
+      flex:1;
+    }
+  img{
+    border: none;
+  }
+  }
+  .middle_icons_container{
+    height:30rem;
+    margin-top:1rem;
+    .ele{
+      background: #000;
+    }
+    .ele:first-child{
+      margin-left:0;
+    }
+     .indicator{
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 1rem;
+            height:19.2rem;
+            div.progress_bar{
+              transform: rotate(270deg);
+             background: transparent;
+            }
+        }
+      }
+.bottom_icons_container.common_div
+{ 
+  margin-top:2rem;
+  .ele{
+        text-align: center;
+      }
+      .ele > img{
+        border-radius:1.5rem;
+      }
+      .ele>span{
+        display: inline-block;
+      }
+    }
+ //bottom-back,home tab bars 
+ .instant_settings_container .tab_bars{
+    position: fixed;
+    display: flex;
+    bottom:8rem;
+    left:0%;
+    width: 100%;
+    justify-content: center;
+      >hr{
+      background: #EBEBEB;
+      border-radius: 0.4rem;
+      height: 0.8rem;
+      }
+      .first_bar, .third_bar{
+        width:9.6rem;
+      }
+      .second_bar{
+        width:19.2rem;
+      }
+  }
+
+  .instantSettings__wall{
+    display:none;
+  }
+
+  .clock_section{
+    position: relative;
+  }
+
+   .left_child .instantSettings__icon {
+      height: 8rem;
+      width: 8rem;
+   }
+
+  .bottom_icons_container .instantSettings__icon {
+    height: 8rem;
+    border:1px solid black;
+    border-radius:1.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .instantSettings__icon[data-icon]::before{
+   content: "";
+
+  }
+
+  .instantSettings__icon[data-icon="flashlight_off"]{
+    background:url('../images/torch.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="flashlight_on"]{
+    background:url('../images/orange_torch.png') no-repeat;
+  }
+  
+  .instantSettings__icon[data-icon="qrscanner_off"]{
+    background:url('../images/qr_scanner.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="qrscanner_on"]{
+    background:url('../images/qr_scanner.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="trashbin_off"]{
+    background:url('../images/trash_bin.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="trashbin_on"]{
+    background:url('../images/trash_bin.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="mic_off"]{
+    background:url('../images/mic.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="mic_on"]{
+    background:url('../images/mic.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="airplane-mode_off"]{
+    background:url('../images/flight_disabled.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="airplane-mode_on"]{
+    background:url('../images/orange_flight.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="network_off"]{
+    background:url('../images/upDown_disabled.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="network_on"]{
+    background:url('../images/upDown.png') no-repeat;
+  }
+  
+  .instantSettings__icon[data-icon="bluetooth_off"]{
+    background:url('../images/bluetooth_disabled.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="bluetooth_on"]{
+    background:url('../images/bluetooth.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="wifi_off"]{
+    background:url('../images/wifi_disabled.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="wifi_on"]{
+    background:url('../images/wifi.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="night-mode_off"]{
+    background:url('../images/nightmode.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="night-mode_on"]{
+    background:url('../images/orange_nightmode.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="location_off"]{
+    background:url('../images/location_disabled.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="location_on"]{
+    background:url('../images/location.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="calculator"]{
+    background:url('../images/calculator.png') no-repeat;
+  }
+
+  .instantSettings__icon[data-icon="camera"]{
+    background:url('../images/camera.png') no-repeat;
+  }
+
+
+   /*jio*/
+  input.bar-input[type='range'] {
+            height: 8rem;
+            width:19rem;
+            -webkit-appearance: none; 
+            outline: none; 
+            background: none;
+            overflow: hidden;
+            border: none;
+            padding: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+  }
+  
+  input.bar-input[type='range'].bar-input::-webkit-slider-runnable-track {
+            height: 0.4rem;
+            border-radius: 0.2rem;
+            background-color: var(--color-gs20);
+            visibility: hidden;
+  }
+  
+  input.bar-input[type='range'].bar-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: var(--color-gs00);
+            border-radius: 50%;
+            margin-top: -0.6rem;
+            border: 0.4rem solid var(--theme-color);
+            box-sizing: border-box;
+            visibility: hidden;
+  }
+  
+  input.bar-input:enabled[type='range'].pressed.bar-input::-webkit-slider-thumb,
+  input.bar-input:enabled[type='range'].bar-input:active::-webkit-slider-thumb {
+            width: 3.2rem;
+            height: 3.2rem;
+            background-color: var(--theme-color);
+            
+            margin-top: -1.4rem;
+            box-sizing: border-box;
+            visibility: hidden;
+  }
+ 
+  /*jio*/
+  input.bar-input[type='range'].bar-input::-moz-range-track {
+            height: 0.2rem;
+            border-radius: 0.2rem;
+            background-color: var(--color-gs20);
+            visibility: hidden;
+  }
+  /*jio*/
+  input.bar-input[type='range'].bar-input::-moz-range-thumb {
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: var(--color-gs00);
+            border-radius: 50%;
+            border: 0.4rem solid var(--theme-color);
+            box-sizing: border-box;
+            visibility: hidden;
+  }
+  /*jio*/
+  input.bar-input[type='range'].bar-input::-moz-range-progress {
+            padding: 4rem;
+            border-radius: 1.5rem;
+            background-color: #fff;
+            outline:none;
+  }
+  input.bar-input[type='range'].bar-input:active::-moz-range-progress {
+    padding: 4rem;
+    border-radius: 1.5rem;
+    background-color: #fff;
+    outline:none;
+}
+  
+  input.bar-input:enabled[type='range'].pressed.bar-input::-moz-range-thumb,
+  input.bar-input:enabled[type='range'].bar-input:active::-moz-range-thumb {
+            width: 3.2rem;
+            height: 3.2rem;
+            background-color: var(--theme-color);
+            visibility: hidden;
+  }
+
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display:none;
+  }
