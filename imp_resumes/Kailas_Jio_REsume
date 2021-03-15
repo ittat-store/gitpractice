@@ -21,4 +21,18 @@ Getting the offline FOTA and online FOTA generated and verified.
 Develops software documentation.
 Develops test plans for product verification. Assists test department for test procedures creation.
 
+..................................................................................................................
+UPdated by me
+
+Project Name : Porting/Update KaiOS on top Linux kernel and Android  Framework  for Feature Phones using ARM Based SoC. (Kailash given to me)
+Project Name : Building KaiOS on top of Android Framework, Linux Device Drivers for JIO Feature Phones. (Deepika shared me)
+•	Bootloader (LK Bootloader) and Recovery Code Development.
+•	Worked on Rooted app issue.
+•	Worked on User Agent String Issue
+•	Worked on uniform key sequence in F120B and F90M devices
+•	Worked on FDR Battery Issue.
+•	Worked on LCD, Keypad flickering  MMI Issue.
+•	Worked on Boot-time optimization of ODM devices.
+•	Implement new features and resolve various issues reported by team .
+•	Develops software documentation.
 
