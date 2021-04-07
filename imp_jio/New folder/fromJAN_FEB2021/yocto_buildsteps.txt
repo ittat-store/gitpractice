@@ -1,0 +1,22 @@
+Please follow the below commands for build setup.
+
+Build setup steps:
+mkdir webos-ports-env && cd webos-ports-env
+export ENV_NAME=testing (If required latest code use ENV_NAME=stable)
+wget https://raw.github.com/webOS-ports/webos-ports-setup/$ENV_NAME/Makefile
+make setup-webos-ports
+make update
+cd webos-ports
+source setup-env
+Build command:
+MACHINE=hammerhead bb luneos-dev-package
+OUT_PUT_IMAGE_LOCATION: webos-ports-env/webos-ports/tmp-glibc/deploy/images/hammerhead
+
+Config changes:
+File@<ROOT_PATH>/webos-ports-env/webos-ports/conf/local.conf { Commented below lines}
+#DISTRO_FEED_PREFIX = "wp"
+#DISTRO_FEED_URI = "http://build.webos-ports.org/luneos-zeus/ipk/"
+#PRSERV_HOST = "jenkins.nas-admin.org:8585"
+# PRSERV_HOST = "localhost:0"
+BUILD COMMAND : MACHINE=hammerhead bb luneos-dev-package
+BUILD_IMAGE_LOCATION: <ROOT_PATH>/webos-ports-env/webos-ports/tmp-glibc/deploy/images/hammerhead/

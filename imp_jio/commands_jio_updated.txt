@@ -578,7 +578,7 @@ Press Esc + gg : Go to top the file
 Esc + G : Go to bottom of the file
 Esc + A + $ : Go to bottom of the file and end of line.
 esc line number + G  to go particular line number
-
+esc :u for undo 
 ...................................................................
 
 First install sudo apt-get install filezilla. and use the below details
@@ -594,6 +594,15 @@ if any FTP and SFTP issues then goto File in left corner and goto general settin
 
 nxt to upload any file gave path in local site and remote path nxt right click on local side and click upload 
 if needdownlaod then remote side rightclick and click download option
+
+>> Through command line 
+goto path where the file u want to upload 
+$ sftp -oPort=5522 kaifota@49.40.21.116
+give paasword
+sftp> cd /data/DEV/ ( goto path where u want to upload)
+$put file (uwant to upload)
+$check with ls command
+$get filename ( To download file)
 ...................................................................
 
 >> sudo apt-get install libxml-parser-perl  for modem failure issues 

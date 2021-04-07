@@ -17,4 +17,32 @@ Please find my activities performed during b2g porting effort
 
 > integrated launcher app code and worked on clock rendering issue
  For launcher app details see imp_jio/oct/launcher_app_buildsteps document
+......................................................................................................
+Rough :::
+
+Integrate display modifications
+Disabled som PACKAGES from build
+fixed b2g init rc entries
+added log messages
+Worked on  to fix b2g crash
+Worked on wedrender issue
+Working on Wifi issue
+Build emulator code 
+changes between android-10 AOSP and B2G code 
+Created patches according to changes present in different directories.  Added multiple logs in files present at gecko/dom/devicestorage ,b2g,activity directories
+Debugging b2g/gecko code to find API's related to framework layer
+modified API's in gecko according to framework layer
+Modified gecko/gfx APIs
+Modified gecko/ipc APIs 
+Worked on bionic changes
+compared android 10 and b2g directories
+comapred android10 aosp and b2g ,bionic ,bootable, dalvik, development, external,frameworks
+created nedded diff patches according to changes 
+fixed ini.rc,cpp flages issues
+integrated changes from android10 to LS5030
+....................................................................................................
+
+
+
+
 

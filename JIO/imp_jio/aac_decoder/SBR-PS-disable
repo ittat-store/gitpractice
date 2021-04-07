@@ -1,0 +1,82 @@
+
+Below is expected output and after applying SBR-PS-formats patch we are getting expected output only 
+
+.........................................................................................................................
+File			               Format      Format Profile          Commercial Name     Playback Result (Modified Build)
+                                                                                                LYF-F220B-003-01-49-020421-i
+....................................................................................................................................
+ChID-BLITS-EBU-Narration441AOT2.mp4     AAC LC       AAC@L4                      NA                   Playing
+SBR_LFEtest5_1.mp4	               AAC LC SBR    High Efficiency AAC@L4      HE-AAC            Not playing
+SBRtestStereoAot5Sig1.mp4               AAC LC SBR    AAC@L1	                 HE-AAC             Not playing
+SBRtestStereoAot29Sig1.mp4           AAC LC SBR PS    AAC@L1                      HE-AACv2          Not playing
+SBRtestStereoAot29Sig2.mp4          AAC LC SBR PS     High Efficiency AAC v2@L2   HE-AACv2          Not playing
+SBRtestStereoAot29Sig0.mp4           AAC LC SBR PS   AAC@L1			  HE-AACv2           Not playing
+SBRtestStereoAot5SigusePS.mp4         AAC LC SBR PS  High Efficiency AAC@L2        HE-AACv2          Not playing
+LFE-SBRstereo.mp4 			AVC          Main@L2.1                     NA                 Not playing
+...............................................................................................
+Worked on steps :
+
+>> To enable VERBOSE, please uncomment below line, which is at the beginning of each cpp/c file.
+//#define LOG_NDEBUG 0
+
+>> Converted ALOGV to ALOGE 
+>> see patch 
+>> we can build by make clea or  goto out directory remove libstraightfright_soft_aacdec.so
+and now goto exteranl/aac do changes in code and do mma in external/aac
+nxt goto frameworks/av/media/codecs and do mma here now .so will gernerate in out directory 
+Now share out/target/system/lib/.so file to test team 
+they will push .so file into device by adb command and clollect the logs from logs we can verify our changes are effecting or not
+...................................................................
+>> Read aacdecoder documnet 
+.............................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

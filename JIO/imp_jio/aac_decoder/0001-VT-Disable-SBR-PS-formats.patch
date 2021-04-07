@@ -1,0 +1,409 @@
+From 2fa34f3f3e4366b92d187e9ab9f4374d8398714a Mon Sep 17 00:00:00 2001
+From: cheguri keerthi kumari <keerthikumari.cheguri@votarytech.com>
+Date: Sat, 3 Apr 2021 11:47:07 +0530
+Subject: [PATCH] [VT] Disable SBR PS formats
+
+---
+ .../external/aac/libMpegTPDec/src/tpdec_asc.cpp    | 87 +++++++++++++++++++---
+ 1 file changed, 75 insertions(+), 12 deletions(-)
+
+diff --git a/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp b/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp
+index bae271e..bf7cca1 100644
+--- a/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp
++++ b/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp
+@@ -87,7 +87,7 @@ amm-info@iis.fraunhofer.de
+    Description:
+ 
+ ******************************************************************************/
+-
++#include<log/log.h>
+ #include "tpdec_lib.h"
+ #include "tp_data.h"
+ #ifdef TP_PCE_ENABLE
+@@ -97,19 +97,25 @@ amm-info@iis.fraunhofer.de
+ 
+ void CProgramConfig_Reset(CProgramConfig *pPce)
+ {
++ALOGE("Entered in CProgramConfig_Reset()");
+   pPce->elCounter = 0;
++ALOGE("End of CProgramConfig_Reset()");
++
+ }
+ 
+ void CProgramConfig_Init(CProgramConfig *pPce)
+ {
++ALOGE("Entered in CProgramConfig_Init()");
+   FDKmemclear(pPce, sizeof(CProgramConfig));
+ #ifdef TP_PCE_ENABLE
+   pPce->SamplingFrequencyIndex = 0xf;
+ #endif
++ALOGE("End of CProgramConfig_Init()");
+ }
+ 
+ int  CProgramConfig_IsValid ( const CProgramConfig *pPce )
+ {
++ALOGE("Entered in CProgramConfig_IsValid()");
+   return ( (pPce->isValid) ? 1 : 0);
+ }
+ 
+@@ -128,6 +134,7 @@ int CProgramConfig_ReadHeightExt(
+                                   const UINT alignmentAnchor
+                                 )
+ {
++ALOGE("Entered in CProgramConfig_ReadHeightExt()");
+   int err = 0;
+   FDK_CRCINFO crcInfo;    /* CRC state info */
+   INT crcReg;
+@@ -171,7 +178,7 @@ int CProgramConfig_ReadHeightExt(
+ 
+   /* Always report the bytes read. */
+   *bytesAvailable -= (startAnchor - FDKgetValidBits(bs)) >> 3;
+-
++ALOGE("End of CProgramConfig_ReadHeightExt()");
+   return (err);
+ }
+ 
+@@ -181,6 +188,7 @@ void CProgramConfig_Read(
+                           UINT alignmentAnchor
+                         )
+ {
++ALOGE("Entered in CProgramConfig_Read()");
+   int i, err = 0;
+   int commentBytes;
+ 
+@@ -273,6 +281,7 @@ void CProgramConfig_Read(
+   }
+ 
+   pPce->isValid = (err) ? 0 : 1;
++ALOGE("End of CProgramConfig_Read()");
+ }
+ 
+ /*
+@@ -286,6 +295,7 @@ void CProgramConfig_Read(
+ int CProgramConfig_Compare ( const CProgramConfig * const pPce1,
+                              const CProgramConfig * const pPce2 )
+ {
++ALOGE("Entered in CProgramConfig_Compare()");
+   int result = 0;  /* Innocent until proven false. */
+ 
+   if (FDKmemcmp(pPce1, pPce2, sizeof(CProgramConfig)) != 0)
+@@ -356,13 +366,14 @@ int CProgramConfig_Compare ( const CProgramConfig * const pPce1,
+       /* LFEs are always SCEs so we don't need to count the channels. */
+     }
+   }
+-
++ALOGE("End of CProgramConfig_Compare()");
+   return result;
+ }
+ 
+ void CProgramConfig_GetDefault( CProgramConfig *pPce,
+                                 const UINT channelConfig )
+ {
++ALOGE("Enterd in CProgramConfig_GetDefault()");
+   FDK_ASSERT(pPce != NULL);
+ 
+   /* Init PCE */
+@@ -462,6 +473,7 @@ void CProgramConfig_GetDefault( CProgramConfig *pPce,
+       pPce->LfeElementTagSelect[el] = elTagSce++;
+     }
+   }
++ALOGE("End of CProgramConfig_GetDefault()");
+ }
+ #endif /* TP_PCE_ENABLE */
+ 
+@@ -479,6 +491,7 @@ void getImplicitAudioChannelTypeAndIndex(
+         UINT index
+         )
+ {
++ALOGE("Entered in getImplicitAudioChannelTypeAndIndex()");
+   if (index < 3) {
+     *chType = ACT_FRONT;
+     *chIndex = index;
+@@ -558,6 +571,7 @@ void getImplicitAudioChannelTypeAndIndex(
+         break;
+     }
+   }
++ALOGE("End of getImplicitAudioChannelTypeAndIndex()");
+ }
+ 
+ int CProgramConfig_LookupElement(
+@@ -573,6 +587,7 @@ int CProgramConfig_LookupElement(
+         MP4_ELEMENT_ID  elType
+        )
+ {
++ALOGE("Entered in CProgramConfig_LookupElement()");
+   if (channelConfig > 0)
+   {
+     /* Constant channel mapping must have
+@@ -874,7 +889,7 @@ int CProgramConfig_LookupElement(
+     }
+ #endif /* TP_PCE_ENABLE */
+   }
+-
++ALOGE("End of CProgramConfig_LookupElement()");
+   return 1;
+ }
+ 
+@@ -886,6 +901,7 @@ int CProgramConfig_GetElementTable(
+         UCHAR *pChMapIdx
+        )
+ {
++ALOGE("Entered in CProgramConfig_GetElementTable()");
+   int i, el = 0;
+ 
+   FDK_ASSERT(elList != NULL);
+@@ -961,13 +977,14 @@ int CProgramConfig_GetElementTable(
+     *pChMapIdx = 0;
+     break;
+   }
+-
++ALOGE("End of CProgramConfig_GetElementTable()");
+   return el;
+ }
+ #endif
+ 
+ static AUDIO_OBJECT_TYPE getAOT(HANDLE_FDK_BITSTREAM bs)
+ {
++ALOGE("Entered in getAOT()");
+   int tmp = 0;
+ 
+   tmp = FDKreadBits(bs,5);
+@@ -975,12 +992,13 @@ static AUDIO_OBJECT_TYPE getAOT(HANDLE_FDK_BITSTREAM bs)
+     int tmp2 = FDKreadBits(bs,6);
+     tmp = 32 + tmp2;
+   }
+-
++ALOGE("End of getAOT()");
+   return (AUDIO_OBJECT_TYPE)tmp;
+ }
+ 
+ static INT getSampleRate(HANDLE_FDK_BITSTREAM bs, UCHAR *index, int nBits)
+ {
++ALOGE("Entered in getSampleRate()");
+   INT sampleRate;
+   int idx;
+ 
+@@ -995,7 +1013,7 @@ static INT getSampleRate(HANDLE_FDK_BITSTREAM bs, UCHAR *index, int nBits)
+   }
+ 
+   *index = idx;
+-
++ALOGE("End of getSampleRate()");
+   return sampleRate;
+ }
+ 
+@@ -1006,6 +1024,7 @@ TRANSPORTDEC_ERROR GaSpecificConfig_Parse( CSGaSpecificConfig    *self,
+                                            HANDLE_FDK_BITSTREAM   bs,
+                                            UINT                   ascStartAnchor )
+ {
++ALOGE("Entered in GaSpecificConfig_Parse()");
+   TRANSPORTDEC_ERROR ErrorStatus = TRANSPORTDEC_OK;
+ 
+   self->m_frameLengthFlag = FDKreadBits(bs,1);
+@@ -1042,6 +1061,7 @@ TRANSPORTDEC_ERROR GaSpecificConfig_Parse( CSGaSpecificConfig    *self,
+     self->m_extensionFlag3 = FDKreadBits(bs,1);
+ 
+   }
++ALOGE("End of GaSpecificConfig_Parse()");
+   return (ErrorStatus);
+ }
+ #endif /* TP_GA_ENABLE */
+@@ -1056,6 +1076,7 @@ static INT ld_sbr_header( const CSAudioSpecificConfig *asc,
+                            HANDLE_FDK_BITSTREAM hBs,
+                            CSTpCallBacks *cb )
+ {
++ALOGE("Enterd in ld_sbr_header()");
+   const int channelConfiguration = asc->m_channelConfiguration;
+   int i = 0;
+   INT error = 0;
+@@ -1085,7 +1106,7 @@ static INT ld_sbr_header( const CSAudioSpecificConfig *asc,
+       error |= cb->cbSbr(cb->cbSbrData, hBs, asc->m_samplingFrequency, asc->m_extensionSamplingFrequency, asc->m_samplesPerFrame, AOT_ER_AAC_ELD, ID_SCE, i++);
+       break;
+   }
+-
++ALOGE("End of ld_sbr_header()");
+   return error;
+ }
+ 
+@@ -1116,6 +1137,8 @@ TRANSPORTDEC_ERROR EldSpecificConfig_Parse(
+ 
+   esc->m_sbrPresentFlag     = FDKreadBits(hBs, 1 );
+ 
++ALOGE("Value of esc->m_sbrPresentFlag %d", esc->m_sbrPresentFlag);
++
+   if (esc->m_sbrPresentFlag == 1) {
+     esc->m_sbrSamplingRate    = FDKreadBits(hBs, 1 ); /* 0: single rate, 1: dual rate */
+     esc->m_sbrCrcFlag         = FDKreadBits(hBs, 1 );
+@@ -1154,6 +1177,7 @@ TRANSPORTDEC_ERROR EldSpecificConfig_Parse(
+     }
+   }
+ bail:
++ALOGE("End of EldSpecificConfig_Parse()");
+   return (ErrorStatus);
+ }
+ #endif /* TP_ELD_ENABLE */
+@@ -1171,24 +1195,37 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_ExtensionParse(CSAudioSpecificConfig *sel
+     ascExtId   = (TP_ASC_EXTENSION_ID)FDKreadBits(bs, 11);
+     bitsAvailable -= 11;
+ 
++    ALOGE("ascExtId %d", ascExtId);
+     switch (ascExtId) {
+-    case ASCEXT_SBR:    /* 0x2b7 */
++     case ASCEXT_SBR:    /* 0x2b7 */
+       if ( (self->m_extensionAudioObjectType != AOT_SBR) && (bitsAvailable >= 5) ) {
+         self->m_extensionAudioObjectType = getAOT(bs);
+ 
++        ALOGE("AudioSpecificConfig_ExtensionParse m_extensionAudioObjectType %d", self->m_extensionAudioObjectType);
++
+         if ( (self->m_extensionAudioObjectType == AOT_SBR)
+           || (self->m_extensionAudioObjectType == AOT_ER_BSAC) )
+         { /* Get SBR extension configuration */
+           self->m_sbrPresentFlag = FDKreadBits(bs, 1);
++
++          ALOGE("AudioSpecificConfig_ExtensionParse self->m_sbrPresentFlag %d", self->m_sbrPresentFlag);
+           bitsAvailable -= 1;
+ 
+           if ( self->m_sbrPresentFlag == 1 ) {
++            ALOGE(" AudioSpecificConfig_ExtensionParse :m_sbrPresentFlag true");
++
+             self->m_extensionSamplingFrequency = getSampleRate(bs, &self->m_extensionSamplingFrequencyIndex, 4);
+ 
+             if ((INT)self->m_extensionSamplingFrequency <= 0) {
+               return TRANSPORTDEC_PARSE_ERROR;
+             }
+           }
++
++          else {
++            ALOGE("AudioSpecificConfig_ExtensionParse :m_sbrPresentFlag false");
++          }
++
++
+           if ( self->m_extensionAudioObjectType == AOT_ER_BSAC ) {
+             self->m_extensionChannelConfiguration = FDKreadBits(bs, 4);
+             bitsAvailable -= 4;
+@@ -1204,6 +1241,9 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_ExtensionParse(CSAudioSpecificConfig *sel
+         && (bitsAvailable > 0) )
+       { /* Get PS extension configuration */
+         self->m_psPresentFlag = FDKreadBits(bs, 1);
++
++        ALOGE("Value of self->m_psPresentFlag %d", self->m_psPresentFlag);
++
+         bitsAvailable -= 1;
+       }
+       break;
+@@ -1212,7 +1252,7 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_ExtensionParse(CSAudioSpecificConfig *sel
+       return TRANSPORTDEC_OK;
+     }
+   }
+-
++  ALOGE("End of AudioSpecificConfig_ExtensionParse()");
+   return TRANSPORTDEC_OK;
+ }
+ 
+@@ -1222,6 +1262,7 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_ExtensionParse(CSAudioSpecificConfig *sel
+ 
+ void AudioSpecificConfig_Init(CSAudioSpecificConfig *asc)
+ {
++ALOGE("entered in AudioSpecificConfig_Init()");
+   FDKmemclear(asc, sizeof(CSAudioSpecificConfig));
+ 
+   /* Init all values that should not be zero. */
+@@ -1241,6 +1282,8 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+         CSTpCallBacks      *cb
+         )
+ {
++
++  ALOGE("Entered in AudioSpecificConfig_Parse()");
+   TRANSPORTDEC_ERROR ErrorStatus = TRANSPORTDEC_OK;
+   UINT ascStartAnchor = FDKgetValidBits(bs);
+   int frameLengthFlag = -1;
+@@ -1248,6 +1291,7 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+   AudioSpecificConfig_Init(self);
+ 
+   self->m_aot = getAOT(bs);
++  ALOGE("self->m_aot %d", self->m_aot);
+   self->m_samplingFrequency = getSampleRate(bs, &self->m_samplingFrequencyIndex, 4);
+   if (self->m_samplingFrequency <= 0) {
+     return TRANSPORTDEC_PARSE_ERROR;
+@@ -1262,6 +1306,7 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+   if ( self->m_aot == AOT_SBR || self->m_aot == AOT_PS ) {
+     self->m_extensionAudioObjectType = AOT_SBR;
+ 
++    ALOGE("SBR extension - AOT_SBR %d", self->m_aot);
+     self->m_sbrPresentFlag = 1;
+     if ( self->m_aot == AOT_PS ) {
+       self->m_psPresentFlag = 1;
+@@ -1269,17 +1314,21 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+ 
+     self->m_extensionSamplingFrequency = getSampleRate(bs, &self->m_extensionSamplingFrequencyIndex, 4);
+     self->m_aot = getAOT(bs);
++    ALOGE("self->m_aot %d", self->m_aot);
+ 
+   } else {
++    ALOGE("SBR extension - AOT_NULL %d", self->m_aot);
+     self->m_extensionAudioObjectType = AOT_NULL_OBJECT;
++
+   }
+ 
+   /* Parse whatever specific configs */
++  ALOGE(" Parse specific config sself->m_aot %d", self->m_aot);
+   switch (self->m_aot)
+   {
+ #ifdef TP_GA_ENABLE
+     case AOT_AAC_LC:
+-    case AOT_ER_AAC_LC:
++    case AOT_ER_AAC_LC:   
+     case AOT_ER_AAC_LD:
+     case AOT_ER_AAC_SCAL:
+     case AOT_ER_BSAC:
+@@ -1310,6 +1359,9 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+       }
+       frameLengthFlag = self->m_sc.m_eldSpecificConfig.m_frameLengthFlag;
+       self->m_sbrPresentFlag = self->m_sc.m_eldSpecificConfig.m_sbrPresentFlag;
++
++      ALOGE("AOT_ER_AAC_ELD: self->m_sbrPresentFlag... %d", self->m_sbrPresentFlag);
++
+       self->m_extensionSamplingFrequency = (self->m_sc.m_eldSpecificConfig.m_sbrSamplingRate+1) * self->m_samplingFrequency;
+       break;
+ #endif /* TP_ELD_ENABLE */
+@@ -1320,11 +1372,12 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+   }
+ 
+   /* Frame length */
++  ALOGE(" Parse Frame length self->m_aot %d", self->m_aot);
+   switch (self->m_aot)
+   {
+ #if defined(TP_GA_ENABLE) || defined(TP_USAC_ENABLE)
+     case AOT_AAC_LC:
+-    case AOT_ER_AAC_LC:
++    case AOT_ER_AAC_LC:   
+     case AOT_ER_AAC_SCAL:
+     case AOT_ER_BSAC:
+     /*case AOT_USAC:*/
+@@ -1346,6 +1399,7 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+       break;
+   }
+ 
++  ALOGE(" Parse epconfig self->m_aot %d", self->m_aot);
+   switch (self->m_aot)
+   {
+     case AOT_ER_AAC_LC:
+@@ -1369,6 +1423,15 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+     ErrorStatus = AudioSpecificConfig_ExtensionParse(self, bs, cb);
+   }
+ 
++  ALOGE("self->m_sbrPresentFlag is %d", self->m_sbrPresentFlag);
++  ALOGE("self->m_psPresentFlag is %d", self->m_psPresentFlag);
++
++  if ((self->m_sbrPresentFlag == 1) || (self->m_psPresentFlag  == 1)) {
++	ALOGE("VT: Disable SBR PS");
++	ErrorStatus = TRANSPORTDEC_UNSUPPORTED_FORMAT; // VT: Disable SBR PS
++  }
++
++  ALOGE("End of AudioSpecificConfig_Parse()");
+   return (ErrorStatus);
+ }
+ 
+-- 
+2.7.4
+
