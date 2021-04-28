@@ -499,7 +499,7 @@ grep -nri --include=\*.mk 'monkey' ./
 
 To search for multiple strings
 
-grep  -wi 'string1\| string2 '  filename. ( no space )
+grep  -wi 'string1\|string2 '  filename. ( no space )
 
 to search multiple words same like give backslash symbols
 
@@ -721,11 +721,12 @@ or
 git reflog show (To check history of head in the branch )
 git reset commit id ( which u want to restore ) ( here also u will get all inbetweeen command not only one commit we want )
 ...........................................................................................................
-
-
+ >>> https://source.android.com/devices/tech/perf/boot-times  ..... Boot optimization 
+ >>> https://www.embien.com/blog/android-boot-process-and-optimization/
 
 ............................................................
-
+>> https://mediaarea.net/MediaInfoOnline  ..................    For checking any recorded file or video file format like which encoder using , sample rate , channels, bit rate ....
+.......................................................................
 
 
 

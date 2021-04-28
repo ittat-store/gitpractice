@@ -1,0 +1,65 @@
+From 4afc7b486b1c7bdec6975c5636851245e0f18419 Mon Sep 17 00:00:00 2001
+From: cheguri keerthi kumari <keerthikumari.cheguri@votarytech.com>
+Date: Sat, 10 Apr 2021 13:17:23 +0530
+Subject: [PATCH] Disable SBR PS
+
+---
+ LINUX/android/external/aac/libAACdec/src/aacdecoder_lib.cpp |  4 +++-
+ LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp   | 10 +++++++---
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+
+diff --git a/LINUX/android/external/aac/libAACdec/src/aacdecoder_lib.cpp b/LINUX/android/external/aac/libAACdec/src/aacdecoder_lib.cpp
+index 94eb3c0..837c420 100644
+--- a/LINUX/android/external/aac/libAACdec/src/aacdecoder_lib.cpp
++++ b/LINUX/android/external/aac/libAACdec/src/aacdecoder_lib.cpp
+@@ -946,7 +946,8 @@ LINKSPEC_CPP AAC_DECODER_ERROR aacDecoder_DecodeFrame(
+         }
+       }
+ 
+-
++//VT: Disable SBR
++#if 0
+       /* apply SBR processing */
+       sbrError = sbrDecoder_Apply ( self->hSbrDecoder,
+                                     pTimeData,
+@@ -984,6 +985,7 @@ LINKSPEC_CPP AAC_DECODER_ERROR aacDecoder_DecodeFrame(
+          self->channelIndices[1] = 1;
+        }
+      }
++#endif
+    }
+ 
+ 
+diff --git a/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp b/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp
+index bf7cca1..ce95c78 100644
+--- a/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp
++++ b/LINUX/android/external/aac/libMpegTPDec/src/tpdec_asc.cpp
+@@ -1189,6 +1189,8 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_ExtensionParse(CSAudioSpecificConfig *sel
+   TP_ASC_EXTENSION_ID  lastAscExt, ascExtId = ASCEXT_UNKOWN;
+   INT  bitsAvailable = (INT)FDKgetValidBits(bs);
+ 
++  ALOGE("Enter AudioSpecificConfig_ExtensionParse()");
++
+   while (bitsAvailable >= 11)
+   {
+     lastAscExt = ascExtId;
+@@ -1426,11 +1428,13 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
+   ALOGE("self->m_sbrPresentFlag is %d", self->m_sbrPresentFlag);
+   ALOGE("self->m_psPresentFlag is %d", self->m_psPresentFlag);
+ 
+-  if ((self->m_sbrPresentFlag == 1) || (self->m_psPresentFlag  == 1)) {
++/*  if ((self->m_sbrPresentFlag == 1) || (self->m_psPresentFlag  == 1)) {
+ 	ALOGE("VT: Disable SBR PS");
+-	ErrorStatus = TRANSPORTDEC_UNSUPPORTED_FORMAT; // VT: Disable SBR PS
++	self->m_sbrPresentFlag = 0;
++        self->m_psPresentFlag = 0;
++	//ErrorStatus = TRANSPORTDEC_UNSUPPORTED_FORMAT; // VT: Disable SBR PS
+   }
+-
++*/
+   ALOGE("End of AudioSpecificConfig_Parse()");
+   return (ErrorStatus);
+ }
+-- 
+2.7.4
+

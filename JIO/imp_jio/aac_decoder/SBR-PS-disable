@@ -10,7 +10,7 @@ SBR_LFEtest5_1.mp4	               AAC LC SBR    High Efficiency AAC@L4      HE-A
 SBRtestStereoAot5Sig1.mp4               AAC LC SBR    AAC@L1	                 HE-AAC             Not playing
 SBRtestStereoAot29Sig1.mp4           AAC LC SBR PS    AAC@L1                      HE-AACv2          Not playing
 SBRtestStereoAot29Sig2.mp4          AAC LC SBR PS     High Efficiency AAC v2@L2   HE-AACv2          Not playing
-SBRtestStereoAot29Sig0.mp4           AAC LC SBR PS   AAC@L1			  HE-AACv2           Not playing
+SBRtestStereoAot29Sig0.mp4           AAC LC SBR PS   AAC@L1			  HE-AACv2          Playing,Left and Right Audio observed
 SBRtestStereoAot5SigusePS.mp4         AAC LC SBR PS  High Efficiency AAC@L2        HE-AACv2          Not playing
 LFE-SBRstereo.mp4 			AVC          Main@L2.1                     NA                 Not playing
 ...............................................................................................
@@ -30,8 +30,10 @@ they will push .so file into device by adb command and clollect the logs from lo
 >> Read aacdecoder documnet 
 .............................................................
 
-
-
+>> Correct patchis 0001-Disable-SBR-PS.patch
+......................................................................
+>> all correct info present on SBR_PS.doc
+.............................................................
 
 
 

@@ -1,0 +1,124 @@
+From 7ddc8ddc1272b7515daee829e17275a088a20e22 Mon Sep 17 00:00:00 2001
+From: cheguri keerthi kumari <keerthikumari.cheguri@votarytech.com>
+Date: Fri, 22 Jan 2021 14:59:28 +0530
+Subject: [PATCH 4/4] lateset dma_config, tree.xml file added
+
+---
+ .../libsmm/redbend/cfg_files/dma_config.txt        | 70 ++++++++++++++++++----
+ .../external/libsmm/redbend/cfg_files/tree.xml     | 16 ++---
+ 2 files changed, 65 insertions(+), 21 deletions(-)
+
+diff --git a/LINUX/android/external/libsmm/redbend/cfg_files/dma_config.txt b/LINUX/android/external/libsmm/redbend/cfg_files/dma_config.txt
+index e8ccf0a..95af6a1 100644
+--- a/LINUX/android/external/libsmm/redbend/cfg_files/dma_config.txt
++++ b/LINUX/android/external/libsmm/redbend/cfg_files/dma_config.txt
+@@ -1,13 +1,57 @@
+-12accountroot=DMAcc
+-dp_split_support=true 
+-ca_cert_path=/etc/security/cacerts
+-handoff_dir=/data/local/tmp/rjio/workdir
+-dp_path_file=/data/local/tmp/rjio/dp
+-ua_result_file=/cache/result
+-dp_full_path=/data/local/tmp/rjio
+-scomo_battery_threshold=30
+-sales_tracker_sms_regist_smsc=7345673456
+-enable_ipc_debugging=true
+-sales_tracker_regist_mode=both
+-min_file_size=1024
+-enable_adc_bl=true
+\ No newline at end of file
++12accountroot=DMAcc
++
++ca_cert_path=/etc/security/cacerts
++handoff_dir=/data/local/tmp/rjio/workdir
++dp_path_file=/data/local/tmp/rjio/dp
++ua_result_file=/cache/result
++dp_full_path=/data/local/tmp/rjio
++
++dp_split_support=true
++enable_lawmo_bl=True
++enable_descmo_bl=True
++enable_tree_bl=True
++enable_locate_bl=True
++enable_diagnostics_bl=True
++enable_sales_tracker_bl=True
++enable_w3c_bl=True
++enable_gcm_bl=false
++
++scomo_battery_threshold=30
++
++sales_tracker_regist_mode=ip
++sales_tracker_sms_regist_smsc=8356811011
++cumulative_usage_checking_interval=600
++cumulative_usage_timeout_registration=7200
++
++enable_ipc_debugging=False
++trigger_dm_after_install=False
++triggerAdditionalSession=false
++dp_full_path_configurable=False
++
++min_file_size=1024
++log_file_max_size=1536 
++log_num_saved_files=5 
++log_level_util=debug
++log_level_swmc=debug
++log_level_smm=debug
++log_level_nia=debug
++log_level_dmc=debug
++log_level_dp_access=debug
++log_level_descmo=debug
++log_level_lawmo=debug
++log_level_scomo=debug
++log_level_fumo=debug
++log_level_bootstrap=debug
++log_level_core_tree=debug
++log_level_core_msgq=debug
++log_level_comm=debug
++log_level_core_dl=debug
++log_level_core_http=debug
++log_level_core_comm=debug
++log_level_core_sess=debug
++log_level_core_sessq=debug
++log_level_core_eng=debug
++log_level_xml=debug
++log_level_mmi=debug
++log_level_ipc=debug
++log_level_cpl=debug
+\ No newline at end of file
+diff --git a/LINUX/android/external/libsmm/redbend/cfg_files/tree.xml b/LINUX/android/external/libsmm/redbend/cfg_files/tree.xml
+index 95e45df..2ea32fa 100644
+--- a/LINUX/android/external/libsmm/redbend/cfg_files/tree.xml
++++ b/LINUX/android/external/libsmm/redbend/cfg_files/tree.xml
+@@ -1320,7 +1320,7 @@
+           <name>Bearer</name>
+           <format>chr</format>
+         </leaf>
+-        <leaf>
++		<leaf>
+           <name>Msisdn</name>
+           <format>chr</format>
+         </leaf>
+@@ -1328,13 +1328,13 @@
+           <name>IMSI</name>
+           <format>chr</format>
+         </leaf>
+-        <leaf>
+-          <name>PushServer</name>
+-          <get/><replace/>
+-          <type>text/plain</type>
+-          <format>chr</format>
+-          <value>W3C</value>
+-        </leaf>
++		<leaf>
++		  <name>PushServer</name>
++		  <get/><replace/>
++		  <type>text/plain</type>
++		  <format>chr</format>
++		  <value>W3C</value>
++		</leaf>
+       </node>
+     </node>
+   </node>
+-- 
+2.7.4
+

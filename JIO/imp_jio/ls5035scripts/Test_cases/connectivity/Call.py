@@ -1,0 +1,26 @@
+import time
+
+from Test_cases.Constants.constant import *
+import subprocess
+
+
+def Call(device, Iterations):
+    for i in range(Iterations):
+        for dev in device:
+            subprocess.call(operation.adb_s + dev + operation.display)
+            print("running Call Test Iteration : ", i + 1)
+            Call_method = operation.adb_s + dev + " adb shell am start -a android.intent.action.CALL -d tel:+972527300294 "
+            result = subprocess.getoutput(Call_method)
+    return True if subprocess.getoutput(operation.adb + operation.Call) == '1' else False
+
+
+def valid_Call(dev,Iter):
+    with open('Call.log', 'w') as file:
+        subprocess.call("adb logcat *:D -d |findstr call", stdout=file)
+    a=Call(dev, Iter)
+    file.close()
+    time.sleep(5)
+    if a  :
+        return True
+    else:
+        return False

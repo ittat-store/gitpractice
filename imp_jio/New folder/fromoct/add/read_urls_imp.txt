@@ -19,3 +19,6 @@ check below URL's for what purpose
 https://bugzilla.mozilla.org/show_bug.cgi?id=1588233 
 https://phabricator.services.mozilla.com/D52932 
 https://www.khronos.org/registry/OpenGL/extensions/OES/OES_EGL_image_external.txt  
+
+https://www.embien.com/blog/android-boot-process-and-optimization/  ............ boot optimization
+https://source.android.com/devices/tech/perf/boot-times
