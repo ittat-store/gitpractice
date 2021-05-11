@@ -1216,22 +1216,32 @@ base-component@^0.0.3:
   dependencies:
     react "^0.13.3"
 
-"base-component@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master":
+"base-component@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master":
   version "0.0.10"
   dependencies:
     react "15.1.0"
     react-dom "15.1.0"
-    service "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
+    service "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
 
-"base-emitter@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master":
+"base-emitter@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master":
   version "0.0.4"
 
-"base-module@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-module-master":
+"base-emitter@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master":
+  version "0.0.4"
+
+"base-module@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-module-master":
   version "0.0.4"
   dependencies:
-    base-emitter "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master"
-    service "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
-    settings-manager "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/settings-manager-master"
+    base-emitter "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master"
+    service "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
+    settings-manager "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/settings-manager-master"
+
+"base-module@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-module-master":
+  version "0.0.4"
+  dependencies:
+    base-emitter "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master"
+    service "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
+    settings-manager "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/settings-manager-master"
 
 base62@^1.1.0:
   version "1.2.8"
@@ -2398,13 +2408,13 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-"enhance-animation@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/enhance-animation-master":
+"enhance-animation@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/enhance-animation-master":
   version "0.0.10"
   dependencies:
-    base-component "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
+    base-component "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
     react "15.1.0"
     react-dom "15.1.0"
-    service "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
+    service "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
 
 enhanced-resolve@~0.9.0:
   version "0.9.1"
@@ -2904,7 +2914,7 @@ fastparse@^1.1.1, fastparse@^1.1.2:
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
   integrity sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==
 
-"fatigue-scripts@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/fatigue-scripts-master":
+"fatigue-scripts@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/fatigue-scripts-master":
   version "0.0.4"
 
 fbjs@^0.8.0:
@@ -3432,9 +3442,9 @@ home-or-tmp@^2.0.0:
     os-tmpdir "^1.0.1"
 
 hosted-git-info@^2.1.4, hosted-git-info@^2.7.1, hosted-git-info@^2.8.8:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
-  integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 html-comment-regex@^1.1.0:
   version "1.1.2"
@@ -4893,7 +4903,7 @@ mixin-deep@^1.2.0:
   dependencies:
     minimist "^1.2.5"
 
-"mobile-operator@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/mobile-operator-master":
+"mobile-operator@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/mobile-operator-master":
   version "0.0.4"
 
 move-concurrently@^1.0.1:
@@ -6357,21 +6367,21 @@ rc@^1.0.1, rc@^1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-"react-animation-composer@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-animation-composer":
+"react-animation-composer@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-animation-composer":
   version "0.0.13"
   dependencies:
-    base-component "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
+    base-component "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
     react "15.1.0"
     react-dom "15.1.0"
-    service "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
+    service "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
 
-"react-dialog@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-dialog-master":
+"react-dialog@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-dialog-master":
   version "0.2.0"
   dependencies:
-    base-component "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
+    base-component "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
     react "15.1.0"
     react-dom "15.1.0"
-    soft-key-store "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
+    soft-key-store "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
 
 react-dom@15.1.0:
   version "15.1.0"
@@ -6383,31 +6393,40 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-"react-option-menu@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-option-menu-master":
+"react-option-menu@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-option-menu-master":
   version "0.1.16"
   dependencies:
-    base-component "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
+    base-component "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
     react "15.1.0"
     react-dom "15.1.0"
-    simple-navigation-helper "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simple-navigation-helper-master"
-    soft-key-store "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
+    simple-navigation-helper "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simple-navigation-helper-master"
+    soft-key-store "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
 
-"react-sim-chooser@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-sim-chooser-master":
+"react-option-menu@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-option-menu-master":
+  version "0.1.16"
+  dependencies:
+    base-component "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
+    react "15.1.0"
+    react-dom "15.1.0"
+    simple-navigation-helper "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simple-navigation-helper-master"
+    soft-key-store "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
+
+"react-sim-chooser@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-sim-chooser-master":
   version "0.0.8"
   dependencies:
-    base-component "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
+    base-component "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
     react "15.1.0"
-    react-option-menu "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-option-menu-master"
-    service "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
-    sim-settings-helper "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/sim-settings-helper-master"
+    react-option-menu "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-option-menu-master"
+    service "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master"
+    sim-settings-helper "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/sim-settings-helper-master"
 
-"react-soft-key@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-soft-key-master":
+"react-soft-key@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/react-soft-key-master":
   version "0.1.6"
   dependencies:
-    base-component "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
+    base-component "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base_component-master"
     react "15.1.0"
     react-dom "15.1.0"
-    soft-key-store "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
+    soft-key-store "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master"
 
 react@15.1.0:
   version "15.1.0"
@@ -6996,7 +7015,10 @@ semver@~5.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
   integrity sha1-myzl094C0XxgEq0yaqa00M9U+U8=
 
-"service@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master":
+"service@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master":
+  version "0.0.4"
+
+"service@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/service-master":
   version "0.0.4"
 
 set-blocking@^2.0.0, set-blocking@~2.0.0:
@@ -7019,7 +7041,10 @@ setimmediate@^1.0.5:
   resolved "https://registry.yarnpkg.com/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
   integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
 
-"settings-manager@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/settings-manager-master":
+"settings-manager@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/settings-manager-master":
+  version "0.0.2"
+
+"settings-manager@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/settings-manager-master":
   version "0.0.2"
 
 sha.js@2.2.6:
@@ -7065,16 +7090,22 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-"sim-settings-helper@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/sim-settings-helper-master":
+"sim-settings-helper@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/sim-settings-helper-master":
   version "0.0.3"
 
-"simple-navigation-helper@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simple-navigation-helper-master":
+"sim-settings-helper@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/sim-settings-helper-master":
+  version "0.0.3"
+
+"simple-navigation-helper@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simple-navigation-helper-master":
   version "0.0.24"
 
-"simslot-manager@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simslot-manager-master":
+"simple-navigation-helper@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simple-navigation-helper-master":
+  version "0.0.24"
+
+"simslot-manager@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/simslot-manager-master":
   version "0.0.7"
   dependencies:
-    base-module "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-module-master"
+    base-module "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-module-master"
 
 slash@^1.0.0:
   version "1.0.0"
@@ -7149,10 +7180,15 @@ socks@~2.3.2:
     ip "1.1.5"
     smart-buffer "^4.1.0"
 
-"soft-key-store@file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master":
+"soft-key-store@file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master":
   version "0.0.9"
   dependencies:
-    base-emitter "file:../../../../../../../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master"
+    base-emitter "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master"
+
+"soft-key-store@file:../../../../bollosre/Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/soft-key-store-master":
+  version "0.0.9"
+  dependencies:
+    base-emitter "file:../../../../../Downloads/LauncherApp/Launcher_Set_up/launcher-spreadtrum-dependencies/base-emitter-master"
 
 sort-keys@^1.0.0:
   version "1.1.2"
