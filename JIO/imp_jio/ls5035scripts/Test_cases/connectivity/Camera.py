@@ -9,8 +9,12 @@ def Camera_open(device, Iterations):
         for dev in device:
             subprocess.call(operation.adb_s + dev + operation.display)
             print("running Camera Open Test Iteration : ", i + 1)
-            Camera_method = operation.adb_s + dev + " adb shell am start -a android.media.action.IMAGE_CAPTURE"
+            Camera_method = operation.adb_s + dev + "  shell am start -a android.media.action.IMAGE_CAPTURE"
             result = subprocess.getoutput(Camera_method)
+            Camera_method1 = operation.adb_s + dev + "  shell input keyevent 27"
+            result = subprocess.getoutput(Camera_method1)
+            Camera_method2 = operation.adb_s + dev + "  shell input keyevent 3"
+            result = subprocess.getoutput(Camera_method2)
     return True if subprocess.getoutput(operation.adb + operation.Camera) == '1' else False
 
 
