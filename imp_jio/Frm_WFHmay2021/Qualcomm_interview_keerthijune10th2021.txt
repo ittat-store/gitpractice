@@ -1,0 +1,75 @@
+Total 1hr interview  .... 
+
+
+>> about introduction
+
+>> 2 c programs 
+
+>>  abou of issue which i worked on 
+
+1) print given number is binary or not 
+ex : 100010 is binary number 
+     100102 is not a binary number 
+
+sol : 
+
+#include<stdio.h>
+
+int main(){
+
+long int num;
+
+printf("Enter the number to check:");
+
+scanf("%ld",&num);
+
+int count = 0;
+
+while(num != 0){
+
+int val = num % 10;
+
+if((val != 1) && (val != 0)){
+
+count++;
+
+break;
+
+}
+
+num = num / 10;
+
+}
+
+if(count > 0)
+
+printf("Given number is not a binary\n");
+
+else
+
+printf("Given number is a binary\n");
+
+return 0;
+
+}
+
+
+2) print square of given number 
+   using normal method and static variable usage and call by address method 
+ 
+sol :
+
+
+main( )
+ {
+int n=2; 
+printf("%d", square (&n));
+}
+
+square (int *n);
+{
+return (*n) * (*n) ; or n= (*n) * (*n) ;
+}
+
+
+

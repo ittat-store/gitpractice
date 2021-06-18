@@ -1,0 +1,37 @@
+PROJECTS UNDERTAKEN :
+               Project 1: Porting of LUNE OS on ODM Devices
+Description:
+LuneOS is a mobile operating system based on the Linux kernel and developed by WebOS Ports
+ community .
+Role: Developer
+Responsibilities held:
+• Created yocto build environment setup and fixed the issues while cloning the and building the luneos code.
+• Studied and analyzed luneos architecture and compared same with android architecture by preparing ppts.
+• Compared analyzed Luneos source code and Android O code in respective factors like build framework , hal and kernel level .
+• Explored creating of new recepie files and config files and created dummy bitbake with these files .
+• Done uboot changes and dm _verity changes with respect to android code in luneos
+• Ported Kernel changes and created recepie files and fixed build issues
+• Flashed build images of ported changes of luneos on odm device and done log analysis
+              Project 2: Porting of B2G OS on ODM Devices
+Description:
+B2G OS is a community maintained open source operating system for smart phones, tablets,
+ smart TVs and other connected devices and maintained by Mozilla's volunteer community.
+Role: Developer
+Responsibilities held:
+• Created Build environment and build setup for B2G emulator code with ndk setup by changing
+ different sdk setups
+• Added b2G ODM specific changes and make file configurations and fixed the build issues .
+• Worked on launching on b2g Emulator code for odm device porting
+• Worked on Porting of B2g code on Ls5030 device and launcher app integration .
+ Project 3: Porting of Android go on MSM8909 based hardware
+Description:
+Android Oreo Go OS is designed for low cost and low memory phones ~1GB RAM. It is quite lightweight, takes less storage and increases the performance. Create a VT platform by porting android-go on APQ 8009 based hardware
+Role: Developer
+Responsibilities held:
+• Applied ODM patches of boot loader, Kernel,framework to Android go and resolved compilation issues.
+• Done analysis on partition sizes and added new partition through EMMC and sd card
+• Explored and done analysis on Meta creation and created meta with new vendor partition .
+• Done ADB and Mini com log analysis for booting issue in Bootable(LK),and dumpsys for kernel level.
+• Analyzed Audio and camera issues after porting and tried fix the issues in audio like sound card detection, audio track , audio playback issue .
+
+

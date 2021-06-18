@@ -1,0 +1,39 @@
+From 1e599985c1f15db4accf2fa9755361c25c335d8c Mon Sep 17 00:00:00 2001
+From: cheguri keerthi kumari <keerthikumari.cheguri@votarytech.com>
+Date: Tue, 18 May 2021 12:20:33 +0530
+Subject: [PATCH] Modified ro.carrier as Jio
+
+---
+ LINUX/android/build/target/product/core_tiny.mk            | 2 +-
+ LINUX/android/build/target/product/generic_no_telephony.mk | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/LINUX/android/build/target/product/core_tiny.mk b/LINUX/android/build/target/product/core_tiny.mk
+index 0a92275..b33b7db 100644
+--- a/LINUX/android/build/target/product/core_tiny.mk
++++ b/LINUX/android/build/target/product/core_tiny.mk
+@@ -107,7 +107,7 @@ PRODUCT_COPY_FILES += \
+     system/core/rootdir/init.zygote32.rc:root/init.zygote32.rc
+ 
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.carrier=unknown
++    ro.carrier=Jio
+ 
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+diff --git a/LINUX/android/build/target/product/generic_no_telephony.mk b/LINUX/android/build/target/product/generic_no_telephony.mk
+index f6ccd2a..7167327 100644
+--- a/LINUX/android/build/target/product/generic_no_telephony.mk
++++ b/LINUX/android/build/target/product/generic_no_telephony.mk
+@@ -54,7 +54,7 @@ PRODUCT_COPY_FILES := \
+         frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
+ 
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.carrier=unknown
++    ro.carrier=Jio
+ 
+ $(call inherit-product-if-exists, frameworks/base/data/fonts/fonts.mk)
+ $(call inherit-product-if-exists, external/google-fonts/dancing-script/fonts.mk)
+-- 
+2.7.4
+

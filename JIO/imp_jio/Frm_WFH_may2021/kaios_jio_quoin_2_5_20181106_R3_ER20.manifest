@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<manifest>
+
+  <remote fetch="ssh://git@git.kaiostech.com/quoin/" name="quoin"/>
+  <default remote="quoin" revision="refs/tags/kaios_jio_quoin_2_5_20181106_R3_ER20_production"/>
+
+  <!-- KaiOS specific things -->
+  <project name="gaia" path="gaia"/>
+  <project name="gecko_scripts" path="gecko"/>
+  <project name="gonk-misc" path="gonk-misc"/>
+  <project name="platform_system_bluetoothd" path="system/bluetoothd"/>
+  <project name="fake-libdvm" path="dalvik"/>
+  <project name="librecovery" path="librecovery"/>
+  <project name="moztt" path="external/moztt"/>
+  <project name="rilproxy" path="rilproxy"/>
+  <project name="platform_hardware_libhardware_moz" path="hardware/libhardware_moz"/>
+  <project name="platform_system_libfdio" path="system/libfdio"/>
+  <project name="platform_system_libpdu" path="system/libpdu"/>
+  <project name="platform_system_mmitest" path="system/mmitest"/>
+  <project name="mmitest" path="apps/mmitest"/>
+  <project name="platform_external_librt9" path="external/librt9"/>
+  <project name="platform_system_nfcd" path="system/nfcd"/>
+  <project name="kaios-plus.kaiostech.com" path="apps/kaios-plus.kaiostech.com"/>
+  <project name="platform_external_librqwerty" path="external/librqwerty"/>
+  
+  <!-- Prebuilt modules for release -->
+  <project name="prebuilt-apps" path="prebuilt-apps" />
+  <project name="prebuilt-b2g" path="objdir-gecko" />
+
+  <include name="services.xml"/>
+</manifest>

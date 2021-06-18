@@ -728,7 +728,17 @@ git reset commit id ( which u want to restore ) ( here also u will get all inbet
 >> https://mediaarea.net/MediaInfoOnline  ..................    For checking any recorded file or video file format like which encoder using , sample rate , channels, bit rate ....
 .......................................................................
 
+>> Commenting multiple lines in vi terminal of .sh file
 
+First, press ESC
+Go to the line from which you want to start commenting. Then, press ctrl + v, this will enable the visual block mode.
+use the down arrow to select multiple lines that you want to comment.
+Now, press SHIFT + I to enable insert mode.
+Press # and it will add a comment to the first line. Then press ECS and wait for a second, # will be added to all the lines.
 
+>> uncommenting 
 
-
+Press CTRL + V to enable visual block mode.
+Move down and select the lines till you want to uncomment.
+press x and it will uncomment all the selected lines at once.
+..............................................................................................

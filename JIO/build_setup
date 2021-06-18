@@ -39,7 +39,7 @@ packages)
 
 
 ▪ SSL Certification (Not required on IDC/secured machines)
-o sudo apt-get purge ca-certificates curl openssh-serverOther Software
+o sudo apt-get purge ca-certificates curl openssh-server(Other Software)
 o sudo apt-get install meld (Compare tool)
 o sudo apt-get install curl (data down load by using URL)
 o sudo aptget install xpad (sticky pad)

@@ -88,3 +88,62 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1636085       ........... most imp 
 
  https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API  .................... b2g os apis
 
+........................................................................................................
+.........................................Mobile saved sites..................
+
+https://eidk.org/..... Android related 
+
+
+https://www.guru99.com/operating-system-tutorial.html ..... Os types 
+
+https://telugu.news18.com/photogallery/jobs/want-to-learn-coding-know-about-5-best-online-coding-courses-ss-501822.html...... coaching websites 
+
+
+https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Porting_B2G_OS/basics...... Porting basics 
+
+
+Link epfo with mobile number 
+Ask votary kalyan y pf not credited 
+
+
+https://stackoverflow.com/questions/21647465/porting-firefox-os-to-android-device?rq=1 .... Porting firefox to android device
+
+https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Platform/Gonk .... Gonk architecture
+
+https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Architecture .... B2g os 
+
+
+https://www.qualcomm.com/news/onq/2017/01/17/secure-boot-and-image-authentication-mobile-tech .... Secure boot 
+
+
+https://developingtelecoms.com/tech/devices-platforms/7595...... Kaios 
+
+https://onlinetechguru.org/what-is-operating-system-best-os-ios-vs-android-vs-kaios/ ..... Os 
+
+
+Kernel cross compilation.....https://medium.com/@jagan.dream/cross-compile-flash-kernel-for-raspberry-pi-3-29699275abc6
+
+.................................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

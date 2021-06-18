@@ -1,0 +1,53 @@
+From 049daceb1e09ef50d9e4ad1ab373b22fef30db91 Mon Sep 17 00:00:00 2001
+From: cheguri keerthi kumari <keerthikumari.cheguri@votarytech.com>
+Date: Wed, 19 May 2021 11:08:55 +0530
+Subject: [PATCH] Modified ro.carrier,manufacturer as Jio
+
+---
+ LINUX/android/build/target/product/core_tiny.mk                       | 2 +-
+ LINUX/android/build/target/product/generic_no_telephony.mk            | 2 +-
+ LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/LINUX/android/build/target/product/core_tiny.mk b/LINUX/android/build/target/product/core_tiny.mk
+index 0a92275..b33b7db 100644
+--- a/LINUX/android/build/target/product/core_tiny.mk
++++ b/LINUX/android/build/target/product/core_tiny.mk
+@@ -107,7 +107,7 @@ PRODUCT_COPY_FILES += \
+     system/core/rootdir/init.zygote32.rc:root/init.zygote32.rc
+ 
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.carrier=unknown
++    ro.carrier=Jio
+ 
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+diff --git a/LINUX/android/build/target/product/generic_no_telephony.mk b/LINUX/android/build/target/product/generic_no_telephony.mk
+index f6ccd2a..7167327 100644
+--- a/LINUX/android/build/target/product/generic_no_telephony.mk
++++ b/LINUX/android/build/target/product/generic_no_telephony.mk
+@@ -54,7 +54,7 @@ PRODUCT_COPY_FILES := \
+         frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
+ 
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.carrier=unknown
++    ro.carrier=Jio
+ 
+ $(call inherit-product-if-exists, frameworks/base/data/fonts/fonts.mk)
+ $(call inherit-product-if-exists, external/google-fonts/dancing-script/fonts.mk)
+diff --git a/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop b/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop
+index 519a781..215f2b6 100755
+--- a/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop
++++ b/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop
+@@ -9,7 +9,7 @@ ro.fota.network_port=443
+ ro.product.name=F320B
+ ro.product.device=F320B
+ ro.product.board=msm8909
+-ro.product.manufacturer=BlueBank
++ro.product.manufacturer=Jio
+ #ro.fota.cu_ref=LF2403N-ABJIINA  #has been moved to features.mk
+  ro.fota.sw_ver=0108
+ 
+-- 
+2.7.4
+

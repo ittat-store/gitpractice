@@ -1,0 +1,1673 @@
+--------- beginning of system
+04-27 19:04:09.948   700   854 E storaged: getService package_native failed
+04-27 19:04:09.949  1263  1263 I chatty  : uid=1000 system_server expire 58 lines
+04-27 19:04:09.962   700   854 I storaged: storaged: Start
+04-27 19:04:09.966  1263  1323 I chatty  : uid=1000(system) android.display expire 2 lines
+04-27 19:04:10.074  1263  1354 I chatty  : uid=1000(system) CpuTracker expire 2 lines
+04-27 19:04:11.382  1263  1263 I chatty  : uid=1000 system_server expire 66 lines
+04-27 19:04:12.007  1080  1080 I imsrcsd : getAndroidPropValue : vendor.ims.modem.multisub.cap[2]
+04-27 19:04:12.007  1080  1080 I imsrcsd : Uce Service HAL  detected modemVersion[2]
+04-27 19:04:12.007  1080  1080 I imsrcsd : Uce Service HAL  loading lib-imsrcs-v2
+04-27 19:04:12.108  1080  1080 I Diag_Lib: StartImsService
+04-27 19:04:12.108  1080  1080 I imsrcsd : ImsServiceMain startService[1]
+04-27 19:04:12.119  1080  1458 I ServiceManagement: Registered vendor.qti.ims.callinfo@1.0::IService/default (start delay of 5195ms)
+04-27 19:04:12.125  1080  1458 I ServiceManagement: Registered vendor.qti.ims.factory@1.0::IImsFactory/default (start delay of 5201ms)
+04-27 19:04:12.125  1080  1458 I imsrcsd : ImsServiceMain Running..
+04-27 19:04:12.211  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-27 19:04:12.243  1080  1457 I Diag_Lib: OnServiceStatusReceived iStatus[0]
+04-27 19:04:12.244  1080  1457 E Diag_Lib: Modem does not support UCE/IMS-CM, proceed to register HAL's
+04-27 19:04:12.244  1080  1457 I Diag_Lib: Starting Service for First Time
+04-27 19:04:12.247  1080  1457 I ServiceManagement: Registered com.qualcomm.qti.uceservice@2.2::IUceService/com.qualcomm.qti.uceservice (start delay of 5323ms)
+04-27 19:04:12.247  1080  1457 I Diag_Lib: CM_IMSCONNECTIONMANAGER_CREATE_CONNECTION Before Registering Service
+04-27 19:04:12.249  1080  1457 I ServiceManagement: Registered com.qualcomm.qti.imscmservice@2.2::IImsCmService/qti.ims.connectionmanagerservice (start delay of 5325ms)
+04-27 19:04:12.249  1080  1457 I Diag_Lib: CM_IMSCONNECTIONMANAGER_CREATE_CONNECTION After Registering Service
+04-27 19:04:12.312  1263  1469 I chatty  : uid=1000 system_server expire 4 lines
+04-27 19:04:12.438  1263  1263 I chatty  : uid=1000 system_server expire 57 lines
+04-27 19:04:12.471  1263  1323 I chatty  : uid=1000(system) android.display expire 1 line
+04-27 19:04:12.605  1263  1480 I chatty  : uid=1000(system) NetworkWatchlis expire 2 lines
+04-27 19:04:12.607  1263  1451 I chatty  : uid=1000 system_server expire 1 line
+04-27 19:04:12.709  1263  1482 I chatty  : uid=1000(system) StorageManagerS expire 2 lines
+04-27 19:04:12.770  1263  1263 I chatty  : uid=1000 system_server expire 177 lines
+04-27 19:04:13.718  1263  1491 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-27 19:04:13.776  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 2 lines
+04-27 19:04:13.780  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-27 19:04:13.814  1263  1263 I chatty  : uid=1000 system_server expire 44 lines
+04-27 19:04:13.847  1263  1369 I chatty  : uid=1000(system) PackageManager expire 1 line
+04-27 19:04:13.880  1263  1323 I chatty  : uid=1000(system) android.display expire 1 line
+04-27 19:04:14.291  1263  1322 I chatty  : uid=1000(system) android.io expire 3 lines
+04-27 19:04:14.331  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-27 19:04:14.439  1263  1482 I chatty  : uid=1000(system) StorageManagerS expire 1 line
+04-27 19:04:14.463  1263  1500 I chatty  : uid=1000(system) AudioService expire 1 line
+04-27 19:04:14.510   538   538 I android.hardware.wifi@1.0-service: Wifi HAL started
+04-27 19:04:14.529  1263  1263 I chatty  : uid=1000 system_server expire 43 lines
+04-27 19:04:14.556   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for p2p0
+04-27 19:04:14.556   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for wlan0
+04-27 19:04:14.556   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:04:14.557   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:04:14.562   538   538 I android.hardware.wifi@1.0-service: Configured chip in mode 0
+04-27 19:04:14.562   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:04:14.569  1263  1469 I chatty  : uid=1000 system_server expire 1 line
+04-27 19:04:14.570  1263  1291 I chatty  : uid=1000(system) Binder:1263_2 expire 2 lines
+04-27 19:04:14.600   703   703 I wificond: setting base_wiphy_index_ to 0
+04-27 19:04:14.602   703   703 I wificond: create scanner for interface with index: 26
+04-27 19:04:14.602   703   703 I wificond: subscribe scan result for interface with index: 26
+04-27 19:04:14.605   703   703 E wificond: No Offload Service available
+04-27 19:04:14.605   703   703 I wificond: Offload HAL not supported 
+04-27 19:04:14.608  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-27 19:04:14.614  1263  1485 I chatty  : uid=1000(system) NetworkPolicy expire 2 lines
+04-27 19:04:14.672  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-27 19:04:14.725  1263  1491 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-27 19:04:14.728  1263  1335 I chatty  : uid=1000(system) android.bg expire 1 line
+04-27 19:04:14.842  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 9 lines
+04-27 19:04:14.916  1263  1263 I chatty  : uid=1000 system_server expire 22 lines
+04-27 19:04:14.916  1263  1335 I chatty  : uid=1000(system) android.bg expire 2 lines
+04-27 19:04:14.978  1263  1319 I chatty  : uid=1000(system) android.fg expire 8 lines
+04-27 19:04:14.997  1263  1291 I chatty  : uid=1000(system) Binder:1263_2 expire 1 line
+04-27 19:04:15.012  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-27 19:04:15.034  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 22 lines
+04-27 19:04:15.158  1263  1322 I chatty  : uid=1000(system) android.io expire 1 line
+04-27 19:04:15.883  1263  1320 I chatty  : uid=1000(system) android.ui expire 1 line
+04-27 19:04:15.993  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 14 lines
+04-27 19:04:16.086  1263  1504 I chatty  : uid=1000(system) Binder:1263_3 expire 3 lines
+04-27 19:04:16.157  1263  1263 I chatty  : uid=1000 system_server expire 35 lines
+04-27 19:04:16.383  1263  1866 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-27 19:04:16.630  1263  1907 I chatty  : uid=1000(system) uteStateMachine expire 2 lines
+04-27 19:04:16.704  1263  1917 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-27 19:04:16.784  1263  1323 I chatty  : uid=1000(system) android.display expire 1 line
+04-27 19:04:17.167  1263  1322 I chatty  : uid=1000(system) android.io expire 5 lines
+04-27 19:04:17.205  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-27 19:04:17.374  1263  1319 I chatty  : uid=1000(system) android.fg expire 1 line
+04-27 19:04:17.377  1263  1497 I chatty  : uid=1000(system) onProviders.ECP expire 2 lines
+04-27 19:04:17.397   387   387 D vold    : /system/bin/sgdisk
+04-27 19:04:17.397   387   387 D vold    :     --android-dump
+04-27 19:04:17.397   387   387 D vold    :     /dev/block/vold/disk:179,64
+04-27 19:04:17.407  1263  1770 I chatty  : uid=1000(system) Binder:1263_5 expire 2 lines
+04-27 19:04:17.428  1263  1263 I chatty  : uid=1000 system_server expire 3 lines
+04-27 19:04:17.437  1263  1568 I chatty  : uid=1000(system) Binder:1263_4 expire 3 lines
+04-27 19:04:17.439  1263  1290 I chatty  : uid=1000(system) Binder:1263_1 expire 21 lines
+04-27 19:04:17.558  1797  1797 E SystemConfig: SystemConfig is being accessed by a process other than system_server.
+04-27 19:04:17.591  1263  2029 I chatty  : uid=1000 system_server expire 1 line
+04-27 19:04:17.612   387   387 D vold    : DISK mbr
+04-27 19:04:17.612   387   387 D vold    : 
+04-27 19:04:17.612   387   387 D vold    : PART 1 c
+04-27 19:04:17.612   387   387 D vold    : 
+04-27 19:04:17.616   387   387 D vold    : /system/bin/blkid
+04-27 19:04:17.616   387   387 D vold    :     -c
+04-27 19:04:17.616   387   387 D vold    :     /dev/null
+04-27 19:04:17.616   387   387 D vold    :     -s
+04-27 19:04:17.616   387   387 D vold    :     TYPE
+04-27 19:04:17.616   387   387 D vold    :     -s
+04-27 19:04:17.616   387   387 D vold    :     UUID
+04-27 19:04:17.616   387   387 D vold    :     -s
+04-27 19:04:17.616   387   387 D vold    :     LABEL
+04-27 19:04:17.616   387   387 D vold    :     /dev/block/vold/public:179,65
+04-27 19:04:17.764  1797  1797 W SystemConfig: No directory /product_services/etc/sysconfig, skipping
+04-27 19:04:17.764  1797  1797 W SystemConfig: No directory /product_services/etc/permissions, skipping
+04-27 19:04:17.768   387   387 D vold    : /dev/block/vold/public:179,65: UUID="4282-13FC" TYPE="vfat" 
+04-27 19:04:17.768   387   387 D vold    : 
+04-27 19:04:17.770   387   387 D vold    : /system/bin/fsck_msdos
+04-27 19:04:17.770   387   387 D vold    :     -p
+04-27 19:04:17.770   387   387 D vold    :     -f
+04-27 19:04:17.770   387   387 D vold    :     -y
+04-27 19:04:17.770   387   387 D vold    :     /dev/block/vold/public:179,65
+04-27 19:04:17.808  1263  1491 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-27 19:04:17.919  1797  2043 E ActivityThread: Failed to find provider info for com.android.contacts
+04-27 19:04:17.947  1263  1322 I chatty  : uid=1000(system) android.io expire 2 lines
+04-27 19:04:17.998   387   387 D vold    : /dev/block/vold/public:179,65: 104 files, 1821216 free (56913 clusters)
+04-27 19:04:17.998   387   387 D vold    : 
+04-27 19:04:17.999   387   387 I vold    : Filesystem check completed OK
+04-27 19:04:18.031   387   387 D vold    : Waiting for FUSE to spin up...
+04-27 19:04:18.079  2047  2047 W sdcard  : Device explicitly enabled sdcardfs
+04-27 19:04:18.081   387   387 D vold    : Waiting for FUSE to spin up...
+04-27 19:04:18.088  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 9 lines
+04-27 19:04:18.299  1263  2015 I chatty  : uid=1000(system) Binder:1263_A expire 5 lines
+04-27 19:04:18.338  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:18.339  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:18.339  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: -1 slotId: 0 provisionStatus: 1
+04-27 19:04:18.339  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: adding default
+04-27 19:04:18.380  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider EmergOnly MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:18.383  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:18.396  1549  2028 E ActivityThread: Failed to find provider info for com.android.contacts
+04-27 19:04:18.712  1549  1836 E ActivityThread: Failed to find provider info for com.android.contacts
+04-27 19:04:18.773  1549  1836 E ActivityThread: Failed to find provider info for com.android.contacts
+04-27 19:04:18.816  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:19.122  1797  1797 D MccTable: updateMccMncConfiguration mccmnc='
+04-27 19:04:19.532  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:19.532  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:19.538  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:19.543  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:19.586  1263  2023 I chatty  : uid=1000(system) Binder:1263_B expire 9 lines
+04-27 19:04:19.592  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:19.595  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:19.595  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:19.602  1797  1797 I TelecomFramework: TelecomAccountRegistry: Unregistering phone account ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}.
+04-27 19:04:19.630  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:19.753  2085  2085 I chatty  : uid=10093 com.google.android.gms.persistent identical 83 lines
+04-27 19:04:19.767  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:19.796  1797  1797 D MccTable: updateMccMncConfiguration mccmnc='405861
+04-27 19:04:19.796  1797  1797 D MccTable: updateMccMncConfiguration: mcc=405, mnc=861
+04-27 19:04:19.797  1797  1797 D MccTable: updateMccMncConfiguration updateConfig config={0.0 405mcc861mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mDisplayWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined}}
+04-27 19:04:19.914  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:19.946  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:19.983  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:19.997  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.101  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:20.101  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:20.108  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:20.108  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:20.142  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:20.142  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:20.215  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:20.215  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:20.228  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.230  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:20.230  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.232  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:20.235  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.255  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.270  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:20.270  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:20.281  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.334  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.361  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.371  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.380  2085  2138 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.381  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.385  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.386  2085  2138 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.390  2085  2138 I chatty  : uid=10093 com.google.android.gms.persistent identical 5 lines
+04-27 19:04:20.393  2085  2138 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.396  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.434  2085  2138 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.445  2085  2138 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.471  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.499  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.517  2085  2162 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.519  2085  2162 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.520  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:04:20.534  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.755  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.758  2085  2163 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.764  2085  2163 I chatty  : uid=10093 com.google.android.gms.persistent identical 2 lines
+04-27 19:04:20.769  2085  2163 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.790  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.854  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:20.937  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:20.944  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:20.970  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.084  2085  2162 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.085  2085  2162 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.087  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.089  2085  2162 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.090  2085  2162 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.096  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.126  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.130  1263  1323 I chatty  : uid=1000(system) android.display expire 19 lines
+04-27 19:04:21.146  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.166  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:21.166  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:21.169  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.170  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:21.170  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:21.175  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.229  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.230  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.233  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.235  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.236  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.239  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:21.239  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:21.289  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.318  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:21.324  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.324  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:21.326  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:21.339  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.390  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.455  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:21.455  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:21.463  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.469  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.547  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.570  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.571  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.580  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.584  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.631  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:21.642  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.658  2085  2085 I chatty  : uid=10093 com.google.android.gms.persistent identical 3 lines
+04-27 19:04:21.665  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.694  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:21.696  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.697  2085  2085 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.758  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.780  2085  2176 I chatty  : uid=10093(com.google.android.gms) GoogleApiHandle identical 12 lines
+04-27 19:04:21.783  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.791  1263  1568 I chatty  : uid=1000(system) Binder:1263_4 expire 7 lines
+04-27 19:04:21.804  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.885  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.931  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:21.966  1797  1797 D MccTable: updateMccMncConfiguration mccmnc='405861
+04-27 19:04:21.966  1797  1797 D MccTable: updateMccMncConfiguration: mcc=405, mnc=861
+04-27 19:04:21.966  1797  1797 D MccTable: updateMccMncConfiguration updateConfig config={0.0 405mcc861mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mDisplayWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined}}
+04-27 19:04:21.988  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.003  1263  2023 I chatty  : uid=1000(system) Binder:1263_B expire 3 lines
+04-27 19:04:22.084  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.124  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.214  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.238  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.257  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.265  1797  1797 E SystemConfig: SystemConfig is being accessed by a process other than system_server.
+04-27 19:04:22.274  2085  2176 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.318  1263  2231 I chatty  : uid=1000 system_server expire 1 line
+04-27 19:04:22.346  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.428  2085  2233 I chatty  : uid=10093 com.google.android.gms.persistent identical 16 lines
+04-27 19:04:22.432  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.456  2085  2102 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.467  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:22.467  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.470  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:22.471  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:22.481  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.489  2141  2211 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.495  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.498  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.510  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:22.510  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.535  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:22.535  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.538  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:22.539  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:22.557  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.566  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.570  1263  2015 I chatty  : uid=1000(system) Binder:1263_A expire 5 lines
+04-27 19:04:22.573  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.573  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:22.573  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.655  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:22.656  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.658  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:22.658  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:22.659  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.660  2141  2211 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.687  2085  2103 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.696  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.708  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.732  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:22.732  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.770  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:22.771  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.773  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:22.774  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:22.816  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.817  1263  1886 I chatty  : uid=1000(system) Binder:1263_9 expire 2 lines
+04-27 19:04:22.818  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.820  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:22.820  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.821  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.829  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.860  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.866  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 1 line
+04-27 19:04:22.869  1263  1482 I chatty  : uid=1000(system) StorageManagerS expire 2 lines
+04-27 19:04:22.870  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.871  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-27 19:04:22.872  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.874  1263  1290 I chatty  : uid=1000(system) Binder:1263_1 expire 3 lines
+04-27 19:04:22.880  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.889  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.907   387  2013 D vold    : fscrypt_unlock_user_key 0 serial=0 token_present=0
+04-27 19:04:22.908   387  2013 D vold    : Skipping non-key .
+04-27 19:04:22.908   387  2013 D vold    : Skipping non-key ..
+04-27 19:04:22.908   387  2013 D vold    : Trying user CE key /data/misc/vold/user_keys/ce/0/current
+04-27 19:04:22.926   387  2013 I vold    : List of Keymaster HALs found:
+04-27 19:04:22.936   387  2013 I vold    : Keymaster HAL #1: Keymaster HAL: 4 from QTI SecurityLevel: TRUSTED_ENVIRONMENT HAL: android.hardware.keymaster@4.0::IKeymasterDevice/default
+04-27 19:04:22.936   387  2013 I vold    : Using Keymaster HAL: 4 from QTI for encryption.  Security level: TRUSTED_ENVIRONMENT, HAL: android.hardware.keymaster@4.0::IKeymasterDevice/default
+04-27 19:04:22.948   387  2013 D vold    : Successfully retrieved key
+04-27 19:04:22.957   387  2013 E vold    : Inserting using old mechanism  Error 19: No such device
+04-27 19:04:22.957   387  2013 D vold    : Added key 510734388 (ext4:a580b261026b025b) to keyring 188380756 in process 387key size64
+04-27 19:04:22.957   387  2013 E vold    : Inserting using old mechanism  Error 19: No such device
+04-27 19:04:22.957   387  2013 D vold    : Added key 995705508 (f2fs:a580b261026b025b) to keyring 188380756 in process 387key size64
+04-27 19:04:22.957   387  2013 E vold    : Inserting using old mechanism  Error 19: No such device
+04-27 19:04:22.958   387  2013 D vold    : Added key 80356177 (fscrypt:a580b261026b025b) to keyring 188380756 in process 387key size64
+04-27 19:04:22.958   387  2013 D vold    : Installed ce key for user 0
+04-27 19:04:22.959   387   404 D vold    : fscrypt_prepare_user_storage for volume null, user 0, serial 0, flags 2
+04-27 19:04:22.959   387   404 D vold    : Preparing: /data/system_ce/0
+04-27 19:04:22.959   387   404 D vold    : Preparing: /data/misc_ce/0
+04-27 19:04:22.959   387   404 D vold    : Preparing: /data/vendor_ce/0
+04-27 19:04:22.962   387   404 D vold    : Preparing: /data/media/0
+04-27 19:04:22.963   387   404 D vold    : Preparing: /data/data
+04-27 19:04:22.964   387   404 I vold    : Found policy a580b261026b025b at /data/system_ce/0 which matches expected value
+04-27 19:04:22.964   387   404 I vold    : Found policy a580b261026b025b at /data/misc_ce/0 which matches expected value
+04-27 19:04:22.964   387   404 I vold    : Found policy a580b261026b025b at /data/vendor_ce/0 which matches expected value
+04-27 19:04:22.965   387   404 I vold    : Found policy a580b261026b025b at /data/media/0 which matches expected value
+04-27 19:04:22.966   387   404 I vold    : Found policy a580b261026b025b at /data/data which matches expected value
+04-27 19:04:22.966   387   404 D vold    : Starting restorecon of /data/system_ce/0
+04-27 19:04:22.974  1263  1491 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-27 19:04:22.975  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:22.976  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:22.977  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:22.982  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:22.983  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:22.997  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 13 lines
+04-27 19:04:23.000  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:23.023   387   404 D vold    : Finished restorecon of /data/system_ce/0
+04-27 19:04:23.023   387   404 D vold    : Starting restorecon of /data/vendor_ce/0
+04-27 19:04:23.051  1263  1504 I chatty  : uid=1000(system) Binder:1263_3 expire 3 lines
+04-27 19:04:23.056  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:23.056  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:23.111  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:23.126  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:23.154  1797  1797 I TelecomFramework: : onSubscriptionsChanged - update accounts
+04-27 19:04:23.155  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Unregistering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:23.165  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-27 19:04:23.165  1797  1797 I TelecomFramework: TelecomAccountRegistry: setupAccounts: Phone with subscription id: 1 slotId: 0 provisionStatus: 1
+04-27 19:04:23.209  1263  1291 I chatty  : uid=1000(system) Binder:1263_2 expire 2 lines
+04-27 19:04:23.229  1797  1797 I TelecomFramework: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+04-27 19:04:23.229  1797  1797 I TelecomFramework: PstnIncomingCallNotifier: Registering: Handler (com.qualcomm.qti.internal.telephony.QtiGsmCdmaPhone) {ee9bdbb}
+04-27 19:04:23.269  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:23.307  1797  1797 I chatty  : uid=1001(radio) com.android.phone identical 2 lines
+04-27 19:04:23.321  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:23.325   387   404 D vold    : Finished restorecon of /data/vendor_ce/0
+04-27 19:04:23.325   387   404 D vold    : Starting restorecon of /data/misc_ce/0
+04-27 19:04:23.393   387   404 D vold    : Finished restorecon of /data/misc_ce/0
+04-27 19:04:23.393   387   404 D vold    : /system/bin/vold_prepare_subdirs
+04-27 19:04:23.393   387   404 D vold    :     prepare
+04-27 19:04:23.393   387   404 D vold    :     
+04-27 19:04:23.393   387   404 D vold    :     0
+04-27 19:04:23.393   387   404 D vold    :     2
+04-27 19:04:23.444  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:23.455  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - false
+04-27 19:04:23.548  1263  1319 I chatty  : uid=1000(system) android.fg expire 4 lines
+04-27 19:04:23.654  1797  1797 I TelecomFramework: PstnPhoneCapabilitiesNotifier: handleVideoCapabilitesChanged. Video capability - true
+04-27 19:04:23.695  1263  1263 I chatty  : uid=1000 system_server expire 8 lines
+04-27 19:04:23.739  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:23.758  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:23.833  1263  1504 I chatty  : uid=1000(system) Binder:1263_3 expire 3 lines
+04-27 19:04:23.948  1797  1797 I TelecomFramework: : Carrier-config changed, checking for phone account updates.
+04-27 19:04:24.063  1797  1797 I TelecomFramework: AccountEntry: reRegisterPstnPhoneAccount: subId: 1 - no change
+04-27 19:04:24.145   387   387 W vold    : Failed to open /proc/1718/fd: No such file or directory
+04-27 19:04:24.307  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:24.340  2085  2233 I chatty  : uid=10093 com.google.android.gms.persistent identical 7 lines
+04-27 19:04:24.351  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:24.674  2251  2298 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:24.742   387   387 W vold    : Failed to open /proc/2249/fd: No such file or directory
+04-27 19:04:24.748  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:24.781  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:24.784   387   387 W vold    : Failed to open /proc/2257/fd: No such file or directory
+04-27 19:04:24.794  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:24.861  2085  2233 E ActivityThread: Failed to find provider info for com.google.android.gsf.gservices
+04-27 19:04:24.932  1263  1291 I chatty  : uid=1000(system) Binder:1263_2 expire 1 line
+04-27 19:04:25.048   387   387 D vold    : /system/bin/sgdisk
+04-27 19:04:25.048   387   387 D vold    :     --android-dump
+04-27 19:04:25.048   387   387 D vold    :     /dev/block/vold/disk:179,64
+04-27 19:04:25.166  1263  1319 I chatty  : uid=1000(system) android.fg expire 8 lines
+04-27 19:04:25.166  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 10 lines
+04-27 19:04:25.184  1263  1322 I chatty  : uid=1000(system) android.io expire 1 line
+04-27 19:04:25.238  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 27 lines
+04-27 19:04:25.285   387   387 D vold    : DISK mbr
+04-27 19:04:25.285   387   387 D vold    : 
+04-27 19:04:25.285   387   387 D vold    : PART 1 c
+04-27 19:04:25.285   387   387 D vold    : 
+04-27 19:04:25.296   387   405 D vold    : Waiting for FUSE to spin up...
+04-27 19:04:25.347   387   405 D vold    : Waiting for FUSE to spin up...
+04-27 19:04:25.361  1263  1507 I chatty  : uid=1000(system) backup expire 3 lines
+04-27 19:04:25.365  2404  2404 W sdcard  : Device explicitly enabled sdcardfs
+04-27 19:04:25.399   387   405 D vold    : Linking /storage/emulated/0 to /mnt/user/0/primary
+04-27 19:04:25.475   387   405 D vold    : /system/bin/blkid
+04-27 19:04:25.475   387   405 D vold    :     -c
+04-27 19:04:25.475   387   405 D vold    :     /dev/null
+04-27 19:04:25.475   387   405 D vold    :     -s
+04-27 19:04:25.475   387   405 D vold    :     TYPE
+04-27 19:04:25.475   387   405 D vold    :     -s
+04-27 19:04:25.475   387   405 D vold    :     UUID
+04-27 19:04:25.475   387   405 D vold    :     -s
+04-27 19:04:25.475   387   405 D vold    :     LABEL
+04-27 19:04:25.476   387   405 D vold    :     /dev/block/vold/public:179,65
+04-27 19:04:25.580  1263  1778 I chatty  : uid=1000(system) Binder:1263_6 expire 2 lines
+04-27 19:04:25.678   387   405 D vold    : /dev/block/vold/public:179,65: UUID="4282-13FC" TYPE="vfat" 
+04-27 19:04:25.679   387   405 D vold    : 
+04-27 19:04:25.679   387   405 D vold    : /system/bin/fsck_msdos
+04-27 19:04:25.679   387   405 D vold    :     -p
+04-27 19:04:25.679   387   405 D vold    :     -f
+04-27 19:04:25.679   387   405 D vold    :     -y
+04-27 19:04:25.679   387   405 D vold    :     /dev/block/vold/public:179,65
+04-27 19:04:25.966   387   405 D vold    : /dev/block/vold/public:179,65: 104 files, 1821216 free (56913 clusters)
+04-27 19:04:25.966   387   405 D vold    : 
+04-27 19:04:25.970   387   405 I vold    : Filesystem check completed OK
+04-27 19:04:26.032   387   405 D vold    : Waiting for FUSE to spin up...
+04-27 19:04:26.069  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 17 lines
+04-27 19:04:26.081  1263  1323 I chatty  : uid=1000(system) android.display expire 3 lines
+04-27 19:04:26.082   387   405 D vold    : Waiting for FUSE to spin up...
+04-27 19:04:26.121  1263  1507 I chatty  : uid=1000(system) backup expire 4 lines
+04-27 19:04:26.128  2470  2470 W sdcard  : Device explicitly enabled sdcardfs
+04-27 19:04:26.374  2409  2409 E LoadedApk: Unable to instantiate appComponentFactory
+04-27 19:04:26.374  2409  2409 E LoadedApk: java.lang.ClassNotFoundException: Didn't find class "android.support.v4.app.CoreComponentFactory" on path: DexPathList[[zip file "/system/priv-app/redbend_client/redbend_client.apk"],nativeLibraryDirectories=[/system/priv-app/redbend_client/lib/arm, /system/priv-app/redbend_client/redbend_client.apk!/lib/armeabi-v7a, /system/lib, /product/lib, /system/lib, /product/lib]]
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:196)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.LoadedApk.createAppFactory(LoadedApk.java:256)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.LoadedApk.createOrUpdateClassLoaderLocked(LoadedApk.java:855)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.LoadedApk.getClassLoader(LoadedApk.java:950)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.LoadedApk.getResources(LoadedApk.java:1188)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2462)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2454)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6353)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.ActivityThread.access$1300(ActivityThread.java:220)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1860)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.os.Looper.loop(Looper.java:214)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at android.app.ActivityThread.main(ActivityThread.java:7397)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at java.lang.reflect.Method.invoke(Native Method)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+04-27 19:04:26.374  2409  2409 E LoadedApk: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:935)
+04-27 19:04:26.539  1263  1291 I chatty  : uid=1000(system) Binder:1263_2 expire 8 lines
+04-27 19:04:26.744  1263  2429 I chatty  : uid=1000(system) backup-0 expire 10 lines
+04-27 19:04:27.036  1263  1482 I chatty  : uid=1000(system) StorageManagerS expire 2 lines
+04-27 19:04:27.208  1263  1263 I chatty  : uid=1000 system_server expire 4 lines
+04-27 19:04:27.483  1263  1521 I chatty  : uid=1000(system) SyncManager expire 1 line
+04-27 19:04:27.605  1263  1319 I chatty  : uid=1000(system) android.fg expire 4 lines
+04-27 19:04:27.838  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 1 line
+04-27 19:04:28.125  1263  1886 I chatty  : uid=1000(system) Binder:1263_9 expire 1 line
+04-27 19:04:28.270  1263  2378 I chatty  : uid=1000(system) Binder:1263_D expire 2 lines
+04-27 19:04:29.303  1263  1568 I chatty  : uid=1000(system) Binder:1263_4 expire 1 line
+04-27 19:04:29.841  1263  2637 I chatty  : uid=1000(system) Binder:1263_E expire 5 lines
+04-27 19:04:29.920  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 18 lines
+04-27 19:04:30.347  1263  1263 I chatty  : uid=1000 system_server expire 3 lines
+04-27 19:04:30.406  1263  2429 I chatty  : uid=1000(system) backup-0 expire 83 lines
+04-27 19:04:30.475  1263  2015 I chatty  : uid=1000(system) Binder:1263_A expire 4 lines
+04-27 19:04:30.605  1263  1323 I chatty  : uid=1000(system) android.display expire 1 line
+04-27 19:04:31.853  1263  1568 I chatty  : uid=1000(system) Binder:1263_4 expire 1 line
+04-27 19:04:32.111  1263  2815 I chatty  : uid=1000(system) Binder:1263_10 expire 3 lines
+04-27 19:04:32.271  1263  1322 I chatty  : uid=1000(system) android.io expire 1 line
+04-27 19:04:32.294  1263  1290 I chatty  : uid=1000(system) Binder:1263_1 expire 2 lines
+04-27 19:04:32.341  1263  2023 I chatty  : uid=1000(system) Binder:1263_B expire 2 lines
+04-27 19:04:33.440  2670  2821 W PackageParser: Unknown element under <manifest>: queries at /data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.apk Binary XML file line #5
+04-27 19:04:33.564  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-27 19:04:33.782  1263  1491 I chatty  : uid=1000(system) ConnectivitySer expire 10 lines
+04-27 19:04:35.009  2670  2945 W PackageParser: Unknown element under <manifest>: queries at /data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.apk Binary XML file line #5
+04-27 19:04:35.226  1263  2015 I chatty  : uid=1000(system) Binder:1263_A expire 2 lines
+04-27 19:04:35.311  1263  1886 I chatty  : uid=1000(system) Binder:1263_9 expire 9 lines
+04-27 19:04:35.793  2670  2945 W PackageParser: Unknown element under <manifest>: queries at /data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.apk Binary XML file line #5
+04-27 19:04:37.388  1263  2023 I chatty  : uid=1000(system) Binder:1263_B expire 2 lines
+04-27 19:04:37.442  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 19 lines
+04-27 19:04:37.554  1263  1291 I chatty  : uid=1000(system) Binder:1263_2 expire 9 lines
+04-27 19:04:39.455  1263  1323 I chatty  : uid=1000(system) android.display expire 2 lines
+04-27 19:04:39.653  1263  1335 I chatty  : uid=1000(system) android.bg expire 2 lines
+04-27 19:04:39.726  1263  3192 I chatty  : uid=1000(system) Binder:1263_12 expire 1 line
+04-27 19:04:40.601  1263  1869 I chatty  : uid=1000(system) Binder:1263_7 expire 3 lines
+04-27 19:04:41.679  1263  1568 I chatty  : uid=1000(system) Binder:1263_4 expire 3 lines
+04-27 19:04:42.886  1263  1504 I chatty  : uid=1000(system) Binder:1263_3 expire 1 line
+04-27 19:04:44.151  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 android.content.ContextWrapper.startService:669 androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService:102 com.redbend.app.SmmClient.sendData:46 
+04-27 19:04:44.185  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 android.content.ContextWrapper.startService:669 androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService:102 com.redbend.app.SmmClient.sendData:46 
+04-27 19:04:44.217  1263  2815 I chatty  : uid=1000(system) Binder:1263_10 expire 7 lines
+04-27 19:04:44.550  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService.sendProductTypeEvent:198 
+04-27 19:04:44.815  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.app.SmmService.onStartCommand:484 
+04-27 19:04:44.874  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService:102 com.redbend.app.SmmClient.sendData:46 com.redbend.app.SmmClient.sendEventToSmmService:23 
+04-27 19:04:44.893  1263  1886 I chatty  : uid=1000(system) Binder:1263_9 expire 7 lines
+04-27 19:04:44.943  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 15 lines
+04-27 19:04:44.973  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.client.BasicService.onCreate:320 android.app.ActivityThread.handleCreateService:3954 android.app.ActivityThread.access$1500:220 
+04-27 19:04:45.147  1263  1869 I chatty  : uid=1000(system) Binder:1263_7 expire 2 lines
+04-27 19:04:45.371  1263  1263 I chatty  : uid=1000 system_server expire 1 line
+04-27 19:04:45.404   703   703 I wificond: wifi generation capability mask: 5
+04-27 19:04:45.481  1263  1319 I chatty  : uid=1000(system) android.fg expire 1 line
+04-27 19:04:45.505  1797  1797 I TelecomFramework: : Carrier-config changed, checking for phone account updates.
+04-27 19:04:45.580  1797  1797 I TelecomFramework: AccountEntry: reRegisterPstnPhoneAccount: subId: 1 - no change
+04-27 19:04:46.294  1263  2637 I chatty  : uid=1000(system) Binder:1263_E expire 5 lines
+04-27 19:04:46.676  1263  1875 I chatty  : uid=1000(system) Binder:1263_8 expire 4 lines
+04-27 19:04:47.050  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-27 19:04:47.139  1263  1491 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-27 19:04:47.488  1263  1568 I chatty  : uid=1000(system) Binder:1263_4 expire 3 lines
+04-27 19:04:48.865  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 4 lines
+04-27 19:04:50.196  1263  4009 I chatty  : uid=1000(system) Binder:1263_13 expire 1 line
+04-27 19:04:50.353  1263  1504 I chatty  : uid=1000(system) Binder:1263_3 expire 1 line
+04-27 19:04:50.467  1263  1778 I chatty  : uid=1000(system) Binder:1263_6 expire 1 line
+04-27 19:04:50.785  1263  4009 I chatty  : uid=1000(system) Binder:1263_13 expire 3 lines
+04-27 19:04:51.103  2085  2365 E ActivityThread: Failed to find provider info for instantapp-dev-manager
+04-27 19:04:51.933  1263  1504 I chatty  : uid=1000(system) Binder:1263_3 expire 1 line
+04-27 19:04:52.043  1263  1770 I chatty  : uid=1000(system) Binder:1263_5 expire 3 lines
+04-27 19:04:53.665  1263  2015 I chatty  : uid=1000(system) Binder:1263_A expire 1 line
+04-27 19:04:53.665  1263  1491 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-27 19:04:54.537  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 1 line
+04-27 19:04:54.539  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-27 19:04:54.914  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-27 19:04:55.104  1263  2815 I chatty  : uid=1000(system) Binder:1263_10 expire 3 lines
+04-27 19:04:55.496  1263  1875 I chatty  : uid=1000(system) Binder:1263_8 expire 3 lines
+04-27 19:04:57.041  1263  2023 I chatty  : uid=1000(system) Binder:1263_B expire 2 lines
+04-27 19:04:57.143  1263  3132 I chatty  : uid=1000(system) Binder:1263_11 expire 1 line
+04-27 19:04:57.782  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$2.onReceive:467 
+04-27 19:04:57.792  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.app.SmmService.onStartCommand:484 
+04-27 19:04:58.375  1263  2378 I chatty  : uid=1000(system) Binder:1263_D expire 1 line
+04-27 19:04:58.428  1263   929 I chatty  : uid=1000(system) Binder:1263_14 expire 2 lines
+04-27 19:04:59.397  1263  1263 I chatty  : uid=1000 system_server expire 6 lines
+04-27 19:04:59.415  1263  1335 I chatty  : uid=1000(system) android.bg expire 3 lines
+04-27 19:05:02.799  2409  1062 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-27 19:05:02.861  2409  1062 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-27 19:05:02.871  2409  3534 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1045 android.content.ContextWrapper.sendBroadcast:448 com.redbend.swm_common.GcmHandler.genericHandler:84 com.redbend.app.EventHandler.handle:70 com.redbend.app.FlowManager.handle:412 
+04-27 19:05:02.899  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 android.content.ContextWrapper.startService:669 androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService:102 com.redbend.app.SmmClient.sendData:46 
+04-27 19:05:02.907  2409  2409 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.app.SmmService.onStartCommand:484 
+04-27 19:05:03.080  2409  1062 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-27 19:05:09.197  1263  1473 I chatty  : uid=1000(system) AlarmManager expire 2 lines
+04-27 19:05:17.133  1263  3192 I chatty  : uid=1000(system) Binder:1263_12 expire 1 line
+04-27 19:05:18.542  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 8 lines
+04-27 19:05:26.243  1263  1869 I chatty  : uid=1000(system) Binder:1263_7 expire 1 line
+04-27 19:05:28.416  1263  1319 I chatty  : uid=1000(system) android.fg expire 1 line
+04-27 19:05:28.580  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 3 lines
+04-27 19:05:28.605  1263  1323 I chatty  : uid=1000(system) android.display expire 3 lines
+04-27 19:05:36.919  1263  1478 I chatty  : uid=1000(system) InputReader expire 1 line
+04-27 19:05:36.921  1263  1263 I chatty  : uid=1000 system_server expire 2 lines
+04-27 19:05:36.961  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 13 lines
+04-27 19:05:37.016  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-27 19:05:37.118  1263  2815 I chatty  : uid=1000(system) Binder:1263_10 expire 3 lines
+04-27 19:05:37.621  1263  1319 I chatty  : uid=1000(system) android.fg expire 4 lines
+04-27 19:05:37.955  1263  1322 I chatty  : uid=1000(system) android.io expire 1 line
+04-27 19:05:39.963  1263  1869 I chatty  : uid=1000(system) Binder:1263_7 expire 1 line
+04-27 19:05:59.477  1263  1473 I chatty  : uid=1000(system) AlarmManager expire 1 line
+04-27 19:06:01.482  1263  1778 I chatty  : uid=1000(system) Binder:1263_6 expire 1 line
+04-27 19:06:08.360  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-27 19:06:08.495  1263  1770 I chatty  : uid=1000(system) Binder:1263_5 expire 4 lines
+04-27 19:06:20.793  1263  2378 I chatty  : uid=1000(system) Binder:1263_D expire 1 line
+04-27 19:06:20.808  1263  2637 I chatty  : uid=1000(system) Binder:1263_E expire 1 line
+04-27 19:06:27.866  1263  1875 I chatty  : uid=1000(system) Binder:1263_8 expire 3 lines
+04-27 19:06:44.003  1263  3192 I chatty  : uid=1000(system) Binder:1263_12 expire 10 lines
+04-27 19:06:48.618  1263  2815 I chatty  : uid=1000(system) Binder:1263_10 expire 6 lines
+04-27 19:06:52.681  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 8 lines
+04-27 19:07:00.573  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-27 19:07:18.892  1263  2246 I chatty  : uid=1000(system) AdbDebuggingMan expire 1 line
+04-27 19:07:18.899  1263  1319 I chatty  : uid=1000(system) android.fg expire 7 lines
+04-27 19:07:55.294  1263  1478 I chatty  : uid=1000(system) InputReader expire 1 line
+04-27 19:07:55.295  1263  1263 I chatty  : uid=1000 system_server expire 7 lines
+04-27 19:07:55.296  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 5 lines
+04-27 19:07:55.302  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-27 19:07:55.326  1263  1323 I chatty  : uid=1000(system) android.display expire 1 line
+04-27 19:07:55.536  1263  1220 I chatty  : uid=1000(system) Binder:1263_15 expire 3 lines
+04-27 19:07:55.727  1263  1671 I chatty  : uid=1000(system) Binder:1263_18 expire 1 line
+04-27 19:07:56.935  1263  1322 I chatty  : uid=1000(system) android.io expire 1 line
+04-27 19:07:57.322  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 5 lines
+04-27 19:08:12.300  1263  1898 I chatty  : uid=1000(system) Binder:1263_19 expire 9 lines
+04-27 19:08:15.074  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-27 19:08:15.185  1263  1770 I chatty  : uid=1000(system) Binder:1263_5 expire 1 line
+04-27 19:08:27.424  1263  1263 I chatty  : uid=1000 system_server expire 4 lines
+04-27 19:08:27.432   703   703 W wificond: No pno scan started
+04-27 19:08:27.432   703   703 W wificond: Scheduled scan is not running!
+04-27 19:08:27.452   703   703 W wificond: No pno scan started
+04-27 19:08:27.452   703   703 W wificond: Scheduled scan is not running!
+04-27 19:08:27.489   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:27.494   703   703 I wificond: Unsubscribe scan result for interface with index: 26
+04-27 19:08:27.523   538   538 E android.hardware.wifi@1.0-service: Failed to open directory: Permission denied
+04-27 19:08:27.523   538   538 E android.hardware.wifi@1.0-service: Error occurred while deleting old tombstone files
+04-27 19:08:27.523   538   538 E android.hardware.wifi@1.0-service: Error writing files to flash
+04-27 19:08:27.526   538  1571 I android.hardware.wifi@1.0-service: Legacy HAL stop complete callback received
+04-27 19:08:28.339   538   538 I android.hardware.wifi@1.0-service: Wifi HAL stopped
+04-27 19:08:28.350  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 12 lines
+04-27 19:08:29.055   703   703 I wificond: Regulatory domain changed
+04-27 19:08:29.055   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:08:29.055   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:08:29.055   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:08:29.055   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:08:29.076   538   538 I android.hardware.wifi@1.0-service: Wifi HAL started
+04-27 19:08:29.432   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for p2p0
+04-27 19:08:29.432   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for wlan0
+04-27 19:08:29.432   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:29.433   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:29.439   538   538 I android.hardware.wifi@1.0-service: Configured chip in mode 0
+04-27 19:08:29.439   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:29.460   703   703 I wificond: setting base_wiphy_index_ to 1
+04-27 19:08:29.462   703   703 I wificond: create scanner for interface with index: 28
+04-27 19:08:29.462   703   703 I wificond: subscribe scan result for interface with index: 28
+04-27 19:08:29.467   703   703 E wificond: No Offload Service available
+04-27 19:08:29.467   703   703 I wificond: Offload HAL not supported 
+04-27 19:08:29.989   703   703 I wificond: Regulatory domain changed to country: IN
+04-27 19:08:29.990   703   703 I wificond: 2.4Ghz frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472
+04-27 19:08:29.991   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:08:29.991   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:08:29.991   703   703 I wificond: Regulatory domain changed to country: IN
+04-27 19:08:29.992   703   703 I wificond: 2.4Ghz frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472
+04-27 19:08:29.992   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:08:29.992   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:08:31.649   703   703 W wificond: No pno scan started
+04-27 19:08:31.650   703   703 W wificond: Scheduled scan is not running!
+04-27 19:08:31.662  1263  3192 I chatty  : uid=1000(system) Binder:1263_12 expire 1 line
+04-27 19:08:31.663   703   703 W wificond: No pno scan started
+04-27 19:08:31.663   703   703 W wificond: Scheduled scan is not running!
+04-27 19:08:31.665   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:31.759   703   703 I wificond: Unsubscribe scan result for interface with index: 28
+04-27 19:08:31.816   538   538 E android.hardware.wifi@1.0-service: Failed to open directory: Permission denied
+04-27 19:08:31.816   538   538 E android.hardware.wifi@1.0-service: Error occurred while deleting old tombstone files
+04-27 19:08:31.816   538   538 E android.hardware.wifi@1.0-service: Error writing files to flash
+04-27 19:08:31.819   538  2386 I android.hardware.wifi@1.0-service: Legacy HAL stop complete callback received
+04-27 19:08:32.605   538   538 I android.hardware.wifi@1.0-service: Wifi HAL stopped
+04-27 19:08:33.292   703   703 I wificond: Regulatory domain changed
+04-27 19:08:33.292   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:08:33.292   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:08:33.292   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:08:33.292   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:08:33.292   703   703 I wificond: Regulatory domain changed
+04-27 19:08:33.293   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:08:33.293   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:08:33.293   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:08:33.293   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:08:33.304   538   538 I android.hardware.wifi@1.0-service: Wifi HAL started
+04-27 19:08:33.343   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for p2p0
+04-27 19:08:33.343   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for wlan0
+04-27 19:08:33.343   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:33.343   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:33.347   538   538 I android.hardware.wifi@1.0-service: Configured chip in mode 0
+04-27 19:08:33.347   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:08:33.367   703   703 I wificond: setting base_wiphy_index_ to 2
+04-27 19:08:33.369   703   703 I wificond: create scanner for interface with index: 30
+04-27 19:08:33.369   703   703 I wificond: subscribe scan result for interface with index: 30
+04-27 19:08:33.370   703   703 E wificond: No Offload Service available
+04-27 19:08:33.370   703   703 I wificond: Offload HAL not supported 
+04-27 19:08:42.928  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:08:42.959  1549  1549 I chatty  : uid=10088(com.android.systemui) identical 1 line
+04-27 19:08:42.992  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:08:49.790  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 13 lines
+04-27 19:08:56.090  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-27 19:08:56.796  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 2 lines
+04-27 19:08:56.811  1263  1323 I chatty  : uid=1000(system) android.display expire 2 lines
+04-27 19:08:57.776  1263  1319 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-27 19:08:58.860  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 2 lines
+04-27 19:08:59.718  1263  1290 I chatty  : uid=1000(system) Binder:1263_1 expire 2 lines
+04-27 19:09:01.332  1263  2637 I chatty  : uid=1000(system) Binder:1263_E expire 1 line
+04-27 19:09:01.538  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:09:01.652  1263  1770 I chatty  : uid=1000(system) Binder:1263_5 expire 2 lines
+04-27 19:09:01.652  1263  1319 I chatty  : uid=1000(system) android.fg expire 4 lines
+04-27 19:09:02.384  1263  1322 I chatty  : uid=1000(system) android.io expire 1 line
+04-27 19:09:03.118  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-27 19:09:04.163  1263  1540 I chatty  : uid=1000(system) Binder:1263_16 expire 6 lines
+04-27 19:09:09.216  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 1 line
+04-27 19:09:17.086  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-27 19:09:24.791  1263  1220 I chatty  : uid=1000(system) Binder:1263_15 expire 4 lines
+04-27 19:09:55.408  1263  3053 I chatty  : uid=1000(system) Binder:1263_1C expire 1 line
+04-27 19:09:57.129  1263  1778 I chatty  : uid=1000(system) Binder:1263_6 expire 1 line
+04-27 19:09:58.840  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 10 lines
+04-27 19:10:05.843  1263  1263 I chatty  : uid=1000 system_server expire 2 lines
+04-27 19:10:05.848  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 3 lines
+04-27 19:10:05.919  1263  1323 I chatty  : uid=1000(system) android.display expire 2 lines
+04-27 19:10:08.002  1263  2908 I chatty  : uid=1000(system) Binder:1263_1B expire 1 line
+04-27 19:10:12.727  1263  3178 I chatty  : uid=1000(system) Binder:1263_1D expire 7 lines
+04-27 19:10:17.499  1263  1869 I chatty  : uid=1000(system) Binder:1263_7 expire 2 lines
+04-27 19:10:19.424  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:10:19.449  1549  1549 I chatty  : uid=10088(com.android.systemui) identical 1 line
+04-27 19:10:19.480  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:10:19.721  1263  1886 I chatty  : uid=1000(system) Binder:1263_9 expire 3 lines
+04-27 19:10:19.724  1263  1319 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-27 19:10:19.725  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 12 lines
+04-27 19:10:19.819  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 10 lines
+04-27 19:10:19.872  1263  1770 I chatty  : uid=1000(system) Binder:1263_5 expire 2 lines
+04-27 19:10:21.023  1263  1322 I chatty  : uid=1000(system) android.io expire 1 line
+04-27 19:10:21.768  1263  1336 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-27 19:10:27.115  1263  1290 I chatty  : uid=1000(system) Binder:1263_1 expire 1 line
+04-27 19:10:57.175  1263  2908 I chatty  : uid=1000(system) Binder:1263_1B expire 11 lines
+04-27 19:11:00.314  1263  2015 I chatty  : uid=1000(system) Binder:1263_A expire 1 line
+04-27 19:11:01.243  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:11:24.571  1263  1263 I chatty  : uid=1000 system_server expire 2 lines
+04-27 19:11:24.580  1263  1343 I chatty  : uid=1000(system) batterystats-wo expire 2 lines
+04-27 19:11:24.602  1263  1323 I chatty  : uid=1000(system) android.display expire 2 lines
+04-27 19:11:32.187  1263  4009 I chatty  : uid=1000(system) Binder:1263_13 expire 3 lines
+04-27 19:11:55.827  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:11:55.850  1549  1549 I chatty  : uid=10088(com.android.systemui) identical 1 line
+04-27 19:11:55.869  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:11:55.976  1263  1603 I chatty  : uid=1000(system) Binder:1263_17 expire 1 line
+04-27 19:11:55.991  1263  1357 I chatty  : uid=1000(system) PowerManagerSer expire 2 lines
+04-27 19:11:56.076  1263  3409 I chatty  : uid=1000(system) Binder:1263_1E expire 1 line
+04-27 19:11:56.127  1263  1337 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-27 19:11:56.148  1263  1603 I DreamManagerService: Leaving dreamland.
+04-27 19:11:56.148  1263  1319 I DreamManagerService: Performing gentle wake from dream.
+04-27 19:11:56.148  1263  1319 I DreamController: Stopping dream: name=ComponentInfo{com.android.systemui/com.android.systemui.doze.DozeService}, isTest=false, canDoze=true, userId=0
+04-27 19:11:56.337  1263  1357 I DisplayPowerController: Unblocked screen on after 346 ms
+04-27 19:11:56.338  1263  1357 W PowerManagerService: Screen on took 362 ms
+04-27 19:11:56.422  1263  1337 I ActivityManager: Start proc 3743:com.google.process.gservices/u0a93 for content provider {com.google.android.gsf/com.google.android.gsf.gservices.GservicesProvider}
+04-27 19:11:57.136  1263  2243 E WifiService: Permission violation - getScanResults not allowed for uid=10056, packageName=com.jio.myjio, reason=java.lang.SecurityException: UID 10056 has no location permission
+04-27 19:11:57.506  1263  1322 D BluetoothManagerService: MESSAGE_REGISTER_ADAPTER
+04-27 19:11:58.252  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.SCAN_RESULTS flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:11:59.271  1263  3409 E WifiService: Permission violation - getScanResults not allowed for uid=10056, packageName=com.jio.myjio, reason=java.lang.SecurityException: UID 10056 has no location permission
+04-27 19:12:01.246  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:12:04.357  1263  1568 I ActivityManager: Killing 3717:com.google.android.gms/u0a93 (adj 900): cached #1
+04-27 19:12:12.206  1263  1337 I ActivityManager: Start proc 3809:com.google.android.gms/u0a93 for service {com.google.android.gms/com.google.android.gms.chimera.GmsIntentOperationService}
+04-27 19:12:19.865  1263  1671 I ActivityManager: Killing 3809:com.google.android.gms/u0a93 (adj 900): cached #1
+04-27 19:12:48.998  1263  1337 I ActivityManager: Start proc 3864:com.android.cellbroadcastreceiver/u0a54 for broadcast {com.android.cellbroadcastreceiver/com.android.cellbroadcastreceiver.CellBroadcastReceiver}
+04-27 19:12:49.047  1263  1290 I ActivityManager: Killing 3743:com.google.process.gservices/u0a93 (adj 900): cached #1
+04-27 19:12:49.108  1263  3806 I ActivityManager: Killing 3864:com.android.cellbroadcastreceiver/u0a54 (adj 900): cached #1
+04-27 19:12:56.732  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.SCAN_RESULTS flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:12:57.779  1263  3806 E WifiService: Permission violation - getScanResults not allowed for uid=10056, packageName=com.jio.myjio, reason=java.lang.SecurityException: UID 10056 has no location permission
+04-27 19:13:00.984  1263  1357 I PowerManagerService: Going to sleep due to timeout (uid 1000)...
+04-27 19:13:00.985  1263  1357 I DisplayPowerController: Blocking screen off
+04-27 19:13:00.985  1263  1357 I DisplayPowerController: Unblocked screen off after 0 ms
+04-27 19:13:00.985  1263  1357 D ActivityTaskManager: Top Process State changed to PROCESS_STATE_TOP_SLEEPING
+04-27 19:13:00.986  1263  1263 W UsageStatsService: Event reported without a package name, eventType:16
+04-27 19:13:00.990  1263  1343 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+04-27 19:13:01.010  1263  1323 I DisplayManagerService: Display device changed state: "Built-in Screen", OFF
+04-27 19:13:02.039  1263  1357 I DreamManagerService: Entering dreamland.
+04-27 19:13:02.039  1263  1357 I PowerManagerService: Dozing...
+04-27 19:13:02.041  1263  1319 I DreamController: Starting dream: name=ComponentInfo{com.android.systemui/com.android.systemui.doze.DozeService}, isTest=false, canDoze=true, userId=0
+04-27 19:13:02.255  1263  1337 I ActivityManager: Start proc 3899:com.google.android.gms/u0a93 for service {com.google.android.gms/com.google.android.gms.ads.identifier.service.AdvertisingIdService}
+04-27 19:13:02.484  1263  1337 I ActivityManager: Start proc 3926:com.google.process.gservices/u0a93 for content provider {com.google.android.gsf/com.google.android.gsf.gservices.GservicesProvider}
+04-27 19:13:03.036  1263  1875 I ActivityManager: Killing 3899:com.google.android.gms/u0a93 (adj 900): cached #1
+04-27 19:13:03.046  1263  1875 I ActivityManager: Killing 3926:com.google.process.gservices/u0a93 (adj 900): cached #2
+04-27 19:13:03.096  1263  1875 W ProcessStats: Tracking association SourceState{3950782 com.jio.myjio/10056 ImpBg #4112} whose proc state 3 is better than process ProcessState{f49fe93 com.google.android.gms/10093 pkg=com.google.android.gms} proc state 11 (0 skipped)
+04-27 19:13:03.098  1263  1875 W ActivityManager: Application dead when creating service ServiceRecord{8bd862 u0 com.google.android.gms/.ads.identifier.service.AdvertisingIdService}
+04-27 19:13:03.101  1263  1875 W ActivityManager: Scheduling restart of crashed service com.google.android.gms/.ads.identifier.service.AdvertisingIdService in 1000ms
+04-27 19:13:03.104  1263  1875 W ActivityManager: Scheduling restart of crashed service com.google.android.gms/.ads.identifier.service.AdvertisingIdService in 4000ms
+04-27 19:13:03.104  1263  1875 W ActivityManager: Exception when starting service com.google.android.gms/.ads.identifier.service.AdvertisingIdService
+04-27 19:13:03.104  1263  1875 W ActivityManager: android.os.DeadObjectException
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at android.os.BinderProxy.transactNative(Native Method)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at android.os.BinderProxy.transact(BinderProxy.java:511)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at android.app.IApplicationThread$Stub$Proxy.scheduleCreateService(IApplicationThread.java:1374)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at com.android.server.am.ActiveServices.realStartServiceLocked(ActiveServices.java:2839)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at com.android.server.am.ActiveServices.bringUpServiceLocked(ActiveServices.java:2716)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at com.android.server.am.ActiveServices.bindServiceLocked(ActiveServices.java:1848)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at com.android.server.am.ActivityManagerService.bindIsolatedService(ActivityManagerService.java:14141)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:2242)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2763)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at android.os.Binder.execTransactInternal(Binder.java:1021)
+04-27 19:13:03.104  1263  1875 W ActivityManager: 	at android.os.Binder.execTransact(Binder.java:994)
+04-27 19:13:07.124  1263  1337 I ActivityManager: Start proc 3966:com.google.android.gms/u0a93 for service {com.google.android.gms/com.google.android.gms.ads.identifier.service.AdvertisingIdService}
+04-27 19:13:07.295  1263  1337 I ActivityManager: Start proc 3988:com.google.process.gservices/u0a93 for content provider {com.google.android.gsf/com.google.android.gsf.gservices.GservicesProvider}
+04-27 19:13:07.810  1263  1671 I ActivityManager: Killing 3966:com.google.android.gms/u0a93 (adj 900): cached #1
+04-27 19:13:07.814  1263  1671 I ActivityManager: Killing 3988:com.google.process.gservices/u0a93 (adj 900): cached #2
+04-27 19:13:07.845  1263  1671 W ActivityManager: Application dead when creating service ServiceRecord{dca937 u0 com.google.android.gms/.ads.identifier.service.AdvertisingIdService}
+04-27 19:13:07.848  1263  1671 W ActivityManager: Scheduling restart of crashed service com.google.android.gms/.ads.identifier.service.AdvertisingIdService in 1000ms
+04-27 19:13:07.849  1263  1671 W ActivityManager: Scheduling restart of crashed service com.google.android.gms/.ads.identifier.service.AdvertisingIdService in 4000ms
+04-27 19:13:07.850  1263  1671 W ActivityManager: Exception when starting service com.google.android.gms/.ads.identifier.service.AdvertisingIdService
+04-27 19:13:07.850  1263  1671 W ActivityManager: android.os.DeadObjectException
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at android.os.BinderProxy.transactNative(Native Method)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at android.os.BinderProxy.transact(BinderProxy.java:511)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at android.app.IApplicationThread$Stub$Proxy.scheduleCreateService(IApplicationThread.java:1374)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at com.android.server.am.ActiveServices.realStartServiceLocked(ActiveServices.java:2839)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at com.android.server.am.ActiveServices.bringUpServiceLocked(ActiveServices.java:2716)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at com.android.server.am.ActiveServices.bindServiceLocked(ActiveServices.java:1848)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at com.android.server.am.ActivityManagerService.bindIsolatedService(ActivityManagerService.java:14141)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:2242)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2763)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at android.os.Binder.execTransactInternal(Binder.java:1021)
+04-27 19:13:07.850  1263  1671 W ActivityManager: 	at android.os.Binder.execTransact(Binder.java:994)
+--------- beginning of main
+04-27 19:13:07.898  1263  1339 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-27 19:13:08.808  3889  3889 I /vendor/bin/hw/android.hardware.light@2.0-service-lazy: Process has 0 (of 1 available) client(s) in use after notification android.hardware.light@2.0::ILight has clients: 0
+04-27 19:13:08.808  3889  3889 I /vendor/bin/hw/android.hardware.light@2.0-service-lazy: Trying to exit HAL. No clients in use for any service in process.
+04-27 19:13:08.809  3889  3889 I /vendor/bin/hw/android.hardware.light@2.0-service-lazy: Unregistered all clients and exiting
+04-27 19:13:09.429   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:12163 trip:0 event:0
+04-27 19:13:09.481  2471  2471 W JobInfo : Requested backoff +5s0ms for job 1001 is too small; raising to +10s0ms
+04-27 19:13:09.485  1263  2838 I chatty  : uid=1000(system) Binder:1263_1A expire 6 lines
+04-27 19:13:09.861   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40722 trip:0 event:0
+04-27 19:13:09.864   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38406 trip:0 event:0
+04-27 19:13:11.869   450   450 D Zygote  : Forked child process 4020
+04-27 19:13:11.876  1263  1337 I ActivityManager: Start proc 4020:com.google.android.gms/u0a93 for service {com.google.android.gms/com.google.android.gms.ads.identifier.service.AdvertisingIdService}
+04-27 19:13:11.889  4020  4020 I chatty  : uid=10093(com.google.android.gms) expire 16 lines
+04-27 19:13:11.904  1263  3192 I chatty  : uid=1000(system) Binder:1263_12 expire 6 lines
+04-27 19:13:11.919   541   578 I chatty  : uid=1000(system) HwBinder:541_1 expire 11 lines
+04-27 19:13:12.035   450   450 D Zygote  : Forked child process 4042
+04-27 19:13:12.048  1263  1337 I ActivityManager: Start proc 4042:com.google.process.gservices/u0a93 for content provider {com.google.android.gsf/com.google.android.gsf.gservices.GservicesProvider}
+04-27 19:13:12.050  4042  4042 I chatty  : uid=10093(com.google.android.gms) expire 4 lines
+04-27 19:13:12.220   689   689 E ANDR-IOP: IIop:: Iop HAL Service is not available.
+04-27 19:13:12.495   689   689 E ANDR-IOP: IIop:: Iop HAL Service is not available.
+04-27 19:13:12.577  1263  2838 I ActivityManager: Killing 4020:com.google.android.gms/u0a93 (adj 900): cached #1
+04-27 19:13:12.581  1263  2838 I ActivityManager: Killing 4042:com.google.process.gservices/u0a93 (adj 900): cached #2
+04-27 19:13:12.634   450   450 I Zygote  : Process 4020 exited due to signal 9 (Killed)
+04-27 19:13:12.634   450   450 I Zygote  : Process 4042 exited due to signal 9 (Killed)
+04-27 19:13:12.636  2085  2098 I chatty  : uid=10093(com.google.android.gms) HeapTaskDaemon expire 1 line
+04-27 19:13:14.976   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:3764 trip:0 event:0
+04-27 19:13:14.979   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38461 trip:0 event:0
+04-27 19:13:14.981   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40662 trip:0 event:0
+04-27 19:13:17.284   623   657 D ThermalEngine: zone:0 sensor:xo-therm-adc temp:40843 trip:0 event:0
+04-27 19:13:17.285   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 40843 .
+04-27 19:13:17.285   623   670 I ThermalEngine: Sensor:xo-therm-adc:40843 mC
+04-27 19:13:17.285   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:13:17.285   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.
+04-27 19:13:20.097   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40542 trip:0 event:0
+04-27 19:13:20.099   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38406 trip:0 event:0
+04-27 19:13:20.101   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:22476 trip:0 event:0
+04-27 19:13:25.217   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:5463 trip:0 event:0
+04-27 19:13:25.225   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38351 trip:0 event:0
+04-27 19:13:25.226   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40421 trip:0 event:0
+04-27 19:13:28.005   623   657 D ThermalEngine: zone:0 sensor:xo-therm-adc temp:40602 trip:0 event:0
+04-27 19:13:28.005   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 40602 .
+04-27 19:13:28.005   623   670 I ThermalEngine: Sensor:xo-therm-adc:40602 mC
+04-27 19:13:28.005   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:13:28.006   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.
+04-27 19:13:30.337   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40361 trip:0 event:0
+04-27 19:13:30.339   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38351 trip:0 event:0
+04-27 19:13:30.341   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:22336 trip:0 event:0
+04-27 19:13:32.149   636   636 W vm_bms  : type=1400 audit(0.0:1262): avc: denied { read } for name="u:object_r:default_prop:s0" dev="tmpfs" ino=13324 scontext=u:r:vm_bms:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+04-27 19:13:32.149   636   636 I chatty  : uid=0(root) /vendor/bin/vm_bms identical 46 lines
+04-27 19:13:32.202  1549  1549 I chatty  : uid=10088(com.android.systemui) expire 24 lines
+04-27 19:13:32.207  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:13:32.226  1549  4076 I chatty  : uid=10088(com.android.systemui) Thread-7 expire 3 lines
+04-27 19:13:32.250  1549  1549 I chatty  : uid=10088(com.android.systemui) identical 1 line
+04-27 19:13:32.269  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:13:32.357   535   535 I chatty  : uid=1000(system) sensors@1.0-ser expire 26 lines
+04-27 19:13:32.358  1263  1770 I PowerManagerService: Waking up from Dozing (uid=10088, reason=WAKE_REASON_APPLICATION, details=DozeTriggers)...
+04-27 19:13:32.360  1263  1263 W UsageStatsService: Event reported without a package name, eventType:15
+04-27 19:13:32.371  1263  1357 I DisplayPowerController: Blocking screen on until initial contents have been drawn.
+04-27 19:13:32.381  1263  1343 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+04-27 19:13:32.407   534   534 I QTI PowerHAL: Got set_interactive hint
+04-27 19:13:32.407   534   534 I QTI PowerHAL: Got set_interactive hint on= 1, count= 13
+04-27 19:13:32.407   534   534 E QTI PowerHAL: Error opening /sys/kernel/hbtp/display_pwr: No such file or directory
+04-27 19:13:32.408  1263  1323 I DisplayManagerService: Display device changed state: "Built-in Screen", ON
+04-27 19:13:32.409   551   551 D SurfaceFlinger: Setting power mode 2 on display 0
+04-27 19:13:32.422   524  1503 D audio_hw_primary: adev_set_parameters: enter: screen_state=on
+04-27 19:13:32.423  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.USER_PRESENT flg=0x24200010 } to com.android.chrome/org.chromium.chrome.browser.sharing.click_to_call.ClickToCallMessageHandler$PhoneUnlockedReceiver
+04-27 19:13:32.432  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.USER_PRESENT flg=0x24200010 } to com.google.android.gms/.auth.setup.devicesignals.LockScreenReceiver
+04-27 19:13:32.441  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.USER_PRESENT flg=0x24200010 } to com.google.android.gms/.trustagent.UserPresentBroadcastReceiver
+04-27 19:13:32.442  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.USER_PRESENT flg=0x24200010 } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+04-27 19:13:32.450  1919  1919 I DeviceStatusMonitor: DeviceStatusMonitor$1.onReceive():57 onReceive() : Action = android.intent.action.SCREEN_ON
+04-27 19:13:32.450  1919  1919 I DeviceStatusMonitor: DeviceStatusMonitor.updateCountryInfo():117 updateCountryInfo(), notifyAnyway = false
+04-27 19:13:32.453  1263  2637 I chatty  : uid=1000(system) Binder:1263_E expire 4 lines
+04-27 19:13:32.455   541   578 I chatty  : uid=1000(system) HwBinder:541_1 expire 37 lines
+04-27 19:13:32.461  2085  2573 I chatty  : uid=10093(com.google.android.gms) highpool[0] expire 10 lines
+04-27 19:13:32.475   535   535 D SyntiantSensorHub: Proximity sensor disabled
+04-27 19:13:32.476  1263   929 D ActivityTaskManager: Top Process State changed to PROCESS_STATE_TOP
+04-27 19:13:32.494   535   535 D SyntiantSensorHub: PLSensor:set_enable enabled=0x0
+04-27 19:13:32.501  1263  1898 I DreamManagerService: Leaving dreamland.
+04-27 19:13:32.501  1263  1319 I DreamManagerService: Performing gentle wake from dream.
+04-27 19:13:32.502  1263  1319 I DreamController: Stopping dream: name=ComponentInfo{com.android.systemui/com.android.systemui.doze.DozeService}, isTest=false, canDoze=true, userId=0
+04-27 19:13:32.515   377   377 I chatty  : uid=1000(system) hwservicemanage expire 10 lines
+04-27 19:13:32.516  1263  2333 I chatty  : uid=1000(system) AsyncTask #2 expire 1 line
+04-27 19:13:32.524  1263  1337 I ActivityManager: Start proc 4082:com.google.android.gms/u0a93 for service {com.google.android.gms/com.google.android.gms.ads.identifier.service.AdvertisingIdService}
+04-27 19:13:32.535  1263  1337 W ActivityManager: Slow operation: 52ms so far, now at startProcess: done updating pids map
+04-27 19:13:32.567   535   535 D SyntiantSensorHub: poll__batch handle=1, flags=0, sampling_period_ns=20000000,max_report_latency_ns=0
+04-27 19:13:32.567   535   535 D SyntiantSensorHub: poll__set_delay handle=1, drv=0
+04-27 19:13:32.568   535   535 D SyntiantSensorHub: set_delay: delay was set to 0 seconds and 500000000 nano seconds
+04-27 19:13:32.578  4082  4082 I chatty  : uid=10093(com.google.android.gms) expire 5 lines
+04-27 19:13:32.579   535   535 D SyntiantSensorHub: set_delay: PLS delay time is set to: 500 ms for handle 1
+04-27 19:13:32.579   535   535 D SyntiantSensorHub: poll__activate: handle=1, drv=0
+04-27 19:13:32.579   535   535 D SyntiantSensorHub: PlsSensor:set_enable en=1; new_state=1; what=1; enabled=0
+04-27 19:13:32.579   535   535 D SyntiantSensorHub: Proximity sensor enabled
+04-27 19:13:32.583   535   535 D SyntiantSensorHub: PLSensor:set_enable enabled=0x2
+04-27 19:13:32.590  2085  4089 I chatty  : uid=10093 com.google.android.gms.persistent expire 1 line
+04-27 19:13:32.596   551   551 D SurfaceFlinger: Finished setting power mode 2 on display 0
+04-27 19:13:32.604  1919  1919 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3308 
+04-27 19:13:32.605  1919  1919 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1887 
+04-27 19:13:32.674  1263  1357 I DisplayPowerController: Unblocked screen on after 303 ms
+04-27 19:13:32.674  1263  1357 W PowerManagerService: Screen on took 317 ms
+04-27 19:13:32.675  1549  1915 I chatty  : uid=10088(com.android.systemui) Binder:1549_4 expire 1 line
+04-27 19:13:32.737   365   365 I chatty  : uid=1000(system) expire 11 lines
+04-27 19:13:32.750   365   365 I         : Registration complete for android.hardware.light@2.0::ILight/default.
+04-27 19:13:32.770  2085  2887 I chatty  : uid=10093(com.google.android.gms) NearbyDiscovery expire 3 lines
+04-27 19:13:32.792  2423  2423 D QSLMJ   : SLM received action android.intent.action.SCREEN_ON
+04-27 19:13:32.815  2085  2573 I NearbySharing: Stopping discovery because Bluetooth is disabled. [CONTEXT service_id=194 ]
+04-27 19:13:32.816  2085  2573 I NearbySharing: Can't stop advertising FastInitiation. Not advertising. [CONTEXT service_id=194 ]
+04-27 19:13:32.816  2085  2573 I NearbySharing: Stopping Fast Init advertisement because Bluetooth is off. [CONTEXT service_id=194 ]
+04-27 19:13:32.816  2085  2573 I NearbySharing: Failed to stop advertising because we weren't advertising. [CONTEXT service_id=194 ]
+04-27 19:13:32.827  1263  1337 W ActivityManager: Slow operation: 52ms so far, now at startProcess: done updating battery stats
+04-27 19:13:32.827  1263  1337 W ActivityManager: Slow operation: 52ms so far, now at startProcess: building log message
+04-27 19:13:32.827  1263  1337 I ActivityManager: Start proc 370:com.google.process.gservices/u0a93 for content provider {com.google.android.gsf/com.google.android.gsf.gservices.GservicesProvider}
+04-27 19:13:32.827  1263  1337 W ActivityManager: Slow operation: 52ms so far, now at startProcess: starting to update pids map
+04-27 19:13:32.828  1263  1337 W ActivityManager: Slow operation: 53ms so far, now at startProcess: done updating pids map
+04-27 19:13:32.829   370   370 E ocess.gservice: Not starting debugger since process cannot load the jdwp agent.
+04-27 19:13:32.845  2085  2573 I NearbySharing: Stopping advertising because Bluetooth is disabled. [CONTEXT service_id=194 ]
+04-27 19:13:32.851  2085  2176 I BeaconBle: Client requested scan, settings=BleSettings [scanMode=LOW_LATENCY, callbackType=ALL_MATCHES, reportDelayMillis=0, 5 filters, 1 clients, callingClientName=Nearby] [CONTEXT service_id=111 ]
+04-27 19:13:32.853  2085  2573 I NearbySharing: Failed to scan for FastInitiation. Scanning is not supported on this device. [CONTEXT service_id=194 ]
+04-27 19:13:32.870  1263  1504 I chatty  : uid=1000(system) Binder:1263_3 expire 9 lines
+04-27 19:13:32.888  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.SCAN_RESULTS flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:13:32.920   370   370 I ocess.gservice: The ClassLoaderContext is a special shared library.
+04-27 19:13:32.939  2085  2085 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.clearcut.bootcount.service.START cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+04-27 19:13:32.943   370   370 I Perf    : Connecting to perf service.
+04-27 19:13:32.963   370   370 I GservicesProvider: Gservices pushing to system: true; secure/global: true
+04-27 19:13:33.100   689   689 E ANDR-IOP: IIop:: Iop HAL Service is not available.
+04-27 19:13:33.218  4082  4082 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+04-27 19:13:33.220  4082  4082 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+04-27 19:13:33.220  4082  4082 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+04-27 19:13:33.270  4082  4082 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+04-27 19:13:33.273  4082  4082 I ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+04-27 19:13:33.273  4082  4082 I Safeboot: Checking safeboot...
+04-27 19:13:33.273  4082  4082 I Safeboot: Not entering safeboot; wrong process.
+04-27 19:13:33.324  4082  4082 I Watchcat: Started
+04-27 19:13:33.369  4082  4082 I GMS_MM_Logger: Started.
+04-27 19:13:33.371  4082  4082 I baqz    : Primes not initialized, returning default (no-op) Primes instance which will ignore all calls. Please call Primes.initialize(...) before using any Primes API.
+04-27 19:13:33.374   689   689 E ANDR-IOP: IIop:: Iop HAL Service is not available.
+04-27 19:13:33.532  1263  1898 I chatty  : uid=1000(system) Binder:1263_19 expire 4 lines
+04-27 19:13:33.553  1549  1749 I chatty  : uid=10088(com.android.systemui) ImageWallpaper expire 1 line
+04-27 19:13:33.562   541  3948 I chatty  : uid=1000(system) HwBinder:541_3 expire 26 lines
+04-27 19:13:33.590  4082  4082 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.cryptauth.cryptauthservice.START cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-27 19:13:33.590  4082  4082 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.cryptauth.cryptauthservice.START cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-27 19:13:33.594  4082  4082 W ModuleManager: Unable to get current module's fulfilled APIs in ModuleManager created with non-module Context
+04-27 19:13:33.601  4082  4082 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.cast.firstparty.START cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-27 19:13:33.601  4082  4082 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.cast.firstparty.START cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-27 19:13:33.636  4082  4082 I MediaRouter: Found default route: MediaRouter.RouteInfo{ uniqueId=android/ara:DEFAULT_ROUTE, name=Phone, description=null, iconUri=null, enabled=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=5, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
+04-27 19:13:33.636  4082  4082 I MediaRouter: Unselecting the current route because it is no longer selectable: null
+04-27 19:13:33.697  4082   476 I CastDatabase: Opening the database
+04-27 19:13:33.712  4082   476 I SQLiteCastStore: 0 CastNetworkInfo instances loaded, 0 CastDeviceInfo instances loaded, 0 paired guest mode devices loaded.
+04-27 19:13:33.807   365   365 I /vendor/bin/hw/android.hardware.light@2.0-service-lazy: Process has 1 (of 1 available) client(s) in use after notification android.hardware.light@2.0::ILight has clients: 1
+04-27 19:13:33.814  4082   469 I DiscoveryManager: WifiGuestModeDeviceScanner enabled.
+04-27 19:13:33.815  1263  1322 D BluetoothManagerService: MESSAGE_REGISTER_ADAPTER
+04-27 19:13:33.822  4082   469 I CastSocket: 29 >= 18. Adding new CastClientAuthKeyManager. [CONTEXT service_id=161 ]
+04-27 19:13:33.897  1263  1898 E WifiService: Permission violation - getScanResults not allowed for uid=10056, packageName=com.jio.myjio, reason=java.lang.SecurityException: UID 10056 has no location permission
+04-27 19:13:34.541  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.SCAN_RESULTS flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:13:35.586  1263  1898 E WifiService: Permission violation - getScanResults not allowed for uid=10056, packageName=com.jio.myjio, reason=java.lang.SecurityException: UID 10056 has no location permission
+04-27 19:13:37.711  4082   332 I gle.android.gm: Waiting for a blocking GC ProfileSaver
+04-27 19:13:37.717  4082   332 I gle.android.gm: WaitForGcToComplete blocked ProfileSaver on ClassLinker for 5.900ms
+04-27 19:13:38.808   365   365 I /vendor/bin/hw/android.hardware.light@2.0-service-lazy: Process has 0 (of 1 available) client(s) in use after notification android.hardware.light@2.0::ILight has clients: 0
+04-27 19:13:38.808   365   365 I /vendor/bin/hw/android.hardware.light@2.0-service-lazy: Trying to exit HAL. No clients in use for any service in process.
+04-27 19:13:38.809   365   365 I /vendor/bin/hw/android.hardware.light@2.0-service-lazy: Unregistered all clients and exiting
+04-27 19:13:38.846  2085  2176 I BeaconBle: Client requested scan, settings=BleSettings [scanMode=ZERO_POWER, callbackType=ALL_MATCHES, reportDelayMillis=0, 5 filters, 1 clients, callingClientName=Nearby] [CONTEXT service_id=111 ]
+04-27 19:13:39.210  2085   485 E WakeLock: GCM_HB_ALARM release without a matched acquire!
+04-27 19:13:39.210  2085   485 W WakeLock: GCM_HB_ALARM counter does not exist
+04-27 19:13:40.638  1263  2838 I ActivityManager: Killing 4082:com.google.android.gms/u0a93 (adj 900): cached #1
+04-27 19:13:47.972  2085  2085 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.clearcut.bootcount.service.START cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+04-27 19:13:48.257   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 40421 .
+04-27 19:13:48.257   623   670 I ThermalEngine: Sensor:xo-therm-adc:40421 mC
+04-27 19:13:48.257   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:13:48.258   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.
+04-27 19:13:48.547   450   450 D Zygote  : Forked child process 491
+04-27 19:13:48.551  1263  1337 I ActivityManager: Start proc 491:com.google.android.gms/u0a93 for service {com.google.android.gms/com.google.android.gms.chimera.GmsIntentOperationService}
+04-27 19:13:48.568   491   491 E gle.android.gm: Not starting debugger since process cannot load the jdwp agent.
+04-27 19:13:48.610   491   491 I gle.android.gm: The ClassLoaderContext is a special shared library.
+04-27 19:13:48.615   491   491 I chatty  : uid=10093(com.google.android.gms) identical 14 lines
+04-27 19:13:48.959   689   689 E ANDR-IOP: IIop:: Iop HAL Service is not available.
+04-27 19:13:49.022   491   577 I chatty  : uid=10093(com.google.android.gms) expire 3 lines
+04-27 19:13:50.455   626   626 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-27 19:13:50.459   626   626 W app_process: type=1400 audit(0.0:1303): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:13:50.459   626   626 W app_process: type=1400 audit(0.0:1304): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:13:50.459   626   626 W app_process: type=1400 audit(0.0:1305): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:13:50.462   626   626 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+04-27 19:13:50.462   626   626 I AndroidRuntime: Using default boot image
+04-27 19:13:50.462   626   626 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+04-27 19:13:50.463   626   626 I AndroidRuntime: Leaving lock profiling enabled
+04-27 19:13:50.463   626   626 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+04-27 19:13:50.473   626   626 W app_process: Could not reserve sentinel fault page
+04-27 19:13:50.635   626   626 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-27 19:13:50.658   626   626 I app_process: The ClassLoaderContext is a special shared library.
+04-27 19:13:50.700   626   626 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+04-27 19:13:50.717   626   626 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+04-27 19:13:50.723   626   626 D AndroidRuntime: Shutting down VM
+04-27 19:13:50.817   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40180 trip:0 event:0
+04-27 19:13:50.825   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38296 trip:0 event:0
+04-27 19:13:50.826   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:23644 trip:0 event:0
+04-27 19:13:50.886  1263  1263 D BluetoothManagerService: Bluetooth persisted state: 0
+04-27 19:13:50.887  1263  1263 D BluetoothManagerService: Airplane Mode change - current state:  OFF, isAirplaneModeOn()=true, mEnableExternal: false
+04-27 19:13:50.906   450   450 D Zygote  : Forked child process 706
+04-27 19:13:50.912  1263  1337 I ActivityManager: Start proc 706:com.android.carrierdefaultapp/u0a64 for broadcast {com.android.carrierdefaultapp/com.android.carrierdefaultapp.CarrierDefaultBroadcastReceiver}
+04-27 19:13:50.924   706   706 E rrierdefaultap: Not starting debugger since process cannot load the jdwp agent.
+04-27 19:13:50.938  1263   487 I chatty  : uid=1000(system) Binder:1263_20 expire 6 lines
+04-27 19:13:50.963   706   706 I Perf    : Connecting to perf service.
+04-27 19:13:50.979   689   689 E ANDR-IOP: IIop:: Iop HAL Service is not available.
+04-27 19:13:50.982   706   706 D CarrierDefaultBroadcastReceiver: onReceive intent: com.android.internal.telephony.CARRIER_SIGNAL_RESET
+04-27 19:13:50.994   706   706 D CarrierDefaultBroadcastReceiver: apply carrier action idx: 6
+04-27 19:13:50.994   706   706 D CarrierActionUtils: onCancelAllNotifications
+04-27 19:13:50.995   706   706 D CarrierDefaultBroadcastReceiver: apply carrier action idx: 8
+04-27 19:13:50.995   706   706 D CarrierActionUtils: onDisableDefaultURLHandler
+04-27 19:13:50.999  1263   487 I ActivityManager: Killing 706:com.android.carrierdefaultapp/u0a64 (adj 900): cached #1
+04-27 19:13:51.002   377   377 I chatty  : uid=1000(system) hwservicemanage expire 4 lines
+04-27 19:13:51.029  1263   487 W ActivityManager: Permission Denial: not allowed to send broadcast android.intent.action.AIRPLANE_MODE from pid=754, uid=2000
+04-27 19:13:51.056   450   450 I Zygote  : Process 706 exited due to signal 9 (Killed)
+04-27 19:13:51.676   763   763 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-27 19:13:51.679   763   763 W app_process: type=1400 audit(0.0:1306): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:13:51.682   763   763 W app_process: type=1400 audit(0.0:1307): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:13:51.682   763   763 W app_process: type=1400 audit(0.0:1308): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:13:51.683   763   763 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+04-27 19:13:51.684   763   763 I AndroidRuntime: Using default boot image
+04-27 19:13:51.684   763   763 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+04-27 19:13:51.684   763   763 I AndroidRuntime: Leaving lock profiling enabled
+04-27 19:13:51.684   763   763 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+04-27 19:13:51.694   763   763 W app_process: Could not reserve sentinel fault page
+04-27 19:13:51.856   763   763 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-27 19:13:51.879   763   763 I app_process: The ClassLoaderContext is a special shared library.
+04-27 19:13:51.921   763   763 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+04-27 19:13:51.938   763   763 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+04-27 19:13:51.944   763   763 D AndroidRuntime: Shutting down VM
+04-27 19:13:52.240  1263   487 W ActivityManager: Permission Denial: not allowed to send broadcast android.intent.action.AIRPLANE_MODE from pid=814, uid=2000
+04-27 19:13:53.018   825   825 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-27 19:13:53.022   825   825 W app_process: type=1400 audit(0.0:1309): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:13:53.022   825   825 I chatty  : uid=2000(shell) app_process identical 13 lines
+04-27 19:13:53.458  1263  1263 D BluetoothManagerService: Bluetooth persisted state: 0
+04-27 19:13:53.458  1263  1263 D BluetoothManagerService: Airplane Mode change - current state:  OFF, isAirplaneModeOn()=false, mEnableExternal: false
+04-27 19:13:53.589  1263  1898 W ActivityManager: Permission Denial: not allowed to send broadcast android.intent.action.AIRPLANE_MODE from pid=870, uid=2000
+04-27 19:13:53.598   531   531 I chatty  : uid=1000(system) composer@2.1-se expire 8 lines
+04-27 19:13:53.659   491   521 I chatty  : uid=10093(com.google.android.gms) expire 2 lines
+04-27 19:13:54.234   876   876 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:13:54.795  1263  1603 W ActivityManager: Permission Denial: not allowed to send broadcast android.intent.action.AIRPLANE_MODE from pid=931, uid=2000
+04-27 19:13:55.936   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:5309 trip:0 event:0
+04-27 19:13:55.945   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38351 trip:0 event:0
+04-27 19:13:55.946   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40421 trip:0 event:0
+04-27 19:13:56.138   541   578 I chatty  : uid=1000(system) HwBinder:541_1 expire 2 lines
+04-27 19:13:56.145  1263  1603 I ActivityManager: Killing 491:com.google.android.gms/u0a93 (adj 900): cached #1
+04-27 19:13:56.198   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: process with pid 491 is client
+04-27 19:13:56.198   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: size of service connections for service: com.google.android.gms/.chimera.PersistentDirectBootAwareApiServiceafter removal is 1
+04-27 19:13:56.198   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: removing client with pid 491process namecom.google.android.gms
+04-27 19:13:56.199   450   450 I Zygote  : Process 491 exited due to signal 9 (Killed)
+04-27 19:13:58.283   623   657 D ThermalEngine: zone:0 sensor:xo-therm-adc temp:40662 trip:0 event:0
+04-27 19:13:58.283   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 40662 .
+04-27 19:13:58.283   623   670 I ThermalEngine: Sensor:xo-therm-adc:40662 mC
+04-27 19:13:58.283   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:13:58.283   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.
+04-27 19:14:00.558   864   864 I QTI_SDM_INFO: [qti_rmnet_modem.c:1287] qti_rmnet_modem_recv_msg():Read 34 data from modem device file
+04-27 19:14:00.558   864   864 I QTI_SDM_INFO: [qti_rmnet_qmi.c:650] qti_rmnet_process_qmi_rx_from_modem():Received QMI message of service type 3
+04-27 19:14:00.558   864   864 I QTI_SDM_INFO: [qti_rmnet_peripheral.c:948] qti_rmnet_ph_send_msg():Successfully sent message to host size 34 on fd 5
+04-27 19:14:00.562   864   864 I QTI_SDM_INFO: [qti_rmnet_peripheral.c:593] qti_rmnet_ph_recv_msg():Read 20 data from peripheral device file
+04-27 19:14:00.562   864   864 I QTI_SDM_INFO: [qti_rmnet_qmi.c:535] qti_rmnet_process_qmi_tx_to_modem():Received QMI message of service type 3 message id 68
+04-27 19:14:00.562   864   864 I QTI_SDM_INFO: [qti_rmnet_modem.c:1207] qti_rmnet_modem_send_msg():Will send QMI message of size 20 to modem
+04-27 19:14:00.562   864   864 I QTI_SDM_INFO: [qti_rmnet_modem.c:1232] qti_rmnet_modem_send_msg():Successfully sent message to modem size 20 on fd 15
+04-27 19:14:00.563   864   864 I QTI_SDM_INFO: [qti_rmnet_modem.c:1287] qti_rmnet_modem_recv_msg():Read 72 data from modem device file
+04-27 19:14:00.563   864   864 I QTI_SDM_INFO: [qti_rmnet_qmi.c:650] qti_rmnet_process_qmi_rx_from_modem():Received QMI message of service type 3
+04-27 19:14:00.563   864   864 I QTI_SDM_INFO: [qti_rmnet_peripheral.c:948] qti_rmnet_ph_send_msg():Successfully sent message to host size 72 on fd 5
+04-27 19:14:00.642  1752  2876 D QCNEJ/WwanInfoRelay: onServiceStateChanged: dataState: 0 DDS:1 Notify service state update
+04-27 19:14:00.648  1797  1797 D ServiceStateProvider: subId=1
+04-27 19:14:00.650  1549  1549 I chatty  : uid=10088(com.android.systemui) expire 11 lines
+04-27 19:14:00.668  1549  1549 D CarrierTextController: updateCarrierText(): 1
+04-27 19:14:00.668  1549  1549 D CarrierTextController: updateCarrierText(): 1
+04-27 19:14:00.669  1549  1549 D CarrierTextController: Handling (subId=1): READY Jio 4G
+04-27 19:14:00.669   450   450 D Zygote  : Forked child process 954
+04-27 19:14:00.670  1549  1549 D CarrierTextController: SIM ready and in service: subId=1, ss={mVoiceRegState=0(IN_SERVICE), mDataRegState=0(IN_SERVICE), mChannelNumber=38750, duplexMode()=2, mCellBandwidths=[], mVoiceOperatorAlphaLong=Jio 4G, mVoiceOperatorAlphaShort=Jio 4G, mDataOperatorAlphaLong=Jio 4G, mDataOperatorAlphaShort=Jio 4G, isManualNetworkSelection=false(automatic), getRilVoiceRadioTechnology=14(LTE), getRilDataRadioTechnology=14(LTE), mCssIndicator=supported, mNetworkId=-1, mSystemId=-1, mCdmaRoamingIndicator=-1, mCdmaDefaultRoamingIndicator=-1, mIsEmergencyOnly=false, isUsingCarrierAggregation=false, mLteEarfcnRsrpBoost=0, mNetworkRegistrationInfos=[NetworkRegistrationInfo{ domain=CS transportType=WWAN registrationState=HOME roamingType=NOT_ROAMING accessNetworkTechnology=LTE rejectCause=0 emergencyEnabled=false availableServices=[VOICE,SMS,VIDEO] cellIdentity=CellIdentityLte:{ mCi=8726 mPci=221 mTac=120 mEarfcn=38750 mBandwidth=2147483647 mMcc=405 mMnc=854 mAlphaLong=Jio 4G mAlphaShort=Jio 4G} voiceSpecificInfo=VoiceSpecificRegistrationInfo { mCssSupported=true mRoamingIndicator=1 mSystemIsInPrl=-1 mDefaultRoamingIndicator=-1} dataSpecificInfo=null nrState=NONE}, NetworkRegistrationInfo{ domain=PS transportType=WWAN registrationState=HOME roamingType=NOT_ROAMING accessNetworkTechnology=LTE rejectCause=0 emergencyEnabled=false availableServices=[DATA] cellIdentity=CellIdentityLte:{ mCi=8726 mPci=221 mTac=120 mEarfcn=38750 mBandwidth=2147483647 mMcc=405 mMnc=854 mAlphaLong=Jio 4G mAlphaShort=Jio 4G} voiceSpecificInfo=null dataSpecificInfo=android.telephony.DataSpecificRegistrationInfo :{ maxDataCalls = 20 isDcNrRestricted = false isNrAvailable = false isEnDcAvailable = false LteVopsSupportInfo :  mVopsSupport = 2 mEmcBearerSupport = 2 mIsUsingCarrierAggregation = false } nrState=NONE}], mNrFrequencyRange=-1, mOperatorAlphaLongRaw=Jio 4G, mOperatorAlphaShortRaw=Jio 4G, mIsIwlanPreferred=false}
+04-27 19:14:00.671  1263  1337 I ActivityManager: Start proc 954:com.android.cellbroadcastreceiver/u0a54 for broadcast {com.android.cellbroadcastreceiver/com.android.cellbroadcastreceiver.CellBroadcastReceiver}
+04-27 19:14:00.688   954   954 E oadcastreceive: Not starting debugger since process cannot load the jdwp agent.
+04-27 19:14:00.702  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 6 lines
+04-27 19:14:00.740   954   954 I Perf    : Connecting to perf service.
+04-27 19:14:00.756   377   377 I hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@2.0::IIop/default in either framework or device manifest.
+04-27 19:14:00.756   689   689 E ANDR-IOP: IIop:: Iop HAL Service is not available.
+04-27 19:14:00.758   954   954 D CellBroadcastReceiver: onReceive Intent { act=android.intent.action.SERVICE_STATE flg=0x1000010 cmp=com.android.cellbroadcastreceiver/.CellBroadcastReceiver (has extras) }
+04-27 19:14:00.763  1263  2243 I ActivityManager: Killing 954:com.android.cellbroadcastreceiver/u0a54 (adj 900): cached #1
+04-27 19:14:00.765   377   377 I hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@2.0::IIop/default in either framework or device manifest.
+04-27 19:14:00.795   450   450 I Zygote  : Process 954 exited due to signal 9 (Killed)
+04-27 19:14:00.795   377   377 I hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@2.0::IIop/default in either framework or device manifest.
+04-27 19:14:00.797   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: killProcess is called for pid : 954
+04-27 19:14:00.976   950   950 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:01.057   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40421 trip:0 event:0
+04-27 19:14:01.059   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38406 trip:0 event:0
+04-27 19:14:01.061   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:6185 trip:0 event:0
+04-27 19:14:01.240  1549  1549 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+04-27 19:14:01.242  1549  1549 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-27 19:14:01.244  1549  1549 D KeyguardUpdateMonitor: handleBatteryUpdate
+04-27 19:14:01.417  1263  1540 W BluetoothManagerService: checkPackage(): called with null packageName from 2000
+04-27 19:14:01.435   842   903 D QC-time-services: Lib:time_genoff_operation: pargs->base = 12
+04-27 19:14:01.435   842   903 D QC-time-services: Lib:time_genoff_operation: pargs->operation = 0
+04-27 19:14:01.435   842   903 D QC-time-services: Lib:time_genoff_operation: pargs->ts_val = 1619531042533
+04-27 19:14:01.435   842   903 D QC-time-services: Lib:time_genoff_operation: Send to server  passed!!
+04-27 19:14:01.436   446  1023 I chatty  : uid=1000(system) /vendor/bin/time_daemon expire 10 lines
+04-27 19:14:01.439  1263  1540 I chatty  : uid=1000(system) Binder:1263_16 expire 1 line
+04-27 19:14:01.441   842   903 E QC-time-services: Receive Passed == base = 12, unit = 1, operation = 0, result = 0
+04-27 19:14:01.441   842   903 D QC-time-services: Lib:time_genoff_operation: pargs->base = 13
+04-27 19:14:01.441   842   903 D QC-time-services: Lib:time_genoff_operation: pargs->operation = 0
+04-27 19:14:01.441   842   903 D QC-time-services: Lib:time_genoff_operation: pargs->ts_val = 1619531042533
+04-27 19:14:01.442   842   903 D QC-time-services: Lib:time_genoff_operation: Send to server  passed!!
+04-27 19:14:01.442   446  1024 I chatty  : uid=1000(system) /vendor/bin/time_daemon expire 3 lines
+04-27 19:14:01.442   446  1024 D QC-time-services: Daemon:Value read from RTC mseconds on boot = 98999000
+04-27 19:14:01.442   446  1024 D QC-time-services: Daemon:Delta read on boot mseconds = 98986566
+04-27 19:14:01.442   446  1024 D QC-time-services: Daemon:new time 1619531042533 
+04-27 19:14:01.442   446  1024 D QC-time-services: Daemon: delta 1619431442089 genoff 1619431442089 
+04-27 19:14:01.442   446  1024 D QC-time-services: Daemon:genoff_persistent_update: Writing genoff = 1619431442089 to memory
+04-27 19:14:01.442   446  1024 D QC-time-services: Daemon:Opening File: /mnt/vendor/persist/time/ats_13 /data/vendor/time/ats_13
+04-27 19:14:01.442   446  1024 D QC-time-services: Daemon:time_persistent_memory_opr:Genoff write operation 
+04-27 19:14:01.449   842   903 E QC-time-services: Receive Passed == base = 13, unit = 1, operation = 0, result = 0
+04-27 19:14:01.449   446   459 E QC-time-services: Daemon: Time-services: Waiting to acceptconnection
+04-27 19:14:02.068  1025  1025 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:03.331  1055  1055 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:03.770  1263  1540 I chatty  : uid=1000(system) Binder:1263_16 identical 2 lines
+04-27 19:14:04.449  1094  1094 I chatty  : uid=2000(shell) app_process expire 12 lines
+04-27 19:14:04.452  1094  1094 W app_process: type=1400 audit(0.0:1324): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:04.455  1094  1094 W app_process: type=1400 audit(0.0:1325): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:04.455  1094  1094 W app_process: type=1400 audit(0.0:1326): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:04.534  1549  1549 D StatusBar: disable<e i a s b h r c s > disable2<q i n >
+04-27 19:14:04.580  1549  1096 W RingtonePlayer: STOP command without a player
+04-27 19:14:04.610  1549  1549 D StatusBar: disable<e i a s b h r c s > disable2<q i n >
+04-27 19:14:04.934  1263  1540 W BluetoothManagerService: checkPackage(): called with null packageName from 2000
+04-27 19:14:06.152  1125  1125 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:06.176   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:6340 trip:0 event:0
+04-27 19:14:06.178   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38461 trip:0 event:0
+04-27 19:14:06.182   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:40602 trip:0 event:0
+04-27 19:14:06.281   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:06.945   524  1889 D audio_hw_primary: start_output_stream: enter: stream(0xa7564000)usecase(1: low-latency-playback) devices(0x2)
+04-27 19:14:06.946   524  1889 D audio_hw_primary: select_devices for use case (low-latency-playback)
+04-27 19:14:06.947   524  1889 D audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: )
+04-27 19:14:06.947   524  1889 I msm8916_platform: platform_check_and_set_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+04-27 19:14:06.947   524  1889 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(1) new_snd_devices(0)
+04-27 19:14:06.947   524  1889 I msm8916_platform: platform_check_and_set_codec_backend_cfg: becf: new_snd_devices[0] is speaker
+04-27 19:14:06.947   524  1889 I msm8916_platform: platform_check_codec_backend_cfg:becf: afe: Codec selected backend: 0 current bit width: 16 sample rate: 48000 channels: 2 usecase 1 device (speaker)
+04-27 19:14:06.947   524  1889 D msm8916_platform: platform_check_codec_backend_cfg:becf: afe: playback on codec device not supporting native playback set default Sample Rate(48k)
+04-27 19:14:06.947   524  1889 D msm8916_platform: platform_check_codec_backend_cfg:becf: afe: only 48KHZ sample rate is supported Configure afe to default Sample Rate(48k)
+04-27 19:14:06.947   524  1889 I msm8916_platform: platform_check_codec_backend_cfg:becf: afe: Codec selected backend: 0 updated bit width: 16 sample rate: 48000 channels: 2
+04-27 19:14:06.947   524  1889 D audio_hw_primary: check_usecases_codec_backend:becf: force routing 0
+04-27 19:14:06.947   524  1889 E msm8916_platform: platform_check_backends_match: Invalid snd_device = 
+04-27 19:14:06.947   524  1889 D audio_hw_primary: check_usecases_codec_backend:becf: (63) check_usecases curr device: speaker, usecase device: backends match 0
+04-27 19:14:06.947   524  1889 D audio_hw_primary: check_usecases_codec_backend:becf: check_usecases num.of Usecases to switch 0
+04-27 19:14:06.947   524  1889 D hardware_info: hw_info_append_hw_type : device_name = speaker
+04-27 19:14:06.947   524  1889 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+04-27 19:14:06.947   524  1889 D audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+04-27 19:14:06.947   524  1889 D audio_route: Apply path: speaker
+04-27 19:14:06.949   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:06.954   524  1889 D audio_hw_utils: audio_extn_utils_send_app_type_cfg: usecase->out_snd_device speaker
+04-27 19:14:06.954   524  1889 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+04-27 19:14:06.954   524  1889 D audio_hw_utils: audio_extn_btsco_get_sample_rate:Not a BT SCO device, need not update sampling rate
+04-27 19:14:06.954   524  1889 I audio_hw_utils: send_app_type_cfg_for_device PLAYBACK app_type 69937, acdb_dev_id 14, sample_rate 48000, snd_device_be_idx 43
+04-27 19:14:06.954   524  1889 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(1) new_snd_devices(0)
+04-27 19:14:06.955   524  1889 D audio_hw_utils: audio_extn_btsco_get_sample_rate:Not a BT SCO device, need not update sampling rate
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 14, path = 0, app id = 0x11131, sample rate = 48000, afe_sample_rate = 48000
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_asm_topology
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_adm_topology
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_audtable
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE_SIZE
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL cal_type[11] acdb_id[14] app_type[69937]
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_audvoltable
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE_SIZE
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE, vol index 0
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> AUDIO_SET_VOL_CAL cal type = 12
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_SIZE
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_audstrmtable
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_V2
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> audstrm_cal->cal_type.cal_data.cal_size = 16
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_afe_topology
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_TOPOLOGY_ID
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> GET_AFE_TOPOLOGY_ID for adcd_id 14, Topology Id 1000fc01
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_afe_cal
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE_SIZE
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL cal_type[16] acdb_id[14]
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> send_hw_delay : acdb_id = 14 path = 0
+04-27 19:14:06.955   524  1889 D ACDB-LOADER: ACDB -> ACDB_AVSYNC_INFO: ACDB_CMD_GET_DEVICE_PROPERTY
+04-27 19:14:06.955   524  1889 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+04-27 19:14:06.955   524  1889 I msm8916_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 1 uc_id 1 snd_dev 2
+04-27 19:14:06.955   524  1889 D audio_hw_primary: enable_audio_route: apply mixer and update path: low-latency-playback
+04-27 19:14:06.955   524  1889 D audio_route: Apply path: low-latency-playback
+04-27 19:14:06.957   524  1889 D audio_hw_primary: select_devices: done
+04-27 19:14:06.959   524  1889 D msm8916_platform: platform_set_channel_map mixer_ctl_name:Playback Channel Map12
+04-27 19:14:06.959   524  1889 D msm8916_platform: platform_set_channel_map: set mapping(1 2 0 0 0 0 0 0) for channel:2
+04-27 19:14:07.003   524  1889 D audio_hw_primary: start_output_stream: exit
+04-27 19:14:07.003   524  1889 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+04-27 19:14:07.003   524  1889 I msm8916_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 1 uc_id 1 snd_dev 2
+04-27 19:14:07.167   524  1503 I chatty  : uid=1041(audioserver) HwBinder:524_5 identical 8 lines
+04-27 19:14:07.288  1146  1146 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:07.626  1263  1487 I chatty  : uid=1000(system) WifiService expire 1 line
+04-27 19:14:07.626  1752  2876 D QCNEJ/WlanStaInfoRelay: onChange for uri = content://settings/global/wifi_on
+04-27 19:14:07.629   703   703 W wificond: No pno scan started
+04-27 19:14:07.629   703   703 W wificond: Scheduled scan is not running!
+04-27 19:14:07.630  1263  1490 I chatty  : uid=1000(system) WifiScanningSer expire 4 lines
+04-27 19:14:07.631   703   703 W wificond: No pno scan started
+04-27 19:14:07.631   703   703 W wificond: Scheduled scan is not running!
+04-27 19:14:07.633   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:07.638  1146  1163 I chatty  : uid=2000(shell) app_process expire 2 lines
+04-27 19:14:07.638   703   703 I wificond: Unsubscribe scan result for interface with index: 30
+04-27 19:14:07.655   538   538 I chatty  : uid=1010 wifi@1.0-servic expire 22 lines
+04-27 19:14:07.656  1263  1319 I chatty  : uid=1000(system) android.fg expire 10 lines
+04-27 19:14:07.659   538   538 E android.hardware.wifi@1.0-service: Failed to open directory: Permission denied
+04-27 19:14:07.659   538   538 E android.hardware.wifi@1.0-service: Error occurred while deleting old tombstone files
+04-27 19:14:07.659   538   538 E android.hardware.wifi@1.0-service: Error writing files to flash
+04-27 19:14:07.661   538  2479 I chatty  : uid=1010 wifi@1.0-servic expire 5 lines
+04-27 19:14:07.662   538  2479 I android.hardware.wifi@1.0-service: Legacy HAL stop complete callback received
+04-27 19:14:07.801   531   584 I chatty  : uid=1000(system) HwBinder:531_1 expire 2 lines
+04-27 19:14:07.864  1263  1516 I chatty  : uid=1000(system) EthernetService expire 8 lines
+04-27 19:14:08.308   623   657 D ThermalEngine: zone:0 sensor:xo-therm-adc temp:41024 trip:0 event:0
+04-27 19:14:08.308   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 41024 .
+04-27 19:14:08.308   623   670 I ThermalEngine: Sensor:xo-therm-adc:41024 mC
+04-27 19:14:08.308   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:14:08.309   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.
+04-27 19:14:08.375  1165  1165 I chatty  : uid=2000(shell) expire 12 lines
+04-27 19:14:08.478   538   538 I android.hardware.wifi@1.0-service: Wifi HAL stopped
+04-27 19:14:08.480  1263  1489 I chatty  : uid=1000(system) WifiP2pService expire 12 lines
+04-27 19:14:08.484  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:14:08.484  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/com.bb.lib.receiver.NetworkChangeReceiver
+04-27 19:14:08.486  1263  1263 I chatty  : uid=1000 system_server expire 5 lines
+04-27 19:14:09.214   703   703 I wificond: Regulatory domain changed
+04-27 19:14:09.226   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:14:09.226   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:14:09.226   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:14:09.226   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:14:09.226   703   703 I wificond: Regulatory domain changed
+04-27 19:14:09.226   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:14:09.226   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:14:09.226   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:14:09.226   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:14:09.226   703   703 I wificond: Regulatory domain changed
+04-27 19:14:09.226   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:14:09.226   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:14:09.227   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:14:09.227   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:14:09.229   538   538 I android.hardware.wifi@1.0-service: Wifi HAL started
+04-27 19:14:09.371  1192  1192 I chatty  : uid=1010(wifi) expire 137 lines
+04-27 19:14:09.381  1263  1514 I chatty  : uid=1000(system) HwBinder:1263_3 expire 5 lines
+04-27 19:14:09.476   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for p2p0
+04-27 19:14:09.476   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for wlan0
+04-27 19:14:09.476   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:09.477   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:09.482   538   538 I android.hardware.wifi@1.0-service: Configured chip in mode 0
+04-27 19:14:09.482   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:09.485  1263  1488 I chatty  : uid=1000(system) ClientModeImpl expire 92 lines
+04-27 19:14:09.509   703   703 I wificond: setting base_wiphy_index_ to 3
+04-27 19:14:09.511   703   703 I wificond: create scanner for interface with index: 32
+04-27 19:14:09.512   703   703 I wificond: subscribe scan result for interface with index: 32
+04-27 19:14:09.513   377   377 I hwservicemanager: getTransport: Cannot find entry android.hardware.wifi.offload@1.0::IOffload/default in either framework or device manifest.
+04-27 19:14:09.513   703   703 E wificond: No Offload Service available
+04-27 19:14:09.513   703   703 I wificond: Offload HAL not supported 
+04-27 19:14:09.558  1192  1192 D wpa_supplicant: wpa_driver_nl80211_set_key: ifindex=32 (wlan0) alg=0 addr=0x0 key_idx=0 set_tx=0 seq_len=0 key_len=0
+04-27 19:14:09.559  1192  1192 D wpa_supplicant: wpa_driver_nl80211_set_key: ifindex=32 (wlan0) alg=0 addr=0x0 key_idx=1 set_tx=0 seq_len=0 key_len=0
+04-27 19:14:09.559  1192  1192 D wpa_supplicant: wpa_driver_nl80211_set_key: ifindex=32 (wlan0) alg=0 addr=0x0 key_idx=2 set_tx=0 seq_len=0 key_len=0
+04-27 19:14:09.560  1192  1192 D wpa_supplicant: wpa_driver_nl80211_set_key: ifindex=32 (wlan0) alg=0 addr=0x0 key_idx=3 set_tx=0 seq_len=0 key_len=0
+04-27 19:14:09.560  1192  1192 D wpa_supplicant: wpa_driver_nl80211_set_key: ifindex=32 (wlan0) alg=0 addr=0x0 key_idx=4 set_tx=0 seq_len=0 key_len=0
+04-27 19:14:09.561  1192  1192 D wpa_supplicant: wpa_driver_nl80211_set_key: ifindex=32 (wlan0) alg=0 addr=0x0 key_idx=5 set_tx=0 seq_len=0 key_len=0
+04-27 19:14:09.561  1192  1192 D wpa_supplicant: wlan0: RSN: flushing PMKID list in the driver
+04-27 19:14:09.561  1192  1192 D wpa_supplicant: nl80211: Flush PMKIDs
+04-27 19:14:09.561  1192  1192 D wpa_supplicant: wlan0: State: DISCONNECTED -> INACTIVE
+04-27 19:14:09.561  1192  1192 D wpa_supplicant: Notifying state change event to hidl control: 2
+04-27 19:14:09.577  1192  1192 D wpa_supplicant: TDLS: TDLS operation supported by driver
+04-27 19:14:09.577  1192  1192 D wpa_supplicant: TDLS: Driver uses external link setup
+04-27 19:14:09.577  1192  1192 D wpa_supplicant: TDLS: Driver does not support TDLS channel switching
+04-27 19:14:09.577  1192  1192 D wpa_supplicant: wlan0: WPS: UUID based on MAC address: e1249385-aadd-515a-9c15-1d9cdd02b282
+04-27 19:14:09.578  1192  1192 E wpa_supplicant: eap_proxy: eap_proxy_init
+04-27 19:14:09.578  1192  1192 D wpa_supplicant: EAPOL: SUPP_PAE entering state DISCONNECTED
+04-27 19:14:09.579  1192  1192 D wpa_supplicant: EAPOL: Supplicant port status: Unauthorized
+04-27 19:14:09.579  1192  1192 D wpa_supplicant: nl80211: Skip set_supp_port(unauthorized) while not associated
+04-27 19:14:09.579  1192  1192 D wpa_supplicant: EAPOL: KEY_RX entering state NO_KEY_RECEIVE
+04-27 19:14:09.579  1192  1192 D wpa_supplicant: EAPOL: SUPP_BE entering state INITIALIZE
+04-27 19:14:09.579  1192  1192 D wpa_supplicant: EAP: EAP entering state DISABLED
+04-27 19:14:09.579  1192  1192 D wpa_supplicant: nl80211: Setting wowlan
+04-27 19:14:09.580  1192  1192 E wpa_supplicant: eap_proxy:eap_proxy_get_imsi: Not initialized
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: eap_proxy: IMSI not available
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: MBO: Update non-preferred channels, non_pref_chan=N/A
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: nl80211: Scan default IEs - hexdump(len=21): 7f 0a 00 00 0a 02 00 40 00 00 00 01 dd 07 50 6f 9a 16 03 01 03
+04-27 19:14:09.580  1192  1192 E wpa_supplicant: nl80211: Set scan default IEs failed: ret=-524 (Unknown error 524)
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: Registering interface to hidl control: wlan0
+04-27 19:14:09.580  1192  1192 I wpa_supplicant: Mapping to vendor sta iface
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: wlan0: Added interface wlan0
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: wlan0: State: INACTIVE -> DISCONNECTED
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: nl80211: Set wlan0 operstate 0->0 (DORMANT)
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: netlink: Operstate: ifindex=32 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+04-27 19:14:09.580  1192  1192 D wpa_supplicant: Notifying state change event to hidl control: 0
+04-27 19:14:09.580  1192  1192 E wpa_supplicant: No VendorStaIfaceCallback is register
+04-27 19:14:09.581  1192  1192 D wpa_supplicant: RTM_NEWLINK: ifi_index=32 ifname=wlan0 operstate=2 linkmode=1 ifi_family=0 ifi_flags=0x1003 ([UP])
+04-27 19:14:09.584  1192  1196 E wpa_supplicant: eap_proxy: num_modems = 1
+04-27 19:14:09.584  1192  1196 E wpa_supplicant: eap_proxy: eap_proxy Initializing for DUAL SIM build 2 tid 1196
+04-27 19:14:09.585  1192  1196 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-6
+04-27 19:14:09.589  1192  1196 E wpa_supplicant: eap_proxy: QMI_UIM_EVENT_REG_REQ_V01, qmi_err_code: 0x0 wpa_uim[0].qmi_uim_svc_client_ptr =0x1Error=0x0
+04-27 19:14:09.589  1192  1196 E wpa_supplicant: eap_proxy: event_resp_msg.event=1,
+04-27 19:14:09.589  1192  1196 E wpa_supplicant: eap_proxy: reading card 1 values
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: card_info[i].card_state: 0x1
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: card_info[i].error_code: 0x0
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: read_card_status: prime slot = 0
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: card READY
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: card_info[i].app_type: 0x2
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: card_info[i].app_state : 0x7
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: card found for SIM = 1
+04-27 19:14:09.591  1192  1196 E wpa_supplicant: eap_proxy: SIM/USIM ready
+04-27 19:14:09.592  1192  1196 E wpa_supplicant: eap_proxy: QMI uim service client initialized with success tid is 1196 0x1 0
+04-27 19:14:09.592  1192  1196 E wpa_supplicant: eap_proxy: QMI auth service client initialized with success tid is 1196  0x2 eapol_proxy=0x7fd9b11c
+04-27 19:14:09.592  1192  1196 E wpa_supplicant: registering for notification codes
+04-27 19:14:09.593  1192  1192 I wpa_supplicant: get vendor sta iface object
+04-27 19:14:09.593  1192  1196 E wpa_supplicant: eap_proxy: QMI_UIM_EVENT_REG_REQ_V01, qmi_err_code: 0x0 wpa_uim[1].qmi_uim_svc_client_ptr =0x3Error=0x0
+04-27 19:14:09.593  1192  1196 E wpa_supplicant: eap_proxy: event_resp_msg.event=1,
+04-27 19:14:09.593  1192  1196 E wpa_supplicant: eap_proxy: reading card 2 values
+04-27 19:14:09.594  1192  1196 E wpa_supplicant: eap_proxy: SIM/USIM not ready card_found=0
+04-27 19:14:09.594  1192  1196 E wpa_supplicant: eap_proxy: Error while reading SIM card status
+04-27 19:14:09.595  1192  1196 E wpa_supplicant: eap_proxy: QMI uim service client initialized with success tid is 1196 0x3 0
+04-27 19:14:09.595  1192  1196 E wpa_supplicant: eap_proxy: QMI auth service client initialized with success tid is 1196  0x4 eapol_proxy=0x7fd9b11c
+04-27 19:14:09.595  1192  1196 E wpa_supplicant: registering for notification codes
+04-27 19:14:09.596  1192  1196 E wpa_supplicant: eap_proxy: Eap_proxy initialized successfully tid is 1196 
+04-27 19:14:09.598   449   835 I netd    : interfaceGetCfg("wlan0") <0.56ms>
+04-27 19:14:09.600   449   835 I netd    : interfaceClearAddrs("wlan0") <0.49ms>
+04-27 19:14:09.601   449   835 I netd    : interfaceSetIPv6PrivacyExtensions("wlan0", "true") <0.21ms>
+04-27 19:14:09.601   449   835 I netd    : interfaceSetEnableIPv6("wlan0", "false") <0.20ms>
+04-27 19:14:09.617   449   835 I netd    : interfaceGetCfg("wlan0") <0.30ms>
+04-27 19:14:09.624  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:14:09.625  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/com.bb.lib.receiver.NetworkChangeReceiver
+04-27 19:14:09.638  1192  1192 I wpa_supplicant: wlan0: CTRL-EVENT-REGDOM-CHANGE init=USER type=COUNTRY alpha2=IN
+04-27 19:14:09.643   538   538 E WifiHAL : wifi_start_pkt_fate_monitoring: packet fate logging feature not supported 0
+04-27 19:14:09.648   538   538 E WifiHAL : wifi_get_ring_buffers_status: Ring buffer logging feature not supported 0
+04-27 19:14:09.654   449   835 I netd    : interfaceSetEnableIPv6("wlan0", "false") <0.13ms>
+04-27 19:14:09.655   449   835 I netd    : interfaceClearAddrs("wlan0") <0.48ms>
+04-27 19:14:09.701  1180  1180 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:10.209   524  1503 D audio_hw_primary: disable_audio_route: reset and update mixer path: low-latency-playback
+04-27 19:14:10.210   524  1503 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+04-27 19:14:10.210   524  1503 I msm8916_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 1 uc_id 1 snd_dev 2
+04-27 19:14:10.210   524  1503 D hardware_info: hw_info_append_hw_type : device_name = speaker
+04-27 19:14:10.210   524  1503 D audio_hw_primary: disable_snd_device: snd_device(2: speaker)
+04-27 19:14:10.210   524  1503 D msm8916_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+04-27 19:14:10.214   524  1503 D audio_hw_primary: out_standby: exit
+04-27 19:14:10.294  1263  1540 I chatty  : uid=1000(system) Binder:1263_16 expire 1 line
+04-27 19:14:10.299  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.SCAN_RESULTS flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:14:10.300  1263  1336 I ActivityManager: Killing 370:com.google.process.gservices/u0a93 (adj 900): cached #1
+04-27 19:14:10.308   377   377 I hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@2.0::IIop/default in either framework or device manifest.
+04-27 19:14:10.334  2085  2377 I ChimeraSrvcProxy: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl
+04-27 19:14:10.341   531   531 I chatty  : uid=1000(system) composer@2.1-se expire 4 lines
+04-27 19:14:10.352   450   450 I Zygote  : Process 370 exited due to signal 9 (Killed)
+04-27 19:14:10.352   377   377 I hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@2.0::IIop/default in either framework or device manifest.
+04-27 19:14:10.354   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: killProcess is called for pid : 370
+04-27 19:14:10.391  1263  1339 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-27 19:14:10.922  1222  1222 I chatty  : uid=2000(shell) app_process expire 12 lines
+04-27 19:14:10.929  1222  1222 W app_process: type=1400 audit(0.0:1344): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:10.929  1222  1222 W app_process: type=1400 audit(0.0:1345): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:10.929  1222  1222 W app_process: type=1400 audit(0.0:1346): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:11.296   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:41144 trip:0 event:0
+04-27 19:14:11.305   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38626 trip:0 event:0
+04-27 19:14:11.306   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:24859 trip:0 event:0
+04-27 19:14:11.330  1263  1540 E WifiService: Permission violation - getScanResults not allowed for uid=10056, packageName=com.jio.myjio, reason=java.lang.SecurityException: UID 10056 has no location permission
+04-27 19:14:11.903  1243  1243 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:12.181  1263  1487 I chatty  : uid=1000(system) WifiService expire 1 line
+04-27 19:14:12.183  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:14:12.183  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/com.bb.lib.receiver.NetworkChangeReceiver
+04-27 19:14:12.184   703   703 W wificond: No pno scan started
+04-27 19:14:12.184  1752  2876 D QCNEJ/WlanStaInfoRelay: onChange for uri = content://settings/global/wifi_on
+04-27 19:14:12.184   703   703 W wificond: Scheduled scan is not running!
+04-27 19:14:12.188   703   703 W wificond: No pno scan started
+04-27 19:14:12.188   703   703 W wificond: Scheduled scan is not running!
+04-27 19:14:12.191   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:12.192  1243  1264 I chatty  : uid=2000(shell) app_process expire 2 lines
+04-27 19:14:12.203  1192  1192 I wpa_supplicant: wlan0: Do not deauthenticate as part of interface deinit since WoWLAN is enabled
+04-27 19:14:12.227  1192  1192 E wpa_supplicant: eap_proxy: pthread_join on eap_proxy=0x7fd9b11c
+04-27 19:14:12.227  1192  1192 E wpa_supplicant: eap_proxy: session not started for client = 1
+04-27 19:14:12.228  1192  1192 E wpa_supplicant: eap_proxy: Released QMI UIM service client
+04-27 19:14:12.228  1192  1192 E wpa_supplicant: eap_proxy: Released QMI EAP service client
+04-27 19:14:12.228  1192  1192 E wpa_supplicant: eap_proxy: session not started for client = 2
+04-27 19:14:12.229  1192  1192 E wpa_supplicant: eap_proxy: Released QMI UIM service client
+04-27 19:14:12.230  1192  1192 E wpa_supplicant: eap_proxy: Released QMI EAP service client
+04-27 19:14:12.230  1192  1192 I wpa_supplicant: eap_proxy: eap_proxy Deinitialzed
+04-27 19:14:12.275  1192  1192 I wpa_supplicant: nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+04-27 19:14:12.294  1192  1192 I wpa_supplicant: Try to unregister vendor interface
+04-27 19:14:12.297   703   703 I wificond: Unsubscribe scan result for interface with index: 32
+04-27 19:14:12.322  1192  1192 I wpa_supplicant: Terminating...
+04-27 19:14:12.355   538   538 W wifi@1.0-servic: type=1400 audit(0.0:1350): avc: denied { search } for name="tombstones" dev="mmcblk0p53" ino=82 scontext=u:r:hal_wifi_default:s0 tcontext=u:object_r:vendor_tombstone_data_file:s0 tclass=dir permissive=0
+04-27 19:14:12.358  1263  2442 I chatty  : uid=1000(system) HwBinder:1263_5 expire 1 line
+04-27 19:14:12.359   538   538 W wifi@1.0-servic: type=1400 audit(0.0:1351): avc: denied { write } for name="tcp_limit_output_bytes" dev="proc" ino=65167 scontext=u:r:hal_wifi_default:s0 tcontext=u:object_r:proc_net:s0 tclass=file permissive=0
+04-27 19:14:12.359   538   538 W wifi@1.0-servic: type=1400 audit(0.0:1352): avc: denied { write } for name="tcp_use_userconfig" dev="proc" ino=65168 scontext=u:r:hal_wifi_default:s0 tcontext=u:object_r:proc_net:s0 tclass=file permissive=0
+04-27 19:14:12.359   538   538 W wifi@1.0-servic: type=1400 audit(0.0:1353): avc: denied { write } for name="tcp_adv_win_scale" dev="proc" ino=65169 scontext=u:r:hal_wifi_default:s0 tcontext=u:object_r:proc_net:s0 tclass=file permissive=0
+04-27 19:14:12.359   538   538 W wifi@1.0-servic: type=1400 audit(0.0:1354): avc: denied { read } for name="u:object_r:powerctl_prop:s0" dev="tmpfs" ino=13402 scontext=u:r:hal_wifi_default:s0 tcontext=u:object_r:powerctl_prop:s0 tclass=file permissive=0
+04-27 19:14:12.359  1263  1334 I chatty  : uid=1000(system) HwBinder:1263_1 expire 1 line
+04-27 19:14:12.359   538   538 E android.hardware.wifi@1.0-service: Failed to open directory: Permission denied
+04-27 19:14:12.359   538   538 E android.hardware.wifi@1.0-service: Error occurred while deleting old tombstone files
+04-27 19:14:12.360   538   538 E android.hardware.wifi@1.0-service: Error writing files to flash
+04-27 19:14:12.360   538   538 I WifiHAL : Sent msg on exit sock to unblock poll()
+04-27 19:14:12.360   538  1195 I WifiHAL : exit_event_handler, buf=E
+04-27 19:14:12.361   538  1195 E WifiHAL : wlan_service_update_sys_param: unable to open /proc/sys/net/ipv4/tcp_limit_output_bytes
+04-27 19:14:12.361   538  1195 E WifiHAL : wlan_service_update_sys_param: unable to open /proc/sys/net/ipv4/tcp_use_userconfig
+04-27 19:14:12.361   538  1195 E WifiHAL : wlan_service_update_sys_param: unable to open /proc/sys/net/ipv4/tcp_adv_win_scale
+04-27 19:14:12.361   538  1195 I android.hardware.wifi@1.0-service: Legacy HAL stop complete callback received
+04-27 19:14:12.361   538  1195 I WifiHAL : wifi_event_loop() exits success
+04-27 19:14:12.362   538   538 E libc    : Access denied finding property "sys.powerctl"
+04-27 19:14:12.545  1263  3806 I chatty  : uid=1000(system) Binder:1263_1F expire 1 line
+04-27 19:14:12.901  1266  1266 I chatty  : uid=2000(shell) app_process expire 13 lines
+04-27 19:14:13.158   538   538 I android.hardware.wifi@1.0-service: Wifi HAL stopped
+04-27 19:14:13.162  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.STATE_CHANGE flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:14:13.163  1752  2876 D QCNEJ/WlanStaInfoRelay: Received action: android.net.wifi.STATE_CHANGE
+04-27 19:14:13.163  1752  2876 D QCNEJ/WlanStaInfoRelay: reset CountryCodeRetriever
+04-27 19:14:13.166  2085  2887 I NearbyDiscovery: FastPairHandler: Received action android.net.wifi.STATE_CHANGE [CONTEXT service_id=49 ]
+04-27 19:14:13.166  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:14:13.167  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x4000010 (has extras) } to com.jio.myjio/com.bb.lib.receiver.NetworkChangeReceiver
+04-27 19:14:13.171  2085  2812 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+04-27 19:14:13.818   703   703 I wificond: Regulatory domain changed
+04-27 19:14:13.818   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:14:13.818   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:14:13.818   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:14:13.818   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:14:13.818   703   703 I wificond: Regulatory domain changed
+04-27 19:14:13.829   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:14:13.829   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:14:13.829   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:14:13.829   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:14:13.829   703   703 I wificond: Regulatory domain changed
+04-27 19:14:13.829   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:14:13.829   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:14:13.829   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:14:13.829   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:14:13.829   703   703 I wificond: Regulatory domain changed
+04-27 19:14:13.829   703   703 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-27 19:14:13.829   703   703 I wificond: 2.4Ghz frequencies:
+04-27 19:14:13.829   703   703 I wificond: 5Ghz non-DFS frequencies:
+04-27 19:14:13.829   703   703 I wificond: 5Ghz DFS frequencies:
+04-27 19:14:13.832   538   538 I android.hardware.wifi@1.0-service: Wifi HAL started
+04-27 19:14:13.861   538   538 I WifiHAL : Initializing wifi
+04-27 19:14:13.863   538   538 E CLD80211: /vendor/bin/hw/android.hardware.wifi@1.0-service: Could not resolve cld80211 familty id
+04-27 19:14:13.865   538   538 E WifiHAL : acquire_driver_supported_features: requestResponse Error:-3
+04-27 19:14:13.865   538   538 I WifiHAL : Failed to get vendor feature set : -1
+04-27 19:14:13.866   538   538 E WifiHAL : get_firmware_bus_max_size_supported: requestResponse Error:-3
+04-27 19:14:13.866   538   538 E WifiHAL : Failed to get supported bus size, error : -3
+04-27 19:14:13.866   538   538 E WifiHAL : wifi_logger_ring_buffers_init: Ring buffer logging feature not supported 0
+04-27 19:14:13.866   538   538 E WifiHAL : Wifi Logger Ring Initialization Failed
+04-27 19:14:13.867   538   538 E WifiHAL : wifiParseCapabilities: QCA_WLAN_VENDOR_ATTR_GSCAN_RESULTS_CAPABILITIES_MAX_NUM_EPNO_NETS not found. Set to 0.
+04-27 19:14:13.867   538   538 E WifiHAL : wifiParseCapabilities: QCA_WLAN_VENDOR_ATTR_GSCAN_RESULTS_CAPABILITIES_MAX_NUM_EPNO_NETS_BY_SSID not found. Set to 0.
+04-27 19:14:13.867   538   538 E WifiHAL : wifiParseCapabilities: QCA_WLAN_VENDOR_ATTR_GSCAN_RESULTS_CAPABILITIES_MAX_NUM_WHITELISTED_SSID not found. Set to 0.
+04-27 19:14:13.867   538   538 E WifiHAL : wifiParseCapabilities: QCA_WLAN_VENDOR_ATTR_GSCAN_RESULTS_CAPABILITIES_MAX_NUM_BLACKLIST_BSSID not found. Set to 0.
+04-27 19:14:13.868   538   538 D WifiHAL : wlan_service_read_sys_param: /proc/sys/net/ipv4/tcp_limit_output_bytes 262144
+04-27 19:14:13.868   538   538 D WifiHAL : wlan_service_read_sys_param: /proc/sys/net/ipv4/tcp_adv_win_scale 1
+04-27 19:14:13.870   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for p2p0
+04-27 19:14:13.870   538   538 I android.hardware.wifi@1.0-service: Adding interface handle for wlan0
+04-27 19:14:13.870   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:13.870   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:13.876   538   538 I android.hardware.wifi@1.0-service: Configured chip in mode 0
+04-27 19:14:13.876   538   538 W android.hardware.wifi@1.0-service: No active wlan interfaces in use! Using default
+04-27 19:14:13.895   538   538 I WifiHAL : mpdu_size_threshold : 128, aggressive_statistics_gathering : 0
+04-27 19:14:13.897   703   703 I wificond: setting base_wiphy_index_ to 4
+04-27 19:14:13.899   703   703 I wificond: create scanner for interface with index: 34
+04-27 19:14:13.899   703   703 I wificond: subscribe scan result for interface with index: 34
+04-27 19:14:13.900   377   377 I hwservicemanager: getTransport: Cannot find entry android.hardware.wifi.offload@1.0::IOffload/default in either framework or device manifest.
+04-27 19:14:13.900   703   703 E wificond: No Offload Service available
+04-27 19:14:13.900   703   703 I wificond: Offload HAL not supported 
+04-27 19:14:13.903   449   835 I netd    : interfaceGetCfg("wlan0") <0.52ms>
+04-27 19:14:13.914   449   835 I netd    : interfaceGetCfg("wlan0") <0.30ms>
+04-27 19:14:13.961  1302  1302 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:16.415   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:16869 trip:0 event:0
+04-27 19:14:16.417   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38846 trip:0 event:0
+04-27 19:14:16.419   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:41385 trip:0 event:0
+04-27 19:14:18.335   623   657 D ThermalEngine: zone:0 sensor:xo-therm-adc temp:41566 trip:0 event:0
+04-27 19:14:18.336   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 41566 .
+04-27 19:14:18.336   623   670 I ThermalEngine: Sensor:xo-therm-adc:41566 mC
+04-27 19:14:18.336   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:14:18.336   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.
+04-27 19:14:19.812  1263  3053 I chatty  : uid=1000(system) Binder:1263_1C expire 2 lines
+04-27 19:14:19.823  1549  1894 I vol.Events: writeEvent active_stream_changed STREAM_MUSIC
+04-27 19:14:19.829  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 5
+04-27 19:14:19.906  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:19.907  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 10 lines
+04-27 19:14:19.935  1263  1324 I chatty  : uid=1000(system) android.anim expire 1 line
+04-27 19:14:19.948   551   551 E SurfaceFlinger: [VolumeDialogImpl#0] rejecting buffer: bufWidth=118, bufHeight=543, front.active_legacy.{w=118, h=453}
+04-27 19:14:20.287  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 6
+04-27 19:14:20.313  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:20.362   636   636 W vm_bms  : type=1400 audit(0.0:1361): avc: denied { read } for name="u:object_r:default_prop:s0" dev="tmpfs" ino=13324 scontext=u:r:vm_bms:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+04-27 19:14:20.362   636   636 W vm_bms  : type=1400 audit(0.0:1362): avc: denied { read } for name="u:object_r:default_prop:s0" dev="tmpfs" ino=13324 scontext=u:r:vm_bms:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+04-27 19:14:20.362   636   636 I chatty  : uid=0(root) /vendor/bin/vm_bms identical 37 lines
+04-27 19:14:20.362   636   636 W vm_bms  : type=1400 audit(0.0:1364): avc: denied { read } for name="u:object_r:default_prop:s0" dev="tmpfs" ino=13324 scontext=u:r:vm_bms:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+04-27 19:14:20.365   636   636 E libc    : Access denied finding property "vbms.log.enable"
+04-27 19:14:20.366   636   636 E libc    : Access denied finding property "vbms.log.enable"
+04-27 19:14:20.369   636   636 W vm_bms  : type=1400 audit(0.0:1365): avc: denied { read } for name="u:object_r:default_prop:s0" dev="tmpfs" ino=13324 scontext=u:r:vm_bms:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+04-27 19:14:20.369   636   636 W vm_bms  : type=1400 audit(0.0:1367): avc: denied { read } for name="u:object_r:default_prop:s0" dev="tmpfs" ino=13324 scontext=u:r:vm_bms:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+04-27 19:14:20.371   636   636 E libc    : Access denied finding property "vbms.log.enable"
+04-27 19:14:20.374   636   636 E libc    : Access denied finding property "vbms.log.enable"
+04-27 19:14:20.374   636   636 I VM_BMS  : power_supply_update: ocv_uv=4173483 ibatt=183418 soc=99 seq_num=12
+04-27 19:14:20.374   636   636 E libc    : Access denied finding property "vbms.log.enable"
+04-27 19:14:20.374   636   636 E libc    : Access denied finding property "vbms.log.enable"
+04-27 19:14:20.416  1549  1549 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+04-27 19:14:20.422  1549  1549 D KeyguardUpdateMonitor: handleBatteryUpdate
+04-27 19:14:20.439  1549  1549 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+04-27 19:14:20.469  1549  1549 D KeyguardUpdateMonitor: handleBatteryUpdate
+04-27 19:14:20.543  1378  1378 I chatty  : uid=2000(shell) expire 12 lines
+04-27 19:14:20.633   531   584 I chatty  : uid=1000(system) HwBinder:531_1 expire 6 lines
+04-27 19:14:20.783  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 7
+04-27 19:14:20.786  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 7
+04-27 19:14:20.810  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:20.971  2085  1410 E memtrack: Couldn't load memtrack module
+04-27 19:14:20.971  2085  1410 W android.os.Debug: failed to get memory consumption info: -1
+04-27 19:14:21.536   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:41325 trip:0 event:0
+04-27 19:14:21.538   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:38901 trip:0 event:0
+04-27 19:14:21.539   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:23738 trip:0 event:0
+04-27 19:14:21.584  1413  1413 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:22.727  1443  1443 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:22.884   449   835 I netd    : firewallEnableChildChain(2, "false") <0.05ms>
+04-27 19:14:23.147  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 9
+04-27 19:14:23.166  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 9
+04-27 19:14:23.224  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 10
+04-27 19:14:23.238  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 10
+04-27 19:14:23.241  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 11
+04-27 19:14:23.250  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 11
+04-27 19:14:23.257  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 12
+04-27 19:14:23.273  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 14
+04-27 19:14:23.274  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 12
+04-27 19:14:23.288  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 14
+04-27 19:14:23.290  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 15
+04-27 19:14:23.304  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 15
+04-27 19:14:23.443  1549  1549 I vol.Events: writeEvent touch_level_done STREAM_MUSIC 15
+04-27 19:14:23.708   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:23.808  1479  1479 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:24.767  1534  1534 I chatty  : uid=2000(shell) app_process expire 15 lines
+04-27 19:14:25.308  1263  3053 I chatty  : uid=1000(system) Binder:1263_1C expire 12 lines
+04-27 19:14:25.326  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 14
+04-27 19:14:25.328   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:25.334  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 14
+04-27 19:14:25.348  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.529   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:25.569  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 13
+04-27 19:14:25.571  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 13
+04-27 19:14:25.587  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.596   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:25.608  1263  2243 I chatty  : uid=1000(system) Binder:1263_C expire 12 lines
+04-27 19:14:25.623  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 12
+04-27 19:14:25.623  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 12
+04-27 19:14:25.638  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.674  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 11
+04-27 19:14:25.675  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 11
+04-27 19:14:25.688  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.722  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 10
+04-27 19:14:25.738  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.776  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 9
+04-27 19:14:25.776  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 9
+04-27 19:14:25.789  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.825  1552  1552 I chatty  : uid=2000(shell) app_process expire 13 lines
+04-27 19:14:25.827  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 8
+04-27 19:14:25.829  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 8
+04-27 19:14:25.837  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.882  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 7
+04-27 19:14:25.885  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 7
+04-27 19:14:25.893  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.932  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 6
+04-27 19:14:25.933  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 6
+04-27 19:14:25.938  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:25.978  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 5
+04-27 19:14:25.979  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 5
+04-27 19:14:25.989  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:26.024  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 4
+04-27 19:14:26.039  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:26.068  1263  1540 I chatty  : uid=1000(system) Binder:1263_16 expire 6 lines
+04-27 19:14:26.075  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 3
+04-27 19:14:26.100  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:26.128  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 2
+04-27 19:14:26.140  1552  1552 D AndroidRuntime: Calling main entry com.android.commands.svc.Svc
+04-27 19:14:26.144  1552  1552 D AndroidRuntime: Shutting down VM
+04-27 19:14:26.150  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:26.184  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 1
+04-27 19:14:26.185  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 1
+04-27 19:14:26.189  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:26.240  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 0
+04-27 19:14:26.241  1549  1894 I vol.Events: writeEvent key STREAM_MUSIC 0
+04-27 19:14:26.257  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:26.271  1263  1540 D MediaSessionService: dispatchVolumeKeyEvent, pkg=com.android.systemui, opPkg=com.android.systemui, pid=1549, uid=10088, asSystem=true, event=KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_VOLUME_DOWN, scanCode=114, metaState=0, flags=0x8, repeatCount=15, eventTime=634976, downTime=633862, deviceId=3, source=0x101, displayId=-1 }, stream=-2147483648, musicOnly=false
+04-27 19:14:26.272  1263  1540 D MediaSessionService: Adjusting null by -1. flags=4113, suggestedStream=-2147483648, preferSuggestedStream=false
+04-27 19:14:26.279  1549  1549 I vol.Events: writeEvent show_dialog volume_changed keyguard=false
+04-27 19:14:26.300  1263  1540 D MediaSessionService: dispatchVolumeKeyEvent, pkg=com.android.systemui, opPkg=com.android.systemui, pid=1549, uid=10088, asSystem=true, event=KeyEvent { action=ACTION_UP, keyCode=KEYCODE_VOLUME_DOWN, scanCode=114, metaState=0, flags=0x8, repeatCount=0, eventTime=635003, downTime=633862, deviceId=3, source=0x101, displayId=-1 }, stream=-2147483648, musicOnly=false
+04-27 19:14:26.300  1263  1540 D MediaSessionService: Adjusting null by 0. flags=4116, suggestedStream=-2147483648, preferSuggestedStream=false
+04-27 19:14:26.448   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:26.656   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:20700 trip:0 event:0
+04-27 19:14:26.665   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:39010 trip:0 event:0
+04-27 19:14:26.666   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:41867 trip:0 event:0
+04-27 19:14:27.042  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 2
+04-27 19:14:27.049   531   584 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:27.053  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 2
+04-27 19:14:27.100  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 3
+04-27 19:14:27.115  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 3
+04-27 19:14:27.134  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 5
+04-27 19:14:27.147  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 5
+04-27 19:14:27.151  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 7
+04-27 19:14:27.161  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 7
+04-27 19:14:27.166  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 8
+04-27 19:14:27.182  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 8
+04-27 19:14:27.183  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 10
+04-27 19:14:27.195  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 10
+04-27 19:14:27.216  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 11
+04-27 19:14:27.229  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 11
+04-27 19:14:27.233  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 12
+04-27 19:14:27.244  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 12
+04-27 19:14:27.250  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 13
+04-27 19:14:27.264  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 13
+04-27 19:14:27.273  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 14
+04-27 19:14:27.281  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 14
+04-27 19:14:27.290  1549  1549 I vol.Events: writeEvent touch_level_changed STREAM_MUSIC 15
+04-27 19:14:27.308  1549  1894 I vol.Events: writeEvent level_changed STREAM_MUSIC 15
+04-27 19:14:27.568  1549  1549 I vol.Events: writeEvent touch_level_done STREAM_MUSIC 15
+04-27 19:14:27.835   531   531 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:28.362   623   657 D ThermalEngine: zone:0 sensor:xo-therm-adc temp:42228 trip:0 event:0
+04-27 19:14:28.362   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 42228 .
+04-27 19:14:28.362   623   670 I ThermalEngine: Sensor:xo-therm-adc:42228 mC
+04-27 19:14:28.362   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:14:28.363   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.
+04-27 19:14:30.571  1549  1549 I vol.Events: writeEvent dismiss_dialog timeout
+04-27 19:14:30.574  1549  1894 I vol.Events: writeEvent active_stream_changed UNKNOWN_STREAM_-1
+04-27 19:14:30.609   531   531 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:31.011   531   531 W SDM     : HWPrimary::PopulateDisplayAttributes: Driver doesn't report panel physical width and height - defaulting to 320dpi
+04-27 19:14:31.778   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:42108 trip:0 event:0
+04-27 19:14:31.780   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:39175 trip:0 event:0
+04-27 19:14:31.782   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:5154 trip:0 event:0
+04-27 19:14:32.208  1592  1592 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-27 19:14:32.212  1592  1592 W app_process: type=1400 audit(0.0:1420): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:32.212  1592  1592 I chatty  : uid=2000(shell) app_process identical 1 line
+04-27 19:14:32.215  1592  1592 W app_process: type=1400 audit(0.0:1422): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:32.216  1592  1592 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+04-27 19:14:32.216  1592  1592 I AndroidRuntime: Using default boot image
+04-27 19:14:32.216  1592  1592 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+04-27 19:14:32.216  1592  1592 I AndroidRuntime: Leaving lock profiling enabled
+04-27 19:14:32.217  1592  1592 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+04-27 19:14:32.226  1592  1592 W app_process: Could not reserve sentinel fault page
+04-27 19:14:32.326   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: bindService is called for service : com.google.android.gms/.chimera.PersistentDirectBootAwareApiService and for client com.google.android.gms.persistent
+04-27 19:14:32.327   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: total connections for service : com.google.android.gms/.chimera.PersistentDirectBootAwareApiServiceare :1
+04-27 19:14:32.327   541   578 I /vendor/bin/hw/vendor.qti.hardware.servicetracker@1.1-service: total connections for client : com.google.android.gms.persistentare :5
+04-27 19:14:32.402  1592  1592 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-27 19:14:32.428  1592  1592 I app_process: The ClassLoaderContext is a special shared library.
+04-27 19:14:32.473  1592  1592 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+04-27 19:14:32.493  1592  1592 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+04-27 19:14:32.500  1592  1592 D AndroidRuntime: Shutting down VM
+04-27 19:14:32.620  2085  2092 I .gms.persisten: JIT allocated 60KB for compiled code of bof bof.b(int)
+04-27 19:14:33.056  1263  2243 D WificondControl: Scan result ready event
+04-27 19:14:33.065  1263  1488 D WifiClientModeImpl: onResults: total 2 results
+04-27 19:14:26.239  1263  1263 I chatty  : uid=1000 system_server identical 6 lines
+04-27 19:14:33.066  1263  1336 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.net.wifi.SCAN_RESULTS flg=0x4000010 (has extras) } to com.jio.myjio/.jionet.receiver.WifiScanReceiver
+04-27 19:14:33.235  1611  1611 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-27 19:14:33.239  1611  1611 W app_process: type=1400 audit(0.0:1423): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:33.239  1611  1611 W app_process: type=1400 audit(0.0:1424): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:33.239  1611  1611 W app_process: type=1400 audit(0.0:1425): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:33.242  1611  1611 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+04-27 19:14:33.242  1611  1611 I AndroidRuntime: Using default boot image
+04-27 19:14:33.243  1611  1611 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+04-27 19:14:33.243  1611  1611 I AndroidRuntime: Leaving lock profiling enabled
+04-27 19:14:33.243  1611  1611 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+04-27 19:14:33.253  1611  1611 W app_process: Could not reserve sentinel fault page
+04-27 19:14:33.417  1611  1611 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-27 19:14:33.439  1611  1611 I app_process: The ClassLoaderContext is a special shared library.
+04-27 19:14:33.481  1611  1611 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+04-27 19:14:33.498  1611  1611 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+04-27 19:14:33.504  1611  1611 D AndroidRuntime: Shutting down VM
+04-27 19:14:34.111  1263  2243 E WifiService: Permission violation - getScanResults not allowed for uid=10056, packageName=com.jio.myjio, reason=java.lang.SecurityException: UID 10056 has no location permission
+04-27 19:14:34.362  1633  1633 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-27 19:14:34.369  1633  1633 W app_process: type=1400 audit(0.0:1426): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:34.369  1633  1633 W app_process: type=1400 audit(0.0:1427): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:34.369  1633  1633 W app_process: type=1400 audit(0.0:1428): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:34.370  1633  1633 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+04-27 19:14:34.370  1633  1633 I AndroidRuntime: Using default boot image
+04-27 19:14:34.371  1633  1633 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+04-27 19:14:34.371  1633  1633 I AndroidRuntime: Leaving lock profiling enabled
+04-27 19:14:34.371  1633  1633 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+04-27 19:14:34.381  1633  1633 W app_process: Could not reserve sentinel fault page
+04-27 19:14:34.545  1633  1633 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-27 19:14:34.567  1633  1633 I app_process: The ClassLoaderContext is a special shared library.
+04-27 19:14:34.609  1633  1633 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+04-27 19:14:34.627  1633  1633 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+04-27 19:14:34.632  1633  1633 D AndroidRuntime: Shutting down VM
+04-27 19:14:35.422  1650  1650 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-27 19:14:35.429  1650  1650 W app_process: type=1400 audit(0.0:1429): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:35.429  1650  1650 W app_process: type=1400 audit(0.0:1430): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:35.429  1650  1650 W app_process: type=1400 audit(0.0:1431): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=13331 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+04-27 19:14:35.430  1650  1650 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+04-27 19:14:35.430  1650  1650 I AndroidRuntime: Using default boot image
+04-27 19:14:35.431  1650  1650 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+04-27 19:14:35.431  1650  1650 I AndroidRuntime: Leaving lock profiling enabled
+04-27 19:14:35.431  1650  1650 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+04-27 19:14:35.441  1650  1650 W app_process: Could not reserve sentinel fault page
+04-27 19:14:35.604  1650  1650 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-27 19:14:35.627  1650  1650 I app_process: The ClassLoaderContext is a special shared library.
+04-27 19:14:35.669  1650  1650 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+04-27 19:14:35.686  1650  1650 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+04-27 19:14:35.691  1650  1650 D AndroidRuntime: Shutting down VM
+04-27 19:14:36.895   623   657 D ThermalEngine: zone:20 sensor:skin-therm-adc temp:4831 trip:0 event:0
+04-27 19:14:36.905   623   657 D ThermalEngine: zone:2 sensor:pa-therm0-adc temp:39230 trip:0 event:0
+04-27 19:14:36.906   623   657 D ThermalEngine: zone:1 sensor:xo-therm-buf-adc temp:42289 trip:0 event:0
+04-27 19:14:38.389   623   657 D ThermalEngine: zone:0 sensor:xo-therm-adc temp:42530 trip:0 event:0
+04-27 19:14:38.389   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Reading 42530 .
+04-27 19:14:38.389   623   670 I ThermalEngine: Sensor:xo-therm-adc:42530 mC
+04-27 19:14:38.389   623   670 D ThermalEngine: update_active_thresh: xo-therm-adc Active(1), Hi(1) 43000, Lo(1) 39000, desc(0) Interval(1) 2000
+04-27 19:14:38.389   623   670 D ThermalEngine: sensor_monitor: xo-therm-adc Sensor wait.

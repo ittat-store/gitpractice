@@ -1,0 +1,47 @@
+From 668d3978f9c47af92066d3d7a05ec237110dae1f Mon Sep 17 00:00:00 2001
+From: cheguri keerthi kumari <keerthikumari.cheguri@votarytech.com>
+Date: Tue, 18 May 2021 13:35:29 +0530
+Subject: [PATCH] Modified ro.product.manufacturer as Jio
+
+---
+ .../qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop   | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop b/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop
+index 519a781..be50807 100755
+--- a/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop
++++ b/LINUX/android/device/qcom/msm8909_512/JIOV_MSM8909_512/overrides.prop
+@@ -9,7 +9,7 @@ ro.fota.network_port=443
+ ro.product.name=F320B
+ ro.product.device=F320B
+ ro.product.board=msm8909
+-ro.product.manufacturer=BlueBank
++ro.product.manufacturer=Jio
+ #ro.fota.cu_ref=LF2403N-ABJIINA  #has been moved to features.mk
+  ro.fota.sw_ver=0108
+ 
+@@ -32,13 +32,13 @@ persist.data.iwlan.enable=true
+ #end by lishaodi
+ 
+ #lijun add for enable DC patch   from Mahesh Somashekaraiah single patch 2020.05.26
+-ro.fota.sw_ver=0107
+ ro.product.brand=LYF
+ ro.product.model=F320B
+-ro.bluebank.sw_base=ES_1.3.904.3
+-ro.bluebank.iver=0118080420
+-ro.build.software.version=LYF-F320B-002-01-07-080420-i
+-ro.build.version.incremental=LYF-F320B-002-01-07-080420-i
+-ro.build.display.id=LYF-F320B-002-01-07-080420-i
+-ro.product.version_tag=kaios_jpv_quoin_20200304_3
+-ro.product.base_version=MPSS.JO.3.1-00236-8909_GEN_PACK-1
++ro.bluebank.sw_base=Post-CS.1.3.921.1.363281.1
++ro.bluebank.iver=02DC10180521
++ro.build.software.version=LYF-F320B-002-02-DC10-180521
++ro.build.version.incremental=LYF-F320B-002-02-DC10-180521
++ro.build.display.id=LYF-F320B-002-02-DC10-180521
++ro.fota.sw_ver=002.02.DC10
++ro.product.version_tag=kaios_jpv_quoin_20210315_40_production
++ro.product.base_version=MPSS.JO.3.1-00294-8909_GEN_PACK-1
+-- 
+2.7.4
+

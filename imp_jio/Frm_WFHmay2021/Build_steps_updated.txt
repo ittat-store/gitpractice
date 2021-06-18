@@ -1,0 +1,15 @@
+F300B :::
+
+
+source build/envsetup.sh
+lunch
+make -j8
+./pack_all_sign.sh
+
+............................................
+F320B :::
+
+source scm/1_build_JIOV_MSM8909_512-userdebug-levs.sh
+source scm/2_pack_all_sign.sh
+
+...........................................

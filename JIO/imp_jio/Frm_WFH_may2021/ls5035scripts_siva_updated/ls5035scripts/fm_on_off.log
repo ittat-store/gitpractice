@@ -1,0 +1,1060 @@
+--------- beginning of crash
+04-30 19:35:07.549   982   982 E AndroidRuntime: FATAL EXCEPTION: main
+04-30 19:35:07.549   982   982 E AndroidRuntime: Process: com.android.calendar, PID: 982
+04-30 19:35:07.549   982   982 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'int[] android.appwidget.AppWidgetManager.getAppWidgetIds(android.content.ComponentName)' on a null object reference
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at com.android.calendar.widget.CalendarAppWidgetService$CalendarFactory.onLoadComplete(CalendarAppWidgetService.java:546)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at com.android.calendar.widget.CalendarAppWidgetService$CalendarFactory.onLoadComplete(CalendarAppWidgetService.java:113)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.content.Loader.deliverResult(Loader.java:157)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.content.CursorLoader.deliverResult(CursorLoader.java:116)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.content.CursorLoader.deliverResult(CursorLoader.java:46)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.content.AsyncTaskLoader.dispatchOnLoadComplete(AsyncTaskLoader.java:274)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.content.AsyncTaskLoader$LoadTask.onPostExecute(AsyncTaskLoader.java:97)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.os.AsyncTask.finish(AsyncTask.java:755)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.os.AsyncTask.access$900(AsyncTask.java:192)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.os.AsyncTask$InternalHandler.handleMessage(AsyncTask.java:772)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7397)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+04-30 19:35:07.549   982   982 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:935)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: FATAL EXCEPTION: main
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: Process: com.android.calendar, PID: 3329
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'int[] android.appwidget.AppWidgetManager.getAppWidgetIds(android.content.ComponentName)' on a null object reference
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at com.android.calendar.widget.CalendarAppWidgetService$CalendarFactory.onLoadComplete(CalendarAppWidgetService.java:546)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at com.android.calendar.widget.CalendarAppWidgetService$CalendarFactory.onLoadComplete(CalendarAppWidgetService.java:113)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.content.Loader.deliverResult(Loader.java:157)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.content.CursorLoader.deliverResult(CursorLoader.java:116)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.content.CursorLoader.deliverResult(CursorLoader.java:46)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.content.AsyncTaskLoader.dispatchOnLoadComplete(AsyncTaskLoader.java:274)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.content.AsyncTaskLoader$LoadTask.onPostExecute(AsyncTaskLoader.java:97)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.os.AsyncTask.finish(AsyncTask.java:755)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.os.AsyncTask.access$900(AsyncTask.java:192)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.os.AsyncTask$InternalHandler.handleMessage(AsyncTask.java:772)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7397)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+04-30 19:36:30.624  3329  3329 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:935)
+--------- beginning of system
+04-30 19:42:05.836  1063  1063 I chatty  : uid=1000 system_server expire 7 lines
+04-30 19:42:07.712  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:42:08.612  1063  1063 I chatty  : uid=1000 system_server expire 4 lines
+04-30 19:42:09.143  1063  1327 I chatty  : uid=1000(system) android.bg expire 2 lines
+04-30 19:42:09.156  1063  2344 I chatty  : uid=1000(system) Binder:1063_1D expire 3 lines
+04-30 19:42:09.348  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 1 line
+04-30 19:42:09.902  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 19:42:09.954  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 2 lines
+04-30 19:42:10.215  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 3 lines
+04-30 19:42:10.430  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 19 lines
+04-30 19:42:15.018  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 1 line
+04-30 19:42:15.180  1063  2719 I chatty  : uid=1000(system) Binder:1063_7 expire 2 lines
+04-30 19:42:15.765  1063  1546 I chatty  : uid=1000(system) AlarmManager expire 1 line
+04-30 19:42:15.973  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 2 lines
+04-30 19:42:16.036  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 10 lines
+04-30 19:42:16.101  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 19:42:16.302  2259  2259 E LoadedApk: Unable to instantiate appComponentFactory
+04-30 19:42:16.302  2259  2259 E LoadedApk: java.lang.ClassNotFoundException: Didn't find class "androidx.core.app.CoreComponentFactory" on path: DexPathList[[zip file "/system/app/Facebook/Facebook.apk"],nativeLibraryDirectories=[/system/app/Facebook/lib/arm, /system/app/Facebook/Facebook.apk!/lib/armeabi-v7a, /system/lib, /system/product/lib, /system/lib, /system/product/lib]]
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:196)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.LoadedApk.createAppFactory(LoadedApk.java:256)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.LoadedApk.createOrUpdateClassLoaderLocked(LoadedApk.java:855)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.LoadedApk.getClassLoader(LoadedApk.java:950)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.LoadedApk.getResources(LoadedApk.java:1188)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2462)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2454)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6353)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.ActivityThread.access$1300(ActivityThread.java:220)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1860)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.os.Looper.loop(Looper.java:214)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at android.app.ActivityThread.main(ActivityThread.java:7397)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at java.lang.reflect.Method.invoke(Native Method)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+04-30 19:42:16.302  2259  2259 E LoadedApk: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:935)
+04-30 19:42:17.050  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 1 line
+04-30 19:42:17.805  1063  1527 I chatty  : uid=1000(system) Binder:1063_3 expire 4 lines
+04-30 19:42:19.171  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 2 lines
+04-30 19:42:19.609  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 3 lines
+04-30 19:42:20.054  1063  3505 I chatty  : uid=1000(system) Binder:1063_12 expire 1 line
+04-30 19:42:20.064  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:42:20.432  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 2 lines
+04-30 19:42:20.767  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 2 lines
+04-30 19:42:21.888  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 1 line
+04-30 19:42:22.620  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:42:22.739  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 24 lines
+04-30 19:42:23.456  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 1 line
+04-30 19:42:24.124  1063  3511 I chatty  : uid=1000(system) Binder:1063_15 expire 2 lines
+04-30 19:42:25.904  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 1 line
+04-30 19:42:26.046  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 2 lines
+04-30 19:42:26.047  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 1 line
+04-30 19:42:26.047  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:42:27.046  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 1 line
+04-30 19:42:27.380  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 2 lines
+04-30 19:42:27.558  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:42:28.951  2419  2419 I android.hardware.wifi@1.0-service-lazy: Wifi HAL started
+04-30 19:42:29.569  2419  2419 I android.hardware.wifi@1.0-service-lazy: Adding interface handle for p2p0
+04-30 19:42:29.569  2419  2419 I android.hardware.wifi@1.0-service-lazy: Adding interface handle for wlan0
+04-30 19:42:29.569  2419  2419 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:42:29.570  2419  2419 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:42:29.580  2419  2419 I android.hardware.wifi@1.0-service-lazy: Configured chip in mode 0
+04-30 19:42:29.581  2419  2419 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:42:29.587  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 2 lines
+04-30 19:42:29.655   674   674 I wificond: setting base_wiphy_index_ to 0
+04-30 19:42:29.658   674   674 I wificond: create scanner for interface with index: 26
+04-30 19:42:29.662   674   674 I wificond: subscribe scan result for interface with index: 26
+04-30 19:42:29.668   674   674 E wificond: No Offload Service available
+04-30 19:42:29.668   674   674 I wificond: Offload HAL not supported 
+04-30 19:42:30.086  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 13 lines
+04-30 19:42:30.265  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 2 lines
+04-30 19:42:30.673   674   674 I wificond: Regulatory domain changed to country: IN
+04-30 19:42:30.676   674   674 I wificond: 2.4Ghz frequencies: 2412 2417 2422 2427 2432 2437 2442 2447 2452 2457 2462 2467 2472
+04-30 19:42:30.676   674   674 I wificond: 5Ghz non-DFS frequencies:
+04-30 19:42:30.676   674   674 I wificond: 5Ghz DFS frequencies:
+04-30 19:42:30.841  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:42:31.466   674   674 I wificond: wifi generation capability mask: 5
+04-30 19:42:32.844  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 10 lines
+04-30 19:42:32.919  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 3 lines
+04-30 19:42:33.127  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:42:33.446  1063  2719 I chatty  : uid=1000(system) Binder:1063_7 expire 3 lines
+04-30 19:42:33.904   674   674 W wificond: No pno scan started
+04-30 19:42:33.905   674   674 W wificond: Scheduled scan is not running!
+04-30 19:42:33.907  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:42:33.919   674   674 W wificond: No pno scan started
+04-30 19:42:33.922   674   674 W wificond: Scheduled scan is not running!
+04-30 19:42:34.013  2419  2419 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:42:34.133  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 2 lines
+04-30 19:42:34.166   674   674 I wificond: Unsubscribe scan result for interface with index: 26
+04-30 19:42:34.304  2419  3211 I android.hardware.wifi@1.0-service-lazy: Legacy HAL stop complete callback received
+04-30 19:42:34.360  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 9 lines
+04-30 19:42:34.380  1063  1063 I chatty  : uid=1000 system_server expire 3 lines
+04-30 19:42:34.585  3293   731 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-30 19:42:34.645  3293  3926 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1045 android.content.ContextWrapper.sendBroadcast:448 com.redbend.swm_common.GcmHandler.genericHandler:84 com.redbend.app.EventHandler.handle:70 com.redbend.app.FlowManager.handle:412 
+04-30 19:42:34.711  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 android.content.ContextWrapper.startService:669 com.redbend.swm_common.GcmReceiver.registerToNotificationService:336 com.redbend.swm_common.GcmReceiver.onReceive:152 
+04-30 19:42:34.898  3293   731 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-30 19:42:35.171  3293   731 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-30 19:42:35.177  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 3 lines
+04-30 19:42:35.217  2419  2419 I android.hardware.wifi@1.0-service-lazy: Wifi HAL stopped
+04-30 19:42:35.237  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 1 line
+04-30 19:42:35.253  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService:102 com.redbend.app.SmmClient.sendData:46 com.redbend.app.SmmClient.sendEventToSmmService:23 
+04-30 19:42:35.304  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 2 lines
+04-30 19:42:35.306  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.app.SmmService.onStartCommand:484 
+04-30 19:42:35.451  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 10 lines
+04-30 19:42:36.097  3293   731 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-30 19:42:36.418  1063  3612 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:42:36.563  3293   731 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-30 19:42:36.583  3293  3926 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1045 android.content.ContextWrapper.sendBroadcast:448 com.redbend.client.IntentBroadcaster.genericHandler:70 com.redbend.app.EventHandler.handle:70 com.redbend.app.FlowManager.handle:412 
+04-30 19:42:36.709  3293   731 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-30 19:42:38.105  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:42:41.228  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 1 line
+04-30 19:42:43.975  3755  3755 E LoadedApk: Unable to instantiate appComponentFactory
+04-30 19:42:43.975  3755  3755 E LoadedApk: java.lang.ClassNotFoundException: Didn't find class "androidx.core.app.CoreComponentFactory" on path: DexPathList[[zip file "/system/app/Facebook/Facebook.apk"],nativeLibraryDirectories=[/system/app/Facebook/lib/arm, /system/app/Facebook/Facebook.apk!/lib/armeabi-v7a, /system/lib, /system/product/lib, /system/lib, /system/product/lib]]
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:196)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.LoadedApk.createAppFactory(LoadedApk.java:256)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.LoadedApk.createOrUpdateClassLoaderLocked(LoadedApk.java:855)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.LoadedApk.getClassLoader(LoadedApk.java:950)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.LoadedApk.getResources(LoadedApk.java:1188)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2462)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2454)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6353)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.ActivityThread.access$1300(ActivityThread.java:220)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1860)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.os.Looper.loop(Looper.java:214)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at android.app.ActivityThread.main(ActivityThread.java:7397)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at java.lang.reflect.Method.invoke(Native Method)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+04-30 19:42:43.975  3755  3755 E LoadedApk: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:935)
+04-30 19:42:44.241  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-30 19:42:44.434  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ConnectivityStateChangeReceiver$DataChange.sendConnectedEvent:66 
+04-30 19:42:44.843  3293   731 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.EventIntentService.recvEvent:135 com.redbend.client.BasicService.recvEvent:232 <bottom of call stack> 
+04-30 19:42:45.092  1063  3505 I chatty  : uid=1000(system) Binder:1063_12 expire 1 line
+04-30 19:42:45.845  1063  2719 I chatty  : uid=1000(system) Binder:1063_7 expire 5 lines
+04-30 19:42:46.796  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 1 line
+04-30 19:42:50.771  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 1 line
+04-30 19:42:53.924  1063  1063 I chatty  : uid=1000 system_server expire 6 lines
+04-30 19:42:59.161  2419  2419 I android.hardware.wifi@1.0-service-lazy: Process has 0 (of 1 available) client(s) in use after notification android.hardware.wifi@1.3::IWifi has clients: 0
+04-30 19:42:59.161  2419  2419 I android.hardware.wifi@1.0-service-lazy: Trying to exit HAL. No clients in use for any service in process.
+04-30 19:42:59.162  2419  2419 I android.hardware.wifi@1.0-service-lazy: Unregistered all clients and exiting
+04-30 19:43:03.505  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 4 lines
+04-30 19:43:03.612  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 3 lines
+04-30 19:43:05.054  1063  1318 I chatty  : uid=1000(system) android.ui expire 3 lines
+04-30 19:43:10.010  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 11 lines
+04-30 19:43:15.283  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:43:17.308  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 19:43:18.557  1063  1317 I chatty  : uid=1000(system) android.fg expire 1 line
+04-30 19:43:18.859  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:43:19.193  1063  1320 I chatty  : uid=1000(system) android.display expire 3 lines
+04-30 19:43:26.066  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 8 lines
+04-30 19:43:27.011  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 5 lines
+04-30 19:43:28.479  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:43:29.195  1063  1063 I chatty  : uid=1000 system_server expire 18 lines
+04-30 19:43:29.422  1427  1427 I TelecomFramework: UserCallIntentProcessor: sendIntentToDestination: trampoline to Telecom.: UCA.oC@AAA
+04-30 19:43:29.456  1427  1427 I TelecomFramework: UserCallActivity: onCreate done
+04-30 19:43:29.620  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 12 lines
+04-30 19:43:29.627  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 19:43:29.630  1063  1063 I chatty  : uid=1000 system_server expire 10 lines
+04-30 19:43:29.658  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 19:43:29.918  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 2 lines
+04-30 19:43:30.023  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 1 line
+04-30 19:43:30.042  1063  2719 I chatty  : uid=1000(system) Binder:1063_7 expire 1 line
+04-30 19:43:30.048  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 19:43:30.331  1063  1063 I chatty  : uid=1000 system_server expire 12 lines
+04-30 19:43:30.446  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 1 line
+04-30 19:43:30.475  1499  1499 D ActivityThread: Loading provider contacts;com.android.contacts: com.android.providers.contacts.ContactsProvider2
+04-30 19:43:32.219  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 5 lines
+04-30 19:43:32.858  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:43:33.634  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 2 lines
+04-30 19:43:34.468  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 19:43:34.765  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:43:34.766  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-30 19:43:35.111  1063  1063 I chatty  : uid=1000 system_server expire 18 lines
+04-30 19:43:35.321  1063  2861 I chatty  : uid=1000(system) ConnectionSvrFo expire 1 line
+04-30 19:43:35.432  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 1 line
+04-30 19:43:35.436  2806  2806 I Telephony: TelephonyConnectionService: onCreateOutgoingConnection, request: ConnectionRequest xxxxxxxxxxxxxxxxxxx Bundle[org.codeaurora.extra.CALL_DOMAIN=0, android.telecom.extra.START_CALL_WITH_VIDEO_STATE=0, android.telecom.extra.CALL_TELECOM_ROUTING_END_TIME_MILLIS=773834, android.telecom.extra.CALL_TELECOM_ROUTING_START_TIME_MILLIS=773834, ]: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-AQE
+04-30 19:43:35.500  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-AQE
+04-30 19:43:35.501  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-AQE
+04-30 19:43:35.909  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-AQE
+04-30 19:43:36.051  2806  2806 I chatty  : uid=1001(radio) com.android.phone identical 2 lines
+04-30 19:43:36.058  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-AQE
+04-30 19:43:36.072  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 12 lines
+04-30 19:43:36.172  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-AQE
+04-30 19:43:36.176  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 20 lines
+04-30 19:43:36.193  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 19:43:36.245  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:36.266  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 19:43:36.267  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:36.276  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:36.314  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:43:36.319  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:36.346  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 10 lines
+04-30 19:43:36.351  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 5 lines
+04-30 19:43:36.353  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 19:43:36.361  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 8 lines
+04-30 19:43:36.427  2806  2806 I Telephony: TelephonyConnectionService: notifyCreateConnectionComplete TC@1_1: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-AQE
+04-30 19:43:36.429  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-AQE
+04-30 19:43:36.437  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:36.479  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 2 lines
+04-30 19:43:36.876  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:36.928  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 19:43:36.953  1063  3312 I chatty  : uid=1000(system) Binder:1063_C expire 3 lines
+04-30 19:43:36.985  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 2 lines
+04-30 19:43:37.056  1063  1903 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:43:37.154  1063  1063 I chatty  : uid=1000 system_server expire 13 lines
+04-30 19:43:37.155  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 19:43:38.825  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 6 lines
+04-30 19:43:39.074  1855  1957 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 19:43:39.253  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:39.633  1976  1976 I TelecomFramework: UserCallIntentProcessor: sendIntentToDestination: trampoline to Telecom.: UCA.oC@AAA
+04-30 19:43:39.651  1976  1976 I TelecomFramework: UserCallActivity: onCreate done
+04-30 19:43:39.757  2806  2806 I Telephony: : createConnectionFailed TC@2: (TSI.hCI->CM.fOCP->CM.sOCPA->CM.dSMCP)->CS.crCoF->H.CS.crCoF@E-AZI
+04-30 19:43:39.757  2806  2806 I Telephony: TelephonyConnectionService: createConnectionFailed TC@2: (TSI.hCI->CM.fOCP->CM.sOCPA->CM.dSMCP)->CS.crCoF->H.CS.crCoF@E-AZI
+04-30 19:43:39.806  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:43:39.960  1063  1063 I chatty  : uid=1000 system_server expire 5 lines
+04-30 19:43:40.455  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:40.456  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 3 lines
+04-30 19:43:40.473  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 2 lines
+04-30 19:43:40.478  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:40.478  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 1 line
+04-30 19:43:40.519  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 18 lines
+04-30 19:43:40.538  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 19:43:40.545  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 19:43:40.558  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 19:43:40.759  1063  3511 I chatty  : uid=1000(system) Binder:1063_15 expire 2 lines
+04-30 19:43:41.033  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 2 lines
+04-30 19:43:41.040  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 14 lines
+04-30 19:43:41.147  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 19:43:41.153  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 19:43:41.255  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:43:44.112  1063  3312 I chatty  : uid=1000(system) Binder:1063_C expire 2 lines
+04-30 19:43:44.206  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 1 line
+04-30 19:43:44.609  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 1 line
+04-30 19:43:46.096  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 23 lines
+04-30 19:43:46.143  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 5 lines
+04-30 19:43:46.150  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:46.155  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:46.321  2806  1794 I Telephony: : onDisconnect: callId=TC@1_1, cause=LOCAL
+04-30 19:43:46.322  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:46.331  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:46.332  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:46.346  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 19:43:46.365  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:46.415  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:43:46.440  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 1 line
+04-30 19:43:46.539  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 7 lines
+04-30 19:43:46.539  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 1 line
+04-30 19:43:46.543  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 3 lines
+04-30 19:43:46.566  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 19:43:46.567  1063  2210 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:43:46.589  1063  1063 I chatty  : uid=1000 system_server expire 13 lines
+04-30 19:43:46.881  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:47.082  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 4 lines
+04-30 19:43:47.275  2240  2240 I TelecomFramework: UserCallIntentProcessor: sendIntentToDestination: trampoline to Telecom.: UCA.oC@AAA
+04-30 19:43:47.295  2240  2240 I TelecomFramework: UserCallActivity: onCreate done
+04-30 19:43:47.387  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:43:47.475  1063  1063 I chatty  : uid=1000 system_server expire 21 lines
+04-30 19:43:47.568  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 19:43:47.569  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 7 lines
+04-30 19:43:47.660  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:47.821  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 4 lines
+04-30 19:43:47.828  1063  1063 I chatty  : uid=1000 system_server expire 8 lines
+04-30 19:43:47.941  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 19:43:48.495  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 19:43:48.652  2192  2315 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 19:43:49.965  1063  1222 I chatty  : uid=1000(system) Binder:1063_1 expire 3 lines
+04-30 19:43:49.982  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 18 lines
+04-30 19:43:50.009  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 1 line
+04-30 19:43:50.009  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 13 lines
+04-30 19:43:50.204  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 1 line
+04-30 19:43:50.335  1063  1063 I chatty  : uid=1000 system_server expire 15 lines
+04-30 19:43:50.370  1063  2861 I chatty  : uid=1000(system) ConnectionSvrFo expire 1 line
+04-30 19:43:50.508  1063  1527 I chatty  : uid=1000(system) Binder:1063_3 expire 2 lines
+04-30 19:43:50.723  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 1 line
+04-30 19:43:50.723  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:43:50.760  2806  2806 I Telephony: TelephonyConnectionService: onCreateOutgoingConnection, request: ConnectionRequest xxxxxxxxxxxxxxxxxxx Bundle[org.codeaurora.extra.CALL_DOMAIN=0, android.telecom.extra.START_CALL_WITH_VIDEO_STATE=0, android.telecom.extra.CALL_TELECOM_ROUTING_END_TIME_MILLIS=791794, android.telecom.extra.CALL_TELECOM_ROUTING_START_TIME_MILLIS=791794, ]: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-Alw
+04-30 19:43:50.809  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-Alw
+04-30 19:43:50.809  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-Alw
+04-30 19:43:51.159  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:51.227  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-Alw
+04-30 19:43:51.404  2806  2806 I chatty  : uid=1001(radio) com.android.phone identical 3 lines
+04-30 19:43:51.413  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-Alw
+04-30 19:43:51.492  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 8 lines
+04-30 19:43:51.557  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-Alw
+04-30 19:43:51.606  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 19:43:51.617  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:51.626  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:51.628  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 18 lines
+04-30 19:43:51.654  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:51.686  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 3 lines
+04-30 19:43:51.706  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:43:51.719  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 8 lines
+04-30 19:43:51.723  2806  2806 I Telephony: TelephonyConnectionService: notifyCreateConnectionComplete TC@3_1: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-Alw
+04-30 19:43:51.729  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 2 lines
+04-30 19:43:51.729  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-Alw
+04-30 19:43:51.764  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 19:43:51.839  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 5 lines
+04-30 19:43:52.112  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:52.118  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 3 lines
+04-30 19:43:52.122  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 6 lines
+04-30 19:43:52.124  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 19:43:52.127  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 19:43:52.208  1063  2834 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:43:55.048  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 19:43:55.634  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:43:56.642  1063  1318 I chatty  : uid=1000(system) android.ui expire 1 line
+04-30 19:43:56.752  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:43:57.098  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 19:43:57.150  1063  2778 I chatty  : uid=1000(system) Binder:1063_8 expire 1 line
+04-30 19:43:57.460  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:57.513  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:43:57.524  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 10 lines
+04-30 19:43:57.568  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 13 lines
+04-30 19:43:57.572  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 19:43:57.578  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 19:43:57.584  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 19:43:57.694  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 4 lines
+04-30 19:43:58.264  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 2 lines
+04-30 19:43:58.527  2740  2987 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 19:43:59.846  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:43:59.865  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 15 lines
+04-30 19:43:59.903  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 19:44:01.343  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 3 lines
+04-30 19:44:01.453  1063  2778 I chatty  : uid=1000(system) Binder:1063_8 expire 1 line
+04-30 19:44:01.455  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 19:44:01.978  1063  1319 I chatty  : uid=1000(system) android.io expire 2 lines
+04-30 19:44:02.473  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 2 lines
+04-30 19:44:02.670  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 4 lines
+04-30 19:44:10.286  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 19:44:11.596  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 2 lines
+04-30 19:44:14.542  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 20 lines
+04-30 19:44:14.593  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:44:14.602  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 7 lines
+04-30 19:44:14.617  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:44:14.722  2806  2603 I Telephony: : onDisconnect: callId=TC@3_1, cause=LOCAL
+04-30 19:44:14.734  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:44:14.745  2806  2806 I chatty  : uid=1001(radio) com.android.phone identical 1 line
+04-30 19:44:14.745  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 19:44:14.807  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:44:14.821  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 19:44:14.876  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:44:14.899  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 14 lines
+04-30 19:44:14.902  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 5 lines
+04-30 19:44:14.902  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 2 lines
+04-30 19:44:14.905  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 19:44:14.906  1063  3326 I chatty  : uid=1000(system) ReferenceQueueD expire 1 line
+04-30 19:44:14.940  1063  1063 I chatty  : uid=1000 system_server expire 12 lines
+04-30 19:44:16.617  3319  3422 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 19:44:17.542  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 1 line
+04-30 19:44:17.554  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 15 lines
+04-30 19:44:17.563  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 16 lines
+04-30 19:44:19.420  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:44:20.185  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 1 line
+04-30 19:44:20.186  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 19:44:20.207  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:44:20.347  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 1 line
+04-30 19:44:23.652  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 4 lines
+04-30 19:44:25.590  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 2 lines
+04-30 19:44:27.621  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 15 lines
+04-30 19:44:28.062  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 3 lines
+04-30 19:44:36.531  1063  3511 I chatty  : uid=1000(system) Binder:1063_15 expire 1 line
+04-30 19:44:36.834  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:44:41.292  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 1 line
+04-30 19:44:41.983  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 3 lines
+04-30 19:44:42.201  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 2 lines
+04-30 19:44:48.208  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 4 lines
+04-30 19:44:48.342  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-30 19:44:51.261  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:44:51.542  1063  2778 I chatty  : uid=1000(system) Binder:1063_8 expire 3 lines
+04-30 19:45:25.479  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 1 line
+04-30 19:45:41.965  1063  1546 I chatty  : uid=1000(system) AlarmManager expire 1 line
+04-30 19:45:43.363  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 3 lines
+04-30 19:45:43.899  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 1 line
+04-30 19:45:43.900  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 2 lines
+04-30 19:45:43.900  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 4 lines
+04-30 19:45:44.825  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 11 lines
+04-30 19:45:50.919  1063  2719 I chatty  : uid=1000(system) Binder:1063_7 expire 1 line
+04-30 19:46:03.074  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 5 lines
+04-30 19:46:22.859  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 1 line
+04-30 19:46:42.410  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:46:42.565  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 19:46:42.569  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:46:45.256  1063  1527 I chatty  : uid=1000(system) Binder:1063_3 expire 1 line
+04-30 19:46:45.850  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:46:45.871  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 2 lines
+04-30 19:46:47.372  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:46:56.868  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 3 lines
+04-30 19:47:04.885  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:47:07.895  1063  1317 I chatty  : uid=1000(system) android.fg expire 1 line
+04-30 19:47:07.897  1063  1318 I chatty  : uid=1000(system) android.ui expire 1 line
+04-30 19:47:08.028  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:47:08.414  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:47:08.945  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:47:09.070  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:47:13.979  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:47:16.021  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 19:47:16.157  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 11 lines
+04-30 19:47:24.750  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 2 lines
+04-30 19:47:39.280  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 1 line
+04-30 19:47:46.685  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 1 line
+04-30 19:47:47.075  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 5 lines
+04-30 19:47:47.176  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 2 lines
+04-30 19:48:00.898  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 8 lines
+04-30 19:48:07.904  1063  1063 I chatty  : uid=1000 system_server expire 2 lines
+04-30 19:48:07.950  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:48:07.997  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:48:09.275  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:48:11.702  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 3 lines
+04-30 19:48:11.902  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 1 line
+04-30 19:48:48.589  2174  2174 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@a325a51
+04-30 19:48:48.696  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 1 line
+04-30 19:49:49.374  2294  2294 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@dc6a378
+04-30 19:49:49.396  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:49:49.450  1063  3505 I chatty  : uid=1000(system) Binder:1063_12 expire 2 lines
+04-30 19:49:55.588  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:49:55.619  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 19:49:55.650  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:49:55.736  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:49:55.743  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 4 lines
+04-30 19:49:55.767  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:49:55.787  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:49:55.806  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:49:55.843  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 13 lines
+04-30 19:49:55.903  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:49:55.935  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 19:49:56.190  1063  3511 I chatty  : uid=1000(system) Binder:1063_15 expire 1 line
+04-30 19:49:56.193  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:49:57.301  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:50:04.133  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:50:14.144  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 1 line
+04-30 19:50:15.114  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 2 lines
+04-30 19:50:15.284  1063  1047 I chatty  : uid=1000(system) Binder:1063_17 expire 1 line
+04-30 19:50:15.284  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 19:50:48.736  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 10 lines
+04-30 19:50:49.080  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:50:49.138  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 19:50:49.199  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 2 lines
+04-30 19:50:50.004  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 2 lines
+04-30 19:50:50.323  2811  2811 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@256a119
+04-30 19:51:00.751  1063  1063 I chatty  : uid=1000 system_server expire 5 lines
+04-30 19:51:00.799  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 2 lines
+04-30 19:51:00.825  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:51:02.166  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:51:12.111  1063  1327 I chatty  : uid=1000(system) android.bg expire 2 lines
+04-30 19:51:32.015  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:51:32.055  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 19:51:32.062  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:51:32.159  1063  1527 I chatty  : uid=1000(system) Binder:1063_3 expire 1 line
+04-30 19:51:32.194  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 19:51:32.247  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 4 lines
+04-30 19:51:32.526  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:51:32.529  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 14 lines
+04-30 19:51:32.667  1063  1317 I chatty  : uid=1000(system) android.fg expire 3 lines
+04-30 19:51:32.709  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 2 lines
+04-30 19:51:34.129  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 3 lines
+04-30 19:51:34.168  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:51:34.512  3141  3141 E LoadedApk: Unable to instantiate appComponentFactory
+04-30 19:51:34.512  3141  3141 E LoadedApk: java.lang.ClassNotFoundException: Didn't find class "androidx.core.app.CoreComponentFactory" on path: DexPathList[[zip file "/system/app/Facebook/Facebook.apk"],nativeLibraryDirectories=[/system/app/Facebook/lib/arm, /system/app/Facebook/Facebook.apk!/lib/armeabi-v7a, /system/lib, /system/product/lib, /system/lib, /system/product/lib]]
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:196)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.LoadedApk.createAppFactory(LoadedApk.java:256)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.LoadedApk.createOrUpdateClassLoaderLocked(LoadedApk.java:855)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.LoadedApk.getClassLoader(LoadedApk.java:950)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.LoadedApk.getResources(LoadedApk.java:1188)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2462)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2454)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6353)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.ActivityThread.access$1300(ActivityThread.java:220)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1860)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.os.Looper.loop(Looper.java:214)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at android.app.ActivityThread.main(ActivityThread.java:7397)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at java.lang.reflect.Method.invoke(Native Method)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+04-30 19:51:34.512  3141  3141 E LoadedApk: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:935)
+04-30 19:51:35.107  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 1 line
+04-30 19:51:35.524  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 2 lines
+04-30 19:51:47.339  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:51:51.965  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:51:52.036  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 4 lines
+04-30 19:51:54.355  1063  1527 I chatty  : uid=1000(system) Binder:1063_3 expire 4 lines
+04-30 19:51:55.258  1063  1546 I chatty  : uid=1000(system) AlarmManager expire 1 line
+04-30 19:51:58.441  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 1 line
+04-30 19:52:03.947  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 1 line
+04-30 19:52:03.947  1063  1047 I chatty  : uid=1000(system) Binder:1063_17 expire 3 lines
+04-30 19:52:03.948  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 5 lines
+04-30 19:52:04.414  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 3 lines
+04-30 19:52:07.342  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 9 lines
+04-30 19:52:07.516  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 1 line
+04-30 19:52:25.166  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 8 lines
+04-30 19:52:29.155  1063  2344 I chatty  : uid=1000(system) Binder:1063_1D expire 2 lines
+04-30 19:52:37.173  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:52:37.199  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:52:37.249  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:52:38.616  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:52:39.908  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 2 lines
+04-30 19:52:39.963  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 5 lines
+04-30 19:53:10.579  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 1 line
+04-30 19:53:11.347  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 5 lines
+04-30 19:53:12.840  1063   479 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:53:14.848  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 19:53:20.757  1063  1063 I chatty  : uid=1000 system_server expire 2 lines
+04-30 19:53:22.164  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 1 line
+04-30 19:53:40.546  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 9 lines
+04-30 19:53:40.762  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 2 lines
+04-30 19:53:46.901  1063  1047 I chatty  : uid=1000(system) Binder:1063_17 expire 6 lines
+04-30 19:53:52.307  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:53:56.640  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:53:56.674  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 19:53:56.697  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:53:56.774  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 5 lines
+04-30 19:53:56.780  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:53:56.804  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:53:56.844  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:53:56.885  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:53:57.113  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:53:57.161  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 2 lines
+04-30 19:53:57.162  1063  1317 I chatty  : uid=1000(system) android.fg expire 3 lines
+04-30 19:53:58.351  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:53:58.373  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:54:05.202  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 2 lines
+04-30 19:54:05.259  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 4 lines
+04-30 19:54:16.942  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 19:54:17.614  1063  1047 I chatty  : uid=1000(system) Binder:1063_17 expire 3 lines
+04-30 19:54:28.302  1063  3312 I chatty  : uid=1000(system) Binder:1063_C expire 1 line
+04-30 19:54:28.302  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 1 line
+04-30 19:54:49.775  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 8 lines
+04-30 19:54:52.980  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 4 lines
+04-30 19:54:53.669  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 2 lines
+04-30 19:54:59.039  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 2 lines
+04-30 19:55:01.781  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:55:01.792  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:55:01.822  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:55:29.008  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 10 lines
+04-30 19:55:29.048  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 4 lines
+04-30 19:55:29.760  1063  2344 I chatty  : uid=1000(system) Binder:1063_1D expire 2 lines
+04-30 19:55:33.069  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:55:33.096  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 19:55:33.100  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:55:33.185  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:55:33.187  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 5 lines
+04-30 19:55:33.218  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:55:33.247  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:55:33.302  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:55:33.531  1063  1317 I chatty  : uid=1000(system) android.fg expire 3 lines
+04-30 19:55:34.692  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:55:35.058  1063  1047 I chatty  : uid=1000(system) Binder:1063_17 expire 4 lines
+04-30 19:55:35.095  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 19:55:40.537  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 1 line
+04-30 19:55:41.495  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 3 lines
+04-30 19:55:47.341  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:55:54.131  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 19:55:54.533  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:55:54.582  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 1 line
+04-30 19:55:54.582  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 3 lines
+04-30 19:56:01.827  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 19:56:05.933  1063  1047 I chatty  : uid=1000(system) Binder:1063_17 expire 1 line
+04-30 19:56:11.247  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 2 lines
+04-30 19:56:16.567  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 3 lines
+04-30 19:56:26.191  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 8 lines
+04-30 19:56:38.192  1063  1063 I chatty  : uid=1000 system_server expire 2 lines
+04-30 19:56:38.204  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:56:38.290  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:56:39.642  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:56:41.464  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 2 lines
+04-30 19:56:47.294  1063  3511 I chatty  : uid=1000(system) Binder:1063_15 expire 3 lines
+04-30 19:56:52.690  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 2 lines
+04-30 19:56:52.691  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 19:56:56.571  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 9 lines
+04-30 19:56:56.786  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 2 lines
+04-30 19:56:57.298  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 1 line
+04-30 19:57:09.436  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:57:09.456  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 19:57:09.493  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:57:09.553  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 3 lines
+04-30 19:57:09.554  1063  1063 I chatty  : uid=1000 system_server expire 5 lines
+04-30 19:57:09.561  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 4 lines
+04-30 19:57:09.570  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:57:09.596  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:57:09.624  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:57:09.930  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:57:10.015  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 3 lines
+04-30 19:57:10.020  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:57:11.448  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:57:33.487  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:57:37.736  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:57:37.737  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 1 line
+04-30 19:57:37.737  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 4 lines
+04-30 19:57:47.340  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:58:02.339  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:58:02.381  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 3 lines
+04-30 19:58:02.554  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 8 lines
+04-30 19:58:08.395  1063  2719 I chatty  : uid=1000(system) Binder:1063_7 expire 6 lines
+04-30 19:58:12.667  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 2 lines
+04-30 19:58:14.572  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 19:58:14.590  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:58:14.648  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:58:14.790  1063  3194 I chatty  : uid=1000(system) Runtime worker expire 1 line
+04-30 19:58:16.289  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 19:58:16.798  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 19:58:17.524  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 5 lines
+04-30 19:58:18.254  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 1 line
+04-30 19:58:18.255  1063  1063 I chatty  : uid=1000 system_server expire 9 lines
+04-30 19:58:18.262  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 5 lines
+04-30 19:58:18.273  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:58:18.298  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:58:18.343  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:58:18.606  1063  2778 I chatty  : uid=1000(system) Binder:1063_8 expire 3 lines
+04-30 19:58:18.644  1063  1317 I chatty  : uid=1000(system) android.fg expire 6 lines
+04-30 19:58:18.670  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:58:18.921  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 19:58:20.006  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 19:58:20.305  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 19:58:23.656  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 2 lines
+04-30 19:58:31.778  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 5 lines
+04-30 19:58:38.426  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-30 19:58:39.000  1063  1063 I chatty  : uid=1000 system_server expire 3 lines
+04-30 19:58:39.016  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 22 lines
+04-30 19:58:39.212  3702  3702 I android.hardware.wifi@1.0-service-lazy: Wifi Hal is booting up...
+04-30 19:58:39.213  3702  3702 I android.hardware.wifi@1.0-service-lazy: Registering HAL: android.hardware.wifi@1.3::IWifi with name: default
+04-30 19:58:39.220  3702  3702 I ServiceManagement: Registered android.hardware.wifi@1.3::IWifi/default (start delay of 186ms)
+04-30 19:58:40.180   674   674 I wificond: Regulatory domain changed
+04-30 19:58:40.197   674   674 E wificond: Failed to find expected wiphy info from NL80211_CMD_GET_WIPHY responses
+04-30 19:58:40.197   674   674 I wificond: 2.4Ghz frequencies:
+04-30 19:58:40.197   674   674 I wificond: 5Ghz non-DFS frequencies:
+04-30 19:58:40.197   674   674 I wificond: 5Ghz DFS frequencies:
+04-30 19:58:40.211  3702  3702 I android.hardware.wifi@1.0-service-lazy: Wifi HAL started
+04-30 19:58:40.560  3702  3702 I android.hardware.wifi@1.0-service-lazy: Adding interface handle for p2p0
+04-30 19:58:40.560  3702  3702 I android.hardware.wifi@1.0-service-lazy: Adding interface handle for wlan0
+04-30 19:58:40.560  3702  3702 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:58:40.561  3702  3702 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:58:40.566  3702  3702 I android.hardware.wifi@1.0-service-lazy: Configured chip in mode 0
+04-30 19:58:40.567  3702  3702 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:58:40.593   674   674 I wificond: setting base_wiphy_index_ to 1
+04-30 19:58:40.596   674   674 I wificond: create scanner for interface with index: 28
+04-30 19:58:40.596   674   674 I wificond: subscribe scan result for interface with index: 28
+04-30 19:58:40.600   674   674 E wificond: No Offload Service available
+04-30 19:58:40.600   674   674 I wificond: Offload HAL not supported 
+04-30 19:58:40.941  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 19:58:44.151  3702  3702 I android.hardware.wifi@1.0-service-lazy: Process has 1 (of 1 available) client(s) in use after notification android.hardware.wifi@1.3::IWifi has clients: 1
+04-30 19:58:45.201  1063  2778 I chatty  : uid=1000(system) Binder:1063_8 expire 2 lines
+04-30 19:58:45.391   674   674 W wificond: No pno scan started
+04-30 19:58:45.391   674   674 W wificond: Scheduled scan is not running!
+04-30 19:58:45.394   674   674 W wificond: No pno scan started
+04-30 19:58:45.394   674   674 W wificond: Scheduled scan is not running!
+04-30 19:58:45.398  3702  3702 W android.hardware.wifi@1.0-service-lazy: No active wlan interfaces in use! Using default
+04-30 19:58:45.500   674   674 I wificond: Unsubscribe scan result for interface with index: 28
+04-30 19:58:45.610  3702  3840 I android.hardware.wifi@1.0-service-lazy: Legacy HAL stop complete callback received
+04-30 19:58:46.426  3702  3702 I android.hardware.wifi@1.0-service-lazy: Wifi HAL stopped
+04-30 19:58:50.623  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 3 lines
+04-30 19:58:50.690  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 1 line
+04-30 19:58:50.690  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:59:12.877  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 10 lines
+04-30 19:59:15.284  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 2 lines
+04-30 19:59:15.509  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 19:59:15.770  1063  1063 I chatty  : uid=1000 system_server expire 6 lines
+04-30 19:59:16.234  1063  3511 I chatty  : uid=1000(system) Binder:1063_15 expire 2 lines
+04-30 19:59:19.883  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 2 lines
+04-30 19:59:19.921  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:59:21.298  1063  1317 I chatty  : uid=1000(system) android.fg expire 3 lines
+04-30 19:59:21.651  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 1 line
+04-30 19:59:21.726  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:59:23.291  1063  1551 I chatty  : uid=1000(system) InputReader expire 1 line
+04-30 19:59:23.652  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 19:59:23.714  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:59:23.847  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 3 lines
+04-30 19:59:23.960  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 19:59:23.972  1063  3312 I chatty  : uid=1000(system) Binder:1063_C expire 1 line
+04-30 19:59:23.972  1063  1317 I chatty  : uid=1000(system) android.fg expire 4 lines
+04-30 19:59:25.594  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 19:59:25.623  1063  1319 I chatty  : uid=1000(system) android.io expire 2 lines
+04-30 19:59:26.076  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 2 lines
+04-30 19:59:26.284  1063  1063 I chatty  : uid=1000 system_server expire 3 lines
+04-30 19:59:27.656  1063  1550 I chatty  : uid=1000(system) InputDispatcher expire 1 line
+04-30 19:59:32.145  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 8 lines
+04-30 19:59:32.503  1063  3411 I chatty  : uid=1000(system) Binder:1063_E expire 1 line
+04-30 19:59:32.504  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:59:34.089  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:59:34.131  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:59:37.785  1063  1318 I chatty  : uid=1000(system) android.ui expire 2 lines
+04-30 19:59:38.017  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:59:38.303  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:59:38.960  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 19:59:39.153  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 2 lines
+04-30 19:59:41.580  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 19:59:47.341  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 19:59:48.978  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 6 lines
+04-30 19:59:49.729  1063  1063 I chatty  : uid=1000 system_server expire 22 lines
+04-30 19:59:50.105  1869  1869 I TelecomFramework: UserCallIntentProcessor: sendIntentToDestination: trampoline to Telecom.: UCA.oC@AAA
+04-30 19:59:50.132  1869  1869 I TelecomFramework: UserCallActivity: onCreate done
+04-30 19:59:50.217  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 19:59:50.224  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:59:50.324  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 19:59:50.336  1063  1318 I chatty  : uid=1000(system) android.ui expire 1 line
+04-30 19:59:50.375  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 3 lines
+04-30 19:59:50.388  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 19:59:50.475  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 4 lines
+04-30 19:59:50.479  1063  1063 I chatty  : uid=1000 system_server expire 8 lines
+04-30 19:59:50.489  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 17 lines
+04-30 19:59:50.501  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 9 lines
+04-30 19:59:51.489  1914  1914 D ActivityThread: Loading provider contacts;com.android.contacts: com.android.providers.contacts.ContactsProvider2
+04-30 19:59:52.146  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 19:59:52.735  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 19:59:52.868  1869  1869 I TelecomFramework: UserCallIntentProcessor: sendIntentToDestination: trampoline to Telecom.: UCA.oC@AAE
+04-30 19:59:52.880  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 6 lines
+04-30 19:59:52.908  1063  1063 I chatty  : uid=1000 system_server expire 26 lines
+04-30 19:59:52.909  1869  1869 I TelecomFramework: UserCallActivity: onCreate done
+04-30 19:59:53.103  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 1 line
+04-30 19:59:53.408  1869  1869 I TelecomFramework: UserCallIntentProcessor: sendIntentToDestination: trampoline to Telecom.: UCA.oC@AAI
+04-30 19:59:53.476  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 19:59:53.477  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 5 lines
+04-30 19:59:53.479  2806  2806 I Telephony: TelephonyConnectionService: createConnectionFailed TC@5: (SBC.oSC)->CS.crCoF->H.CS.crCoF->H.CS.crCoF.pICR@E-A20
+04-30 19:59:53.490  1869  1869 I TelecomFramework: UserCallActivity: onCreate done
+04-30 19:59:53.618  1063  1063 I chatty  : uid=1000 system_server expire 21 lines
+04-30 19:59:53.650  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 19:59:53.667  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 2 lines
+04-30 19:59:53.902  2806  2806 I Telephony: TelephonyConnectionService: createConnectionFailed TC@6: (SBC.oSC)->CS.crCoF->H.CS.crCoF->H.CS.crCoF.pICR@E-A28
+04-30 19:59:53.902  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 19:59:54.015  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 1 line
+04-30 19:59:54.196  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 4 lines
+04-30 19:59:54.736  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 19:59:56.102  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 1 line
+04-30 19:59:56.208  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 3 lines
+04-30 19:59:56.209  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-30 19:59:56.313  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 13 lines
+04-30 19:59:56.512  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 19:59:58.017  1063  1063 I chatty  : uid=1000 system_server expire 15 lines
+04-30 19:59:59.163  3702  3702 I android.hardware.wifi@1.0-service-lazy: Process has 0 (of 1 available) client(s) in use after notification android.hardware.wifi@1.3::IWifi has clients: 0
+04-30 19:59:59.164  3702  3702 I android.hardware.wifi@1.0-service-lazy: Trying to exit HAL. No clients in use for any service in process.
+04-30 19:59:59.169  3702  3702 I android.hardware.wifi@1.0-service-lazy: Unregistered all clients and exiting
+04-30 19:59:59.564  1063  2861 I chatty  : uid=1000(system) ConnectionSvrFo expire 1 line
+04-30 19:59:59.728  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 1 line
+04-30 19:59:59.734  2806  2806 I Telephony: TelephonyConnectionService: onCreateOutgoingConnection, request: ConnectionRequest xxxxxxxxxxxxxxxxxxx Bundle[org.codeaurora.extra.CALL_DOMAIN=0, android.telecom.extra.START_CALL_WITH_VIDEO_STATE=0, android.telecom.extra.CALL_TELECOM_ROUTING_END_TIME_MILLIS=1754491, android.telecom.extra.CALL_TELECOM_ROUTING_START_TIME_MILLIS=1754491, ]: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-A4c
+04-30 19:59:59.780  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-A4c
+04-30 19:59:59.781  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-A4c
+04-30 19:59:59.847  1063  1063 I chatty  : uid=1000 system_server expire 2 lines
+04-30 20:00:00.090  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-A4c
+04-30 20:00:00.175  2806  2806 I chatty  : uid=1001(radio) com.android.phone identical 3 lines
+04-30 20:00:00.292  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-A4c
+04-30 20:00:00.310  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 25 lines
+04-30 20:00:00.315  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 20:00:00.372  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 20:00:00.373  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 20:00:00.391  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 5 lines
+04-30 20:00:00.397  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:00.403  2806  2806 I chatty  : uid=1001(radio) com.android.phone identical 1 line
+04-30 20:00:00.406  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:00.417  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 7 lines
+04-30 20:00:00.422  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 4 lines
+04-30 20:00:00.493  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 20:00:00.657  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 2 lines
+04-30 20:00:00.676  2806  2806 I Telephony: TelephonyConnectionService: notifyCreateConnectionComplete TC@4_1: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-A4c
+04-30 20:00:00.685  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-A4c
+04-30 20:00:01.183  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:01.184  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 3 lines
+04-30 20:00:01.191  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 4 lines
+04-30 20:00:01.192  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 20:00:01.218  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 20:00:01.389  1063  2898 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:00:01.398  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 20:00:02.664  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 1 line
+04-30 20:00:02.791  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 1 line
+04-30 20:00:03.179  2867  2932 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 20:00:03.340  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:00:04.589  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 20:00:04.597  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 2 lines
+04-30 20:00:04.611  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 20:00:04.695  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:04.698  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 3 lines
+04-30 20:00:04.712  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 20:00:04.715  1063  2719 I chatty  : uid=1000(system) Binder:1063_7 expire 2 lines
+04-30 20:00:04.723  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 1 line
+04-30 20:00:04.723  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 20:00:04.759  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:04.764  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 11 lines
+04-30 20:00:04.769  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 20:00:04.779  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 20:00:04.812  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 20:00:04.841  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 18 lines
+04-30 20:00:04.848  1063  2679 I chatty  : uid=1000(system) Binder:1063_6 expire 1 line
+04-30 20:00:04.873  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 2 lines
+04-30 20:00:04.908  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 2 lines
+04-30 20:00:04.919  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:04.927  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:05.066  2806  2857 I Telephony: : onDisconnect: callId=TC@4_1, cause=LOCAL
+04-30 20:00:05.070  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:05.081  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 12 lines
+04-30 20:00:05.087  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:05.088  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:05.098  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 20:00:05.117  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 20:00:05.206  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 14 lines
+04-30 20:00:05.211  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 3 lines
+04-30 20:00:05.213  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 5 lines
+04-30 20:00:05.247  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 20:00:05.252  1063  3065 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:00:05.261  1063  1063 I chatty  : uid=1000 system_server expire 14 lines
+04-30 20:00:08.099  1063  2344 I chatty  : uid=1000(system) Binder:1063_1D expire 2 lines
+04-30 20:00:08.133  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 14 lines
+04-30 20:00:08.182  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 5 lines
+04-30 20:00:08.288  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 18 lines
+04-30 20:00:08.407  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 1 line
+04-30 20:00:08.407  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 20:00:08.768  1063  2344 I chatty  : uid=1000(system) Binder:1063_1D expire 3 lines
+04-30 20:00:10.223  3187  3393 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 20:00:11.286  1063  1320 I chatty  : uid=1000(system) android.display expire 3 lines
+04-30 20:00:13.148  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 20:00:13.237  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 1 line
+04-30 20:00:13.238  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 20:00:13.516  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 1 line
+04-30 20:00:13.559  1063  1063 I chatty  : uid=1000 system_server expire 5 lines
+04-30 20:00:13.651  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 6 lines
+04-30 20:00:13.824  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 20:00:14.370  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 20:00:15.245  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 20:00:15.515  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 2 lines
+04-30 20:00:15.784  1063  1320 I chatty  : uid=1000(system) android.display expire 3 lines
+04-30 20:00:15.923  3695  3695 I TelecomFramework: UserCallIntentProcessor: sendIntentToDestination: trampoline to Telecom.: UCA.oC@AAA
+04-30 20:00:15.928  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 3 lines
+04-30 20:00:15.937  1063  1063 I chatty  : uid=1000 system_server expire 24 lines
+04-30 20:00:15.943  3695  3695 I TelecomFramework: UserCallActivity: onCreate done
+04-30 20:00:16.199  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 3 lines
+04-30 20:00:16.201  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 20:00:16.328  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 12 lines
+04-30 20:00:16.343  1063  1063 I chatty  : uid=1000 system_server expire 8 lines
+04-30 20:00:16.344  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 9 lines
+04-30 20:00:17.067  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 1 line
+04-30 20:00:17.073  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 3 lines
+04-30 20:00:17.091  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 12 lines
+04-30 20:00:17.754  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 1 line
+04-30 20:00:17.779  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 2 lines
+04-30 20:00:17.837  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 1 line
+04-30 20:00:17.884  1063  1063 I chatty  : uid=1000 system_server expire 17 lines
+04-30 20:00:17.921  1063  2861 I chatty  : uid=1000(system) ConnectionSvrFo expire 1 line
+04-30 20:00:17.996  1063  3482 I chatty  : uid=1000(system) Binder:1063_11 expire 1 line
+04-30 20:00:18.002  2806  2806 I Telephony: TelephonyConnectionService: onCreateOutgoingConnection, request: ConnectionRequest xxxxxxxxxxxxxxxxxxx Bundle[org.codeaurora.extra.CALL_DOMAIN=0, android.telecom.extra.START_CALL_WITH_VIDEO_STATE=0, android.telecom.extra.CALL_TELECOM_ROUTING_END_TIME_MILLIS=1780403, android.telecom.extra.CALL_TELECOM_ROUTING_START_TIME_MILLIS=1780403, ]: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-BJk
+04-30 20:00:18.018  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-BJk
+04-30 20:00:18.018  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-BJk
+04-30 20:00:18.081  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 1 line
+04-30 20:00:18.220  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-BJk
+04-30 20:00:18.274  2806  2806 I chatty  : uid=1001(radio) com.android.phone identical 2 lines
+04-30 20:00:18.278  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-BJk
+04-30 20:00:18.308  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 20:00:18.331  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false: (SBC.oSC)->CS.crCo->H.CS.crCo->H.CS.crCo.pICR@E-BJk
+04-30 20:00:18.333  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 13 lines
+04-30 20:00:18.337  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 20:00:18.349  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 22 lines
+04-30 20:00:18.362  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:18.374  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:18.375  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 20:00:18.378  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:18.386  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 5 lines
+04-30 20:00:18.402  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 20:00:18.462  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 20:00:18.470  2806  2806 I Telephony: TelephonyConnectionService: notifyCreateConnectionComplete TC@7_1: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-BJk
+04-30 20:00:18.472  2806  2806 I Telephony: TelephonyConnectionService: updatePhoneAccount setPhoneAccountHandle, account = ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}: (...->CSW.hCCC)->CS.crCoC->H.CS.crCoC@E-E-E-BJk
+04-30 20:00:18.568  1063  1551 I chatty  : uid=1000(system) InputReader expire 1 line
+04-30 20:00:18.571  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:00:18.595  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 5 lines
+04-30 20:00:18.663  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 10 lines
+04-30 20:00:18.668  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 20:00:18.711  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 20:00:19.215  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:19.229  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 5 lines
+04-30 20:00:19.247  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 20:00:19.257  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 20:00:19.287  1063  1317 I chatty  : uid=1000(system) android.fg expire 3 lines
+04-30 20:00:19.433  1063  3952 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:00:19.545  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 3 lines
+04-30 20:00:20.835  1063  1319 I chatty  : uid=1000(system) android.io expire 3 lines
+04-30 20:00:21.335  3917  3989 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 20:00:21.516  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 20:00:22.371  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:22.459  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:22.477  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 15 lines
+04-30 20:00:22.490  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 1 line
+04-30 20:00:22.504  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 20:00:22.507  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 5 lines
+04-30 20:00:22.516  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = true
+04-30 20:00:22.779  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 2 lines
+04-30 20:00:23.693  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 11 lines
+04-30 20:00:23.751  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 21 lines
+04-30 20:00:23.817  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 20:00:23.971  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 2 lines
+04-30 20:00:24.044  1063  1563 I chatty  : uid=1000(system) Binder:1063_19 expire 1 line
+04-30 20:00:24.073  1063  1318 I chatty  : uid=1000(system) android.ui expire 1 line
+04-30 20:00:25.979  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 1 line
+04-30 20:00:26.085  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 1 line
+04-30 20:00:26.705  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 3 lines
+04-30 20:00:26.775  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 20:00:26.854  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 2 lines
+04-30 20:00:35.869  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 2 lines
+04-30 20:00:37.218  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 1 line
+04-30 20:00:41.554  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 5 lines
+04-30 20:00:41.578  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:41.583  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 20 lines
+04-30 20:00:41.604  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:41.689  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 1 line
+04-30 20:00:41.697  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 2 lines
+04-30 20:00:41.702  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:41.715  2806  3912 I Telephony: : onDisconnect: callId=TC@7_1, cause=LOCAL
+04-30 20:00:41.749  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:41.751  2806  2806 I Telephony: GsmConnection: isAddParticipantCapable: isCapable = false
+04-30 20:00:41.768  3293  3293 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.redbend.app.SmmService.sendIntentEvent:373 com.redbend.client.ClientService.sendEvent:586 com.redbend.client.ClientService$DilPhoneStateListener.sendVoiceCallUpdate:1737 
+04-30 20:00:41.777  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 20:00:41.837  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 2 lines
+04-30 20:00:41.846  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 3 lines
+04-30 20:00:41.878  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 3 lines
+04-30 20:00:41.911  1063  1063 I chatty  : uid=1000 system_server expire 12 lines
+04-30 20:00:41.934  1063  2859 I chatty  : uid=1000(system) uteStateMachine expire 11 lines
+04-30 20:00:41.954  1063  2852 I chatty  : uid=1000(system) BluetoothRouteM expire 1 line
+04-30 20:00:41.962  1063   811 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:00:43.304  1063  2860 I chatty  : uid=1000(system) CallAudioModeSt expire 2 lines
+04-30 20:00:43.798  1063  3460 I chatty  : uid=1000(system) Binder:1063_10 expire 3 lines
+04-30 20:00:43.901   799   933 E ActivityThread: Failed to find provider info for com.google.android.apps.messaging.shared.datamodel.provider.sharedstorage.SharedStorageProvider
+04-30 20:00:44.723  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 14 lines
+04-30 20:00:44.733  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 3 lines
+04-30 20:00:44.796  1063  2896 I chatty  : uid=1000(system) Binder:1063_A expire 2 lines
+04-30 20:00:44.796  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 20:00:44.831  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 20:00:44.907  1063  3774 I chatty  : uid=1000(system) Binder:1063_20 expire 1 line
+04-30 20:00:45.562  1063  1320 I chatty  : uid=1000(system) android.display expire 1 line
+04-30 20:00:45.730  1063  1318 I chatty  : uid=1000(system) android.ui expire 1 line
+04-30 20:00:49.463  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 7 lines
+04-30 20:00:49.721  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 11 lines
+04-30 20:00:49.941  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 2 lines
+04-30 20:00:50.076  1063  1320 I chatty  : uid=1000(system) android.display expire 3 lines
+04-30 20:01:14.513  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 20:01:25.846  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 3 lines
+04-30 20:01:50.299  1063  2778 I chatty  : uid=1000(system) Binder:1063_8 expire 3 lines
+04-30 20:01:56.102  1063  1546 I chatty  : uid=1000(system) AlarmManager expire 1 line
+04-30 20:01:57.925  1063  1047 I chatty  : uid=1000(system) Binder:1063_17 expire 1 line
+04-30 20:01:57.926  1063  2395 I chatty  : uid=1000(system) ConnectivitySer expire 2 lines
+04-30 20:01:58.118  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-30 20:02:07.151  1063  1918 I chatty  : uid=1000(system) Binder:1063_1A expire 2 lines
+04-30 20:02:18.150  1063  1317 I chatty  : uid=1000(system) android.fg expire 2 lines
+04-30 20:02:18.152  1063  1318 I chatty  : uid=1000(system) android.ui expire 2 lines
+04-30 20:02:18.306  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 20:02:18.316  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 20:02:18.638  1063  1063 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:02:19.983  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 4 lines
+04-30 20:02:20.005  1063  1343 I chatty  : uid=1000(system) CpuTracker expire 2 lines
+04-30 20:02:20.747  1930  1930 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1570 android.content.ContextWrapper.startService:669 com.caf.fmradio.FMRadio.bindToService:2923 com.caf.fmradio.FMRadio.onStart:473 android.app.Instrumentation.callActivityOnStart:1433 
+04-30 20:02:20.753  1930  1930 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1649 android.content.ContextWrapper.bindService:705 com.caf.fmradio.FMRadio.bindToService:2926 com.caf.fmradio.FMRadio.onStart:473 android.app.Instrumentation.callActivityOnStart:1433 
+04-30 20:02:20.799  1063  1319 I chatty  : uid=1000(system) android.io expire 2 lines
+04-30 20:03:11.260  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 1 line
+04-30 20:03:14.852  1063  2295 I chatty  : uid=1000(system) Binder:1063_1C expire 1 line
+04-30 20:03:17.244  1063  2778 I chatty  : uid=1000(system) Binder:1063_8 expire 2 lines
+04-30 20:03:17.261  1063  2162 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:03:17.302  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 11 lines
+04-30 20:03:17.455  2075  2075 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@79ddc06
+04-30 20:03:18.016  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 2 lines
+04-30 20:03:18.811  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 11 lines
+04-30 20:03:18.812  1063  1063 I chatty  : uid=1000 system_server expire 3 lines
+04-30 20:03:18.876  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 2 lines
+04-30 20:03:18.921  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 20:03:19.266  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 20:03:20.205  1063  1317 I chatty  : uid=1000(system) android.fg expire 5 lines
+04-30 20:03:24.594  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 2 lines
+04-30 20:03:25.188  1063  2132 I chatty  : uid=1000(system) Binder:1063_1B expire 1 line
+04-30 20:03:26.452  1063  1259 I chatty  : uid=1000(system) Binder:1063_18 expire 1 line
+04-30 20:03:28.374  1063  3508 I chatty  : uid=1000(system) Binder:1063_14 expire 1 line
+04-30 20:03:41.025  1063  3450 I chatty  : uid=1000(system) Binder:1063_F expire 2 lines
+04-30 20:04:23.334  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:04:23.371  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 3 lines
+04-30 20:04:23.384  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:04:24.144  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 6 lines
+04-30 20:04:25.154  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 7 lines
+04-30 20:04:25.174  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 20:04:32.000  1063  1528 I chatty  : uid=1000(system) Binder:1063_4 expire 1 line
+04-30 20:04:32.672  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:04:47.339  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:05:03.028  1063  2572 I chatty  : uid=1000(system) Binder:1063_5 expire 2 lines
+04-30 20:05:16.469  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 13 lines
+04-30 20:05:28.476  1063  1063 I chatty  : uid=1000 system_server expire 3 lines
+04-30 20:05:28.488  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 3 lines
+04-30 20:05:28.532  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 20:05:29.905  1063  1317 I chatty  : uid=1000(system) android.fg expire 5 lines
+04-30 20:05:59.745  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:05:59.834  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:05:59.906  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 1 line
+04-30 20:06:00.269  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 1 line
+04-30 20:06:22.218  1063  3507 I chatty  : uid=1000(system) Binder:1063_13 expire 1 line
+04-30 20:06:47.339  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:06:47.936  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:06:52.908  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 13 lines
+04-30 20:07:04.966  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 20:07:06.323  1063  1317 I chatty  : uid=1000(system) android.fg expire 6 lines
+04-30 20:08:20.807  1063  1329 I chatty  : uid=1000(system) ActivityManager expire 5 lines
+04-30 20:08:21.389  1063  2928 I chatty  : uid=1000(system) Binder:1063_B expire 3 lines
+04-30 20:08:23.135  1063  3009 I chatty  : uid=1000 system_server expire 1 line
+04-30 20:08:23.200  1063  1328 I chatty  : uid=1000(system) ActivityManager expire 12 lines
+04-30 20:08:23.624  1063  1871 I chatty  : uid=1000(system) Binder:1063_1F expire 3 lines
+04-30 20:08:23.694  1063  1223 I chatty  : uid=1000(system) Binder:1063_2 expire 3 lines
+04-30 20:08:24.464  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:08:24.498  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 20:08:24.503  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:08:24.684  1063  1063 I chatty  : uid=1000 system_server expire 3 lines
+04-30 20:08:24.781  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 1 line
+04-30 20:08:25.276  1063  1640 I chatty  : uid=1000(system) Binder:1063_1E expire 1 line
+04-30 20:08:26.346  1063  1319 I chatty  : uid=1000(system) android.io expire 1 line
+04-30 20:08:31.019  1063  3511 I chatty  : uid=1000(system) Binder:1063_15 expire 1 line
+04-30 20:08:36.801  1063  1318 I chatty  : uid=1000(system) android.ui expire 1 line
+04-30 20:08:36.867  2669  2669 E ActivityThread: Failed to find provider info for com.jio.os.content.ContentFeedProvider
+04-30 20:08:47.340  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:08:56.118  1063  3930 I chatty  : uid=1000(system) Binder:1063_16 expire 1 line
+04-30 20:08:56.656  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 1 line
+04-30 20:09:04.873  1063  3410 I chatty  : uid=1000(system) Binder:1063_D expire 1 line
+04-30 20:09:29.817  1063  1344 I chatty  : uid=1000(system) PowerManagerSer expire 10 lines
+04-30 20:09:36.802  1063  1063 I chatty  : uid=1000 system_server expire 8 lines
+04-30 20:09:36.825  1063  1333 I chatty  : uid=1000(system) batterystats-wo expire 2 lines
+04-30 20:09:36.844  1063  1320 I chatty  : uid=1000(system) android.display expire 2 lines
+04-30 20:09:38.155  1063  1317 I chatty  : uid=1000(system) android.fg expire 5 lines
+04-30 20:10:00.834  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:10:00.872  2463  2463 I chatty  : uid=10095(com.android.systemui) identical 1 line
+04-30 20:10:00.902  2463  2463 I PowerUI.Notification: show battery full warning: level=100 [1] 
+04-30 20:10:00.977  1063  2779 I chatty  : uid=1000(system) Binder:1063_9 expire 2 lines

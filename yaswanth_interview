@@ -8,7 +8,12 @@ Interview questions asked ,
 5. machine driver functionality
 6.what is interrupt , how it is generated and how we identify interrupt is generated .
 7.what is volatile variable
-8
+
+
+https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/13_IOSystems.html                           ................. adding a new deviceinto kernel
+
+https://embeddedbits.org/new-linux-kernel-gpio-user-space-interface/                 .................. about gpio pins
+
 
 
 
